@@ -1,0 +1,69 @@
+{
+  "auditTimestamp": "2026-08-25T00:05:00.000Z",
+  "localApplication": "Antigravity OS v5.1",
+  "localRoot": "c:\\D drive\\Antigravity\\antigravity-os",
+  "localGitRepository": "No remote origin configured locally",
+  "localBranch": "main",
+  "localHeadSha": "d9d838c",
+  "vercelProject": "None under authenticated token (sisodhiyaprashant35-6364 has 0 projects)",
+  "vercelRepository": "Unknown / Third-party origin",
+  "vercelBranch": "Unknown",
+  "vercelDeploymentId": "Unassociated external deployment (hnd1::gmbtt-1787616149626-7ce838095880)",
+  "vercelDeploymentSha": "Unknown / External Vite bundle (index-B7df3r2o.js)",
+  "productionUrl": "https://antigravity-os.vercel.app",
+  "productionApplication": "Green Lane OS (sovereign-compliance)",
+  "expectedApplication": "Antigravity OS",
+  "identityStatus": "FAIL",
+  "greenLaneSourceFound": false,
+  "greenLaneInLocalBuild": false,
+  "greenLaneInVercel": true,
+  "localVercelMatch": false,
+  "commitMatch": false,
+  "routeMismatch": true,
+  "vercelAliasMismatch": true,
+  "rootDirectoryMismatch": true,
+  "findings": {
+    "localSource": {
+      "framework": "Next.js 15.5.23",
+      "packageJsonName": "antigravity-os",
+      "homePageRoute": "src/app/page.tsx (MasterWorkspacePage)",
+      "searchMatches": {
+        "Green Lane OS": 0,
+        "THE GOVERNMENT WANTS TO SHUT YOU DOWN": 0,
+        "DEPLOY SHIELD NOW": 0,
+        "WE ONLY GET PAID WHEN YOU ARE SAFE": 0,
+        "RED STATE": 0,
+        "GREEN STATE": 0
+      }
+    },
+    "localBuild": {
+      "cleanBuildStatus": "PASS",
+      "routesCompiled": 45,
+      "pageTitle": "Antigravity OS — Production Dark Futuristic AI Engineering Dashboard",
+      "containsGreenLane": false
+    },
+    "vercelProduction": {
+      "httpStatus": 200,
+      "pageTitle": "sovereign-compliance",
+      "framework": "Vite SPA",
+      "bundle": "/assets/index-B7df3r2o.js",
+      "bodySnippet": "DOT BLITZ WEEK IMMINENT THE GOVERNMENT WANTS TO SHUT YOU DOWN. One bad inspection triggers a death spiral. Insurance spikes. Brokers blacklist you. Your fleet rots. Green Lane OS is the only cybernetic compliance shield...",
+      "matchedTerms": [
+        "Green Lane",
+        "DEPLOY SHIELD NOW",
+        "RED STATE",
+        "GREEN STATE"
+      ]
+    },
+    "vercelAccount": {
+      "user": "sisodhiyaprashant35-6364",
+      "team": "sisodhiyaprashant35-6364's projects",
+      "projectsCount": 0,
+      "deploymentsCount": 0,
+      "aliasesCount": 0,
+      "ownsDomain": false
+    }
+  },
+  "finalDiagnosis": "The production domain 'antigravity-os.vercel.app' is currently bound on Vercel to an external/stale Vite application titled 'sovereign-compliance' ('Green Lane OS'). The local codebase (c:\\D drive\\Antigravity\\antigravity-os) contains pure Antigravity OS v5.1 with zero trace of Green Lane code, but has not yet been linked/deployed to Vercel under the authenticated user account (sisodhiyaprashant35-6364 has 0 active projects on Vercel).",
+  "recommendedFix": "1. Verify Vercel project ownership or create a new project 'antigravity-os' under the authenticated account.\n2. Link the repository/directory 'antigravity-os' to Vercel.\n3. Deploy the Next.js 15 production build using the Vercel REST API or Vercel CLI with root directory set to 'antigravity-os'.\n4. Re-assign the alias 'antigravity-os.vercel.app' (or assign a dedicated verified domain) to the Antigravity OS deployment."
+}

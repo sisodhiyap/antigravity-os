@@ -1,0 +1,1 @@
+export function validatePatient(p: { name: string; email: string }): boolean { return p.name.length >= 2 && p.email.includes('@'); }

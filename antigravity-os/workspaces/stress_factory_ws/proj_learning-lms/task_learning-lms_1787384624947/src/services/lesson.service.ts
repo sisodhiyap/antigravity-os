@@ -1,0 +1,2 @@
+import { Lesson } from '../types/lesson.types';
+export class LessonService { private lessons: Lesson[] = []; add(courseId: string, title: string, durationMin: number, order: number): Lesson { const l = { id: 'lsn_' + Date.now(), courseId, title, durationMin, order }; this.lessons.push(l); return l; } getByCourse(courseId: string): Lesson[] { return this.lessons.filter(l => l.courseId === courseId).sort((a, b) => a.order - b.order); } }

@@ -1,0 +1,1 @@
+export function CartDrawer({ items, total }: { items: any[]; total: number }) { return { type: 'div', className: 'cart-drawer', total }; }

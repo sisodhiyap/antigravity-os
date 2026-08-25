@@ -1,0 +1,1 @@
+export interface Course { id: string; title: string; instructor: string; totalLessons: number; passingScore: number; }

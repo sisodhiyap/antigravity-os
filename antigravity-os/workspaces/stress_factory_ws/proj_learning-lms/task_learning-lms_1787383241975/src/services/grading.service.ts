@@ -1,0 +1,2 @@
+import { LessonProgress } from '../types/progress.types';
+export class GradingService { calculateAverageScore(progress: LessonProgress[]): number { if (progress.length === 0) return 0; const total = progress.reduce((sum, p) => sum + p.quizScorePercent, 0); return Math.round(total / progress.length); } isEligibleForGraduation(progress: LessonProgress[], passingScore: number): boolean { if (progress.length === 0) return false; const allDone = progress.every(p => p.completed); const avg = this.calculateAverageScore(progress); return allDone && avg >= passingScore; } }

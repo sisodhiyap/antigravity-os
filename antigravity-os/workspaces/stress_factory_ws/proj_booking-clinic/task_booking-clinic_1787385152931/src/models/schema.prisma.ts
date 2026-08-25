@@ -1,0 +1,1 @@
+export const clinicSchema = { models: ['Doctor', 'Patient', 'Appointment', 'Notification'] };

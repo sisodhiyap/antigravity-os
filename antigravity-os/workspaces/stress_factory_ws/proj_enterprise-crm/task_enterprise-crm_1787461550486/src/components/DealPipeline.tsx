@@ -1,0 +1,1 @@
+export function DealPipeline({ deals }: { deals: any[] }) { return { type: 'div', className: 'crm-pipeline', dealsCount: deals.length }; }

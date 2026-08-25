@@ -1,0 +1,1 @@
+export function CertificateBadge({ studentName }: { studentName: string }) { return { type: 'div', className: 'certificate-badge', studentName }; }

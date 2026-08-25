@@ -1,0 +1,2 @@
+import { ActivityLog } from '../types/activity.types';
+export class ActivityService { private logs: ActivityLog[] = []; log(dealId: string, note: string) { this.logs.push({ id: 'act_' + Date.now(), dealId, note, date: new Date().toISOString() }); } getByDeal(dealId: string): ActivityLog[] { return this.logs.filter(l => l.dealId === dealId); } }

@@ -1,0 +1,2 @@
+import { AuditRecord } from '../types/audit.types';
+export class AuditService { private logs: AuditRecord[] = []; record(action: string, entityId: string, actorId: string) { this.logs.push({ id: 'aud_' + Date.now(), action, entityId, actorId, timestamp: new Date().toISOString() }); } getLogs(): AuditRecord[] { return [...this.logs]; } }

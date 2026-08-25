@@ -1,0 +1,2 @@
+export type AppointmentStatus = 'CONFIRMED' | 'RESCHEDULED' | 'CANCELLED' | 'COMPLETED';
+export interface Appointment { id: string; doctorId: string; patientId: string; date: string; timeSlot: string; status: AppointmentStatus; }

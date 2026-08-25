@@ -1,0 +1,33 @@
+{
+  "projectName": "e2e-studio-factory",
+  "blueprint": {
+    "name": "e2e-studio-factory",
+    "type": "studio",
+    "title": "Project e2e-studio-factory",
+    "description": "A next-generation digital interface synthesized from instructions: \"Futuristic visual media portfolio landing page\"",
+    "designSystem": {
+      "primaryColor": "#00f0ff",
+      "secondaryColor": "#7000ff",
+      "accentColor": "#ff0070",
+      "bgGradient": "from-cyber-cyan to-cyber-purple",
+      "fontFamily": "font-mono"
+    },
+    "pages": [
+      "index",
+      "about",
+      "features",
+      "contact"
+    ],
+    "features": [
+      "Dynamic Media Streaming",
+      "Unified Cognitive AI Routing",
+      "Sovereign WAL Mode Database",
+      "Glassmorphism Cyber Theme Layout"
+    ],
+    "hasChat": true,
+    "hasVideo": true,
+    "imageUrl": "/generated-assets/images/img_1787611283033_8b5d70a8.svg",
+    "videoUrl": "/generated-assets/video/vid_1787611283094_80a83abc.webm"
+  },
+  "generatedAt": "2026-08-24T22:41:23.030Z"
+}

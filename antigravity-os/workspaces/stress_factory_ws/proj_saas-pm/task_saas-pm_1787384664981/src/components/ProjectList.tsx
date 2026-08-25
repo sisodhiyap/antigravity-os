@@ -1,0 +1,1 @@
+export function ProjectList({ projects }: { projects: any[] }) { return { type: 'ul', className: 'project-grid', count: projects.length }; }

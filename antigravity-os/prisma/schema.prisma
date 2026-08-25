@@ -1,0 +1,266 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./production.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id             String          @id @default(uuid())
+  email          String          @unique
+  passwordHash   String?
+  passwordSalt   String?
+  failedAttempts Int             @default(0)
+  lockedUntil    DateTime?
+  mfaEnabled     Boolean         @default(false)
+  mfaSecret      String?
+  role           String          @default("USER") // OWNER, ADMIN, MEMBER, VIEWER
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  
+  // Relations
+  sessions       Session[]
+  memberships    ProjectMember[]
+  auditLogs      AuditLog[]
+  jobs           GenerationJob[]
+  assets         Asset[]
+  conversations  AIConversation[]
+  todos          Todo[]
+  notes          Note[]
+}
+
+model Session {
+  id        String   @id @default(uuid())
+  userId    String
+  token     String   @unique
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Organization {
+  id        String   @id @default(uuid())
+  name      String
+  createdAt DateTime @default(now())
+}
+
+model Project {
+  id             String          @id @default(uuid())
+  name           String
+  description    String?
+  brief          String?         // The full creative brief entered by the user
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  
+  // Relations
+  members        ProjectMember[]
+  jobs           GenerationJob[]
+  assets         Asset[]
+  conversations  AIConversation[]
+  research       ResearchRecord?
+  designSystem   DesignSystem?
+}
+
+model ProjectMember {
+  id        String   @id @default(uuid())
+  projectId String
+  userId    String
+  role      String   @default("MEMBER") // OWNER, ADMIN, MEMBER, VIEWER
+  createdAt DateTime @default(now())
+
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([projectId, userId])
+}
+
+model AIConversation {
+  id        String      @id @default(uuid())
+  projectId String
+  title     String
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  project   Project     @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  user      User?       @relation(fields: [userId], references: [id], onDelete: SetNull)
+  userId    String?
+  messages  AIMessage[]
+}
+
+model AIMessage {
+  id             String         @id @default(uuid())
+  conversationId String
+  role           String         // user, assistant
+  content        String
+  createdAt      DateTime       @default(now())
+  
+  // Provenance metadata
+  provider       String?
+  model          String?
+  latencyMs      Int?
+  isError        Boolean        @default(false)
+
+  conversation   AIConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+}
+
+model GenerationJob {
+  jobId         String            @id @default(uuid())
+  userId        String
+  projectId     String
+  capability    String            // TEXT, IMAGE, AUDIO, VIDEO, 3D, CODE
+  provider      String
+  model         String
+  status        String            // QUEUED, RUNNING, VALIDATING, COMPLETED, FAILED
+  startedAt     DateTime          @default(now())
+  completedAt   DateTime?
+  executionMode String            // LIVE, LOCAL, FALLBACK
+  errorCode     String?
+  errorMessage  String?
+  
+  user          User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  project       Project           @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  result        GenerationResult?
+}
+
+model GenerationResult {
+  id            String        @id @default(uuid())
+  jobId         String        @unique
+  assetId       String        @unique
+  outputPayload String        // JSON string of output details
+  createdAt     DateTime      @default(now())
+
+  job           GenerationJob @relation(fields: [jobId], references: [jobId], onDelete: Cascade)
+  asset         Asset         @relation(fields: [assetId], references: [assetId], onDelete: Cascade)
+}
+
+model Asset {
+  assetId        String             @id @default(uuid())
+  projectId      String
+  ownerId        String
+  type           String             // IMAGE, AUDIO, VIDEO, 3D
+  mimeType       String
+  format         String             // SVG, WAV, WEBM, GLTF
+  sizeBytes      Int
+  hashSha256     String             @unique
+  path           String
+  prompt         String?
+  altText        String?
+  executionMode  String
+  createdAt      DateTime           @default(now())
+  generationJobId String?           
+  
+  project        Project            @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  owner          User               @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  result         GenerationResult?
+  versions       AssetVersion[]
+}
+
+model AssetVersion {
+  id             String   @id @default(uuid())
+  assetId        String
+  versionNumber  Int
+  hashSha256     String
+  path           String
+  createdAt      DateTime @default(now())
+
+  asset          Asset    @relation(fields: [assetId], references: [assetId], onDelete: Cascade)
+}
+
+model ProviderHealth {
+  providerId    String   @id
+  name          String
+  category      String
+  executionMode String
+  healthState   String   // HEALTHY, DEGRADED, UNAVAILABLE
+  lastVerified  DateTime @default(now())
+}
+
+model UsageEvent {
+  id             String   @id @default(uuid())
+  userId         String
+  projectId      String
+  capability     String
+  provider       String
+  model          String
+  tokensUsed     Int      @default(0)
+  estimatedCost  Float    @default(0.0)
+  timestamp      DateTime @default(now())
+}
+
+model AuditLog {
+  id          String   @id @default(uuid())
+  action      String   // LOGIN, PROJECT_CREATED, ASSET_CREATED, etc.
+  entityType  String
+  entityId    String?
+  actorId     String?
+  ipAddress   String?
+  metadata    String?  // JSON string
+  createdAt   DateTime @default(now())
+
+  actor       User?    @relation(fields: [actorId], references: [id], onDelete: SetNull)
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String
+  title     String
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model DesignSystem {
+  id        String   @id @default(uuid())
+  projectId String   @unique
+  createdAt DateTime @default(now())
+  
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  tokens    DesignToken[]
+}
+
+model DesignToken {
+  id             String       @id @default(uuid())
+  designSystemId String
+  category       String       // COLOR, TYPOGRAPHY, SPACING, RADIUS
+  name           String
+  value          String
+  
+  designSystem   DesignSystem @relation(fields: [designSystemId], references: [id], onDelete: Cascade)
+}
+
+model ResearchRecord {
+  id           String   @id @default(uuid())
+  projectId    String   @unique
+  question     String?
+  findingsText String?  // Persisted research synthesis / findings
+  strategyText String?  // Persisted strategy & positioning document
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  project      Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+}
+
+model Todo {
+  id        String   @id @default(uuid())
+  title     String
+  completed Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Note {
+  id        String   @id @default(uuid())
+  title     String
+  content   String
+  filePath  String?  // Attachment file path
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+

@@ -1,0 +1,1 @@
+export function ProductGrid({ products }: { products: any[] }) { return { type: 'div', className: 'product-grid', count: products.length }; }

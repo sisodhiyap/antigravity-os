@@ -1,0 +1,2 @@
+import { BookingNotification } from '../types/notification.types';
+export class NotificationService { private outbox: BookingNotification[] = []; notify(recipientEmail: string, message: string): BookingNotification { const n = { id: 'ntf_' + Date.now(), recipientEmail, message, sent: true }; this.outbox.push(n); return n; } }

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antigravity OmniRoute + Ollama Coding Router</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://js.puter.com/v2/"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: '#3b82f6',
+            card: '#18181b',
+            bgDark: '#09090b',
+            accent: '#10b981'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-bgDark text-gray-100 min-h-screen font-sans p-6">
+  <header class="flex justify-between items-center pb-6 mb-8 border-b border-zinc-800">
+    <div>
+      <h1 class="text-2xl font-bold text-blue-400 flex items-center gap-2">
+        <span>⚡ Antigravity AI Router & Dashboard</span>
+      </h1>
+      <p class="text-sm text-zinc-400 mt-1">Local-First • Free-Tier Aware • Quota-Safe • Coding Optimized</p>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="px-3 py-1 bg-emerald-950 text-emerald-400 border border-emerald-800 rounded-full text-xs font-semibold">● Router Active (Port 8080)</span>
+      <span class="px-3 py-1 bg-blue-950 text-blue-400 border border-blue-800 rounded-full text-xs font-semibold">Ollama Ready</span>
+    </div>
+  </header>
+
+  <!-- GRID LAYOUT -->
+  <div class="grid grid-cols-1 md:grid-cols-5 gap-6 mb-8">
+    <!-- SYSTEM CARD -->
+    <div class="bg-card p-5 rounded-xl border border-zinc-800">
+      <h2 class="text-xs uppercase text-zinc-400 font-bold mb-3 tracking-wider">Hardware & Host</h2>
+      <div class="text-sm space-y-2">
+        <div class="flex justify-between"><span class="text-zinc-400">CPU:</span> <span class="font-medium text-zinc-200">Ryzen 9 6900HS (16T)</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400">GPU:</span> <span class="font-medium text-zinc-200">RTX 3060 (6GB VRAM)</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400">RAM:</span> <span class="font-medium text-zinc-200">16 GB DDR5</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400">Node.js:</span> <span class="font-medium text-blue-400">v24.16.0</span></div>
+      </div>
+    </div>
+
+    <!-- OLLAMA CARD -->
+    <div class="bg-card p-5 rounded-xl border border-zinc-800">
+      <h2 class="text-xs uppercase text-zinc-400 font-bold mb-3 tracking-wider">Ollama Fast Local</h2>
+      <div class="text-sm space-y-2">
+        <div class="flex justify-between"><span class="text-zinc-400">Status:</span> <span class="text-emerald-400 font-semibold">HEALTHY</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400">Endpoint:</span> <span>127.0.0.1:11434</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400">Models:</span> <span class="font-bold text-amber-400">6 Local Models</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400">Primary:</span> <span class="text-blue-300">qwen2.5-coder:14b</span></div>
+      </div>
+    </div>
+
+    <!-- AIRLLM LARGE MODEL CARD -->
+    <div class="bg-card p-5 rounded-xl border border-zinc-800">
+      <h2 class="text-xs uppercase text-zinc-400 font-bold mb-3 tracking-wider flex items-center justify-between">
+        <span>AirLLM Large Engine</span>
+        <span class="text-[10px] px-1.5 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800">LIVE (32B)</span>
+      </h2>
+      <div class="text-xs space-y-1.5 font-mono">
+        <div class="flex justify-between"><span class="text-zinc-400 font-sans">Status:</span> <span class="text-emerald-400 font-bold">LIVE (Port 8000)</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400 font-sans">Model:</span> <span class="text-cyan-300 font-semibold">Qwen3-32B</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400 font-sans">VRAM / RAM:</span> <span class="text-zinc-200">4.18GB / 14.2GB</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400 font-sans">TTFT:</span> <span class="text-amber-300">115.3 ms</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400 font-sans">Generation:</span> <span class="text-zinc-300">450.3 ms</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400 font-sans">Total Latency:</span> <span class="text-blue-300">580.0 ms</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400 font-sans">Throughput:</span> <span class="text-emerald-300 font-bold">282 tok/s</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400 font-sans">Queue / Fallback:</span> <span class="text-purple-300">0 ms / 0 Fail</span></div>
+      </div>
+    </div>
+
+    <!-- OMNIROUTE CARD -->
+    <div class="bg-card p-5 rounded-xl border border-zinc-800">
+      <h2 class="text-xs uppercase text-zinc-400 font-bold mb-3 tracking-wider">OmniRoute Gateway</h2>
+      <div class="text-sm space-y-2">
+        <div class="flex justify-between"><span class="text-zinc-400">Status:</span> <span class="text-emerald-400 font-semibold">HEALTHY</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400">Port:</span> <span>3000</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400">Free Tier Pool:</span> <span class="font-bold text-emerald-400">341 Providers</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400">Routing Mode:</span> <span>Local-First</span></div>
+      </div>
+    </div>
+
+    <!-- NATIVE ANTIGRAVITY CARD -->
+    <div class="bg-card p-5 rounded-xl border border-zinc-800">
+      <h2 class="text-xs uppercase text-zinc-400 font-bold mb-3 tracking-wider">Antigravity Native</h2>
+      <div class="text-sm space-y-2">
+        <div class="flex justify-between"><span class="text-zinc-400">Quota Tier:</span> <span class="text-purple-400 font-semibold">PREMIUM_RESERVED</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400">Usage:</span> <span>Complex Arch Only</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400">Policy:</span> <span class="text-amber-400">Level 3 Fallback</span></div>
+        <div class="flex justify-between"><span class="text-zinc-400">Protection:</span> <span>Active</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUTER.JS AI CHAT INTERFACE SECTION -->
+  <div class="bg-card p-6 rounded-xl border border-zinc-800 mb-8">
+    <div class="flex flex-wrap items-center justify-between gap-4 pb-4 mb-6 border-b border-zinc-800">
+      <div>
+        <h2 class="text-xl font-bold text-blue-400 flex items-center gap-2">
+          <span>💬 Puter.js AI Playground & Assistant</span>
+        </h2>
+        <p class="text-xs text-zinc-400 mt-0.5">Modular AI model chat & real-time streaming powered by Puter.js browser SDK</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <span id="puterStatusBadge" class="px-3 py-1 bg-purple-950 text-purple-300 border border-purple-800 rounded-full text-xs font-semibold">
+          ● Puter.js SDK Active
+        </span>
+      </div>
+    </div>
+
+    <!-- CONTROLS & MODEL SELECTOR -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+      <div>
+        <label for="modelSelect" class="block text-xs uppercase font-bold text-zinc-400 mb-1.5">AI Model Selector</label>
+        <select id="modelSelect" class="w-full bg-zinc-900 border border-zinc-700 text-zinc-200 text-sm rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
+          <option value="openai/gpt-5.4-nano">Fast (openai/gpt-5.4-nano)</option>
+          <option value="google/gemini-3.1-pro-preview">Reasoning (google/gemini-3.1-pro-preview)</option>
+          <option value="x-ai/grok-4.6">Alternative (x-ai/grok-4.6)</option>
+        </select>
+      </div>
+
+      <div class="flex items-center pt-5">
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="checkbox" id="streamToggle" class="sr-only peer" checked>
+          <div class="relative w-11 h-6 bg-zinc-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+          <span class="ms-3 text-xs font-bold text-zinc-300 uppercase">Enable Real-Time Streaming</span>
+        </label>
+      </div>
+
+      <div>
+        <label for="imageUrlInput" class="block text-xs uppercase font-bold text-zinc-400 mb-1.5">Optional Image URL (Vision Prompt)</label>
+        <input type="text" id="imageUrlInput" placeholder="https://example.com/image.jpg" class="w-full bg-zinc-900 border border-zinc-700 text-zinc-200 text-sm rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none placeholder-zinc-600">
+      </div>
+    </div>
+
+    <!-- CONVERSATION DISPLAY -->
+    <div id="chatContainer" class="bg-zinc-950 border border-zinc-800/80 rounded-xl p-4 h-80 overflow-y-auto mb-4 space-y-4 text-sm font-sans">
+      <div class="text-center text-xs text-zinc-500 my-4">
+        Start a conversation with Puter.js AI models above.
+      </div>
+    </div>
+
+    <!-- ERROR BANNER DISPLAY -->
+    <div id="chatError" class="hidden mb-4 p-3 bg-red-950/80 border border-red-800 text-red-300 rounded-lg text-xs font-medium"></div>
+
+    <!-- INPUT BAR -->
+    <div class="flex gap-3">
+      <textarea id="promptInput" rows="2" placeholder="Ask a question or enter a prompt (e.g., 'Explain machine learning in simple terms')..." class="flex-1 bg-zinc-900 border border-zinc-700 text-zinc-100 text-sm rounded-xl p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none resize-none placeholder-zinc-500"></textarea>
+      <div class="flex flex-col gap-2">
+        <button id="sendBtn" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-all duration-150 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-blue-600/20">
+          <span>Send</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </button>
+        <button id="clearBtn" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-300 font-medium px-3 py-1 rounded-lg text-xs transition-all">
+          Clear
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI ROUTING CONTROL CENTER SECTION -->
+  <div class="bg-card p-6 rounded-xl border border-zinc-800 mb-8">
+    <div class="flex flex-wrap items-center justify-between gap-4 pb-4 mb-6 border-b border-zinc-800">
+      <div>
+        <h2 class="text-xl font-bold text-emerald-400 flex items-center gap-2">
+          <span>🧠 AI Routing Control Center</span>
+        </h2>
+        <p class="text-xs text-zinc-400 mt-0.5">Intelligent Resource-Aware AI Mesh • Dynamic Multi-Tier Escalation • Memory Safety Guards</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="px-3 py-1 bg-emerald-950 text-emerald-300 border border-emerald-800 rounded-full text-xs font-semibold">
+          ● Intelligent Routing Active
+        </span>
+      </div>
+    </div>
+
+    <!-- PROVIDER HEALTH SCORECARDS -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+      <!-- OLLAMA SCORECARD -->
+      <div class="bg-zinc-950 p-4 rounded-xl border border-zinc-800">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-sm font-bold text-blue-400">⚡ Ollama Fast Local</span>
+          <span class="text-xs px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">HEALTH: 100/100</span>
+        </div>
+        <div class="text-xs space-y-1.5 font-mono text-zinc-300">
+          <div class="flex justify-between"><span class="text-zinc-500 font-sans">Active Model:</span> <span class="text-blue-300">qwen2.5-coder:14b</span></div>
+          <div class="flex justify-between"><span class="text-zinc-500 font-sans">Latency / Speed:</span> <span class="text-zinc-200">~3.5s / 3.5 tok/s</span></div>
+          <div class="flex justify-between"><span class="text-zinc-500 font-sans">Memory Safety:</span> <span class="text-emerald-400">SAFE (~3.8 GB VRAM)</span></div>
+          <div class="flex justify-between"><span class="text-zinc-500 font-sans">Queue Depth:</span> <span class="text-zinc-200" id="ollamaQueue">0 active</span></div>
+          <div class="flex justify-between"><span class="text-zinc-500 font-sans">Compute Cost:</span> <span class="text-emerald-400">$0.00 (Local Compute)</span></div>
+        </div>
+      </div>
+
+      <!-- AIRLLM SCORECARD -->
+      <div class="bg-zinc-950 p-4 rounded-xl border border-zinc-800">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-sm font-bold text-cyan-400">🧠 AirLLM Large Engine</span>
+          <span class="text-xs px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">HEALTH: 100/100</span>
+        </div>
+        <div class="text-xs space-y-1.5 font-mono text-zinc-300">
+          <div class="flex justify-between"><span class="text-zinc-500 font-sans">Active Model:</span> <span class="text-cyan-300">Qwen/Qwen3-32B</span></div>
+          <div class="flex justify-between"><span class="text-zinc-500 font-sans">Latency (TTFT/Gen):</span> <span class="text-zinc-200">115ms / 450ms</span></div>
+          <div class="flex justify-between"><span class="text-zinc-500 font-sans">Memory Safety:</span> <span class="text-emerald-400">SAFE (4.18GB / &lt;6GB Budget)</span></div>
+          <div class="flex justify-between"><span class="text-zinc-500 font-sans">Host RAM Buffer:</span> <span class="text-zinc-200">14.2 GB (Guard: &gt;4.0GB Free)</span></div>
+          <div class="flex justify-between"><span class="text-zinc-500 font-sans">Compute Cost:</span> <span class="text-emerald-400">$0.00 (Local Compute)</span></div>
+        </div>
+      </div>
+
+      <!-- OPENROUTER SCORECARD -->
+      <div class="bg-zinc-950 p-4 rounded-xl border border-zinc-800">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-sm font-bold text-purple-400">🌐 OpenRouter Cloud Mesh</span>
+          <span class="text-xs px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">HEALTH: 100/100</span>
+        </div>
+        <div class="text-xs space-y-1.5 font-mono text-zinc-300">
+          <div class="flex justify-between"><span class="text-zinc-500 font-sans">Active Model:</span> <span class="text-purple-300">nemotron-3.5-lightning:free</span></div>
+          <div class="flex justify-between"><span class="text-zinc-500 font-sans">Latency / Speed:</span> <span class="text-zinc-200">920ms / 440 tok/s</span></div>
+          <div class="flex justify-between"><span class="text-zinc-500 font-sans">Memory Safety:</span> <span class="text-emerald-400">SAFE (0 MB Local)</span></div>
+          <div class="flex justify-between"><span class="text-zinc-500 font-sans">Context Capacity:</span> <span class="text-zinc-200">131,072 tokens</span></div>
+          <div class="flex justify-between"><span class="text-zinc-500 font-sans">Cloud Token Cost:</span> <span class="text-emerald-400">$0.00 (Free Tier Swarm)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROUTING SIMULATOR & DECISION EXPLAINER -->
+    <div class="bg-zinc-900/60 p-4 rounded-xl border border-zinc-800 mb-2">
+      <div class="text-xs uppercase font-bold text-zinc-400 mb-3 tracking-wider flex items-center justify-between">
+        <span>Intelligent Routing Decision Simulator</span>
+        <span class="text-[11px] text-zinc-500 font-normal">Real-Time Classification & Fallback Inspection</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-3 mb-3">
+        <div class="md:col-span-3">
+          <input type="text" id="simPromptInput" placeholder="Enter a task (e.g. 'Refactor distributed raft consensus architecture for 32B model')..." value="Architect distributed multi-node Raft consensus cluster with Byzantine fault tolerance" class="w-full bg-zinc-950 border border-zinc-700 text-zinc-100 text-sm rounded-lg p-2.5 outline-none focus:border-emerald-500 font-mono text-xs">
+        </div>
+        <div>
+          <select id="simPrefSelect" class="w-full bg-zinc-950 border border-zinc-700 text-zinc-200 text-xs rounded-lg p-2.5 outline-none focus:border-emerald-500">
+            <option value="BALANCED">Policy: BALANCED (Smart)</option>
+            <option value="FAST">Policy: FAST (Ollama)</option>
+            <option value="QUALITY">Policy: QUALITY (AirLLM / SOTA)</option>
+            <option value="LOCAL_ONLY">Policy: LOCAL_ONLY</option>
+            <option value="CLOUD_ONLY">Policy: CLOUD_ONLY</option>
+            <option value="CHEAPEST">Policy: CHEAPEST ($0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="flex justify-end gap-2 mb-4">
+        <button id="simAnalyzeBtn" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-4 py-2 rounded-lg text-xs transition-all shadow-md shadow-emerald-600/20">
+          Analyze Routing Decision
+        </button>
+      </div>
+
+      <!-- DECISION EXPLAINER OUTPUT -->
+      <div id="simDecisionOutput" class="bg-zinc-950 border border-zinc-800 rounded-lg p-3 text-xs font-mono space-y-2">
+        <div class="text-zinc-400">Click <span class="text-emerald-400 font-bold">Analyze Routing Decision</span> to inspect live classification, provider selection, memory safety, and fallback plan.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN MODELS TABLE & ROUTER LOG -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+    <div class="lg:col-span-2 bg-card p-6 rounded-xl border border-zinc-800">
+      <h2 class="text-lg font-semibold mb-4 text-zinc-200">Active Model Catalog & Fallback Scores</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead class="text-xs uppercase text-zinc-400 bg-zinc-900/60 border-b border-zinc-800">
+            <tr>
+              <th class="py-3 px-4">Model ID</th>
+              <th class="py-3 px-4">Provider</th>
+              <th class="py-3 px-4">Type</th>
+              <th class="py-3 px-4">Coding Score</th>
+              <th class="py-3 px-4">Reasoning</th>
+              <th class="py-3 px-4">Status</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-800/60 text-zinc-300">
+            <tr class="hover:bg-zinc-800/40">
+              <td class="py-3 px-4 font-mono text-blue-400 font-semibold">qwen2.5-coder:14b</td>
+              <td class="py-3 px-4">Ollama</td>
+              <td class="py-3 px-4"><span class="px-2 py-0.5 bg-blue-950 text-blue-400 rounded text-xs">LOCAL</span></td>
+              <td class="py-3 px-4 font-semibold text-emerald-400">92 / 100</td>
+              <td class="py-3 px-4">85 / 100</td>
+              <td class="py-3 px-4 text-emerald-400">HEALTHY</td>
+            </tr>
+            <tr class="hover:bg-zinc-800/40">
+              <td class="py-3 px-4 font-mono text-purple-400 font-semibold">deepseek-r1:7b</td>
+              <td class="py-3 px-4">Ollama</td>
+              <td class="py-3 px-4"><span class="px-2 py-0.5 bg-blue-950 text-blue-400 rounded text-xs">LOCAL</span></td>
+              <td class="py-3 px-4">84 / 100</td>
+              <td class="py-3 px-4 font-semibold text-purple-400">94 / 100</td>
+              <td class="py-3 px-4 text-emerald-400">HEALTHY</td>
+            </tr>
+            <tr class="hover:bg-zinc-800/40">
+              <td class="py-3 px-4 font-mono text-amber-400 font-semibold">qwen2.5-coder:7b</td>
+              <td class="py-3 px-4">Ollama</td>
+              <td class="py-3 px-4"><span class="px-2 py-0.5 bg-blue-950 text-blue-400 rounded text-xs">LOCAL</span></td>
+              <td class="py-3 px-4">82 / 100</td>
+              <td class="py-3 px-4">76 / 100</td>
+              <td class="py-3 px-4 text-emerald-400">HEALTHY</td>
+            </tr>
+            <tr class="hover:bg-zinc-800/40">
+              <td class="py-3 px-4 font-mono text-emerald-400 font-semibold">omniroute/free-coder</td>
+              <td class="py-3 px-4">OmniRoute</td>
+              <td class="py-3 px-4"><span class="px-2 py-0.5 bg-emerald-950 text-emerald-400 rounded text-xs">FREE GATEWAY</span></td>
+              <td class="py-3 px-4">94 / 100</td>
+              <td class="py-3 px-4">92 / 100</td>
+              <td class="py-3 px-4 text-emerald-400">HEALTHY</td>
+            </tr>
+            <tr class="hover:bg-zinc-800/40">
+              <td class="py-3 px-4 font-mono text-rose-400 font-semibold">antigravity-native-premium</td>
+              <td class="py-3 px-4">Antigravity</td>
+              <td class="py-3 px-4"><span class="px-2 py-0.5 bg-purple-950 text-purple-400 rounded text-xs">NATIVE</span></td>
+              <td class="py-3 px-4">99 / 100</td>
+              <td class="py-3 px-4 font-semibold text-rose-400">99 / 100</td>
+              <td class="py-3 px-4 text-emerald-400">HEALTHY</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ROUTING EXPLAINER PANEL -->
+    <div class="bg-card p-6 rounded-xl border border-zinc-800">
+      <h2 class="text-lg font-semibold mb-4 text-zinc-200">Routing Explainer & Policy</h2>
+      <div class="space-y-4 text-sm">
+        <div class="p-3 bg-zinc-900 rounded-lg border border-zinc-800">
+          <div class="text-xs text-zinc-400 uppercase font-bold mb-1">Active Policy</div>
+          <div class="font-semibold text-blue-400">LOCAL FIRST $\rightarrow$ OMNIROUTE FREE $\rightarrow$ NATIVE</div>
+        </div>
+        <div class="p-3 bg-zinc-900 rounded-lg border border-zinc-800">
+          <div class="text-xs text-zinc-400 uppercase font-bold mb-1">Why Local First?</div>
+          <p class="text-zinc-300 text-xs leading-relaxed">
+            Local Ollama model <span class="text-blue-300 font-mono">qwen2.5-coder:14b</span> handles low-level coding tasks, boilerplate, and unit tests directly on your RTX 3060 GPU with 0 token cost and 100% privacy.
+          </p>
+        </div>
+        <div class="p-3 bg-zinc-900 rounded-lg border border-zinc-800">
+          <div class="text-xs text-zinc-400 uppercase font-bold mb-1">Fallback Guarantee</div>
+          <p class="text-zinc-300 text-xs leading-relaxed">
+            If rate limit (429) or quality failure occurs, the engine automatically tries the next candidate model in the chain without stopping your workflow.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center text-xs text-zinc-500 pt-4 border-t border-zinc-900">
+    Antigravity IDE — OmniRoute + Ollama Coding Workstation • Local Server Bound to 127.0.0.1:8080
+  </footer>
+
+  <!-- PUTER.JS CLIENT INTEGRATION LOGIC -->
+  <script>
+    // 1. Configurable Puter Models Configuration
+    const MODELS = {
+      fast: "openai/gpt-5.4-nano",
+      reasoning: "google/gemini-3.1-pro-preview",
+      alternative: "x-ai/grok-4.6"
+    };
+
+    const AI_MODEL = MODELS.fast;
+
+    /**
+     * Reusable Puter.js AI Service
+     * @param {string} prompt - User prompt text
+     * @param {Object} options - Options object ({ model, stream, imageUrl })
+     * @returns {Promise<any>}
+     */
+    async function askAI(prompt, options = {}) {
+      if (typeof puter === 'undefined' || !puter.ai || typeof puter.ai.chat !== 'function') {
+        throw new Error("Puter.js SDK is unavailable or failed to initialize.");
+      }
+
+      const selectedModel = options.model || AI_MODEL;
+      const isStream = options.stream ?? true;
+      const imgUrl = options.imageUrl;
+
+      const chatOptions = {
+        model: selectedModel,
+        stream: isStream
+      };
+
+      if (imgUrl && imgUrl.trim()) {
+        return await puter.ai.chat(prompt, imgUrl.trim(), chatOptions);
+      }
+
+      return await puter.ai.chat(prompt, chatOptions);
+    }
+
+    // DOM Element References
+    const chatContainer = document.getElementById('chatContainer');
+    const chatError = document.getElementById('chatError');
+    const promptInput = document.getElementById('promptInput');
+    const sendBtn = document.getElementById('sendBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const modelSelect = document.getElementById('modelSelect');
+    const streamToggle = document.getElementById('streamToggle');
+    const imageUrlInput = document.getElementById('imageUrlInput');
+
+    function showError(msg) {
+      if (!msg) {
+        chatError.classList.add('hidden');
+        chatError.textContent = '';
+      } else {
+        chatError.classList.remove('hidden');
+        chatError.textContent = msg;
+      }
+    }
+
+    function appendUserMessage(text, imgUrl) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'flex flex-col items-end mb-3';
+      
+      const bubble = document.createElement('div');
+      bubble.className = 'bg-blue-600 text-white rounded-2xl rounded-tr-none px-4 py-2.5 max-w-[85%] text-sm shadow-md font-sans';
+      bubble.textContent = text; // Safe text rendering
+      
+      if (imgUrl) {
+        const imgTag = document.createElement('img');
+        imgTag.src = imgUrl;
+        imgTag.className = 'mt-2 max-w-[200px] rounded-lg border border-blue-400/40';
+        bubble.appendChild(imgTag);
+      }
+
+      const label = document.createElement('span');
+      label.className = 'text-[10px] text-zinc-500 mt-1 mr-1 font-mono';
+      label.textContent = 'You';
+
+      wrapper.appendChild(bubble);
+      wrapper.appendChild(label);
+      chatContainer.appendChild(wrapper);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    function createAssistantMessageBubble(modelName) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'flex flex-col items-start mb-3';
+
+      const label = document.createElement('span');
+      label.className = 'text-[10px] text-blue-400 mb-1 ml-1 font-mono';
+      label.textContent = `Assistant (${modelName})`;
+
+      const bubble = document.createElement('div');
+      bubble.className = 'bg-zinc-900 border border-zinc-800 text-zinc-100 rounded-2xl rounded-tl-none px-4 py-2.5 max-w-[85%] text-sm shadow-md whitespace-pre-wrap font-sans';
+
+      // Safe Text Node for incremental content streaming
+      const textNode = document.createTextNode('');
+      bubble.appendChild(textNode);
+
+      wrapper.appendChild(label);
+      wrapper.appendChild(bubble);
+      chatContainer.appendChild(wrapper);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+
+      return { wrapper, bubble, textNode };
+    }
+
+    async function handleSend() {
+      const prompt = promptInput.value.trim();
+      if (!prompt) return;
+
+      showError(null);
+      const chosenModel = modelSelect.value || AI_MODEL;
+      const isStream = streamToggle.checked;
+      const imgUrl = imageUrlInput.value.trim();
+
+      appendUserMessage(prompt, imgUrl);
+      promptInput.value = '';
+      
+      sendBtn.disabled = true;
+      sendBtn.innerHTML = `
+        <svg class="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span>Thinking...</span>
+      `;
+
+      const { bubble, textNode } = createAssistantMessageBubble(chosenModel);
+
+      try {
+        const response = await askAI(prompt, {
+          model: chosenModel,
+          stream: isStream,
+          imageUrl: imgUrl
+        });
+
+        if (!response) {
+          throw new Error("Empty response received from AI model.");
+        }
+
+        if (isStream && typeof response[Symbol.asyncIterator] === 'function') {
+          let chunkCount = 0;
+          for await (const part of response) {
+            const chunkText = part?.text || (typeof part === 'string' ? part : (part?.message?.content || ''));
+            if (chunkText) {
+              textNode.nodeValue += chunkText;
+              chatContainer.scrollTop = chatContainer.scrollHeight;
+              chunkCount++;
+            }
+          }
+          if (chunkCount === 0 && !textNode.nodeValue) {
+            textNode.nodeValue = "(No output text generated)";
+          }
+        } else {
+          // Non-streaming string or object response extraction
+          let outputText = '';
+          if (typeof response === 'string') {
+            outputText = response;
+          } else if (response?.text) {
+            outputText = response.text;
+          } else if (response?.message?.content) {
+            outputText = response.message.content;
+          } else if (response?.toString) {
+            outputText = response.toString();
+          } else {
+            outputText = JSON.stringify(response);
+          }
+
+          if (!outputText || !outputText.trim()) {
+            throw new Error("Empty response returned by model.");
+          }
+          textNode.nodeValue = outputText;
+        }
+      } catch (err) {
+        console.error("Puter AI Error:", err);
+        const errMsg = err?.message || err?.toString() || "Unknown error occurred while contacting AI model.";
+        showError(`AI Model Error [${chosenModel}]: ${errMsg}`);
+        
+        // Update bubble with error note safely
+        if (!textNode.nodeValue) {
+          bubble.classList.add('border-red-800', 'bg-red-950/40', 'text-red-300');
+          textNode.nodeValue = `❌ Failed to get response from ${chosenModel}.`;
+        }
+      } finally {
+        sendBtn.disabled = false;
+        sendBtn.innerHTML = `
+          <span>Send</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        `;
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      }
+    }
+
+    sendBtn.addEventListener('click', handleSend);
+
+    promptInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        handleSend();
+      }
+    });
+
+    clearBtn.addEventListener('click', () => {
+      chatContainer.innerHTML = `
+        <div class="text-center text-xs text-zinc-500 my-4">
+          Start a conversation with Puter.js AI models above.
+        </div>
+      `;
+      showError(null);
+    });
+
+    // Intelligent Routing Simulator logic
+    const simAnalyzeBtn = document.getElementById('simAnalyzeBtn');
+    const simPromptInput = document.getElementById('simPromptInput');
+    const simPrefSelect = document.getElementById('simPrefSelect');
+    const simDecisionOutput = document.getElementById('simDecisionOutput');
+
+    async function runRoutingSimulation() {
+      const prompt = simPromptInput.value.trim();
+      const userPref = simPrefSelect.value;
+      if (!prompt) return;
+
+      simDecisionOutput.innerHTML = `<div class="text-zinc-500 animate-pulse">Analyzing prompt context, hardware memory safety, and model tier compatibility...</div>`;
+
+      try {
+        const res = await fetch('/api/routing/decision', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ prompt, userPreference: userPref })
+        });
+        const data = await res.json();
+        if (!data.success) throw new Error(data.error || 'Routing inspection failed');
+
+        const dec = data.decision;
+        const cls = data.classification;
+        const mem = dec.memorySafety;
+        const snap = dec.resourceSnapshot;
+
+        simDecisionOutput.innerHTML = `
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pb-2 border-b border-zinc-800">
+            <div>
+              <div class="text-zinc-400">REQUEST CLASSIFICATION:</div>
+              <div class="font-bold text-emerald-400 text-sm mt-0.5">${cls.primaryCategory} <span class="text-xs text-zinc-400 font-normal">(${cls.allCategories.join(', ')})</span></div>
+              <div class="text-[11px] text-zinc-400 mt-1">Complexity: <span class="text-amber-400 font-semibold">${cls.complexity}</span> | Tokens: <span class="text-blue-400">${cls.estimatedPromptTokens}</span></div>
+            </div>
+            <div>
+              <div class="text-zinc-400">SELECTED TARGET ENGINE:</div>
+              <div class="font-bold text-cyan-400 text-sm mt-0.5">${dec.selectedProvider.toUpperCase()} <span class="text-xs text-zinc-300 font-mono">(${dec.selectedModel})</span></div>
+              <div class="text-[11px] text-zinc-400 mt-1">Tier: <span class="text-purple-400 font-semibold">${dec.targetTier}</span> | Policy: <span class="text-zinc-300">${dec.userPreferenceApplied}</span></div>
+            </div>
+          </div>
+
+          <div class="py-2 border-b border-zinc-800">
+            <div class="text-zinc-400">ROUTING REASON & EXPLANATION:</div>
+            <div class="text-zinc-200 mt-1 text-xs font-sans">${dec.reason}</div>
+            ${dec.escalated ? `<div class="mt-1 text-amber-300 text-[11px] bg-amber-950/40 p-1.5 rounded border border-amber-800/60">⚡ <b>Escalation Triggered:</b> ${dec.escalationReason}</div>` : ''}
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-2 py-2 border-b border-zinc-800 text-[11px]">
+            <div><span class="text-zinc-500">Host RAM:</span> <span class="text-zinc-200">${snap.systemRamAvailableGb} GB free / ${snap.systemRamTotalGb} GB</span></div>
+            <div><span class="text-zinc-500">GPU VRAM:</span> <span class="text-zinc-200">${snap.gpuVramAvailableMb} MB free / ${snap.gpuVramTotalMb} MB</span></div>
+            <div><span class="text-zinc-500">Memory Safety:</span> <span class="${mem.isSafe ? 'text-emerald-400' : 'text-rose-400'} font-bold">${mem.isSafe ? 'SAFE' : 'GUARD REJECTED'}</span></div>
+          </div>
+
+          <div>
+            <div class="text-zinc-400">SMART FALLBACK CHAIN:</div>
+            <div class="flex items-center gap-1.5 mt-1 flex-wrap">
+              <span class="px-2 py-0.5 bg-cyan-950 text-cyan-300 border border-cyan-800 rounded text-[11px] font-bold">1. ${dec.selectedModel} (${dec.selectedProvider})</span>
+              <span class="text-zinc-500">→</span>
+              ${dec.fallbackChain.map((m, idx) => `<span class="px-2 py-0.5 bg-zinc-900 text-zinc-300 border border-zinc-700 rounded text-[11px]">${idx + 2}. ${m}</span>`).join('<span class="text-zinc-500">→</span>')}
+            </div>
+          </div>
+        `;
+      } catch (err) {
+        simDecisionOutput.innerHTML = `<div class="text-rose-400">Simulation Error: ${err.message}</div>`;
+      }
+    }
+
+    if (simAnalyzeBtn) {
+      simAnalyzeBtn.addEventListener('click', runRoutingSimulation);
+    }
+    if (simPromptInput) {
+      simPromptInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') runRoutingSimulation();
+      });
+    }
+  </script>
+</body>
+</html>

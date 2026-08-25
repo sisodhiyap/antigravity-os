@@ -1,0 +1,2 @@
+import { Coupon } from '../types/coupon.types';
+export class DiscountService { private coupons = new Map<string, number>([['SAVE10', 10], ['BLACKFRIDAY', 25]]); apply(subtotal: number, code: string): number { const pct = this.coupons.get(code.toUpperCase()) || 0; return subtotal * (1 - pct / 100); } }

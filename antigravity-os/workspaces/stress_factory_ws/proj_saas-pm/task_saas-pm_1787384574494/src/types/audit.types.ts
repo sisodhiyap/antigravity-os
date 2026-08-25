@@ -1,0 +1,1 @@
+export interface AuditRecord { id: string; action: string; entityId: string; actorId: string; timestamp: string; }

@@ -1,0 +1,2 @@
+import { Contact } from '../types/contact.types';
+export class ContactService { private list: Contact[] = []; add(c: Omit<Contact, 'id'>): Contact { const item = { id: 'c_' + Date.now(), ...c }; this.list.push(item); return item; } search(q: string): Contact[] { return this.list.filter(c => c.name.toLowerCase().includes(q.toLowerCase()) || c.email.includes(q)); } }

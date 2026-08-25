@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#bacde6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d30bb7;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#grad)" />
+  <g filter="url(#shadow)">
+    <rect x="192" y="108" width="1536" height="864" rx="24" fill="#0f172a" fill-opacity="0.85" stroke="#38bdf8" stroke-width="2"/>
+    <text x="960" y="486" font-family="system-ui, sans-serif" font-size="67" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      Thumbnail for video: Project antigravity-reality
+    </text>
+    <text x="960" y="594" font-family="system-ui, sans-serif" font-size="38" fill="#94a3b8" text-anchor="middle">
+      STYLE: UI_MOCKUP | RESOLUTION: 1920x1080
+    </text>
+    <text x="960" y="670" font-family="system-ui, sans-serif" font-size="31" fill="#38bdf8" text-anchor="middle">
+      Antigravity Unified Multimodal Engine
+    </text>
+  </g>
+</svg>

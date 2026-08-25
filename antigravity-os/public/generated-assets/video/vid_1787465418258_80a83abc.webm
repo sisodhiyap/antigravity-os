@@ -1,0 +1,21 @@
+{
+  "title": "Project e2e-studio-factory",
+  "description": "A next-generation digital interface synthesized from instructions: \"Futuristic visual media portfolio landing page\"",
+  "aspectRatio": "16:9",
+  "resolution": "1080p",
+  "framerate": 30,
+  "totalDurationSeconds": 5,
+  "thumbnailAssetId": "ast_1787465418245_ca4591d9",
+  "scenes": [
+    {
+      "sceneId": "scene_001",
+      "durationSeconds": 5,
+      "title": "Opening scene of Project e2e-studio-factory",
+      "visualPrompt": "Opening scene of Project e2e-studio-factory video",
+      "voiceoverText": "System initialized",
+      "imageAssetId": "ast_1787465418210_9bc2a3f1",
+      "audioAssetId": "ast_1787465418229_69defa76"
+    }
+  ],
+  "renderedAt": "2026-08-23T06:10:18.258Z"
+}

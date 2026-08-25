@@ -1,0 +1,1 @@
+export function validateCoupon(code: string): boolean { return code.trim().length >= 3; }

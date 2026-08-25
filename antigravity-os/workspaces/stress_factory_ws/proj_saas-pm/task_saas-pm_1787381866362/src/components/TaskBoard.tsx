@@ -1,0 +1,1 @@
+export function TaskBoard({ tasks }: { tasks: any[] }) { return { type: 'div', className: 'kanban-board', children: tasks.length }; }

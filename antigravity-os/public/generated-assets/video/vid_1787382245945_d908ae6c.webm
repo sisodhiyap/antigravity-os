@@ -1,0 +1,31 @@
+{
+  "title": "OmniCraft Creative Operations Studio — UX Case Study Reel",
+  "description": "Comprehensive UX research walkthrough and design breakdown for OmniCraft Creative Operations Studio",
+  "aspectRatio": "16:9",
+  "resolution": "1080p",
+  "framerate": 30,
+  "totalDurationSeconds": 9,
+  "thumbnailAssetId": "ast_1787382245945_d40abbc9",
+  "scenes": [
+    {
+      "sceneId": "scene_1_problem",
+      "durationSeconds": 4,
+      "title": "Problem Statement & Persona Insights",
+      "imageAssetId": "ast_1787382245919_30157557",
+      "voiceoverText": "Analyzing user pain points and information architecture.",
+      "caption": "Phase 1: User Research & Persona Mapping",
+      "audioAssetId": "ast_1787382245937_0652234a"
+    },
+    {
+      "sceneId": "scene_2_solution",
+      "durationSeconds": 5,
+      "title": "Design System & High-Fidelity UI",
+      "visualPrompt": "Design System color tokens and responsive grid layout for OmniCraft Creative Operations Studio",
+      "voiceoverText": "Calibrated WCAG 2.2 AA color tokens and 1440px desktop grid.",
+      "caption": "Phase 2: Semantic Design System & Prototyping",
+      "imageAssetId": "ast_1787382245938_4c7321a8",
+      "audioAssetId": "ast_1787382245943_3734ce79"
+    }
+  ],
+  "renderedAt": "2026-08-22T07:04:05.945Z"
+}

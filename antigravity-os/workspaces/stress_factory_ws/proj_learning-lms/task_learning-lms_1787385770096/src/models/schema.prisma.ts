@@ -1,0 +1,1 @@
+export const lmsSchema = { models: ['Student', 'Course', 'Lesson', 'Enrollment', 'Progress'] };

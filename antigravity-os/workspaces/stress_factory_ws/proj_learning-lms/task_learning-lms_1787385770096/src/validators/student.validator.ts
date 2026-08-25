@@ -1,0 +1,1 @@
+export function validateStudentEmail(email: string): boolean { return email.includes('@'); }

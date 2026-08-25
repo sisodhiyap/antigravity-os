@@ -1,0 +1,1 @@
+export interface Order { id: string; items: CartItem[]; totalUsd: number; status: 'PENDING' | 'PAID' | 'SHIPPED'; createdAt: string; }

@@ -1,0 +1,39 @@
+{
+  "name": "backend-supabase-prisma",
+  "version": "1.0.0",
+  "description": "Universal production-ready Supabase and Prisma backend foundation for any web/mobile/API application",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:studio": "prisma studio",
+    "db:seed": "tsx prisma/seed.ts"
+  },
+  "keywords": [
+    "supabase",
+    "prisma",
+    "postgresql",
+    "typescript",
+    "backend-starter",
+    "orm"
+  ],
+  "author": "Antigravity Swarm",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "@supabase/supabase-js": "^2.48.1",
+    "dotenv": "^16.4.7",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "prisma": "^5.22.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}

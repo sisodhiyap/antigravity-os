@@ -1,0 +1,1 @@
+export const crmSchema = { tables: ['contacts', 'companies', 'deals', 'activities'] };

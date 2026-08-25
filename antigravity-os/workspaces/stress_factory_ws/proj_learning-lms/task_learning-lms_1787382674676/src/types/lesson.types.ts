@@ -1,0 +1,1 @@
+export interface Lesson { id: string; courseId: string; title: string; durationMin: number; order: number; }

@@ -1,0 +1,1 @@
+export function validateTaskInput(title: string, priority: string): boolean { return title.trim().length > 0 && ['LOW', 'MED', 'HIGH'].includes(priority); }

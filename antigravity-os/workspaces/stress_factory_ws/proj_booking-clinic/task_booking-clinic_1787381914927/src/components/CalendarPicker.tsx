@@ -1,0 +1,1 @@
+export function CalendarPicker({ onSelect }: { onSelect: (d: string) => void }) { return { type: 'div', className: 'calendar-picker' }; }

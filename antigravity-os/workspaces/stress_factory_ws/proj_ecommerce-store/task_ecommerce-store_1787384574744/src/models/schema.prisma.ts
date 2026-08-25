@@ -1,0 +1,1 @@
+export const storeSchema = { models: ['Product', 'CartItem', 'Order', 'Coupon'] };

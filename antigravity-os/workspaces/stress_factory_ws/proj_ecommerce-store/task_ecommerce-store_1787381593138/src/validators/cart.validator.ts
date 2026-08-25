@@ -1,0 +1,1 @@
+export function validateCartQuantity(qty: number, stock: number): boolean { return qty > 0 && qty <= stock; }

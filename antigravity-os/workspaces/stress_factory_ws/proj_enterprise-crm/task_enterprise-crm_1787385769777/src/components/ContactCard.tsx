@@ -1,0 +1,1 @@
+export function ContactCard({ contact }: { contact: any }) { return { type: 'div', className: 'contact-card', name: contact.name }; }

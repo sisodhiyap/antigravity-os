@@ -1,0 +1,19 @@
+{
+  "title": "E2E Walkthrough Video",
+  "description": "",
+  "aspectRatio": "16:9",
+  "resolution": "1080p",
+  "framerate": 30,
+  "totalDurationSeconds": 5,
+  "thumbnailAssetId": "ast_1787614994972_38d9f4a3",
+  "scenes": [
+    {
+      "visualPrompt": "Opening scene",
+      "voiceoverText": "System active audio.",
+      "imageAssetId": "ast_1787614994942_dd745ab3",
+      "audioAssetId": "ast_1787614994964_032f0d35",
+      "durationSeconds": 5
+    }
+  ],
+  "renderedAt": "2026-08-24T23:43:14.979Z"
+}

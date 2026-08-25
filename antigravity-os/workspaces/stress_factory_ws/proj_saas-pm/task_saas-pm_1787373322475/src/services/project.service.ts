@@ -1,0 +1,2 @@
+import { Project } from '../types/project.types';
+export class ProjectService { private projects: Map<string, Project> = new Map(); create(name: string, ownerId: string): Project { const p = { id: 'p_' + Date.now(), name, slug: name.toLowerCase().replace(/\s+/g, '-'), ownerId, createdAt: new Date().toISOString() }; this.projects.set(p.id, p); return p; } listByOwner(ownerId: string): Project[] { return Array.from(this.projects.values()).filter(p => p.ownerId === ownerId); } }

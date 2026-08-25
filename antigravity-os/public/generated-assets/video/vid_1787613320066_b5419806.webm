@@ -1,0 +1,21 @@
+{
+  "title": "Project antigravity-qa-website",
+  "description": "A next-generation digital interface synthesized from instructions: \"Create a premium futuristic portfolio website for a multidisciplinary UI/UX designer, graphic designer, motion designer and VFX artist. Include: hero, portfolio, case studies, services, skills, AI capabilities, video showcase, contact section, responsive navigation, dark premium visual system, animations, SEO, AI-powered feature.\"",
+  "aspectRatio": "16:9",
+  "resolution": "1080p",
+  "framerate": 30,
+  "totalDurationSeconds": 5,
+  "thumbnailAssetId": "ast_1787613320060_da5f81a9",
+  "scenes": [
+    {
+      "sceneId": "scene_001",
+      "durationSeconds": 5,
+      "title": "Opening scene of Project antigravity-qa-website",
+      "visualPrompt": "Opening scene of Project antigravity-qa-website video",
+      "voiceoverText": "System initialized",
+      "imageAssetId": "ast_1787613320043_7304a0d4",
+      "audioAssetId": "ast_1787613320052_12f22a78"
+    }
+  ],
+  "renderedAt": "2026-08-24T23:15:20.066Z"
+}

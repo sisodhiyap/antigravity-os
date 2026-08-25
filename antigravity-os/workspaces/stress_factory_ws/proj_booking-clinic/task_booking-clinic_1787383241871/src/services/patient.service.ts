@@ -1,0 +1,2 @@
+import { Patient } from '../types/patient.types';
+export class PatientService { private patients: Patient[] = []; register(p: Omit<Patient, 'id'>): Patient { const item = { id: 'pat_' + Date.now(), ...p }; this.patients.push(item); return item; } }

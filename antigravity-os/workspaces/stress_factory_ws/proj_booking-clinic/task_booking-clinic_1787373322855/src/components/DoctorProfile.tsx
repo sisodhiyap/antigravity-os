@@ -1,0 +1,1 @@
+export function DoctorProfile({ doctor }: { doctor: any }) { return { type: 'div', className: 'doctor-card', name: doctor.name }; }

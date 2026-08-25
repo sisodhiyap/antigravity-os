@@ -1,0 +1,1 @@
+export const schemaDefinition = { models: ['User', 'Project', 'Task', 'AuditRecord'] };

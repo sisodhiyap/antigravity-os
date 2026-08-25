@@ -1,0 +1,12 @@
+{
+  "lastSync": "2026-08-19T11:10:00.000Z",
+  "totalModels": 7,
+  "localModelsCount": 5,
+  "freeModelsCount": 1,
+  "nativeModelsCount": 1,
+  "defaultLocalCoder": "qwen2.5-coder:14b",
+  "defaultLocalReasoner": "deepseek-r1:7b",
+  "defaultLocalFast": "qwen2.5-coder:7b",
+  "dynamicDiscoveryActive": true,
+  "ollamaEndpoint": "http://127.0.0.1:11434"
+}

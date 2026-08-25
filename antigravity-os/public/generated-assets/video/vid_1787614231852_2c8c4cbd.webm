@@ -1,0 +1,31 @@
+{
+  "title": "Fintech Autonomous Trading Terminal — UX Case Study Reel",
+  "description": "Comprehensive UX research walkthrough and design breakdown for Fintech Autonomous Trading Terminal",
+  "aspectRatio": "16:9",
+  "resolution": "1080p",
+  "framerate": 30,
+  "totalDurationSeconds": 9,
+  "thumbnailAssetId": "ast_1787614231847_0f22aa4d",
+  "scenes": [
+    {
+      "sceneId": "scene_1_problem",
+      "durationSeconds": 4,
+      "title": "Problem Statement & Persona Insights",
+      "imageAssetId": "ast_1787614231738_af8810d2",
+      "voiceoverText": "Analyzing user pain points and information architecture.",
+      "caption": "Phase 1: User Research & Persona Mapping",
+      "audioAssetId": "ast_1787614231816_2b1fef5a"
+    },
+    {
+      "sceneId": "scene_2_solution",
+      "durationSeconds": 5,
+      "title": "Design System & High-Fidelity UI",
+      "visualPrompt": "Design System color tokens and responsive grid layout for Fintech Autonomous Trading Terminal",
+      "voiceoverText": "Calibrated WCAG 2.2 AA color tokens and 1440px desktop grid.",
+      "caption": "Phase 2: Semantic Design System & Prototyping",
+      "imageAssetId": "ast_1787614231824_21b3a920",
+      "audioAssetId": "ast_1787614231839_b7682d42"
+    }
+  ],
+  "renderedAt": "2026-08-24T23:30:31.852Z"
+}

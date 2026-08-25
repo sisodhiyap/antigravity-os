@@ -1,0 +1,3 @@
+import { CartItem } from '../types/cart.types';
+import { Product } from '../types/product.types';
+export class CartService { private items: CartItem[] = []; addItem(product: Product, quantity = 1) { const existing = this.items.find(i => i.product.id === product.id); if (existing) existing.quantity += quantity; else this.items.push({ product, quantity }); } calculateSubtotal(): number { return this.items.reduce((sum, i) => sum + i.product.price * i.quantity, 0); } getItems(): CartItem[] { return [...this.items]; } clear() { this.items = []; } }

@@ -1,0 +1,1 @@
+export const useProjectStore = { activeProject: null as any, setActiveProject(p: any) { this.activeProject = p; } };

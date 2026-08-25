@@ -1,0 +1,413 @@
+{
+  "suite": "ANTIGRAVITY LEVEL-3 REAL PLAYWRIGHT BROWSER E2E",
+  "browser": "Chromium",
+  "playwrightVersion": "1.62.1",
+  "target": "http://localhost:3000",
+  "timestamp": "2026-08-23T05:06:05.956Z",
+  "totalTests": 15,
+  "passed": 15,
+  "failed": 0,
+  "results": [
+    {
+      "testName": "Root Dashboard Load",
+      "url": "http://localhost:3000",
+      "passed": true,
+      "domAssertions": [
+        {
+          "assertion": "Page title non-empty (got: \"Antigravity OS\")",
+          "passed": true
+        },
+        {
+          "assertion": "Body element present",
+          "passed": true
+        },
+        {
+          "assertion": "Main content container present",
+          "passed": true
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        {
+          "url": "http://localhost:3000/non-existent-route-xyz",
+          "status": 404
+        }
+      ],
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\root_dashboard_load.png",
+      "durationMs": 2424,
+      "timestamp": "2026-08-23T05:06:00.798Z",
+      "httpStatus": 200
+    },
+    {
+      "testName": "Agents Page Navigation",
+      "url": "http://localhost:3000/agents",
+      "passed": true,
+      "domAssertions": [
+        {
+          "assertion": "Heading element exists on agents page",
+          "passed": true
+        },
+        {
+          "assertion": "Page has non-empty content",
+          "passed": true
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        {
+          "url": "http://localhost:3000/non-existent-route-xyz",
+          "status": 404
+        }
+      ],
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\agents_page_navigation.png",
+      "durationMs": 123,
+      "timestamp": "2026-08-23T05:06:03.223Z",
+      "httpStatus": 200
+    },
+    {
+      "testName": "MCP Page Load",
+      "url": "http://localhost:3000/mcp",
+      "passed": true,
+      "domAssertions": [
+        {
+          "assertion": "MCP page body rendered",
+          "passed": true
+        },
+        {
+          "assertion": "Page has significant DOM elements (got 16)",
+          "passed": true
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        {
+          "url": "http://localhost:3000/non-existent-route-xyz",
+          "status": 404
+        }
+      ],
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\mcp_page_load.png",
+      "durationMs": 103,
+      "timestamp": "2026-08-23T05:06:03.346Z",
+      "httpStatus": 200
+    },
+    {
+      "testName": "Settings Page Load",
+      "url": "http://localhost:3000/settings",
+      "passed": true,
+      "domAssertions": [
+        {
+          "assertion": "Settings page body rendered",
+          "passed": true
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        {
+          "url": "http://localhost:3000/non-existent-route-xyz",
+          "status": 404
+        }
+      ],
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\settings_page_load.png",
+      "durationMs": 118,
+      "timestamp": "2026-08-23T05:06:03.449Z",
+      "httpStatus": 200
+    },
+    {
+      "testName": "Health API Response",
+      "url": "http://localhost:3000/api/health",
+      "passed": true,
+      "domAssertions": [
+        {
+          "assertion": "API returns parseable JSON",
+          "passed": true
+        },
+        {
+          "assertion": "Response has 'data' or 'status' field",
+          "passed": true
+        },
+        {
+          "assertion": "HTTP status is 200",
+          "passed": true
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        {
+          "url": "http://localhost:3000/non-existent-route-xyz",
+          "status": 404
+        }
+      ],
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\health_api_response.png",
+      "durationMs": 135,
+      "timestamp": "2026-08-23T05:06:03.567Z",
+      "httpStatus": 200
+    },
+    {
+      "testName": "Readiness API Response",
+      "url": "http://localhost:3000/api/health/readiness",
+      "passed": true,
+      "domAssertions": [
+        {
+          "assertion": "Readiness returns parseable JSON",
+          "passed": true
+        },
+        {
+          "assertion": "HTTP status 200",
+          "passed": true
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        {
+          "url": "http://localhost:3000/non-existent-route-xyz",
+          "status": 404
+        }
+      ],
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\readiness_api_response.png",
+      "durationMs": 108,
+      "timestamp": "2026-08-23T05:06:03.702Z",
+      "httpStatus": 200
+    },
+    {
+      "testName": "Agents API Response",
+      "url": "http://localhost:3000/api/agents",
+      "passed": true,
+      "domAssertions": [
+        {
+          "assertion": "Agents API returns parseable JSON",
+          "passed": true
+        },
+        {
+          "assertion": "HTTP status 200",
+          "passed": true
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        {
+          "url": "http://localhost:3000/non-existent-route-xyz",
+          "status": 404
+        }
+      ],
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\agents_api_response.png",
+      "durationMs": 116,
+      "timestamp": "2026-08-23T05:06:03.810Z",
+      "httpStatus": 200
+    },
+    {
+      "testName": "Models API Response",
+      "url": "http://localhost:3000/api/models",
+      "passed": true,
+      "domAssertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        },
+        {
+          "assertion": "Returns valid JSON",
+          "passed": true
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        {
+          "url": "http://localhost:3000/non-existent-route-xyz",
+          "status": 404
+        }
+      ],
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\models_api_response.png",
+      "durationMs": 125,
+      "timestamp": "2026-08-23T05:06:03.927Z",
+      "httpStatus": 200
+    },
+    {
+      "testName": "Tasks API Response",
+      "url": "http://localhost:3000/api/tasks",
+      "passed": true,
+      "domAssertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        {
+          "url": "http://localhost:3000/non-existent-route-xyz",
+          "status": 404
+        }
+      ],
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\tasks_api_response.png",
+      "durationMs": 95,
+      "timestamp": "2026-08-23T05:06:04.052Z",
+      "httpStatus": 200
+    },
+    {
+      "testName": "Artifacts API Response",
+      "url": "http://localhost:3000/api/artifacts",
+      "passed": true,
+      "domAssertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        {
+          "url": "http://localhost:3000/non-existent-route-xyz",
+          "status": 404
+        }
+      ],
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\artifacts_api_response.png",
+      "durationMs": 87,
+      "timestamp": "2026-08-23T05:06:04.148Z",
+      "httpStatus": 200
+    },
+    {
+      "testName": "Approvals API Response",
+      "url": "http://localhost:3000/api/approvals",
+      "passed": true,
+      "domAssertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        {
+          "url": "http://localhost:3000/non-existent-route-xyz",
+          "status": 404
+        }
+      ],
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\approvals_api_response.png",
+      "durationMs": 70,
+      "timestamp": "2026-08-23T05:06:04.234Z",
+      "httpStatus": 200
+    },
+    {
+      "testName": "Memory API Response",
+      "url": "http://localhost:3000/api/memory",
+      "passed": true,
+      "domAssertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        {
+          "url": "http://localhost:3000/non-existent-route-xyz",
+          "status": 404
+        }
+      ],
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\memory_api_response.png",
+      "durationMs": 92,
+      "timestamp": "2026-08-23T05:06:04.305Z",
+      "httpStatus": 200
+    },
+    {
+      "testName": "Mobile 375px Viewport",
+      "url": "http://localhost:3000",
+      "passed": true,
+      "domAssertions": [
+        {
+          "assertion": "Page renders at 375px width",
+          "passed": true
+        },
+        {
+          "assertion": "Viewport is 375px (got 375)",
+          "passed": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\mobile_375px_viewport.png",
+      "durationMs": 96,
+      "timestamp": "2026-08-23T05:06:04.520Z",
+      "httpStatus": 200
+    },
+    {
+      "testName": "Tablet 768px Viewport",
+      "url": "http://localhost:3000",
+      "passed": true,
+      "domAssertions": [
+        {
+          "assertion": "Page renders at 768px width",
+          "passed": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\tablet_768px_viewport.png",
+      "durationMs": 102,
+      "timestamp": "2026-08-23T05:06:04.722Z",
+      "httpStatus": 200
+    },
+    {
+      "testName": "404 Not Found Page",
+      "url": "http://localhost:3000/non-existent-route-xyz",
+      "passed": true,
+      "domAssertions": [
+        {
+          "assertion": "Body has content (not blank)",
+          "passed": true
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        {
+          "url": "http://localhost:3000/non-existent-route-xyz",
+          "status": 404
+        }
+      ],
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\404_not_found_page.png",
+      "durationMs": 92,
+      "timestamp": "2026-08-23T05:06:04.826Z",
+      "httpStatus": 404
+    }
+  ]
+}

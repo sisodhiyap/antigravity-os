@@ -1,0 +1,1 @@
+export interface LessonProgress { lessonId: string; completed: boolean; quizScorePercent: number; }

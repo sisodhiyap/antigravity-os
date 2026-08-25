@@ -1,0 +1,33 @@
+{
+  "projectName": "project_1787613598316",
+  "blueprint": {
+    "name": "project_1787613598316",
+    "type": "landing",
+    "title": "Project project_1787613598316",
+    "description": "A next-generation digital interface synthesized from instructions: \"Build me a futuristic design agency landing page\"",
+    "designSystem": {
+      "primaryColor": "#00f0ff",
+      "secondaryColor": "#7000ff",
+      "accentColor": "#ff0070",
+      "bgGradient": "from-cyber-cyan to-cyber-purple",
+      "fontFamily": "font-mono"
+    },
+    "pages": [
+      "index",
+      "about",
+      "features",
+      "contact"
+    ],
+    "features": [
+      "Dynamic Media Streaming",
+      "Unified Cognitive AI Routing",
+      "Sovereign WAL Mode Database",
+      "Glassmorphism Cyber Theme Layout"
+    ],
+    "hasChat": true,
+    "hasVideo": true,
+    "imageUrl": "/generated-assets/images/img_1787613598317_d3f88019.svg",
+    "videoUrl": "/generated-assets/video/vid_1787613598345_6f0a805d.webm"
+  },
+  "generatedAt": "2026-08-24T23:19:58.316Z"
+}

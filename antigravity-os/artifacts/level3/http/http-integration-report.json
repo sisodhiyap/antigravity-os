@@ -1,0 +1,729 @@
+{
+  "suite": "ANTIGRAVITY LEVEL-3 REAL HTTP API INTEGRATION",
+  "target": "http://localhost:3000",
+  "timestamp": "2026-08-23T05:06:08.789Z",
+  "totalTests": 17,
+  "passed": 17,
+  "failed": 0,
+  "results": [
+    {
+      "testName": "Health Check",
+      "method": "GET",
+      "url": "http://localhost:3000/api/health",
+      "responseStatus": 200,
+      "responseBody": {
+        "success": true,
+        "data": {
+          "status": "HEALTHY",
+          "version": "4.0.0",
+          "timestamp": "2026-08-23T05:06:08.734Z"
+        }
+      },
+      "requestId": "req_1787461568734",
+      "durationMs": 59,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        },
+        {
+          "assertion": "Returns JSON",
+          "passed": true
+        },
+        {
+          "assertion": "Has data field",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "testName": "Readiness Probe",
+      "method": "GET",
+      "url": "http://localhost:3000/api/health/readiness",
+      "responseStatus": 200,
+      "responseBody": {
+        "success": true,
+        "data": {
+          "ready": true,
+          "status": "READY"
+        }
+      },
+      "requestId": "req_1787461568750",
+      "durationMs": 6,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        },
+        {
+          "assertion": "Returns JSON",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "testName": "List Agents",
+      "method": "GET",
+      "url": "http://localhost:3000/api/agents",
+      "responseStatus": 200,
+      "responseBody": {
+        "success": true,
+        "data": [
+          {
+            "role": "PRODUCT_MANAGER",
+            "name": "Nexus PM",
+            "description": "Understands intent, defines acceptance criteria, MVP scope, and product specifications",
+            "capabilities": [
+              "User Stories",
+              "Scope Definition",
+              "Roadmap Planning"
+            ],
+            "allowedTools": [
+              "search_memory"
+            ],
+            "systemInstructions": "You are the Product Manager for Antigravity. Deliver clear, actionable specs and user stories.",
+            "preferredCategory": "REASONING"
+          },
+          {
+            "role": "UX_DESIGNER",
+            "name": "Aura Designer",
+            "description": "Establishes design tokens, wireframes, WCAG AA contrast, and glassmorphic UI specs",
+            "capabilities": [
+              "Glassmorphism UI",
+              "WCAG AA",
+              "Component Design"
+            ],
+            "allowedTools": [
+              "search_memory"
+            ],
+            "systemInstructions": "You are the Principal UX/UI Designer. Produce refined, accessible, cyberpunk aesthetic design systems.",
+            "preferredCategory": "CREATIVE"
+          },
+          {
+            "role": "ARCHITECT",
+            "name": "Vector Architect",
+            "description": "Designs system architecture, typed APIs, database schemas, and AI router fallbacks",
+            "capabilities": [
+              "System Architecture",
+              "API Design",
+              "Schema Modeling"
+            ],
+            "allowedTools": [
+              "search_memory",
+              "system_diagnostics"
+            ],
+            "systemInstructions": "You are the Chief System Architect. Enforce zero-any strict TypeScript, resilience, and clean separation.",
+            "preferredCategory": "REASONING"
+          },
+          {
+            "role": "BUILDER",
+            "name": "Forge Builder",
+            "description": "Implements production-grade React 19 / Next.js 15 frontend and typed backend services",
+            "capabilities": [
+              "Full-Stack Engineering",
+              "TypeScript Strict",
+              "Component Assembly"
+            ],
+            "allowedTools": [
+              "search_memory"
+            ],
+            "systemInstructions": "You are the Lead Full-Stack Builder. Write modular, highly maintainable, typed code.",
+            "preferredCategory": "CODE"
+          },
+          {
+            "role": "QA_ENGINEER",
+            "name": "Sentinel QA",
+            "description": "Executes automated tests, Playwright checks, regression suites, and validation contracts",
+            "capabilities": [
+              "Unit Testing",
+              "E2E Testing",
+              "Regression Auditing"
+            ],
+            "allowedTools": [
+              "search_memory",
+              "system_diagnostics"
+            ],
+            "systemInstructions": "You are the Lead QA Automation Engineer. Validate edge cases, types, and error states.",
+            "preferredCategory": "REASONING"
+          },
+          {
+            "role": "SECURITY_ENGINEER",
+            "name": "Cipher Security",
+            "description": "Performs secret scanning, RLS policy audits, OWASP checks, and sandboxing governance",
+            "capabilities": [
+              "OWASP Auditing",
+              "RLS Verification",
+              "Secret Defense"
+            ],
+            "allowedTools": [
+              "search_memory",
+              "system_diagnostics"
+            ],
+            "systemInstructions": "You are the Principal Security Engineer. Zero tolerance for exposed secrets or flawed RLS.",
+            "preferredCategory": "REASONING"
+          },
+          {
+            "role": "DEVOPS_ENGINEER",
+            "name": "Stratus DevOps",
+            "description": "Oversees Docker containers, CI/CD pipelines, Vercel/Netlify deployments, and cloud telemetry",
+            "capabilities": [
+              "Docker",
+              "Deployments",
+              "Cloud Telemetry"
+            ],
+            "allowedTools": [
+              "system_diagnostics"
+            ],
+            "systemInstructions": "You are the Lead DevOps Engineer. Maintain high uptime and reliable deployment pipelines.",
+            "preferredCategory": "FAST"
+          },
+          {
+            "role": "CREATIVE_DIRECTOR",
+            "name": "Prism Creative",
+            "description": "Directs visual asset generation, color harmonies, and marketing multimedia pipelines",
+            "capabilities": [
+              "Visual Assets",
+              "Brand Identity",
+              "Design Direction"
+            ],
+            "allowedTools": [
+              "search_memory"
+            ],
+            "systemInstructions": "You are the Creative Director. Provide rich, distinct visual concepts.",
+            "preferredCategory": "CREATIVE"
+          },
+          {
+            "role": "VIDEO_PRODUCER",
+            "name": "Motion Video",
+            "description": "Orchestrates Remotion walkthroughs and Blender 3D video rendering queues",
+            "capabilities": [
+              "Remotion",
+              "3D Rendering",
+              "Video Pipelines"
+            ],
+            "allowedTools": [
+              "system_diagnostics"
+            ],
+            "systemInstructions": "You are the Motion Video Producer. Produce compelling video architectures.",
+            "preferredCategory": "CREATIVE"
+          },
+          {
+            "role": "STOCK_RESEARCHER",
+            "name": "Alpha Market",
+            "description": "Performs market intelligence, financial modeling, and data analytics synthesis",
+            "capabilities": [
+              "Market Research",
+              "Financial Modeling",
+              "Data Analysis"
+            ],
+            "allowedTools": [
+              "search_memory"
+            ],
+            "systemInstructions": "You are the Senior Market & Quantitative Analyst. Provide rigorous financial insights.",
+            "preferredCategory": "REASONING"
+          }
+        ]
+      },
+      "requestId": "req_1787461568753",
+      "durationMs": 3,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        },
+        {
+          "assertion": "Returns JSON",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "testName": "List Models",
+      "method": "GET",
+      "url": "http://localhost:3000/api/models",
+      "responseStatus": 200,
+      "responseBody": {
+        "success": true,
+        "data": [
+          {
+            "provider": "ollama",
+            "model": "qwen2.5-coder:7b",
+            "taskCategory": "CODE",
+            "totalInvocations": 1,
+            "successfulInvocations": 1,
+            "failedInvocations": 0,
+            "averageLatencyMs": 85,
+            "totalTokens": 1500,
+            "totalCostUsd": 0,
+            "qualityScore": 0.96,
+            "lastUpdated": "2026-08-23T05:06:08.632Z"
+          },
+          {
+            "provider": "deepseek",
+            "model": "deepseek-chat",
+            "taskCategory": "REASONING",
+            "totalInvocations": 1,
+            "successfulInvocations": 1,
+            "failedInvocations": 0,
+            "averageLatencyMs": 420,
+            "totalTokens": 2200,
+            "totalCostUsd": 0.0006,
+            "qualityScore": 0.98,
+            "lastUpdated": "2026-08-23T05:06:08.632Z"
+          },
+          {
+            "provider": "openrouter",
+            "model": "meta-llama/llama-3.3-70b-instruct:free",
+            "taskCategory": "GENERAL",
+            "totalInvocations": 1,
+            "successfulInvocations": 1,
+            "failedInvocations": 0,
+            "averageLatencyMs": 650,
+            "totalTokens": 1800,
+            "totalCostUsd": 0,
+            "qualityScore": 0.92,
+            "lastUpdated": "2026-08-23T05:06:08.632Z"
+          }
+        ]
+      },
+      "requestId": "req_1787461568755",
+      "durationMs": 3,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        },
+        {
+          "assertion": "Returns JSON",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "testName": "List Providers",
+      "method": "GET",
+      "url": "http://localhost:3000/api/providers",
+      "responseStatus": 200,
+      "responseBody": {
+        "success": true,
+        "data": [
+          {
+            "provider": "ollama",
+            "status": "HEALTHY"
+          },
+          {
+            "provider": "deepseek",
+            "status": "HEALTHY"
+          },
+          {
+            "provider": "openrouter",
+            "status": "HEALTHY"
+          }
+        ]
+      },
+      "requestId": "req_1787461568758",
+      "durationMs": 3,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "testName": "Create Task",
+      "method": "POST",
+      "url": "http://localhost:3000/api/tasks",
+      "requestBody": {
+        "title": "HTTP Integration Test Task",
+        "description": "Created by Level-3 HTTP integration validator",
+        "workspaceId": "http_test_ws"
+      },
+      "responseStatus": 201,
+      "responseBody": {
+        "success": true,
+        "data": {
+          "id": "task_1787461568767_a40al",
+          "title": "HTTP Integration Test Task",
+          "description": "Created by Level-3 HTTP integration validator",
+          "status": "QUEUED",
+          "priority": "MEDIUM",
+          "assignedAgent": "BUILDER",
+          "workspaceId": "default",
+          "stepHistory": [
+            {
+              "step": 1,
+              "status": "QUEUED",
+              "timestamp": "2026-08-23T05:06:08.767Z",
+              "message": "Task queued in orchestrator"
+            }
+          ],
+          "createdAt": "2026-08-23T05:06:08.767Z",
+          "updatedAt": "2026-08-23T05:06:08.767Z"
+        }
+      },
+      "requestId": "req_1787461568766",
+      "durationMs": 8,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "HTTP 200 or 201",
+          "passed": true
+        },
+        {
+          "assertion": "Returns JSON",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "testName": "List Tasks",
+      "method": "GET",
+      "url": "http://localhost:3000/api/tasks",
+      "responseStatus": 200,
+      "responseBody": {
+        "success": true,
+        "data": [
+          {
+            "id": "task_1787461568635_zxfy4",
+            "title": "Self-Healing AI Router Fallback Validation",
+            "description": "Verify automated fallback and quota constraints under simulated provider outages.",
+            "status": "QUEUED",
+            "priority": "HIGH",
+            "assignedAgent": "ARCHITECT",
+            "workspaceId": "default",
+            "stepHistory": [
+              {
+                "step": 1,
+                "status": "QUEUED",
+                "timestamp": "2026-08-23T05:06:08.635Z",
+                "message": "Task queued in orchestrator"
+              }
+            ],
+            "createdAt": "2026-08-23T05:06:08.635Z",
+            "updatedAt": "2026-08-23T05:06:08.635Z"
+          },
+          {
+            "id": "task_1787461568767_a40al",
+            "title": "HTTP Integration Test Task",
+            "description": "Created by Level-3 HTTP integration validator",
+            "status": "QUEUED",
+            "priority": "MEDIUM",
+            "assignedAgent": "BUILDER",
+            "workspaceId": "default",
+            "stepHistory": [
+              {
+                "step": 1,
+                "status": "QUEUED",
+                "timestamp": "2026-08-23T05:06:08.767Z",
+                "message": "Task queued in orchestrator"
+              }
+            ],
+            "createdAt": "2026-08-23T05:06:08.767Z",
+            "updatedAt": "2026-08-23T05:06:08.767Z"
+          }
+        ]
+      },
+      "requestId": "req_1787461568769",
+      "durationMs": 2,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        },
+        {
+          "assertion": "Returns JSON",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "testName": "List Artifacts",
+      "method": "GET",
+      "url": "http://localhost:3000/api/artifacts",
+      "responseStatus": 200,
+      "responseBody": {
+        "success": true,
+        "data": [
+          {
+            "artifactId": "art_1787461568638_3o9h7_v1",
+            "name": "architecture.json",
+            "category": "ARCHITECTURE",
+            "version": 1,
+            "projectId": "global",
+            "taskId": "init_task",
+            "agentRole": "ARCHITECT",
+            "status": "VALIDATED",
+            "source": "SYSTEM",
+            "confidence": 1,
+            "content": {
+              "platform": "Antigravity OS v4.0",
+              "controlPlane": "Kernel + Policy Engine + Artifact System",
+              "stack": [
+                "Next.js 15",
+                "React 19",
+                "Prisma ORM",
+                "Supabase",
+                "Ollama GPU"
+              ]
+            },
+            "createdAt": "2026-08-23T05:06:08.638Z",
+            "updatedAt": "2026-08-23T05:06:08.638Z"
+          }
+        ]
+      },
+      "requestId": "req_1787461568771",
+      "durationMs": 2,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "testName": "Create Artifact",
+      "method": "POST",
+      "url": "http://localhost:3000/api/artifacts",
+      "requestBody": {
+        "name": "http-integration-test.json",
+        "category": "TESTING",
+        "projectId": "proj_http_test",
+        "taskId": "task_http_test",
+        "agentRole": "QA_ENGINEER",
+        "content": {
+          "source": "level3-http-integration-validation",
+          "timestamp": "2026-08-23T05:06:08.772Z"
+        }
+      },
+      "responseStatus": 201,
+      "responseBody": {
+        "success": true,
+        "data": {
+          "artifactId": "art_1787461568773_bo4d4_v1",
+          "name": "http-integration-test.json",
+          "category": "TESTING",
+          "version": 1,
+          "projectId": "proj_http_test",
+          "taskId": "task_http_test",
+          "agentRole": "QA_ENGINEER",
+          "status": "VALIDATED",
+          "source": "AI",
+          "confidence": 0.95,
+          "content": {
+            "source": "level3-http-integration-validation",
+            "timestamp": "2026-08-23T05:06:08.772Z"
+          },
+          "createdAt": "2026-08-23T05:06:08.773Z",
+          "updatedAt": "2026-08-23T05:06:08.773Z"
+        }
+      },
+      "requestId": "req_1787461568773",
+      "durationMs": 2,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "HTTP 200 or 201",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "testName": "List Approvals",
+      "method": "GET",
+      "url": "http://localhost:3000/api/approvals",
+      "responseStatus": 200,
+      "responseBody": {
+        "success": true,
+        "data": []
+      },
+      "requestId": "req_1787461568776",
+      "durationMs": 2,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        },
+        {
+          "assertion": "Returns JSON",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "testName": "List Memory",
+      "method": "GET",
+      "url": "http://localhost:3000/api/memory",
+      "responseStatus": 200,
+      "responseBody": {
+        "success": true,
+        "data": []
+      },
+      "requestId": "req_1787461568778",
+      "durationMs": 2,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "testName": "List Benchmarks",
+      "method": "GET",
+      "url": "http://localhost:3000/api/benchmarks",
+      "responseStatus": 200,
+      "responseBody": {
+        "success": true,
+        "data": [
+          {
+            "benchmark": "todo-app",
+            "score": 96,
+            "status": "PASS"
+          }
+        ]
+      },
+      "requestId": "req_1787461568781",
+      "durationMs": 2,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        },
+        {
+          "assertion": "Returns JSON",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "testName": "Kernel Status",
+      "method": "GET",
+      "url": "http://localhost:3000/api/kernel/status",
+      "responseStatus": 200,
+      "responseBody": {
+        "success": true,
+        "data": {
+          "running": true,
+          "state": "OPERATIONAL"
+        }
+      },
+      "requestId": "req_1787461568783",
+      "durationMs": 1,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "testName": "Kernel Services",
+      "method": "GET",
+      "url": "http://localhost:3000/api/kernel/services",
+      "responseStatus": 200,
+      "responseBody": {
+        "success": true,
+        "data": [
+          {
+            "name": "telemetry",
+            "status": "RUNNING"
+          },
+          {
+            "name": "router",
+            "status": "RUNNING"
+          }
+        ]
+      },
+      "requestId": "req_1787461568784",
+      "durationMs": 1,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "testName": "Kernel Events",
+      "method": "GET",
+      "url": "http://localhost:3000/api/kernel/events",
+      "responseStatus": 200,
+      "responseBody": {
+        "success": true,
+        "data": []
+      },
+      "requestId": "req_1787461568785",
+      "durationMs": 1,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "testName": "Malformed Task POST (missing title)",
+      "method": "POST",
+      "url": "http://localhost:3000/api/tasks",
+      "requestBody": {
+        "description": "no title provided"
+      },
+      "responseStatus": 400,
+      "responseBody": {
+        "success": false,
+        "error": "Validation failed: Title is required"
+      },
+      "requestId": "req_1787461568786",
+      "durationMs": 2,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "Does not return 500",
+          "passed": true
+        },
+        {
+          "assertion": "Returns JSON not crash",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "testName": "Usage Statistics",
+      "method": "GET",
+      "url": "http://localhost:3000/api/usage",
+      "responseStatus": 200,
+      "responseBody": {
+        "success": true,
+        "data": {
+          "globalSpendUsd": 0,
+          "globalBudgetUsd": 50,
+          "providers": {},
+          "workspaces": {}
+        }
+      },
+      "requestId": "req_1787461568788",
+      "durationMs": 1,
+      "passed": true,
+      "assertions": [
+        {
+          "assertion": "HTTP 200",
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

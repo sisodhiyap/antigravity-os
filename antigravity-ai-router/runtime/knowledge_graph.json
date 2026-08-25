@@ -1,0 +1,125 @@
+[
+  {
+    "id": "ki-001",
+    "category": "architectural_rule",
+    "title": "Windows PowerShell Execution Policy",
+    "description": "npx.ps1 script execution is blocked on Windows PowerShell by default policy.",
+    "solution": "Execute commands using powershell -ExecutionPolicy Bypass -Command \"...\"",
+    "timestamp": "2026-08-19T10:21:22.091Z",
+    "tags": [
+      "windows",
+      "powershell",
+      "execution_policy"
+    ]
+  },
+  {
+    "id": "ki-002",
+    "category": "bug_fix",
+    "title": "Puter.js Safe DOM Rendering",
+    "description": "Prevent XSS injection and unsafe HTML when rendering AI streaming text.",
+    "solution": "Use Text nodes or textContent instead of innerHTML or document.write().",
+    "timestamp": "2026-08-19T10:21:22.091Z",
+    "tags": [
+      "puter.js",
+      "security",
+      "dom"
+    ]
+  },
+  {
+    "id": "ki-003",
+    "category": "performance_pattern",
+    "title": "ComfyUI 6GB VRAM Optimization",
+    "description": "Avoid out-of-memory crashes on RTX 3060 6GB VRAM GPUs.",
+    "solution": "Enforce fp8/Q4 GGUF quantization and --lowvram CPU offloading.",
+    "timestamp": "2026-08-19T10:21:22.091Z",
+    "tags": [
+      "vram",
+      "rtx3060",
+      "comfyui"
+    ]
+  },
+  {
+    "category": "bug_fix",
+    "title": "Test Verification Entry",
+    "description": "Automated test entry for knowledge persistence.",
+    "solution": "Ensure json database updates cleanly.",
+    "tags": [
+      "unit_test",
+      "knowledge_engine"
+    ],
+    "id": "ki-1787134882092",
+    "timestamp": "2026-08-19T10:21:22.092Z"
+  },
+  {
+    "category": "bug_fix",
+    "title": "Test Verification Entry",
+    "description": "Automated test entry for knowledge persistence.",
+    "solution": "Ensure json database updates cleanly.",
+    "tags": [
+      "unit_test",
+      "knowledge_engine"
+    ],
+    "id": "ki-1787216880797",
+    "timestamp": "2026-08-20T09:08:00.797Z"
+  },
+  {
+    "category": "bug_fix",
+    "title": "Test Verification Entry",
+    "description": "Automated test entry for knowledge persistence.",
+    "solution": "Ensure json database updates cleanly.",
+    "tags": [
+      "unit_test",
+      "knowledge_engine"
+    ],
+    "id": "ki-1787216905151",
+    "timestamp": "2026-08-20T09:08:25.151Z"
+  },
+  {
+    "category": "bug_fix",
+    "title": "Test Verification Entry",
+    "description": "Automated test entry for knowledge persistence.",
+    "solution": "Ensure json database updates cleanly.",
+    "tags": [
+      "unit_test",
+      "knowledge_engine"
+    ],
+    "id": "ki-1787217833673",
+    "timestamp": "2026-08-20T09:23:53.673Z"
+  },
+  {
+    "category": "bug_fix",
+    "title": "Test Verification Entry",
+    "description": "Automated test entry for knowledge persistence.",
+    "solution": "Ensure json database updates cleanly.",
+    "tags": [
+      "unit_test",
+      "knowledge_engine"
+    ],
+    "id": "ki-1787218409625",
+    "timestamp": "2026-08-20T09:33:29.625Z"
+  },
+  {
+    "category": "bug_fix",
+    "title": "Test Verification Entry",
+    "description": "Automated test entry for knowledge persistence.",
+    "solution": "Ensure json database updates cleanly.",
+    "tags": [
+      "unit_test",
+      "knowledge_engine"
+    ],
+    "id": "ki-1787220616711",
+    "timestamp": "2026-08-20T10:10:16.711Z"
+  },
+  {
+    "category": "bug_fix",
+    "title": "Test Verification Entry",
+    "description": "Automated test entry for knowledge persistence.",
+    "solution": "Ensure json database updates cleanly.",
+    "tags": [
+      "unit_test",
+      "knowledge_engine"
+    ],
+    "id": "ki-1787225881961",
+    "timestamp": "2026-08-20T11:38:01.961Z"
+  }
+]

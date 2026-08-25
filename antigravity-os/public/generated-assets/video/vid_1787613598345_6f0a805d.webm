@@ -1,0 +1,21 @@
+{
+  "title": "Project project_1787613598316",
+  "description": "A next-generation digital interface synthesized from instructions: \"Build me a futuristic design agency landing page\"",
+  "aspectRatio": "16:9",
+  "resolution": "1080p",
+  "framerate": 30,
+  "totalDurationSeconds": 5,
+  "thumbnailAssetId": "ast_1787613598340_a6010b19",
+  "scenes": [
+    {
+      "sceneId": "scene_001",
+      "durationSeconds": 5,
+      "title": "Opening scene of Project project_1787613598316",
+      "visualPrompt": "Opening scene of Project project_1787613598316 video",
+      "voiceoverText": "System initialized",
+      "imageAssetId": "ast_1787613598324_2b0e68ae",
+      "audioAssetId": "ast_1787613598333_b0ad649b"
+    }
+  ],
+  "renderedAt": "2026-08-24T23:19:58.345Z"
+}

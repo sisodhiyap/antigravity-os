@@ -1,0 +1,44 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: antigravity-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    restart: unless-stopped
+
+  antigravity-ai-router:
+    build:
+      context: ./antigravity-ai-router
+      dockerfile: Dockerfile
+    container_name: antigravity-ai-router
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./antigravity-ai-router/.env
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+  antigravity-os:
+    build:
+      context: ./antigravity-os
+      dockerfile: Dockerfile
+    container_name: antigravity-os
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./antigravity-os/.env
+    depends_on:
+      - antigravity-ai-router
+      - ollama
+    restart: unless-stopped
+    volumes:
+      - sqlite-data:/app/prisma
+
+volumes:
+  sqlite-data:
+  ollama-data:

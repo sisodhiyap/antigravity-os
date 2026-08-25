@@ -1,0 +1,74 @@
+{
+  "suite": "ANTIGRAVITY LEVEL-3 REAL AI PROVIDER FAULT INJECTION",
+  "timestamp": "2026-08-23T05:06:11.369Z",
+  "totalTests": 8,
+  "passed": 8,
+  "failed": 0,
+  "results": [
+    {
+      "scenario": "Ollama Availability Check",
+      "provider": "ollama",
+      "available": true,
+      "latencyMs": 63,
+      "passed": true,
+      "detail": "Ollama is AVAILABLE at localhost:11434 (63ms)"
+    },
+    {
+      "scenario": "DeepSeek API Key Configured",
+      "provider": "deepseek",
+      "available": false,
+      "latencyMs": 0,
+      "passed": true,
+      "detail": "DeepSeek API key NOT configured"
+    },
+    {
+      "scenario": "OpenRouter API Key Configured",
+      "provider": "openrouter",
+      "available": false,
+      "latencyMs": 0,
+      "passed": true,
+      "detail": "OpenRouter API key NOT configured"
+    },
+    {
+      "scenario": "Budget Exhaustion — Router Hard Block",
+      "provider": "all",
+      "available": false,
+      "latencyMs": 0,
+      "passed": true,
+      "detail": "Budget exhaustion correctly blocked AI Router (BudgetExceededError thrown)"
+    },
+    {
+      "scenario": "Circuit Breaker — Opens After 3 Failures",
+      "provider": "test_provider_circuit",
+      "available": false,
+      "circuitOpen": true,
+      "latencyMs": 0,
+      "passed": true,
+      "detail": "Circuit breaker OPEN (failures=3, cooldown 30s remaining)"
+    },
+    {
+      "scenario": "Circuit Breaker — Resets After Cooldown Expires",
+      "provider": "test_expired_provider",
+      "available": true,
+      "latencyMs": 0,
+      "passed": true,
+      "detail": "Circuit breaker correctly RESET after cooldown expiry — provider eligible again"
+    },
+    {
+      "scenario": "All Providers Blocked — Terminal AIProviderError",
+      "provider": "all",
+      "available": false,
+      "latencyMs": 0,
+      "passed": true,
+      "detail": "All-providers-unavailable correctly throws AIProviderError: \"AI Provider [ollama -> deepseek -> openrouter] Error: All AI providers in fallba\""
+    },
+    {
+      "scenario": "Quota — Per-Workspace Token Tracking",
+      "provider": "ollama",
+      "available": true,
+      "latencyMs": 0,
+      "passed": true,
+      "detail": "Workspace ws_quota_track_test tracked: 700 tokens, $0.0000"
+    }
+  ]
+}

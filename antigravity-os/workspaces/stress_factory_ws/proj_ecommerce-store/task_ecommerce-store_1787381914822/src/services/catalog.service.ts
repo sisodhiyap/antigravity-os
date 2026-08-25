@@ -1,0 +1,2 @@
+import { Product } from '../types/product.types';
+export class CatalogService { private products: Product[] = []; add(p: Product) { this.products.push(p); } listByCategory(cat: string): Product[] { return this.products.filter(p => p.category === cat); } search(query: string): Product[] { return this.products.filter(p => p.title.toLowerCase().includes(query.toLowerCase())); } }

@@ -1,0 +1,38 @@
+{
+  "title": "OmniCraft AI Creative Operations Case Study",
+  "description": "End-to-end design rationales, interaction specifications, and production verification",
+  "aspectRatio": "16:9",
+  "resolution": "1080p",
+  "framerate": 30,
+  "totalDurationSeconds": 13,
+  "thumbnailAssetId": "ast_1787382245967_e3c50c01",
+  "scenes": [
+    {
+      "sceneId": "scene_1",
+      "title": "The Creative Bottleneck",
+      "durationSeconds": 4,
+      "imageAssetId": "ast_1787382245946_56fc2105",
+      "voiceoverText": "Analyzing fragmented creative pipelines across enterprise teams.",
+      "caption": "Problem: Fragmented Generative Workflows",
+      "audioAssetId": "ast_1787382245960_f862c58b"
+    },
+    {
+      "sceneId": "scene_2",
+      "title": "Unified AI Gateway Architecture",
+      "durationSeconds": 5,
+      "visualPrompt": "Multimodal Generation Architecture Diagram with Resilient Circuit Breakers",
+      "voiceoverText": "One provider-agnostic gateway orchestrates image, audio, video, and 3D.",
+      "caption": "Solution: Provider-Agnostic Generation Orchestration",
+      "imageAssetId": "ast_1787382245961_739e349f",
+      "audioAssetId": "ast_1787382245965_bd68b4da"
+    },
+    {
+      "sceneId": "scene_3",
+      "title": "WCAG 2.2 AA & Responsive Proof",
+      "durationSeconds": 4,
+      "audioAssetId": "ast_1787382245957_bc828c37",
+      "caption": "Result: 100% Accessible, Multi-Screen Responsive Web App"
+    }
+  ],
+  "renderedAt": "2026-08-22T07:04:05.967Z"
+}

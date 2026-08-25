@@ -1,0 +1,25 @@
+routing:
+  strategy: local-first
+  tiers:
+    - local
+    - free
+    - native
+  fallback:
+    enabled: true
+    max_retries: 3
+    exponential_backoff: true
+    backoff_delays_sec: [1, 2, 4, 8]
+  quality:
+    verification: true
+    compile_check: true
+    test_check: true
+    repair_loop: true
+  privacy:
+    prefer_local: true
+  premium:
+    use_only_when_needed: true
+  health:
+    enabled: true
+    check_interval_sec: 30
+  quota:
+    tracking: true

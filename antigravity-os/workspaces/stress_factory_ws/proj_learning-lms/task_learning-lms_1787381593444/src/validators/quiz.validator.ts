@@ -1,0 +1,1 @@
+export function validateQuizScore(score: number): boolean { return score >= 0 && score <= 100; }

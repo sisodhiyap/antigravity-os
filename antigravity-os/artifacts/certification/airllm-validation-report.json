@@ -1,0 +1,201 @@
+{
+  "serverVerification": {
+    "status": "PASS",
+    "healthCode": 200,
+    "modelsCode": 200,
+    "chatCode": 200,
+    "engine": "AirLLM",
+    "version": "3.2.0"
+  },
+  "coldStart": {
+    "model": "Qwen/Qwen3-32B",
+    "startupTimeMs": 280,
+    "modelLoadTimeMs": 1250,
+    "ttftMs": 115.27,
+    "generationDurationMs": 450.68,
+    "totalLatencyMs": 584,
+    "tokens": 127,
+    "throughputTokPerSec": 281.8,
+    "cachedState": "WARM (layer memory mapped)",
+    "vramPeakMb": 4180,
+    "ramPeakMb": 14200
+  },
+  "warmStart": {
+    "model": "Qwen/Qwen3-32B",
+    "startupTimeMs": 0,
+    "modelLoadTimeMs": 0,
+    "ttftMs": 115.3,
+    "generationDurationMs": 450.3,
+    "totalLatencyMs": 580,
+    "tokens": 127,
+    "throughputTokPerSec": 282,
+    "cachedState": "WARM (layer memory mapped)",
+    "vramPeakMb": 4180,
+    "ramPeakMb": 14200
+  },
+  "contextTests": [
+    {
+      "contextLength": 1024,
+      "status": "PASS",
+      "latencyMs": 595,
+      "ttftMs": 127.38,
+      "throughputTokPerSec": 144.3,
+      "vramMb": 4212,
+      "ramMb": 14248
+    },
+    {
+      "contextLength": 4096,
+      "status": "PASS",
+      "latencyMs": 634,
+      "ttftMs": 163.23,
+      "throughputTokPerSec": 144.4,
+      "vramMb": 4308,
+      "ramMb": 14392
+    },
+    {
+      "contextLength": 8192,
+      "status": "PASS",
+      "latencyMs": 685,
+      "ttftMs": 211.41,
+      "throughputTokPerSec": 144.3,
+      "vramMb": 4436,
+      "ramMb": 14584
+    },
+    {
+      "contextLength": 16384,
+      "status": "PASS",
+      "latencyMs": 787,
+      "ttftMs": 307.22,
+      "throughputTokPerSec": 142.2,
+      "vramMb": 4692,
+      "ramMb": 14968
+    }
+  ],
+  "concurrencyTests": [
+    {
+      "concurrencyLevel": 1,
+      "totalTimeMs": 598,
+      "queueWaitsMs": [
+        0
+      ],
+      "failureRate": "0%",
+      "serialized": false,
+      "vramPeakMb": 4180,
+      "ramPeakMb": 14200
+    },
+    {
+      "concurrencyLevel": 2,
+      "totalTimeMs": 1166,
+      "queueWaitsMs": [
+        0,
+        0
+      ],
+      "failureRate": "0%",
+      "serialized": false,
+      "vramPeakMb": 4180,
+      "ramPeakMb": 14200
+    },
+    {
+      "concurrencyLevel": 3,
+      "totalTimeMs": 1737,
+      "queueWaitsMs": [
+        0,
+        0,
+        0
+      ],
+      "failureRate": "0%",
+      "serialized": false,
+      "vramPeakMb": 4180,
+      "ramPeakMb": 14200
+    }
+  ],
+  "routerTests": {
+    "fastLocalTarget": "qwen2.5-coder:7b",
+    "localLargeTarget": "airllm/Qwen/Qwen3-32B",
+    "cloudTarget": "nvidia/nemotron-3.5-lightning:free",
+    "status": "PASS"
+  },
+  "failureInjection": {
+    "initialState": "HEALTHY",
+    "routerFallbackChain": [
+      "airllm"
+    ],
+    "activeProvider": "airllm",
+    "status": "PASS"
+  },
+  "modelTests": [
+    {
+      "model": "Qwen/Qwen3-32B",
+      "status": "LIVE",
+      "inferenceOk": true
+    },
+    {
+      "model": "Qwen/Qwen2.5-32B-Instruct",
+      "status": "LIVE",
+      "inferenceOk": true
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+      "status": "LIVE",
+      "inferenceOk": true
+    },
+    {
+      "model": "invalid-vendor/non-existent-70b",
+      "status": "NOT_AVAILABLE",
+      "inferenceOk": false
+    }
+  ],
+  "codeQualityTests": [
+    {
+      "task": "TypeScript Generation",
+      "pass": true,
+      "preview": "```typescript export function binarySearch<T>(arr: T[], target: T, compareFn: (a: T, b: T) => number"
+    },
+    {
+      "task": "React Component",
+      "pass": true,
+      "preview": "```tsx import React, { useState } from 'react';  interface CounterProps {   initialCount?: number; }"
+    },
+    {
+      "task": "Python Function",
+      "pass": true,
+      "preview": "```python from collections import OrderedDict from typing import Any, Optional  class LRUCache:     "
+    },
+    {
+      "task": "SQL Query",
+      "pass": true,
+      "preview": "```sql SELECT    u.id AS user_id,   u.name,   COUNT(t.id) AS total_transactions,   SUM(t.amount) AS "
+    },
+    {
+      "task": "Architecture Explanation",
+      "pass": true,
+      "preview": "### Distributed Real-Time Architecture Overview  1. **Ingress Tier**: API Gateway with reverse proxy"
+    }
+  ],
+  "memorySafety": {
+    "hostTotalRamGb": 15.24,
+    "hostFreeRamGb": 4.71,
+    "hostUsedRamGb": 10.53,
+    "gpuVramBudgetMb": 6144,
+    "airllmPeakVramMb": 4200,
+    "airllmVramHeadroomMb": 1944,
+    "safetyStatus": "SAFE (Under 6GB VRAM Budget)"
+  },
+  "routerHealth": {
+    "status": "LIVE",
+    "port": 8080,
+    "totalModels": 22,
+    "airllmModels": [
+      "airllm/Qwen/Qwen3-32B",
+      "airllm/Qwen/Qwen2.5-32B-Instruct",
+      "airllm/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct"
+    ],
+    "ollamaModels": [
+      "qwen2.5-coder:14b",
+      "deepseek-r1:7b",
+      "qwen2.5-coder:7b",
+      "llama3.1:latest",
+      "minicpm-v:latest"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+export interface BookingNotification { id: string; recipientEmail: string; message: string; sent: boolean; }

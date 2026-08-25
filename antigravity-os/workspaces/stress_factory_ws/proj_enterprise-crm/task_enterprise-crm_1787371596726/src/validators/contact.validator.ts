@@ -1,0 +1,1 @@
+export function validateContact(name: string, email: string): boolean { return name.length >= 2 && email.includes('@'); }

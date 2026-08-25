@@ -1,0 +1,1 @@
+export const useCrmStore = { activeDealId: null as string | null, selectDeal(id: string) { this.activeDealId = id; } };

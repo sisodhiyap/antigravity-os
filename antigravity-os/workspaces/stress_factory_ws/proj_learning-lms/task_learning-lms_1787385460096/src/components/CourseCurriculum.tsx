@@ -1,0 +1,1 @@
+export function CourseCurriculum({ lessons }: { lessons: any[] }) { return { type: 'div', className: 'curriculum-list', lessonCount: lessons.length }; }

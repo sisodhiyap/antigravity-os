@@ -1,0 +1,4 @@
+import { CartService } from './cart.service';
+import { DiscountService } from './discount.service';
+import { Order } from '../types/order.types';
+export class CheckoutService { constructor(private cart: CartService, private discounts: DiscountService) {} checkout(couponCode?: string): Order { const sub = this.cart.calculateSubtotal(); const finalTotal = couponCode ? this.discounts.apply(sub, couponCode) : sub; const order: Order = { id: 'ord_' + Date.now(), items: this.cart.getItems(), totalUsd: Math.round(finalTotal * 100) / 100, status: 'PAID', createdAt: new Date().toISOString() }; this.cart.clear(); return order; } }

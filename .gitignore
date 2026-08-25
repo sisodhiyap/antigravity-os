@@ -1,0 +1,36 @@
+# Environment variables & secrets
+.env
+.env.local
+.env.*.local
+*.env
+*.key
+*.pem
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing & Coverage
+coverage/
+.nyc_output/
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.vercel/
+.netlify/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS & Temp files
+.DS_Store
+Thumbs.db
+scratch/

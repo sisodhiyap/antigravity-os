@@ -1,0 +1,2 @@
+import { Course } from '../types/course.types';
+export class CourseService { private courses: Course[] = [{ id: 'crs_ts', title: 'Advanced TypeScript & Systems', instructor: 'Dr. Turing', totalLessons: 10, passingScore: 85 }]; list(): Course[] { return [...this.courses]; } getById(id: string): Course | undefined { return this.courses.find(c => c.id === id); } }

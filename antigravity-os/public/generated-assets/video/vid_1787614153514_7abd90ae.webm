@@ -1,0 +1,21 @@
+{
+  "title": "Project antigravity-reality-website",
+  "description": "A next-generation digital interface synthesized from instructions: \"Futuristic visual media portfolio landing page\"",
+  "aspectRatio": "16:9",
+  "resolution": "1080p",
+  "framerate": 30,
+  "totalDurationSeconds": 5,
+  "thumbnailAssetId": "ast_1787614153509_561e174f",
+  "scenes": [
+    {
+      "sceneId": "scene_001",
+      "durationSeconds": 5,
+      "title": "Opening scene of Project antigravity-reality-website",
+      "visualPrompt": "Opening scene of Project antigravity-reality-website video",
+      "voiceoverText": "System initialized",
+      "imageAssetId": "ast_1787614153486_f0aaa1d4",
+      "audioAssetId": "ast_1787614153499_2fb8983f"
+    }
+  ],
+  "renderedAt": "2026-08-24T23:29:13.515Z"
+}

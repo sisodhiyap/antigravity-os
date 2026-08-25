@@ -1,0 +1,2 @@
+import { Company } from '../types/company.types';
+export class CompanyService { private list: Company[] = []; create(name: string, domain: string, industry: string): Company { const co = { id: 'co_' + Date.now(), name, domain, industry }; this.list.push(co); return co; } getById(id: string): Company | undefined { return this.list.find(c => c.id === id); } }

@@ -1,0 +1,21 @@
+{
+  "title": "Antigravity System Walkthrough",
+  "description": "Automated video walkthrough of the Antigravity architecture",
+  "aspectRatio": "16:9",
+  "resolution": "1080p",
+  "framerate": 30,
+  "totalDurationSeconds": 3,
+  "thumbnailAssetId": "ast_1787385781222_582e2884",
+  "scenes": [
+    {
+      "sceneId": "s1",
+      "title": "Intro",
+      "durationSeconds": 3,
+      "visualPrompt": "Antigravity System Overview Architecture",
+      "voiceoverText": "Welcome to Antigravity.",
+      "imageAssetId": "ast_1787385781199_af71192c",
+      "audioAssetId": "ast_1787385781210_c575be81"
+    }
+  ],
+  "renderedAt": "2026-08-22T08:03:01.234Z"
+}

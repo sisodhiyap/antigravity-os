@@ -1,0 +1,2 @@
+export type PipelineStage = 'LEAD' | 'CONTACTED' | 'PROPOSAL' | 'NEGOTIATION' | 'CLOSED_WON' | 'CLOSED_LOST';
+export interface Deal { id: string; title: string; valueUsd: number; stage: PipelineStage; contactId: string; companyId?: string; }

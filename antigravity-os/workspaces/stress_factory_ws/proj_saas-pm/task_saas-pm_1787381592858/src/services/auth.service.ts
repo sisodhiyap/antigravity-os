@@ -1,0 +1,2 @@
+import { User, AuthSession } from '../types/auth.types';
+export class AuthService { private users: Map<string, User> = new Map(); register(email: string): User { const u = { id: 'u_' + Date.now(), email, role: 'MEMBER' as const }; this.users.set(u.id, u); return u; } login(email: string): AuthSession | null { const u = Array.from(this.users.values()).find(x => x.email === email); return u ? { token: 'jwt_' + u.id, user: u } : null; } }

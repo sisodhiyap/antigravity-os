@@ -1,0 +1,95 @@
+{
+  "suite": "ANTIGRAVITY LEVEL-3 REAL SANDBOX ESCAPE ATTACK",
+  "timestamp": "2026-08-23T05:06:13.876Z",
+  "sandboxRootAttacked": "C:\\D drive\\Antigravity\\antigravity-os\\workspaces\\attack_ws\\proj_attack\\task_attack_1787461573871",
+  "totalCriticalAttacks": 11,
+  "blocked": 11,
+  "escaped": 0,
+  "safeWriteWorking": true,
+  "attacks": [
+    {
+      "attack": "Relative traversal ../../etc/passwd",
+      "vector": "../../etc/passwd",
+      "result": "BLOCKED",
+      "reason": "Tool [sandbox] failed: Security violation: Path traversal escape attempt detected",
+      "critical": true
+    },
+    {
+      "attack": "Windows backslash traversal",
+      "vector": "..\\..\\Windows\\",
+      "result": "BLOCKED",
+      "reason": "Tool [sandbox] failed: Security violation: Path traversal escape attempt detected",
+      "critical": true
+    },
+    {
+      "attack": "URL-encoded traversal %2e%2e/",
+      "vector": "%2e%2e%2f...",
+      "result": "BLOCKED",
+      "reason": "Tool [sandbox] failed: Security violation: Path traversal escape attempt detected",
+      "critical": true
+    },
+    {
+      "attack": "Deep nested traversal",
+      "vector": "sub/../../../../../../etc/shadow",
+      "result": "BLOCKED",
+      "reason": "Tool [sandbox] failed: Security violation: Path traversal escape attempt detected",
+      "critical": true
+    },
+    {
+      "attack": "Absolute Windows path bypass",
+      "vector": "C:\\Windows\\System32\\evil.txt",
+      "result": "BLOCKED",
+      "reason": "Tool [sandbox] failed: Security violation: Path traversal escape attempt detected",
+      "critical": true
+    },
+    {
+      "attack": "Null byte injection",
+      "vector": "safe.txt\\x00../../etc/passwd",
+      "result": "BLOCKED",
+      "reason": "Tool [sandbox] failed: Security violation: Path traversal escape attempt detected",
+      "critical": true
+    },
+    {
+      "attack": "rm -rf / command injection",
+      "vector": "rm -rf /",
+      "result": "BLOCKED",
+      "reason": "Tool [sandbox] failed: Security violation: Destructive host command rejected",
+      "critical": true
+    },
+    {
+      "attack": "format c: disk wipe",
+      "vector": "format c:",
+      "result": "BLOCKED",
+      "reason": "Tool [sandbox] failed: Security violation: Destructive host command rejected",
+      "critical": true
+    },
+    {
+      "attack": "shutdown /s command",
+      "vector": "shutdown /s /t 0",
+      "result": "BLOCKED",
+      "reason": "Tool [sandbox] failed: Security violation: Destructive host command rejected",
+      "critical": true
+    },
+    {
+      "attack": "Fork bomb injection",
+      "vector": ":(){ :|:& };:",
+      "result": "BLOCKED",
+      "reason": "Tool [sandbox] failed: Security violation: Destructive host command rejected",
+      "critical": true
+    },
+    {
+      "attack": "Cross-workspace sibling access",
+      "vector": "Relative path to sibling workspace",
+      "result": "BLOCKED",
+      "reason": "Tool [sandbox] failed: Security violation: Path traversal escape attempt detected",
+      "critical": true
+    },
+    {
+      "attack": "Safe file write (positive control)",
+      "vector": "safe/output.txt",
+      "result": "ALLOWED",
+      "reason": "Correctly allowed",
+      "critical": false
+    }
+  ]
+}

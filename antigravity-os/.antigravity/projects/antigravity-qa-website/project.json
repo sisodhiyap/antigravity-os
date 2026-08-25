@@ -1,0 +1,33 @@
+{
+  "projectName": "antigravity-qa-website",
+  "blueprint": {
+    "name": "antigravity-qa-website",
+    "type": "portfolio",
+    "title": "Project antigravity-qa-website",
+    "description": "A next-generation digital interface synthesized from instructions: \"Create a premium futuristic portfolio website for a multidisciplinary UI/UX designer, graphic designer, motion designer and VFX artist. Include: hero, portfolio, case studies, services, skills, AI capabilities, video showcase, contact section, responsive navigation, dark premium visual system, animations, SEO, AI-powered feature.\"",
+    "designSystem": {
+      "primaryColor": "#00f0ff",
+      "secondaryColor": "#7000ff",
+      "accentColor": "#ff0070",
+      "bgGradient": "from-cyber-cyan to-cyber-purple",
+      "fontFamily": "font-mono"
+    },
+    "pages": [
+      "index",
+      "about",
+      "features",
+      "contact"
+    ],
+    "features": [
+      "Dynamic Media Streaming",
+      "Unified Cognitive AI Routing",
+      "Sovereign WAL Mode Database",
+      "Glassmorphism Cyber Theme Layout"
+    ],
+    "hasChat": true,
+    "hasVideo": true,
+    "imageUrl": "/generated-assets/images/img_1787613598371_9e7cc46a.svg",
+    "videoUrl": "/generated-assets/video/vid_1787613598403_b5419806.webm"
+  },
+  "generatedAt": "2026-08-24T23:19:58.371Z"
+}

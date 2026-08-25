@@ -1,0 +1,29 @@
+{
+  "lastSync": "2026-08-19T11:10:00.000Z",
+  "providers": [
+    {
+      "name": "ollama",
+      "type": "local",
+      "endpoint": "http://127.0.0.1:11434",
+      "health": "HEALTHY",
+      "quota": "UNLIMITED_HARDWARE_BOUND",
+      "latencyMs": 12
+    },
+    {
+      "name": "omniroute",
+      "type": "free_gateway",
+      "endpoint": "http://127.0.0.1:3000",
+      "health": "HEALTHY",
+      "quota": "OBSERVED_FREE_TIERS",
+      "latencyMs": 45
+    },
+    {
+      "name": "antigravity_native",
+      "type": "native_entitlement",
+      "endpoint": "internal",
+      "health": "HEALTHY",
+      "quota": "PREMIUM_RESERVED",
+      "latencyMs": 110
+    }
+  ]
+}

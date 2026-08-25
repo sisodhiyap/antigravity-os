@@ -1,0 +1,2 @@
+import { Doctor } from '../types/doctor.types';
+export class DoctorService { private doctors: Doctor[] = [{ id: 'doc_1', name: 'Dr. Sarah Connor', specialty: 'Cardiology', availableDays: ['MON', 'WED', 'FRI'] }]; list(): Doctor[] { return [...this.doctors]; } getById(id: string): Doctor | undefined { return this.doctors.find(d => d.id === id); } }

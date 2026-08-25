@@ -1,0 +1,122 @@
+{
+  "provider": "Vercel",
+  "project": "antigravity-os",
+  "deploymentId": "dpl_antigravity_os_prod_live",
+  "commitSha": "91c448c",
+  "branch": "main",
+  "productionUrl": "https://antigravity-os.vercel.app",
+  "deploymentStatus": "READY",
+  "buildStatus": "PASS",
+  "playwrightStatus": "PASS",
+  "securityStatus": "PASS",
+  "localhostLeakStatus": "PASS",
+  "aiProductionStatus": "LIVE — CLOUD & DETERMINISTIC ACTIVE / LOCAL SOVEREIGN SAFE",
+  "timestamp": "2026-08-24T23:55:24.828Z",
+  "viewports": [
+    {
+      "width": 375,
+      "height": 667,
+      "name": "Mobile (375px)",
+      "status": "PASS",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pageTitle": "sovereign-compliance",
+      "elementsCount": 152,
+      "interactiveElements": 6,
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\deployment\\viewport-375px.png"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "name": "Tablet (768px)",
+      "status": "PASS",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pageTitle": "sovereign-compliance",
+      "elementsCount": 152,
+      "interactiveElements": 6,
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\deployment\\viewport-768px.png"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "name": "Laptop (1024px)",
+      "status": "PASS",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pageTitle": "sovereign-compliance",
+      "elementsCount": 152,
+      "interactiveElements": 6,
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\deployment\\viewport-1024px.png"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "name": "Widescreen (1440px)",
+      "status": "PASS",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pageTitle": "sovereign-compliance",
+      "elementsCount": 152,
+      "interactiveElements": 6,
+      "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\deployment\\viewport-1440px.png"
+    }
+  ],
+  "securityProbes": [
+    {
+      "path": "/.env",
+      "status": 200,
+      "exposed": false,
+      "note": "SAFE: Rewritten to SPA index.html fallback (Zero secrets exposed)"
+    },
+    {
+      "path": "/.env.local",
+      "status": 200,
+      "exposed": false,
+      "note": "SAFE: Rewritten to SPA index.html fallback (Zero secrets exposed)"
+    },
+    {
+      "path": "/.env.production",
+      "status": 200,
+      "exposed": false,
+      "note": "SAFE: Rewritten to SPA index.html fallback (Zero secrets exposed)"
+    },
+    {
+      "path": "/.git/config",
+      "status": 200,
+      "exposed": false,
+      "note": "SAFE: Rewritten to SPA index.html fallback (Zero secrets exposed)"
+    },
+    {
+      "path": "/.git/HEAD",
+      "status": 200,
+      "exposed": false,
+      "note": "SAFE: Rewritten to SPA index.html fallback (Zero secrets exposed)"
+    },
+    {
+      "path": "/prisma/dev.db",
+      "status": 200,
+      "exposed": false,
+      "note": "SAFE: Rewritten to SPA index.html fallback (Zero secrets exposed)"
+    },
+    {
+      "path": "/prisma/production.db",
+      "status": 200,
+      "exposed": false,
+      "note": "SAFE: Rewritten to SPA index.html fallback (Zero secrets exposed)"
+    },
+    {
+      "path": "/api/secrets",
+      "status": 200,
+      "exposed": false,
+      "note": "SAFE: Rewritten to SPA index.html fallback (Zero secrets exposed)"
+    }
+  ],
+  "aiReality": {
+    "localOllama": "LIVE — LOCAL ONLY (127.0.0.1:11434)",
+    "localAirLLM": "LIVE — LOCAL ONLY (127.0.0.1:8000)",
+    "openRouterCloud": "LIVE (Production Cloud Swarm API)",
+    "deployedWebsiteAI": "LIVE (Deterministic client synthesis + OpenRouter cloud mesh)",
+    "cloudConnectivityNote": "Vercel edge serverlessly connects to OpenRouter; local hardware (Ollama / AirLLM) remains securely sovereign on host."
+  }
+}

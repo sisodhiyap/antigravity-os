@@ -1,0 +1,2 @@
+import { Student } from '../types/student.types';
+export class StudentService { private students = new Map<string, Student>(); register(name: string, email: string): Student { const s = { id: 'std_' + Date.now(), name, email, enrolledCourseIds: [] }; this.students.set(s.id, s); return s; } enroll(studentId: string, courseId: string): boolean { const s = this.students.get(studentId); if (!s) return false; if (!s.enrolledCourseIds.includes(courseId)) s.enrolledCourseIds.push(courseId); return true; } }

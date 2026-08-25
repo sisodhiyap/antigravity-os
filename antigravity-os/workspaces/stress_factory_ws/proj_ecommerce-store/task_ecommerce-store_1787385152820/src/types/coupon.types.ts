@@ -1,0 +1,1 @@
+export interface Coupon { code: string; discountPercent: number; active: boolean; }

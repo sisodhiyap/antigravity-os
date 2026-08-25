@@ -1,0 +1,1 @@
+export function validateTimeSlot(slot: string): boolean { return /^(0[9]|1[0-7]):[0-5][0-9]$/.test(slot); }

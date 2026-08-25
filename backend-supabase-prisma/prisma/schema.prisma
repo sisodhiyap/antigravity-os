@@ -1,0 +1,450 @@
+// ==============================================================================
+// PRISMA SCHEMA FOR SUPABASE POSTGRESQL & ANTIGRAVITY AGENTIC PLATFORM
+// ==============================================================================
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = []
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ------------------------------------------------------------------------------
+// ENUMS
+// ------------------------------------------------------------------------------
+
+enum UserRole {
+  USER
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum UserStatus {
+  ACTIVE
+  SUSPENDED
+  DEACTIVATED
+}
+
+enum OrgRole {
+  OWNER
+  ADMIN
+  MEMBER
+  VIEWER
+}
+
+enum ItemStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum TaskStatus {
+  QUEUED
+  PLANNING
+  RUNNING
+  WAITING
+  REVIEWING
+  VALIDATING
+  COMPLETED
+  FAILED
+  CANCELLED
+  TIMED_OUT
+}
+
+enum TaskPriority {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum AgentRole {
+  PRODUCT_MANAGER
+  UX_DESIGNER
+  ARCHITECT
+  BUILDER
+  QA_ENGINEER
+  SECURITY_ENGINEER
+  DEVOPS_ENGINEER
+  CREATIVE_DIRECTOR
+  VIDEO_PRODUCER
+  STOCK_RESEARCHER
+  CUSTOM
+}
+
+enum ToolRiskLevel {
+  READ_ONLY
+  LOW_RISK_WRITE
+  HIGH_RISK_WRITE
+  PRODUCTION_CRITICAL
+}
+
+enum AIProviderType {
+  OLLAMA
+  OPENAI
+  GEMINI
+  DEEPSEEK
+  OPENROUTER
+  GROQ
+  KIMI
+  ROUTER9
+}
+
+// ------------------------------------------------------------------------------
+// CORE IDENTITY & WORKSPACE MODELS
+// ------------------------------------------------------------------------------
+
+/// Represents an application user synchronized with Supabase Auth (auth.users.id)
+model User {
+  id            String         @id @default(uuid())
+  email         String         @unique
+  role          UserRole       @default(USER)
+  status        UserStatus     @default(ACTIVE)
+  createdAt     DateTime       @default(now()) @map("created_at")
+  updatedAt     DateTime       @updatedAt @map("updated_at")
+  lastSignInAt  DateTime?      @map("last_sign_in_at")
+
+  // Relations
+  profile       Profile?
+  memberships   Membership[]
+  items         ResourceItem[]
+  projects      Project[]
+  tasks         Task[]
+  auditLogs     AuditLog[]     @relation("ActorAuditLogs")
+  aiRequests    AIRequestLog[]
+  memories      MemoryItem[]
+
+  @@index([email])
+  @@index([role, status])
+  @@map("users")
+}
+
+/// Extended user metadata and public profile information
+model Profile {
+  id          String   @id @default(uuid())
+  userId      String   @unique @map("user_id")
+  displayName String?  @map("display_name")
+  avatarUrl   String?  @map("avatar_url")
+  bio         String?
+  metadata    Json?    @default("{}")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([displayName])
+  @@map("profiles")
+}
+
+/// Multi-tenant organization / workspace entity
+model Organization {
+  id          String       @id @default(uuid())
+  name        String
+  slug        String       @unique
+  logoUrl     String?      @map("logo_url")
+  createdAt   DateTime     @default(now()) @map("created_at")
+  updatedAt   DateTime     @updatedAt @map("updated_at")
+
+  // Relations
+  memberships Membership[]
+  items       ResourceItem[]
+  projects    Project[]
+  tasks       Task[]
+  budgets     BudgetRecord[]
+  memories    MemoryItem[]
+
+  @@index([slug])
+  @@map("organizations")
+}
+
+/// Connects Users to Organizations with specific roles
+model Membership {
+  id             String       @id @default(uuid())
+  userId         String       @map("user_id")
+  organizationId String       @map("organization_id")
+  role           OrgRole      @default(MEMBER)
+  createdAt      DateTime     @default(now()) @map("created_at")
+  updatedAt      DateTime     @updatedAt @map("updated_at")
+
+  // Relations
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, organizationId])
+  @@index([organizationId, role])
+  @@map("memberships")
+}
+
+/// Generic resource item representing documents, posts, or assets
+model ResourceItem {
+  id             String        @id @default(uuid())
+  title          String
+  slug           String        @unique
+  content        String?
+  status         ItemStatus    @default(DRAFT)
+  tags           String[]      @default([])
+  metadata       Json?         @default("{}")
+  authorId       String        @map("author_id")
+  organizationId String?       @map("organization_id")
+  createdAt      DateTime      @default(now()) @map("created_at")
+  updatedAt      DateTime      @updatedAt @map("updated_at")
+
+  // Relations
+  author         User          @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  organization   Organization? @relation(fields: [organizationId], references: [id], onDelete: SetNull)
+
+  @@index([authorId])
+  @@index([organizationId, status])
+  @@index([status, createdAt])
+  @@map("resource_items")
+}
+
+// ------------------------------------------------------------------------------
+// AGENTIC PLATFORM & ORCHESTRATION MODELS
+// ------------------------------------------------------------------------------
+
+/// High-level project workspace containing code repositories, tasks, and memory
+model Project {
+  id             String        @id @default(uuid())
+  name           String
+  slug           String
+  description    String?
+  repositoryUrl  String?       @map("repository_url")
+  defaultBranch  String        @default("main") @map("default_branch")
+  settings       Json?         @default("{}")
+  organizationId String        @map("organization_id")
+  createdById    String        @map("created_by_id")
+  createdAt      DateTime      @default(now()) @map("created_at")
+  updatedAt      DateTime      @updatedAt @map("updated_at")
+
+  // Relations
+  organization   Organization  @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  createdBy      User          @relation(fields: [createdById], references: [id], onDelete: Cascade)
+  tasks          Task[]
+  memories       MemoryItem[]
+  knowledgeNodes KnowledgeNode[]
+
+  @@unique([organizationId, slug])
+  @@index([organizationId])
+  @@map("projects")
+}
+
+/// Task unit orchestrated across autonomous agent swarm
+model Task {
+  id             String          @id @default(uuid())
+  title          String
+  description    String
+  status         TaskStatus      @default(QUEUED)
+  priority       TaskPriority    @default(MEDIUM)
+  inputPayload   Json?           @default("{}") @map("input_payload")
+  outputResult   Json?           @map("output_result")
+  errorMessage   String?         @map("error_message")
+  maxIterations  Int             @default(25) @map("max_iterations")
+  tokenBudget    Int             @default(200000) @map("token_budget")
+  tokensUsed     Int             @default(0) @map("tokens_used")
+  estimatedCost  Float           @default(0.0) @map("estimated_cost")
+  assignedAgent  AgentRole?      @map("assigned_agent")
+  organizationId String          @map("organization_id")
+  projectId      String?         @map("project_id")
+  createdById    String          @map("created_by_id")
+  startedAt      DateTime?       @map("started_at")
+  completedAt    DateTime?       @map("completed_at")
+  createdAt      DateTime        @default(now()) @map("created_at")
+  updatedAt      DateTime        @updatedAt @map("updated_at")
+
+  // Relations
+  organization   Organization    @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  project        Project?        @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  createdBy      User            @relation(fields: [createdById], references: [id], onDelete: Cascade)
+  executions     TaskExecution[]
+  aiRequests     AIRequestLog[]
+
+  @@index([organizationId, status])
+  @@index([projectId])
+  @@index([createdById])
+  @@map("tasks")
+}
+
+/// Granular step execution within a task lifecycle
+model TaskExecution {
+  id             String          @id @default(uuid())
+  taskId         String          @map("task_id")
+  stepNumber     Int             @map("step_number")
+  agentRole      AgentRole       @map("agent_role")
+  actionName     String          @map("action_name")
+  status         TaskStatus      @default(RUNNING)
+  inputData      Json?           @map("input_data")
+  outputData     Json?           @map("output_data")
+  errorDetails   String?         @map("error_details")
+  durationMs     Int?            @map("duration_ms")
+  createdAt      DateTime        @default(now()) @map("created_at")
+
+  // Relations
+  task           Task            @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  toolExecutions ToolExecution[]
+
+  @@index([taskId, stepNumber])
+  @@map("task_executions")
+}
+
+/// Execution telemetry for sandboxed tool invocation
+model ToolExecution {
+  id              String        @id @default(uuid())
+  taskExecutionId String        @map("task_execution_id")
+  toolName        String        @map("tool_name")
+  riskLevel       ToolRiskLevel @default(READ_ONLY) @map("risk_level")
+  parameters      Json?
+  result          Json?
+  success         Boolean       @default(true)
+  errorMessage    String?       @map("error_message")
+  durationMs      Int?          @map("duration_ms")
+  createdAt       DateTime      @default(now()) @map("created_at")
+
+  // Relations
+  taskExecution   TaskExecution @relation(fields: [taskExecutionId], references: [id], onDelete: Cascade)
+
+  @@index([taskExecutionId])
+  @@index([toolName])
+  @@map("tool_executions")
+}
+
+/// Complete telemetry and audit record for every AI request across providers
+model AIRequestLog {
+  id             String         @id @default(uuid())
+  provider       AIProviderType
+  modelName      String         @map("model_name")
+  promptTokens   Int            @default(0) @map("prompt_tokens")
+  outputTokens   Int            @default(0) @map("output_tokens")
+  totalTokens    Int            @default(0) @map("total_tokens")
+  costUsd        Float          @default(0.0) @map("cost_usd")
+  latencyMs      Int            @map("latency_ms")
+  status         String         @default("SUCCESS")
+  errorMessage   String?        @map("error_message")
+  fallbackChain  String[]       @default([]) @map("fallback_chain")
+  taskId         String?        @map("task_id")
+  userId         String?        @map("user_id")
+  createdAt      DateTime       @default(now()) @map("created_at")
+
+  // Relations
+  task           Task?          @relation(fields: [taskId], references: [id], onDelete: SetNull)
+  user           User?          @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([provider, modelName])
+  @@index([taskId])
+  @@index([userId])
+  @@index([createdAt])
+  @@map("ai_request_logs")
+}
+
+// ------------------------------------------------------------------------------
+// MEMORY & KNOWLEDGE GRAPH MODELS
+// ------------------------------------------------------------------------------
+
+/// Long-term and working memory storage
+model MemoryItem {
+  id             String         @id @default(uuid())
+  content        String
+  category       String         @default("GENERAL") // GENERAL, CODE_PATTERN, ARCHITECTURE, BUG_FIX
+  tags           String[]       @default([])
+  organizationId String         @map("organization_id")
+  projectId      String?        @map("project_id")
+  userId         String?        @map("user_id")
+  metadata       Json?          @default("{}")
+  createdAt      DateTime       @default(now()) @map("created_at")
+  updatedAt      DateTime       @updatedAt @map("updated_at")
+
+  // Relations
+  organization   Organization   @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  project        Project?       @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  user           User?          @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([organizationId, category])
+  @@index([projectId])
+  @@map("memory_items")
+}
+
+/// Knowledge graph entities for relational semantic recall
+model KnowledgeNode {
+  id             String          @id @default(uuid())
+  label          String
+  nodeType       String          @map("node_type") // FILE, SYMBOL, SERVICE, AGENT, TOOL
+  properties     Json?           @default("{}")
+  projectId      String          @map("project_id")
+  createdAt      DateTime        @default(now()) @map("created_at")
+
+  // Relations
+  project        Project         @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  outgoingEdges  KnowledgeEdge[] @relation("SourceNode")
+  incomingEdges  KnowledgeEdge[] @relation("TargetNode")
+
+  @@unique([projectId, label, nodeType])
+  @@index([projectId, nodeType])
+  @@map("knowledge_nodes")
+}
+
+/// Knowledge graph relations connecting entities
+model KnowledgeEdge {
+  id             String        @id @default(uuid())
+  relation       String        // IMPORTS, CALLS, DEFINES, DEPENDS_ON, WRITES
+  sourceId       String        @map("source_id")
+  targetId       String        @map("target_id")
+  weight         Float         @default(1.0)
+  createdAt      DateTime      @default(now()) @map("created_at")
+
+  // Relations
+  sourceNode     KnowledgeNode @relation("SourceNode", fields: [sourceId], references: [id], onDelete: Cascade)
+  targetNode     KnowledgeNode @relation("TargetNode", fields: [targetId], references: [id], onDelete: Cascade)
+
+  @@unique([sourceId, targetId, relation])
+  @@index([sourceId])
+  @@index([targetId])
+  @@map("knowledge_edges")
+}
+
+// ------------------------------------------------------------------------------
+// BUDGETS & AUDIT LOGS
+// ------------------------------------------------------------------------------
+
+/// Budget cap governance for organizations and projects
+model BudgetRecord {
+  id             String        @id @default(uuid())
+  organizationId String        @map("organization_id")
+  monthlyCapUsd  Float         @default(50.0) @map("monthly_cap_usd")
+  currentSpendUsd Float        @default(0.0) @map("current_spend_usd")
+  alertThreshold Float         @default(0.85) @map("alert_threshold") // 85% alert
+  isHardCap      Boolean       @default(true) @map("is_hard_cap")
+  createdAt      DateTime      @default(now()) @map("created_at")
+  updatedAt      DateTime      @updatedAt @map("updated_at")
+
+  // Relations
+  organization   Organization  @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@unique([organizationId])
+  @@map("budget_records")
+}
+
+/// Immutable audit trail logging sensitive actions for compliance & security
+model AuditLog {
+  id          String   @id @default(uuid())
+  action      String   // e.g. "USER_LOGIN", "TASK_CREATED", "TOOL_EXECUTED", "BUDGET_EXCEEDED"
+  entityType  String   @map("entity_type")
+  entityId    String?  @map("entity_id")
+  actorId     String?  @map("actor_id")
+  ipAddress   String?  @map("ip_address")
+  metadata    Json?    @default("{}")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  // Relations
+  actor       User?    @relation("ActorAuditLogs", fields: [actorId], references: [id], onDelete: SetNull)
+
+  @@index([action])
+  @@index([entityType, entityId])
+  @@index([actorId])
+  @@index([createdAt])
+  @@map("audit_logs")
+}

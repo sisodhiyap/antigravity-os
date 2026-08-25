@@ -1,0 +1,1 @@
+export interface ActivityLog { id: string; dealId: string; note: string; date: string; }

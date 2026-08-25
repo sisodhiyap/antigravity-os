@@ -1,0 +1,1 @@
+export function validateDeal(title: string, value: number): boolean { return title.length > 0 && value >= 0; }

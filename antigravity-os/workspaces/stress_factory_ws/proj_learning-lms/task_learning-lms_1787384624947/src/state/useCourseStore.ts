@@ -1,0 +1,1 @@
+export const useCourseStore = { activeLessonId: null as string | null, selectLesson(id: string) { this.activeLessonId = id; } };

@@ -1,0 +1,2 @@
+export type TaskStatus = 'TODO' | 'IN_PROGRESS' | 'REVIEW' | 'DONE';
+export interface Task { id: string; projectId: string; title: string; status: TaskStatus; priority: 'LOW' | 'MED' | 'HIGH'; assigneeId?: string; }

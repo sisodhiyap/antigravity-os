@@ -1,0 +1,1 @@
+export const useBookingStore = { selectedDoctorId: null as string | null, selectDoctor(id: string) { this.selectedDoctorId = id; } };

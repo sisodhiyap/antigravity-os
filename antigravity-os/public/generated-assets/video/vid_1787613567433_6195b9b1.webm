@@ -1,0 +1,19 @@
+{
+  "title": "QA Master Showcase Video",
+  "description": "",
+  "aspectRatio": "16:9",
+  "resolution": "1080p",
+  "framerate": 30,
+  "totalDurationSeconds": 5,
+  "thumbnailAssetId": "ast_1787613567428_7e0c78a2",
+  "scenes": [
+    {
+      "visualPrompt": "Opening scene",
+      "voiceoverText": "Antigravity OS active.",
+      "imageAssetId": "ast_1787613567403_656a3b9a",
+      "audioAssetId": "ast_1787613567420_1ec1d716",
+      "durationSeconds": 5
+    }
+  ],
+  "renderedAt": "2026-08-24T23:19:27.433Z"
+}
