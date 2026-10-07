@@ -1,10 +1,38 @@
 import { PrismaClient } from "@prisma/client";
 import path from "path";
+import fs from "fs";
+
+function resolveDatabaseUrl(): string {
+  if (process.env.DATABASE_URL && process.env.DATABASE_URL.startsWith("file:")) {
+    return process.env.DATABASE_URL;
+  }
+  
+  // Package production path on Windows/Mac/Linux
+  const dataDir = process.env.ANTIGRAVITY_DATA_DIR || 
+    (process.env.APPDATA ? path.join(process.env.APPDATA, "AntigravityOS", "data") : null);
+    
+  if (dataDir && (process.env.NODE_ENV === "production" || process.env.ANTIGRAVITY_DATA_DIR)) {
+    try {
+      if (!fs.existsSync(dataDir)) {
+        fs.mkdirSync(dataDir, { recursive: true });
+      }
+      return `file:${path.resolve(dataDir, "production.db")}`;
+    } catch {
+      // Fallback to local project directory
+    }
+  }
+
+  const localDir = path.resolve(process.cwd(), "prisma");
+  if (!fs.existsSync(localDir)) {
+    fs.mkdirSync(localDir, { recursive: true });
+  }
+  return `file:${path.resolve(localDir, "production.db")}`;
+}
 
 const prisma = new PrismaClient({
   datasources: {
     db: {
-      url: `file:${path.resolve(process.cwd(), "prisma", "production.db")}`,
+      url: resolveDatabaseUrl(),
     },
   },
 });

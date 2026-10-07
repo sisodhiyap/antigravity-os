@@ -3,6 +3,10 @@ import {
   AICompletionResponse,
   IAIProviderAdapter,
   OllamaProviderAdapter,
+  OpenAIProviderAdapter,
+  GeminiProviderAdapter,
+  GroqProviderAdapter,
+  NvidiaProviderAdapter,
   DeepSeekProviderAdapter,
   OpenRouterProviderAdapter,
   AirLLMProviderAdapter,
@@ -24,6 +28,10 @@ export class CentralAIRouter {
 
   private constructor() {
     this.registerAdapter(new OllamaProviderAdapter());
+    this.registerAdapter(new OpenAIProviderAdapter());
+    this.registerAdapter(new GeminiProviderAdapter());
+    this.registerAdapter(new GroqProviderAdapter());
+    this.registerAdapter(new NvidiaProviderAdapter());
     this.registerAdapter(new DeepSeekProviderAdapter());
     this.registerAdapter(new OpenRouterProviderAdapter());
     this.registerAdapter(new AirLLMProviderAdapter());
@@ -40,27 +48,54 @@ export class CentralAIRouter {
     this.adapters.set(adapter.name, adapter);
   }
 
+  public getAdapter(name: string): IAIProviderAdapter | undefined {
+    return this.adapters.get(name);
+  }
+
+  public getRegisteredAdapters(): IAIProviderAdapter[] {
+    return Array.from(this.adapters.values());
+  }
+
+  /**
+   * Health-checks all registered adapters live and returns truthful status
+   */
+  public async checkAllProviders(): Promise<Array<{ name: string; available: boolean; error?: string }>> {
+    const results: Array<{ name: string; available: boolean; error?: string }> = [];
+    for (const [name, adapter] of this.adapters.entries()) {
+      try {
+        const available = await adapter.isAvailable();
+        results.push({ name, available });
+      } catch (err: any) {
+        results.push({ name, available: false, error: err.message || "Failed health check" });
+      }
+    }
+    return results;
+  }
+
   /**
    * Resolves smart capability-based fallback priority chain based on task category
    */
-  private getPriorityChain(category: string = "GENERAL"): string[] {
+  public getPriorityChain(category: string = "GENERAL"): string[] {
     switch (category) {
+      case "FAST":
+      case "FAST_LOCAL":
+        return ["groq", "ollama", "openrouter", "openai", "gemini", "nvidia", "deepseek", "airllm"];
+      case "CODE":
+        return ["deepseek", "openai", "groq", "gemini", "openrouter", "ollama", "nvidia", "airllm"];
+      case "REASONING":
+        return ["openai", "gemini", "deepseek", "groq", "nvidia", "openrouter", "ollama", "airllm"];
+      case "CREATIVE":
+        return ["gemini", "openai", "openrouter", "groq", "deepseek", "nvidia", "ollama"];
       case "LOCAL_LARGE":
       case "LARGE":
       case "LOW_VRAM":
-        return ["airllm", "openrouter", "ollama"];
-      case "FAST_LOCAL":
-      case "FAST":
-        return ["ollama", "openrouter", "airllm"];
+        return ["airllm", "ollama", "groq", "openrouter", "openai"];
       case "CLOUD":
-        return ["openrouter", "ollama", "airllm"];
+        return ["groq", "openai", "gemini", "openrouter", "nvidia", "deepseek"];
       case "LONG_CONTEXT":
-        return ["airllm", "openrouter", "ollama"];
-      case "CODE":
-      case "REASONING":
-        return ["ollama", "openrouter", "airllm", "deepseek"];
+        return ["gemini", "openai", "openrouter", "groq", "airllm"];
       default:
-        return ["ollama", "openrouter", "airllm", "deepseek"];
+        return ["groq", "openai", "gemini", "openrouter", "deepseek", "nvidia", "ollama", "airllm"];
     }
   }
 

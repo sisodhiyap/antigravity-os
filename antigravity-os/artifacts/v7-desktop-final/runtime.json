@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-26T07:25:54.729Z",
+  "timestamp": "2026-10-07T05:06:06.848Z",
   "os": {
     "platform": "win32",
     "release": "10.0.26200",
@@ -14,18 +14,18 @@
   },
   "ram": {
     "totalBytes": 16366272512,
-    "freeBytes": 3699519488,
+    "freeBytes": 5027934208,
     "totalGb": 15.24,
-    "freeGb": 3.45,
+    "freeGb": 4.68,
     "status": "DEGRADED"
   },
   "gpu": {
-    "renderer": "Integrated / Software Rasterizer",
-    "vramMb": 0,
-    "cudaAvailable": false,
+    "renderer": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "vramMb": 6144,
+    "cudaAvailable": true,
     "directMlAvailable": false,
-    "status": "DEGRADED",
-    "notes": "Hardware telemetry query fell back to safe defaults"
+    "status": "AVAILABLE",
+    "notes": "NVIDIA CUDA acceleration active (NVIDIA GeForce RTX 3060 Laptop GPU)"
   },
   "disk": {
     "workspacePath": "C:\\D drive\\Antigravity\\antigravity-os\\workspaces",

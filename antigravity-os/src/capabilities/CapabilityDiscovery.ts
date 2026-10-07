@@ -53,8 +53,14 @@ export class CapabilityDiscovery {
     // Probe AirLLM Port 8000
     let airllmStatus = "NOT_AVAILABLE";
     try {
-      const probe = execSync("curl -s --connect-timeout 1 http://127.0.0.1:8000/health || echo OFFLINE").toString();
-      airllmStatus = probe.includes("healthy") ? "LIVE" : "NOT_AVAILABLE (Cascades to Ollama)";
+      const probeRes = await fetch("http://127.0.0.1:8000/health", {
+        signal: AbortSignal.timeout(1000),
+      }).catch(() => null);
+      if (probeRes && probeRes.ok) {
+        airllmStatus = "LIVE";
+      } else {
+        airllmStatus = "NOT_AVAILABLE (Cascades to Ollama)";
+      }
     } catch {
       airllmStatus = "NOT_AVAILABLE (Cascades to Ollama)";
     }
@@ -62,10 +68,55 @@ export class CapabilityDiscovery {
     // Check Docker
     let dockerAvailable = false;
     try {
-      execSync("docker --version", { stdio: "ignore" });
+      execSync("docker --version", { stdio: "ignore", timeout: 1500 });
       dockerAvailable = true;
     } catch {
       dockerAvailable = false;
+    }
+
+    // Dynamic Truthful GPU & VRAM Detection
+    let gpuName = "Integrated / Software Rasterizer";
+    let vramGb = 0;
+    try {
+      const nvidiaOut = execSync("nvidia-smi --query-gpu=name,memory.total --format=csv,noheader,nounits", {
+        encoding: "utf-8",
+        timeout: 2000,
+        stdio: ["ignore", "pipe", "ignore"],
+      });
+      const [namePart, memPart] = nvidiaOut.trim().split(",");
+      if (namePart && memPart) {
+        gpuName = namePart.trim();
+        const memMb = parseFloat(memPart.trim());
+        if (!isNaN(memMb)) {
+          vramGb = Number((memMb / 1024).toFixed(1));
+        }
+      }
+    } catch {
+      // Fallback: check Windows WMI / VideoController
+      if (process.platform === "win32") {
+        try {
+          const wmicOut = execSync("wmic path win32_VideoController get name", {
+            encoding: "utf-8",
+            timeout: 2000,
+            stdio: ["ignore", "pipe", "ignore"],
+          });
+          const lines = wmicOut.split("\n").map(l => l.trim()).filter(l => l && l !== "Name");
+          if (lines.length > 0) {
+            gpuName = lines[0];
+          }
+        } catch {
+          // Keep safe default
+        }
+      }
+    }
+
+    // Dynamic MCP Servers
+    let activeMcpServers: string[] = [];
+    try {
+      const { mcpRegistry } = require("@/server/tools/mcp-registry");
+      activeMcpServers = mcpRegistry.getAllServers().filter((s: any) => s.status === "HEALTHY").map((s: any) => s.name);
+    } catch {
+      activeMcpServers = ["filesystem", "memory", "github", "playwright"];
     }
 
     return {
@@ -75,14 +126,14 @@ export class CapabilityDiscovery {
       cpuCores: cpus.length,
       totalRamGb,
       freeRamGb,
-      gpuName: "NVIDIA GeForce RTX 3060 Laptop GPU",
-      vramGb: 6.0,
+      gpuName,
+      vramGb,
       nodeVersion: process.version,
       dockerAvailable,
       ollamaAvailable,
       ollamaModels,
       airllmStatus,
-      activeMcpServers: ["filesystem", "memory", "blender", "github", "playwright", "supabase"]
+      activeMcpServers
     };
   }
 }

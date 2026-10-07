@@ -4,6 +4,8 @@
  * Strict context isolation with zero raw Node.js or secret leaks to JavaScript.
  */
 
+import { contextBridge, ipcRenderer } from "electron";
+
 export interface AntigravityDesktopAPI {
   getHardwareHealth: () => Promise<any>;
   getServices: () => Promise<any>;
@@ -12,58 +14,34 @@ export interface AntigravityDesktopAPI {
   restartService: (serviceId: string) => Promise<any>;
   tailLogs: (serviceId: string, lines?: number) => Promise<string[]>;
   exportDiagnostics: () => Promise<any>;
-  listProjects: () => Promise<any>;
+  listProjects: () => Promise<string[]>;
   emergencyStop: () => Promise<any>;
+  openExternal: (url: string) => Promise<{ success: boolean }>;
+  getAppVersion: () => Promise<string>;
+  getLogsPath: () => Promise<string>;
 }
 
-// In Electron runtime, contextBridge will expose this object
-export function initializeDesktopBridge(): AntigravityDesktopAPI {
-  return {
-    getHardwareHealth: async () => {
-      const { DesktopHardwareDetector } = await import("./hardware");
-      return DesktopHardwareDetector.getInstance().inspectHostSystem();
-    },
-    getServices: async () => {
-      const { LocalServiceSupervisor } = await import("./supervisor");
-      return LocalServiceSupervisor.getInstance().getAllServices();
-    },
-    startService: async (serviceId: string) => {
-      const { LocalServiceSupervisor } = await import("./supervisor");
-      return LocalServiceSupervisor.getInstance().startService(serviceId as any);
-    },
-    stopService: async (serviceId: string) => {
-      const { LocalServiceSupervisor } = await import("./supervisor");
-      return LocalServiceSupervisor.getInstance().stopService(serviceId as any);
-    },
-    restartService: async (serviceId: string) => {
-      const { LocalServiceSupervisor } = await import("./supervisor");
-      return LocalServiceSupervisor.getInstance().restartService(serviceId as any);
-    },
-    tailLogs: async (serviceId: string, lines?: number) => {
-      const { LocalServiceSupervisor } = await import("./supervisor");
-      return LocalServiceSupervisor.getInstance().tailLogs(serviceId as any, lines);
-    },
-    exportDiagnostics: async () => {
-      const { DesktopDiagnosticsExporter } = await import("./diagnostics");
-      return DesktopDiagnosticsExporter.generateReport();
-    },
-    listProjects: async () => {
-      const fs = await import("fs");
-      const path = await import("path");
-      const workspaceDir = path.resolve(process.cwd(), "workspaces");
-      if (!fs.existsSync(workspaceDir)) return [];
-      return fs.readdirSync(workspaceDir);
-    },
-    emergencyStop: async () => {
-      const { LocalServiceSupervisor } = await import("./supervisor");
-      const supervisor = LocalServiceSupervisor.getInstance();
-      const services = supervisor.getAllServices();
-      for (const s of services) {
-        if (s.id !== "v7_runtime") {
-          await supervisor.stopService(s.id);
-        }
-      }
-      return { success: true, message: "Emergency Stop triggered: Non-essential services halted safely." };
-    },
-  };
+const desktopAPI: AntigravityDesktopAPI = {
+  getHardwareHealth: () => ipcRenderer.invoke("desktop:get-hardware-health"),
+  getServices: () => ipcRenderer.invoke("desktop:get-services"),
+  startService: (serviceId: string) => ipcRenderer.invoke("desktop:start-service", serviceId),
+  stopService: (serviceId: string) => ipcRenderer.invoke("desktop:stop-service", serviceId),
+  restartService: (serviceId: string) => ipcRenderer.invoke("desktop:restart-service", serviceId),
+  tailLogs: (serviceId: string, lines?: number) => ipcRenderer.invoke("desktop:tail-logs", serviceId, lines),
+  exportDiagnostics: () => ipcRenderer.invoke("desktop:export-diagnostics"),
+  listProjects: () => ipcRenderer.invoke("desktop:list-projects"),
+  emergencyStop: () => ipcRenderer.invoke("desktop:emergency-stop"),
+  openExternal: (url: string) => ipcRenderer.invoke("desktop:open-external", url),
+  getAppVersion: () => ipcRenderer.invoke("desktop:get-app-version"),
+  getLogsPath: () => ipcRenderer.invoke("desktop:get-logs-path"),
+};
+
+// Expose safe, isolated API to the renderer process
+try {
+  contextBridge.exposeInMainWorld("antigravityDesktop", desktopAPI);
+} catch (err) {
+  // Fallback for direct browser testing or unbridged environments
+  if (typeof window !== "undefined") {
+    (window as any).antigravityDesktop = desktopAPI;
+  }
 }

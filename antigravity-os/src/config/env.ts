@@ -27,6 +27,9 @@ const serverEnvSchema = z.object({
   GEMINI_API_KEY: z.string().optional(),
   GEMINI_API_KEY_POOL: z.string().optional(),
   GOOGLE_API_KEY: z.string().optional(),
+  GROQ_API_KEY: z.string().optional(),
+  NVIDIA_API_KEY: z.string().optional(),
+  NVIDIA_BASE_URL: z.string().url().default("https://integrate.api.nvidia.com/v1"),
   OLLAMA_BASE_URL: z.string().url().default("http://127.0.0.1:11434"),
 
   // External APIs & VCS

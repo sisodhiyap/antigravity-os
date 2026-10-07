@@ -108,29 +108,62 @@ export class DesktopHardwareDetector {
     let gpuNotes = "Standard DirectX/OpenGL acceleration detected";
 
     if (process.platform === "win32") {
+      let gpuInfo = "";
       try {
-        const wmicGpu = execSync("wmic path win32_VideoController get name,adapterram", { encoding: "utf-8", timeout: 2000 });
-        if (wmicGpu.toLowerCase().includes("nvidia")) {
+        gpuInfo = execSync("nvidia-smi --query-gpu=name,memory.total --format=csv,noheader,nounits", {
+          encoding: "utf-8",
+          timeout: 2000,
+          stdio: ["ignore", "pipe", "ignore"],
+        });
+        if (gpuInfo) {
+          const [namePart, memPart] = gpuInfo.trim().split(",");
+          gpuRenderer = namePart ? namePart.trim() : "NVIDIA Dedicated GPU";
+          cudaAvailable = true;
+          gpuStatus = "AVAILABLE";
+          vramMb = memPart ? parseInt(memPart.trim(), 10) : 6144;
+          gpuNotes = `NVIDIA CUDA acceleration active (${gpuRenderer})`;
+        }
+      } catch {
+        // Fallback to wmic or powershell with silenced stdio
+        try {
+          gpuInfo = execSync("wmic path win32_VideoController get name,adapterram", {
+            encoding: "utf-8",
+            timeout: 2000,
+            stdio: ["ignore", "pipe", "ignore"],
+          });
+        } catch {
+          try {
+            gpuInfo = execSync("powershell -NoProfile -Command \"(Get-CimInstance Win32_VideoController).Name\"", {
+              encoding: "utf-8",
+              timeout: 2000,
+              stdio: ["ignore", "pipe", "ignore"],
+            });
+          } catch {
+            gpuInfo = "";
+          }
+        }
+
+        if (gpuInfo.toLowerCase().includes("nvidia")) {
           gpuRenderer = "NVIDIA Dedicated GPU";
           cudaAvailable = true;
           gpuStatus = "AVAILABLE";
-          vramMb = 8192; // Nominal detected baseline
+          vramMb = 6144;
           gpuNotes = "NVIDIA CUDA acceleration active";
-        } else if (wmicGpu.toLowerCase().includes("amd") || wmicGpu.toLowerCase().includes("radeon")) {
+        } else if (gpuInfo.toLowerCase().includes("amd") || gpuInfo.toLowerCase().includes("radeon")) {
           gpuRenderer = "AMD Radeon GPU";
           directMlAvailable = true;
           gpuStatus = "AVAILABLE";
           vramMb = 4096;
           gpuNotes = "AMD DirectML acceleration active";
-        } else if (wmicGpu.toLowerCase().includes("intel")) {
+        } else if (gpuInfo.toLowerCase().includes("intel")) {
           gpuRenderer = "Intel Iris/UHD Graphics";
           gpuStatus = "DEGRADED";
           vramMb = 2048;
           gpuNotes = "Integrated graphics active. Local inference throttled to CPU/DirectML.";
+        } else {
+          gpuStatus = "DEGRADED";
+          gpuNotes = "Hardware telemetry query fell back to safe defaults";
         }
-      } catch {
-        gpuStatus = "DEGRADED";
-        gpuNotes = "Hardware telemetry query fell back to safe defaults";
       }
     }
 

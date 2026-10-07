@@ -27,7 +27,7 @@ export interface IAIProviderAdapter {
 }
 
 /**
- * Local Ollama Provider (GPU Accelerated, zero-cost, local privacy)
+ * 1. Local Ollama Provider (GPU Accelerated, zero-cost, local privacy)
  */
 export class OllamaProviderAdapter implements IAIProviderAdapter {
   public name = "ollama";
@@ -87,7 +87,235 @@ export class OllamaProviderAdapter implements IAIProviderAdapter {
 }
 
 /**
- * DeepSeek Provider (Direct DeepSeek API)
+ * 2. OpenAI Official Provider (Multi-Key Pool, 127 Models)
+ */
+export class OpenAIProviderAdapter implements IAIProviderAdapter {
+  public name = "openai";
+
+  async isAvailable(): Promise<boolean> {
+    return !!env.server.OPENAI_API_KEY;
+  }
+
+  async complete(req: AICompletionRequest): Promise<AICompletionResponse> {
+    const start = performance.now();
+    const model = req.model || "gpt-4o-mini";
+
+    try {
+      const combinedSignal = req.signal || AbortSignal.timeout(req.timeoutMs || 60000);
+      const res = await fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${env.server.OPENAI_API_KEY}`,
+        },
+        body: JSON.stringify({
+          model,
+          messages: [
+            ...(req.systemPrompt ? [{ role: "system", content: req.systemPrompt }] : []),
+            { role: "user", content: req.prompt },
+          ],
+          temperature: req.temperature ?? 0.3,
+          max_tokens: req.maxTokens ?? 2048,
+        }),
+        signal: combinedSignal,
+      });
+
+      if (!res.ok) {
+        throw new Error(`OpenAI API error ${res.status}: ${await res.text()}`);
+      }
+
+      const data = await res.json();
+      const latencyMs = Math.round(performance.now() - start);
+      const content = data.choices?.[0]?.message?.content || "";
+
+      return {
+        content,
+        provider: "openai",
+        model,
+        promptTokens: data.usage?.prompt_tokens || Math.round(req.prompt.length / 4),
+        completionTokens: data.usage?.completion_tokens || Math.round(content.length / 4),
+        latencyMs,
+      };
+    } catch (err: any) {
+      throw new AIProviderError("openai", err.message || "Failed to execute OpenAI request");
+    }
+  }
+}
+
+/**
+ * 3. Google Gemini / AI Studio Provider
+ */
+export class GeminiProviderAdapter implements IAIProviderAdapter {
+  public name = "gemini";
+
+  async isAvailable(): Promise<boolean> {
+    return !!env.server.GEMINI_API_KEY;
+  }
+
+  async complete(req: AICompletionRequest): Promise<AICompletionResponse> {
+    const start = performance.now();
+    const model = req.model || "gemini-2.5-flash";
+    const apiKey = env.server.GEMINI_API_KEY;
+
+    try {
+      const combinedSignal = req.signal || AbortSignal.timeout(req.timeoutMs || 60000);
+      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+
+      const contents = [
+        ...(req.systemPrompt ? [{ role: "user", parts: [{ text: `[System Instruction]: ${req.systemPrompt}` }] }, { role: "model", parts: [{ text: "Understood." }] }] : []),
+        { role: "user", parts: [{ text: req.prompt }] },
+      ];
+
+      const res = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents,
+          generationConfig: {
+            temperature: req.temperature ?? 0.3,
+            maxOutputTokens: req.maxTokens ?? 2048,
+          },
+        }),
+        signal: combinedSignal,
+      });
+
+      if (!res.ok) {
+        throw new Error(`Gemini API error ${res.status}: ${await res.text()}`);
+      }
+
+      const data = await res.json();
+      const latencyMs = Math.round(performance.now() - start);
+      const content = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
+
+      return {
+        content,
+        provider: "gemini",
+        model,
+        promptTokens: data.usageMetadata?.promptTokenCount || Math.round(req.prompt.length / 4),
+        completionTokens: data.usageMetadata?.candidatesTokenCount || Math.round(content.length / 4),
+        latencyMs,
+      };
+    } catch (err: any) {
+      throw new AIProviderError("gemini", err.message || "Failed to execute Gemini request");
+    }
+  }
+}
+
+/**
+ * 4. Groq Ultra-Fast Inference Provider
+ */
+export class GroqProviderAdapter implements IAIProviderAdapter {
+  public name = "groq";
+
+  async isAvailable(): Promise<boolean> {
+    return !!env.server.GROQ_API_KEY;
+  }
+
+  async complete(req: AICompletionRequest): Promise<AICompletionResponse> {
+    const start = performance.now();
+    const model = req.model || "llama-3.3-70b-versatile";
+
+    try {
+      const combinedSignal = req.signal || AbortSignal.timeout(req.timeoutMs || 60000);
+      const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${env.server.GROQ_API_KEY}`,
+        },
+        body: JSON.stringify({
+          model,
+          messages: [
+            ...(req.systemPrompt ? [{ role: "system", content: req.systemPrompt }] : []),
+            { role: "user", content: req.prompt },
+          ],
+          temperature: req.temperature ?? 0.3,
+          max_tokens: req.maxTokens ?? 2048,
+        }),
+        signal: combinedSignal,
+      });
+
+      if (!res.ok) {
+        throw new Error(`Groq API error ${res.status}: ${await res.text()}`);
+      }
+
+      const data = await res.json();
+      const latencyMs = Math.round(performance.now() - start);
+      const content = data.choices?.[0]?.message?.content || "";
+
+      return {
+        content,
+        provider: "groq",
+        model,
+        promptTokens: data.usage?.prompt_tokens || Math.round(req.prompt.length / 4),
+        completionTokens: data.usage?.completion_tokens || Math.round(content.length / 4),
+        latencyMs,
+      };
+    } catch (err: any) {
+      throw new AIProviderError("groq", err.message || "Failed to execute Groq request");
+    }
+  }
+}
+
+/**
+ * 5. NVIDIA Integrate NIM Platform Provider
+ */
+export class NvidiaProviderAdapter implements IAIProviderAdapter {
+  public name = "nvidia";
+
+  async isAvailable(): Promise<boolean> {
+    return !!env.server.NVIDIA_API_KEY;
+  }
+
+  async complete(req: AICompletionRequest): Promise<AICompletionResponse> {
+    const start = performance.now();
+    const model = req.model || "nvidia/nemotron-3.5-lightning-30b-a3b";
+    const baseUrl = env.server.NVIDIA_BASE_URL || "https://integrate.api.nvidia.com/v1";
+
+    try {
+      const combinedSignal = req.signal || AbortSignal.timeout(req.timeoutMs || 60000);
+      const res = await fetch(`${baseUrl}/chat/completions`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${env.server.NVIDIA_API_KEY}`,
+        },
+        body: JSON.stringify({
+          model,
+          messages: [
+            ...(req.systemPrompt ? [{ role: "system", content: req.systemPrompt }] : []),
+            { role: "user", content: req.prompt },
+          ],
+          temperature: req.temperature ?? 0.3,
+          max_tokens: req.maxTokens ?? 2048,
+        }),
+        signal: combinedSignal,
+      });
+
+      if (!res.ok) {
+        throw new Error(`NVIDIA NIM API error ${res.status}: ${await res.text()}`);
+      }
+
+      const data = await res.json();
+      const latencyMs = Math.round(performance.now() - start);
+      const content = data.choices?.[0]?.message?.content || "";
+
+      return {
+        content,
+        provider: "nvidia",
+        model,
+        promptTokens: data.usage?.prompt_tokens || Math.round(req.prompt.length / 4),
+        completionTokens: data.usage?.completion_tokens || Math.round(content.length / 4),
+        latencyMs,
+      };
+    } catch (err: any) {
+      throw new AIProviderError("nvidia", err.message || "Failed to execute NVIDIA request");
+    }
+  }
+}
+
+/**
+ * 6. DeepSeek Provider (Direct DeepSeek API)
  */
 export class DeepSeekProviderAdapter implements IAIProviderAdapter {
   public name = "deepseek";
@@ -143,7 +371,7 @@ export class DeepSeekProviderAdapter implements IAIProviderAdapter {
 }
 
 /**
- * OpenRouter Provider (Free tier fallback mesh)
+ * 7. OpenRouter Provider (Free tier fallback mesh)
  */
 export class OpenRouterProviderAdapter implements IAIProviderAdapter {
   public name = "openrouter";
@@ -154,7 +382,7 @@ export class OpenRouterProviderAdapter implements IAIProviderAdapter {
 
   async complete(req: AICompletionRequest): Promise<AICompletionResponse> {
     const start = performance.now();
-    const model = req.model || "nvidia/nemotron-3.5-lightning:free";
+    const model = req.model || "meta-llama/llama-3.3-70b-instruct:free";
 
     try {
       const combinedSignal = req.signal || AbortSignal.timeout(req.timeoutMs || 60000);
@@ -201,7 +429,7 @@ export class OpenRouterProviderAdapter implements IAIProviderAdapter {
 }
 
 /**
- * Local AirLLM Provider (Low-VRAM Layered Large Model Engine on http://127.0.0.1:8000/v1)
+ * 8. Local AirLLM Provider (Low-VRAM Layered Large Model Engine on http://127.0.0.1:8000/v1)
  */
 export class AirLLMProviderAdapter implements IAIProviderAdapter {
   public name = "airllm";

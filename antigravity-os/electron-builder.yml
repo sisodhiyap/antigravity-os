@@ -6,8 +6,7 @@ directories:
   buildResources: "public"
 files:
   - "dist/**/*"
-  - "src/desktop/**/*"
-  - "workspaces/**/*"
+  - "public/**/*"
   - "package.json"
 win:
   target:
@@ -17,7 +16,7 @@ win:
     - target: "portable"
       arch:
         - "x64"
-  icon: "public/favicon.ico"
+  icon: "public/assets/icons/icon-512.png"
   requestedExecutionLevel: "asInvoker"
 nsis:
   oneClick: false
