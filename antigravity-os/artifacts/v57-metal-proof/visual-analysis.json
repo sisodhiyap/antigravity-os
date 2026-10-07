@@ -1,0 +1,115 @@
+{
+  "nodesCount": 6,
+  "edgesCount": 0,
+  "nodes": [
+    {
+      "id": "screen_0",
+      "name": "01_Studio_Dashboard",
+      "type": "SCREEN",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "styles": {
+        "backgroundColor": "#080a0f"
+      },
+      "attributes": {
+        "route": "/01_studio_dashboard"
+      },
+      "confidence": "HIGH"
+    },
+    {
+      "id": "screen_1",
+      "name": "02_VFX_Shot_Kanban",
+      "type": "SCREEN",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "styles": {
+        "backgroundColor": "#080a0f"
+      },
+      "attributes": {
+        "route": "/02_vfx_shot_kanban"
+      },
+      "confidence": "HIGH"
+    },
+    {
+      "id": "screen_2",
+      "name": "03_Client_Review_Portal",
+      "type": "SCREEN",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "styles": {
+        "backgroundColor": "#080a0f"
+      },
+      "attributes": {
+        "route": "/03_client_review_portal"
+      },
+      "confidence": "HIGH"
+    },
+    {
+      "id": "screen_3",
+      "name": "04_Deliverable_Approval_Workflow",
+      "type": "SCREEN",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "styles": {
+        "backgroundColor": "#080a0f"
+      },
+      "attributes": {
+        "route": "/04_deliverable_approval_workflow"
+      },
+      "confidence": "HIGH"
+    },
+    {
+      "id": "screen_4",
+      "name": "05_Team_RBAC_Directory",
+      "type": "SCREEN",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "styles": {
+        "backgroundColor": "#080a0f"
+      },
+      "attributes": {
+        "route": "/05_team_rbac_directory"
+      },
+      "confidence": "HIGH"
+    },
+    {
+      "id": "screen_5",
+      "name": "06_Financial_Invoice_Analytics",
+      "type": "SCREEN",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "styles": {
+        "backgroundColor": "#080a0f"
+      },
+      "attributes": {
+        "route": "/06_financial_invoice_analytics"
+      },
+      "confidence": "HIGH"
+    }
+  ],
+  "edges": []
+}

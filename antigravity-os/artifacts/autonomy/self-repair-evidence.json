@@ -1,0 +1,41 @@
+[
+  {
+    "id": "FKG_01",
+    "category": "TYPE_MISMATCH",
+    "rootCause": "Implicit any or unannotated parameter in route dispatcher",
+    "detectionSignal": "TypeScript TS7006 compile error",
+    "repairStrategy": "Add explicit interface type annotation (req: http.IncomingMessage, res: http.ServerResponse)",
+    "patchPattern": "explicit_type_annotation",
+    "verifiedTests": [
+      "test_tsc_compilation"
+    ],
+    "successRate": 1,
+    "timesEncountered": 5
+  },
+  {
+    "id": "FKG_02",
+    "category": "PERSISTENCE_FAULT",
+    "rootCause": "Windows file-lock conflict during concurrent fs.renameSync",
+    "detectionSignal": "EPERM operation not permitted on .tmp file",
+    "repairStrategy": "Use direct atomic synchronous fs.writeFileSync with try/catch fallback",
+    "patchPattern": "direct_write_fallback",
+    "verifiedTests": [
+      "test_db_persistence_crud"
+    ],
+    "successRate": 1,
+    "timesEncountered": 3
+  },
+  {
+    "id": "FKG_03",
+    "category": "TRAVERSAL",
+    "rootCause": "Unchecked relative path in file vault download or static file server",
+    "detectionSignal": "Double dot traversal (/../../etc/passwd, %2e%2e, backslash)",
+    "repairStrategy": "Enforce strict path.normalize safe root boundary check and block raw dot prefixes",
+    "patchPattern": "path_boundary_shield",
+    "verifiedTests": [
+      "test_security_path_traversal"
+    ],
+    "successRate": 1,
+    "timesEncountered": 6
+  }
+]

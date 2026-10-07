@@ -1,0 +1,11 @@
+[
+  {
+    "id": "integ_a68695e22f1b",
+    "type": "FILE_MUTATION",
+    "description": "Unexpected mutation in temp dir",
+    "severity": "MEDIUM",
+    "timestamp": 1787716077983,
+    "evidence": "dir diff",
+    "actionTaken": "LOGGED_FOR_AUDIT"
+  }
+]

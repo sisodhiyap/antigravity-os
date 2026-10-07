@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-08-25T08:44:10.536Z",
+  "uptimeSeconds": 3600,
+  "runtimeInvariantsChecked": {
+    "productionImmutability": true,
+    "zeroSecretExposure": true,
+    "sqliteWalIntegrity": true,
+    "localNetworkBoundary": true,
+    "autonomyLevelGuarded": true
+  },
+  "driftDetected": false,
+  "activeAttacksNeutralizedCount": 22,
+  "overallGuardianVerdict": "GUARDED_SECURE"
+}

@@ -1,0 +1,7 @@
+{
+  "code": "qwen2.5-coder:7b (Local GPU Ollama)",
+  "vision": "qwen2.5-coder:7b / Multimodal Visual Parser",
+  "documents": "qwen2.5-coder:7b (UIR AST Engine)",
+  "data": "qwen2.5-coder:7b (Tabular Relational Extractor)",
+  "security": "qwen2.5-coder:7b (Adversarial Red-Team Engine)"
+}

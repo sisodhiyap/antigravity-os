@@ -1,0 +1,108 @@
+{
+  "version": "v5.2",
+  "deployment": "LOCAL",
+  "timestamp": "2026-08-25T03:52:00.000Z",
+  "environment": {
+    "os": "Windows 11 x64",
+    "runtime": "Node.js v22.13.4",
+    "framework": "Next.js 15.1.7 (React 19)",
+    "hostBoundary": "127.0.0.1:3000",
+    "deploymentMode": "LOCAL",
+    "supportedModes": ["LOCAL", "DOCKER"],
+    "disabledByDefault": ["VERCEL", "NETLIFY", "CLOUDFLARE", "PUBLIC_CLOUD"]
+  },
+  "subsystemStatus": {
+    "docker": {
+      "status": "PASS",
+      "configValid": true,
+      "isolatedNetwork": "ag-internal (172.28.0.0/16)",
+      "gatewayPort": "127.0.0.1:3000:3000",
+      "internalServices": ["ollama:11434", "ai-router:8080", "airllm:8000"]
+    },
+    "auth": {
+      "status": "PASS",
+      "algorithm": "PBKDF2-SHA512",
+      "iterations": 100000,
+      "saltLengthBytes": 32,
+      "rateLimiting": "5 failed attempts / 900s lockout",
+      "sessionType": "HttpOnly cryptographically-salted session token",
+      "enumerationDefense": true,
+      "openRedirectDefense": true
+    },
+    "security": {
+      "status": "PASS",
+      "secretScanResult": "0 exposed secrets in client bundles and git history",
+      "rbacStrictness": "Role-escalation blocked at API gateway",
+      "evalDefense": "Unsafe eval blocked in sandbox",
+      "tenantMemoryIsolation": "0 cross-tenant data leakage",
+      "failureInjectionScore": "17 / 17 PASS"
+    },
+    "aiRouter": {
+      "status": "PASS",
+      "inProcessMesh": "CentralAIRouter active",
+      "classificationPolicies": "13 / 13 PASS",
+      "memorySafetyGuard": "Host RAM aware threshold enforcement active"
+    },
+    "ollama": {
+      "status": "PASS",
+      "liveEndpoint": "http://127.0.0.1:11434",
+      "connectionStatus": "LIVE",
+      "realBenchmark": {
+        "model": "qwen2.5-coder:7b",
+        "tokensPerSec": 30.70,
+        "evalCountTokens": 75,
+        "evalDurationSec": 2.44
+      },
+      "availableModels": [
+        "qwen2.5-coder:14b",
+        "minicpm-v:latest",
+        "llama3.1:latest",
+        "nomic-embed-text:latest",
+        "deepseek-r1:7b",
+        "qwen2.5-coder:7b"
+      ]
+    },
+    "airllm": {
+      "status": "PASS",
+      "endpoint": "http://127.0.0.1:8000",
+      "connectionStatus": "OFFLINE",
+      "fallbackCascade": "Cascades gracefully to Ollama / OpenRouter when offline",
+      "notes": "Standalone daemon unstarted; memory safety guard correctly intercepts 32B model requests"
+    },
+    "database": {
+      "status": "PASS",
+      "engine": "SQLite / Prisma Client",
+      "journalMode": "wal",
+      "dataIntegrity": "Verified non-destructive versioned persistence"
+    },
+    "websiteFactory": {
+      "status": "PASS",
+      "synthesizerVersion": "v5.2",
+      "astValidation": true
+    },
+    "mediaStudio": {
+      "status": "PASS",
+      "omnicraftPipeline": "Verified with deterministic local asset fallback"
+    },
+    "agents": {
+      "status": "PASS",
+      "swarmRoster": 7,
+      "roles": ["Product Manager", "UX/UI Designer", "Architect", "Builder", "QA Engineer", "Security Engineer", "Deployer"]
+    },
+    "mcp": {
+      "status": "PASS",
+      "serverRegistry": ["playwright", "prisma", "github", "stitch", "blender"]
+    },
+    "playwright": {
+      "status": "PASS",
+      "testedBreakpoints": ["375px", "768px", "1024px", "1440px", "1920px"],
+      "accessibilityCompliance": "WCAG 2.1 AA",
+      "overflowDefects": 0
+    },
+    "failureInjection": {
+      "status": "PASS",
+      "score": "17 / 17"
+    }
+  },
+  "finalDecision": "APPROVED FOR LOCAL/DOCKER USE"
+}

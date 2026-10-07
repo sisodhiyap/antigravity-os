@@ -1,0 +1,24 @@
+{
+  "owner": {
+    "autonomyLevel": 2,
+    "localOnly": true,
+    "cloudFallbackAllowed": true,
+    "preferredTheme": "charcoal-gold",
+    "enforceStrictTypes": true
+  },
+  "projects": [],
+  "missions": [
+    {
+      "missionId": "msn_v53_verification_1787643647354",
+      "prompt": "Automated Engineering Mission",
+      "graphId": "graph_msn_v53_verification_1787643647354",
+      "nodeCount": 12,
+      "failuresEncountered": 0,
+      "repairsApplied": 1,
+      "completedAt": "2026-08-25T07:40:48.189Z",
+      "realityScore": "100% PASS"
+    }
+  ],
+  "patterns": [],
+  "failures": []
+}

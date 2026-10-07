@@ -1,0 +1,68 @@
+{
+  "systemName": "Antigravity OS",
+  "version": "7.0.0-FROZEN-PRODUCTION",
+  "discoveredAt": "2026-08-25T15:15:00.000Z",
+  "architectureStatus": "FROZEN_PRODUCTION",
+  "subsystems": [
+    {
+      "name": "Universal Input Fabric",
+      "path": "src/io/",
+      "capabilities": ["MIME Identification", "Multi-Format Container Parsing", "Memory Capped Extraction"],
+      "frozen": true
+    },
+    {
+      "name": "Canonical UIR 3.0",
+      "path": "src/product-intelligence/uir/",
+      "capabilities": ["Strict Provenance Tagging", "AST Conversion", "Semantic Token Mapping"],
+      "frozen": true
+    },
+    {
+      "name": "Product Digital Twin",
+      "path": "src/product-twin/",
+      "capabilities": ["Live State Reconciliation", "Design-Code-DB Mapping", "Traceability Matrix"],
+      "frozen": true
+    },
+    {
+      "name": "Product Graph & ADR Engine",
+      "path": "src/architecture/",
+      "capabilities": ["Multi-Criteria Candidate Evaluation", "ADR Synthesis", "Graph Optimization"],
+      "frozen": true
+    },
+    {
+      "name": "Universal Compiler",
+      "path": "src/factory/",
+      "capabilities": ["React Frontend Synthesis", "REST Router Generation", "SQLite WAL Schema Management"],
+      "frozen": true
+    },
+    {
+      "name": "Integration Fabric",
+      "path": "src/factory/IntegrationFabric.ts",
+      "capabilities": ["OAuth", "Billing", "Storage", "Email", "Search", "AI Bindings"],
+      "frozen": true
+    },
+    {
+      "name": "Reality Engine & Zero-Trust Kernel",
+      "path": "src/reality/",
+      "capabilities": ["Browser Journeys", "Tri-Layer Consistency", "Adversarial Defense", "WCAG 2.2 AA"],
+      "frozen": true
+    },
+    {
+      "name": "Self-Healing & Evolution Engine",
+      "path": "src/evolution/",
+      "capabilities": ["Double-Blind Experimentation", "Sandbox Checkpoints", "Zero-Regression Rollback"],
+      "frozen": true
+    },
+    {
+      "name": "Continuous Guardian",
+      "path": "src/guardian/",
+      "capabilities": ["Runtime Invariant Watchdog", "Drift Interception", "Zero Secret Leakage"],
+      "frozen": true
+    },
+    {
+      "name": "Plugin & Adapter Protocol",
+      "path": "src/plugins/PluginAdapterManager.ts",
+      "capabilities": ["Isolated Plugin Lifecycle", "Sandbox Registration", "Owner Promotion Gate"],
+      "frozen": true
+    }
+  ]
+}

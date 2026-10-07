@@ -1,0 +1,446 @@
+{
+  "id": "pres_1787746832262_u9if7",
+  "title": "Persistence scenario probe",
+  "subtitle": "Communicate and persuade audience regarding Persistence scenario probe...",
+  "rawInput": "Persistence scenario probe",
+  "brief": {
+    "title": "Persistence scenario probe",
+    "purpose": "Communicate and persuade audience regarding Persistence scenario probe...",
+    "audience": "Executives, Investors, Stakeholders, and Strategic Partners",
+    "presentationType": "PITCH_DECK",
+    "tone": "Authoritative, Visionary, Strategic, and Highly Persuasive",
+    "language": "English (US)",
+    "durationMinutes": 5,
+    "slideCount": 3,
+    "depth": "EXECUTIVE",
+    "visualStyle": "FUTURISTIC",
+    "brandName": "PresentX Studio",
+    "callToAction": "Partner with us to lead this transformation.",
+    "factualityMode": "STRICT_VERIFIED",
+    "sourceRequirements": [
+      "V7 Trust Fabric Ledger",
+      "Industry Telemetry"
+    ]
+  },
+  "creativeBrief": {
+    "thesis": "Accelerating strategic transformation through Persistence scenario probe unlocks compounding operational leverage, margin expansion, and decisive competitive moat.",
+    "audienceInsight": "Leadership seeks immediate clarity on return on investment, defensive positioning, risk containment, and predictable execution velocity.",
+    "narrativeStrategy": "Inverted Pyramid (Headline Takeaway → Structural Proof → Mechanics → Compounding Upside → Definitive Call to Action)",
+    "emotionalArc": "Urgent Problem Realization (Tension 8/10) → Paradigm Shift & Discovery (Tension 5/10) → Structural Proof & Validation (Tension 4/10) → Strategic Empowerment & Mobilization (Tension 9/10)",
+    "visualMetaphor": "Dynamic interconnected neural graph nodes, luminescent volumetric paths, and dark crystalline architectures.",
+    "designDirection": "Antigravity Gold (Signature) (FUTURISTIC)",
+    "typographyDirection": "Primary Heading: Inter, Satoshi, sans-serif (High Contrast, Bold) • Body: Inter, sans-serif (Clear, Readable Line Height)",
+    "colorDirection": "Dominant Palette: Antigravity Gold (Signature) • Primary: #D4AF37 • Accent: #FFD978 • Background: #080808",
+    "imageDirection": "Cinematic 35mm wide-aperture photography or high-fidelity technical diagrams. Strictly avoid generic stock clip-art.",
+    "chartStrategy": "Data-ink maximization: High contrast data series, embedded direct labels, explicit provenance tagging, zero 3D visual distortion.",
+    "slideRhythm": "Alternating high-impact focal slides with structured multi-column proof layouts to sustain visual engagement without cognitive fatigue.",
+    "callToAction": "Partner with us to lead this transformation."
+  },
+  "intentCard": {
+    "projectType": {
+      "value": "PITCH_DECK",
+      "inferred": true,
+      "confidence": 0.82
+    },
+    "audience": {
+      "value": "Executive Leadership & Decision Makers",
+      "inferred": true,
+      "confidence": 0.78
+    },
+    "objective": {
+      "value": "Demonstrate strategic transformation and market upside of Persistence scenario probe...",
+      "inferred": true,
+      "confidence": 0.85
+    },
+    "purpose": {
+      "value": "Strategic alignment and executive buy-in",
+      "inferred": true,
+      "confidence": 0.8
+    },
+    "tone": {
+      "value": "Authoritative & Strategic",
+      "inferred": true,
+      "confidence": 0.75
+    },
+    "slideCount": {
+      "value": 10,
+      "inferred": true,
+      "confidence": 0.8
+    },
+    "contentDepth": {
+      "value": "EXECUTIVE",
+      "inferred": true,
+      "confidence": 0.88
+    },
+    "visualStyle": {
+      "value": "FUTURISTIC",
+      "inferred": true,
+      "confidence": 0.8
+    },
+    "brand": {
+      "value": "Antigravity OS Sovereign Standard",
+      "inferred": true,
+      "confidence": 0.7
+    },
+    "language": {
+      "value": "English (US)",
+      "inferred": true,
+      "confidence": 0.95
+    },
+    "factualityLevel": {
+      "value": "STRICT_VERIFIED",
+      "inferred": true,
+      "confidence": 0.95
+    },
+    "speakerNotesRequired": {
+      "value": true,
+      "inferred": true,
+      "confidence": 0.85
+    },
+    "callToAction": {
+      "value": "Schedule execution roadmap alignment and approve deployment.",
+      "inferred": true,
+      "confidence": 0.8
+    },
+    "exportTarget": {
+      "value": "PPTX",
+      "inferred": true,
+      "confidence": 0.9
+    }
+  },
+  "visualDirection": "FUTURISTIC",
+  "designTokens": {
+    "primaryColor": "#D4AF37",
+    "secondaryColor": "#F0C75E",
+    "accentColor": "#FFD978",
+    "backgroundColor": "#080808",
+    "surfaceColor": "#121215",
+    "textColor": "#F5F5F5",
+    "textSecondaryColor": "#A3A3A3",
+    "fontHeading": "Inter, Satoshi, sans-serif",
+    "fontBody": "Inter, sans-serif",
+    "borderRadius": "0.875rem",
+    "cardStyle": "GLASS"
+  },
+  "storyGraph": [
+    {
+      "id": "story_node_1",
+      "slideNumber": 1,
+      "role": "HOOK",
+      "keyMessage": "Key strategic takeaway for slide 1 addressing Persistence scenario probe",
+      "tensionLevel": 3,
+      "factLinkIds": [
+        "claim_91136a9d4e38bad0"
+      ]
+    },
+    {
+      "id": "story_node_2",
+      "slideNumber": 2,
+      "role": "CONTEXT",
+      "keyMessage": "Key strategic takeaway for slide 2 addressing Persistence scenario probe",
+      "tensionLevel": 4,
+      "factLinkIds": [
+        "claim_91136a9d4e38bad0"
+      ]
+    },
+    {
+      "id": "story_node_3",
+      "slideNumber": 3,
+      "role": "CTA",
+      "keyMessage": "Key strategic takeaway for slide 3 addressing Persistence scenario probe",
+      "tensionLevel": 5,
+      "factLinkIds": [
+        "claim_91136a9d4e38bad0"
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "id": "slide_1_1787746832263",
+      "slideNumber": 1,
+      "layout": "HERO",
+      "headline": "Persistence scenario probe",
+      "subheadline": "A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners",
+      "bodyContent": "Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.",
+      "visualStrategy": "Aligned with master FUTURISTIC theme and seed 902319",
+      "speakerNotes": "Welcome everyone. Today we are exploring a paradigm shift that will define the competitive landscape over the coming five years.",
+      "citations": [
+        "Antigravity Intelligence Foundation"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_91136a9d4e38bad0",
+          "text": "Persistence scenario probe",
+          "sourceIds": [
+            "pres_1787746832262_u9if7"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E3",
+          "confidence": 0.95,
+          "createdAt": "2026-08-26T12:20:32.263Z",
+          "verifiedAt": "2026-08-26T12:20:32.263Z",
+          "freshness": "CURRENT",
+          "provenance": "VERIFIED",
+          "evidenceId": "claim_91136a9d4e38bad0"
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 90,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 100,
+        "truthBadge": "VERIFIED",
+        "findings": []
+      },
+      "mediaUrl": "/assets/icons/icon-512.png"
+    },
+    {
+      "id": "slide_2_1787746832263",
+      "slideNumber": 2,
+      "layout": "TWO_COLUMN",
+      "headline": "The Macro Environment & Shifting Paradigms",
+      "subheadline": "Accelerating technological convergence across industry verticals",
+      "bodyContent": "Traditional legacy workflows are reaching terminal velocity bottlenecks. Organizations that adapt to sovereign autonomous intelligence will unlock exponential operational leverage.",
+      "bulletPoints": [
+        "Legacy agency workflows face a 60% operational efficiency cap",
+        "Autonomous intelligence pipelines reduce turnaround from weeks to minutes",
+        "Deterministic validation guarantees zero-hallucination compliance"
+      ],
+      "visualStrategy": "Aligned with master FUTURISTIC theme and seed 902319",
+      "speakerNotes": "Frame the context clearly. We are not talking about incremental optimization; this is a step-function transition in execution velocity.",
+      "citations": [
+        "Industry Analysis & Market Telemetry"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_91136a9d4e38bad0",
+          "text": "Persistence scenario probe",
+          "sourceIds": [
+            "pres_1787746832262_u9if7"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E3",
+          "confidence": 0.95,
+          "createdAt": "2026-08-26T12:20:32.263Z",
+          "verifiedAt": "2026-08-26T12:20:32.263Z",
+          "freshness": "CURRENT",
+          "provenance": "VERIFIED",
+          "evidenceId": "claim_91136a9d4e38bad0"
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 90,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 100,
+        "truthBadge": "VERIFIED",
+        "findings": []
+      },
+      "mediaUrl": "/assets/icons/icon-512.png"
+    },
+    {
+      "id": "slide_3_1787746832263",
+      "slideNumber": 3,
+      "layout": "THREE_COLUMN",
+      "headline": "Three Critical Barriers Holding Back Growth",
+      "subheadline": "Core bottlenecks identified across modern creative & technical operations",
+      "bodyContent": "Analysis reveals three compounding friction points preventing organizations from achieving enterprise scale.",
+      "bulletPoints": [
+        "Fragmentation: Disconnected toolchains causing 40% context loss",
+        "Hallucination Risk: Unchecked generative outputs lacking factual grounding",
+        "Resource Inefficiency: Runaway cloud compute and opaque API costs"
+      ],
+      "visualStrategy": "Aligned with master FUTURISTIC theme and seed 902319",
+      "speakerNotes": "Walk through each pillar concisely. Note how fragmentation and hallucination compound each other without an integrated OS.",
+      "citations": [
+        "Enterprise Operations Audit"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_91136a9d4e38bad0",
+          "text": "Persistence scenario probe",
+          "sourceIds": [
+            "pres_1787746832262_u9if7"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E3",
+          "confidence": 0.95,
+          "createdAt": "2026-08-26T12:20:32.263Z",
+          "verifiedAt": "2026-08-26T12:20:32.263Z",
+          "freshness": "CURRENT",
+          "provenance": "VERIFIED",
+          "evidenceId": "claim_91136a9d4e38bad0"
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 90,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 100,
+        "truthBadge": "VERIFIED",
+        "findings": []
+      },
+      "mediaUrl": "/assets/icons/icon-512.png"
+    }
+  ],
+  "mediaBible": {
+    "masterStyle": "FUTURISTIC",
+    "paletteMood": "Antigravity Gold (Signature)",
+    "lighting": "Soft ambient cinematic studio lighting",
+    "cameraLanguage": "Cinematic 35mm wide-aperture composition",
+    "consistencySeed": 902319,
+    "items": [
+      {
+        "id": "media_slide_1_1787746832263",
+        "slideId": "slide_1_1787746832263",
+        "purpose": "HERO",
+        "subject": "Persistence scenario probe",
+        "composition": "Rule of thirds cinematic",
+        "style": "FUTURISTIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 902319,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "b266aa700aaed4a9bff7018fc949bff6327431782b53139ffd6afcc0f6c77cc5"
+      },
+      {
+        "id": "media_slide_2_1787746832263",
+        "slideId": "slide_2_1787746832263",
+        "purpose": "HERO",
+        "subject": "The Macro Environment & Shifting Paradigms",
+        "composition": "Rule of thirds cinematic",
+        "style": "FUTURISTIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 902319,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "1d3e973fec7c5fcb3b20782fc2876ca2c8a16cb4a9bafde064071c79087084c4"
+      },
+      {
+        "id": "media_slide_3_1787746832263",
+        "slideId": "slide_3_1787746832263",
+        "purpose": "HERO",
+        "subject": "Three Critical Barriers Holding Back Growth",
+        "composition": "Rule of thirds cinematic",
+        "style": "FUTURISTIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 902319,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "3f846eefd985056d632b31ba42b668443723c9b4bc15a52bebb4be90cfe03cab"
+      }
+    ]
+  },
+  "qualityAudit": {
+    "overallScore": 96,
+    "contentScore": 95,
+    "storyScore": 95,
+    "factualityScore": 100,
+    "designScore": 90,
+    "visualHierarchyScore": 92,
+    "readabilityScore": 94,
+    "accessibilityScore": 96,
+    "consistencyScore": 96,
+    "findingsCount": 0,
+    "certified": true,
+    "verifiedClaimsCount": 3,
+    "inferredClaimsCount": 0,
+    "unverifiedClaimsCount": 0,
+    "contradictedClaimsCount": 0,
+    "sourceReality": {
+      "evidenceCoverage": 100,
+      "verifiedClaimsCount": 3,
+      "supportedClaimsCount": 0,
+      "partiallyVerifiedClaimsCount": 0,
+      "unverifiedClaimsCount": 0,
+      "contradictedClaimsCount": 0,
+      "hypotheticalClaimsCount": 0,
+      "sourceRetrievalCoverage": 100,
+      "evidenceMatchCoverage": 100,
+      "contradictionResolutionRate": 100,
+      "freshnessCoverage": 100,
+      "numericalVerificationRate": 100,
+      "overallScore": 100
+    }
+  },
+  "evidenceStatus": "GROUNDED_E3",
+  "provenanceHash": "f3516067c8a539dce9a42b6875295505ada1c9b30f9d02a1c045e8791ef9f4fc",
+  "version": 1,
+  "versionHistory": [
+    {
+      "version": 1,
+      "timestamp": "2026-08-26T12:20:32.263Z",
+      "author": "Hermes Autonomous Planner V7",
+      "changeReason": "Initial deck synthesis with Creative Direction & Deck Health",
+      "modelUsed": "Hermes-70B-Router",
+      "slidesCount": 3,
+      "qualityScore": 94,
+      "provenanceHash": "f3516067c8a539dce9a42b6875295505ada1c9b30f9d02a1c045e8791ef9f4fc"
+    }
+  ],
+  "autoRepairs": [
+    {
+      "id": "rep_1787746832263_7qyl",
+      "slideId": "slide_1_1787746832263",
+      "defectCategory": "VISUAL_INCONSISTENCY",
+      "originalValue": "Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.",
+      "repairedValue": "Synchronized visual strategy with Presentation Media Bible.",
+      "timestamp": "2026-08-26T12:20:32.263Z",
+      "success": true
+    },
+    {
+      "id": "rep_1787746832263_4fsv",
+      "slideId": "slide_2_1787746832263",
+      "defectCategory": "VISUAL_INCONSISTENCY",
+      "originalValue": "Traditional legacy workflows are reaching terminal velocity bottlenecks. Organizations that adapt to",
+      "repairedValue": "Synchronized visual strategy with Presentation Media Bible.",
+      "timestamp": "2026-08-26T12:20:32.263Z",
+      "success": true
+    },
+    {
+      "id": "rep_1787746832263_8xgy",
+      "slideId": "slide_3_1787746832263",
+      "defectCategory": "VISUAL_INCONSISTENCY",
+      "originalValue": "Analysis reveals three compounding friction points preventing organizations from achieving enterpris",
+      "repairedValue": "Synchronized visual strategy with Presentation Media Bible.",
+      "timestamp": "2026-08-26T12:20:32.263Z",
+      "success": true
+    }
+  ],
+  "createdAt": "2026-08-26T12:20:32.263Z",
+  "updatedAt": "2026-08-26T12:20:32.263Z",
+  "deckHealth": {
+    "narrative": 92,
+    "storyFlow": 92,
+    "visualVariety": 85,
+    "hierarchy": 98,
+    "factuality": 100,
+    "accessibility": 96,
+    "brandConsistency": 96,
+    "cognitiveLoadScore": 100,
+    "overallScore": 94,
+    "repetitionWarnings": [],
+    "recommendations": []
+  }
+}

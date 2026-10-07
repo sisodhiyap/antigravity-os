@@ -1,0 +1,9 @@
+{
+  "injectedScenarios": [
+    "MODEL_FALLBACK",
+    "DB_LOCK",
+    "SOCKET_BREAKOUT"
+  ],
+  "allGracefullyHandled": true,
+  "status": "PASS"
+}

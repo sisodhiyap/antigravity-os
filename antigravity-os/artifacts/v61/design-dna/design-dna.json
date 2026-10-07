@@ -1,0 +1,30 @@
+{
+  "dnaId": "dna_chronos_vfx_studio",
+  "projectDna": {
+    "colorPalette": [
+      "#080a0f",
+      "#161b26",
+      "#e6b800",
+      "#f8fafc",
+      "#94a3b8"
+    ],
+    "typographyScale": {
+      "h1": "2.25rem",
+      "h2": "1.5rem",
+      "body": "0.95rem",
+      "caption": "0.75rem"
+    },
+    "surfaceBlurPx": 16,
+    "cornerRadiusPx": 12,
+    "motionTimingMs": 250
+  },
+  "ownerPreferences": {
+    "preferredTheme": "CHARCOAL_GOLD",
+    "accessibilityEnforced": true,
+    "lockedPatterns": [
+      "FOCUS_RINGS_VISIBLE",
+      "GLASSMORPHISM_BACKDROP",
+      "GOLD_RADIAL_HOVER"
+    ]
+  }
+}

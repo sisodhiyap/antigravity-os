@@ -1,0 +1,10 @@
+{
+  "localModelsConfigured": [
+    "llama3",
+    "mistral",
+    "deepseek-coder",
+    "nomic-embed-text"
+  ],
+  "fallbackChain": "Cloud -> Secondary -> Ollama -> Deterministic Fallback",
+  "status": "PASS"
+}

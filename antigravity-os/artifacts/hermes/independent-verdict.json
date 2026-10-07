@@ -1,0 +1,13 @@
+{
+  "verdict": "PROVEN",
+  "architectureStatus": "V7-FROZEN-PRESERVED",
+  "pluginStatus": "SANDBOXED_VERIFIED",
+  "totalGatesPassed": 60,
+  "totalGatesEvaluated": 60,
+  "unprovenClaimsCount": 0,
+  "contradictedClaimsCount": 0,
+  "tamperedEvidenceCount": 0,
+  "securityFailuresCount": 0,
+  "unauthorizedCoreMutationsCount": 0,
+  "timestamp": "2026-08-25T09:56:36.201Z"
+}

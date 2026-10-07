@@ -1,0 +1,7 @@
+{
+  "providers": [
+    "Local Ollama GPU",
+    "OpenAI",
+    "Gemini"
+  ]
+}

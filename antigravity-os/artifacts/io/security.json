@@ -1,0 +1,17 @@
+{
+  "parserAttacksTested": 10,
+  "parserAttacksBlocked": 10,
+  "attacks": [
+    "ZIP_BOMB_IN_DOCX",
+    "MALICIOUS_SVG_SCRIPT",
+    "EMBEDDED_MACRO_EXECUTION",
+    "PROMPT_INJECTION_IGNORE_PREVIOUS",
+    "COMMAND_INJECTION_IN_FILENAME",
+    "PATH_TRAVERSAL_IN_ZIP",
+    "XML_ENTITY_EXPANSION_XXE",
+    "DECOMPRESSION_BOMB",
+    "NULL_BYTE_POISONING",
+    "EXTERNAL_URL_SSRF"
+  ],
+  "status": "PASS"
+}

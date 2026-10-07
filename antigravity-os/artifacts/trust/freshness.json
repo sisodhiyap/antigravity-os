@@ -1,0 +1,106 @@
+[
+  {
+    "isFresh": true,
+    "isStale": false,
+    "ageMs": 8,
+    "maxAllowedMs": 315360000000,
+    "freshnessClass": "STABLE",
+    "recommendedAction": "MAINTAIN"
+  },
+  {
+    "isFresh": true,
+    "isStale": false,
+    "ageMs": 7,
+    "maxAllowedMs": 315360000000,
+    "freshnessClass": "STABLE",
+    "recommendedAction": "MAINTAIN"
+  },
+  {
+    "isFresh": true,
+    "isStale": false,
+    "ageMs": 6,
+    "maxAllowedMs": 315360000000,
+    "freshnessClass": "STABLE",
+    "recommendedAction": "MAINTAIN"
+  },
+  {
+    "isFresh": true,
+    "isStale": false,
+    "ageMs": 5,
+    "maxAllowedMs": 315360000000,
+    "freshnessClass": "STABLE",
+    "recommendedAction": "MAINTAIN"
+  },
+  {
+    "isFresh": true,
+    "isStale": false,
+    "ageMs": 5,
+    "maxAllowedMs": 315360000000,
+    "freshnessClass": "STABLE",
+    "recommendedAction": "MAINTAIN"
+  },
+  {
+    "isFresh": true,
+    "isStale": false,
+    "ageMs": 3,
+    "maxAllowedMs": 315360000000,
+    "freshnessClass": "STABLE",
+    "recommendedAction": "MAINTAIN"
+  },
+  {
+    "isFresh": true,
+    "isStale": false,
+    "ageMs": 3,
+    "maxAllowedMs": 315360000000,
+    "freshnessClass": "STABLE",
+    "recommendedAction": "MAINTAIN"
+  },
+  {
+    "isFresh": true,
+    "isStale": false,
+    "ageMs": 2,
+    "maxAllowedMs": 315360000000,
+    "freshnessClass": "STABLE",
+    "recommendedAction": "MAINTAIN"
+  },
+  {
+    "isFresh": true,
+    "isStale": false,
+    "ageMs": 2,
+    "maxAllowedMs": 315360000000,
+    "freshnessClass": "STABLE",
+    "recommendedAction": "MAINTAIN"
+  },
+  {
+    "isFresh": true,
+    "isStale": false,
+    "ageMs": 2,
+    "maxAllowedMs": 315360000000,
+    "freshnessClass": "STABLE",
+    "recommendedAction": "MAINTAIN"
+  },
+  {
+    "isFresh": true,
+    "isStale": false,
+    "ageMs": 2,
+    "maxAllowedMs": 315360000000,
+    "freshnessClass": "STABLE",
+    "recommendedAction": "MAINTAIN"
+  },
+  {
+    "isFresh": true,
+    "isStale": false,
+    "ageMs": 2,
+    "maxAllowedMs": 315360000000,
+    "freshnessClass": "STABLE",
+    "recommendedAction": "MAINTAIN"
+  },
+  {
+    "isFresh": true,
+    "isStale": false,
+    "ageMs": 2,
+    "maxAllowedMs": 315360000000,
+    "freshnessClass": "STABLE",
+    "recommendedAction": "MAINTAIN"
+  }
+]

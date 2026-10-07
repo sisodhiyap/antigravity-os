@@ -1,0 +1,7 @@
+{
+  "ollamaServer": "http://127.0.0.1:11434",
+  "primaryModel": "qwen2.5-coder:7b",
+  "planningModel": "llama3.3:70b-instruct",
+  "status": "LOCAL_OLLAMA_ACTIVE",
+  "latencyMs": 45
+}

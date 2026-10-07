@@ -1,0 +1,13 @@
+[
+  {
+    "pluginId": "plug_tailwind_v4",
+    "name": "Tailwind CSS v4 Adapter",
+    "version": "1.0.0",
+    "category": "FRAMEWORK_ADAPTER",
+    "isSandboxed": true,
+    "securityAudited": true,
+    "realityTested": true,
+    "ownerApproved": true,
+    "status": "ACTIVE"
+  }
+]

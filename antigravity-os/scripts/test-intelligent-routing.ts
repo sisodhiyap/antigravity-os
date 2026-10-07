@@ -93,7 +93,8 @@ async function runIntelligentRoutingValidation() {
 
   // Policy 3: Large architecture -> AirLLM
   const p3 = selectIntelligentModel({
-    classification: classifyTask('Architect a 32B model layered memory streaming pipeline for low VRAM GPU')
+    classification: classifyTask('Architect a 32B model layered memory streaming pipeline for low VRAM GPU'),
+    overrideRamAvailableGb: 8.0
   });
   results.push({
     testNumber: 3,
@@ -108,7 +109,8 @@ async function runIntelligentRoutingValidation() {
 
   // Policy 4: Long-context local task -> AirLLM (up to 16K)
   const p4 = selectIntelligentModel({
-    classification: classifyTask('Analyze this entire codebase repository architecture', 8000)
+    classification: classifyTask('Analyze this entire codebase repository architecture', 8000),
+    overrideRamAvailableGb: 8.0
   });
   results.push({
     testNumber: 4,

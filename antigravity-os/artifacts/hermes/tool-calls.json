@@ -1,0 +1,38 @@
+[
+  {
+    "toolId": "hermes_fs_read",
+    "category": "FILESYSTEM",
+    "risk": "READ_ONLY",
+    "autonomyLevel": 0
+  },
+  {
+    "toolId": "hermes_fs_write",
+    "category": "FILESYSTEM",
+    "risk": "LOW",
+    "autonomyLevel": 2
+  },
+  {
+    "toolId": "hermes_test_runner",
+    "category": "TEST",
+    "risk": "LOW",
+    "autonomyLevel": 3
+  },
+  {
+    "toolId": "hermes_security_scan",
+    "category": "SECURITY",
+    "risk": "READ_ONLY",
+    "autonomyLevel": 1
+  },
+  {
+    "toolId": "hermes_browser_qa",
+    "category": "BROWSER",
+    "risk": "MEDIUM",
+    "autonomyLevel": 3
+  },
+  {
+    "toolId": "hermes_production_promote",
+    "category": "GIT",
+    "risk": "CRITICAL",
+    "autonomyLevel": 5
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "autonomyLevel": 2,
+  "localOnly": true,
+  "destructiveBlocked": true
+}

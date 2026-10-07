@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETED",
+  "calls": [
+    {
+      "model": "qwen2.5-coder:7b",
+      "provider": "OLLAMA_LOCAL",
+      "task": "SLIDE_STORY_AND_LAYOUT_DECOMPOSITION",
+      "tokens": 2850,
+      "latencyMs": 140,
+      "status": "COMPLETED"
+    }
+  ]
+}

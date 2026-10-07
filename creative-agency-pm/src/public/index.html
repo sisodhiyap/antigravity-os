@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA STUDIO OS — Creative Agency Project Management</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Global App Layout -->
+  <div class="app-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h2>AURA STUDIO</h2>
+          <span class="badge-sub">CREATIVE PM OS</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <button class="nav-item active" data-tab="dashboard">
+          <span class="icon">📊</span>
+          <span>Dashboard</span>
+        </button>
+        <button class="nav-item" data-tab="projects">
+          <span class="icon">📁</span>
+          <span>Projects</span>
+          <span class="count-badge" id="badge-projects">3</span>
+        </button>
+        <button class="nav-item" data-tab="kanban">
+          <span class="icon">📋</span>
+          <span>Kanban Tasks</span>
+          <span class="count-badge" id="badge-tasks">6</span>
+        </button>
+        <button class="nav-item" data-tab="approvals">
+          <span class="icon">🖋️</span>
+          <span>Approvals Hub</span>
+          <span class="count-badge pulse" id="badge-approvals">1</span>
+        </button>
+        <button class="nav-item" data-tab="clients">
+          <span class="icon">👥</span>
+          <span>Clients & CRM</span>
+        </button>
+        <button class="nav-item" data-tab="vault">
+          <span class="icon">🗄️</span>
+          <span>Asset Vault</span>
+        </button>
+        <button class="nav-item" data-tab="team">
+          <span class="icon">⚡</span>
+          <span>Team Roster</span>
+        </button>
+        <button class="nav-item" data-tab="activity">
+          <span class="icon">📜</span>
+          <span>Activity Audit</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-chip">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" alt="Avatar" class="avatar">
+          <div class="user-info">
+            <span class="user-name">Elena Rostova</span>
+            <span class="user-role">Executive Director</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-wrapper">
+      
+      <!-- Top Control Bar -->
+      <header class="top-bar">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="global-search-input" placeholder="Search projects, tasks, clients, files (Press '/' to focus)...">
+          <kbd class="shortcut">/</kbd>
+          <div class="search-results-dropdown" id="search-dropdown"></div>
+        </div>
+
+        <div class="top-actions">
+          <button class="btn btn-secondary btn-icon" id="theme-toggle-btn" title="Toggle Dark/Light Mode">
+            <span id="theme-icon">🌙</span>
+          </button>
+          
+          <div class="notif-wrapper">
+            <button class="btn btn-secondary btn-icon" id="notif-btn" title="Notifications">
+              <span>🔔</span>
+              <span class="notif-dot" id="notif-badge"></span>
+            </button>
+            <div class="notif-dropdown" id="notif-dropdown">
+              <div class="notif-header">
+                <h4>Notifications</h4>
+                <button class="btn-text" id="mark-all-read-btn">Mark all read</button>
+              </div>
+              <div class="notif-list" id="notif-list"></div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" id="btn-quick-create">+ New Project</button>
+        </div>
+      </header>
+
+      <!-- Dynamic Tab Views -->
+      <div class="content-container">
+
+        <!-- 1. DASHBOARD TAB -->
+        <section class="tab-pane active" id="tab-dashboard">
+          <div class="view-header">
+            <div>
+              <h1 class="view-title">Executive Command Center</h1>
+              <p class="view-subtitle">Real-time telemetry on creative velocity, budget consumption, and client approvals.</p>
+            </div>
+            <div class="time-filter">
+              <span class="badge badge-outline">Q3 2026 Live Session</span>
+            </div>
+          </div>
+
+          <!-- KPI Metric Cards -->
+          <div class="kpi-grid">
+            <div class="kpi-card glow-cyan">
+              <div class="kpi-label">ACTIVE PROJECTS</div>
+              <div class="kpi-value" id="kpi-active-projects">3</div>
+              <div class="kpi-trend positive">↑ 100% on schedule</div>
+            </div>
+            <div class="kpi-card glow-emerald">
+              <div class="kpi-label">PENDING APPROVALS</div>
+              <div class="kpi-value" id="kpi-pending-approvals">1</div>
+              <div class="kpi-trend warning">Avg turnaround 4.2h</div>
+            </div>
+            <div class="kpi-card glow-purple">
+              <div class="kpi-label">TOTAL BUDGET POOL</div>
+              <div class="kpi-value" id="kpi-budget">$285,000</div>
+              <div class="kpi-trend positive">$173,100 spent (60.7%)</div>
+            </div>
+            <div class="kpi-card glow-pink">
+              <div class="kpi-label">PROFIT MARGIN</div>
+              <div class="kpi-value" id="kpi-margin">39%</div>
+              <div class="kpi-trend positive">Healthy Agency Tier</div>
+            </div>
+          </div>
+
+          <!-- Analytics Charts & Status Split -->
+          <div class="analytics-row">
+            <div class="panel panel-large">
+              <div class="panel-header">
+                <h3>Weekly Creative Sprint Velocity</h3>
+                <span class="badge badge-accent">Hours Logged vs Completed</span>
+              </div>
+              <div class="chart-container" id="velocity-chart">
+                <!-- Rendered SVG Bar Chart -->
+              </div>
+            </div>
+
+            <div class="panel panel-small">
+              <div class="panel-header">
+                <h3>Task Pipeline Health</h3>
+              </div>
+              <div class="pipeline-breakdown" id="pipeline-breakdown">
+                <!-- Status bars -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. PROJECTS TAB -->
+        <section class="tab-pane" id="tab-projects">
+          <div class="view-header">
+            <div>
+              <h1 class="view-title">Active Creative Projects</h1>
+              <p class="view-subtitle">High-fidelity brand identities, 3D campaigns, and interactive digital builds.</p>
+            </div>
+            <button class="btn btn-primary" onclick="openModal('modal-project')">+ Create Project</button>
+          </div>
+
+          <div class="project-grid" id="projects-container">
+            <!-- Dynamically populated project cards -->
+          </div>
+        </section>
+
+        <!-- 3. KANBAN TASKS TAB -->
+        <section class="tab-pane" id="tab-kanban">
+          <div class="view-header">
+            <div>
+              <h1 class="view-title">Design Sprint Kanban</h1>
+              <p class="view-subtitle">Track task lifecycles from concept backlog to final client delivery.</p>
+            </div>
+            <button class="btn btn-primary" onclick="openModal('modal-task')">+ Add Task</button>
+          </div>
+
+          <div class="kanban-board">
+            <div class="kanban-column" data-status="Backlog">
+              <div class="kanban-col-header">
+                <span class="col-title">Backlog</span>
+                <span class="col-count" id="count-Backlog">0</span>
+              </div>
+              <div class="kanban-cards" id="col-Backlog"></div>
+            </div>
+
+            <div class="kanban-column" data-status="In Design">
+              <div class="kanban-col-header">
+                <span class="col-title" style="color: var(--primary);">In Design</span>
+                <span class="col-count" id="count-In Design">0</span>
+              </div>
+              <div class="kanban-cards" id="col-In-Design"></div>
+            </div>
+
+            <div class="kanban-column" data-status="Client Review">
+              <div class="kanban-col-header">
+                <span class="col-title" style="color: var(--warning);">Client Review</span>
+                <span class="col-count" id="count-Client Review">0</span>
+              </div>
+              <div class="kanban-cards" id="col-Client-Review"></div>
+            </div>
+
+            <div class="kanban-column" data-status="Approved">
+              <div class="kanban-col-header">
+                <span class="col-title" style="color: var(--accent);">Approved</span>
+                <span class="col-count" id="count-Approved">0</span>
+              </div>
+              <div class="kanban-cards" id="col-Approved"></div>
+            </div>
+
+            <div class="kanban-column" data-status="Completed">
+              <div class="kanban-col-header">
+                <span class="col-title" style="color: var(--text-muted);">Completed</span>
+                <span class="col-count" id="count-Completed">0</span>
+              </div>
+              <div class="kanban-cards" id="col-Completed"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. APPROVALS TAB -->
+        <section class="tab-pane" id="tab-approvals">
+          <div class="view-header">
+            <div>
+              <h1 class="view-title">Executive Approvals & Client Sign-Offs</h1>
+              <p class="view-subtitle">Strict cryptographic audit trail of creative deliverables and client authorizations.</p>
+            </div>
+            <button class="btn btn-primary" onclick="openModal('modal-approval')">+ Request Approval</button>
+          </div>
+
+          <div class="approvals-stream" id="approvals-container">
+            <!-- Dynamically populated approvals -->
+          </div>
+        </section>
+
+        <!-- 5. CLIENTS TAB -->
+        <section class="tab-pane" id="tab-clients">
+          <div class="view-header">
+            <div>
+              <h1 class="view-title">Client Directory & Accounts</h1>
+              <p class="view-subtitle">Manage enterprise retainers, contact points, and portal permissions.</p>
+            </div>
+            <button class="btn btn-primary" onclick="openModal('modal-client')">+ Add Client</button>
+          </div>
+
+          <div class="client-grid" id="clients-container">
+            <!-- Dynamically populated clients -->
+          </div>
+        </section>
+
+        <!-- 6. ASSET VAULT TAB -->
+        <section class="tab-pane" id="tab-vault">
+          <div class="view-header">
+            <div>
+              <h1 class="view-title">Creative Asset Vault</h1>
+              <p class="view-subtitle">Sandboxed storage for 3D renders, brand guidelines, and production deliverables.</p>
+            </div>
+            <button class="btn btn-primary" onclick="openModal('modal-file')">+ Upload Asset</button>
+          </div>
+
+          <div class="vault-grid" id="files-container">
+            <!-- Dynamically populated files -->
+          </div>
+        </section>
+
+        <!-- 7. TEAM TAB -->
+        <section class="tab-pane" id="tab-team">
+          <div class="view-header">
+            <div>
+              <h1 class="view-title">Creative Talent & Workload</h1>
+              <p class="view-subtitle">Roles, bandwidth utilization, and assigned design deliverables.</p>
+            </div>
+          </div>
+
+          <div class="team-grid" id="team-container">
+            <!-- Dynamically populated team members -->
+          </div>
+        </section>
+
+        <!-- 8. ACTIVITY TAB -->
+        <section class="tab-pane" id="tab-activity">
+          <div class="view-header">
+            <div>
+              <h1 class="view-title">Audit Log & System History</h1>
+              <p class="view-subtitle">Immutable chronological timeline of all project, task, and approval actions.</p>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="activity-timeline" id="activity-timeline">
+              <!-- Dynamically populated timeline -->
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- MODALS -->
+
+  <!-- 1. Create Project Modal -->
+  <div class="modal-backdrop" id="modal-project">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Create New Project</h3>
+        <button class="btn-close" onclick="closeModal('modal-project')">×</button>
+      </div>
+      <form id="form-create-project" onsubmit="handleCreateProject(event)">
+        <div class="form-group">
+          <label>Project Name</label>
+          <input type="text" class="input" name="name" required placeholder="e.g. Neo Tokyo Brand Identity">
+        </div>
+        <div class="form-group">
+          <label>Client</label>
+          <select class="input" name="client_id" id="select-project-client" required></select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Project Code</label>
+            <input type="text" class="input" name="code" placeholder="e.g. NTO-2026">
+          </div>
+          <div class="form-group">
+            <label>Priority</label>
+            <select class="input" name="priority">
+              <option value="Urgent">Urgent</option>
+              <option value="High">High</option>
+              <option value="Medium" selected>Medium</option>
+              <option value="Low">Low</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Budget ($)</label>
+            <input type="number" class="input" name="budget" placeholder="75000">
+          </div>
+          <div class="form-group">
+            <label>Due Date</label>
+            <input type="date" class="input" name="due_date" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Creative Brief / Description</label>
+          <textarea class="input" name="description" rows="3" placeholder="Brief outline, goals, and key deliverable assets..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-project')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Create Project</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Create Task Modal -->
+  <div class="modal-backdrop" id="modal-task">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Create New Task</h3>
+        <button class="btn-close" onclick="closeModal('modal-task')">×</button>
+      </div>
+      <form id="form-create-task" onsubmit="handleCreateTask(event)">
+        <div class="form-group">
+          <label>Task Title</label>
+          <input type="text" class="input" name="title" required placeholder="e.g. Keyframe 3D Render">
+        </div>
+        <div class="form-group">
+          <label>Target Project</label>
+          <select class="input" name="project_id" id="select-task-project" required></select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Assignee</label>
+            <select class="input" name="assignee_id" id="select-task-assignee"></select>
+          </div>
+          <div class="form-group">
+            <label>Priority</label>
+            <select class="input" name="priority">
+              <option value="Urgent">Urgent</option>
+              <option value="High">High</option>
+              <option value="Medium" selected>Medium</option>
+              <option value="Low">Low</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Estimated Hours</label>
+            <input type="number" class="input" name="estimated_hours" placeholder="16">
+          </div>
+          <div class="form-group">
+            <label>Due Date</label>
+            <input type="date" class="input" name="due_date">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Instructions & Specs</label>
+          <textarea class="input" name="description" rows="2" placeholder="Design requirements, color palettes..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-task')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Create Task</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. Request Approval Modal -->
+  <div class="modal-backdrop" id="modal-approval">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Request Client Sign-Off</h3>
+        <button class="btn-close" onclick="closeModal('modal-approval')">×</button>
+      </div>
+      <form id="form-create-approval" onsubmit="handleCreateApproval(event)">
+        <div class="form-group">
+          <label>Approval Title</label>
+          <input type="text" class="input" name="title" required placeholder="e.g. Apex Q3 Hero Keyframe Review">
+        </div>
+        <div class="form-group">
+          <label>Project</label>
+          <select class="input" name="project_id" id="select-approval-project" required></select>
+        </div>
+        <div class="form-group">
+          <label>Review Notes for Client</label>
+          <textarea class="input" name="comments" rows="3" placeholder="Explain what changes were made and what requires sign-off..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-approval')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Submit for Sign-Off</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. Add Client Modal -->
+  <div class="modal-backdrop" id="modal-client">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Add Client Account</h3>
+        <button class="btn-close" onclick="closeModal('modal-client')">×</button>
+      </div>
+      <form id="form-create-client" onsubmit="handleCreateClient(event)">
+        <div class="form-group">
+          <label>Client Name / Lead Contact</label>
+          <input type="text" class="input" name="name" required placeholder="e.g. Sarah Jenkins">
+        </div>
+        <div class="form-group">
+          <label>Company Name</label>
+          <input type="text" class="input" name="company" required placeholder="e.g. Apex Global">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Contact Email</label>
+            <input type="email" class="input" name="contact_email" placeholder="contact@company.com">
+          </div>
+          <div class="form-group">
+            <label>Tier</label>
+            <select class="input" name="tier">
+              <option value="VIP Enterprise">VIP Enterprise</option>
+              <option value="Retainer">Retainer</option>
+              <option value="Standard" selected>Standard</option>
+              <option value="Pro Bono">Pro Bono</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-client')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Client</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 5. Upload Asset Modal -->
+  <div class="modal-backdrop" id="modal-file">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Upload Asset to Vault</h3>
+        <button class="btn-close" onclick="closeModal('modal-file')">×</button>
+      </div>
+      <form id="form-create-file" onsubmit="handleCreateFile(event)">
+        <div class="form-group">
+          <label>Asset Name</label>
+          <input type="text" class="input" name="filename" required placeholder="e.g. brand_guide_v3.pdf">
+        </div>
+        <div class="form-group">
+          <label>Project</label>
+          <select class="input" name="project_id" id="select-file-project" required></select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>MIME Type</label>
+            <input type="text" class="input" name="mime_type" placeholder="image/png, application/pdf">
+          </div>
+          <div class="form-group">
+            <label>Version</label>
+            <input type="number" class="input" name="version" value="1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-file')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Upload Asset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

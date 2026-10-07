@@ -1,0 +1,51 @@
+{
+  "nodesCount": 2,
+  "edgesCount": 1,
+  "nodes": [
+    {
+      "id": "screen_main",
+      "name": "Dashboard Home",
+      "type": "SCREEN",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "styles": {
+        "backgroundColor": "#080a0f"
+      },
+      "attributes": {
+        "route": "/home"
+      },
+      "confidence": "HIGH"
+    },
+    {
+      "id": "card_stat",
+      "name": "Revenue Card",
+      "type": "CARD",
+      "bounds": {
+        "x": 40,
+        "y": 100,
+        "width": 300,
+        "height": 160
+      },
+      "styles": {
+        "backgroundColor": "rgba(22, 27, 38, 0.85)",
+        "borderRadius": 8
+      },
+      "attributes": {
+        "title": "Monthly Recurring Revenue",
+        "value": "$45,200"
+      },
+      "confidence": "HIGH"
+    }
+  ],
+  "edges": [
+    {
+      "fromNodeId": "screen_main",
+      "toNodeId": "card_stat",
+      "type": "CONTAINS"
+    }
+  ]
+}

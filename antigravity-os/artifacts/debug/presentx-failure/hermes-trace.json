@@ -1,0 +1,21 @@
+{
+  "status": "COMPLETED",
+  "stages": [
+    {
+      "stage": "INITIALIZATION",
+      "timestamp": "2026-08-26T09:05:16.100Z",
+      "status": "STARTED"
+    },
+    {
+      "stage": "GENERATION",
+      "timestamp": "2026-08-26T09:05:16.100Z",
+      "status": "RUNNING"
+    },
+    {
+      "stage": "GENERATION_COMPLETE",
+      "timestamp": "2026-08-26T09:05:16.105Z",
+      "status": "COMPLETED",
+      "slideCount": 10
+    }
+  ]
+}

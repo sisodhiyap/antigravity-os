@@ -1,0 +1,34 @@
+{
+  "certificateId": "cert_qual_1787746267105_xnwhp",
+  "projectId": "pres_1787746267079_jkl3x",
+  "projectTitle": "Complex multi-stage product launch",
+  "projectHash": "bc01d1c1b1ecd8de1c21fdf4f6f5e75d47f0da493c5984b7cfa0e3f991e0d72c",
+  "presentationHash": "51444ad823610778e6930dc4ba9d176f6b489c6248117029156baa3f08373151",
+  "slideCount": 12,
+  "creativeQuality": 94,
+  "trustQuality": 100,
+  "technicalIntegrity": 100,
+  "accessibilityScore": 98,
+  "exportScore": 98,
+  "decision": "APPROVED",
+  "repairCyclesCount": 0,
+  "modelsUsed": [
+    "ollama:llama3",
+    "ollama:mistral"
+  ],
+  "enginesUsed": [
+    "DeterministicQualityAuditor",
+    "VisualInspectionEngine",
+    "MultiModelCreativeJudge",
+    "LocalizedSelfRepairEngine",
+    "PresentXSourceRealityGate"
+  ],
+  "verifiedClaimsCount": 12,
+  "unverifiedClaimsCount": 0,
+  "warnings": [],
+  "roundtripResult": "PERFECT",
+  "roundtripLossPercentage": 0,
+  "exportFormat": "PPTX",
+  "timestamp": "2026-08-26T12:11:07.105Z",
+  "signature": "760422c8a13ef04b2187a716ce27d0c93a7dc511cf8d23c3dfac46680d33cf3f"
+}

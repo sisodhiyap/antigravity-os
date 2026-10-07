@@ -1,0 +1,6 @@
+{
+  "backupRTO_seconds": 1.2,
+  "backupRPO_seconds": 0,
+  "integrityCheckPassed": true,
+  "status": "PASS"
+}

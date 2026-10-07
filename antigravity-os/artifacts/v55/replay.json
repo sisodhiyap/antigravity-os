@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-08-25T08:08:00.000Z",
+  "replayedMissions": [
+    {
+      "missionId": "msn_reality_bm_trading",
+      "isDeterministicMatch": true,
+      "scoreDelta": 0.0,
+      "originalRealityScore": 98.85,
+      "replayedRealityScore": 98.85,
+      "verdict": "REPRODUCED_CONSISTENT"
+    }
+  ],
+  "status": "PASS"
+}

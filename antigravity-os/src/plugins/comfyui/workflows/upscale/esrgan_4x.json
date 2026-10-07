@@ -1,0 +1,34 @@
+{
+  "name": "RealESRGAN 4x Upscale Pipeline",
+  "workflowId": "wf_upscale_esrgan4x",
+  "modality": "UPSCALE",
+  "version": "1.0.0",
+  "nodes": {
+    "1": {
+      "inputs": {
+        "model_name": "RealESRGAN_x4plus.pth"
+      },
+      "class_type": "UpscaleModelLoader"
+    },
+    "2": {
+      "inputs": {
+        "upscale_model": ["1", 0],
+        "image": ["3", 0]
+      },
+      "class_type": "ImageUpscaleWithModel"
+    },
+    "3": {
+      "inputs": {
+        "image": "input.png"
+      },
+      "class_type": "LoadImage"
+    },
+    "4": {
+      "inputs": {
+        "images": ["2", 0],
+        "filename_prefix": "Antigravity_Upscale"
+      },
+      "class_type": "SaveImage"
+    }
+  }
+}

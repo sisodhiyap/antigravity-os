@@ -1,0 +1,76 @@
+{
+  "apiusers": [
+    {
+      "id": "id_ja4w1y6",
+      "created_at": "2026-08-25T07:14:04.940Z",
+      "updated_at": "2026-08-25T07:14:04.940Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_n2js55e",
+      "created_at": "2026-08-25T07:14:04.962Z",
+      "updated_at": "2026-08-25T07:14:04.962Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    },
+    {
+      "id": "id_x4o10n6",
+      "created_at": "2026-08-25T07:15:41.161Z",
+      "updated_at": "2026-08-25T07:15:41.161Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_ov22csp",
+      "created_at": "2026-08-25T07:15:41.200Z",
+      "updated_at": "2026-08-25T07:15:41.200Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    }
+  ],
+  "apikeys": [
+    {
+      "id": "id_c7fy6pu",
+      "created_at": "2026-08-25T07:14:04.957Z",
+      "updated_at": "2026-08-25T07:14:04.957Z",
+      "title": "Initial ApiKey Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for ApiKey"
+    }
+  ],
+  "projects": [
+    {
+      "id": "id_5b74trd",
+      "created_at": "2026-08-25T07:14:04.957Z",
+      "updated_at": "2026-08-25T07:14:04.957Z",
+      "title": "Initial Project Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Project"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "id_pn9z4uf",
+      "created_at": "2026-08-25T07:14:04.958Z",
+      "updated_at": "2026-08-25T07:14:04.958Z",
+      "title": "Initial Task Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Task"
+    }
+  ],
+  "auditlogs": [
+    {
+      "id": "id_kwn0rcy",
+      "created_at": "2026-08-25T07:14:04.958Z",
+      "updated_at": "2026-08-25T07:14:04.958Z",
+      "title": "Initial AuditLog Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for AuditLog"
+    }
+  ]
+}

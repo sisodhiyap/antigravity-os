@@ -1,0 +1,610 @@
+{
+  "manifest": {
+    "app": "PresentX Studio",
+    "version": "7.0.0-V7-NATIVE",
+    "exportType": "PRESENTATION_EVIDENCE_BUNDLE",
+    "sha256Signature": "1da90778cf53d5efe2cba80d80675d78a31fa1cb35ed01a00216323a0a3401da",
+    "timestamp": "2026-08-26T06:44:08.107Z"
+  },
+  "project": {
+    "id": "pres_1787726648106_kjw4y",
+    "title": "8-slide technical presentation on modern clou...",
+    "subtitle": "Communicate and persuade audience regarding Create an 8-slide technical presentation on modern cloud rea...",
+    "rawInput": "Create an 8-slide technical presentation on modern cloud real-time VFX production pipelines.",
+    "brief": {
+      "title": "8-slide technical presentation on modern clou...",
+      "purpose": "Communicate and persuade audience regarding Create an 8-slide technical presentation on modern cloud rea...",
+      "audience": "Executives, Investors, Stakeholders, and Strategic Partners",
+      "presentationType": "REPORT",
+      "tone": "Authoritative, Visionary, Strategic, and Highly Persuasive",
+      "language": "English (US)",
+      "durationMinutes": 12,
+      "slideCount": 8,
+      "depth": "EXECUTIVE",
+      "visualStyle": "TECH",
+      "brandName": "PresentX Enterprise",
+      "callToAction": "Partner with us to lead this transformation."
+    },
+    "visualDirection": "TECH",
+    "designTokens": {
+      "primaryColor": "#00F0FF",
+      "secondaryColor": "#7000FF",
+      "accentColor": "#00F0FF",
+      "backgroundColor": "#0B0F17",
+      "surfaceColor": "#111827",
+      "textColor": "#F3F4F6",
+      "textSecondaryColor": "#9CA3AF",
+      "fontHeading": "JetBrains Mono, Fira Code, monospace",
+      "fontBody": "Inter, sans-serif",
+      "borderRadius": "0.75rem",
+      "cardStyle": "GLASS"
+    },
+    "storyGraph": [
+      {
+        "id": "story_node_1",
+        "slideNumber": 1,
+        "role": "HOOK",
+        "keyMessage": "Key takeaway for slide 1 addressing 8-slide technical presentation on modern clou...",
+        "tensionLevel": 3
+      },
+      {
+        "id": "story_node_2",
+        "slideNumber": 2,
+        "role": "CONTEXT",
+        "keyMessage": "Key takeaway for slide 2 addressing 8-slide technical presentation on modern clou...",
+        "tensionLevel": 4
+      },
+      {
+        "id": "story_node_3",
+        "slideNumber": 3,
+        "role": "PROBLEM",
+        "keyMessage": "Key takeaway for slide 3 addressing 8-slide technical presentation on modern clou...",
+        "tensionLevel": 5
+      },
+      {
+        "id": "story_node_4",
+        "slideNumber": 4,
+        "role": "EVIDENCE",
+        "keyMessage": "Key takeaway for slide 4 addressing 8-slide technical presentation on modern clou...",
+        "tensionLevel": 6
+      },
+      {
+        "id": "story_node_5",
+        "slideNumber": 5,
+        "role": "INSIGHT",
+        "keyMessage": "Key takeaway for slide 5 addressing 8-slide technical presentation on modern clou...",
+        "tensionLevel": 7
+      },
+      {
+        "id": "story_node_6",
+        "slideNumber": 6,
+        "role": "SOLUTION",
+        "keyMessage": "Key takeaway for slide 6 addressing 8-slide technical presentation on modern clou...",
+        "tensionLevel": 8
+      },
+      {
+        "id": "story_node_7",
+        "slideNumber": 7,
+        "role": "MECHANISM",
+        "keyMessage": "Key takeaway for slide 7 addressing 8-slide technical presentation on modern clou...",
+        "tensionLevel": 3
+      },
+      {
+        "id": "story_node_8",
+        "slideNumber": 8,
+        "role": "CTA",
+        "keyMessage": "Key takeaway for slide 8 addressing 8-slide technical presentation on modern clou...",
+        "tensionLevel": 4
+      }
+    ],
+    "slides": [
+      {
+        "id": "slide_1_1787726648107",
+        "slideNumber": 1,
+        "layout": "HERO",
+        "headline": "8-slide technical presentation on modern clou...",
+        "subheadline": "A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners",
+        "bodyContent": "Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.",
+        "visualStrategy": "Clean dramatic typography with subtle gold ambient backdrop",
+        "speakerNotes": "Welcome everyone. Today we are exploring a paradigm shift that will define the competitive landscape over the coming five years.",
+        "citations": [
+          "Antigravity Intelligence Foundation"
+        ],
+        "facts": [
+          {
+            "id": "claim_b086a7368c963481",
+            "text": "Create an 8-slide technical presentation on modern cloud real-time VFX production pipelines.",
+            "confidence": 0,
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_b086a7368c963481"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 75,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "findings": [
+            {
+              "type": "INFO",
+              "message": "Text-heavy slide lacking visual anchor. Recommended to attach diagram, metric, or visual.",
+              "fixAction": "GENERATE_VISUAL"
+            }
+          ]
+        }
+      },
+      {
+        "id": "slide_2_1787726648107",
+        "slideNumber": 2,
+        "layout": "TWO_COLUMN",
+        "headline": "The Macro Environment & Shifting Paradigms",
+        "subheadline": "Accelerating technological convergence across industry verticals",
+        "bodyContent": "Traditional legacy workflows are reaching terminal velocity bottlenecks. Organizations that adapt to sovereign autonomous intelligence will unlock exponential operational leverage.",
+        "bulletPoints": [
+          "Legacy agency workflows face a 60% operational efficiency cap",
+          "Autonomous intelligence pipelines reduce turnaround from weeks to minutes",
+          "Deterministic validation guarantees zero-hallucination compliance"
+        ],
+        "visualStrategy": "Split layout contrasting manual vs autonomous velocity",
+        "speakerNotes": "Frame the context clearly. We are not talking about incremental optimization; this is a step-function transition in execution velocity.",
+        "citations": [
+          "Industry Analysis & Market Telemetry"
+        ],
+        "facts": [
+          {
+            "id": "claim_b086a7368c963481",
+            "text": "Create an 8-slide technical presentation on modern cloud real-time VFX production pipelines.",
+            "confidence": 0,
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_b086a7368c963481"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 75,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "findings": [
+            {
+              "type": "INFO",
+              "message": "Text-heavy slide lacking visual anchor. Recommended to attach diagram, metric, or visual.",
+              "fixAction": "GENERATE_VISUAL"
+            }
+          ]
+        }
+      },
+      {
+        "id": "slide_3_1787726648107",
+        "slideNumber": 3,
+        "layout": "THREE_COLUMN",
+        "headline": "Three Critical Barriers Holding Back Growth",
+        "subheadline": "Core bottlenecks identified across modern creative & technical operations",
+        "bodyContent": "Analysis reveals three compounding friction points preventing organizations from achieving enterprise scale.",
+        "bulletPoints": [
+          "Fragmentation: Disconnected toolchains causing 40% context loss",
+          "Hallucination Risk: Unchecked generative outputs lacking factual grounding",
+          "Resource Inefficiency: Runaway cloud compute and opaque API costs"
+        ],
+        "visualStrategy": "Three high-contrast cards highlighting distinct friction vectors",
+        "speakerNotes": "Walk through each pillar concisely. Note how fragmentation and hallucination compound each other without an integrated OS.",
+        "citations": [
+          "Enterprise Operations Audit"
+        ],
+        "facts": [
+          {
+            "id": "claim_b086a7368c963481",
+            "text": "Create an 8-slide technical presentation on modern cloud real-time VFX production pipelines.",
+            "confidence": 0,
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_b086a7368c963481"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 75,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "findings": [
+            {
+              "type": "INFO",
+              "message": "Text-heavy slide lacking visual anchor. Recommended to attach diagram, metric, or visual.",
+              "fixAction": "GENERATE_VISUAL"
+            }
+          ]
+        }
+      },
+      {
+        "id": "slide_4_1787726648107",
+        "slideNumber": 4,
+        "layout": "METRICS_GRID",
+        "headline": "Empirical Performance & Market Impact",
+        "subheadline": "Quantifiable gains delivered by autonomous orchestration",
+        "bodyContent": "Measured telemetry confirms significant performance breakthroughs across cost, speed, and accuracy.",
+        "keyMetrics": [
+          {
+            "value": "10x",
+            "label": "Production Velocity",
+            "change": "+900%",
+            "trend": "UP"
+          },
+          {
+            "value": "85%",
+            "label": "Compute Cost Reduction",
+            "change": "-85%",
+            "trend": "DOWN"
+          },
+          {
+            "value": "100%",
+            "label": "Fact Grounding Lineage",
+            "change": "Zero Hallucination",
+            "trend": "UP"
+          },
+          {
+            "value": "0ms",
+            "label": "Cascading Downtime",
+            "change": "Self-Healing",
+            "trend": "UP"
+          }
+        ],
+        "visualStrategy": "Bold four-card KPI grid with gold metric highlights",
+        "speakerNotes": "Let the numbers speak for themselves. The 10x velocity gain is paired with an 85% reduction in cloud cost due to local hardware routing.",
+        "citations": [
+          "V7 Reality Benchmark Suite"
+        ],
+        "facts": [
+          {
+            "id": "claim_b086a7368c963481",
+            "text": "Create an 8-slide technical presentation on modern cloud real-time VFX production pipelines.",
+            "confidence": 0,
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_b086a7368c963481"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "findings": []
+        }
+      },
+      {
+        "id": "slide_5_1787726648107",
+        "slideNumber": 5,
+        "layout": "CHART_VIEW",
+        "headline": "Productivity Acceleration Trajectory",
+        "subheadline": "5-Year projected efficiency compounding curves",
+        "bodyContent": "Autonomous product pipelines compound over time through continuous learning and failure graph pattern recognition.",
+        "visualStrategy": "Full vector SVG area chart displaying exponential curve",
+        "chart": {
+          "type": "AREA",
+          "title": "Autonomous vs Traditional Velocity (2024-2028)",
+          "data": [
+            {
+              "label": "2024",
+              "value": 20
+            },
+            {
+              "label": "2025",
+              "value": 45
+            },
+            {
+              "label": "2026",
+              "value": 110
+            },
+            {
+              "label": "2027",
+              "value": 240
+            },
+            {
+              "label": "2028",
+              "value": 500
+            }
+          ],
+          "units": "x Output",
+          "source": "Antigravity Engineering Telemetry"
+        },
+        "speakerNotes": "This chart illustrates the compounding curve. As the system builds failure knowledge, repair speed accelerates.",
+        "citations": [
+          "Antigravity Research"
+        ],
+        "facts": [
+          {
+            "id": "claim_b086a7368c963481",
+            "text": "Create an 8-slide technical presentation on modern cloud real-time VFX production pipelines.",
+            "confidence": 0,
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_b086a7368c963481"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "findings": []
+        }
+      },
+      {
+        "id": "slide_6_1787726648107",
+        "slideNumber": 6,
+        "layout": "PROCESS_FLOW",
+        "headline": "End-to-End Autonomous Pipeline Architecture",
+        "subheadline": "Deterministic multi-agent execution loop",
+        "bodyContent": "A seamless lifecycle combining intent decomposition, factual evidence verification, and reality audits.",
+        "visualStrategy": "Horizontal connected step-flow vector diagram",
+        "diagram": {
+          "type": "PROCESS",
+          "title": "Execution Flow",
+          "steps": [
+            {
+              "number": 1,
+              "title": "Intent & Brief",
+              "description": "Hermes autonomous planning"
+            },
+            {
+              "number": 2,
+              "title": "Trust Verification",
+              "description": "SHA-256 evidence grounding"
+            },
+            {
+              "number": 3,
+              "title": "Compilation",
+              "description": "Design tokens & code build"
+            },
+            {
+              "number": 4,
+              "title": "Reality Audit",
+              "description": "Browser & WCAG validation"
+            }
+          ]
+        },
+        "speakerNotes": "Explain the four-stage execution pipeline. Note that each stage is governed by cryptographic verification gates.",
+        "citations": [
+          "V7 Architecture Specification"
+        ],
+        "facts": [
+          {
+            "id": "claim_b086a7368c963481",
+            "text": "Create an 8-slide technical presentation on modern cloud real-time VFX production pipelines.",
+            "confidence": 0,
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_b086a7368c963481"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "findings": []
+        }
+      },
+      {
+        "id": "slide_7_1787726648107",
+        "slideNumber": 7,
+        "layout": "QUOTE",
+        "headline": "The Strategic Imperative",
+        "subheadline": "Guiding thesis for sovereign enterprise transformation",
+        "visualStrategy": "Centered elegant quote card with serif emphasis",
+        "quote": {
+          "text": "The future belongs to organizations that treat intelligence not as an external rented service, but as sovereign, verified infrastructure.",
+          "author": "Antigravity OS Architecture Council",
+          "role": "Enterprise Systems Whitepaper"
+        },
+        "speakerNotes": "Take a moment to let this quote resonate. Sovereignty and verification are the defining qualities of next-generation infrastructure.",
+        "citations": [
+          "Antigravity Strategic Review"
+        ],
+        "facts": [
+          {
+            "id": "claim_b086a7368c963481",
+            "text": "Create an 8-slide technical presentation on modern cloud real-time VFX production pipelines.",
+            "confidence": 0,
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_b086a7368c963481"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 85,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "findings": [
+            {
+              "type": "INFO",
+              "message": "Sparse slide content. Consider adding supporting context or key metrics.",
+              "fixAction": "EXPAND"
+            }
+          ]
+        }
+      },
+      {
+        "id": "slide_8_1787726648107",
+        "slideNumber": 8,
+        "layout": "CONCLUSION",
+        "headline": "Join the Next Era of Autonomous Creation",
+        "subheadline": "Partner with us to lead this transformation.",
+        "bodyContent": "Deploy production-grade sovereign AI workflows today with Antigravity OS V7. Verified, immutable, and built for scale.",
+        "bulletPoints": [
+          "Zero frozen core mutations — rock-solid stability",
+          "Production PWA and Mobile-responsive console",
+          "Complete multi-format export: PPTX, PDF, HTML, JSON"
+        ],
+        "visualStrategy": "High-impact closing slide with clear next steps and contact anchor",
+        "speakerNotes": "Summarize the core takeaways. Invite questions and transition directly into discussion or next steps.",
+        "citations": [
+          "PresentX Studio — Antigravity OS V7"
+        ],
+        "facts": [
+          {
+            "id": "claim_b086a7368c963481",
+            "text": "Create an 8-slide technical presentation on modern cloud real-time VFX production pipelines.",
+            "confidence": 0,
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_b086a7368c963481"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 75,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "findings": [
+            {
+              "type": "INFO",
+              "message": "Text-heavy slide lacking visual anchor. Recommended to attach diagram, metric, or visual.",
+              "fixAction": "GENERATE_VISUAL"
+            }
+          ]
+        }
+      }
+    ],
+    "mediaBible": {
+      "masterStyle": "TECH",
+      "paletteMood": "Cyber Tech",
+      "lighting": "Soft ambient cinematic studio lighting",
+      "consistencySeed": 264276,
+      "items": [
+        {
+          "id": "media_slide_1_1787726648107",
+          "slideId": "slide_1_1787726648107",
+          "type": "HERO",
+          "prompt": "Cinematic render for 8-slide technical presentation on modern clou..., visual style TECH, clean composition, volumetric lighting, seed 264276",
+          "style": "TECH",
+          "seed": 264276,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "aspectRatio": "16:9",
+          "generatedUrl": "/assets/icons/icon-512.png",
+          "provenanceHash": "7e7aae68d5d45d328f69bc73130e728871385f696c69d767ff16d2eca13767a1"
+        },
+        {
+          "id": "media_slide_2_1787726648107",
+          "slideId": "slide_2_1787726648107",
+          "type": "HERO",
+          "prompt": "Cinematic render for The Macro Environment & Shifting Paradigms, visual style TECH, clean composition, volumetric lighting, seed 264276",
+          "style": "TECH",
+          "seed": 264276,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "aspectRatio": "16:9",
+          "generatedUrl": "/assets/icons/icon-512.png",
+          "provenanceHash": "ea78b8ba4e87db30d563040a867ec6894527a6be5f2edd0a0b17610e4053718c"
+        },
+        {
+          "id": "media_slide_3_1787726648107",
+          "slideId": "slide_3_1787726648107",
+          "type": "HERO",
+          "prompt": "Cinematic render for Three Critical Barriers Holding Back Growth, visual style TECH, clean composition, volumetric lighting, seed 264276",
+          "style": "TECH",
+          "seed": 264276,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "aspectRatio": "16:9",
+          "generatedUrl": "/assets/icons/icon-512.png",
+          "provenanceHash": "69667dfb7d6c514189ea0bbaf55c61f29a94ce919887b19f013985f9d8ee647b"
+        },
+        {
+          "id": "media_slide_4_1787726648107",
+          "slideId": "slide_4_1787726648107",
+          "type": "HERO",
+          "prompt": "Cinematic render for Empirical Performance & Market Impact, visual style TECH, clean composition, volumetric lighting, seed 264276",
+          "style": "TECH",
+          "seed": 264276,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "aspectRatio": "16:9",
+          "generatedUrl": "/assets/icons/icon-512.png",
+          "provenanceHash": "129c8c69fea2b31dea0d8cfbb2af81eb294b4ac42a60ed6fe1dc997b44f02654"
+        },
+        {
+          "id": "media_slide_5_1787726648107",
+          "slideId": "slide_5_1787726648107",
+          "type": "HERO",
+          "prompt": "Cinematic render for Productivity Acceleration Trajectory, visual style TECH, clean composition, volumetric lighting, seed 264276",
+          "style": "TECH",
+          "seed": 264276,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "aspectRatio": "16:9",
+          "generatedUrl": "/assets/icons/icon-512.png",
+          "provenanceHash": "ae44d95b11b1859085c98ef8c0c3486e8e699f98942c1ebfbd189a067d306cba"
+        },
+        {
+          "id": "media_slide_6_1787726648107",
+          "slideId": "slide_6_1787726648107",
+          "type": "HERO",
+          "prompt": "Cinematic render for End-to-End Autonomous Pipeline Architecture, visual style TECH, clean composition, volumetric lighting, seed 264276",
+          "style": "TECH",
+          "seed": 264276,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "aspectRatio": "16:9",
+          "generatedUrl": "/assets/icons/icon-512.png",
+          "provenanceHash": "dfc465fb3f309059b9029e854596938568672ba533b371ec2dbdad5dc4b72757"
+        },
+        {
+          "id": "media_slide_7_1787726648107",
+          "slideId": "slide_7_1787726648107",
+          "type": "HERO",
+          "prompt": "Cinematic render for The Strategic Imperative, visual style TECH, clean composition, volumetric lighting, seed 264276",
+          "style": "TECH",
+          "seed": 264276,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "aspectRatio": "16:9",
+          "generatedUrl": "/assets/icons/icon-512.png",
+          "provenanceHash": "a65b2b0a3af81c075fd33a7634eb064999b7961da9dd731c2495a11aaffecf62"
+        },
+        {
+          "id": "media_slide_8_1787726648107",
+          "slideId": "slide_8_1787726648107",
+          "type": "HERO",
+          "prompt": "Cinematic render for Join the Next Era of Autonomous Creation, visual style TECH, clean composition, volumetric lighting, seed 264276",
+          "style": "TECH",
+          "seed": 264276,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "aspectRatio": "16:9",
+          "generatedUrl": "/assets/icons/icon-512.png",
+          "provenanceHash": "79dbb4909bf18cb408a2d98c722bd36090a29b46cac5f31e2fe5768898abeef9"
+        }
+      ]
+    },
+    "qualityAudit": {
+      "overallScore": 94,
+      "contentScore": 94,
+      "storyScore": 95,
+      "factualityScore": 100,
+      "designScore": 83,
+      "visualHierarchyScore": 92,
+      "readabilityScore": 94,
+      "accessibilityScore": 96,
+      "consistencyScore": 96,
+      "findingsCount": 5,
+      "certified": true
+    },
+    "evidenceStatus": "GROUNDED_E3",
+    "provenanceHash": "e29c8350fff9030d86e3e1818e98d13e6a819c28ee31f31fe2aeff847bf5ed7b",
+    "version": 1,
+    "createdAt": "2026-08-26T06:44:08.107Z",
+    "updatedAt": "2026-08-26T06:44:08.107Z"
+  }
+}

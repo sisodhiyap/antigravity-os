@@ -1,0 +1,7 @@
+{
+  "injectionsNeutralized": 2,
+  "secretsRedacted": 2,
+  "privilegeEscalationsBlocked": 1,
+  "pathTraversalsBlocked": 2,
+  "status": "ZERO_VULNERABILITIES"
+}

@@ -1,0 +1,8 @@
+{
+  "checkpointId": "v70_final_baseline",
+  "timestamp": "2026-08-25T10:21:24.568Z",
+  "sourceFilesHash": "dc68acd8f2e8418540feb1db128d82142c1db96514fa1a350f4154e50894f280",
+  "configHash": "df3ca87848db81488947394ff8796e767e28fd76daee7d2b9a55fdb29db73544",
+  "dbStateHash": "902309be3eaadfd2ef04c7154899023ebc848a3983a01c33914240f5105d462a",
+  "overallStateHash": "d46138aa0d945edf3d2c8e1c2055fe1010bab4f59acfdfbff832596ce5aae997"
+}

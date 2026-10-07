@@ -1,0 +1,11 @@
+{
+  "failureId": "FAIL_PRESENTX_PPTX_EXPORT_AND_BRIEF",
+  "rootCauseSummary": "PresentXExporter previously returned raw XML text for PPTX export instead of a compliant OpenXML binary ZIP archive package (.pptx), causing PowerPoint to reject the file. Furthermore, brief title extraction failed to strip user command prefixes.",
+  "affectedComponents": [
+    "src/presentx/engine/PresentXExporter.ts",
+    "src/app/api/presentx/export/route.ts",
+    "src/presentx/engine/PresentXOrchestrator.ts"
+  ],
+  "reproductionStatus": "REPRODUCED_AND_RESOLVED",
+  "resolution": "Implemented JSZip-based OpenXML PPTX binary packager with full theme, slides, speaker notes, and shapes. Enhanced deriveTitle regex for clean executive title extraction."
+}

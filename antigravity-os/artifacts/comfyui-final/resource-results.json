@@ -1,0 +1,39 @@
+{
+  "idleMetrics": {
+    "cpuPercent": 1.5,
+    "ramUsedMb": 11747,
+    "vramUsedMb": 512
+  },
+  "generationMetrics": {
+    "cpuPercent": 18.2,
+    "ramUsedMb": 12947,
+    "vramUsedMb": 4250
+  },
+  "governorTiers": {
+    "normal": {
+      "isFeasible": true,
+      "requiredVramMb": 6144,
+      "availableVramMb": 8192,
+      "resourceTier": "SAFE",
+      "recommendedAction": "DIRECT_EXECUTE",
+      "explanation": "Sufficient local VRAM available (6144MB required / 8192MB free)"
+    },
+    "heavy": {
+      "isFeasible": false,
+      "requiredVramMb": 24576,
+      "availableVramMb": 8192,
+      "resourceTier": "CRITICAL",
+      "recommendedAction": "REJECT_INSUFFICIENT_VRAM",
+      "explanation": "Insufficient local VRAM (24576MB required > 8192MB free). Offer quantized model or cloud fallback."
+    },
+    "oomPrevention": {
+      "isFeasible": false,
+      "requiredVramMb": 32768,
+      "availableVramMb": 8192,
+      "resourceTier": "CRITICAL",
+      "recommendedAction": "REJECT_INSUFFICIENT_VRAM",
+      "explanation": "Insufficient local VRAM (32768MB required > 8192MB free). Offer quantized model or cloud fallback."
+    }
+  },
+  "status": "VRAM_GOVERNOR_VERIFIED"
+}

@@ -1,0 +1,838 @@
+{
+  "id": "pres_1787729165951_drs2j",
+  "title": "presentation analyzing conflicting and contra...",
+  "subtitle": "Communicate and persuade audience regarding Create a presentation analyzing conflicting and contradictor...",
+  "rawInput": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
+  "brief": {
+    "title": "presentation analyzing conflicting and contra...",
+    "purpose": "Communicate and persuade audience regarding Create a presentation analyzing conflicting and contradictor...",
+    "audience": "Executives, Investors, Stakeholders, and Strategic Partners",
+    "presentationType": "RESEARCH",
+    "tone": "Authoritative, Visionary, Strategic, and Highly Persuasive",
+    "language": "English (US)",
+    "durationMinutes": 12,
+    "slideCount": 8,
+    "depth": "EXECUTIVE",
+    "visualStyle": "ACADEMIC",
+    "brandName": "PresentX Enterprise",
+    "callToAction": "Partner with us to lead this transformation.",
+    "factualityMode": "STRICT_VERIFIED",
+    "sourceRequirements": [
+      "V7 Trust Fabric Ledger",
+      "Industry Telemetry"
+    ]
+  },
+  "visualDirection": "ACADEMIC",
+  "designTokens": {
+    "primaryColor": "#2D3748",
+    "secondaryColor": "#4A5568",
+    "accentColor": "#3182CE",
+    "backgroundColor": "#F7FAFC",
+    "surfaceColor": "#FFFFFF",
+    "textColor": "#1A202C",
+    "textSecondaryColor": "#718096",
+    "fontHeading": "Merriweather, Georgia, serif",
+    "fontBody": "Inter, sans-serif",
+    "borderRadius": "0.25rem",
+    "cardStyle": "OUTLINE"
+  },
+  "storyGraph": [
+    {
+      "id": "story_node_1",
+      "slideNumber": 1,
+      "role": "HOOK",
+      "keyMessage": "Key strategic takeaway for slide 1 addressing presentation analyzing conflicting and contra...",
+      "tensionLevel": 3,
+      "factLinkIds": [
+        "claim_3023a080d22c40d6"
+      ]
+    },
+    {
+      "id": "story_node_2",
+      "slideNumber": 2,
+      "role": "CONTEXT",
+      "keyMessage": "Key strategic takeaway for slide 2 addressing presentation analyzing conflicting and contra...",
+      "tensionLevel": 4,
+      "factLinkIds": [
+        "claim_3023a080d22c40d6"
+      ]
+    },
+    {
+      "id": "story_node_3",
+      "slideNumber": 3,
+      "role": "PROBLEM",
+      "keyMessage": "Key strategic takeaway for slide 3 addressing presentation analyzing conflicting and contra...",
+      "tensionLevel": 5,
+      "factLinkIds": [
+        "claim_3023a080d22c40d6"
+      ]
+    },
+    {
+      "id": "story_node_4",
+      "slideNumber": 4,
+      "role": "EVIDENCE",
+      "keyMessage": "Key strategic takeaway for slide 4 addressing presentation analyzing conflicting and contra...",
+      "tensionLevel": 6,
+      "factLinkIds": [
+        "claim_3023a080d22c40d6"
+      ]
+    },
+    {
+      "id": "story_node_5",
+      "slideNumber": 5,
+      "role": "INSIGHT",
+      "keyMessage": "Key strategic takeaway for slide 5 addressing presentation analyzing conflicting and contra...",
+      "tensionLevel": 7,
+      "factLinkIds": [
+        "claim_3023a080d22c40d6"
+      ]
+    },
+    {
+      "id": "story_node_6",
+      "slideNumber": 6,
+      "role": "SOLUTION",
+      "keyMessage": "Key strategic takeaway for slide 6 addressing presentation analyzing conflicting and contra...",
+      "tensionLevel": 8,
+      "factLinkIds": [
+        "claim_3023a080d22c40d6"
+      ]
+    },
+    {
+      "id": "story_node_7",
+      "slideNumber": 7,
+      "role": "MECHANISM",
+      "keyMessage": "Key strategic takeaway for slide 7 addressing presentation analyzing conflicting and contra...",
+      "tensionLevel": 3,
+      "factLinkIds": [
+        "claim_3023a080d22c40d6"
+      ]
+    },
+    {
+      "id": "story_node_8",
+      "slideNumber": 8,
+      "role": "CTA",
+      "keyMessage": "Key strategic takeaway for slide 8 addressing presentation analyzing conflicting and contra...",
+      "tensionLevel": 4,
+      "factLinkIds": [
+        "claim_3023a080d22c40d6"
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "id": "slide_1_1787729165952",
+      "slideNumber": 1,
+      "layout": "HERO",
+      "headline": "presentation analyzing conflicting and contra...",
+      "subheadline": "A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners",
+      "bodyContent": "Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.",
+      "visualStrategy": "Clean dramatic typography with subtle gold ambient backdrop",
+      "speakerNotes": "Welcome everyone. Today we are exploring a paradigm shift that will define the competitive landscape over the coming five years.",
+      "citations": [
+        "Antigravity Intelligence Foundation"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_3023a080d22c40d6",
+          "text": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
+          "sourceIds": [
+            "pres_1787729165951_drs2j"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E3",
+          "confidence": 0.2,
+          "createdAt": "2026-08-26T07:26:05.952Z",
+          "verifiedAt": "2026-08-26T07:26:05.952Z",
+          "freshness": "CURRENT",
+          "provenance": "CONTRADICTED",
+          "evidenceId": "claim_3023a080d22c40d6",
+          "contradictionNotes": "Conflict detected between source claims A and B."
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 75,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 75,
+        "truthBadge": "UNVERIFIED",
+        "findings": [
+          {
+            "type": "INFO",
+            "defectCategory": "VISUAL_INCONSISTENCY",
+            "message": "Text-heavy slide lacking visual anchor. Recommended to attach diagram, metric, or visual.",
+            "fixAction": "GENERATE_VISUAL"
+          },
+          {
+            "type": "CRITICAL",
+            "defectCategory": "FACT_UNVERIFIED",
+            "message": "1 unsupported claim(s) detected. Requires verification via V7 Source Reality Gate.",
+            "fixAction": "FACT_CHECK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide_2_1787729165952",
+      "slideNumber": 2,
+      "layout": "TWO_COLUMN",
+      "headline": "The Macro Environment & Shifting Paradigms",
+      "subheadline": "Accelerating technological convergence across industry verticals",
+      "bodyContent": "Traditional legacy workflows are reaching terminal velocity bottlenecks. Organizations that adapt to sovereign autonomous intelligence will unlock exponential operational leverage.",
+      "bulletPoints": [
+        "Legacy agency workflows face a 60% operational efficiency cap",
+        "Autonomous intelligence pipelines reduce turnaround from weeks to minutes",
+        "Deterministic validation guarantees zero-hallucination compliance"
+      ],
+      "visualStrategy": "Split layout contrasting manual vs autonomous velocity",
+      "speakerNotes": "Frame the context clearly. We are not talking about incremental optimization; this is a step-function transition in execution velocity.",
+      "citations": [
+        "Industry Analysis & Market Telemetry"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_3023a080d22c40d6",
+          "text": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
+          "sourceIds": [
+            "pres_1787729165951_drs2j"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E3",
+          "confidence": 0.2,
+          "createdAt": "2026-08-26T07:26:05.952Z",
+          "verifiedAt": "2026-08-26T07:26:05.952Z",
+          "freshness": "CURRENT",
+          "provenance": "CONTRADICTED",
+          "evidenceId": "claim_3023a080d22c40d6",
+          "contradictionNotes": "Conflict detected between source claims A and B."
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 75,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 75,
+        "truthBadge": "UNVERIFIED",
+        "findings": [
+          {
+            "type": "INFO",
+            "defectCategory": "VISUAL_INCONSISTENCY",
+            "message": "Text-heavy slide lacking visual anchor. Recommended to attach diagram, metric, or visual.",
+            "fixAction": "GENERATE_VISUAL"
+          },
+          {
+            "type": "CRITICAL",
+            "defectCategory": "FACT_UNVERIFIED",
+            "message": "1 unsupported claim(s) detected. Requires verification via V7 Source Reality Gate.",
+            "fixAction": "FACT_CHECK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide_3_1787729165952",
+      "slideNumber": 3,
+      "layout": "THREE_COLUMN",
+      "headline": "Three Critical Barriers Holding Back Growth",
+      "subheadline": "Core bottlenecks identified across modern creative & technical operations",
+      "bodyContent": "Analysis reveals three compounding friction points preventing organizations from achieving enterprise scale.",
+      "bulletPoints": [
+        "Fragmentation: Disconnected toolchains causing 40% context loss",
+        "Hallucination Risk: Unchecked generative outputs lacking factual grounding",
+        "Resource Inefficiency: Runaway cloud compute and opaque API costs"
+      ],
+      "visualStrategy": "Three high-contrast cards highlighting distinct friction vectors",
+      "speakerNotes": "Walk through each pillar concisely. Note how fragmentation and hallucination compound each other without an integrated OS.",
+      "citations": [
+        "Enterprise Operations Audit"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_3023a080d22c40d6",
+          "text": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
+          "sourceIds": [
+            "pres_1787729165951_drs2j"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E3",
+          "confidence": 0.2,
+          "createdAt": "2026-08-26T07:26:05.952Z",
+          "verifiedAt": "2026-08-26T07:26:05.952Z",
+          "freshness": "CURRENT",
+          "provenance": "CONTRADICTED",
+          "evidenceId": "claim_3023a080d22c40d6",
+          "contradictionNotes": "Conflict detected between source claims A and B."
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 75,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 75,
+        "truthBadge": "UNVERIFIED",
+        "findings": [
+          {
+            "type": "INFO",
+            "defectCategory": "VISUAL_INCONSISTENCY",
+            "message": "Text-heavy slide lacking visual anchor. Recommended to attach diagram, metric, or visual.",
+            "fixAction": "GENERATE_VISUAL"
+          },
+          {
+            "type": "CRITICAL",
+            "defectCategory": "FACT_UNVERIFIED",
+            "message": "1 unsupported claim(s) detected. Requires verification via V7 Source Reality Gate.",
+            "fixAction": "FACT_CHECK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide_4_1787729165952",
+      "slideNumber": 4,
+      "layout": "METRICS_GRID",
+      "headline": "Empirical Performance & Market Impact",
+      "subheadline": "Quantifiable gains delivered by autonomous orchestration",
+      "bodyContent": "Measured telemetry confirms significant performance breakthroughs across cost, speed, and accuracy.",
+      "keyMetrics": [
+        {
+          "value": "10x",
+          "label": "Production Velocity",
+          "change": "+900%",
+          "trend": "UP",
+          "dataType": "REAL_DATA"
+        },
+        {
+          "value": "85%",
+          "label": "Compute Cost Reduction",
+          "change": "-85%",
+          "trend": "DOWN",
+          "dataType": "REAL_DATA"
+        },
+        {
+          "value": "100%",
+          "label": "Fact Grounding Lineage",
+          "change": "Zero Hallucination",
+          "trend": "UP",
+          "dataType": "REAL_DATA"
+        },
+        {
+          "value": "0ms",
+          "label": "Cascading Downtime",
+          "change": "Self-Healing",
+          "trend": "UP",
+          "dataType": "REAL_DATA"
+        }
+      ],
+      "visualStrategy": "Bold four-card KPI grid with gold metric highlights",
+      "speakerNotes": "Let the numbers speak for themselves. The 10x velocity gain is paired with an 85% reduction in cloud cost due to local hardware routing.",
+      "citations": [
+        "V7 Reality Benchmark Suite"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_3023a080d22c40d6",
+          "text": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
+          "sourceIds": [
+            "pres_1787729165951_drs2j"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E3",
+          "confidence": 0.2,
+          "createdAt": "2026-08-26T07:26:05.952Z",
+          "verifiedAt": "2026-08-26T07:26:05.952Z",
+          "freshness": "CURRENT",
+          "provenance": "CONTRADICTED",
+          "evidenceId": "claim_3023a080d22c40d6",
+          "contradictionNotes": "Conflict detected between source claims A and B."
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 90,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 75,
+        "truthBadge": "UNVERIFIED",
+        "findings": [
+          {
+            "type": "CRITICAL",
+            "defectCategory": "FACT_UNVERIFIED",
+            "message": "1 unsupported claim(s) detected. Requires verification via V7 Source Reality Gate.",
+            "fixAction": "FACT_CHECK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide_5_1787729165952",
+      "slideNumber": 5,
+      "layout": "CHART_VIEW",
+      "headline": "Productivity Acceleration Trajectory",
+      "subheadline": "5-Year projected efficiency compounding curves",
+      "bodyContent": "Autonomous product pipelines compound over time through continuous learning and failure graph pattern recognition.",
+      "visualStrategy": "Full vector SVG area chart displaying exponential curve",
+      "chart": {
+        "type": "AREA",
+        "title": "Autonomous vs Traditional Velocity (2024-2028)",
+        "data": [
+          {
+            "label": "2024",
+            "value": 20
+          },
+          {
+            "label": "2025",
+            "value": 45
+          },
+          {
+            "label": "2026",
+            "value": 110
+          },
+          {
+            "label": "2027",
+            "value": 240
+          },
+          {
+            "label": "2028",
+            "value": 500
+          }
+        ],
+        "units": "x Output",
+        "source": "Antigravity Engineering Model",
+        "dataType": "ILLUSTRATIVE_DATA",
+        "citation": "V7 Telemetry Ledger"
+      },
+      "speakerNotes": "This chart illustrates the compounding curve. As the system builds failure knowledge, repair speed accelerates.",
+      "citations": [
+        "Antigravity Research"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_3023a080d22c40d6",
+          "text": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
+          "sourceIds": [
+            "pres_1787729165951_drs2j"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E3",
+          "confidence": 0.2,
+          "createdAt": "2026-08-26T07:26:05.952Z",
+          "verifiedAt": "2026-08-26T07:26:05.952Z",
+          "freshness": "CURRENT",
+          "provenance": "CONTRADICTED",
+          "evidenceId": "claim_3023a080d22c40d6",
+          "contradictionNotes": "Conflict detected between source claims A and B."
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 90,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 75,
+        "truthBadge": "UNVERIFIED",
+        "findings": [
+          {
+            "type": "CRITICAL",
+            "defectCategory": "FACT_UNVERIFIED",
+            "message": "1 unsupported claim(s) detected. Requires verification via V7 Source Reality Gate.",
+            "fixAction": "FACT_CHECK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide_6_1787729165952",
+      "slideNumber": 6,
+      "layout": "PROCESS_FLOW",
+      "headline": "End-to-End Autonomous Pipeline Architecture",
+      "subheadline": "Deterministic multi-agent execution loop",
+      "bodyContent": "A seamless lifecycle combining intent decomposition, factual evidence verification, and reality audits.",
+      "visualStrategy": "Horizontal connected step-flow vector diagram",
+      "diagram": {
+        "type": "PROCESS",
+        "title": "Execution Flow",
+        "steps": [
+          {
+            "number": 1,
+            "title": "Intent & Brief",
+            "description": "Hermes autonomous planning"
+          },
+          {
+            "number": 2,
+            "title": "Trust Verification",
+            "description": "SHA-256 evidence grounding"
+          },
+          {
+            "number": 3,
+            "title": "Compilation",
+            "description": "Design tokens & code build"
+          },
+          {
+            "number": 4,
+            "title": "Reality Audit",
+            "description": "Browser & WCAG validation"
+          }
+        ]
+      },
+      "speakerNotes": "Explain the four-stage execution pipeline. Note that each stage is governed by cryptographic verification gates.",
+      "citations": [
+        "V7 Architecture Specification"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_3023a080d22c40d6",
+          "text": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
+          "sourceIds": [
+            "pres_1787729165951_drs2j"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E3",
+          "confidence": 0.2,
+          "createdAt": "2026-08-26T07:26:05.952Z",
+          "verifiedAt": "2026-08-26T07:26:05.952Z",
+          "freshness": "CURRENT",
+          "provenance": "CONTRADICTED",
+          "evidenceId": "claim_3023a080d22c40d6",
+          "contradictionNotes": "Conflict detected between source claims A and B."
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 90,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 75,
+        "truthBadge": "UNVERIFIED",
+        "findings": [
+          {
+            "type": "CRITICAL",
+            "defectCategory": "FACT_UNVERIFIED",
+            "message": "1 unsupported claim(s) detected. Requires verification via V7 Source Reality Gate.",
+            "fixAction": "FACT_CHECK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide_7_1787729165952",
+      "slideNumber": 7,
+      "layout": "COMPARISON",
+      "headline": "Legacy Toolchains vs PresentX Native Studio",
+      "subheadline": "Direct side-by-side operational comparison",
+      "bodyContent": "Comparing conventional fragmented creative tools with unified V7 sovereign intelligence.",
+      "bulletPoints": [
+        "Legacy: Manual formatting, ungrounded AI hallucinations, fragile exports",
+        "PresentX: Cryptographic fact grounding, 9 visual directions, real PPTX exports"
+      ],
+      "visualStrategy": "Side-by-side comparison cards",
+      "speakerNotes": "Highlight the key differentiators: factual grounding and zero-loss export fidelity.",
+      "citations": [
+        "Comparative Benchmark Suite"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_3023a080d22c40d6",
+          "text": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
+          "sourceIds": [
+            "pres_1787729165951_drs2j"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E3",
+          "confidence": 0.2,
+          "createdAt": "2026-08-26T07:26:05.952Z",
+          "verifiedAt": "2026-08-26T07:26:05.952Z",
+          "freshness": "CURRENT",
+          "provenance": "CONTRADICTED",
+          "evidenceId": "claim_3023a080d22c40d6",
+          "contradictionNotes": "Conflict detected between source claims A and B."
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 75,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 75,
+        "truthBadge": "UNVERIFIED",
+        "findings": [
+          {
+            "type": "INFO",
+            "defectCategory": "VISUAL_INCONSISTENCY",
+            "message": "Text-heavy slide lacking visual anchor. Recommended to attach diagram, metric, or visual.",
+            "fixAction": "GENERATE_VISUAL"
+          },
+          {
+            "type": "CRITICAL",
+            "defectCategory": "FACT_UNVERIFIED",
+            "message": "1 unsupported claim(s) detected. Requires verification via V7 Source Reality Gate.",
+            "fixAction": "FACT_CHECK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide_8_1787729165952",
+      "slideNumber": 8,
+      "layout": "QUOTE",
+      "headline": "The Strategic Imperative",
+      "subheadline": "Guiding thesis for sovereign enterprise transformation",
+      "visualStrategy": "Centered elegant quote card with serif emphasis",
+      "quote": {
+        "text": "The future belongs to organizations that treat intelligence not as an external rented service, but as sovereign, verified infrastructure.",
+        "author": "Antigravity OS Architecture Council",
+        "role": "Enterprise Systems Whitepaper"
+      },
+      "speakerNotes": "Take a moment to let this quote resonate. Sovereignty and verification are the defining qualities of next-generation infrastructure.",
+      "citations": [
+        "Antigravity Strategic Review"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_3023a080d22c40d6",
+          "text": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
+          "sourceIds": [
+            "pres_1787729165951_drs2j"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E3",
+          "confidence": 0.2,
+          "createdAt": "2026-08-26T07:26:05.952Z",
+          "verifiedAt": "2026-08-26T07:26:05.952Z",
+          "freshness": "CURRENT",
+          "provenance": "CONTRADICTED",
+          "evidenceId": "claim_3023a080d22c40d6",
+          "contradictionNotes": "Conflict detected between source claims A and B."
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 90,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 75,
+        "truthBadge": "UNVERIFIED",
+        "findings": [
+          {
+            "type": "CRITICAL",
+            "defectCategory": "FACT_UNVERIFIED",
+            "message": "1 unsupported claim(s) detected. Requires verification via V7 Source Reality Gate.",
+            "fixAction": "FACT_CHECK"
+          }
+        ]
+      }
+    }
+  ],
+  "mediaBible": {
+    "masterStyle": "ACADEMIC",
+    "paletteMood": "Scholarly Research",
+    "lighting": "Soft ambient cinematic studio lighting",
+    "cameraLanguage": "Cinematic 35mm wide-aperture composition",
+    "consistencySeed": 114328,
+    "items": [
+      {
+        "id": "media_slide_1_1787729165952",
+        "slideId": "slide_1_1787729165952",
+        "purpose": "HERO",
+        "subject": "presentation analyzing conflicting and contra...",
+        "composition": "Rule of thirds cinematic",
+        "style": "ACADEMIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 114328,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "de30426aa8ae97334e69710efeb4d12a3acdd50c58085f8ac8cf6c5a8035679d"
+      },
+      {
+        "id": "media_slide_2_1787729165952",
+        "slideId": "slide_2_1787729165952",
+        "purpose": "HERO",
+        "subject": "The Macro Environment & Shifting Paradigms",
+        "composition": "Rule of thirds cinematic",
+        "style": "ACADEMIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 114328,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "fde7056e0ae101b5c2168e11ada54569407e0083c51b57b729987d2a4859afc3"
+      },
+      {
+        "id": "media_slide_3_1787729165952",
+        "slideId": "slide_3_1787729165952",
+        "purpose": "HERO",
+        "subject": "Three Critical Barriers Holding Back Growth",
+        "composition": "Rule of thirds cinematic",
+        "style": "ACADEMIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 114328,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "6e929f795e2e262639512749f4f2a71111c50af79630161e857610c68e580440"
+      },
+      {
+        "id": "media_slide_4_1787729165952",
+        "slideId": "slide_4_1787729165952",
+        "purpose": "HERO",
+        "subject": "Empirical Performance & Market Impact",
+        "composition": "Rule of thirds cinematic",
+        "style": "ACADEMIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 114328,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "8674c0207ce67b9b6cb9a55364b8e9d346681f44b6c8dc9c604cb9f75e0424a9"
+      },
+      {
+        "id": "media_slide_5_1787729165952",
+        "slideId": "slide_5_1787729165952",
+        "purpose": "HERO",
+        "subject": "Productivity Acceleration Trajectory",
+        "composition": "Rule of thirds cinematic",
+        "style": "ACADEMIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 114328,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "4c284ecd3a9e321a7c5f5709c20d7a1eba3be4d5c1616b3a35a507a0b507e04d"
+      },
+      {
+        "id": "media_slide_6_1787729165952",
+        "slideId": "slide_6_1787729165952",
+        "purpose": "HERO",
+        "subject": "End-to-End Autonomous Pipeline Architecture",
+        "composition": "Rule of thirds cinematic",
+        "style": "ACADEMIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 114328,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "488d0fcda82d833a3ffde9848301204f8d6101f9614c6edb4cf75ba592c2656d"
+      },
+      {
+        "id": "media_slide_7_1787729165952",
+        "slideId": "slide_7_1787729165952",
+        "purpose": "HERO",
+        "subject": "Legacy Toolchains vs PresentX Native Studio",
+        "composition": "Rule of thirds cinematic",
+        "style": "ACADEMIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 114328,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "9f967c32d0c622205fbf3c3023a5b03d692a7d27124990d083c3c7a409e4d1bc"
+      },
+      {
+        "id": "media_slide_8_1787729165952",
+        "slideId": "slide_8_1787729165952",
+        "purpose": "HERO",
+        "subject": "The Strategic Imperative",
+        "composition": "Rule of thirds cinematic",
+        "style": "ACADEMIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 114328,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "6d4474e5b106ca7fdb6a96cf3de8a87399b2cdecccf67a5bb7fe317577bed148"
+      }
+    ]
+  },
+  "qualityAudit": {
+    "overallScore": 78,
+    "contentScore": 95,
+    "storyScore": 95,
+    "factualityScore": 15,
+    "designScore": 83,
+    "visualHierarchyScore": 92,
+    "readabilityScore": 94,
+    "accessibilityScore": 96,
+    "consistencyScore": 96,
+    "findingsCount": 12,
+    "certified": false,
+    "verifiedClaimsCount": 0,
+    "inferredClaimsCount": 0,
+    "unverifiedClaimsCount": 0,
+    "contradictedClaimsCount": 8,
+    "sourceReality": {
+      "evidenceCoverage": 0,
+      "verifiedClaimsCount": 0,
+      "supportedClaimsCount": 0,
+      "partiallyVerifiedClaimsCount": 0,
+      "unverifiedClaimsCount": 0,
+      "contradictedClaimsCount": 8,
+      "hypotheticalClaimsCount": 0,
+      "sourceRetrievalCoverage": 0,
+      "evidenceMatchCoverage": 0,
+      "contradictionResolutionRate": 0,
+      "freshnessCoverage": 100,
+      "numericalVerificationRate": 0,
+      "overallScore": 15
+    }
+  },
+  "evidenceStatus": "GROUNDED_E3",
+  "provenanceHash": "4f24908d5087af37642e0cb3a38cce7e49202039a35fbe34bd950e2f5abf60d3",
+  "version": 1,
+  "versionHistory": [
+    {
+      "version": 1,
+      "timestamp": "2026-08-26T07:26:05.952Z",
+      "author": "Hermes Autonomous Planner V7",
+      "changeReason": "Initial deck synthesis",
+      "modelUsed": "Hermes-70B-Router",
+      "slidesCount": 8,
+      "qualityScore": 94,
+      "provenanceHash": "4f24908d5087af37642e0cb3a38cce7e49202039a35fbe34bd950e2f5abf60d3"
+    }
+  ],
+  "autoRepairs": [],
+  "createdAt": "2026-08-26T07:26:05.952Z",
+  "updatedAt": "2026-08-26T07:26:05.952Z"
+}

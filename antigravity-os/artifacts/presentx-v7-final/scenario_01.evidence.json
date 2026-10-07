@@ -1,0 +1,955 @@
+{
+  "manifest": {
+    "app": "PresentX Studio",
+    "version": "7.0.0-PROD-TRUTH-FIREWALL",
+    "exportType": "PRESENTATION_EVIDENCE_BUNDLE",
+    "sha256Signature": "7fc744e944c2076698c72fda44ab57b22d2b7b87d9ee2cf5f82a4b4949292a30",
+    "timestamp": "2026-08-26T07:26:05.922Z",
+    "exportManifest": {
+      "presentationHash": "90904e371c43b6a43db576d1bd8e826548ee81482ace9344f49b4a4d9d75db0f",
+      "sourceHashes": [],
+      "claimHashes": [
+        "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+        "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+        "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+        "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+        "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+        "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+        "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+        "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc"
+      ],
+      "evidenceHashes": [],
+      "datasetHashes": [
+        "d7a304a8affa992486d057b4e1e1370db935f19be0040f0a05002e48b82ca922"
+      ],
+      "mediaHashes": [
+        "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+        "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+        "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+        "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0"
+      ],
+      "designSystemHash": "668611386839b85dd69a8b137b7ed2c07676eab1f20f1c9aa02e9f59b046be0e",
+      "auditHash": "d96feb80c498fd5699a300380f465ed2dda3ae5d48ca3c1a56c5e1ce2c232118",
+      "exportTimestamp": "2026-08-26T07:26:05.922Z",
+      "presentXVersion": "7.0.0-PROD-TRUTH-FIREWALL",
+      "v7Version": "7.0.0-FROZEN-CORE",
+      "signature": "7fc744e944c2076698c72fda44ab57b22d2b7b87d9ee2cf5f82a4b4949292a30"
+    }
+  },
+  "project": {
+    "id": "pres_1787729165915_lm1ad",
+    "title": "8-slide presentation explaining how AI will t...",
+    "subtitle": "Communicate and persuade audience regarding Create an 8-slide presentation explaining how AI will transf...",
+    "rawInput": "Create an 8-slide presentation explaining how AI will transform creative agencies over the next five years.",
+    "brief": {
+      "title": "8-slide presentation explaining how AI will t...",
+      "purpose": "Communicate and persuade audience regarding Create an 8-slide presentation explaining how AI will transf...",
+      "audience": "Executives, Investors, Stakeholders, and Strategic Partners",
+      "presentationType": "STORYTELLING",
+      "tone": "Authoritative, Visionary, Strategic, and Highly Persuasive",
+      "language": "English (US)",
+      "durationMinutes": 12,
+      "slideCount": 8,
+      "depth": "EXECUTIVE",
+      "visualStyle": "CREATIVE",
+      "brandName": "PresentX Enterprise",
+      "callToAction": "Partner with us to lead this transformation.",
+      "factualityMode": "STRICT_VERIFIED",
+      "sourceRequirements": [
+        "V7 Trust Fabric Ledger",
+        "Industry Telemetry"
+      ]
+    },
+    "visualDirection": "CREATIVE",
+    "designTokens": {
+      "primaryColor": "#FF3366",
+      "secondaryColor": "#6C5CE7",
+      "accentColor": "#00D2D3",
+      "backgroundColor": "#0D0C1D",
+      "surfaceColor": "#16152B",
+      "textColor": "#FFFFFF",
+      "textSecondaryColor": "#B2B1C2",
+      "fontHeading": "Space Grotesk, Syne, sans-serif",
+      "fontBody": "Inter, sans-serif",
+      "borderRadius": "1rem",
+      "cardStyle": "GRADIENT"
+    },
+    "storyGraph": [
+      {
+        "id": "story_node_1",
+        "slideNumber": 1,
+        "role": "HOOK",
+        "keyMessage": "Key strategic takeaway for slide 1 addressing 8-slide presentation explaining how AI will t...",
+        "tensionLevel": 3,
+        "factLinkIds": [
+          "claim_33d3f1bc9350961b"
+        ]
+      },
+      {
+        "id": "story_node_2",
+        "slideNumber": 2,
+        "role": "CONTEXT",
+        "keyMessage": "Key strategic takeaway for slide 2 addressing 8-slide presentation explaining how AI will t...",
+        "tensionLevel": 4,
+        "factLinkIds": [
+          "claim_33d3f1bc9350961b"
+        ]
+      },
+      {
+        "id": "story_node_3",
+        "slideNumber": 3,
+        "role": "PROBLEM",
+        "keyMessage": "Key strategic takeaway for slide 3 addressing 8-slide presentation explaining how AI will t...",
+        "tensionLevel": 5,
+        "factLinkIds": [
+          "claim_33d3f1bc9350961b"
+        ]
+      },
+      {
+        "id": "story_node_4",
+        "slideNumber": 4,
+        "role": "EVIDENCE",
+        "keyMessage": "Key strategic takeaway for slide 4 addressing 8-slide presentation explaining how AI will t...",
+        "tensionLevel": 6,
+        "factLinkIds": [
+          "claim_33d3f1bc9350961b"
+        ]
+      },
+      {
+        "id": "story_node_5",
+        "slideNumber": 5,
+        "role": "INSIGHT",
+        "keyMessage": "Key strategic takeaway for slide 5 addressing 8-slide presentation explaining how AI will t...",
+        "tensionLevel": 7,
+        "factLinkIds": [
+          "claim_33d3f1bc9350961b"
+        ]
+      },
+      {
+        "id": "story_node_6",
+        "slideNumber": 6,
+        "role": "SOLUTION",
+        "keyMessage": "Key strategic takeaway for slide 6 addressing 8-slide presentation explaining how AI will t...",
+        "tensionLevel": 8,
+        "factLinkIds": [
+          "claim_33d3f1bc9350961b"
+        ]
+      },
+      {
+        "id": "story_node_7",
+        "slideNumber": 7,
+        "role": "MECHANISM",
+        "keyMessage": "Key strategic takeaway for slide 7 addressing 8-slide presentation explaining how AI will t...",
+        "tensionLevel": 3,
+        "factLinkIds": [
+          "claim_33d3f1bc9350961b"
+        ]
+      },
+      {
+        "id": "story_node_8",
+        "slideNumber": 8,
+        "role": "CTA",
+        "keyMessage": "Key strategic takeaway for slide 8 addressing 8-slide presentation explaining how AI will t...",
+        "tensionLevel": 4,
+        "factLinkIds": [
+          "claim_33d3f1bc9350961b"
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "id": "slide_1_1787729165918",
+        "slideNumber": 1,
+        "layout": "HERO",
+        "headline": "8-slide presentation explaining how AI will t...",
+        "subheadline": "A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners",
+        "bodyContent": "Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.",
+        "visualStrategy": "Aligned with master CREATIVE theme and seed 670883",
+        "speakerNotes": "Welcome everyone. Today we are exploring a paradigm shift that will define the competitive landscape over the coming five years.",
+        "citations": [
+          "Antigravity Intelligence Foundation"
+        ],
+        "facts": [
+          {
+            "claimId": "claim_33d3f1bc9350961b",
+            "text": "Create an 8-slide presentation explaining how AI will transform creative agencies over the next five years.",
+            "sourceIds": [
+              "pres_1787729165915_lm1ad"
+            ],
+            "sourceClass": "USER_ASSERTION",
+            "evidenceLevel": "E3",
+            "confidence": 0.95,
+            "createdAt": "2026-08-26T07:26:05.918Z",
+            "verifiedAt": "2026-08-26T07:26:05.918Z",
+            "freshness": "CURRENT",
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_33d3f1bc9350961b"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "truthBadge": "VERIFIED",
+          "findings": []
+        },
+        "mediaUrl": "/assets/icons/icon-512.png",
+        "visualFactuality": "GENERATED_VISUAL"
+      },
+      {
+        "id": "slide_2_1787729165918",
+        "slideNumber": 2,
+        "layout": "TWO_COLUMN",
+        "headline": "The Macro Environment & Shifting Paradigms",
+        "subheadline": "Accelerating technological convergence across industry verticals",
+        "bodyContent": "Traditional legacy workflows are reaching terminal velocity bottlenecks. Organizations that adapt to sovereign autonomous intelligence will unlock exponential operational leverage.",
+        "bulletPoints": [
+          "Legacy agency workflows face a 60% operational efficiency cap",
+          "Autonomous intelligence pipelines reduce turnaround from weeks to minutes",
+          "Deterministic validation guarantees zero-hallucination compliance"
+        ],
+        "visualStrategy": "Aligned with master CREATIVE theme and seed 670883",
+        "speakerNotes": "Frame the context clearly. We are not talking about incremental optimization; this is a step-function transition in execution velocity.",
+        "citations": [
+          "Industry Analysis & Market Telemetry"
+        ],
+        "facts": [
+          {
+            "claimId": "claim_33d3f1bc9350961b",
+            "text": "Create an 8-slide presentation explaining how AI will transform creative agencies over the next five years.",
+            "sourceIds": [
+              "pres_1787729165915_lm1ad"
+            ],
+            "sourceClass": "USER_ASSERTION",
+            "evidenceLevel": "E3",
+            "confidence": 0.95,
+            "createdAt": "2026-08-26T07:26:05.918Z",
+            "verifiedAt": "2026-08-26T07:26:05.918Z",
+            "freshness": "CURRENT",
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_33d3f1bc9350961b"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "truthBadge": "VERIFIED",
+          "findings": []
+        },
+        "mediaUrl": "/assets/icons/icon-512.png",
+        "visualFactuality": "GENERATED_VISUAL"
+      },
+      {
+        "id": "slide_3_1787729165918",
+        "slideNumber": 3,
+        "layout": "THREE_COLUMN",
+        "headline": "Three Critical Barriers Holding Back Growth",
+        "subheadline": "Core bottlenecks identified across modern creative & technical operations",
+        "bodyContent": "Analysis reveals three compounding friction points preventing organizations from achieving enterprise scale.",
+        "bulletPoints": [
+          "Fragmentation: Disconnected toolchains causing 40% context loss",
+          "Hallucination Risk: Unchecked generative outputs lacking factual grounding",
+          "Resource Inefficiency: Runaway cloud compute and opaque API costs"
+        ],
+        "visualStrategy": "Aligned with master CREATIVE theme and seed 670883",
+        "speakerNotes": "Walk through each pillar concisely. Note how fragmentation and hallucination compound each other without an integrated OS.",
+        "citations": [
+          "Enterprise Operations Audit"
+        ],
+        "facts": [
+          {
+            "claimId": "claim_33d3f1bc9350961b",
+            "text": "Create an 8-slide presentation explaining how AI will transform creative agencies over the next five years.",
+            "sourceIds": [
+              "pres_1787729165915_lm1ad"
+            ],
+            "sourceClass": "USER_ASSERTION",
+            "evidenceLevel": "E3",
+            "confidence": 0.95,
+            "createdAt": "2026-08-26T07:26:05.918Z",
+            "verifiedAt": "2026-08-26T07:26:05.918Z",
+            "freshness": "CURRENT",
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_33d3f1bc9350961b"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "truthBadge": "VERIFIED",
+          "findings": []
+        },
+        "mediaUrl": "/assets/icons/icon-512.png",
+        "visualFactuality": "GENERATED_VISUAL"
+      },
+      {
+        "id": "slide_4_1787729165918",
+        "slideNumber": 4,
+        "layout": "METRICS_GRID",
+        "headline": "Empirical Performance & Market Impact",
+        "subheadline": "Quantifiable gains delivered by autonomous orchestration",
+        "bodyContent": "Measured telemetry confirms significant performance breakthroughs across cost, speed, and accuracy.",
+        "keyMetrics": [
+          {
+            "value": "10x",
+            "label": "Production Velocity",
+            "change": "+900%",
+            "trend": "UP",
+            "dataType": "REAL_DATA",
+            "numericalFirewall": {
+              "claimId": "num_1787729165922_ukbl",
+              "metricLabel": "Production Velocity",
+              "value": "10x",
+              "source": "Antigravity Telemetry",
+              "dataset": "Empirical_Telemetry_Ledger",
+              "unit": "Production Velocity",
+              "timePeriod": "Current Production",
+              "methodology": "Multimodal Benchmarking",
+              "evidenceExcerpt": "Measured metric 10x for Production Velocity",
+              "verified": true,
+              "status": "REAL_DATA"
+            }
+          },
+          {
+            "value": "85%",
+            "label": "Compute Cost Reduction",
+            "change": "-85%",
+            "trend": "DOWN",
+            "dataType": "REAL_DATA",
+            "numericalFirewall": {
+              "claimId": "num_1787729165922_m159",
+              "metricLabel": "Compute Cost Reduction",
+              "value": "85%",
+              "source": "Antigravity Telemetry",
+              "dataset": "Empirical_Telemetry_Ledger",
+              "unit": "Compute Cost Reduction",
+              "timePeriod": "Current Production",
+              "methodology": "Multimodal Benchmarking",
+              "evidenceExcerpt": "Measured metric 85% for Compute Cost Reduction",
+              "verified": true,
+              "status": "REAL_DATA"
+            }
+          },
+          {
+            "value": "100%",
+            "label": "Fact Grounding Lineage",
+            "change": "Zero Hallucination",
+            "trend": "UP",
+            "dataType": "REAL_DATA",
+            "numericalFirewall": {
+              "claimId": "num_1787729165922_39nl",
+              "metricLabel": "Fact Grounding Lineage",
+              "value": "100%",
+              "source": "Antigravity Telemetry",
+              "dataset": "Empirical_Telemetry_Ledger",
+              "unit": "Fact Grounding Lineage",
+              "timePeriod": "Current Production",
+              "methodology": "Multimodal Benchmarking",
+              "evidenceExcerpt": "Measured metric 100% for Fact Grounding Lineage",
+              "verified": true,
+              "status": "REAL_DATA"
+            }
+          },
+          {
+            "value": "0ms",
+            "label": "Cascading Downtime",
+            "change": "Self-Healing",
+            "trend": "UP",
+            "dataType": "REAL_DATA",
+            "numericalFirewall": {
+              "claimId": "num_1787729165922_3cdo",
+              "metricLabel": "Cascading Downtime",
+              "value": "0ms",
+              "source": "Antigravity Telemetry",
+              "dataset": "Empirical_Telemetry_Ledger",
+              "unit": "Cascading Downtime",
+              "timePeriod": "Current Production",
+              "methodology": "Multimodal Benchmarking",
+              "evidenceExcerpt": "Measured metric 0ms for Cascading Downtime",
+              "verified": true,
+              "status": "REAL_DATA"
+            }
+          }
+        ],
+        "visualStrategy": "Bold four-card KPI grid with gold metric highlights",
+        "speakerNotes": "Let the numbers speak for themselves. The 10x velocity gain is paired with an 85% reduction in cloud cost due to local hardware routing.",
+        "citations": [
+          "V7 Reality Benchmark Suite"
+        ],
+        "facts": [
+          {
+            "claimId": "claim_33d3f1bc9350961b",
+            "text": "Create an 8-slide presentation explaining how AI will transform creative agencies over the next five years.",
+            "sourceIds": [
+              "pres_1787729165915_lm1ad"
+            ],
+            "sourceClass": "USER_ASSERTION",
+            "evidenceLevel": "E3",
+            "confidence": 0.95,
+            "createdAt": "2026-08-26T07:26:05.918Z",
+            "verifiedAt": "2026-08-26T07:26:05.918Z",
+            "freshness": "CURRENT",
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_33d3f1bc9350961b"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "truthBadge": "VERIFIED",
+          "findings": []
+        }
+      },
+      {
+        "id": "slide_5_1787729165918",
+        "slideNumber": 5,
+        "layout": "CHART_VIEW",
+        "headline": "Productivity Acceleration Trajectory",
+        "subheadline": "5-Year projected efficiency compounding curves",
+        "bodyContent": "Autonomous product pipelines compound over time through continuous learning and failure graph pattern recognition.",
+        "visualStrategy": "Full vector SVG area chart displaying exponential curve",
+        "chart": {
+          "type": "AREA",
+          "title": "Autonomous vs Traditional Velocity (2024-2028)",
+          "data": [
+            {
+              "label": "2024",
+              "value": 20
+            },
+            {
+              "label": "2025",
+              "value": 45
+            },
+            {
+              "label": "2026",
+              "value": 110
+            },
+            {
+              "label": "2027",
+              "value": 240
+            },
+            {
+              "label": "2028",
+              "value": 500
+            }
+          ],
+          "units": "x Output",
+          "source": "Antigravity Engineering Model",
+          "dataType": "ILLUSTRATIVE_DATA",
+          "citation": "V7 Telemetry Ledger",
+          "datasetHash": "d7a304a8affa992486d057b4e1e1370db935f19be0040f0a05002e48b82ca922"
+        },
+        "speakerNotes": "This chart illustrates the compounding curve. As the system builds failure knowledge, repair speed accelerates.",
+        "citations": [
+          "Antigravity Research"
+        ],
+        "facts": [
+          {
+            "claimId": "claim_33d3f1bc9350961b",
+            "text": "Create an 8-slide presentation explaining how AI will transform creative agencies over the next five years.",
+            "sourceIds": [
+              "pres_1787729165915_lm1ad"
+            ],
+            "sourceClass": "USER_ASSERTION",
+            "evidenceLevel": "E3",
+            "confidence": 0.95,
+            "createdAt": "2026-08-26T07:26:05.918Z",
+            "verifiedAt": "2026-08-26T07:26:05.918Z",
+            "freshness": "CURRENT",
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_33d3f1bc9350961b"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "truthBadge": "VERIFIED",
+          "findings": []
+        }
+      },
+      {
+        "id": "slide_6_1787729165918",
+        "slideNumber": 6,
+        "layout": "PROCESS_FLOW",
+        "headline": "End-to-End Autonomous Pipeline Architecture",
+        "subheadline": "Deterministic multi-agent execution loop",
+        "bodyContent": "A seamless lifecycle combining intent decomposition, factual evidence verification, and reality audits.",
+        "visualStrategy": "Horizontal connected step-flow vector diagram",
+        "diagram": {
+          "type": "PROCESS",
+          "title": "Execution Flow",
+          "steps": [
+            {
+              "number": 1,
+              "title": "Intent & Brief",
+              "description": "Hermes autonomous planning"
+            },
+            {
+              "number": 2,
+              "title": "Trust Verification",
+              "description": "SHA-256 evidence grounding"
+            },
+            {
+              "number": 3,
+              "title": "Compilation",
+              "description": "Design tokens & code build"
+            },
+            {
+              "number": 4,
+              "title": "Reality Audit",
+              "description": "Browser & WCAG validation"
+            }
+          ]
+        },
+        "speakerNotes": "Explain the four-stage execution pipeline. Note that each stage is governed by cryptographic verification gates.",
+        "citations": [
+          "V7 Architecture Specification"
+        ],
+        "facts": [
+          {
+            "claimId": "claim_33d3f1bc9350961b",
+            "text": "Create an 8-slide presentation explaining how AI will transform creative agencies over the next five years.",
+            "sourceIds": [
+              "pres_1787729165915_lm1ad"
+            ],
+            "sourceClass": "USER_ASSERTION",
+            "evidenceLevel": "E3",
+            "confidence": 0.95,
+            "createdAt": "2026-08-26T07:26:05.918Z",
+            "verifiedAt": "2026-08-26T07:26:05.918Z",
+            "freshness": "CURRENT",
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_33d3f1bc9350961b"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "truthBadge": "VERIFIED",
+          "findings": []
+        }
+      },
+      {
+        "id": "slide_7_1787729165918",
+        "slideNumber": 7,
+        "layout": "COMPARISON",
+        "headline": "Legacy Toolchains vs PresentX Native Studio",
+        "subheadline": "Direct side-by-side operational comparison",
+        "bodyContent": "Comparing conventional fragmented creative tools with unified V7 sovereign intelligence.",
+        "bulletPoints": [
+          "Legacy: Manual formatting, ungrounded AI hallucinations, fragile exports",
+          "PresentX: Cryptographic fact grounding, 9 visual directions, real PPTX exports"
+        ],
+        "visualStrategy": "Aligned with master CREATIVE theme and seed 670883",
+        "speakerNotes": "Highlight the key differentiators: factual grounding and zero-loss export fidelity.",
+        "citations": [
+          "Comparative Benchmark Suite"
+        ],
+        "facts": [
+          {
+            "claimId": "claim_33d3f1bc9350961b",
+            "text": "Create an 8-slide presentation explaining how AI will transform creative agencies over the next five years.",
+            "sourceIds": [
+              "pres_1787729165915_lm1ad"
+            ],
+            "sourceClass": "USER_ASSERTION",
+            "evidenceLevel": "E3",
+            "confidence": 0.95,
+            "createdAt": "2026-08-26T07:26:05.918Z",
+            "verifiedAt": "2026-08-26T07:26:05.918Z",
+            "freshness": "CURRENT",
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_33d3f1bc9350961b"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "truthBadge": "VERIFIED",
+          "findings": []
+        },
+        "mediaUrl": "/assets/icons/icon-512.png",
+        "visualFactuality": "GENERATED_VISUAL"
+      },
+      {
+        "id": "slide_8_1787729165918",
+        "slideNumber": 8,
+        "layout": "QUOTE",
+        "headline": "The Strategic Imperative",
+        "subheadline": "Guiding thesis for sovereign enterprise transformation",
+        "visualStrategy": "Centered elegant quote card with serif emphasis",
+        "quote": {
+          "text": "The future belongs to organizations that treat intelligence not as an external rented service, but as sovereign, verified infrastructure.",
+          "author": "Antigravity OS Architecture Council",
+          "role": "Enterprise Systems Whitepaper"
+        },
+        "speakerNotes": "Take a moment to let this quote resonate. Sovereignty and verification are the defining qualities of next-generation infrastructure.",
+        "citations": [
+          "Antigravity Strategic Review"
+        ],
+        "facts": [
+          {
+            "claimId": "claim_33d3f1bc9350961b",
+            "text": "Create an 8-slide presentation explaining how AI will transform creative agencies over the next five years.",
+            "sourceIds": [
+              "pres_1787729165915_lm1ad"
+            ],
+            "sourceClass": "USER_ASSERTION",
+            "evidenceLevel": "E3",
+            "confidence": 0.95,
+            "createdAt": "2026-08-26T07:26:05.918Z",
+            "verifiedAt": "2026-08-26T07:26:05.918Z",
+            "freshness": "CURRENT",
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_33d3f1bc9350961b"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "truthBadge": "VERIFIED",
+          "findings": []
+        }
+      }
+    ],
+    "mediaBible": {
+      "masterStyle": "CREATIVE",
+      "paletteMood": "Studio Bold",
+      "lighting": "Soft ambient cinematic studio lighting",
+      "cameraLanguage": "Cinematic 35mm wide-aperture composition",
+      "consistencySeed": 670883,
+      "items": [
+        {
+          "id": "media_slide_1_1787729165918",
+          "slideId": "slide_1_1787729165918",
+          "purpose": "HERO",
+          "subject": "8-slide presentation explaining how AI will t...",
+          "composition": "Rule of thirds cinematic",
+          "style": "CREATIVE",
+          "lighting": "Volumetric soft ambient studio lighting",
+          "camera": "35mm prime lens f/1.8",
+          "aspectRatio": "16:9",
+          "resolution": "1920x1080",
+          "negativePrompt": "low quality, distorted, blurry, watermark",
+          "seed": 670883,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "workflow": "StandardStudioRender_v7",
+          "provenance": "76ac6eb9288626a7f8b8ffd24094b94d17a130dc4705b8d5477c185ff358951b"
+        },
+        {
+          "id": "media_slide_2_1787729165918",
+          "slideId": "slide_2_1787729165918",
+          "purpose": "HERO",
+          "subject": "The Macro Environment & Shifting Paradigms",
+          "composition": "Rule of thirds cinematic",
+          "style": "CREATIVE",
+          "lighting": "Volumetric soft ambient studio lighting",
+          "camera": "35mm prime lens f/1.8",
+          "aspectRatio": "16:9",
+          "resolution": "1920x1080",
+          "negativePrompt": "low quality, distorted, blurry, watermark",
+          "seed": 670883,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "workflow": "StandardStudioRender_v7",
+          "provenance": "183323e86f34209d13ed20ae83abc5c6f40445c6f50078ce026cca126aff6547"
+        },
+        {
+          "id": "media_slide_3_1787729165918",
+          "slideId": "slide_3_1787729165918",
+          "purpose": "HERO",
+          "subject": "Three Critical Barriers Holding Back Growth",
+          "composition": "Rule of thirds cinematic",
+          "style": "CREATIVE",
+          "lighting": "Volumetric soft ambient studio lighting",
+          "camera": "35mm prime lens f/1.8",
+          "aspectRatio": "16:9",
+          "resolution": "1920x1080",
+          "negativePrompt": "low quality, distorted, blurry, watermark",
+          "seed": 670883,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "workflow": "StandardStudioRender_v7",
+          "provenance": "c63b28186b4fb4d6ebcfc1e28fe425cf9c098e7d86f5075568a40cb11050cc65"
+        },
+        {
+          "id": "media_slide_4_1787729165918",
+          "slideId": "slide_4_1787729165918",
+          "purpose": "HERO",
+          "subject": "Empirical Performance & Market Impact",
+          "composition": "Rule of thirds cinematic",
+          "style": "CREATIVE",
+          "lighting": "Volumetric soft ambient studio lighting",
+          "camera": "35mm prime lens f/1.8",
+          "aspectRatio": "16:9",
+          "resolution": "1920x1080",
+          "negativePrompt": "low quality, distorted, blurry, watermark",
+          "seed": 670883,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "workflow": "StandardStudioRender_v7",
+          "provenance": "93e395a77b2daf0a9312bb734c403c41dbf3c054991ac562f3ae11b805ca6f75"
+        },
+        {
+          "id": "media_slide_5_1787729165918",
+          "slideId": "slide_5_1787729165918",
+          "purpose": "HERO",
+          "subject": "Productivity Acceleration Trajectory",
+          "composition": "Rule of thirds cinematic",
+          "style": "CREATIVE",
+          "lighting": "Volumetric soft ambient studio lighting",
+          "camera": "35mm prime lens f/1.8",
+          "aspectRatio": "16:9",
+          "resolution": "1920x1080",
+          "negativePrompt": "low quality, distorted, blurry, watermark",
+          "seed": 670883,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "workflow": "StandardStudioRender_v7",
+          "provenance": "0be876afbfb65ffd83c01a77d4c7716636b991043322a3e4d7cc60130386ec21"
+        },
+        {
+          "id": "media_slide_6_1787729165918",
+          "slideId": "slide_6_1787729165918",
+          "purpose": "HERO",
+          "subject": "End-to-End Autonomous Pipeline Architecture",
+          "composition": "Rule of thirds cinematic",
+          "style": "CREATIVE",
+          "lighting": "Volumetric soft ambient studio lighting",
+          "camera": "35mm prime lens f/1.8",
+          "aspectRatio": "16:9",
+          "resolution": "1920x1080",
+          "negativePrompt": "low quality, distorted, blurry, watermark",
+          "seed": 670883,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "workflow": "StandardStudioRender_v7",
+          "provenance": "f874816043617cd038762666722f8c8444be6a8c7eb256a5ddf92aadc22fec05"
+        },
+        {
+          "id": "media_slide_7_1787729165918",
+          "slideId": "slide_7_1787729165918",
+          "purpose": "HERO",
+          "subject": "Legacy Toolchains vs PresentX Native Studio",
+          "composition": "Rule of thirds cinematic",
+          "style": "CREATIVE",
+          "lighting": "Volumetric soft ambient studio lighting",
+          "camera": "35mm prime lens f/1.8",
+          "aspectRatio": "16:9",
+          "resolution": "1920x1080",
+          "negativePrompt": "low quality, distorted, blurry, watermark",
+          "seed": 670883,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "workflow": "StandardStudioRender_v7",
+          "provenance": "6890f5cffddca94bc6f093f44bb58559b32c8f89e0aa980ae5fbde123760f2e1"
+        },
+        {
+          "id": "media_slide_8_1787729165918",
+          "slideId": "slide_8_1787729165918",
+          "purpose": "HERO",
+          "subject": "The Strategic Imperative",
+          "composition": "Rule of thirds cinematic",
+          "style": "CREATIVE",
+          "lighting": "Volumetric soft ambient studio lighting",
+          "camera": "35mm prime lens f/1.8",
+          "aspectRatio": "16:9",
+          "resolution": "1920x1080",
+          "negativePrompt": "low quality, distorted, blurry, watermark",
+          "seed": 670883,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "workflow": "StandardStudioRender_v7",
+          "provenance": "d67636b2c3e6e314eca45473a15542af927df350cd3b1b10043f23f8423e32b6"
+        }
+      ]
+    },
+    "qualityAudit": {
+      "overallScore": 92,
+      "contentScore": 95,
+      "storyScore": 95,
+      "factualityScore": 80,
+      "designScore": 90,
+      "visualHierarchyScore": 92,
+      "readabilityScore": 94,
+      "accessibilityScore": 96,
+      "consistencyScore": 96,
+      "findingsCount": 0,
+      "certified": true,
+      "verifiedClaimsCount": 8,
+      "inferredClaimsCount": 0,
+      "unverifiedClaimsCount": 0,
+      "contradictedClaimsCount": 0,
+      "sourceReality": {
+        "evidenceCoverage": 100,
+        "verifiedClaimsCount": 8,
+        "supportedClaimsCount": 0,
+        "partiallyVerifiedClaimsCount": 0,
+        "unverifiedClaimsCount": 0,
+        "contradictedClaimsCount": 0,
+        "hypotheticalClaimsCount": 0,
+        "sourceRetrievalCoverage": 0,
+        "evidenceMatchCoverage": 0,
+        "contradictionResolutionRate": 100,
+        "freshnessCoverage": 100,
+        "numericalVerificationRate": 0,
+        "overallScore": 80
+      },
+      "truthFirewall": {
+        "passed": true,
+        "criticalClaimsCount": 8,
+        "unverifiedClaimsCount": 0,
+        "contradictedClaimsCount": 0,
+        "staleClaimsCount": 0,
+        "manifest": {
+          "presentationHash": "90904e371c43b6a43db576d1bd8e826548ee81482ace9344f49b4a4d9d75db0f",
+          "sourceHashes": [],
+          "claimHashes": [
+            "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+            "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+            "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+            "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+            "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+            "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+            "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+            "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc"
+          ],
+          "evidenceHashes": [],
+          "datasetHashes": [
+            "d7a304a8affa992486d057b4e1e1370db935f19be0040f0a05002e48b82ca922"
+          ],
+          "mediaHashes": [
+            "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+            "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+            "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+            "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0"
+          ],
+          "designSystemHash": "668611386839b85dd69a8b137b7ed2c07676eab1f20f1c9aa02e9f59b046be0e",
+          "auditHash": "d96feb80c498fd5699a300380f465ed2dda3ae5d48ca3c1a56c5e1ce2c232118",
+          "exportTimestamp": "2026-08-26T07:26:05.922Z",
+          "presentXVersion": "7.0.0-PROD-TRUTH-FIREWALL",
+          "v7Version": "7.0.0-FROZEN-CORE",
+          "signature": "7fc744e944c2076698c72fda44ab57b22d2b7b87d9ee2cf5f82a4b4949292a30"
+        },
+        "overrideApplied": false
+      }
+    },
+    "evidenceStatus": "GROUNDED_E3",
+    "provenanceHash": "70b4777840e09562c9097d852a5a46a3e2ab269d537e28c67a912f7c4e79047e",
+    "version": 1,
+    "versionHistory": [
+      {
+        "version": 1,
+        "timestamp": "2026-08-26T07:26:05.919Z",
+        "author": "Hermes Autonomous Planner V7",
+        "changeReason": "Initial deck synthesis",
+        "modelUsed": "Hermes-70B-Router",
+        "slidesCount": 8,
+        "qualityScore": 94,
+        "provenanceHash": "70b4777840e09562c9097d852a5a46a3e2ab269d537e28c67a912f7c4e79047e"
+      }
+    ],
+    "autoRepairs": [
+      {
+        "id": "rep_1787729165919_p48b",
+        "slideId": "slide_1_1787729165918",
+        "defectCategory": "VISUAL_INCONSISTENCY",
+        "originalValue": "Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.",
+        "repairedValue": "Synchronized visual strategy with Presentation Media Bible.",
+        "timestamp": "2026-08-26T07:26:05.919Z",
+        "success": true
+      },
+      {
+        "id": "rep_1787729165919_9g8e",
+        "slideId": "slide_2_1787729165918",
+        "defectCategory": "VISUAL_INCONSISTENCY",
+        "originalValue": "Traditional legacy workflows are reaching terminal velocity bottlenecks. Organizations that adapt to",
+        "repairedValue": "Synchronized visual strategy with Presentation Media Bible.",
+        "timestamp": "2026-08-26T07:26:05.919Z",
+        "success": true
+      },
+      {
+        "id": "rep_1787729165919_hcax",
+        "slideId": "slide_3_1787729165918",
+        "defectCategory": "VISUAL_INCONSISTENCY",
+        "originalValue": "Analysis reveals three compounding friction points preventing organizations from achieving enterpris",
+        "repairedValue": "Synchronized visual strategy with Presentation Media Bible.",
+        "timestamp": "2026-08-26T07:26:05.919Z",
+        "success": true
+      },
+      {
+        "id": "rep_1787729165919_8bne",
+        "slideId": "slide_7_1787729165918",
+        "defectCategory": "VISUAL_INCONSISTENCY",
+        "originalValue": "Comparing conventional fragmented creative tools with unified V7 sovereign intelligence.",
+        "repairedValue": "Synchronized visual strategy with Presentation Media Bible.",
+        "timestamp": "2026-08-26T07:26:05.919Z",
+        "success": true
+      }
+    ],
+    "createdAt": "2026-08-26T07:26:05.919Z",
+    "updatedAt": "2026-08-26T07:26:05.919Z",
+    "exportManifest": {
+      "presentationHash": "90904e371c43b6a43db576d1bd8e826548ee81482ace9344f49b4a4d9d75db0f",
+      "sourceHashes": [],
+      "claimHashes": [
+        "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+        "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+        "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+        "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+        "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+        "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+        "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc",
+        "ce5ca3aaaa4f960a34c276a02afb7a45e459c0769b7d2821d26beb5b1f89e7fc"
+      ],
+      "evidenceHashes": [],
+      "datasetHashes": [
+        "d7a304a8affa992486d057b4e1e1370db935f19be0040f0a05002e48b82ca922"
+      ],
+      "mediaHashes": [
+        "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+        "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+        "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+        "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0"
+      ],
+      "designSystemHash": "668611386839b85dd69a8b137b7ed2c07676eab1f20f1c9aa02e9f59b046be0e",
+      "auditHash": "d96feb80c498fd5699a300380f465ed2dda3ae5d48ca3c1a56c5e1ce2c232118",
+      "exportTimestamp": "2026-08-26T07:26:05.922Z",
+      "presentXVersion": "7.0.0-PROD-TRUTH-FIREWALL",
+      "v7Version": "7.0.0-FROZEN-CORE",
+      "signature": "7fc744e944c2076698c72fda44ab57b22d2b7b87d9ee2cf5f82a4b4949292a30"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "nodesCount": 2,
+  "edgesCount": 1,
+  "nodes": [
+    {
+      "id": "node_prod",
+      "type": "PRODUCT",
+      "name": "Chronos VFX Studio",
+      "provenance": "VERIFIED",
+      "confidence": 1,
+      "evidenceRefs": [
+        "spec.pdf"
+      ],
+      "attributes": {
+        "version": "6.1.0"
+      },
+      "version": 1,
+      "updatedAt": "2026-08-25T08:48:10.596Z"
+    },
+    {
+      "id": "node_comp_card",
+      "type": "COMPONENT",
+      "name": "DataCard",
+      "provenance": "OBSERVED",
+      "confidence": 0.98,
+      "evidenceRefs": [
+        "dashboard.figma"
+      ],
+      "attributes": {
+        "category": "DATA_DISPLAY"
+      },
+      "version": 1,
+      "updatedAt": "2026-08-25T08:48:10.596Z"
+    }
+  ],
+  "edges": [
+    {
+      "fromNodeId": "node_prod",
+      "toNodeId": "node_comp_card",
+      "relation": "CONTAINS",
+      "provenance": "OBSERVED"
+    }
+  ],
+  "timestamp": "2026-08-25T08:48:10.596Z"
+}

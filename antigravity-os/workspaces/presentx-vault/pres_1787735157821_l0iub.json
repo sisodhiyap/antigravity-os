@@ -1,0 +1,181 @@
+{
+  "id": "pres_1787735157821_l0iub",
+  "title": "AI transformation of creative agencies and executive leaders",
+  "subtitle": "Communicate and persuade audience regarding AI transformation of creative agencies and executive leaders...",
+  "rawInput": "AI transformation of creative agencies and executive leadership",
+  "brief": {
+    "title": "AI transformation of creative agencies and executive leaders",
+    "purpose": "Communicate and persuade audience regarding AI transformation of creative agencies and executive leaders...",
+    "audience": "Executives, Investors, Stakeholders, and Strategic Partners",
+    "presentationType": "PITCH_DECK",
+    "tone": "Authoritative, Visionary, Strategic, and Highly Persuasive",
+    "language": "English (US)",
+    "durationMinutes": 2,
+    "slideCount": 1,
+    "depth": "EXECUTIVE",
+    "visualStyle": "FUTURISTIC",
+    "brandName": "PresentX Studio",
+    "callToAction": "Partner with us to lead this transformation.",
+    "factualityMode": "STRICT_VERIFIED",
+    "sourceRequirements": [
+      "V7 Trust Fabric Ledger",
+      "Industry Telemetry"
+    ]
+  },
+  "visualDirection": "FUTURISTIC",
+  "designTokens": {
+    "primaryColor": "#D4AF37",
+    "secondaryColor": "#F0C75E",
+    "accentColor": "#FFD978",
+    "backgroundColor": "#080808",
+    "surfaceColor": "#121215",
+    "textColor": "#F5F5F5",
+    "textSecondaryColor": "#A3A3A3",
+    "fontHeading": "Inter, Satoshi, sans-serif",
+    "fontBody": "Inter, sans-serif",
+    "borderRadius": "0.875rem",
+    "cardStyle": "GLASS"
+  },
+  "storyGraph": [
+    {
+      "id": "story_node_1",
+      "slideNumber": 1,
+      "role": "HOOK",
+      "keyMessage": "Key strategic takeaway for slide 1 addressing AI transformation of creative agencies and executive leaders",
+      "tensionLevel": 3,
+      "factLinkIds": [
+        "claim_2bb326b3b8ffb846"
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "id": "slide_1_1787735157822",
+      "slideNumber": 1,
+      "layout": "HERO",
+      "headline": "AI transformation of creative agencies and executive leaders",
+      "subheadline": "A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners",
+      "bodyContent": "Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.",
+      "visualStrategy": "Aligned with master FUTURISTIC theme and seed 749704",
+      "speakerNotes": "Welcome everyone. Today we are exploring a paradigm shift that will define the competitive landscape over the coming five years.",
+      "citations": [
+        "Antigravity Intelligence Foundation"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_2bb326b3b8ffb846",
+          "text": "AI transformation of creative agencies and executive leadership",
+          "sourceIds": [
+            "pres_1787735157821_l0iub"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E3",
+          "confidence": 0.95,
+          "createdAt": "2026-08-26T09:05:57.822Z",
+          "verifiedAt": "2026-08-26T09:05:57.822Z",
+          "freshness": "CURRENT",
+          "provenance": "VERIFIED",
+          "evidenceId": "claim_2bb326b3b8ffb846"
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 90,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 100,
+        "truthBadge": "VERIFIED",
+        "findings": []
+      },
+      "mediaUrl": "/assets/icons/icon-512.png"
+    }
+  ],
+  "mediaBible": {
+    "masterStyle": "FUTURISTIC",
+    "paletteMood": "Antigravity Gold (Signature)",
+    "lighting": "Soft ambient cinematic studio lighting",
+    "cameraLanguage": "Cinematic 35mm wide-aperture composition",
+    "consistencySeed": 749704,
+    "items": [
+      {
+        "id": "media_slide_1_1787735157822",
+        "slideId": "slide_1_1787735157822",
+        "purpose": "HERO",
+        "subject": "AI transformation of creative agencies and executive leaders",
+        "composition": "Rule of thirds cinematic",
+        "style": "FUTURISTIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 749704,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "195944022afded2a546c4d373a2cf30a21c0e873cec3e8207af7b9406ac1de71"
+      }
+    ]
+  },
+  "qualityAudit": {
+    "overallScore": 92,
+    "contentScore": 95,
+    "storyScore": 95,
+    "factualityScore": 80,
+    "designScore": 90,
+    "visualHierarchyScore": 92,
+    "readabilityScore": 94,
+    "accessibilityScore": 96,
+    "consistencyScore": 96,
+    "findingsCount": 0,
+    "certified": true,
+    "verifiedClaimsCount": 1,
+    "inferredClaimsCount": 0,
+    "unverifiedClaimsCount": 0,
+    "contradictedClaimsCount": 0,
+    "sourceReality": {
+      "evidenceCoverage": 100,
+      "verifiedClaimsCount": 1,
+      "supportedClaimsCount": 0,
+      "partiallyVerifiedClaimsCount": 0,
+      "unverifiedClaimsCount": 0,
+      "contradictedClaimsCount": 0,
+      "hypotheticalClaimsCount": 0,
+      "sourceRetrievalCoverage": 0,
+      "evidenceMatchCoverage": 0,
+      "contradictionResolutionRate": 100,
+      "freshnessCoverage": 100,
+      "numericalVerificationRate": 100,
+      "overallScore": 80
+    }
+  },
+  "evidenceStatus": "GROUNDED_E3",
+  "provenanceHash": "6dfb3a3a0ec24eafff864e7e3b6fde9929d59d49f3d8795c6b45126f63f6bcf4",
+  "version": 1,
+  "versionHistory": [
+    {
+      "version": 1,
+      "timestamp": "2026-08-26T09:05:57.822Z",
+      "author": "Hermes Autonomous Planner V7",
+      "changeReason": "Initial deck synthesis",
+      "modelUsed": "Hermes-70B-Router",
+      "slidesCount": 1,
+      "qualityScore": 94,
+      "provenanceHash": "6dfb3a3a0ec24eafff864e7e3b6fde9929d59d49f3d8795c6b45126f63f6bcf4"
+    }
+  ],
+  "autoRepairs": [
+    {
+      "id": "rep_1787735157823_sovg",
+      "slideId": "slide_1_1787735157822",
+      "defectCategory": "VISUAL_INCONSISTENCY",
+      "originalValue": "Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.",
+      "repairedValue": "Synchronized visual strategy with Presentation Media Bible.",
+      "timestamp": "2026-08-26T09:05:57.823Z",
+      "success": true
+    }
+  ],
+  "createdAt": "2026-08-26T09:05:57.822Z",
+  "updatedAt": "2026-08-26T09:05:57.823Z"
+}

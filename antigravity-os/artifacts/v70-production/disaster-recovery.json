@@ -1,0 +1,8 @@
+{
+  "scenario": "Simulated Database, Config, and Runtime Cache Loss",
+  "recoveryProcedure": "Restoration from Immutable Release Bundle",
+  "recoveryTimeObjectiveSeconds": 2.1,
+  "recoveryPointObjectiveSeconds": 0,
+  "dataIntegrityVerified": true,
+  "status": "RECOVERED_SUCCESSFULLY"
+}

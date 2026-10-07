@@ -1,0 +1,41 @@
+- generic [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - img "Antigravity OS AI Command Center" [ref=f1e4]
+    - generic [ref=f1e6]:
+      - paragraph [ref=f1e7]: Antigravity OS v5.2
+      - paragraph [ref=f1e8]: Sovereign AI infrastructure running entirely on your machine.
+  - generic [ref=f1e10]:
+    - group "Theme selection" [ref=f1e12]:
+      - button "Dark" [pressed] [ref=f1e13] [cursor=pointer]
+      - button "Light" [ref=f1e16] [cursor=pointer]
+      - button "System" [ref=f1e23] [cursor=pointer]
+    - generic [ref=f1e26]:
+      - generic [ref=f1e32]:
+        - heading "Antigravity OS" [level=1] [ref=f1e33]
+        - paragraph [ref=f1e34]: Sovereign AI Workspace
+      - generic [ref=f1e35]:
+        - heading "Operator Sign In" [level=2] [ref=f1e36]
+        - paragraph [ref=f1e37]: Authentication required to access the command center.
+    - generic [ref=f1e38]:
+      - generic [ref=f1e39]:
+        - generic [ref=f1e40]: Email
+        - textbox "Email address" [ref=f1e42]:
+          - /placeholder: operator@workspace.ai
+      - generic [ref=f1e43]:
+        - generic [ref=f1e44]: Password
+        - generic [ref=f1e45]:
+          - textbox "Password" [ref=f1e46]:
+            - /placeholder: ••••••••••••
+          - button "Show password" [ref=f1e47] [cursor=pointer]
+      - button "Enter Workspace" [disabled]
+      - generic [ref=f1e51]:
+        - text: New operator?
+        - link "Create account →" [ref=f1e52] [cursor=pointer]:
+          - /url: /signup
+    - generic [ref=f1e53]:
+      - paragraph [ref=f1e54]: Session Security
+      - generic [ref=f1e55]:
+        - generic [ref=f1e56]: Secure Session
+        - generic [ref=f1e60]: Local-First
+        - generic [ref=f1e69]: PBKDF2-SHA512
+    - paragraph [ref=f1e74]: Antigravity OS v5.2 · LOCAL-FIRST · CLOUD OFF

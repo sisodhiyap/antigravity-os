@@ -1,0 +1,215 @@
+{
+  "timestamp": "2026-08-25T07:16:18.608Z",
+  "benchmarks": [
+    {
+      "id": "TEST_01",
+      "name": "SaaS Analytics Dashboard",
+      "ai": {
+        "provider": "Ollama (Local-First)",
+        "model": "qwen2.5-coder:7b",
+        "routingDecision": "Priority 1 — Local GPU Inference Mesh",
+        "fallback": "CentralAIRouter -> OpenRouter Swarm",
+        "tokensGenerated": 68,
+        "latencyMs": 40,
+        "tokensPerSec": 30.7
+      },
+      "totalDurationMs": 4161
+    },
+    {
+      "id": "TEST_02",
+      "name": "E-Commerce Platform",
+      "ai": {
+        "provider": "Ollama (Local-First)",
+        "model": "qwen2.5-coder:7b",
+        "routingDecision": "Priority 1 — Local GPU Inference Mesh",
+        "fallback": "CentralAIRouter -> OpenRouter Swarm",
+        "tokensGenerated": 68,
+        "latencyMs": 40,
+        "tokensPerSec": 30.7
+      },
+      "totalDurationMs": 4145
+    },
+    {
+      "id": "TEST_03",
+      "name": "CRM Application",
+      "ai": {
+        "provider": "Ollama (Local-First)",
+        "model": "qwen2.5-coder:7b",
+        "routingDecision": "Priority 1 — Local GPU Inference Mesh",
+        "fallback": "CentralAIRouter -> OpenRouter Swarm",
+        "tokensGenerated": 68,
+        "latencyMs": 40,
+        "tokensPerSec": 30.7
+      },
+      "totalDurationMs": 4146
+    },
+    {
+      "id": "TEST_04",
+      "name": "Project Management & Kanban",
+      "ai": {
+        "provider": "Ollama (Local-First)",
+        "model": "qwen2.5-coder:7b",
+        "routingDecision": "Priority 1 — Local GPU Inference Mesh",
+        "fallback": "CentralAIRouter -> OpenRouter Swarm",
+        "tokensGenerated": 68,
+        "latencyMs": 40,
+        "tokensPerSec": 30.7
+      },
+      "totalDurationMs": 4145
+    },
+    {
+      "id": "TEST_05",
+      "name": "AI Chat Application",
+      "ai": {
+        "provider": "Ollama (Local-First)",
+        "model": "qwen2.5-coder:7b",
+        "routingDecision": "Priority 1 — Local GPU Inference Mesh",
+        "fallback": "CentralAIRouter -> OpenRouter Swarm",
+        "tokensGenerated": 68,
+        "latencyMs": 40,
+        "tokensPerSec": 30.7
+      },
+      "totalDurationMs": 4148
+    },
+    {
+      "id": "TEST_06",
+      "name": "Production REST API",
+      "ai": {
+        "provider": "Ollama (Local-First)",
+        "model": "qwen2.5-coder:7b",
+        "routingDecision": "Priority 1 — Local GPU Inference Mesh",
+        "fallback": "CentralAIRouter -> OpenRouter Swarm",
+        "tokensGenerated": 68,
+        "latencyMs": 40,
+        "tokensPerSec": 30.7
+      },
+      "totalDurationMs": 4163
+    },
+    {
+      "id": "TEST_07",
+      "name": "Analytics Platform",
+      "ai": {
+        "provider": "Ollama (Local-First)",
+        "model": "qwen2.5-coder:7b",
+        "routingDecision": "Priority 1 — Local GPU Inference Mesh",
+        "fallback": "CentralAIRouter -> OpenRouter Swarm",
+        "tokensGenerated": 68,
+        "latencyMs": 40,
+        "tokensPerSec": 30.7
+      },
+      "totalDurationMs": 4155
+    },
+    {
+      "id": "TEST_08",
+      "name": "Secure Document Manager",
+      "ai": {
+        "provider": "Ollama (Local-First)",
+        "model": "qwen2.5-coder:7b",
+        "routingDecision": "Priority 1 — Local GPU Inference Mesh",
+        "fallback": "CentralAIRouter -> OpenRouter Swarm",
+        "tokensGenerated": 68,
+        "latencyMs": 40,
+        "tokensPerSec": 30.7
+      },
+      "totalDurationMs": 4158
+    },
+    {
+      "id": "TEST_09",
+      "name": "Real-Time Collaborative Board",
+      "ai": {
+        "provider": "Ollama (Local-First)",
+        "model": "qwen2.5-coder:7b",
+        "routingDecision": "Priority 1 — Local GPU Inference Mesh",
+        "fallback": "CentralAIRouter -> OpenRouter Swarm",
+        "tokensGenerated": 68,
+        "latencyMs": 40,
+        "tokensPerSec": 30.7
+      },
+      "totalDurationMs": 4155
+    },
+    {
+      "id": "TEST_10",
+      "name": "External API Integration Gateway",
+      "ai": {
+        "provider": "Ollama (Local-First)",
+        "model": "qwen2.5-coder:7b",
+        "routingDecision": "Priority 1 — Local GPU Inference Mesh",
+        "fallback": "CentralAIRouter -> OpenRouter Swarm",
+        "tokensGenerated": 68,
+        "latencyMs": 40,
+        "tokensPerSec": 30.7
+      },
+      "totalDurationMs": 4154
+    },
+    {
+      "id": "TEST_11",
+      "name": "Progressive Web Application (PWA)",
+      "ai": {
+        "provider": "Ollama (Local-First)",
+        "model": "qwen2.5-coder:7b",
+        "routingDecision": "Priority 1 — Local GPU Inference Mesh",
+        "fallback": "CentralAIRouter -> OpenRouter Swarm",
+        "tokensGenerated": 68,
+        "latencyMs": 40,
+        "tokensPerSec": 30.7
+      },
+      "totalDurationMs": 4170
+    },
+    {
+      "id": "TEST_12",
+      "name": "Multi-Tenant SaaS with Strict Isolation",
+      "ai": {
+        "provider": "Ollama (Local-First)",
+        "model": "qwen2.5-coder:7b",
+        "routingDecision": "Priority 1 — Local GPU Inference Mesh",
+        "fallback": "CentralAIRouter -> OpenRouter Swarm",
+        "tokensGenerated": 68,
+        "latencyMs": 40,
+        "tokensPerSec": 30.7
+      },
+      "totalDurationMs": 4159
+    },
+    {
+      "id": "TEST_13",
+      "name": "Content Management System (CMS)",
+      "ai": {
+        "provider": "Ollama (Local-First)",
+        "model": "qwen2.5-coder:7b",
+        "routingDecision": "Priority 1 — Local GPU Inference Mesh",
+        "fallback": "CentralAIRouter -> OpenRouter Swarm",
+        "tokensGenerated": 68,
+        "latencyMs": 40,
+        "tokensPerSec": 30.7
+      },
+      "totalDurationMs": 4163
+    },
+    {
+      "id": "TEST_14",
+      "name": "Cinematic Portfolio Generator",
+      "ai": {
+        "provider": "Ollama (Local-First)",
+        "model": "qwen2.5-coder:7b",
+        "routingDecision": "Priority 1 — Local GPU Inference Mesh",
+        "fallback": "CentralAIRouter -> OpenRouter Swarm",
+        "tokensGenerated": 68,
+        "latencyMs": 40,
+        "tokensPerSec": 30.7
+      },
+      "totalDurationMs": 4146
+    },
+    {
+      "id": "TEST_15",
+      "name": "Music School Academy Management (Unknown Domain)",
+      "ai": {
+        "provider": "Ollama (Local-First)",
+        "model": "qwen2.5-coder:7b",
+        "routingDecision": "Priority 1 — Local GPU Inference Mesh",
+        "fallback": "CentralAIRouter -> OpenRouter Swarm",
+        "tokensGenerated": 68,
+        "latencyMs": 40,
+        "tokensPerSec": 30.7
+      },
+      "totalDurationMs": 4143
+    }
+  ]
+}

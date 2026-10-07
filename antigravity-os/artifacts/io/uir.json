@@ -1,0 +1,187 @@
+{
+  "uirId": "uir_fused_1787646794445",
+  "sourceManifest": {
+    "filenames": [
+      "spec_document.pdf",
+      "wireframe_preview.png",
+      "hero_photo.jpg",
+      "brand_icon.svg",
+      "layered_artwork.psd",
+      "project_design.figma",
+      "pitch_deck.pptx",
+      "requirements_brief.docx",
+      "customer_database.xlsx"
+    ],
+    "detectedFormats": [
+      "PDF",
+      "PNG",
+      "JPG",
+      "SVG",
+      "PSD",
+      "FIGMA",
+      "PPTX",
+      "DOCX",
+      "XLSX"
+    ],
+    "totalSourcesCount": 9
+  },
+  "rootElements": [
+    {
+      "id": "uir_elem_0",
+      "type": "DOCUMENT",
+      "name": "spec_document.pdf",
+      "sourceFile": "spec_document.pdf",
+      "sourceParser": "PDFParser",
+      "properties": {
+        "extractedElements": 25,
+        "extractedTextChars": 3500
+      },
+      "confidence": "HIGH_CONFIDENCE"
+    },
+    {
+      "id": "uir_elem_1",
+      "type": "DOCUMENT",
+      "name": "wireframe_preview.png",
+      "sourceFile": "wireframe_preview.png",
+      "sourceParser": "ImageParser",
+      "properties": {
+        "extractedElements": 10,
+        "extractedTextChars": 500
+      },
+      "confidence": "HIGH_CONFIDENCE"
+    },
+    {
+      "id": "uir_elem_2",
+      "type": "DOCUMENT",
+      "name": "hero_photo.jpg",
+      "sourceFile": "hero_photo.jpg",
+      "sourceParser": "ImageParser",
+      "properties": {
+        "extractedElements": 10,
+        "extractedTextChars": 500
+      },
+      "confidence": "HIGH_CONFIDENCE"
+    },
+    {
+      "id": "uir_elem_3",
+      "type": "DOCUMENT",
+      "name": "brand_icon.svg",
+      "sourceFile": "brand_icon.svg",
+      "sourceParser": "SVGParser",
+      "properties": {
+        "extractedElements": 20,
+        "extractedTextChars": 150
+      },
+      "confidence": "HIGH_CONFIDENCE"
+    },
+    {
+      "id": "uir_elem_4",
+      "type": "DOCUMENT",
+      "name": "layered_artwork.psd",
+      "sourceFile": "layered_artwork.psd",
+      "sourceParser": "PSDParser",
+      "properties": {
+        "extractedElements": 15,
+        "extractedTextChars": 400
+      },
+      "confidence": "HIGH_CONFIDENCE"
+    },
+    {
+      "id": "uir_elem_5",
+      "type": "SCREEN",
+      "name": "project_design.figma",
+      "sourceFile": "project_design.figma",
+      "sourceParser": "FigmaParser",
+      "properties": {
+        "extractedElements": 60,
+        "extractedTextChars": 1200
+      },
+      "confidence": "HIGH_CONFIDENCE"
+    },
+    {
+      "id": "uir_elem_6",
+      "type": "DOCUMENT",
+      "name": "pitch_deck.pptx",
+      "sourceFile": "pitch_deck.pptx",
+      "sourceParser": "PPTXParser",
+      "properties": {
+        "extractedElements": 30,
+        "extractedTextChars": 2400
+      },
+      "confidence": "HIGH_CONFIDENCE"
+    },
+    {
+      "id": "uir_elem_7",
+      "type": "DOCUMENT",
+      "name": "requirements_brief.docx",
+      "sourceFile": "requirements_brief.docx",
+      "sourceParser": "DOCXParser",
+      "properties": {
+        "extractedElements": 35,
+        "extractedTextChars": 5200
+      },
+      "confidence": "HIGH_CONFIDENCE"
+    },
+    {
+      "id": "uir_elem_8",
+      "type": "DOCUMENT",
+      "name": "customer_database.xlsx",
+      "sourceFile": "customer_database.xlsx",
+      "sourceParser": "XLSXParser",
+      "properties": {
+        "extractedElements": 40,
+        "extractedTextChars": 8000
+      },
+      "confidence": "HIGH_CONFIDENCE"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Project",
+      "fields": {
+        "id": "string",
+        "title": "string",
+        "budget": "number"
+      },
+      "sourceReference": "requirements.docx"
+    },
+    {
+      "name": "Client",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "email": "string"
+      },
+      "sourceReference": "clients.xlsx"
+    },
+    {
+      "name": "Asset",
+      "fields": {
+        "id": "string",
+        "filename": "string",
+        "size": "number"
+      },
+      "sourceReference": "brand_logo.psd"
+    }
+  ],
+  "designTokens": {
+    "primaryColor": "#080a0f",
+    "accentGold": "#e6b800",
+    "fontFamily": "Inter"
+  },
+  "workflows": [
+    {
+      "name": "Deliverable Review & Client Sign-off",
+      "steps": [
+        "Upload",
+        "Review",
+        "Approve"
+      ],
+      "sourceReference": "specification.pdf"
+    }
+  ],
+  "metadata": {
+    "fusedSourcesCount": 9
+  },
+  "timestamp": "2026-08-25T08:33:14.445Z"
+}

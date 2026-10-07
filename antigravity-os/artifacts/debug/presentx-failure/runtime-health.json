@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-08-26T09:05:00Z",
+  "subsystems": {
+    "node": { "status": "READY", "version": "v24.16.0" },
+    "database": { "status": "READY", "type": "SQLite 3.45" },
+    "hermes": { "status": "READY", "mode": "LEVEL_2_AUTONOMOUS" },
+    "trustFabric": { "status": "READY", "provenance": "E3_CRYPTOGRAPHIC" },
+    "presentx": { "status": "READY", "layouts": 21, "pptx": "OPENXML_BINARY_ZIP" },
+    "modelRouter": { "status": "READY", "model": "qwen2.5-coder:7b" },
+    "comfyui": { "status": "FALLBACK_ENABLED", "port": 8188 }
+  }
+}

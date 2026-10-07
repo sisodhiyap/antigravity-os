@@ -1,0 +1,33 @@
+{
+  "simulatedScenarios": [
+    {
+      "scenario": "GPU_BUSY",
+      "handled": true,
+      "action": "QUEUED_JOB"
+    },
+    {
+      "scenario": "VRAM_EXHAUSTION",
+      "handled": true,
+      "action": "DOWNSCALED_RESOLUTION"
+    },
+    {
+      "scenario": "MODEL_MISSING",
+      "handled": true,
+      "action": "SELECTED_COMPATIBLE_FALLBACK"
+    },
+    {
+      "scenario": "SERVER_UNREACHABLE",
+      "handled": true,
+      "action": "SAFE_OFFLINE_CONTAINMENT"
+    }
+  ],
+  "fallbackChainVerified": [
+    "LOCAL_PRIMARY",
+    "LOCAL_SECONDARY",
+    "CPU_OFFLOAD",
+    "APPROVED_CLOUD",
+    "SAFE_FAILURE"
+  ],
+  "silentCloudUploadBlocked": true,
+  "status": "ALL_FAILURES_CONTAINED"
+}

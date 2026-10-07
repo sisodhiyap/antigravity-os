@@ -1,0 +1,403 @@
+{
+  "timestamp": "2026-08-26T06:32:22.910Z",
+  "fileCount": 99,
+  "totalBytes": 322186,
+  "files": {
+    "src/plugins/PluginAdapterManager.ts": {
+      "hash": "ad8a91aea24b42f81adbac5e93c19f8a8c954a756f85b2f2306335f617e30555",
+      "bytes": 1879
+    },
+    "src/evidence/CertificationEngine.ts": {
+      "hash": "186eb318a72dcc9484c8cbf584c2d4063e223e26ee02c60edfcb00be5258a224",
+      "bytes": 2166
+    },
+    "src/evidence/EvidenceStore.ts": {
+      "hash": "e1cb996c78f2867732b6f9240a21a4db9a7348b6b4d13ec10881e742f2152c13",
+      "bytes": 1826
+    },
+    "src/factory/AutonomousProductFactory.ts": {
+      "hash": "04602d67457ed30f14362d96e17a47b095bd70ef430532b662d27e885d04609c",
+      "bytes": 3238
+    },
+    "src/factory/IntegrationFabric.ts": {
+      "hash": "f233794941a4d385057214f47a439f77f630327aecc384f1834ce7f8023d4ba2",
+      "bytes": 2443
+    },
+    "src/io/FileClassifier.ts": {
+      "hash": "1833099e0d0547eb6578524bee4f1453693f8f27949a234468dc764b6aa30da1",
+      "bytes": 2863
+    },
+    "src/io/OutputRegistry.ts": {
+      "hash": "f3ba4d0258f44016869b1c4593c2259decdc7c15179c7b492902c101ac937694",
+      "bytes": 1264
+    },
+    "src/io/ParserOrchestrator.ts": {
+      "hash": "f5662f52a604f43e42c3ce1bc064b8f07b3047e1055714f61dc8172593764a2c",
+      "bytes": 4239
+    },
+    "src/io/uir/UniversalIntermediateRepresentation.ts": {
+      "hash": "8c89f221893d0a59091c864e1901fc8583e2673a220a3a7a78f9836b98edbb58",
+      "bytes": 1792
+    },
+    "src/kernel/eventBus.ts": {
+      "hash": "f1b3634f02b04d01e73bdd0fda19c05c8d8f49d968d0d4fdaea93a84fc175dc2",
+      "bytes": 3910
+    },
+    "src/kernel/index.ts": {
+      "hash": "d1784bdc72123162a1fc07897f136d9668800cf8d19313d26aba010535a3cc98",
+      "bytes": 249
+    },
+    "src/kernel/kernel.test.ts": {
+      "hash": "7a88fa506ad7edb49ca5af50c8a655a02d3090d7853b119f9659b85d2d67d36a",
+      "bytes": 2623
+    },
+    "src/kernel/kernel.ts": {
+      "hash": "ec805f475cb57d1e3332fdd2997991fc068f2b9ecdad5d5f74181f41b00f5abc",
+      "bytes": 9598
+    },
+    "src/kernel/lifecycle.ts": {
+      "hash": "ff82741c63c0cb4744daaadf8e31d16b6b6a53f430881122ef779ea9ef93f87b",
+      "bytes": 3491
+    },
+    "src/kernel/permissionManager.ts": {
+      "hash": "5279a861f4cca7a57cc1eea4278ef2fe516e162f1643b169f7d0a5936c5d0859",
+      "bytes": 3666
+    },
+    "src/kernel/pluginLoader.ts": {
+      "hash": "b9846c621cd59dd2464f82448dbce72c32d307fff284dec6e881da2c65ee4828",
+      "bytes": 2804
+    },
+    "src/kernel/processSupervisor.ts": {
+      "hash": "87d180f7dceccc05f2768755675f09b2ab4d5152a4784d2e39bebd2f7be62c23",
+      "bytes": 3936
+    },
+    "src/kernel/serviceRegistry.ts": {
+      "hash": "78695659e786256085ca413a1c81021fb777448af0eaabc3ceecae415a2fa0e1",
+      "bytes": 6810
+    },
+    "src/kernel/types.ts": {
+      "hash": "80f893882a25760b24b83aec3e94258d281c9a161b52084facfa1d9217a481fe",
+      "bytes": 2224
+    },
+    "src/plugins/comfyui/ComfyUIAdapter.ts": {
+      "hash": "f96f75816b36b901fbb5fa1ca064a8e755586ef437d2113683e61185182547a2",
+      "bytes": 4759
+    },
+    "src/plugins/comfyui/ComfyUIClient.ts": {
+      "hash": "45635f7ffc5f471515df9155cde3da06d902cb410828f70df579051c6c570d00",
+      "bytes": 1544
+    },
+    "src/plugins/comfyui/ComfyUIEvidenceBridge.ts": {
+      "hash": "add47f05fb455cba6b2564f4fc3bd3c4e003e824631e8592de3b8333457fe52a",
+      "bytes": 890
+    },
+    "src/plugins/comfyui/ComfyUIHealth.ts": {
+      "hash": "3119bba1cda05737c16d6441217525adeb29c6041c60660b7b285376d9d55832",
+      "bytes": 2001
+    },
+    "src/plugins/comfyui/ComfyUIModelRegistry.ts": {
+      "hash": "92786eb795dfff66d60f8429132cdebe142553f7224bc46b3ab6c3903b2b6f10",
+      "bytes": 4400
+    },
+    "src/plugins/comfyui/ComfyUIOutputManager.ts": {
+      "hash": "d3280128fb5f39fe226328d42da19beb63d7495b01eeec0913ee53f57c45f247",
+      "bytes": 1938
+    },
+    "src/plugins/comfyui/ComfyUIQueueManager.ts": {
+      "hash": "b5db4b709534c38c6557aabad377577c0e82fededbbbc32bbe3009fff3f72dad",
+      "bytes": 2147
+    },
+    "src/plugins/comfyui/ComfyUIRealityBridge.ts": {
+      "hash": "9a267de27eeb80023b5459ae815bf7fda004e55e0816d74a99c8b261c8640610",
+      "bytes": 1395
+    },
+    "src/plugins/comfyui/ComfyUIResourceManager.ts": {
+      "hash": "25a8c8d1eec44269a6c78892bfaedcf598c041f97fd5bfc50c2c28703649b12d",
+      "bytes": 4629
+    },
+    "src/plugins/comfyui/ComfyUISandbox.ts": {
+      "hash": "0b7c6854da9b1e0b7a8f40c34be0d239b202635fa1bbafad457c01c5a0cbfe90",
+      "bytes": 1446
+    },
+    "src/plugins/comfyui/ComfyUISecurity.ts": {
+      "hash": "2a0d852ce0b966ee6e40ea840f41b9af1e7fb6efef84ebddabc2be5765125051",
+      "bytes": 2047
+    },
+    "src/plugins/comfyui/ComfyUITypes.ts": {
+      "hash": "fe539e2fe00d080bc4e16abf3f0c1ef31a402bfe4c3151c7fe587d0a8f3eae4d",
+      "bytes": 3642
+    },
+    "src/plugins/comfyui/ComfyUIWorkflowEngine.ts": {
+      "hash": "91455a2b3a2614c8ef228d091d1db825d3bf200094fefcbc421f24eefefc88b3",
+      "bytes": 2855
+    },
+    "src/plugins/comfyui/ComfyUIWorkflowRegistry.ts": {
+      "hash": "c4858aca11183ea94f332968e2555603ff7a5906b86a6f41830ad01a70cffbec",
+      "bytes": 5724
+    },
+    "src/plugins/comfyui/index.ts": {
+      "hash": "361fc067f78c77ecec516869ace0d3a0aaae31b117e1bf3c5e051c416e51fc71",
+      "bytes": 1158
+    },
+    "src/plugins/comfyui/workflows/3d/img2mesh_tripo.json": {
+      "hash": "41ff25e7377a3497e5569d43500c2b623b540e6f96e31570fcc842f53e44927e",
+      "bytes": 522
+    },
+    "src/plugins/comfyui/workflows/audio/txt2audio_synth.json": {
+      "hash": "41bccc6e6c86f620bbb0f28dcccb1ca8fa9df48d31122dfe780352af692e1866",
+      "bytes": 554
+    },
+    "src/plugins/comfyui/workflows/cinematic/cyberpunk_seq.json": {
+      "hash": "750b4091fd037a0be48e0adc98195d06da7d8cdb6859083d129c876f9355afc3",
+      "bytes": 678
+    },
+    "src/plugins/comfyui/workflows/image/txt2img_flux.json": {
+      "hash": "0ca0f7fc395f52663f6a1acc1d9884ad1847daeff0d0cc61feeced7b3841064e",
+      "bytes": 1708
+    },
+    "src/plugins/comfyui/workflows/upscale/esrgan_4x.json": {
+      "hash": "a848bac52019bf4eed19f8069da32b2fbe994ba26ebcd9dc3adcac303b8f008a",
+      "bytes": 692
+    },
+    "src/plugins/comfyui/workflows/video/txt2video_wan.json": {
+      "hash": "7b167af553437d31e48e7d0efc73e84f6d41488e4fed9be7f71e3c2e88f1890d",
+      "bytes": 793
+    },
+    "src/plugins/hermes/HermesAgent.ts": {
+      "hash": "8eebe094413294f1f90ba07207b20b93a0ecf916444d5e7ae9f1a0304d8da39d",
+      "bytes": 4696
+    },
+    "src/plugins/hermes/HermesApprovalGate.ts": {
+      "hash": "098baa861e789c91a292613f4eb17fd90ce76c0e1ee62077693f731f8b2aedc1",
+      "bytes": 2395
+    },
+    "src/plugins/hermes/HermesCheckpointManager.ts": {
+      "hash": "a1e8afb7e5bb3f78c2f94ffb9bbe0daa9b7d5bf67c9f275ccbfc0e6578cf842f",
+      "bytes": 1476
+    },
+    "src/plugins/hermes/HermesCritic.ts": {
+      "hash": "12a870d772367f6904b30774a72fa728ddf1dfa276ab694a6f7dc7c441ce5cf2",
+      "bytes": 3876
+    },
+    "src/plugins/hermes/HermesEvidenceBridge.ts": {
+      "hash": "000af7ce5a1edf83c1364d46b6a3c3fe8628d8348bcbcc6c69a205d402e0082c",
+      "bytes": 857
+    },
+    "src/plugins/hermes/HermesExecutor.ts": {
+      "hash": "8dc7280288721a2a66ab5e537cce6c04d4ab5ef19965d60cdac23bb953e53a94",
+      "bytes": 4945
+    },
+    "src/plugins/hermes/HermesMCPBridge.ts": {
+      "hash": "90713b72202b9ab29ccd167567c912117965bc4048eceef0fe82b16512fbf31a",
+      "bytes": 2900
+    },
+    "src/plugins/hermes/HermesMemory.ts": {
+      "hash": "203c34df54026706186205bad2462537a9014acc07e13ef680746e93e754f435",
+      "bytes": 4756
+    },
+    "src/plugins/hermes/HermesModelRouter.ts": {
+      "hash": "3179fb6fec562f91e14c6d7abc57aca2e7f7e5fa3b29e12fa846a1df75e8e1cf",
+      "bytes": 6106
+    },
+    "src/plugins/hermes/HermesObservability.ts": {
+      "hash": "9c102d6a6b6be7faa8d3d2259c1f9f81a8331e92fd3d59aa99baedbd30aacb7c",
+      "bytes": 2368
+    },
+    "src/plugins/hermes/HermesPermissionManager.ts": {
+      "hash": "129cb28eefc217afa67ed5ce1a148b78708a2af3537ebd0f489e5c78a88ea822",
+      "bytes": 2686
+    },
+    "src/plugins/hermes/HermesPlanner.ts": {
+      "hash": "df9f8ed195e0e08c03b9beb6f1ba48339cb14a8bf7084ee67b9aa773c2438fb8",
+      "bytes": 4484
+    },
+    "src/plugins/hermes/HermesPolicy.ts": {
+      "hash": "d5b452b791cf32da218d99cb399dd8019ac34d08f8365ab12117815594b37c55",
+      "bytes": 4484
+    },
+    "src/plugins/hermes/HermesRealityBridge.ts": {
+      "hash": "ecb3d35282a21da3415354b93f6da9c4a731ccb9b96df20c0fd7d58a118acadc",
+      "bytes": 2210
+    },
+    "src/plugins/hermes/HermesRollbackManager.ts": {
+      "hash": "d8329b7e1c28e7928f3b425c633d9e31c985215895d85247f7af36eb40cef4fa",
+      "bytes": 1790
+    },
+    "src/plugins/hermes/HermesSessionManager.ts": {
+      "hash": "0175b4c49725842144de68da9a57294ffdb40ba1c5718f159f9b31d9d5bf32c3",
+      "bytes": 1965
+    },
+    "src/plugins/hermes/HermesTaskGraph.ts": {
+      "hash": "80c199ed917a3c33b32a5cee253fc6b68e2ff0885f79ca1c1fa37f01ef485dad",
+      "bytes": 3751
+    },
+    "src/plugins/hermes/HermesToolRegistry.ts": {
+      "hash": "bb7e5b4d4f0962854399505e78d994003700502ff91d89c87fedc7554f46bbd6",
+      "bytes": 5803
+    },
+    "src/plugins/hermes/HermesTypes.ts": {
+      "hash": "8b45fe184d14a6fef3fb861306ce327f59e4f3d669c4fa76d5941cc8a28a25d0",
+      "bytes": 4063
+    },
+    "src/plugins/hermes/index.ts": {
+      "hash": "084a9944941445691df5389709e2773b307d6d8e4b20a8d5baedf97be98c808e",
+      "bytes": 1323
+    },
+    "src/plugins/trust/CapabilityRegistry.ts": {
+      "hash": "c0b85dde47cbe2bebc0bc40dabce8c85b2708dade81d8ee2065cda87e066636b",
+      "bytes": 2864
+    },
+    "src/plugins/trust/ClaimRegistry.ts": {
+      "hash": "627f7840a2e96ba1d0ba99f61117f8bd11de59f6a466fd71ba93673228fa1cf1",
+      "bytes": 7822
+    },
+    "src/plugins/trust/CodeRealityVerifier.ts": {
+      "hash": "9a2f4e260783ddccd550bff5bbb3c4a0ddf780e11cccb99529f1dd0a1893984a",
+      "bytes": 3480
+    },
+    "src/plugins/trust/ContradictionEngine.ts": {
+      "hash": "8de3af9208c7d9475fe9b44dfe773841cb79e2c4816c1c2301dc1654795f5290",
+      "bytes": 6332
+    },
+    "src/plugins/trust/EvidenceGraph.ts": {
+      "hash": "a260ebfb11f37a694342f06b109c9e0f66f66f83bcebaa392415910a52642e6f",
+      "bytes": 4215
+    },
+    "src/plugins/trust/FreshnessEngine.ts": {
+      "hash": "94fa956c279deab454ebb85a3eefb1949dff71baaaa88508762d6174f8ef9324",
+      "bytes": 2806
+    },
+    "src/plugins/trust/MemorySafetyEngine.ts": {
+      "hash": "1ffdf6c74b94b1dfa409c6964c305bf1cf9541c0c8e4ae1575ef28e3874d817b",
+      "bytes": 3181
+    },
+    "src/plugins/trust/MultiModelChecker.ts": {
+      "hash": "b689cac9055be204eb362f5631ce2d15910a3661843d5d3e6bba92bd527852de",
+      "bytes": 3109
+    },
+    "src/plugins/trust/SecurityGuards.ts": {
+      "hash": "9e9c6330e1e1dfbdebc0d156351339ed428f7b3b79042f6deacb3d3c081aa5d9",
+      "bytes": 7279
+    },
+    "src/plugins/trust/SourceTrustEngine.ts": {
+      "hash": "c4c1665a60f827934cdfd350452e4fc5f271002578b1857daf2ca74f5a3f0eae",
+      "bytes": 5416
+    },
+    "src/plugins/trust/TrustFabric.ts": {
+      "hash": "7bb83f3cdbba3b76a8e96313e41d3af46c500979667b695f869f6fbcbec6f810",
+      "bytes": 16714
+    },
+    "src/plugins/trust/TrustPolicyEngine.ts": {
+      "hash": "5cf5068d4aac20353703b78bffeb64e7bc0411489b451b3d3b1ddfefacc379e7",
+      "bytes": 8805
+    },
+    "src/plugins/trust/TrustTypes.ts": {
+      "hash": "9d7436f1c5caa96ae1af8c8f2915027df61d031f6f2dc2818b42f8ec9b609fb9",
+      "bytes": 8817
+    },
+    "src/plugins/trust/TrustUIComponents.tsx": {
+      "hash": "95d0676126a1d77926e840f334b7b2a8bb046ab9126294db3134d29378faa25a",
+      "bytes": 9045
+    },
+    "src/plugins/trust/index.ts": {
+      "hash": "07305310f38c92bed0d936923e43fcffc989012829d0aac25b13abc4fa6ce347",
+      "bytes": 1117
+    },
+    "src/product-intelligence/BrowserRealityAgent.ts": {
+      "hash": "7ab1ec67e4c10d3ea9d66506e744c7afb9213edd5a2bea6eede208d0ea9e62af",
+      "bytes": 1234
+    },
+    "src/product-intelligence/ProductGraph.ts": {
+      "hash": "3d450ba4f9fdac2030b88a5a1140d8423ea497b676407fad28a94d0d353c34f5",
+      "bytes": 1602
+    },
+    "src/product-intelligence/RealityScoreEngine.ts": {
+      "hash": "c8727cfdb8d1332e40006be4a8d137014c31fffba2da057872c1eb2f9175e8f8",
+      "bytes": 2371
+    },
+    "src/product-intelligence/UniversalProductIntelligenceEngine.ts": {
+      "hash": "018db52e6a57b65a7c76f8357874ae4b74a6d3d1caf84fa0fb7c45703e305482",
+      "bytes": 2595
+    },
+    "src/product-intelligence/uir/UIR2.ts": {
+      "hash": "8c02b75cc2a99b7e0ff4e7c74611fdfe82dda5571361630eb8f8cdbe7fd6e5cd",
+      "bytes": 3569
+    },
+    "src/reality/BenchmarkGenerator.ts": {
+      "hash": "b6644244188851484b163ad12be29cd23aabd4e3f3766fc60d78598171ec5167",
+      "bytes": 5585
+    },
+    "src/reality/BenchmarkIsolation.ts": {
+      "hash": "697dda852c482d21d5d07020dcf69e0fc679eac4acadba8e9607da2afa239339",
+      "bytes": 2337
+    },
+    "src/reality/BenchmarkReplay.ts": {
+      "hash": "691bbb9d7dc52c97ee04daf4f922b6f9ddb46a5d53a63f1ea890fdfc6a0a5c71",
+      "bytes": 1159
+    },
+    "src/reality/BlindBenchmark.ts": {
+      "hash": "377afea293a0c23dc5d5fb193c750902c3a12c0d1dd95d379acd7b892b91bc4c",
+      "bytes": 1874
+    },
+    "src/reality/ClaimRealityEngine.ts": {
+      "hash": "91954ca75c04cbaa43e276d04cbb8919a622f99d2575b99bc9374cd3c31cf778",
+      "bytes": 1692
+    },
+    "src/reality/ClaimTamperDetector.ts": {
+      "hash": "6cf2b51841ea42f24b6becfde049c0241096852f579848ad985b8555eeee4629",
+      "bytes": 1929
+    },
+    "src/reality/EvidenceCollector.ts": {
+      "hash": "e17c390f24024188d567cd5ae15447bd31d748e8e3b506b6ef463d3b450ea326",
+      "bytes": 2429
+    },
+    "src/reality/GeneralizationEngine.ts": {
+      "hash": "302120087031e546a52384755a00a45505b1cf631b1a54cfba5d901144ca0745",
+      "bytes": 1720
+    },
+    "src/reality/HumanInterventionTracker.ts": {
+      "hash": "746f031f3482880fed2e7334599fea6c857211c5c58f87163285f2efc660c632",
+      "bytes": 1794
+    },
+    "src/reality/IndependentVerifier.ts": {
+      "hash": "8a666bccba0b0a1f355b40f3501d97b29c338c83afbc906ed7858ec00ad475a2",
+      "bytes": 2865
+    },
+    "src/reality/LearningDeltaEngine.ts": {
+      "hash": "f7456b2eba92c667144d50004c3a739fe1331c7be176495719179cf14fabffed",
+      "bytes": 2125
+    },
+    "src/reality/MissionComparison.ts": {
+      "hash": "477340f72f2cc20a48f21f9a04db39819a6b650a255d4342ac99a84067da9faa",
+      "bytes": 1553
+    },
+    "src/reality/RealityCertificate.ts": {
+      "hash": "817221bf7b8556ca99a075622323067a5d0a443202d5ae23735f823cc2bd5a5a",
+      "bytes": 3172
+    },
+    "src/reality/RealityEvidenceStore.ts": {
+      "hash": "9da6222498374e82128bbf961395d1e4984621042407c0691ec6017682ac4ece",
+      "bytes": 1724
+    },
+    "src/reality/RealityKernel.ts": {
+      "hash": "5c77b8fd6cb26700ae03da380c1d83d1b56b19a47303ba94546741f2aef4ba19",
+      "bytes": 2297
+    },
+    "src/reality/RealityLab.ts": {
+      "hash": "21613fab5867520cc35c2cc707f8ab216affeb64893583b5827b15c85dbdacf0",
+      "bytes": 5481
+    },
+    "src/reality/RealityMission.ts": {
+      "hash": "48d9ff6a16fa575ad569c7703f8315ca9c495c29f7734345c9b6887f0c4344b1",
+      "bytes": 1310
+    },
+    "src/reality/RealityPolicy.ts": {
+      "hash": "a461cbbbb7d1485f2a16a1c7461aa9b0808a4306fde23c7719659c4856c87985",
+      "bytes": 2498
+    },
+    "src/reality/RealityScorer.ts": {
+      "hash": "b0f8ca71fc52a65d8469a653ca0d58cf7ed4df0800793a21ec2287e3ce462105",
+      "bytes": 2792
+    }
+  }
+}

@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace "io.antigravity.os"
+    compileSdkVersion 34
+    defaultConfig {
+        applicationId "io.antigravity.os"
+        minSdkVersion 24
+        targetSdkVersion 34
+        versionCode 70000
+        versionName "7.0.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+    implementation 'androidx.core:core-splashscreen:1.0.1'
+}

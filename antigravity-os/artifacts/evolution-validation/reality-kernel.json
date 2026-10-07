@@ -1,0 +1,8 @@
+{
+  "claimId": "CLM_FAKE_01",
+  "statement": "Candidate C improves performance by 50% with zero bugs",
+  "subsystem": "PERF",
+  "status": "FAILED",
+  "evidenceId": "ev_1787646344853_l6hd",
+  "verificationDetails": "Probe failed: Candidate C has 2 regressions and 50% security score"
+}

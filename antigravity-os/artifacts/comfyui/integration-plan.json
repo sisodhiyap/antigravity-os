@@ -1,0 +1,22 @@
+{
+  "extension": "ComfyUI Local Generative Media Fabric",
+  "version": "1.0.0-COMFYUI-V7",
+  "integrationPattern": "Plugin & Adapter Protocol",
+  "targetDirectory": "src/plugins/comfyui/",
+  "executionFlow": [
+    "USER_REQUEST",
+    "HERMES_MEDIA_DIRECTOR",
+    "VRAM_GOVERNOR_CHECK",
+    "WORKFLOW_COMPILATION",
+    "SANDBOX_VALIDATION",
+    "LOCAL_COMFYUI_EXECUTE",
+    "OUTPUT_FORMAT_PROCESSING",
+    "PROVENANCE_TAGGING",
+    "REALITY_EVIDENCE_RECORDING",
+    "RETURN_TO_OPERATOR"
+  ],
+  "verificationSuites": [
+    "scripts/verify-comfyui-fabric.ts",
+    "scripts/independent-comfyui-verifier.ts"
+  ]
+}

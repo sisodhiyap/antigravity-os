@@ -1,0 +1,6 @@
+{
+  "isolationVerified": true,
+  "sandboxesSpawned": 2,
+  "sandboxesTeardown": 2,
+  "leakageDetected": false
+}

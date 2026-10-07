@@ -1,0 +1,76 @@
+{
+  "offlineitems": [
+    {
+      "id": "id_x8spwmc",
+      "created_at": "2026-08-25T07:14:25.775Z",
+      "updated_at": "2026-08-25T07:14:25.775Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_h2819yk",
+      "created_at": "2026-08-25T07:14:25.813Z",
+      "updated_at": "2026-08-25T07:14:25.813Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    },
+    {
+      "id": "id_q7vxrvo",
+      "created_at": "2026-08-25T07:16:01.957Z",
+      "updated_at": "2026-08-25T07:16:01.957Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_7xwxpcl",
+      "created_at": "2026-08-25T07:16:01.993Z",
+      "updated_at": "2026-08-25T07:16:01.993Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    }
+  ],
+  "syncqueues": [
+    {
+      "id": "id_dacu91e",
+      "created_at": "2026-08-25T07:14:25.802Z",
+      "updated_at": "2026-08-25T07:14:25.802Z",
+      "title": "Initial SyncQueue Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for SyncQueue"
+    }
+  ],
+  "cachemanifests": [
+    {
+      "id": "id_mles661",
+      "created_at": "2026-08-25T07:14:25.803Z",
+      "updated_at": "2026-08-25T07:14:25.803Z",
+      "title": "Initial CacheManifest Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for CacheManifest"
+    }
+  ],
+  "userpreferences": [
+    {
+      "id": "id_nq5q0km",
+      "created_at": "2026-08-25T07:14:25.804Z",
+      "updated_at": "2026-08-25T07:14:25.804Z",
+      "title": "Initial UserPreference Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for UserPreference"
+    }
+  ],
+  "clientstorages": [
+    {
+      "id": "id_xmhikzo",
+      "created_at": "2026-08-25T07:14:25.805Z",
+      "updated_at": "2026-08-25T07:14:25.805Z",
+      "title": "Initial ClientStorage Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for ClientStorage"
+    }
+  ]
+}

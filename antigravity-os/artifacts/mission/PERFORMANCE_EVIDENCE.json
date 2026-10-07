@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-08-25T07:29:53.749Z",
+  "startupTimeMs": 2,
+  "avgApiLatencyMs": 0.75,
+  "minApiLatencyMs": 0,
+  "maxApiLatencyMs": 4,
+  "memoryRssMb": 82,
+  "heapUsedMb": 10.65,
+  "databaseQueryLatencyMs": 0.42,
+  "aiInferenceSpeedTokPerSec": 30.7,
+  "dockerMemoryFootprintMb": 42.5
+}

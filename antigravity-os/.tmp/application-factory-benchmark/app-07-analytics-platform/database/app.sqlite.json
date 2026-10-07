@@ -1,0 +1,76 @@
+{
+  "datasets": [
+    {
+      "id": "id_pyyvess",
+      "created_at": "2026-08-25T07:14:09.090Z",
+      "updated_at": "2026-08-25T07:14:09.090Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_7vyluez",
+      "created_at": "2026-08-25T07:14:09.120Z",
+      "updated_at": "2026-08-25T07:14:09.120Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    },
+    {
+      "id": "id_04hax3n",
+      "created_at": "2026-08-25T07:15:45.326Z",
+      "updated_at": "2026-08-25T07:15:45.326Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_zhk28el",
+      "created_at": "2026-08-25T07:15:45.355Z",
+      "updated_at": "2026-08-25T07:15:45.355Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    }
+  ],
+  "datarecords": [
+    {
+      "id": "id_oiwx3s8",
+      "created_at": "2026-08-25T07:14:09.115Z",
+      "updated_at": "2026-08-25T07:14:09.115Z",
+      "title": "Initial DataRecord Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for DataRecord"
+    }
+  ],
+  "kpidefinitions": [
+    {
+      "id": "id_qacrg8q",
+      "created_at": "2026-08-25T07:14:09.116Z",
+      "updated_at": "2026-08-25T07:14:09.116Z",
+      "title": "Initial KpiDefinition Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for KpiDefinition"
+    }
+  ],
+  "categorymetrics": [
+    {
+      "id": "id_co6y3aq",
+      "created_at": "2026-08-25T07:14:09.116Z",
+      "updated_at": "2026-08-25T07:14:09.116Z",
+      "title": "Initial CategoryMetric Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for CategoryMetric"
+    }
+  ],
+  "exportjobs": [
+    {
+      "id": "id_px34sem",
+      "created_at": "2026-08-25T07:14:09.117Z",
+      "updated_at": "2026-08-25T07:14:09.117Z",
+      "title": "Initial ExportJob Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for ExportJob"
+    }
+  ]
+}

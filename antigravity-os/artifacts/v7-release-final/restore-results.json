@@ -1,0 +1,11 @@
+{
+  "backupId": "bkp_v7_1787716778300_00a6e53b",
+  "restoredAt": 1787716778300,
+  "durationMs": 850,
+  "measuredRtoSeconds": 0.85,
+  "measuredRpoSeconds": 0,
+  "integrityVerified": true,
+  "databaseIntact": true,
+  "evidenceIntact": true,
+  "failedComponents": []
+}

@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-08-25T07:29:37.369Z",
+  "system": {
+    "os": "Windows_NT 10.0.26200 (x64)",
+    "platform": "win32",
+    "cpu": "AMD Ryzen 9 6900HS with Radeon Graphics         (16 Cores)",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU (6.0 GB VRAM)",
+    "vram": "6.0 GB GDDR6",
+    "ramTotalGB": 15.24,
+    "ramFreeGB": 2.9,
+    "node": "v24.16.0",
+    "npm": "11.16.0",
+    "python": "Python 3.13.14",
+    "docker": "Docker version 29.7.2, build a7dcaa6",
+    "gitCommitSha": "7e79029e6897f05671299ac475f730b7276aed17"
+  },
+  "aiEngines": {
+    "ollama": {
+      "status": "LIVE (HTTP 200)",
+      "gateway": "http://127.0.0.1:11434",
+      "modelCount": 6,
+      "models": [
+        {
+          "name": "qwen2.5-coder:14b",
+          "size": "8.99 GB",
+          "param": "14.8B"
+        },
+        {
+          "name": "minicpm-v:latest",
+          "size": "5.47 GB",
+          "param": "7.6B"
+        },
+        {
+          "name": "llama3.1:latest",
+          "size": "4.92 GB",
+          "param": "8.0B"
+        },
+        {
+          "name": "nomic-embed-text:latest",
+          "size": "0.27 GB",
+          "param": "137M"
+        },
+        {
+          "name": "deepseek-r1:7b",
+          "size": "4.68 GB",
+          "param": "7.6B"
+        },
+        {
+          "name": "qwen2.5-coder:7b",
+          "size": "4.68 GB",
+          "param": "7.6B"
+        }
+      ]
+    },
+    "airllm": {
+      "status": "NOT AVAILABLE (Port 8000 unstarted; cascading to Ollama)",
+      "layerStreamingPolicy": "Bypassed when host free RAM < 4.0 GB (Cascades to Ollama)"
+    }
+  },
+  "workspace": {
+    "root": "C:\\D drive\\Antigravity\\antigravity-os",
+    "applicationTarget": "C:\\D drive\\Antigravity\\creative-agency-pm",
+    "openPorts": [
+      3000,
+      3400,
+      11434
+    ],
+    "activeApplications": [
+      "antigravity-os",
+      "creative-agency-pm"
+    ],
+    "secretsExposed": 0
+  }
+}

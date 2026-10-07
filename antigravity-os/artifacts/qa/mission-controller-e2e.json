@@ -1,0 +1,8 @@
+{
+  "e2eAppsTested": [
+    "HabitTracker",
+    "MissionFlow",
+    "FreelanceExpenseOS"
+  ],
+  "lifecyclePass": true
+}

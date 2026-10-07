@@ -1,0 +1,7 @@
+{
+  "release-baseline.json": "cd7fe6220988c1dbc52ce262c361de3d7cf0fd6a584ad8fd5d0eb907e93a36b3",
+  "environment.json": "274e86500a76ff6bb92bca2c33c1871ddd3cfae03cfd6c96f6b827d2235ef1ab",
+  "capability-registry.json": "699243b32040984ad8393ec3e30df679ba498555d581ba24c9f65b9169787795",
+  "model-registry.json": "74cc42c2f223854f6fccdf2ba7328777a27927ad8e9969bd36adf48fb5b2cf8c",
+  "release-manifest.json": "92e62f2582a2c4dc84ee3721078186de927e5edd67bd229c6c066a1d03bf78fb"
+}

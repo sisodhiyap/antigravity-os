@@ -1,0 +1,167 @@
+{
+  "timestamp": "2026-08-25T07:59:28.010Z",
+  "totalVectors": 20,
+  "blockedVectors": 20,
+  "results": [
+    {
+      "id": 1,
+      "attack": "SQL Injection in Search Query",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 200",
+      "status": "PASS",
+      "defense": "Parameterized queries; 0 data corruption"
+    },
+    {
+      "id": 2,
+      "attack": "Reflected XSS in Search Query",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 200",
+      "status": "PASS",
+      "defense": "Entity sanitization & JSON isolation"
+    },
+    {
+      "id": 3,
+      "attack": "Stored XSS in Comments Stream",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 201",
+      "status": "PASS",
+      "defense": "Database JSON isolation"
+    },
+    {
+      "id": 4,
+      "attack": "Linux Path Traversal (/../../etc/passwd)",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 403",
+      "status": "PASS",
+      "defense": "Safe root normalization shield"
+    },
+    {
+      "id": 5,
+      "attack": "Windows Path Traversal (..\\..\\windows)",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 403",
+      "status": "PASS",
+      "defense": "Backslash metacharacter block"
+    },
+    {
+      "id": 6,
+      "attack": "Environment File Direct Access (/.env)",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 403",
+      "status": "PASS",
+      "defense": "Global dotfile shielding"
+    },
+    {
+      "id": 7,
+      "attack": "Git Metadata Direct Access (/.git/config)",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 403",
+      "status": "PASS",
+      "defense": "Protected hidden directory guard"
+    },
+    {
+      "id": 8,
+      "attack": "Raw TCP Socket Static Breakout",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 403",
+      "status": "PASS",
+      "defense": "Raw request-target dot check"
+    },
+    {
+      "id": 9,
+      "attack": "Forged JWT Session Token",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 401",
+      "status": "PASS",
+      "defense": "Constant-time HMAC check failure"
+    },
+    {
+      "id": 10,
+      "attack": "Expired Session Timestamp Replay",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 401",
+      "status": "PASS",
+      "defense": "Expired epoch verification"
+    },
+    {
+      "id": 11,
+      "attack": "RBAC Horizontal Privilege Escalation",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 400",
+      "status": "PASS",
+      "defense": "Role check barrier"
+    },
+    {
+      "id": 12,
+      "attack": "IDOR Direct Object Access",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 404",
+      "status": "PASS",
+      "defense": "Non-existent resource rejection"
+    },
+    {
+      "id": 13,
+      "attack": "Brute-Force Credential Stuffing",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 401",
+      "status": "PASS",
+      "defense": "Constant-time PBKDF2 rejection"
+    },
+    {
+      "id": 14,
+      "attack": "Command Injection in Upload Filename",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 201",
+      "status": "PASS",
+      "defense": "Stored as string literal; no shell exec"
+    },
+    {
+      "id": 15,
+      "attack": "CSRF Cross-Origin Spoofing",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 401",
+      "status": "PASS",
+      "defense": "Strict origin & credential validation"
+    },
+    {
+      "id": 16,
+      "attack": "Secret Exposure in Health Telemetry",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 200",
+      "status": "PASS",
+      "defense": "Sanitized health payload"
+    },
+    {
+      "id": 17,
+      "attack": "Database File Direct Read Attempt",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 404",
+      "status": "PASS",
+      "defense": "Protected data directory shield"
+    },
+    {
+      "id": 18,
+      "attack": "Open Redirect Parameter Manipulation",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 200",
+      "status": "PASS",
+      "defense": "Ignored redirect parameter"
+    },
+    {
+      "id": 19,
+      "attack": "Multi-Tenant Isolation Breach",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 200",
+      "status": "PASS",
+      "defense": "Scoped query handler"
+    },
+    {
+      "id": 20,
+      "attack": "Malformed JSON Payload Handling",
+      "expected": "Blocked (4xx / Sanitized)",
+      "observed": "HTTP 400",
+      "status": "PASS",
+      "defense": "Safe JSON parse error barrier"
+    }
+  ]
+}

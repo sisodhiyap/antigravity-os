@@ -1,0 +1,37 @@
+{
+  "adrId": "adr_1787647690598",
+  "title": "Persistence Engine Selection",
+  "status": "ACCEPTED",
+  "context": "High-performance local SaaS",
+  "decision": "Modular Monolith (SQLite WAL + Express + React)",
+  "consequences": "Enables single-binary / lightweight Alpine container packaging with zero distributed networking failure modes.",
+  "evaluatedCandidates": [
+    {
+      "candidateName": "Modular Monolith (SQLite WAL + Express + React)",
+      "pattern": "MODULAR_MONOLITH",
+      "scores": {
+        "functionality": 10,
+        "security": 10,
+        "performance": 10,
+        "maintainability": 10,
+        "complexity": 9
+      },
+      "totalScore": 49,
+      "tradeoffs": "Optimal for local-first private workstation with sub-millisecond query latencies and zero cloud dependencies"
+    },
+    {
+      "candidateName": "Distributed Microservices (Postgres + Redis + Docker Swarm)",
+      "pattern": "MICROSERVICES",
+      "scores": {
+        "functionality": 9,
+        "security": 8,
+        "performance": 7,
+        "maintainability": 6,
+        "complexity": 4
+      },
+      "totalScore": 34,
+      "tradeoffs": "Higher operational overhead, network latency penalties, and unnecessary resource footprint for local deployment"
+    }
+  ],
+  "timestamp": "2026-08-25T08:48:10.598Z"
+}

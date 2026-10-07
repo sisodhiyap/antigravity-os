@@ -1,0 +1,7 @@
+{
+  "bindingAddress": "127.0.0.1",
+  "listeningPort": 8188,
+  "publicExposure": false,
+  "unauthorizedOutboundTraffic": 0,
+  "status": "LOCAL_LOOPBACK_SECURED"
+}

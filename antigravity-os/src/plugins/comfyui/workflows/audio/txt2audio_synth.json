@@ -1,0 +1,29 @@
+{
+  "name": "ACE-Step Local Audio Synthesizer",
+  "workflowId": "wf_audio_synth",
+  "modality": "AUDIO",
+  "version": "1.0.0",
+  "nodes": {
+    "1": {
+      "inputs": {
+        "text": "{PROMPT}"
+      },
+      "class_type": "AudioCLIPEncode"
+    },
+    "2": {
+      "inputs": {
+        "seed": "{SEED}",
+        "steps": 50,
+        "duration": 10
+      },
+      "class_type": "AudioSampler"
+    },
+    "3": {
+      "inputs": {
+        "filename_prefix": "Antigravity_Audio",
+        "format": "wav"
+      },
+      "class_type": "SaveAudio"
+    }
+  }
+}

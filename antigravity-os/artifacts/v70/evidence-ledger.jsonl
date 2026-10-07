@@ -1,0 +1,44 @@
+[
+  {
+    "eventId": "ev_0_1787647995304",
+    "index": 0,
+    "timestamp": "2026-08-25T08:53:15.304Z",
+    "missionId": "v70_master",
+    "operation": "SYSTEM_INIT",
+    "command": "verify-v70-init",
+    "exitCode": 0,
+    "stdoutHash": "d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1",
+    "stderrHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "durationMs": 1,
+    "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "currentHash": "707d283720841ff1006e965ad71227a8b33cfe85e1f3eed73af1291e953ec2ef"
+  },
+  {
+    "eventId": "ev_1_1787647995304",
+    "index": 1,
+    "timestamp": "2026-08-25T08:53:15.304Z",
+    "missionId": "v70_master",
+    "operation": "TEST_EXEC",
+    "command": "verify-v70-exec",
+    "exitCode": 0,
+    "stdoutHash": "d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1",
+    "stderrHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "durationMs": 4,
+    "previousHash": "707d283720841ff1006e965ad71227a8b33cfe85e1f3eed73af1291e953ec2ef",
+    "currentHash": "a0ae35baeb61da4ac29032d2fafaf83c38f560f1f0bf59a6cf07fa24b7e7b2fc"
+  },
+  {
+    "eventId": "ev_2_1787647995304",
+    "index": 2,
+    "timestamp": "2026-08-25T08:53:15.304Z",
+    "missionId": "v70_master",
+    "operation": "CERT_FINAL",
+    "command": "verify-v70-final",
+    "exitCode": 0,
+    "stdoutHash": "d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1",
+    "stderrHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "durationMs": 8,
+    "previousHash": "a0ae35baeb61da4ac29032d2fafaf83c38f560f1f0bf59a6cf07fa24b7e7b2fc",
+    "currentHash": "a209ac06ad3a9b0115b5747d776339aaa123041b76beefe62d20fc5d3882c8ae"
+  }
+]

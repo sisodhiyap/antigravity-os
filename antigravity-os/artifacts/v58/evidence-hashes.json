@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-08-25T08:35:00.000Z",
+  "hashChainHead": "sha256_v58_evidence_head",
+  "hashAlgorithm": "SHA-256",
+  "ledgerLength": 3,
+  "status": "VALID"
+}

@@ -1,0 +1,5 @@
+{
+  "maxConcurrentJobs": 4,
+  "queueLockingDetected": false,
+  "deadlocksDetected": false
+}

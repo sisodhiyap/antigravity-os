@@ -1,0 +1,15 @@
+{
+  "baselineId": "CAND_A_BASELINE",
+  "evaluatedCandidates": [
+    {
+      "candidateId": "CAND_B_OPTIMIZED",
+      "isImprovement": true,
+      "isSecurityDegraded": false,
+      "isRegressionDetected": false,
+      "latencyDeltaPercent": 32.93,
+      "verdict": "ELIGIBLE_FOR_PROMOTION"
+    }
+  ],
+  "selectedWinnerId": "CAND_B_OPTIMIZED",
+  "justification": "Candidate CAND_B_OPTIMIZED demonstrated verified 32.93% latency reduction with 0 regressions and identical 100% security score."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "APK_BUILD_ENVIRONMENT_UNAVAILABLE",
+  "packageId": "io.antigravity.os",
+  "version": "7.0.0",
+  "environment": {
+    "androidHome": null,
+    "javaHome": null,
+    "gradleAvailable": false,
+    "sdkAvailable": false
+  },
+  "outputApkPath": null,
+  "timestamp": "2026-08-26T07:26:08.661Z",
+  "notes": "Android SDK / JDK build tools not configured in current OS environment. Android project definitions and wrapper manifests generated at src/mobile/android/ for build in Android Studio or CI/CD."
+}

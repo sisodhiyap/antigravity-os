@@ -1,0 +1,14 @@
+{
+  "analyzedFilesCount": 2,
+  "extractedRoutesCount": 18,
+  "extractedTablesCount": 9,
+  "technicalDebtRisks": [
+    "Unindexed foreign key on legacy audit table",
+    "Deprecated CSS utility in navigation header"
+  ],
+  "securityVulnerabilitiesDetected": [],
+  "migrationRecommendations": [
+    "Migrate inline queries to parameterized prepared statements",
+    "Adopt strict TypeScript Zero-Any schema typing"
+  ]
+}

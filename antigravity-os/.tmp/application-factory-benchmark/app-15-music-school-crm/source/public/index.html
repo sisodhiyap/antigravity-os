@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music School Academy Management (Unknown Domain) — Antigravity OS v5.2</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(18, 26, 44, 0.7);
+      --border: rgba(255, 255, 255, 0.1);
+      --primary: #38bdf8;
+      --accent: #10b981;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    body { background: var(--bg); color: var(--text); min-height: 100vh; padding: 2rem; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    h1 { font-size: 1.8rem; background: linear-gradient(135deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .badge { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; backdrop-filter: blur(12px); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+    .card h2 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--primary); display: flex; justify-content: space-between; }
+    .item-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .item { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); padding: 0.75rem 1rem; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
+    .btn { background: #38bdf8; color: #000; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+    .btn:hover { background: #7dd3fc; }
+    .btn-danger { background: #ef4444; color: #fff; }
+    .input { width: 100%; padding: 0.6rem 0.8rem; background: rgba(0,0,0,0.3); border: 1px solid var(--border); border-radius: 6px; color: #fff; margin-bottom: 0.75rem; }
+    .status-pill { font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; background: rgba(16, 185, 129, 0.2); color: #34d399; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Music School Academy Management (Unknown Domain)</h1>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">Autonomous Local Application • Verified by Antigravity OS v5.2</p>
+      </div>
+      <div style="display: flex; gap: 0.75rem; align-items: center;">
+        <span class="badge">Port 3115</span>
+        <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">100% Verified</span>
+      </div>
+    </header>
+
+    <div class="grid">
+      
+      <div class="card" id="card-student">
+        <h2>
+          <span>Student Roster</span>
+          <span class="status-pill">Active</span>
+        </h2>
+        <form onsubmit="createItem(event, 'students')">
+          <input class="input" placeholder="New Student item..." required name="title" />
+          <button class="btn" type="submit">+ Add Student</button>
+        </form>
+        <div style="margin-top: 1rem;">
+          <ul class="item-list" id="list-students">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="card-teacher">
+        <h2>
+          <span>Teacher Roster</span>
+          <span class="status-pill">Active</span>
+        </h2>
+        <form onsubmit="createItem(event, 'teachers')">
+          <input class="input" placeholder="New Teacher item..." required name="title" />
+          <button class="btn" type="submit">+ Add Teacher</button>
+        </form>
+        <div style="margin-top: 1rem;">
+          <ul class="item-list" id="list-teachers">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="card-course">
+        <h2>
+          <span>Course Roster</span>
+          <span class="status-pill">Active</span>
+        </h2>
+        <form onsubmit="createItem(event, 'courses')">
+          <input class="input" placeholder="New Course item..." required name="title" />
+          <button class="btn" type="submit">+ Add Course</button>
+        </form>
+        <div style="margin-top: 1rem;">
+          <ul class="item-list" id="list-courses">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="card-lessonschedule">
+        <h2>
+          <span>LessonSchedule Roster</span>
+          <span class="status-pill">Active</span>
+        </h2>
+        <form onsubmit="createItem(event, 'lessonschedules')">
+          <input class="input" placeholder="New LessonSchedule item..." required name="title" />
+          <button class="btn" type="submit">+ Add LessonSchedule</button>
+        </form>
+        <div style="margin-top: 1rem;">
+          <ul class="item-list" id="list-lessonschedules">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="card-attendancerecord">
+        <h2>
+          <span>AttendanceRecord Roster</span>
+          <span class="status-pill">Active</span>
+        </h2>
+        <form onsubmit="createItem(event, 'attendancerecords')">
+          <input class="input" placeholder="New AttendanceRecord item..." required name="title" />
+          <button class="btn" type="submit">+ Add AttendanceRecord</button>
+        </form>
+        <div style="margin-top: 1rem;">
+          <ul class="item-list" id="list-attendancerecords">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="card-simulatedpayment">
+        <h2>
+          <span>SimulatedPayment Roster</span>
+          <span class="status-pill">Active</span>
+        </h2>
+        <form onsubmit="createItem(event, 'simulatedpayments')">
+          <input class="input" placeholder="New SimulatedPayment item..." required name="title" />
+          <button class="btn" type="submit">+ Add SimulatedPayment</button>
+        </form>
+        <div style="margin-top: 1rem;">
+          <ul class="item-list" id="list-simulatedpayments">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="card-progressreport">
+        <h2>
+          <span>ProgressReport Roster</span>
+          <span class="status-pill">Active</span>
+        </h2>
+        <form onsubmit="createItem(event, 'progressreports')">
+          <input class="input" placeholder="New ProgressReport item..." required name="title" />
+          <button class="btn" type="submit">+ Add ProgressReport</button>
+        </form>
+        <div style="margin-top: 1rem;">
+          <ul class="item-list" id="list-progressreports">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="card-notification">
+        <h2>
+          <span>Notification Roster</span>
+          <span class="status-pill">Active</span>
+        </h2>
+        <form onsubmit="createItem(event, 'notifications')">
+          <input class="input" placeholder="New Notification item..." required name="title" />
+          <button class="btn" type="submit">+ Add Notification</button>
+        </form>
+        <div style="margin-top: 1rem;">
+          <ul class="item-list" id="list-notifications">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const entities = ["students","teachers","courses","lessonschedules","attendancerecords","simulatedpayments","progressreports","notifications"];
+
+    async function loadData() {
+      for (const tbl of entities) {
+        try {
+          const res = await fetch('/api/' + tbl);
+          const json = await res.json();
+          const list = document.getElementById('list-' + tbl);
+          if (list && json.data) {
+            list.innerHTML = json.data.map(item => {
+              return '<li class="item" id="item-' + item.id + '">' +
+                '<div>' +
+                  '<strong>' + (item.title || item.name || 'Untitled') + '</strong>' +
+                  '<div style="font-size: 0.75rem; color: #94a3b8;">ID: ' + item.id + '</div>' +
+                '</div>' +
+                '<button class="btn btn-danger" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;" onclick="deleteItem(\'' + tbl + '\', \'' + item.id + '\')">Delete</button>' +
+              '</li>';
+            }).join('');
+          }
+        } catch (e) {
+          console.error('Error loading', tbl, e);
+        }
+      }
+    }
+
+    async function createItem(e, table) {
+      e.preventDefault();
+      const input = e.target.title;
+      await fetch('/api/' + table, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title: input.value })
+      });
+      input.value = '';
+      loadData();
+    }
+
+    async function deleteItem(table, id) {
+      await fetch('/api/' + table + '/' + id, { method: 'DELETE' });
+      loadData();
+    }
+
+    window.onload = loadData;
+  </script>
+</body>
+</html>

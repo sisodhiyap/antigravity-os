@@ -1,0 +1,37 @@
+{
+  "requirementId": "req_1787647690598",
+  "requirementStatement": "Add client deliverable approval workflow with audit log",
+  "affectedLayers": {
+    "uxComponents": [
+      "ApprovalModal",
+      "StatusBadge",
+      "ActivityTimeline"
+    ],
+    "databaseTables": [
+      "approvals",
+      "audit_log",
+      "projects"
+    ],
+    "apiEndpoints": [
+      "POST /api/approvals",
+      "GET /api/projects/:id/history"
+    ],
+    "rbacPermissions": [
+      "CAN_APPROVE_DELIVERABLE",
+      "CAN_VIEW_AUDIT"
+    ],
+    "securityPolicies": [
+      "REQUIRE_HMAC_SIGNATURE_ON_APPROVAL"
+    ],
+    "testsToUpdate": [
+      "test_approval_flow.spec.ts",
+      "test_rbac_approval.spec.ts"
+    ],
+    "documentationSections": [
+      "API_SPEC.md",
+      "USER_GUIDE.md"
+    ]
+  },
+  "ambiguityDetected": false,
+  "confidence": 0.96
+}

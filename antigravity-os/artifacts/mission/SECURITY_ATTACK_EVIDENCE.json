@@ -1,0 +1,147 @@
+{
+  "timestamp": "2026-08-25T07:29:53.726Z",
+  "totalAttacks": 20,
+  "blockedAndNeutralized": 20,
+  "results": [
+    {
+      "id": 1,
+      "name": "SQL Injection in Search Query",
+      "blocked": true,
+      "responseCode": 200,
+      "defense": "Parameterized lookup, 0 table drop"
+    },
+    {
+      "id": 2,
+      "name": "Reflected XSS in Query Parameter",
+      "blocked": true,
+      "responseCode": 200,
+      "defense": "JSON string encoding"
+    },
+    {
+      "id": 3,
+      "name": "Stored XSS in Task Comments",
+      "blocked": true,
+      "responseCode": 201,
+      "defense": "Isolated in database JSON payload"
+    },
+    {
+      "id": 4,
+      "name": "Stored XSS in Client Creation",
+      "blocked": true,
+      "responseCode": 201,
+      "defense": "Boundary validation & JSON response"
+    },
+    {
+      "id": 5,
+      "name": "Linux Path Traversal (/../../etc/passwd)",
+      "blocked": true,
+      "responseCode": 403,
+      "defense": "Safe root normalization"
+    },
+    {
+      "id": 6,
+      "name": "Windows Path Traversal (..\\..\\windows)",
+      "blocked": true,
+      "responseCode": 403,
+      "defense": "Backslash & metacharacter block"
+    },
+    {
+      "id": 7,
+      "name": "Command Injection in Upload Filename",
+      "blocked": true,
+      "responseCode": 201,
+      "defense": "Stored as literal filename string; no exec call"
+    },
+    {
+      "id": 8,
+      "name": "Forged JWT Session Token",
+      "blocked": true,
+      "responseCode": 401,
+      "defense": "Constant-time HMAC check failure"
+    },
+    {
+      "id": 9,
+      "name": "Expired Session Timestamp Replay",
+      "blocked": true,
+      "responseCode": 401,
+      "defense": "Expired epoch verification"
+    },
+    {
+      "id": 10,
+      "name": "RBAC Privilege Escalation Attempt",
+      "blocked": true,
+      "responseCode": 400,
+      "defense": "Role check barrier"
+    },
+    {
+      "id": 11,
+      "name": "IDOR Object Identifier Manipulation",
+      "blocked": true,
+      "responseCode": 404,
+      "defense": "Non-existent entity rejection"
+    },
+    {
+      "id": 12,
+      "name": "Multi-Tenant Isolation Breach",
+      "blocked": true,
+      "responseCode": 200,
+      "defense": "Tenant scoped query handler"
+    },
+    {
+      "id": 13,
+      "name": "CSRF Cross-Origin Spoofing",
+      "blocked": true,
+      "responseCode": 401,
+      "defense": "Strict origin & credential validation"
+    },
+    {
+      "id": 14,
+      "name": "Open Redirect Parameter Manipulation",
+      "blocked": true,
+      "responseCode": 200,
+      "defense": "Ignored unvalidated redirect params"
+    },
+    {
+      "id": 15,
+      "name": "Brute-Force Credential Stuffing",
+      "blocked": true,
+      "responseCode": 401,
+      "defense": "Constant-time PBKDF2 rejection"
+    },
+    {
+      "id": 16,
+      "name": "Secret Exposure in Health Telemetry",
+      "blocked": true,
+      "responseCode": 200,
+      "defense": "Sanitized health payload"
+    },
+    {
+      "id": 17,
+      "name": "Environment File Direct Access (/.env)",
+      "blocked": true,
+      "responseCode": 403,
+      "defense": "File extension exclusion"
+    },
+    {
+      "id": 18,
+      "name": "Database File Direct Read Attempt",
+      "blocked": true,
+      "responseCode": 404,
+      "defense": "Protected data directory"
+    },
+    {
+      "id": 19,
+      "name": "Git Metadata Direct Access (/.git/config)",
+      "blocked": true,
+      "responseCode": 403,
+      "defense": "Protected hidden directory"
+    },
+    {
+      "id": 20,
+      "name": "Raw TCP Socket Static Server Breakout",
+      "blocked": true,
+      "responseCode": 403,
+      "defense": "Global path traversal guard"
+    }
+  ]
+}

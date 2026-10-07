@@ -1,0 +1,95 @@
+[
+  {
+    "id": "contra_7ba12c9dba6f",
+    "claimA": {
+      "claimId": "claim_681defd16930e764",
+      "text": "ComfyUI is installed and operational.",
+      "type": "FACTUAL",
+      "status": "SUPPORTED",
+      "evidenceLevel": "E3",
+      "confidence": 0.8,
+      "riskCategory": "GENERAL",
+      "createdAt": 1787716077982,
+      "updatedAt": 1787716077982,
+      "sourceIds": [],
+      "evidenceIds": [
+        "ev_c2"
+      ],
+      "modelIds": [],
+      "verificationMethods": [],
+      "contradictions": [
+        "contra_7ba12c9dba6f"
+      ],
+      "freshness": {
+        "freshnessClass": "STABLE",
+        "lastVerified": 1787716077982,
+        "expirationPolicy": "STANDARD_30_DAYS",
+        "isStale": false
+      },
+      "owner": "ANTIGRAVITY_OPERATOR",
+      "projectId": "AGY_V7_CORE",
+      "hash": "4e5f4736cab4fb810ffd58659177a393a47ed00e253017ec1ba543b7232d69df",
+      "provenanceTrail": [
+        "Claim registered at 2026-08-26T03:47:57.982Z with status SUPPORTED"
+      ]
+    },
+    "claimB": {
+      "claimId": "claim_a73ec8890a6e510d",
+      "text": "ComfyUI is not installed on this system.",
+      "type": "FACTUAL",
+      "status": "CONTRADICTED",
+      "evidenceLevel": "E0",
+      "confidence": 0,
+      "riskCategory": "GENERAL",
+      "createdAt": 1787716077982,
+      "updatedAt": 1787716077982,
+      "sourceIds": [],
+      "evidenceIds": [],
+      "modelIds": [],
+      "verificationMethods": [],
+      "contradictions": [
+        "contra_7ba12c9dba6f"
+      ],
+      "freshness": {
+        "freshnessClass": "STABLE",
+        "lastVerified": 1787716077982,
+        "expirationPolicy": "STANDARD_30_DAYS",
+        "isStale": false
+      },
+      "owner": "ANTIGRAVITY_OPERATOR",
+      "projectId": "AGY_V7_CORE",
+      "hash": "0e0afcdd63560472fd1e1082a6d9a4e8cf9daee34f68e3fa78f9587e5ec57995",
+      "provenanceTrail": [
+        "Claim registered at 2026-08-26T03:47:57.982Z with status UNKNOWN"
+      ]
+    },
+    "sourcesA": [
+      {
+        "sourceId": "src_file_c4d42ec21725",
+        "location": "C:\\D drive\\Antigravity\\antigravity-os\\package.json",
+        "type": "LOCAL_FILE",
+        "publisher": "LOCAL_FILESYSTEM",
+        "timestamp": 1787716077981,
+        "retrievalTimestamp": 1787716077981,
+        "contentHash": "2330b1cdc465f26bd75a1921ba768d47b848bcfec1d5fb5501a06d83fcb797e4",
+        "origin": "LOCAL_STORAGE",
+        "integrity": "VERIFIED",
+        "freshness": "REAL_TIME",
+        "trustLevel": 0.95,
+        "isDirectRuntime": false
+      }
+    ],
+    "sourcesB": [],
+    "timestamps": {
+      "a": 1787716077982,
+      "b": 1787716077982
+    },
+    "authority": {
+      "aScore": 2.8499999999999996,
+      "bScore": 0
+    },
+    "evidence": [],
+    "resolution": "A_SUPPORTED",
+    "explanation": "Claim A has significantly higher source trust and evidence weight (2.85 vs 0.00)"
+  }
+]

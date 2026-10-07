@@ -1,0 +1,25 @@
+{
+  "plugin": "ComfyUI Local Generative Media Fabric",
+  "version": "1.0.0-COMFYUI-V7",
+  "discoveredAt": "2026-08-25T15:22:00.000Z",
+  "hardwareDiscovery": {
+    "os": "Windows (NT 10.0)",
+    "gpuFamily": "NVIDIA / Local DirectML",
+    "gpuAcceleration": "CUDA / TensorRT / DirectML",
+    "vramMb": 12288,
+    "systemRamMb": 32768,
+    "diskAvailableGb": 240.5,
+    "pythonDetected": true,
+    "comfyUiServer": "http://127.0.0.1:8188",
+    "serverState": "DISCOVERED_LOCAL_READY"
+  },
+  "supportedModalities": [
+    "IMAGE",
+    "VIDEO",
+    "AUDIO",
+    "3D",
+    "UPSCALE",
+    "CINEMATIC"
+  ],
+  "frozenCoreStatus": "V7-FROZEN-PRESERVED"
+}

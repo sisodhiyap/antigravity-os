@@ -1,0 +1,11 @@
+{
+  "nodeVersion": "v24.16.0",
+  "platform": "win32",
+  "arch": "x64",
+  "cwd": "C:\\D drive\\Antigravity\\antigravity-os",
+  "env": {
+    "NODE_ENV": "development",
+    "NEXT_PUBLIC_APP_URL": "http://localhost:3000"
+  },
+  "timestamp": "2026-08-26T09:05:16.099Z"
+}

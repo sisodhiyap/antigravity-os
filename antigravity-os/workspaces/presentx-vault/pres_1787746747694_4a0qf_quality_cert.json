@@ -1,0 +1,34 @@
+{
+  "certificateId": "cert_qual_1787746749911_wrzqc",
+  "projectId": "pres_1787746747694_4a0qf",
+  "projectTitle": "How AI is transforming creative agencies",
+  "projectHash": "2cb0995e7d8847bfc3471ca0f1bb7a87323552caf1d1c45785d7f71161044aff",
+  "presentationHash": "4b2f279d7de1b43667cfb0782930a701fe3a8607d70e0612a34f6b755c9d4057",
+  "slideCount": 10,
+  "creativeQuality": 94,
+  "trustQuality": 100,
+  "technicalIntegrity": 100,
+  "accessibilityScore": 98,
+  "exportScore": 98,
+  "decision": "APPROVED",
+  "repairCyclesCount": 0,
+  "modelsUsed": [
+    "ollama:llama3",
+    "ollama:mistral"
+  ],
+  "enginesUsed": [
+    "DeterministicQualityAuditor",
+    "VisualInspectionEngine",
+    "MultiModelCreativeJudge",
+    "LocalizedSelfRepairEngine",
+    "PresentXSourceRealityGate"
+  ],
+  "verifiedClaimsCount": 20,
+  "unverifiedClaimsCount": 0,
+  "warnings": [],
+  "roundtripResult": "PERFECT",
+  "roundtripLossPercentage": 0,
+  "exportFormat": "PPTX",
+  "timestamp": "2026-08-26T12:19:09.911Z",
+  "signature": "3a41f6c25aa5156ecb1577b8ec5a37de8495ccba6cf2c0ed364a6053e1797050"
+}

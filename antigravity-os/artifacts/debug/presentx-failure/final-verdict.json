@@ -1,0 +1,13 @@
+{
+  "verdict": "PROVEN",
+  "realExecutionVerified": true,
+  "testPrompt": "Create a professional 10-slide presentation explaining how AI is transforming creative agencies. Make it suitable for creative directors and agency leadership. Use verified facts, clear storytelling, premium visual design, speaker notes, and export it as an editable PPTX.",
+  "slideCountVerified": 10,
+  "openXmlPptxValid": true,
+  "htmlExportValid": true,
+  "jsonEvidenceValid": true,
+  "diagnosticsPassed": [
+    "npm run doctor:v7",
+    "npm run diagnose:presentx"
+  ]
+}

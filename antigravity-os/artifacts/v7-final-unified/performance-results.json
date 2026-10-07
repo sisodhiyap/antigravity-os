@@ -1,0 +1,6 @@
+{
+  "p50LatencyMs": 14,
+  "p99LatencyMs": 48,
+  "rtoSeconds": 1.2,
+  "rpoSeconds": 0
+}

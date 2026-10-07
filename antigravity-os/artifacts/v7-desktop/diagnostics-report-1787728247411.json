@@ -1,0 +1,168 @@
+{
+  "manifest": {
+    "product": "Antigravity OS Desktop Runtime",
+    "v7Version": "7.0.0-FROZEN-CORE",
+    "desktopVersion": "2.0.0-PROD-DESKTOP",
+    "generatedAt": "2026-08-26T07:10:47.411Z",
+    "nodeVersion": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "hardware": {
+    "timestamp": "2026-08-26T07:10:47.411Z",
+    "os": {
+      "platform": "win32",
+      "release": "10.0.26200",
+      "arch": "x64",
+      "status": "AVAILABLE"
+    },
+    "cpu": {
+      "model": "AMD Ryzen 9 6900HS with Radeon Graphics        ",
+      "cores": 16,
+      "speedMhz": 3294,
+      "status": "AVAILABLE"
+    },
+    "ram": {
+      "totalBytes": 16366272512,
+      "freeBytes": 3819089920,
+      "totalGb": 15.24,
+      "freeGb": 3.56,
+      "status": "DEGRADED"
+    },
+    "gpu": {
+      "renderer": "Integrated / Software Rasterizer",
+      "vramMb": 0,
+      "cudaAvailable": false,
+      "directMlAvailable": false,
+      "status": "DEGRADED",
+      "notes": "Hardware telemetry query fell back to safe defaults"
+    },
+    "disk": {
+      "workspacePath": "C:\\D drive\\Antigravity\\antigravity-os\\workspaces",
+      "accessible": true,
+      "status": "AVAILABLE"
+    },
+    "runtimes": {
+      "nodeVersion": "v24.16.0",
+      "pythonAvailable": true,
+      "pythonVersion": "Python 3.13.14",
+      "gitAvailable": true
+    },
+    "localAiEngines": {
+      "ollama": {
+        "status": "AVAILABLE",
+        "port": 11434,
+        "installedModels": [
+          "qwen2.5-coder:14b",
+          "minicpm-v:latest",
+          "llama3.1:latest",
+          "nomic-embed-text:latest",
+          "deepseek-r1:7b",
+          "qwen2.5-coder:7b"
+        ],
+        "notes": "Local Ollama daemon responsive"
+      },
+      "comfyui": {
+        "status": "AVAILABLE",
+        "port": 8188,
+        "workflowsAvailable": [
+          "text_to_image_sdxl",
+          "slide_hero_photorealistic",
+          "vector_diagram_flux"
+        ],
+        "notes": "ComfyUI Fabric virtual driver connected to local pipeline"
+      }
+    },
+    "v7Subsystems": {
+      "trustFabric": "AVAILABLE",
+      "hermesAgent": "AVAILABLE",
+      "realityKernel": "AVAILABLE",
+      "evidenceLedger": "AVAILABLE",
+      "presentxStudio": "AVAILABLE"
+    },
+    "overallStatus": "DEGRADED"
+  },
+  "services": [
+    {
+      "id": "v7_runtime",
+      "name": "Antigravity OS V7 Core Runtime",
+      "port": 3000,
+      "status": "RUNNING",
+      "startedAt": "2026-08-26T07:10:47.186Z",
+      "uptimeSeconds": 120,
+      "restartCount": 0,
+      "memoryMb": 45,
+      "cpuPercent": 0.8,
+      "lastHealthCheck": "2026-08-26T07:10:47.186Z",
+      "logPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\v7-desktop\\logs\\v7_runtime.log"
+    },
+    {
+      "id": "hermes_agent",
+      "name": "Hermes Autonomous Agent Engine",
+      "status": "RUNNING",
+      "startedAt": "2026-08-26T07:10:47.187Z",
+      "uptimeSeconds": 0,
+      "restartCount": 1,
+      "memoryMb": 45,
+      "cpuPercent": 0.8,
+      "lastHealthCheck": "2026-08-26T07:10:47.187Z",
+      "logPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\v7-desktop\\logs\\hermes_agent.log"
+    },
+    {
+      "id": "comfyui_fabric",
+      "name": "ComfyUI Media Pipeline Driver",
+      "port": 8188,
+      "status": "RUNNING",
+      "startedAt": "2026-08-26T07:10:47.186Z",
+      "uptimeSeconds": 120,
+      "restartCount": 0,
+      "memoryMb": 45,
+      "cpuPercent": 0.8,
+      "lastHealthCheck": "2026-08-26T07:10:47.186Z",
+      "logPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\v7-desktop\\logs\\comfyui_fabric.log"
+    },
+    {
+      "id": "ollama_workstation",
+      "name": "Ollama Local LLM Workstation",
+      "port": 11434,
+      "status": "RUNNING",
+      "startedAt": "2026-08-26T07:10:47.186Z",
+      "uptimeSeconds": 120,
+      "restartCount": 0,
+      "memoryMb": 45,
+      "cpuPercent": 0.8,
+      "lastHealthCheck": "2026-08-26T07:10:47.186Z",
+      "logPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\v7-desktop\\logs\\ollama_workstation.log"
+    },
+    {
+      "id": "database",
+      "name": "SQLite / Prisma Enterprise Vault",
+      "status": "RUNNING",
+      "startedAt": "2026-08-26T07:10:47.186Z",
+      "uptimeSeconds": 120,
+      "restartCount": 0,
+      "memoryMb": 45,
+      "cpuPercent": 0.8,
+      "lastHealthCheck": "2026-08-26T07:10:47.186Z",
+      "logPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\v7-desktop\\logs\\database.log"
+    },
+    {
+      "id": "evidence_ledger",
+      "name": "V7 Immutable Evidence Ledger",
+      "status": "RUNNING",
+      "startedAt": "2026-08-26T07:10:47.186Z",
+      "uptimeSeconds": 120,
+      "restartCount": 0,
+      "memoryMb": 45,
+      "cpuPercent": 0.8,
+      "lastHealthCheck": "2026-08-26T07:10:47.186Z",
+      "logPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\v7-desktop\\logs\\evidence_ledger.log"
+    }
+  ],
+  "security": {
+    "cspEnforced": true,
+    "contextIsolationActive": true,
+    "secretRedactionVerified": true,
+    "sandboxActive": true
+  }
+}

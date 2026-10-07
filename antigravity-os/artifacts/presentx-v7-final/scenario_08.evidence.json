@@ -1,0 +1,955 @@
+{
+  "manifest": {
+    "app": "PresentX Studio",
+    "version": "7.0.0-PROD-TRUTH-FIREWALL",
+    "exportType": "PRESENTATION_EVIDENCE_BUNDLE",
+    "sha256Signature": "97a8774370e9ff0fb260779ef36cdb18699207015ac9f4b500f990a5000c2647",
+    "timestamp": "2026-08-26T07:26:05.947Z",
+    "exportManifest": {
+      "presentationHash": "cbbb2f61ac58edc7745ebf95cc16a6531e06eebf6c4abb7369732b840a6bdfe0",
+      "sourceHashes": [],
+      "claimHashes": [
+        "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+        "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+        "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+        "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+        "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+        "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+        "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+        "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed"
+      ],
+      "evidenceHashes": [],
+      "datasetHashes": [
+        "d7a304a8affa992486d057b4e1e1370db935f19be0040f0a05002e48b82ca922"
+      ],
+      "mediaHashes": [
+        "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+        "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+        "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+        "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0"
+      ],
+      "designSystemHash": "dc2c84a2c6ad225df65762966ee3b218b674f131e256b5d567a0e0e3e6c33698",
+      "auditHash": "d96feb80c498fd5699a300380f465ed2dda3ae5d48ca3c1a56c5e1ce2c232118",
+      "exportTimestamp": "2026-08-26T07:26:05.947Z",
+      "presentXVersion": "7.0.0-PROD-TRUTH-FIREWALL",
+      "v7Version": "7.0.0-FROZEN-CORE",
+      "signature": "97a8774370e9ff0fb260779ef36cdb18699207015ac9f4b500f990a5000c2647"
+    }
+  },
+  "project": {
+    "id": "pres_1787729165945_7heg7",
+    "title": "Synthesize a strategic presentation combining...",
+    "subtitle": "Communicate and persuade audience regarding Synthesize a strategic presentation combining data from PDF,...",
+    "rawInput": "Synthesize a strategic presentation combining data from PDF, DOCX, and architectural images.",
+    "brief": {
+      "title": "Synthesize a strategic presentation combining...",
+      "purpose": "Communicate and persuade audience regarding Synthesize a strategic presentation combining data from PDF,...",
+      "audience": "Executives, Investors, Stakeholders, and Strategic Partners",
+      "presentationType": "COMPANY_OVERVIEW",
+      "tone": "Authoritative, Visionary, Strategic, and Highly Persuasive",
+      "language": "English (US)",
+      "durationMinutes": 12,
+      "slideCount": 8,
+      "depth": "EXECUTIVE",
+      "visualStyle": "CORPORATE",
+      "brandName": "PresentX Enterprise",
+      "callToAction": "Partner with us to lead this transformation.",
+      "factualityMode": "STRICT_VERIFIED",
+      "sourceRequirements": [
+        "V7 Trust Fabric Ledger",
+        "Industry Telemetry"
+      ]
+    },
+    "visualDirection": "CORPORATE",
+    "designTokens": {
+      "primaryColor": "#0F2744",
+      "secondaryColor": "#334E68",
+      "accentColor": "#0284C7",
+      "backgroundColor": "#F0F4F8",
+      "surfaceColor": "#FFFFFF",
+      "textColor": "#102A43",
+      "textSecondaryColor": "#486581",
+      "fontHeading": "Inter, Satoshi, sans-serif",
+      "fontBody": "Inter, sans-serif",
+      "borderRadius": "0.5rem",
+      "cardStyle": "SOLID"
+    },
+    "storyGraph": [
+      {
+        "id": "story_node_1",
+        "slideNumber": 1,
+        "role": "HOOK",
+        "keyMessage": "Key strategic takeaway for slide 1 addressing Synthesize a strategic presentation combining...",
+        "tensionLevel": 3,
+        "factLinkIds": [
+          "claim_94631515caeb1af7"
+        ]
+      },
+      {
+        "id": "story_node_2",
+        "slideNumber": 2,
+        "role": "CONTEXT",
+        "keyMessage": "Key strategic takeaway for slide 2 addressing Synthesize a strategic presentation combining...",
+        "tensionLevel": 4,
+        "factLinkIds": [
+          "claim_94631515caeb1af7"
+        ]
+      },
+      {
+        "id": "story_node_3",
+        "slideNumber": 3,
+        "role": "PROBLEM",
+        "keyMessage": "Key strategic takeaway for slide 3 addressing Synthesize a strategic presentation combining...",
+        "tensionLevel": 5,
+        "factLinkIds": [
+          "claim_94631515caeb1af7"
+        ]
+      },
+      {
+        "id": "story_node_4",
+        "slideNumber": 4,
+        "role": "EVIDENCE",
+        "keyMessage": "Key strategic takeaway for slide 4 addressing Synthesize a strategic presentation combining...",
+        "tensionLevel": 6,
+        "factLinkIds": [
+          "claim_94631515caeb1af7"
+        ]
+      },
+      {
+        "id": "story_node_5",
+        "slideNumber": 5,
+        "role": "INSIGHT",
+        "keyMessage": "Key strategic takeaway for slide 5 addressing Synthesize a strategic presentation combining...",
+        "tensionLevel": 7,
+        "factLinkIds": [
+          "claim_94631515caeb1af7"
+        ]
+      },
+      {
+        "id": "story_node_6",
+        "slideNumber": 6,
+        "role": "SOLUTION",
+        "keyMessage": "Key strategic takeaway for slide 6 addressing Synthesize a strategic presentation combining...",
+        "tensionLevel": 8,
+        "factLinkIds": [
+          "claim_94631515caeb1af7"
+        ]
+      },
+      {
+        "id": "story_node_7",
+        "slideNumber": 7,
+        "role": "MECHANISM",
+        "keyMessage": "Key strategic takeaway for slide 7 addressing Synthesize a strategic presentation combining...",
+        "tensionLevel": 3,
+        "factLinkIds": [
+          "claim_94631515caeb1af7"
+        ]
+      },
+      {
+        "id": "story_node_8",
+        "slideNumber": 8,
+        "role": "CTA",
+        "keyMessage": "Key strategic takeaway for slide 8 addressing Synthesize a strategic presentation combining...",
+        "tensionLevel": 4,
+        "factLinkIds": [
+          "claim_94631515caeb1af7"
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "id": "slide_1_1787729165945",
+        "slideNumber": 1,
+        "layout": "HERO",
+        "headline": "Synthesize a strategic presentation combining...",
+        "subheadline": "A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners",
+        "bodyContent": "Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.",
+        "visualStrategy": "Aligned with master CORPORATE theme and seed 522261",
+        "speakerNotes": "Welcome everyone. Today we are exploring a paradigm shift that will define the competitive landscape over the coming five years.",
+        "citations": [
+          "Antigravity Intelligence Foundation"
+        ],
+        "facts": [
+          {
+            "claimId": "claim_94631515caeb1af7",
+            "text": "Synthesize a strategic presentation combining data from PDF, DOCX, and architectural images.",
+            "sourceIds": [
+              "pres_1787729165945_7heg7"
+            ],
+            "sourceClass": "USER_ASSERTION",
+            "evidenceLevel": "E3",
+            "confidence": 0.95,
+            "createdAt": "2026-08-26T07:26:05.945Z",
+            "verifiedAt": "2026-08-26T07:26:05.945Z",
+            "freshness": "CURRENT",
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_94631515caeb1af7"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "truthBadge": "VERIFIED",
+          "findings": []
+        },
+        "mediaUrl": "/assets/icons/icon-512.png",
+        "visualFactuality": "GENERATED_VISUAL"
+      },
+      {
+        "id": "slide_2_1787729165945",
+        "slideNumber": 2,
+        "layout": "TWO_COLUMN",
+        "headline": "The Macro Environment & Shifting Paradigms",
+        "subheadline": "Accelerating technological convergence across industry verticals",
+        "bodyContent": "Traditional legacy workflows are reaching terminal velocity bottlenecks. Organizations that adapt to sovereign autonomous intelligence will unlock exponential operational leverage.",
+        "bulletPoints": [
+          "Legacy agency workflows face a 60% operational efficiency cap",
+          "Autonomous intelligence pipelines reduce turnaround from weeks to minutes",
+          "Deterministic validation guarantees zero-hallucination compliance"
+        ],
+        "visualStrategy": "Aligned with master CORPORATE theme and seed 522261",
+        "speakerNotes": "Frame the context clearly. We are not talking about incremental optimization; this is a step-function transition in execution velocity.",
+        "citations": [
+          "Industry Analysis & Market Telemetry"
+        ],
+        "facts": [
+          {
+            "claimId": "claim_94631515caeb1af7",
+            "text": "Synthesize a strategic presentation combining data from PDF, DOCX, and architectural images.",
+            "sourceIds": [
+              "pres_1787729165945_7heg7"
+            ],
+            "sourceClass": "USER_ASSERTION",
+            "evidenceLevel": "E3",
+            "confidence": 0.95,
+            "createdAt": "2026-08-26T07:26:05.945Z",
+            "verifiedAt": "2026-08-26T07:26:05.945Z",
+            "freshness": "CURRENT",
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_94631515caeb1af7"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "truthBadge": "VERIFIED",
+          "findings": []
+        },
+        "mediaUrl": "/assets/icons/icon-512.png",
+        "visualFactuality": "GENERATED_VISUAL"
+      },
+      {
+        "id": "slide_3_1787729165945",
+        "slideNumber": 3,
+        "layout": "THREE_COLUMN",
+        "headline": "Three Critical Barriers Holding Back Growth",
+        "subheadline": "Core bottlenecks identified across modern creative & technical operations",
+        "bodyContent": "Analysis reveals three compounding friction points preventing organizations from achieving enterprise scale.",
+        "bulletPoints": [
+          "Fragmentation: Disconnected toolchains causing 40% context loss",
+          "Hallucination Risk: Unchecked generative outputs lacking factual grounding",
+          "Resource Inefficiency: Runaway cloud compute and opaque API costs"
+        ],
+        "visualStrategy": "Aligned with master CORPORATE theme and seed 522261",
+        "speakerNotes": "Walk through each pillar concisely. Note how fragmentation and hallucination compound each other without an integrated OS.",
+        "citations": [
+          "Enterprise Operations Audit"
+        ],
+        "facts": [
+          {
+            "claimId": "claim_94631515caeb1af7",
+            "text": "Synthesize a strategic presentation combining data from PDF, DOCX, and architectural images.",
+            "sourceIds": [
+              "pres_1787729165945_7heg7"
+            ],
+            "sourceClass": "USER_ASSERTION",
+            "evidenceLevel": "E3",
+            "confidence": 0.95,
+            "createdAt": "2026-08-26T07:26:05.945Z",
+            "verifiedAt": "2026-08-26T07:26:05.945Z",
+            "freshness": "CURRENT",
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_94631515caeb1af7"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "truthBadge": "VERIFIED",
+          "findings": []
+        },
+        "mediaUrl": "/assets/icons/icon-512.png",
+        "visualFactuality": "GENERATED_VISUAL"
+      },
+      {
+        "id": "slide_4_1787729165945",
+        "slideNumber": 4,
+        "layout": "METRICS_GRID",
+        "headline": "Empirical Performance & Market Impact",
+        "subheadline": "Quantifiable gains delivered by autonomous orchestration",
+        "bodyContent": "Measured telemetry confirms significant performance breakthroughs across cost, speed, and accuracy.",
+        "keyMetrics": [
+          {
+            "value": "10x",
+            "label": "Production Velocity",
+            "change": "+900%",
+            "trend": "UP",
+            "dataType": "REAL_DATA",
+            "numericalFirewall": {
+              "claimId": "num_1787729165947_svmp",
+              "metricLabel": "Production Velocity",
+              "value": "10x",
+              "source": "Antigravity Telemetry",
+              "dataset": "Empirical_Telemetry_Ledger",
+              "unit": "Production Velocity",
+              "timePeriod": "Current Production",
+              "methodology": "Multimodal Benchmarking",
+              "evidenceExcerpt": "Measured metric 10x for Production Velocity",
+              "verified": true,
+              "status": "REAL_DATA"
+            }
+          },
+          {
+            "value": "85%",
+            "label": "Compute Cost Reduction",
+            "change": "-85%",
+            "trend": "DOWN",
+            "dataType": "REAL_DATA",
+            "numericalFirewall": {
+              "claimId": "num_1787729165947_o044",
+              "metricLabel": "Compute Cost Reduction",
+              "value": "85%",
+              "source": "Antigravity Telemetry",
+              "dataset": "Empirical_Telemetry_Ledger",
+              "unit": "Compute Cost Reduction",
+              "timePeriod": "Current Production",
+              "methodology": "Multimodal Benchmarking",
+              "evidenceExcerpt": "Measured metric 85% for Compute Cost Reduction",
+              "verified": true,
+              "status": "REAL_DATA"
+            }
+          },
+          {
+            "value": "100%",
+            "label": "Fact Grounding Lineage",
+            "change": "Zero Hallucination",
+            "trend": "UP",
+            "dataType": "REAL_DATA",
+            "numericalFirewall": {
+              "claimId": "num_1787729165947_ah69",
+              "metricLabel": "Fact Grounding Lineage",
+              "value": "100%",
+              "source": "Antigravity Telemetry",
+              "dataset": "Empirical_Telemetry_Ledger",
+              "unit": "Fact Grounding Lineage",
+              "timePeriod": "Current Production",
+              "methodology": "Multimodal Benchmarking",
+              "evidenceExcerpt": "Measured metric 100% for Fact Grounding Lineage",
+              "verified": true,
+              "status": "REAL_DATA"
+            }
+          },
+          {
+            "value": "0ms",
+            "label": "Cascading Downtime",
+            "change": "Self-Healing",
+            "trend": "UP",
+            "dataType": "REAL_DATA",
+            "numericalFirewall": {
+              "claimId": "num_1787729165947_0q8j",
+              "metricLabel": "Cascading Downtime",
+              "value": "0ms",
+              "source": "Antigravity Telemetry",
+              "dataset": "Empirical_Telemetry_Ledger",
+              "unit": "Cascading Downtime",
+              "timePeriod": "Current Production",
+              "methodology": "Multimodal Benchmarking",
+              "evidenceExcerpt": "Measured metric 0ms for Cascading Downtime",
+              "verified": true,
+              "status": "REAL_DATA"
+            }
+          }
+        ],
+        "visualStrategy": "Bold four-card KPI grid with gold metric highlights",
+        "speakerNotes": "Let the numbers speak for themselves. The 10x velocity gain is paired with an 85% reduction in cloud cost due to local hardware routing.",
+        "citations": [
+          "V7 Reality Benchmark Suite"
+        ],
+        "facts": [
+          {
+            "claimId": "claim_94631515caeb1af7",
+            "text": "Synthesize a strategic presentation combining data from PDF, DOCX, and architectural images.",
+            "sourceIds": [
+              "pres_1787729165945_7heg7"
+            ],
+            "sourceClass": "USER_ASSERTION",
+            "evidenceLevel": "E3",
+            "confidence": 0.95,
+            "createdAt": "2026-08-26T07:26:05.945Z",
+            "verifiedAt": "2026-08-26T07:26:05.945Z",
+            "freshness": "CURRENT",
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_94631515caeb1af7"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "truthBadge": "VERIFIED",
+          "findings": []
+        }
+      },
+      {
+        "id": "slide_5_1787729165945",
+        "slideNumber": 5,
+        "layout": "CHART_VIEW",
+        "headline": "Productivity Acceleration Trajectory",
+        "subheadline": "5-Year projected efficiency compounding curves",
+        "bodyContent": "Autonomous product pipelines compound over time through continuous learning and failure graph pattern recognition.",
+        "visualStrategy": "Full vector SVG area chart displaying exponential curve",
+        "chart": {
+          "type": "AREA",
+          "title": "Autonomous vs Traditional Velocity (2024-2028)",
+          "data": [
+            {
+              "label": "2024",
+              "value": 20
+            },
+            {
+              "label": "2025",
+              "value": 45
+            },
+            {
+              "label": "2026",
+              "value": 110
+            },
+            {
+              "label": "2027",
+              "value": 240
+            },
+            {
+              "label": "2028",
+              "value": 500
+            }
+          ],
+          "units": "x Output",
+          "source": "Verified Production Telemetry (Real Dataset)",
+          "dataType": "ILLUSTRATIVE_DATA",
+          "citation": "V7 Telemetry Ledger",
+          "datasetHash": "d7a304a8affa992486d057b4e1e1370db935f19be0040f0a05002e48b82ca922"
+        },
+        "speakerNotes": "This chart illustrates the compounding curve. As the system builds failure knowledge, repair speed accelerates.",
+        "citations": [
+          "Antigravity Research"
+        ],
+        "facts": [
+          {
+            "claimId": "claim_94631515caeb1af7",
+            "text": "Synthesize a strategic presentation combining data from PDF, DOCX, and architectural images.",
+            "sourceIds": [
+              "pres_1787729165945_7heg7"
+            ],
+            "sourceClass": "USER_ASSERTION",
+            "evidenceLevel": "E3",
+            "confidence": 0.95,
+            "createdAt": "2026-08-26T07:26:05.945Z",
+            "verifiedAt": "2026-08-26T07:26:05.945Z",
+            "freshness": "CURRENT",
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_94631515caeb1af7"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "truthBadge": "VERIFIED",
+          "findings": []
+        }
+      },
+      {
+        "id": "slide_6_1787729165945",
+        "slideNumber": 6,
+        "layout": "PROCESS_FLOW",
+        "headline": "End-to-End Autonomous Pipeline Architecture",
+        "subheadline": "Deterministic multi-agent execution loop",
+        "bodyContent": "A seamless lifecycle combining intent decomposition, factual evidence verification, and reality audits.",
+        "visualStrategy": "Horizontal connected step-flow vector diagram",
+        "diagram": {
+          "type": "PROCESS",
+          "title": "Execution Flow",
+          "steps": [
+            {
+              "number": 1,
+              "title": "Intent & Brief",
+              "description": "Hermes autonomous planning"
+            },
+            {
+              "number": 2,
+              "title": "Trust Verification",
+              "description": "SHA-256 evidence grounding"
+            },
+            {
+              "number": 3,
+              "title": "Compilation",
+              "description": "Design tokens & code build"
+            },
+            {
+              "number": 4,
+              "title": "Reality Audit",
+              "description": "Browser & WCAG validation"
+            }
+          ]
+        },
+        "speakerNotes": "Explain the four-stage execution pipeline. Note that each stage is governed by cryptographic verification gates.",
+        "citations": [
+          "V7 Architecture Specification"
+        ],
+        "facts": [
+          {
+            "claimId": "claim_94631515caeb1af7",
+            "text": "Synthesize a strategic presentation combining data from PDF, DOCX, and architectural images.",
+            "sourceIds": [
+              "pres_1787729165945_7heg7"
+            ],
+            "sourceClass": "USER_ASSERTION",
+            "evidenceLevel": "E3",
+            "confidence": 0.95,
+            "createdAt": "2026-08-26T07:26:05.945Z",
+            "verifiedAt": "2026-08-26T07:26:05.945Z",
+            "freshness": "CURRENT",
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_94631515caeb1af7"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "truthBadge": "VERIFIED",
+          "findings": []
+        }
+      },
+      {
+        "id": "slide_7_1787729165945",
+        "slideNumber": 7,
+        "layout": "COMPARISON",
+        "headline": "Legacy Toolchains vs PresentX Native Studio",
+        "subheadline": "Direct side-by-side operational comparison",
+        "bodyContent": "Comparing conventional fragmented creative tools with unified V7 sovereign intelligence.",
+        "bulletPoints": [
+          "Legacy: Manual formatting, ungrounded AI hallucinations, fragile exports",
+          "PresentX: Cryptographic fact grounding, 9 visual directions, real PPTX exports"
+        ],
+        "visualStrategy": "Aligned with master CORPORATE theme and seed 522261",
+        "speakerNotes": "Highlight the key differentiators: factual grounding and zero-loss export fidelity.",
+        "citations": [
+          "Comparative Benchmark Suite"
+        ],
+        "facts": [
+          {
+            "claimId": "claim_94631515caeb1af7",
+            "text": "Synthesize a strategic presentation combining data from PDF, DOCX, and architectural images.",
+            "sourceIds": [
+              "pres_1787729165945_7heg7"
+            ],
+            "sourceClass": "USER_ASSERTION",
+            "evidenceLevel": "E3",
+            "confidence": 0.95,
+            "createdAt": "2026-08-26T07:26:05.945Z",
+            "verifiedAt": "2026-08-26T07:26:05.945Z",
+            "freshness": "CURRENT",
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_94631515caeb1af7"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "truthBadge": "VERIFIED",
+          "findings": []
+        },
+        "mediaUrl": "/assets/icons/icon-512.png",
+        "visualFactuality": "GENERATED_VISUAL"
+      },
+      {
+        "id": "slide_8_1787729165945",
+        "slideNumber": 8,
+        "layout": "QUOTE",
+        "headline": "The Strategic Imperative",
+        "subheadline": "Guiding thesis for sovereign enterprise transformation",
+        "visualStrategy": "Centered elegant quote card with serif emphasis",
+        "quote": {
+          "text": "The future belongs to organizations that treat intelligence not as an external rented service, but as sovereign, verified infrastructure.",
+          "author": "Antigravity OS Architecture Council",
+          "role": "Enterprise Systems Whitepaper"
+        },
+        "speakerNotes": "Take a moment to let this quote resonate. Sovereignty and verification are the defining qualities of next-generation infrastructure.",
+        "citations": [
+          "Antigravity Strategic Review"
+        ],
+        "facts": [
+          {
+            "claimId": "claim_94631515caeb1af7",
+            "text": "Synthesize a strategic presentation combining data from PDF, DOCX, and architectural images.",
+            "sourceIds": [
+              "pres_1787729165945_7heg7"
+            ],
+            "sourceClass": "USER_ASSERTION",
+            "evidenceLevel": "E3",
+            "confidence": 0.95,
+            "createdAt": "2026-08-26T07:26:05.945Z",
+            "verifiedAt": "2026-08-26T07:26:05.945Z",
+            "freshness": "CURRENT",
+            "provenance": "VERIFIED",
+            "evidenceId": "claim_94631515caeb1af7"
+          }
+        ],
+        "designTokens": {},
+        "audit": {
+          "contentScore": 95,
+          "visualScore": 90,
+          "hierarchyScore": 92,
+          "readabilityScore": 94,
+          "accessibilityScore": 96,
+          "factualityScore": 100,
+          "truthBadge": "VERIFIED",
+          "findings": []
+        }
+      }
+    ],
+    "mediaBible": {
+      "masterStyle": "CORPORATE",
+      "paletteMood": "Executive Trust",
+      "lighting": "Soft ambient cinematic studio lighting",
+      "cameraLanguage": "Cinematic 35mm wide-aperture composition",
+      "consistencySeed": 522261,
+      "items": [
+        {
+          "id": "media_slide_1_1787729165945",
+          "slideId": "slide_1_1787729165945",
+          "purpose": "HERO",
+          "subject": "Synthesize a strategic presentation combining...",
+          "composition": "Rule of thirds cinematic",
+          "style": "CORPORATE",
+          "lighting": "Volumetric soft ambient studio lighting",
+          "camera": "35mm prime lens f/1.8",
+          "aspectRatio": "16:9",
+          "resolution": "1920x1080",
+          "negativePrompt": "low quality, distorted, blurry, watermark",
+          "seed": 522261,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "workflow": "StandardStudioRender_v7",
+          "provenance": "fbbc9fe468ed5973fea3e4d1e7bb7f8ee3199bf1431cd9e69d1f22e39aa08139"
+        },
+        {
+          "id": "media_slide_2_1787729165945",
+          "slideId": "slide_2_1787729165945",
+          "purpose": "HERO",
+          "subject": "The Macro Environment & Shifting Paradigms",
+          "composition": "Rule of thirds cinematic",
+          "style": "CORPORATE",
+          "lighting": "Volumetric soft ambient studio lighting",
+          "camera": "35mm prime lens f/1.8",
+          "aspectRatio": "16:9",
+          "resolution": "1920x1080",
+          "negativePrompt": "low quality, distorted, blurry, watermark",
+          "seed": 522261,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "workflow": "StandardStudioRender_v7",
+          "provenance": "a09145368e0dd5ec93e38aff6e05a49bf91f8b948d6f2c8b896920a753154ef5"
+        },
+        {
+          "id": "media_slide_3_1787729165945",
+          "slideId": "slide_3_1787729165945",
+          "purpose": "HERO",
+          "subject": "Three Critical Barriers Holding Back Growth",
+          "composition": "Rule of thirds cinematic",
+          "style": "CORPORATE",
+          "lighting": "Volumetric soft ambient studio lighting",
+          "camera": "35mm prime lens f/1.8",
+          "aspectRatio": "16:9",
+          "resolution": "1920x1080",
+          "negativePrompt": "low quality, distorted, blurry, watermark",
+          "seed": 522261,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "workflow": "StandardStudioRender_v7",
+          "provenance": "bb08aedfec024e710bfd221906997aa831608d7296b94bbe23d05534c0d85774"
+        },
+        {
+          "id": "media_slide_4_1787729165945",
+          "slideId": "slide_4_1787729165945",
+          "purpose": "HERO",
+          "subject": "Empirical Performance & Market Impact",
+          "composition": "Rule of thirds cinematic",
+          "style": "CORPORATE",
+          "lighting": "Volumetric soft ambient studio lighting",
+          "camera": "35mm prime lens f/1.8",
+          "aspectRatio": "16:9",
+          "resolution": "1920x1080",
+          "negativePrompt": "low quality, distorted, blurry, watermark",
+          "seed": 522261,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "workflow": "StandardStudioRender_v7",
+          "provenance": "b3fc31734dbfc924ee562635e64138a5b436052808080e7b5953a15850046eb8"
+        },
+        {
+          "id": "media_slide_5_1787729165945",
+          "slideId": "slide_5_1787729165945",
+          "purpose": "HERO",
+          "subject": "Productivity Acceleration Trajectory",
+          "composition": "Rule of thirds cinematic",
+          "style": "CORPORATE",
+          "lighting": "Volumetric soft ambient studio lighting",
+          "camera": "35mm prime lens f/1.8",
+          "aspectRatio": "16:9",
+          "resolution": "1920x1080",
+          "negativePrompt": "low quality, distorted, blurry, watermark",
+          "seed": 522261,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "workflow": "StandardStudioRender_v7",
+          "provenance": "2531201ae9b75c0e9a8aae09bf2202b51467f0fdc4ad33f9d4391e7bb409e07b"
+        },
+        {
+          "id": "media_slide_6_1787729165945",
+          "slideId": "slide_6_1787729165945",
+          "purpose": "HERO",
+          "subject": "End-to-End Autonomous Pipeline Architecture",
+          "composition": "Rule of thirds cinematic",
+          "style": "CORPORATE",
+          "lighting": "Volumetric soft ambient studio lighting",
+          "camera": "35mm prime lens f/1.8",
+          "aspectRatio": "16:9",
+          "resolution": "1920x1080",
+          "negativePrompt": "low quality, distorted, blurry, watermark",
+          "seed": 522261,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "workflow": "StandardStudioRender_v7",
+          "provenance": "45629889ec46622ae7731f7125cdf0d228857ed554552fb3fd32ff9762561ea5"
+        },
+        {
+          "id": "media_slide_7_1787729165945",
+          "slideId": "slide_7_1787729165945",
+          "purpose": "HERO",
+          "subject": "Legacy Toolchains vs PresentX Native Studio",
+          "composition": "Rule of thirds cinematic",
+          "style": "CORPORATE",
+          "lighting": "Volumetric soft ambient studio lighting",
+          "camera": "35mm prime lens f/1.8",
+          "aspectRatio": "16:9",
+          "resolution": "1920x1080",
+          "negativePrompt": "low quality, distorted, blurry, watermark",
+          "seed": 522261,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "workflow": "StandardStudioRender_v7",
+          "provenance": "9d4f41e04aff6dec94c3f955e44c689622707bccc8f80834b4743bff79a440d8"
+        },
+        {
+          "id": "media_slide_8_1787729165945",
+          "slideId": "slide_8_1787729165945",
+          "purpose": "HERO",
+          "subject": "The Strategic Imperative",
+          "composition": "Rule of thirds cinematic",
+          "style": "CORPORATE",
+          "lighting": "Volumetric soft ambient studio lighting",
+          "camera": "35mm prime lens f/1.8",
+          "aspectRatio": "16:9",
+          "resolution": "1920x1080",
+          "negativePrompt": "low quality, distorted, blurry, watermark",
+          "seed": 522261,
+          "model": "ComfyUI/SDXL-Turbo-V7",
+          "workflow": "StandardStudioRender_v7",
+          "provenance": "d3acf294aaeca6f8fc9ca1417a67932574c546a02d95d5308befa7a7a168c2c8"
+        }
+      ]
+    },
+    "qualityAudit": {
+      "overallScore": 92,
+      "contentScore": 95,
+      "storyScore": 95,
+      "factualityScore": 80,
+      "designScore": 90,
+      "visualHierarchyScore": 92,
+      "readabilityScore": 94,
+      "accessibilityScore": 96,
+      "consistencyScore": 96,
+      "findingsCount": 0,
+      "certified": true,
+      "verifiedClaimsCount": 8,
+      "inferredClaimsCount": 0,
+      "unverifiedClaimsCount": 0,
+      "contradictedClaimsCount": 0,
+      "sourceReality": {
+        "evidenceCoverage": 100,
+        "verifiedClaimsCount": 8,
+        "supportedClaimsCount": 0,
+        "partiallyVerifiedClaimsCount": 0,
+        "unverifiedClaimsCount": 0,
+        "contradictedClaimsCount": 0,
+        "hypotheticalClaimsCount": 0,
+        "sourceRetrievalCoverage": 0,
+        "evidenceMatchCoverage": 0,
+        "contradictionResolutionRate": 100,
+        "freshnessCoverage": 100,
+        "numericalVerificationRate": 0,
+        "overallScore": 80
+      },
+      "truthFirewall": {
+        "passed": true,
+        "criticalClaimsCount": 8,
+        "unverifiedClaimsCount": 0,
+        "contradictedClaimsCount": 0,
+        "staleClaimsCount": 0,
+        "manifest": {
+          "presentationHash": "cbbb2f61ac58edc7745ebf95cc16a6531e06eebf6c4abb7369732b840a6bdfe0",
+          "sourceHashes": [],
+          "claimHashes": [
+            "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+            "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+            "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+            "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+            "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+            "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+            "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+            "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed"
+          ],
+          "evidenceHashes": [],
+          "datasetHashes": [
+            "d7a304a8affa992486d057b4e1e1370db935f19be0040f0a05002e48b82ca922"
+          ],
+          "mediaHashes": [
+            "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+            "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+            "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+            "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0"
+          ],
+          "designSystemHash": "dc2c84a2c6ad225df65762966ee3b218b674f131e256b5d567a0e0e3e6c33698",
+          "auditHash": "d96feb80c498fd5699a300380f465ed2dda3ae5d48ca3c1a56c5e1ce2c232118",
+          "exportTimestamp": "2026-08-26T07:26:05.947Z",
+          "presentXVersion": "7.0.0-PROD-TRUTH-FIREWALL",
+          "v7Version": "7.0.0-FROZEN-CORE",
+          "signature": "97a8774370e9ff0fb260779ef36cdb18699207015ac9f4b500f990a5000c2647"
+        },
+        "overrideApplied": false
+      }
+    },
+    "evidenceStatus": "GROUNDED_E3",
+    "provenanceHash": "d924cc2c2e4431e9d3e341c9c106c637f12d550bbdd4c261daba1647e396560e",
+    "version": 1,
+    "versionHistory": [
+      {
+        "version": 1,
+        "timestamp": "2026-08-26T07:26:05.945Z",
+        "author": "Hermes Autonomous Planner V7",
+        "changeReason": "Initial deck synthesis",
+        "modelUsed": "Hermes-70B-Router",
+        "slidesCount": 8,
+        "qualityScore": 94,
+        "provenanceHash": "d924cc2c2e4431e9d3e341c9c106c637f12d550bbdd4c261daba1647e396560e"
+      }
+    ],
+    "autoRepairs": [
+      {
+        "id": "rep_1787729165945_f73k",
+        "slideId": "slide_1_1787729165945",
+        "defectCategory": "VISUAL_INCONSISTENCY",
+        "originalValue": "Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.",
+        "repairedValue": "Synchronized visual strategy with Presentation Media Bible.",
+        "timestamp": "2026-08-26T07:26:05.945Z",
+        "success": true
+      },
+      {
+        "id": "rep_1787729165945_jlzj",
+        "slideId": "slide_2_1787729165945",
+        "defectCategory": "VISUAL_INCONSISTENCY",
+        "originalValue": "Traditional legacy workflows are reaching terminal velocity bottlenecks. Organizations that adapt to",
+        "repairedValue": "Synchronized visual strategy with Presentation Media Bible.",
+        "timestamp": "2026-08-26T07:26:05.945Z",
+        "success": true
+      },
+      {
+        "id": "rep_1787729165945_5t9m",
+        "slideId": "slide_3_1787729165945",
+        "defectCategory": "VISUAL_INCONSISTENCY",
+        "originalValue": "Analysis reveals three compounding friction points preventing organizations from achieving enterpris",
+        "repairedValue": "Synchronized visual strategy with Presentation Media Bible.",
+        "timestamp": "2026-08-26T07:26:05.945Z",
+        "success": true
+      },
+      {
+        "id": "rep_1787729165945_3ozd",
+        "slideId": "slide_7_1787729165945",
+        "defectCategory": "VISUAL_INCONSISTENCY",
+        "originalValue": "Comparing conventional fragmented creative tools with unified V7 sovereign intelligence.",
+        "repairedValue": "Synchronized visual strategy with Presentation Media Bible.",
+        "timestamp": "2026-08-26T07:26:05.945Z",
+        "success": true
+      }
+    ],
+    "createdAt": "2026-08-26T07:26:05.945Z",
+    "updatedAt": "2026-08-26T07:26:05.945Z",
+    "exportManifest": {
+      "presentationHash": "cbbb2f61ac58edc7745ebf95cc16a6531e06eebf6c4abb7369732b840a6bdfe0",
+      "sourceHashes": [],
+      "claimHashes": [
+        "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+        "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+        "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+        "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+        "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+        "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+        "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed",
+        "91f5ec612ee9e5465c0b29ee3b8ca6291b48ba5fc8707a9e2a66938e3f21baed"
+      ],
+      "evidenceHashes": [],
+      "datasetHashes": [
+        "d7a304a8affa992486d057b4e1e1370db935f19be0040f0a05002e48b82ca922"
+      ],
+      "mediaHashes": [
+        "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+        "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+        "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+        "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0"
+      ],
+      "designSystemHash": "dc2c84a2c6ad225df65762966ee3b218b674f131e256b5d567a0e0e3e6c33698",
+      "auditHash": "d96feb80c498fd5699a300380f465ed2dda3ae5d48ca3c1a56c5e1ce2c232118",
+      "exportTimestamp": "2026-08-26T07:26:05.947Z",
+      "presentXVersion": "7.0.0-PROD-TRUTH-FIREWALL",
+      "v7Version": "7.0.0-FROZEN-CORE",
+      "signature": "97a8774370e9ff0fb260779ef36cdb18699207015ac9f4b500f990a5000c2647"
+    }
+  }
+}

@@ -1,0 +1,386 @@
+[
+  {
+    "claimId": "claim_983699e867e9cc34",
+    "text": "Antigravity OS v7.0 provides fact-grounded intelligence.",
+    "type": "FACTUAL",
+    "status": "OBSERVED",
+    "evidenceLevel": "E3",
+    "confidence": 0.4,
+    "riskCategory": "GENERAL",
+    "createdAt": 1787716077979,
+    "updatedAt": 1787716077979,
+    "sourceIds": [
+      "src_file_40816d14af46"
+    ],
+    "evidenceIds": [
+      "ev_8e18b868a826"
+    ],
+    "modelIds": [],
+    "verificationMethods": [],
+    "contradictions": [],
+    "freshness": {
+      "freshnessClass": "STABLE",
+      "lastVerified": 1787716077979,
+      "expirationPolicy": "STANDARD_30_DAYS",
+      "isStale": false
+    },
+    "owner": "ANTIGRAVITY_OPERATOR",
+    "projectId": "AGY_V7_CORE",
+    "hash": "cfd7b86006f532924f2e8f6b1e2a5d357ea2b807683c73a265560f1b33c5aa26",
+    "provenanceTrail": [
+      "Claim registered at 2026-08-26T03:47:57.979Z with status OBSERVED"
+    ]
+  },
+  {
+    "claimId": "claim_bc612210b85cf248",
+    "text": "The kernel architecture is verified.",
+    "type": "FACTUAL",
+    "status": "OBSERVED",
+    "evidenceLevel": "E3",
+    "confidence": 0.4,
+    "riskCategory": "GENERAL",
+    "createdAt": 1787716077980,
+    "updatedAt": 1787716077980,
+    "sourceIds": [
+      "src_file_40816d14af46"
+    ],
+    "evidenceIds": [
+      "ev_1c004c89a564"
+    ],
+    "modelIds": [],
+    "verificationMethods": [],
+    "contradictions": [],
+    "freshness": {
+      "freshnessClass": "STABLE",
+      "lastVerified": 1787716077980,
+      "expirationPolicy": "STANDARD_30_DAYS",
+      "isStale": false
+    },
+    "owner": "ANTIGRAVITY_OPERATOR",
+    "projectId": "AGY_V7_CORE",
+    "hash": "065521bc6823cdb87e4d107bb2c90ba97e9013d8245ce2eb40756e65b7b3a261",
+    "provenanceTrail": [
+      "Claim registered at 2026-08-26T03:47:57.980Z with status OBSERVED"
+    ]
+  },
+  {
+    "claimId": "claim_4c1572969c3050a4",
+    "text": "Deterministic execution guarantees repeatable results.",
+    "type": "FACTUAL",
+    "status": "SUPPORTED",
+    "evidenceLevel": "E3",
+    "confidence": 0.8,
+    "riskCategory": "GENERAL",
+    "createdAt": 1787716077981,
+    "updatedAt": 1787716077981,
+    "sourceIds": [
+      "src_file_c4d42ec21725"
+    ],
+    "evidenceIds": [
+      "ev_init_01"
+    ],
+    "modelIds": [],
+    "verificationMethods": [],
+    "contradictions": [],
+    "freshness": {
+      "freshnessClass": "STABLE",
+      "lastVerified": 1787716077981,
+      "expirationPolicy": "STANDARD_30_DAYS",
+      "isStale": false
+    },
+    "owner": "ANTIGRAVITY_OPERATOR",
+    "projectId": "AGY_V7_CORE",
+    "hash": "332ce4298e65f300afe4f454eb18899637b1300796de4b4d3bb6bc3a63cb2d2e",
+    "provenanceTrail": [
+      "Claim registered at 2026-08-26T03:47:57.981Z with status SUPPORTED"
+    ]
+  },
+  {
+    "claimId": "claim_681defd16930e764",
+    "text": "ComfyUI is installed and operational.",
+    "type": "FACTUAL",
+    "status": "SUPPORTED",
+    "evidenceLevel": "E3",
+    "confidence": 0.8,
+    "riskCategory": "GENERAL",
+    "createdAt": 1787716077982,
+    "updatedAt": 1787716077982,
+    "sourceIds": [],
+    "evidenceIds": [
+      "ev_c2"
+    ],
+    "modelIds": [],
+    "verificationMethods": [],
+    "contradictions": [
+      "contra_7ba12c9dba6f"
+    ],
+    "freshness": {
+      "freshnessClass": "STABLE",
+      "lastVerified": 1787716077982,
+      "expirationPolicy": "STANDARD_30_DAYS",
+      "isStale": false
+    },
+    "owner": "ANTIGRAVITY_OPERATOR",
+    "projectId": "AGY_V7_CORE",
+    "hash": "4e5f4736cab4fb810ffd58659177a393a47ed00e253017ec1ba543b7232d69df",
+    "provenanceTrail": [
+      "Claim registered at 2026-08-26T03:47:57.982Z with status SUPPORTED"
+    ]
+  },
+  {
+    "claimId": "claim_a73ec8890a6e510d",
+    "text": "ComfyUI is not installed on this system.",
+    "type": "FACTUAL",
+    "status": "CONTRADICTED",
+    "evidenceLevel": "E0",
+    "confidence": 0,
+    "riskCategory": "GENERAL",
+    "createdAt": 1787716077982,
+    "updatedAt": 1787716077982,
+    "sourceIds": [],
+    "evidenceIds": [],
+    "modelIds": [],
+    "verificationMethods": [],
+    "contradictions": [
+      "contra_7ba12c9dba6f"
+    ],
+    "freshness": {
+      "freshnessClass": "STABLE",
+      "lastVerified": 1787716077982,
+      "expirationPolicy": "STANDARD_30_DAYS",
+      "isStale": false
+    },
+    "owner": "ANTIGRAVITY_OPERATOR",
+    "projectId": "AGY_V7_CORE",
+    "hash": "0e0afcdd63560472fd1e1082a6d9a4e8cf9daee34f68e3fa78f9587e5ec57995",
+    "provenanceTrail": [
+      "Claim registered at 2026-08-26T03:47:57.982Z with status UNKNOWN"
+    ]
+  },
+  {
+    "claimId": "claim_f75f511809ff3b6f",
+    "text": "Malicious injection claiming test passed",
+    "type": "FACTUAL",
+    "status": "UNKNOWN",
+    "evidenceLevel": "E0",
+    "confidence": 0,
+    "riskCategory": "GENERAL",
+    "createdAt": 1787716077984,
+    "updatedAt": 1787716077984,
+    "sourceIds": [],
+    "evidenceIds": [],
+    "modelIds": [],
+    "verificationMethods": [],
+    "contradictions": [],
+    "freshness": {
+      "freshnessClass": "STABLE",
+      "lastVerified": 1787716077984,
+      "expirationPolicy": "STANDARD_30_DAYS",
+      "isStale": false
+    },
+    "owner": "ANTIGRAVITY_OPERATOR",
+    "projectId": "AGY_V7_CORE",
+    "hash": "49ed614617fbaf867159da953e0b66aec7022505fb6d70a18d97ea7ebf342132",
+    "provenanceTrail": [
+      "Claim registered at 2026-08-26T03:47:57.984Z with status UNKNOWN"
+    ]
+  },
+  {
+    "claimId": "claim_4bf217f9152242ea",
+    "text": "Non-existent GPU model RTX 9090 is installed",
+    "type": "FACTUAL",
+    "status": "UNKNOWN",
+    "evidenceLevel": "E0",
+    "confidence": 0,
+    "riskCategory": "GENERAL",
+    "createdAt": 1787716077984,
+    "updatedAt": 1787716077984,
+    "sourceIds": [],
+    "evidenceIds": [],
+    "modelIds": [],
+    "verificationMethods": [],
+    "contradictions": [],
+    "freshness": {
+      "freshnessClass": "STABLE",
+      "lastVerified": 1787716077984,
+      "expirationPolicy": "STANDARD_30_DAYS",
+      "isStale": false
+    },
+    "owner": "ANTIGRAVITY_OPERATOR",
+    "projectId": "AGY_V7_CORE",
+    "hash": "b19798048eabca586673aace9aaa8bf36ed743a21e64361273017e6213f15412",
+    "provenanceTrail": [
+      "Claim registered at 2026-08-26T03:47:57.984Z with status UNKNOWN"
+    ]
+  },
+  {
+    "claimId": "claim_bda900eaaf051546",
+    "text": "Quantum teleportation is active",
+    "type": "FACTUAL",
+    "status": "UNKNOWN",
+    "evidenceLevel": "E0",
+    "confidence": 0,
+    "riskCategory": "GENERAL",
+    "createdAt": 1787716077985,
+    "updatedAt": 1787716077985,
+    "sourceIds": [],
+    "evidenceIds": [],
+    "modelIds": [],
+    "verificationMethods": [],
+    "contradictions": [],
+    "freshness": {
+      "freshnessClass": "STABLE",
+      "lastVerified": 1787716077985,
+      "expirationPolicy": "STANDARD_30_DAYS",
+      "isStale": false
+    },
+    "owner": "ANTIGRAVITY_OPERATOR",
+    "projectId": "AGY_V7_CORE",
+    "hash": "7df5a07d736e2ea28bba92b22b039b455d78e80725a47f985e134d9d2828b12f",
+    "provenanceTrail": [
+      "Claim registered at 2026-08-26T03:47:57.985Z with status UNKNOWN"
+    ]
+  },
+  {
+    "claimId": "claim_ea8f91119db66ceb",
+    "text": "Inferred system load based on time",
+    "type": "FACTUAL",
+    "status": "INFERRED",
+    "evidenceLevel": "E0",
+    "confidence": 0.4,
+    "riskCategory": "GENERAL",
+    "createdAt": 1787716077985,
+    "updatedAt": 1787716077985,
+    "sourceIds": [],
+    "evidenceIds": [],
+    "modelIds": [],
+    "verificationMethods": [],
+    "contradictions": [],
+    "freshness": {
+      "freshnessClass": "STABLE",
+      "lastVerified": 1787716077985,
+      "expirationPolicy": "STANDARD_30_DAYS",
+      "isStale": false
+    },
+    "owner": "ANTIGRAVITY_OPERATOR",
+    "projectId": "AGY_V7_CORE",
+    "hash": "23f32f269b14bd94c8d0a4364f968f2fd682c049f19594c72bbd12b92ac64cfc",
+    "provenanceTrail": [
+      "Claim registered at 2026-08-26T03:47:57.985Z with status INFERRED"
+    ]
+  },
+  {
+    "claimId": "claim_86e717414d4bfd09",
+    "text": "AI generated fiction story",
+    "type": "CREATIVE_GENERATED",
+    "status": "GENERATED",
+    "evidenceLevel": "E0",
+    "confidence": 0.4,
+    "riskCategory": "GENERAL",
+    "createdAt": 1787716077985,
+    "updatedAt": 1787716077985,
+    "sourceIds": [],
+    "evidenceIds": [],
+    "modelIds": [],
+    "verificationMethods": [],
+    "contradictions": [],
+    "freshness": {
+      "freshnessClass": "STABLE",
+      "lastVerified": 1787716077985,
+      "expirationPolicy": "STANDARD_30_DAYS",
+      "isStale": false
+    },
+    "owner": "ANTIGRAVITY_OPERATOR",
+    "projectId": "AGY_V7_CORE",
+    "hash": "21d8a52b6c403124020be32e3702cbb0a7d9361d90d961cea77fe8d7c355337c",
+    "provenanceTrail": [
+      "Claim registered at 2026-08-26T03:47:57.985Z with status GENERATED"
+    ]
+  },
+  {
+    "claimId": "claim_ff34982d2bd257dd",
+    "text": "Assumed network latency is 10ms",
+    "type": "FACTUAL",
+    "status": "ASSUMED",
+    "evidenceLevel": "E0",
+    "confidence": 0.4,
+    "riskCategory": "GENERAL",
+    "createdAt": 1787716077985,
+    "updatedAt": 1787716077985,
+    "sourceIds": [],
+    "evidenceIds": [],
+    "modelIds": [],
+    "verificationMethods": [],
+    "contradictions": [],
+    "freshness": {
+      "freshnessClass": "STABLE",
+      "lastVerified": 1787716077985,
+      "expirationPolicy": "STANDARD_30_DAYS",
+      "isStale": false
+    },
+    "owner": "ANTIGRAVITY_OPERATOR",
+    "projectId": "AGY_V7_CORE",
+    "hash": "2b41f2f3671590a14a504d9b3bfbcb8bcee7706062f24513e2749dbfb4bf3dc2",
+    "provenanceTrail": [
+      "Claim registered at 2026-08-26T03:47:57.985Z with status ASSUMED"
+    ]
+  },
+  {
+    "claimId": "claim_38744c3b2bd87d53",
+    "text": "User claims database is cleared",
+    "type": "FACTUAL",
+    "status": "UNKNOWN",
+    "evidenceLevel": "E0",
+    "confidence": 0,
+    "riskCategory": "GENERAL",
+    "createdAt": 1787716077985,
+    "updatedAt": 1787716077985,
+    "sourceIds": [
+      "USER_ASSERTION"
+    ],
+    "evidenceIds": [],
+    "modelIds": [],
+    "verificationMethods": [],
+    "contradictions": [],
+    "freshness": {
+      "freshnessClass": "STABLE",
+      "lastVerified": 1787716077985,
+      "expirationPolicy": "STANDARD_30_DAYS",
+      "isStale": false
+    },
+    "owner": "ANTIGRAVITY_OPERATOR",
+    "projectId": "AGY_V7_CORE",
+    "hash": "1ed23378f6a45e627a950a028083ac2ce79bd3a5a4f8f957b625a2b2eccf061e",
+    "provenanceTrail": [
+      "Claim registered at 2026-08-26T03:47:57.985Z with status UNKNOWN"
+    ]
+  },
+  {
+    "claimId": "claim_719b2a558b12bda5",
+    "text": "Medical diagnosis claim",
+    "type": "FACTUAL",
+    "status": "UNKNOWN",
+    "evidenceLevel": "E0",
+    "confidence": 0,
+    "riskCategory": "MEDICAL",
+    "createdAt": 1787716077985,
+    "updatedAt": 1787716077985,
+    "sourceIds": [],
+    "evidenceIds": [],
+    "modelIds": [],
+    "verificationMethods": [],
+    "contradictions": [],
+    "freshness": {
+      "freshnessClass": "STABLE",
+      "lastVerified": 1787716077985,
+      "expirationPolicy": "STANDARD_30_DAYS",
+      "isStale": false
+    },
+    "owner": "ANTIGRAVITY_OPERATOR",
+    "projectId": "AGY_V7_CORE",
+    "hash": "ac9ae0b34505edf40ec466c4bbb791a9144ca17f85093e3f528c87475544c283",
+    "provenanceTrail": [
+      "Claim registered at 2026-08-26T03:47:57.985Z with status UNKNOWN"
+    ]
+  }
+]

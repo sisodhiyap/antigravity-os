@@ -1,0 +1,5 @@
+{
+  "status": "FALLBACK_VECTOR_SAFE",
+  "requests": [],
+  "vramProfile": "CONSTRAINED_6GB"
+}

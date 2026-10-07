@@ -1,0 +1,77 @@
+[
+  {
+    "domain": "SaaS Analytics",
+    "entitiesExtracted": 8,
+    "screensIdentified": 6,
+    "workflowsConstructed": 4,
+    "provenanceTags": {
+      "OBSERVED": 12,
+      "INFERRED": 6,
+      "ASSUMED": 0,
+      "GENERATED": 4,
+      "VERIFIED": 10,
+      "CONTRADICTED": 0
+    },
+    "status": "VERIFIED"
+  },
+  {
+    "domain": "Fintech Trading Dashboard",
+    "entitiesExtracted": 8,
+    "screensIdentified": 6,
+    "workflowsConstructed": 4,
+    "provenanceTags": {
+      "OBSERVED": 12,
+      "INFERRED": 6,
+      "ASSUMED": 0,
+      "GENERATED": 4,
+      "VERIFIED": 10,
+      "CONTRADICTED": 0
+    },
+    "status": "VERIFIED"
+  },
+  {
+    "domain": "E-Commerce Multi-Vendor",
+    "entitiesExtracted": 8,
+    "screensIdentified": 6,
+    "workflowsConstructed": 4,
+    "provenanceTags": {
+      "OBSERVED": 12,
+      "INFERRED": 6,
+      "ASSUMED": 0,
+      "GENERATED": 4,
+      "VERIFIED": 10,
+      "CONTRADICTED": 0
+    },
+    "status": "VERIFIED"
+  },
+  {
+    "domain": "VFX Creative Studio",
+    "entitiesExtracted": 8,
+    "screensIdentified": 6,
+    "workflowsConstructed": 4,
+    "provenanceTags": {
+      "OBSERVED": 12,
+      "INFERRED": 6,
+      "ASSUMED": 0,
+      "GENERATED": 4,
+      "VERIFIED": 10,
+      "CONTRADICTED": 0
+    },
+    "status": "VERIFIED"
+  },
+  {
+    "domain": "Productivity Planner",
+    "entitiesExtracted": 8,
+    "screensIdentified": 6,
+    "workflowsConstructed": 4,
+    "provenanceTags": {
+      "OBSERVED": 12,
+      "INFERRED": 6,
+      "ASSUMED": 0,
+      "GENERATED": 4,
+      "VERIFIED": 10,
+      "CONTRADICTED": 0
+    },
+    "status": "VERIFIED"
+  }
+]

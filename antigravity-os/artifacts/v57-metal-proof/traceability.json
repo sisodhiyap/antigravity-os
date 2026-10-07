@@ -1,0 +1,10 @@
+[
+  {
+    "designNodeId": "node_card_kpi",
+    "designElementName": "Metric KPI Card",
+    "sourceFilePath": "src/components/DataCard.tsx",
+    "componentSymbolName": "DataCard",
+    "runtimeElementSelector": "[data-testid='data-card']",
+    "verificationTestName": "test_datacard_render.ts"
+  }
+]

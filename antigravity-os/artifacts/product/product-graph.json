@@ -1,0 +1,23 @@
+{
+  "nodesCount": 2,
+  "edgesCount": 1,
+  "nodes": [
+    {
+      "id": "prod_1",
+      "name": "Agency App",
+      "type": "PRODUCT"
+    },
+    {
+      "id": "scr_1",
+      "name": "Dashboard",
+      "type": "SCREEN"
+    }
+  ],
+  "edges": [
+    {
+      "fromNodeId": "prod_1",
+      "toNodeId": "scr_1",
+      "type": "CONTAINS"
+    }
+  ]
+}

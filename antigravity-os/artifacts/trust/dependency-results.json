@@ -1,0 +1,22 @@
+[
+  {
+    "package": "react",
+    "version": "19.0.0",
+    "hash": "940fd382e2e90f1d0b120dbc00985178962eaff54af97116fc6f96d1ecd8b873",
+    "source": "NPM_OFFICIAL_REGISTRY",
+    "license": "MIT",
+    "knownVulnerabilities": [],
+    "status": "SECURE"
+  },
+  {
+    "package": "event-stream",
+    "version": "3.3.6",
+    "hash": "637ace2b0357b39c58cb03fc29b22194a2eb52ae852da6b0b6294bc279030eca",
+    "source": "NPM_OFFICIAL_REGISTRY",
+    "license": "MIT",
+    "knownVulnerabilities": [
+      "CVE-MALICIOUS-PACKAGE"
+    ],
+    "status": "VULNERABLE"
+  }
+]

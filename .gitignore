@@ -34,3 +34,16 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 scratch/
+
+# Cloned External Repositories & Engine Suites
+repositories/
+tools/4k-video-upscaler/
+tools/Automated-Video-Generator/
+tools/ComfyUI/
+tools/Flowise/
+tools/Fooocus/
+tools/free-video-maker/
+tools/mcp-video-gen/
+tools/open-webui/
+tools/SunoMCP/
+tools/video2x/

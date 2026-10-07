@@ -1,0 +1,129 @@
+{
+  "nodes": [
+    {
+      "id": "claim_e0764e36744557fd",
+      "type": "CLAIM",
+      "label": "Dashboard requires OAuth2 login and SQLite persistence.",
+      "metadata": {},
+      "createdAt": 1787716773790
+    },
+    {
+      "id": "src_file_bbccaf0dbf79",
+      "type": "SOURCE",
+      "label": "src/server/db.ts",
+      "metadata": {},
+      "createdAt": 1787716773790
+    },
+    {
+      "id": "ev_7526a6f2155c",
+      "type": "TEST",
+      "label": "Initial empirical capture of: Dashboard requires OAuth2 login and SQLite persistence.",
+      "metadata": {},
+      "createdAt": 1787716773791
+    },
+    {
+      "id": "claim_1f6ac86664eb83b9",
+      "type": "CLAIM",
+      "label": "SQLite is operational.",
+      "metadata": {},
+      "createdAt": 1787716773791
+    },
+    {
+      "id": "ev_710020bb95be",
+      "type": "TEST",
+      "label": "Initial empirical capture of: SQLite is operational.",
+      "metadata": {},
+      "createdAt": 1787716773791
+    },
+    {
+      "id": "node_core_v7",
+      "type": "RUNTIME",
+      "label": "V7 Frozen Kernel",
+      "metadata": {},
+      "createdAt": 1787716773792
+    },
+    {
+      "id": "node_hermes",
+      "type": "MODEL",
+      "label": "Hermes Agent Controller",
+      "metadata": {},
+      "createdAt": 1787716773792
+    },
+    {
+      "id": "node_trust",
+      "type": "OBSERVATION",
+      "label": "Trust Fabric Policy Engine",
+      "metadata": {},
+      "createdAt": 1787716773792
+    },
+    {
+      "id": "node_comfy",
+      "type": "MEDIA_ENGINE",
+      "label": "ComfyUI Media Engine",
+      "metadata": {},
+      "createdAt": 1787716773792
+    }
+  ],
+  "edges": [
+    {
+      "id": "src_file_bbccaf0dbf79_OBSERVED_IN_claim_e0764e36744557fd",
+      "fromId": "src_file_bbccaf0dbf79",
+      "toId": "claim_e0764e36744557fd",
+      "type": "OBSERVED_IN",
+      "weight": 1,
+      "createdAt": 1787716773791
+    },
+    {
+      "id": "ev_7526a6f2155c_SUPPORTS_claim_e0764e36744557fd",
+      "fromId": "ev_7526a6f2155c",
+      "toId": "claim_e0764e36744557fd",
+      "type": "SUPPORTS",
+      "weight": 1,
+      "createdAt": 1787716773791
+    },
+    {
+      "id": "src_file_bbccaf0dbf79_OBSERVED_IN_claim_1f6ac86664eb83b9",
+      "fromId": "src_file_bbccaf0dbf79",
+      "toId": "claim_1f6ac86664eb83b9",
+      "type": "OBSERVED_IN",
+      "weight": 1,
+      "createdAt": 1787716773791
+    },
+    {
+      "id": "ev_710020bb95be_SUPPORTS_claim_1f6ac86664eb83b9",
+      "fromId": "ev_710020bb95be",
+      "toId": "claim_1f6ac86664eb83b9",
+      "type": "SUPPORTS",
+      "weight": 1,
+      "createdAt": 1787716773791
+    },
+    {
+      "id": "node_hermes_DEPENDS_ON_node_trust",
+      "fromId": "node_hermes",
+      "toId": "node_trust",
+      "type": "DEPENDS_ON",
+      "weight": 1,
+      "createdAt": 1787716773792
+    },
+    {
+      "id": "node_hermes_CALLS_node_comfy",
+      "fromId": "node_hermes",
+      "toId": "node_comfy",
+      "type": "CALLS",
+      "weight": 1,
+      "createdAt": 1787716773792
+    },
+    {
+      "id": "node_trust_PROTECTS_node_core_v7",
+      "fromId": "node_trust",
+      "toId": "node_core_v7",
+      "type": "PROTECTS",
+      "weight": 1,
+      "createdAt": 1787716773792
+    }
+  ],
+  "stats": {
+    "totalNodes": 9,
+    "totalEdges": 7
+  }
+}

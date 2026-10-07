@@ -1,0 +1,25 @@
+{
+  "extensionName": "Hermes Autonomous Agent Subsystem",
+  "version": "1.0.0-HERMES-V7",
+  "integrationPattern": "Plugin & Adapter Protocol",
+  "targetDirectory": "src/plugins/hermes/",
+  "executionLoop": [
+    "OBSERVE",
+    "UNDERSTAND",
+    "PLAN",
+    "DECOMPOSE",
+    "SELECT_MODEL",
+    "EXECUTE_IN_SANDBOX",
+    "OBSERVE_RESULT",
+    "CRITIQUE",
+    "REPAIR",
+    "VERIFY",
+    "CREATE_EVIDENCE",
+    "REALITY_CHECK",
+    "PROMOTE_OR_ROLLBACK"
+  ],
+  "verificationSuites": [
+    "scripts/verify-hermes-agent.ts",
+    "scripts/independent-hermes-verifier.ts"
+  ]
+}

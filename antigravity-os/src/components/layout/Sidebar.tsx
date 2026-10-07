@@ -5,192 +5,221 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
-  FolderGit2,
+  Terminal,
   BrainCircuit,
-  Factory,
-  Clapperboard,
   Users,
   Network,
-  Rocket,
-  FileCode2,
-  ShieldCheck,
+  Factory,
+  Clapperboard,
+  FolderGit2,
   Activity,
-  CheckSquare,
+  ShieldCheck,
   Settings,
+  Presentation,
   ChevronLeft,
   ChevronRight,
-  Sparkles,
+  Cpu,
+  Lock,
+  Zap,
 } from "lucide-react";
 import { useSystemStore } from "@/stores/useSystemStore";
-import { Badge } from "@/ui/Badge";
+import { clsx } from "clsx";
+
+const MISSION_NAV = [
+  {
+    section: "COMMAND",
+    items: [
+      { label: "Mission Control", href: "/", icon: LayoutDashboard },
+      { label: "V7 Desktop Hub", href: "/desktop", icon: Cpu },
+      { label: "Command Center", href: "/terminal", icon: Terminal },
+    ],
+  },
+  {
+    section: "INTELLIGENCE",
+    items: [
+      { label: "Hermes Agent", href: "/hermes", icon: BrainCircuit },
+      { label: "AI Control", href: "/ai", icon: BrainCircuit },
+      { label: "Agents", href: "/agents", icon: Users },
+      { label: "MCP Hub", href: "/mcp", icon: Network },
+    ],
+  },
+  {
+    section: "CREATION",
+    items: [
+      { label: "Project Basket", href: "/basket", icon: FolderGit2 },
+      { label: "PresentX Studio", href: "/presentx", icon: Presentation },
+      { label: "Website Factory", href: "/factory", icon: Factory },
+      { label: "Media Studio", href: "/media", icon: Clapperboard },
+      { label: "Projects", href: "/projects", icon: FolderGit2 },
+    ],
+  },
+  {
+    section: "SYSTEM & CONTROL",
+    items: [
+      { label: "Profile", href: "/profile", icon: Users },
+      { label: "Privacy Center", href: "/privacy", icon: Lock },
+      { label: "Security Center", href: "/security", icon: ShieldCheck },
+      { label: "Health Center", href: "/health-center", icon: Activity },
+      { label: "Certification", href: "/certification", icon: ShieldCheck },
+      { label: "Settings", href: "/settings", icon: Settings },
+    ],
+  },
+];
 
 export const Sidebar: React.FC = () => {
   const pathname = usePathname();
   const { isSidebarCollapsed, toggleSidebar } = useSystemStore();
-
-  const navSections = [
-    {
-      title: "CORE WORKSPACE",
-      items: [
-        { label: "Overview OS", href: "/", icon: LayoutDashboard },
-        { label: "Projects", href: "/projects", icon: FolderGit2, badge: "3 Active" },
-        { label: "AI Control Center", href: "/ai", icon: BrainCircuit, badge: "3-Tier" },
-        { label: "Website Factory", href: "/factory", icon: Factory, badge: "E2E" },
-        { label: "Media Studio", href: "/media", icon: Clapperboard, badge: "5 Tabs" },
-      ],
-    },
-    {
-      title: "PLATFORM & INFRA",
-      items: [
-        { label: "Swarm Agents", href: "/agents", icon: Users, badge: "10 Roles" },
-        { label: "MCP Hub", href: "/mcp", icon: Network, badge: "15 Hubs" },
-        { label: "Deployments", href: "/deployments", icon: Rocket, badge: "Vercel" },
-        { label: "Files & Memory", href: "/files", icon: FileCode2 },
-        { label: "Todo & Notes", href: "/todo-notes", icon: CheckSquare },
-        { label: "Health Center", href: "/health-center", icon: Activity, badge: "100%" },
-        { label: "Certification", href: "/certification", icon: ShieldCheck, badge: "19/19" },
-        { label: "Settings", href: "/settings", icon: Settings },
-      ],
-    },
-  ];
+  const collapsed = isSidebarCollapsed;
 
   return (
     <aside
-      className={`glass-panel border-r border-white/10 h-screen sticky top-0 transition-all duration-300 flex flex-col justify-between z-30 select-none ${
-        isSidebarCollapsed ? "w-20" : "w-64"
-      }`}
+      className={clsx(
+        "h-screen sticky top-0 hidden lg:flex flex-col z-30 select-none transition-all duration-250 border-r border-[var(--ag-border)] bg-[var(--ag-bg-deep)]",
+        collapsed ? "w-[68px]" : "w-[240px]"
+      )}
     >
-      {/* Brand Header */}
-      <div>
-        <div className="p-4 border-b border-white/10 flex items-center justify-between">
-          {!isSidebarCollapsed ? (
-            <Link href="/" className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyber-cyan to-cyber-purple flex items-center justify-center shadow-glow-cyan">
-                <Sparkles className="w-4 h-4 text-slate-950" />
+      {/* ── Brand & Mission Control Header ───────────────────────── */}
+      <div className="flex items-center justify-between px-4 py-4 border-b border-[var(--ag-border)] shrink-0">
+        {!collapsed ? (
+          <Link href="/" className="flex items-center gap-2.5 min-w-0 group">
+            <div className="w-8 h-8 rounded-xl bg-[var(--ag-gold-alpha)] border border-[var(--ag-gold)]/30 flex items-center justify-center shrink-0 shadow-[var(--ag-shadow-gold)] group-hover:border-[var(--ag-gold)] transition-colors">
+              <Cpu className="w-4 h-4 text-[var(--ag-gold)]" aria-hidden="true" />
+            </div>
+            <div className="min-w-0">
+              <div className="text-[11px] font-bold tracking-widest text-[var(--ag-text)] uppercase truncate font-satoshi">
+                ANTIGRAVITY <span className="text-[var(--ag-gold)]">OS</span>
               </div>
-              <div>
-                <div className="font-bold text-sm text-slate-100 tracking-wider font-mono">
-                  ANTIGRAVITY <span className="text-cyber-cyan">OS</span>
-                </div>
-                <div className="text-[10px] text-slate-400 font-mono">v5.1 • PRODUCTION READY</div>
+              <div className="text-[9px] text-[var(--ag-gold)] flex items-center gap-1.5 font-mono tracking-wider font-semibold">
+                <span className="w-1.5 h-1.5 rounded-full bg-[var(--ag-success)] animate-[status-pulse_2s_ease-in-out_infinite]" />
+                SYSTEM ONLINE
               </div>
-            </Link>
-          ) : (
-            <Link href="/" className="w-8 h-8 mx-auto rounded-lg bg-gradient-to-tr from-cyber-cyan to-cyber-purple flex items-center justify-center shadow-glow-cyan">
-              <Sparkles className="w-4 h-4 text-slate-950" />
-            </Link>
-          )}
-
-          <button
-            onClick={toggleSidebar}
-            className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
-            title="Toggle Sidebar"
+            </div>
+          </Link>
+        ) : (
+          <Link
+            href="/"
+            className="w-8 h-8 mx-auto rounded-xl bg-[var(--ag-gold-alpha)] border border-[var(--ag-gold)]/30 flex items-center justify-center"
+            aria-label="Antigravity OS Mission Control"
           >
-            {isSidebarCollapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
-          </button>
-        </div>
+            <Cpu className="w-4 h-4 text-[var(--ag-gold)]" aria-hidden="true" />
+          </Link>
+        )}
+        <button
+          onClick={toggleSidebar}
+          className={clsx(
+            "p-1.5 rounded-lg text-[var(--ag-muted)] hover:text-[var(--ag-text)] hover:bg-[var(--ag-elevated)] transition-colors",
+            collapsed && "ml-auto"
+          )}
+          aria-label={collapsed ? "Expand navigation" : "Collapse navigation"}
+        >
+          {collapsed ? <ChevronRight className="w-3.5 h-3.5" /> : <ChevronLeft className="w-3.5 h-3.5" />}
+        </button>
+      </div>
 
-        {/* Navigation sections */}
-        <div className="p-3 space-y-4 overflow-y-auto max-h-[calc(100vh-140px)]">
-          {navSections.map((section, sIdx) => (
-            <div key={sIdx} className="space-y-1">
-              {!isSidebarCollapsed && (
-                <div className="px-3 py-1 text-[10px] font-mono uppercase text-slate-500 tracking-wider font-bold">
-                  {section.title}
-                </div>
-              )}
-              {section.items.map((item) => {
+      {/* ── Main Navigation ───────────────────────────────────────── */}
+      <nav className="flex-1 overflow-y-auto py-3 px-2 space-y-4" aria-label="Mission navigation">
+        {MISSION_NAV.map((group) => (
+          <div key={group.section}>
+            {!collapsed && (
+              <div className="px-2.5 mb-1.5 text-[9px] font-bold uppercase tracking-[0.2em] text-[var(--ag-muted)]">
+                {group.section}
+              </div>
+            )}
+            <div className="space-y-0.5">
+              {group.items.map((item) => {
                 const Icon = item.icon;
-                const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
+                const active = item.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(item.href);
 
                 return (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`flex items-center gap-3 px-3 py-2 rounded-xl font-mono text-xs transition-all duration-200 ${
-                      isActive
-                        ? "bg-cyber-cyan/15 text-cyber-cyan border border-cyber-cyan/40 shadow-[0_0_15px_-4px_rgba(0,240,255,0.3)] font-bold"
-                        : "text-slate-400 hover:text-slate-100 hover:bg-white/5"
-                    } ${isSidebarCollapsed ? "justify-center px-0 py-2.5" : ""}`}
-                    title={isSidebarCollapsed ? item.label : undefined}
+                    aria-current={active ? "page" : undefined}
+                    title={collapsed ? item.label : undefined}
+                    className={clsx(
+                      "mc-nav-item",
+                      collapsed && "justify-center px-0 py-2.5",
+                      active && "active"
+                    )}
                   >
-                    <Icon className={`w-4 h-4 shrink-0 ${isActive ? "text-cyber-cyan" : "text-slate-400"}`} />
-                    {!isSidebarCollapsed && (
-                      <div className="flex-1 flex items-center justify-between">
-                        <span>{item.label}</span>
-                        {item.badge && (
-                          <Badge variant="cyan" className="text-[9px] px-1.5 py-0 font-normal">
-                            {item.badge}
-                          </Badge>
-                        )}
-                      </div>
+                    <Icon
+                      className={clsx(
+                        "w-4 h-4 shrink-0 transition-colors",
+                        active ? "text-[var(--ag-gold)]" : "text-[var(--ag-muted)]"
+                      )}
+                      aria-hidden="true"
+                    />
+                    {!collapsed && (
+                      <span className={clsx("truncate", active && "font-semibold text-[var(--ag-text)]")}>
+                        {item.label}
+                      </span>
                     )}
                   </Link>
                 );
               })}
             </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Footer Status Pill & Operator Session */}
-      <div className="p-3 border-t border-white/10 font-mono text-[11px] space-y-2">
-        {!isSidebarCollapsed ? (
-          <>
-            <div className="bg-slate-900/80 p-2.5 rounded-xl border border-white/5 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-slate-300 text-[11px]">AI Mesh Active</span>
-              </div>
-              <span className="text-[10px] text-cyber-cyan font-bold">19/19 PASS</span>
-            </div>
-
-            <button
-              onClick={async () => {
-                await fetch("/api/omnicraft/auth", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify({ action: "logout" }),
-                }).catch(() => {});
-                if (typeof window !== "undefined") {
-                  localStorage.removeItem("omnicraft_user");
-                  localStorage.removeItem("omnicraft_token");
-                  window.location.href = "/login";
-                }
-              }}
-              className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-red-950/20 hover:bg-red-950/40 border border-red-500/20 text-red-400 hover:text-red-300 text-[10px] transition-colors"
-            >
-              <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-3 h-3 text-cyber-cyan" />
-                <span>Operator Logged In</span>
-              </span>
-              <span className="text-[9px] uppercase font-bold text-red-400 hover:underline">Log Out →</span>
-            </button>
-          </>
-        ) : (
-          <div className="flex flex-col items-center gap-2" title="AI Mesh: LIVE (19/19 PASS)">
-            <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-            <button
-              onClick={async () => {
-                await fetch("/api/omnicraft/auth", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify({ action: "logout" }),
-                }).catch(() => {});
-                if (typeof window !== "undefined") {
-                  localStorage.removeItem("omnicraft_user");
-                  localStorage.removeItem("omnicraft_token");
-                  window.location.href = "/login";
-                }
-              }}
-              className="text-slate-500 hover:text-red-400 p-1"
-              title="Lock Session / Log Out"
-            >
-              <ShieldCheck className="w-4 h-4" />
-            </button>
           </div>
-        )}
+        ))}
+      </nav>
+
+      {/* ── Compute Telemetry Deck ────────────────────────────────── */}
+      {!collapsed && (
+        <div className="shrink-0 px-3 py-2.5 mx-2 mb-2 rounded-xl bg-[var(--ag-elevated)] border border-[var(--ag-border)] space-y-1.5 text-[10px] font-mono">
+          <div className="flex items-center justify-between text-[var(--ag-muted)] text-[9px] font-bold uppercase tracking-wider">
+            <span>COMPUTE</span>
+            <span className="text-[var(--ag-success)]">ACTIVE</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-[var(--ag-muted)]">OLLAMA</span>
+            <span className="text-[var(--ag-success)] font-bold">ONLINE</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-[var(--ag-muted)]">AIRLLM</span>
+            <span className="text-[var(--ag-gold)] font-bold">STANDBY</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-[var(--ag-muted)]">CLOUD</span>
+            <span className="text-[var(--ag-info)] font-bold">READY</span>
+          </div>
+          <div className="pt-1 border-t border-[var(--ag-border-subtle)] flex justify-between text-[9px] text-[var(--ag-muted)]">
+            <span>GPU: 4.2/6 GB</span>
+            <span>RAM: LIVE</span>
+          </div>
+        </div>
+      )}
+
+      {/* ── User Session Footer ───────────────────────────────────── */}
+      <div className="shrink-0 px-2 pb-3 pt-2 border-t border-[var(--ag-border)]">
+        <div className={clsx("flex items-center justify-between px-2 py-1", collapsed && "justify-center px-0")}>
+          {!collapsed && (
+            <div className="min-w-0">
+              <p className="text-[11px] font-bold text-[var(--ag-text)] truncate font-satoshi">Operator</p>
+              <p className="text-[9px] text-[var(--ag-gold)] truncate font-mono">Authenticated</p>
+            </div>
+          )}
+          <button
+            onClick={async () => {
+              await fetch("/api/omnicraft/auth", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ action: "logout" }),
+              }).catch(() => {});
+              if (typeof window !== "undefined") {
+                localStorage.removeItem("omnicraft_user");
+                window.location.href = "/login";
+              }
+            }}
+            title="Sign Out"
+            className="p-1.5 rounded-lg text-[var(--ag-muted)] hover:text-[var(--ag-error)] hover:bg-[var(--ag-error-bg)] transition-colors"
+            aria-label="Sign out"
+          >
+            <Lock className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
+          </button>
+        </div>
       </div>
     </aside>
   );
 };
+

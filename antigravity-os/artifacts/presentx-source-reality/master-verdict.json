@@ -1,0 +1,25 @@
+{
+  "app": "PresentX Studio — Source Reality Gate",
+  "verdict": "PROVEN",
+  "timestamp": "2026-08-26T07:26:03.159Z",
+  "totalTests": 25,
+  "passedTests": 25,
+  "coreMutations": 0,
+  "attacksTested": 20,
+  "attacksNeutralized": 20,
+  "factScore": {
+    "evidenceCoverage": 100,
+    "verifiedClaimsCount": 8,
+    "supportedClaimsCount": 0,
+    "partiallyVerifiedClaimsCount": 0,
+    "unverifiedClaimsCount": 0,
+    "contradictedClaimsCount": 0,
+    "hypotheticalClaimsCount": 0,
+    "sourceRetrievalCoverage": 0,
+    "evidenceMatchCoverage": 0,
+    "contradictionResolutionRate": 100,
+    "freshnessCoverage": 100,
+    "numericalVerificationRate": 0,
+    "overallScore": 80
+  }
+}

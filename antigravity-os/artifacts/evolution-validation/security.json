@@ -1,0 +1,30 @@
+{
+  "metricsA": {
+    "candidateId": "CAND_A_BASELINE",
+    "functionalScore": 1,
+    "securityScore": 1,
+    "apiLatencyMs": 0.85,
+    "memoryRssMb": 82,
+    "regressionsCount": 0,
+    "zeroSecretsExposed": true
+  },
+  "metricsB": {
+    "candidateId": "CAND_B_SAFE_IMPROVEMENT",
+    "functionalScore": 1,
+    "securityScore": 1,
+    "apiLatencyMs": 0.6,
+    "memoryRssMb": 80.5,
+    "regressionsCount": 0,
+    "zeroSecretsExposed": true
+  },
+  "metricsC": {
+    "candidateId": "CAND_C_KNOWN_REGRESSION",
+    "functionalScore": 0.9,
+    "securityScore": 0.5,
+    "apiLatencyMs": 0.55,
+    "memoryRssMb": 81,
+    "regressionsCount": 2,
+    "zeroSecretsExposed": true
+  },
+  "attackSuiteBlocked": 20
+}

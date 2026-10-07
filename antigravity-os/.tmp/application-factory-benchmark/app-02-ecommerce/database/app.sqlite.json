@@ -1,0 +1,87 @@
+{
+  "users": [
+    {
+      "id": "id_2wvl3n3",
+      "created_at": "2026-08-25T07:13:48.297Z",
+      "updated_at": "2026-08-25T07:13:48.297Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_w9bhhtc",
+      "created_at": "2026-08-25T07:13:48.325Z",
+      "updated_at": "2026-08-25T07:13:48.325Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    },
+    {
+      "id": "id_2x0btwa",
+      "created_at": "2026-08-25T07:15:24.575Z",
+      "updated_at": "2026-08-25T07:15:24.575Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_r1zzf1x",
+      "created_at": "2026-08-25T07:15:24.598Z",
+      "updated_at": "2026-08-25T07:15:24.598Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    }
+  ],
+  "products": [
+    {
+      "id": "id_s552mza",
+      "created_at": "2026-08-25T07:13:48.318Z",
+      "updated_at": "2026-08-25T07:13:48.318Z",
+      "title": "Initial Product Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Product"
+    }
+  ],
+  "categorys": [
+    {
+      "id": "id_zr73m4m",
+      "created_at": "2026-08-25T07:13:48.319Z",
+      "updated_at": "2026-08-25T07:13:48.319Z",
+      "title": "Initial Category Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Category"
+    }
+  ],
+  "cartitems": [
+    {
+      "id": "id_fdyh08l",
+      "created_at": "2026-08-25T07:13:48.319Z",
+      "updated_at": "2026-08-25T07:13:48.319Z",
+      "title": "Initial CartItem Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for CartItem"
+    }
+  ],
+  "orders": [
+    {
+      "id": "id_5koqhog",
+      "created_at": "2026-08-25T07:13:48.319Z",
+      "updated_at": "2026-08-25T07:13:48.319Z",
+      "title": "Initial Order Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Order"
+    }
+  ],
+  "orderitems": [
+    {
+      "id": "id_1yb7mqu",
+      "created_at": "2026-08-25T07:13:48.320Z",
+      "updated_at": "2026-08-25T07:13:48.320Z",
+      "title": "Initial OrderItem Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for OrderItem"
+    }
+  ]
+}

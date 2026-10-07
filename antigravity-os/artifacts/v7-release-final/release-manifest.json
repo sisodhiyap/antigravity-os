@@ -1,0 +1,10 @@
+{
+  "name": "Antigravity OS",
+  "version": "7.0.0",
+  "releaseDate": "2026-08-26T03:59:38.301Z",
+  "coreState": "FROZEN_IMMUTABLE",
+  "architectureTier": "V7_FROZEN",
+  "securityPosture": "ZERO_TRUST",
+  "verificationStatus": "PROVEN",
+  "assertionsCount": 25
+}

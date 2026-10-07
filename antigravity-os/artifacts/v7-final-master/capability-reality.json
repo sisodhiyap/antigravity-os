@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Hermes Autonomous Agent",
+    "state": "PRODUCTION-READY",
+    "evidence": "HermesSessionManager + DAG Planner"
+  },
+  {
+    "name": "Trust Fabric & Claim Provenance",
+    "state": "PRODUCTION-READY",
+    "evidence": "SHA-256 Evidence Graph"
+  },
+  {
+    "name": "ComfyUI Media Bridge",
+    "state": "CONFIGURED",
+    "evidence": "Local ComfyUI Connector + Resource Governance"
+  },
+  {
+    "name": "Ollama Local Inference",
+    "state": "AVAILABLE",
+    "evidence": "Ollama HTTP API + Deterministic Fallback"
+  },
+  {
+    "name": "Universal Input Parser",
+    "state": "VERIFIED",
+    "evidence": "Magic-byte + MIME detection"
+  },
+  {
+    "name": "Mobile Responsive Operator Console",
+    "state": "PRODUCTION-READY",
+    "evidence": "MobileNav + Safe Area + Viewports"
+  },
+  {
+    "name": "PWA Offline Shell",
+    "state": "PRODUCTION-READY",
+    "evidence": "Service Worker + Web App Manifest"
+  },
+  {
+    "name": "Android APK Wrapper",
+    "state": "EXECUTABLE",
+    "evidence": "Capacitor Config + Minimized Android Manifest"
+  }
+]

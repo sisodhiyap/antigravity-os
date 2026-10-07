@@ -1,0 +1,27 @@
+{
+  "installationPath": "C:\\ComfyUI_windows_portable",
+  "version": "0.3.18",
+  "serverStatus": "ONLINE",
+  "apiStatus": "AVAILABLE",
+  "gpu": "NVIDIA GeForce RTX 4080 (16GB)",
+  "vramAvailableMb": 12288,
+  "loadedModels": [
+    "flux1-schnell-fp8.safetensors",
+    "sd_xl_base_1.0.safetensors"
+  ],
+  "customNodes": [
+    "ComfyUI-Manager",
+    "ComfyUI-Impact-Pack"
+  ],
+  "workflowAvailability": {
+    "image": true,
+    "video": true,
+    "audio": true,
+    "threeD": true
+  },
+  "queueState": {
+    "pending": 0,
+    "running": 0
+  },
+  "lastSuccessfulGeneration": 1787716778297
+}

@@ -1,0 +1,99 @@
+{
+  "nodes": [
+    {
+      "id": "claim_983699e867e9cc34",
+      "type": "CLAIM",
+      "label": "Antigravity OS v7.0 provides fact-grounded intelligence.",
+      "metadata": {},
+      "createdAt": 1787716077980
+    },
+    {
+      "id": "src_file_40816d14af46",
+      "type": "SOURCE",
+      "label": "docs/TRUST_FABRIC_ARCHITECTURE.md",
+      "metadata": {},
+      "createdAt": 1787716077980
+    },
+    {
+      "id": "ev_8e18b868a826",
+      "type": "TEST",
+      "label": "Initial empirical capture of: Antigravity OS v7.0 provides fact-grounded intelligence.",
+      "metadata": {},
+      "createdAt": 1787716077980
+    },
+    {
+      "id": "claim_bc612210b85cf248",
+      "type": "CLAIM",
+      "label": "The kernel architecture is verified.",
+      "metadata": {},
+      "createdAt": 1787716077980
+    },
+    {
+      "id": "ev_1c004c89a564",
+      "type": "TEST",
+      "label": "Initial empirical capture of: The kernel architecture is verified.",
+      "metadata": {},
+      "createdAt": 1787716077980
+    },
+    {
+      "id": "node_src_main",
+      "type": "SOURCE",
+      "label": "Main Specification",
+      "metadata": {},
+      "createdAt": 1787716077986
+    },
+    {
+      "id": "node_claim_main",
+      "type": "CLAIM",
+      "label": "Specification is complete",
+      "metadata": {},
+      "createdAt": 1787716077986
+    }
+  ],
+  "edges": [
+    {
+      "id": "src_file_40816d14af46_OBSERVED_IN_claim_983699e867e9cc34",
+      "fromId": "src_file_40816d14af46",
+      "toId": "claim_983699e867e9cc34",
+      "type": "OBSERVED_IN",
+      "weight": 1,
+      "createdAt": 1787716077980
+    },
+    {
+      "id": "ev_8e18b868a826_SUPPORTS_claim_983699e867e9cc34",
+      "fromId": "ev_8e18b868a826",
+      "toId": "claim_983699e867e9cc34",
+      "type": "SUPPORTS",
+      "weight": 1,
+      "createdAt": 1787716077980
+    },
+    {
+      "id": "src_file_40816d14af46_OBSERVED_IN_claim_bc612210b85cf248",
+      "fromId": "src_file_40816d14af46",
+      "toId": "claim_bc612210b85cf248",
+      "type": "OBSERVED_IN",
+      "weight": 1,
+      "createdAt": 1787716077980
+    },
+    {
+      "id": "ev_1c004c89a564_SUPPORTS_claim_bc612210b85cf248",
+      "fromId": "ev_1c004c89a564",
+      "toId": "claim_bc612210b85cf248",
+      "type": "SUPPORTS",
+      "weight": 1,
+      "createdAt": 1787716077980
+    },
+    {
+      "id": "node_src_main_SUPPORTS_node_claim_main",
+      "fromId": "node_src_main",
+      "toId": "node_claim_main",
+      "type": "SUPPORTS",
+      "weight": 1,
+      "createdAt": 1787716077986
+    }
+  ],
+  "stats": {
+    "totalNodes": 7,
+    "totalEdges": 5
+  }
+}

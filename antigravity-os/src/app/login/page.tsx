@@ -3,9 +3,7 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
+import Image from "next/image";
 import {
   Lock,
   Mail,
@@ -13,14 +11,14 @@ import {
   EyeOff,
   AlertTriangle,
   ArrowRight,
+  Shield,
   Cpu,
-  Fingerprint,
+  WifiOff,
 } from "lucide-react";
+import { Button } from "@/components/ui/Button";
+import { ThemeToggle } from "@/components/ui/DesignSystem";
 
-/**
- * Sanitizes callback URL to prevent open redirect vulnerabilities.
- * Only allows relative internal paths and rejects absolute URLs / protocol-relative URLs.
- */
+/** Prevent open redirect — only allow internal relative paths */
 function sanitizeCallbackUrl(url: string | null): string {
   if (!url) return "/";
   const trimmed = url.trim();
@@ -38,32 +36,25 @@ function sanitizeCallbackUrl(url: string | null): string {
 function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const rawCallbackUrl = searchParams.get("callbackUrl");
-  const callbackUrl = sanitizeCallbackUrl(rawCallbackUrl);
+  const callbackUrl = sanitizeCallbackUrl(searchParams.get("callbackUrl"));
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [rememberMe, setRememberMe] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [lockoutSeconds, setLockoutSeconds] = useState<number | null>(null);
 
-  // Lockout countdown timer
+  // Lockout countdown
   useEffect(() => {
-    if (lockoutSeconds === null || lockoutSeconds <= 0) return;
-    const interval = setInterval(() => {
-      setLockoutSeconds((prev) => {
-        if (prev === null || prev <= 1) return null;
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(interval);
+    if (!lockoutSeconds || lockoutSeconds <= 0) return;
+    const t = setInterval(() => setLockoutSeconds((p) => (p && p > 1 ? p - 1 : null)), 1000);
+    return () => clearInterval(t);
   }, [lockoutSeconds]);
 
-  const handleLogin = async (e: React.FormEvent) => {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!email) return;
+    if (isLoading || lockoutSeconds) return;
     setIsLoading(true);
     setErrorMsg(null);
 
@@ -71,233 +62,244 @@ function LoginForm() {
       const res = await fetch("/api/omnicraft/auth", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          action: "signin",
-          email: email.trim(),
-          password: password || undefined,
-        }),
+        body: JSON.stringify({ action: "login", email, password }),
+        credentials: "include",
       });
 
-      const json = await res.json();
+      const data = await res.json();
 
-      if (json.success) {
-        if (typeof window !== "undefined") {
-          // Store minimal public user metadata only (NEVER session tokens)
-          localStorage.setItem("omnicraft_user", JSON.stringify(json.user));
-          window.location.href = callbackUrl;
-        }
-      } else {
-        setErrorMsg(json.error || "Invalid email or password.");
-        const match = json.error?.match(/Retry in (\d+)s/i);
-        if (match) {
-          setLockoutSeconds(parseInt(match[1], 10));
-        }
+      if (res.status === 429) {
+        const retry = data.retryAfter ?? 60;
+        setLockoutSeconds(retry);
+        setErrorMsg(`Too many attempts. Try again in ${retry}s.`);
+        return;
       }
+
+      if (!res.ok || !data.success) {
+        setErrorMsg(data.error || "Invalid email or password.");
+        return;
+      }
+
+      router.push(callbackUrl);
+      router.refresh();
     } catch {
-      setErrorMsg("Unable to complete authentication request.");
+      setErrorMsg("Connection error. Please check your network.");
     } finally {
       setIsLoading(false);
     }
-  };
+  }
 
   return (
-    <div className="w-full max-w-md relative z-10 space-y-6">
-      {/* System Branding Badge */}
-      <div className="text-center space-y-2">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/80 border border-cyber-cyan/30 text-cyber-cyan text-[11px]">
-          <Cpu className="w-3.5 h-3.5" />
-          <span className="tracking-widest uppercase font-bold">ANTIGRAVITY OS v5.1</span>
+    <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+      {/* Error Banner */}
+      {errorMsg && (
+        <div
+          role="alert"
+          className="flex items-start gap-3 p-3.5 rounded-lg bg-[var(--ag-error-bg)] border border-[var(--ag-error)]/25 text-[var(--ag-error)] text-sm animate-[fade-in_0.25s_ease-out]"
+        >
+          <AlertTriangle className="w-4 h-4 mt-0.5 shrink-0" aria-hidden="true" />
+          <span>{errorMsg}</span>
         </div>
-        <h1 className="text-2xl font-black tracking-tight text-white flex items-center justify-center gap-2">
-          <span>OPERATOR SIGN IN</span>
-        </h1>
-        <p className="text-xs text-slate-400 max-w-sm mx-auto">
-          Authenticated workstation access with PBKDF2-SHA512 session verification.
-        </p>
-      </div>
+      )}
 
-      {/* Auth Glass Panel Card */}
-      <Card glow="cyan" className="border-cyber-cyan/30 bg-slate-900/80 backdrop-blur-xl shadow-2xl">
-        <CardHeader className="pb-4 border-b border-white/10">
-          <div className="flex items-center justify-between w-full">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-cyber-cyan/10 border border-cyber-cyan/40 flex items-center justify-center text-cyber-cyan">
-                <Fingerprint className="w-4 h-4" />
-              </div>
-              <div>
-                <CardTitle className="text-xs uppercase font-bold text-slate-100">
-                  Authentication Gateway
-                </CardTitle>
-                <p className="text-[10px] text-slate-400">PBKDF2-SHA512 / 100,000 Iterations</p>
-              </div>
-            </div>
-            <Badge variant="cyan" className="border-cyber-cyan/40 text-cyber-cyan text-[10px]">
-              ACTIVE
-            </Badge>
-          </div>
-        </CardHeader>
-
-        <CardContent className="pt-4">
-          <form onSubmit={handleLogin} className="space-y-4">
-            {/* Email Input */}
-            <div className="space-y-1.5">
-              <label className="text-[10px] text-slate-300 font-semibold uppercase tracking-wider flex items-center justify-between">
-                <span className="flex items-center gap-1.5">
-                  <Mail className="w-3 h-3 text-cyber-cyan" />
-                  Operator Email
-                </span>
-              </label>
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="operator@domain.com"
-                disabled={isLoading || lockoutSeconds !== null}
-                className="w-full bg-slate-950/90 border border-white/10 rounded-lg px-3.5 py-2.5 text-xs text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-cyber-cyan focus:ring-1 focus:ring-cyber-cyan transition-all"
-              />
-            </div>
-
-            {/* Password Input */}
-            <div className="space-y-1.5">
-              <label className="text-[10px] text-slate-300 font-semibold uppercase tracking-wider flex items-center justify-between">
-                <span className="flex items-center gap-1.5">
-                  <Lock className="w-3 h-3 text-cyber-purple" />
-                  Password
-                </span>
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="text-[10px] text-slate-400 hover:text-cyber-cyan flex items-center gap-1 transition-colors"
-                >
-                  {showPassword ? (
-                    <>
-                      <EyeOff className="w-3 h-3" /> Hide
-                    </>
-                  ) : (
-                    <>
-                      <Eye className="w-3 h-3" /> Show
-                    </>
-                  )}
-                </button>
-              </label>
-              <input
-                type={showPassword ? "text" : "password"}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••••••"
-                disabled={isLoading || lockoutSeconds !== null}
-                className="w-full bg-slate-950/90 border border-white/10 rounded-lg px-3.5 py-2.5 text-xs text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-cyber-purple focus:ring-1 focus:ring-cyber-purple transition-all"
-              />
-            </div>
-
-            {/* Remember Session */}
-            <div className="flex items-center justify-between pt-1 text-[11px] text-slate-400">
-              <label className="flex items-center gap-2 cursor-pointer select-none">
-                <input
-                  type="checkbox"
-                  checked={rememberMe}
-                  onChange={(e) => setRememberMe(e.target.checked)}
-                  className="rounded border-white/10 bg-slate-950 text-cyber-cyan focus:ring-cyber-cyan h-3.5 w-3.5"
-                />
-                <span>Persist session (7 days)</span>
-              </label>
-            </div>
-
-            {/* Lockout Warning Banner */}
-            {lockoutSeconds !== null && (
-              <div className="p-3 rounded-lg bg-amber-950/40 border border-amber-500/40 text-[11px] text-amber-300 flex items-start gap-2.5 animate-pulse">
-                <AlertTriangle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-bold uppercase tracking-wider">Account Lockout Active</p>
-                  <p className="text-[10px] text-amber-400/90">
-                    Excessive failed attempts. Retry in{" "}
-                    <span className="font-bold text-white underline">{lockoutSeconds}s</span>.
-                  </p>
-                </div>
-              </div>
-            )}
-
-            {/* Error Message */}
-            {errorMsg && lockoutSeconds === null && (
-              <div className="p-3 rounded-lg bg-red-950/40 border border-red-500/40 text-[11px] text-red-300 flex items-start gap-2.5">
-                <AlertTriangle className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
-                <span>{errorMsg}</span>
-              </div>
-            )}
-
-            {/* Submit Button */}
-            <Button
-              type="submit"
-              variant="primary"
-              disabled={isLoading || lockoutSeconds !== null}
-              className="w-full h-10 gap-2 bg-gradient-to-r from-cyber-cyan via-blue-600 to-cyber-purple hover:from-cyan-400 hover:to-purple-500 text-slate-950 font-bold tracking-wider uppercase text-xs shadow-glow-cyan"
-            >
-              {isLoading ? (
-                <>
-                  <div className="w-3.5 h-3.5 border-2 border-slate-950 border-t-transparent rounded-full animate-spin" />
-                  <span>VERIFYING CREDENTIALS...</span>
-                </>
-              ) : (
-                <>
-                  <span>SIGN IN TO WORKSPACE</span>
-                  <ArrowRight className="w-4 h-4" />
-                </>
-              )}
-            </Button>
-          </form>
-
-          {/* Switch to Signup */}
-          <div className="mt-5 pt-4 border-t border-white/5 text-center text-xs text-slate-400 space-y-2">
-            <p>
-              New Operator?{" "}
-              <Link
-                href="/signup"
-                className="text-cyber-cyan hover:text-cyan-300 font-semibold underline underline-offset-4 ml-1 transition-colors"
-              >
-                Create Account →
-              </Link>
-            </p>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Factual Telemetry Footer */}
-      <div className="grid grid-cols-3 gap-2 text-center text-[9px] text-slate-500">
-        <div className="p-2 rounded bg-slate-900/50 border border-white/5">
-          <span className="block text-slate-400 font-bold">PBKDF2-SHA512</span>
-          <span>100K ITERATIONS</span>
-        </div>
-        <div className="p-2 rounded bg-slate-900/50 border border-white/5">
-          <span className="block text-slate-400 font-bold">RATE LIMIT</span>
-          <span>5 ATTEMPTS / 15 MIN</span>
-        </div>
-        <div className="p-2 rounded bg-slate-900/50 border border-white/5">
-          <span className="block text-slate-400 font-bold">COOKIE</span>
-          <span>HTTPONLY + SAMESITE</span>
+      {/* Email */}
+      <div className="space-y-1.5">
+        <label htmlFor="email" className="block text-[11px] font-semibold uppercase tracking-widest text-[var(--ag-muted)]">
+          Email
+        </label>
+        <div className="relative flex items-center">
+          <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--ag-muted)] pointer-events-none z-10" aria-hidden="true" />
+          <input
+            id="email"
+            type="email"
+            autoComplete="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="operator@workspace.ai"
+            className="ag-input !pl-10"
+            style={{ paddingLeft: "2.5rem" }}
+            aria-label="Email address"
+            disabled={isLoading}
+          />
         </div>
       </div>
-    </div>
+
+      {/* Password */}
+      <div className="space-y-1.5">
+        <label htmlFor="password" className="block text-[11px] font-semibold uppercase tracking-widest text-[var(--ag-muted)]">
+          Password
+        </label>
+        <div className="relative flex items-center">
+          <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--ag-muted)] pointer-events-none z-10" aria-hidden="true" />
+          <input
+            id="password"
+            type={showPassword ? "text" : "password"}
+            autoComplete="current-password"
+            required
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="••••••••••••"
+            className="ag-input !pl-10 !pr-11"
+            style={{ paddingLeft: "2.5rem", paddingRight: "2.75rem" }}
+            aria-label="Password"
+            disabled={isLoading}
+          />
+          <button
+            type="button"
+            onClick={() => setShowPassword((v) => !v)}
+            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[var(--ag-muted)] hover:text-[var(--ag-text-sec)] transition-colors z-10"
+            aria-label={showPassword ? "Hide password" : "Show password"}
+          >
+            {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+          </button>
+        </div>
+      </div>
+
+      {/* CTA */}
+      <Button
+        type="submit"
+        variant="primary"
+        size="lg"
+        fullWidth
+        loading={isLoading}
+        disabled={!email || !password || !!lockoutSeconds}
+        iconRight={<ArrowRight className="w-4 h-4" />}
+        className="mt-2"
+      >
+        {lockoutSeconds ? `Locked — ${lockoutSeconds}s` : "Enter Workspace"}
+      </Button>
+
+      {/* Secondary */}
+      <div className="text-center pt-1">
+        <span className="text-[12px] text-[var(--ag-muted)]">New operator? </span>
+        <Link
+          href="/signup"
+          className="text-[12px] text-[var(--ag-gold)] hover:text-[var(--ag-gold-bright)] font-semibold transition-colors"
+        >
+          Create account →
+        </Link>
+      </div>
+    </form>
   );
 }
 
 export default function LoginPage() {
   return (
-    <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-4 relative overflow-hidden font-mono selection:bg-cyber-cyan selection:text-slate-950">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/20 via-slate-950 to-slate-950 pointer-events-none" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-cyber-cyan/10 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-cyber-purple/10 blur-[140px] rounded-full pointer-events-none" />
+    <div className="min-h-screen flex flex-col md:flex-row bg-[var(--ag-bg)]">
+      {/* ── LEFT — Hero Image (desktop) ──────────────────────────── */}
+      <div className="hidden md:block md:w-[55%] relative min-h-screen sticky top-0 overflow-hidden">
+        <Image
+          src="/assets/login-hero.jpg"
+          alt="Antigravity OS AI Command Center"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="55vw"
+        />
+        {/* Gradient overlay — integrates image into dark UI */}
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,11,10,0.0)_0%,rgba(11,11,10,0.3)_60%,rgba(11,11,10,0.97)_100%)]" />
+        {/* Bottom caption */}
+        <div className="absolute bottom-8 left-8 right-16 space-y-1">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--ag-gold)] opacity-80">
+            Antigravity OS v5.2
+          </p>
+          <p className="text-[13px] text-[var(--ag-text-sec)] leading-relaxed max-w-sm">
+            Sovereign AI infrastructure running entirely on your machine.
+          </p>
+        </div>
+      </div>
 
-      <Suspense
-        fallback={
-          <div className="text-cyber-cyan font-mono text-xs flex items-center gap-2">
-            <div className="w-4 h-4 border-2 border-cyber-cyan border-t-transparent rounded-full animate-spin" />
-            <span>INITIALIZING GATEWAY...</span>
+      {/* ── Mobile Hero ───────────────────────────────────────────── */}
+      <div className="md:hidden relative h-48 overflow-hidden shrink-0">
+        <Image
+          src="/assets/login-hero.jpg"
+          alt="Antigravity OS AI Command Center"
+          fill
+          priority
+          className="object-cover object-top"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,11,10,0.2)_0%,rgba(11,11,10,0.95)_100%)]" />
+        <div className="absolute bottom-4 left-5">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--ag-gold)]">
+            Antigravity OS v5.2
+          </p>
+        </div>
+      </div>
+
+      {/* ── RIGHT — Login Panel ───────────────────────────────────── */}
+      <div className="flex-1 md:w-[45%] flex flex-col min-h-screen overflow-y-auto">
+        <div className="flex-1 flex flex-col justify-start md:justify-center px-6 sm:px-10 md:px-12 lg:px-16 py-8 md:py-12 max-w-md w-full mx-auto md:mx-0">
+          {/* Theme toggle */}
+          <div className="flex justify-end mb-4 md:mb-6">
+            <Suspense>
+              <ThemeToggle />
+            </Suspense>
           </div>
-        }
-      >
-        <LoginForm />
-      </Suspense>
+
+          {/* Wordmark */}
+          <div className="mb-8 space-y-2">
+            <div className="flex items-center gap-3">
+              {/* Logo mark */}
+              <div className="w-10 h-10 rounded-xl bg-[var(--ag-gold-alpha)] border border-[var(--ag-gold)]/30 flex items-center justify-center shadow-[var(--ag-shadow-gold)]">
+                <Cpu className="w-5 h-5 text-[var(--ag-gold)]" aria-hidden="true" />
+              </div>
+              <div>
+                <h1 className="text-lg font-bold tracking-widest text-[var(--ag-text)] uppercase font-satoshi">
+                  Antigravity <span className="text-[var(--ag-gold)]">OS</span>
+                </h1>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-[var(--ag-muted)] font-semibold">
+                  Sovereign AI Workspace
+                </p>
+              </div>
+            </div>
+
+            <div className="pt-4">
+              <h2 className="text-xl font-bold text-[var(--ag-text)] font-satoshi">
+                Operator Sign In
+              </h2>
+              <p className="text-[13px] text-[var(--ag-text-sec)] mt-1">
+                Authentication required to access the command center.
+              </p>
+            </div>
+          </div>
+
+          {/* Form */}
+          <Suspense fallback={<div className="h-48 ag-shimmer rounded-xl" />}>
+            <LoginForm />
+          </Suspense>
+
+          {/* Security Status */}
+          <div className="mt-8 pt-6 border-t border-[var(--ag-border)]">
+            <p className="text-[9px] uppercase tracking-[0.15em] text-[var(--ag-muted)] mb-3 font-semibold">
+              Session Security
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {[
+                { icon: <Shield className="w-3 h-3" />, label: "Secure Session" },
+                { icon: <WifiOff className="w-3 h-3" />, label: "Local-First" },
+                { icon: <Lock className="w-3 h-3" />, label: "PBKDF2-SHA512" },
+              ].map((item) => (
+                <span
+                  key={item.label}
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[var(--ag-elevated)] border border-[var(--ag-border)] text-[10px] font-medium text-[var(--ag-muted)]"
+                >
+                  <span className="text-[var(--ag-gold)] opacity-70" aria-hidden="true">
+                    {item.icon}
+                  </span>
+                  {item.label}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Version */}
+          <p className="mt-6 text-[10px] text-[var(--ag-muted)] opacity-50">
+            Antigravity OS v5.2 · LOCAL-FIRST · CLOUD OFF
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

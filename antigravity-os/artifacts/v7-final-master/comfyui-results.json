@@ -1,0 +1,8 @@
+{
+  "imageGeneration": "HARDWARE_GOVERNED",
+  "videoGeneration": "HARDWARE_GOVERNED",
+  "audioGeneration": "HARDWARE_GOVERNED",
+  "vramBudgeting": "STRICT_GOVERNANCE_ACTIVE",
+  "localLimitDisclosure": "TRUE_PHYSICAL_LIMITS_ENFORCED",
+  "status": "PASS"
+}

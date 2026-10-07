@@ -1,0 +1,8 @@
+{
+  "checkpointId": "v61_baseline",
+  "timestamp": "2026-08-25T08:48:10.595Z",
+  "sourceFilesHash": "ffc5048eed01df0ba8d10f84b578836dd1634612a3af40d11b7ae2ff3be27d8b",
+  "configHash": "6a0e7b28ea1ca429cafa7e9f73732b58ef9d7fb3c0c980b8a3eceaf527d0c1ef",
+  "dbStateHash": "28c27ed6d037e88276f954339b7cd5553cd9a8a2e5c05b4dee7455dc09c8a259",
+  "overallStateHash": "485c33a37a81f992404530077a26cbb0b94c77246a2a73834f15c174f5400640"
+}

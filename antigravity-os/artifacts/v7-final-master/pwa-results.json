@@ -1,0 +1,18 @@
+{
+  "manifest": "VALID",
+  "serviceWorker": "ACTIVE",
+  "pwaProvider": "MOUNTED",
+  "networkStates": [
+    "ONLINE",
+    "OFFLINE",
+    "DEGRADED",
+    "LOCAL-ONLY"
+  ],
+  "safeCachingExcludesSecrets": true,
+  "icons": [
+    "icon-192.png",
+    "icon-512.png",
+    "icon-maskable.png"
+  ],
+  "status": "PRODUCTION-READY"
+}

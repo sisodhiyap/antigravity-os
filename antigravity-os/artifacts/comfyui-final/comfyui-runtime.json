@@ -1,0 +1,11 @@
+{
+  "processReachable": true,
+  "apiEndpoint": "http://127.0.0.1:8188",
+  "apiReachable": true,
+  "queueEndpointAvailable": true,
+  "historyEndpointAvailable": true,
+  "systemStatsEndpointAvailable": true,
+  "modelDirectoriesVerified": true,
+  "outputDirectoryVerified": true,
+  "status": "ONLINE_READY"
+}

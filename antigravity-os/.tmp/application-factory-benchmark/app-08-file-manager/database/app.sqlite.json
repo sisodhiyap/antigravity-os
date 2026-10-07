@@ -1,0 +1,76 @@
+{
+  "folders": [
+    {
+      "id": "id_bb1k4pe",
+      "created_at": "2026-08-25T07:14:13.247Z",
+      "updated_at": "2026-08-25T07:14:13.247Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_jxomgha",
+      "created_at": "2026-08-25T07:14:13.283Z",
+      "updated_at": "2026-08-25T07:14:13.283Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    },
+    {
+      "id": "id_hz6lehn",
+      "created_at": "2026-08-25T07:15:49.476Z",
+      "updated_at": "2026-08-25T07:15:49.476Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_4r1fp6b",
+      "created_at": "2026-08-25T07:15:49.514Z",
+      "updated_at": "2026-08-25T07:15:49.514Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    }
+  ],
+  "filemetadatas": [
+    {
+      "id": "id_zpshz5e",
+      "created_at": "2026-08-25T07:14:13.277Z",
+      "updated_at": "2026-08-25T07:14:13.277Z",
+      "title": "Initial FileMetadata Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for FileMetadata"
+    }
+  ],
+  "userpermissions": [
+    {
+      "id": "id_xyjbuvz",
+      "created_at": "2026-08-25T07:14:13.278Z",
+      "updated_at": "2026-08-25T07:14:13.278Z",
+      "title": "Initial UserPermission Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for UserPermission"
+    }
+  ],
+  "storagebuckets": [
+    {
+      "id": "id_srwoysi",
+      "created_at": "2026-08-25T07:14:13.278Z",
+      "updated_at": "2026-08-25T07:14:13.278Z",
+      "title": "Initial StorageBucket Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for StorageBucket"
+    }
+  ],
+  "audittrails": [
+    {
+      "id": "id_quxwb3h",
+      "created_at": "2026-08-25T07:14:13.279Z",
+      "updated_at": "2026-08-25T07:14:13.279Z",
+      "title": "Initial AuditTrail Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for AuditTrail"
+    }
+  ]
+}

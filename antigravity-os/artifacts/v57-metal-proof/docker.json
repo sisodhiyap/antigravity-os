@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-08-25T08:30:00.000Z",
+  "baseImage": "node:20-alpine",
+  "multiStage": true,
+  "nonRootUser": "nextjs:nodejs",
+  "healthcheckVerified": true,
+  "status": "PASS"
+}

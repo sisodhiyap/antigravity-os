@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  aura-studio-pm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aura-studio-agency-pm
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3400:3400"
+    environment:
+      - PORT=3400
+      - HOST=0.0.0.0
+      - NODE_ENV=production
+      - SESSION_SECRET=aura_production_super_secret_session_key_2026
+    volumes:
+      - aura_data:/app/data
+    networks:
+      - aura-net
+
+volumes:
+  aura_data:
+    driver: local
+
+networks:
+  aura-net:
+    driver: bridge

@@ -1,0 +1,109 @@
+{
+  "students": [
+    {
+      "id": "id_4ww0zsy",
+      "created_at": "2026-08-25T07:14:42.613Z",
+      "updated_at": "2026-08-25T07:14:42.613Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_iepmlr6",
+      "created_at": "2026-08-25T07:14:42.661Z",
+      "updated_at": "2026-08-25T07:14:42.661Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    },
+    {
+      "id": "id_tekm0q9",
+      "created_at": "2026-08-25T07:16:18.583Z",
+      "updated_at": "2026-08-25T07:16:18.583Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_o61h5sb",
+      "created_at": "2026-08-25T07:16:18.603Z",
+      "updated_at": "2026-08-25T07:16:18.603Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "id_j9yoiks",
+      "created_at": "2026-08-25T07:14:42.650Z",
+      "updated_at": "2026-08-25T07:14:42.650Z",
+      "title": "Initial Teacher Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Teacher"
+    }
+  ],
+  "courses": [
+    {
+      "id": "id_v6wc1es",
+      "created_at": "2026-08-25T07:14:42.651Z",
+      "updated_at": "2026-08-25T07:14:42.651Z",
+      "title": "Initial Course Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Course"
+    }
+  ],
+  "lessonschedules": [
+    {
+      "id": "id_x107r2x",
+      "created_at": "2026-08-25T07:14:42.652Z",
+      "updated_at": "2026-08-25T07:14:42.652Z",
+      "title": "Initial LessonSchedule Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for LessonSchedule"
+    }
+  ],
+  "attendancerecords": [
+    {
+      "id": "id_3554t5g",
+      "created_at": "2026-08-25T07:14:42.653Z",
+      "updated_at": "2026-08-25T07:14:42.653Z",
+      "title": "Initial AttendanceRecord Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for AttendanceRecord"
+    }
+  ],
+  "simulatedpayments": [
+    {
+      "id": "id_8xifprm",
+      "created_at": "2026-08-25T07:14:42.654Z",
+      "updated_at": "2026-08-25T07:14:42.654Z",
+      "title": "Initial SimulatedPayment Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for SimulatedPayment"
+    }
+  ],
+  "progressreports": [
+    {
+      "id": "id_2z1sbpd",
+      "created_at": "2026-08-25T07:14:42.654Z",
+      "updated_at": "2026-08-25T07:14:42.654Z",
+      "title": "Initial ProgressReport Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for ProgressReport"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "id_wpq8gyl",
+      "created_at": "2026-08-25T07:14:42.655Z",
+      "updated_at": "2026-08-25T07:14:42.655Z",
+      "title": "Initial Notification Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Notification"
+    }
+  ]
+}

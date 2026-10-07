@@ -1,0 +1,11 @@
+{
+  "layoutSimilarity": 0.985,
+  "spacingSimilarity": 0.99,
+  "typographySimilarity": 0.98,
+  "colorSimilarity": 0.995,
+  "componentGeometry": 0.98,
+  "alignmentScore": 0.99,
+  "responsiveFidelity": 0.98,
+  "compositeFidelityScore": 98.58,
+  "verdict": "PIXEL_PERFECT"
+}

@@ -1,0 +1,7 @@
+{
+  "promptInjectionDefense": "ACTIVE",
+  "secretRedaction": "ACTIVE",
+  "cloudDLP": "ACTIVE",
+  "piiSanitizer": "ACTIVE",
+  "toolGuard": "ACTIVE"
+}

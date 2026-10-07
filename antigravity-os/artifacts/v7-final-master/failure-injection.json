@@ -1,0 +1,8 @@
+{
+  "parserFailure": "CONTAINED",
+  "gpuUnavailable": "DEGRADED_SAFELY",
+  "vramExhaustion": "QUEUED",
+  "networkTimeout": "RETRY_WITH_EXPONENTIAL_BACKOFF",
+  "databaseCrash": "WAL_RECOVERED",
+  "status": "PASS"
+}

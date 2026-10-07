@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-08-25T07:59:28.083Z",
+  "primaryLocalProvider": "Ollama (NVIDIA RTX 3060 6GB VRAM)",
+  "model": "qwen2.5-coder:7b",
+  "measuredTokPerSec": 31.5,
+  "airllmCascadeResult": "NOT_CONFIGURED -> Cascaded safely to Ollama GPU",
+  "fallbackMesh": "In-Process CentralAIRouter Fallback Active",
+  "status": "PASS"
+}

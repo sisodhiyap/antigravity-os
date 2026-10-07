@@ -1,0 +1,68 @@
+{
+  "missionId": "msn_concurrent_3",
+  "projectId": "prj_tradex",
+  "domain": "FinTech Trading Dashboard",
+  "requirements": [
+    "Real-time charts",
+    "Order book",
+    "Wallet auth"
+  ],
+  "architecture": {
+    "pattern": "Modular Monolith",
+    "database": "SQLite WAL",
+    "auth": "PBKDF2-SHA512",
+    "ui": "Glassmorphism"
+  },
+  "graph": {
+    "nodesCount": 12,
+    "edgesCount": 15,
+    "resolvedNodes": 12
+  },
+  "modelsUsed": [
+    {
+      "modelId": "qwen2.5-coder:7b",
+      "provider": "Ollama GPU",
+      "taskType": "CODING",
+      "tokensGenerated": 85,
+      "latencyMs": 2700,
+      "tokPerSec": 31.5
+    }
+  ],
+  "agentsUsed": [
+    "Product Architect",
+    "Backend Engineer",
+    "Security Engineer"
+  ],
+  "toolsUsed": [
+    "SQLite WAL Engine",
+    "Playwright E2E Runner"
+  ],
+  "executionTimeMs": 18500,
+  "tokenUsage": 1250,
+  "failures": [],
+  "repairsCount": 0,
+  "retriesCount": 0,
+  "rollbackCount": 0,
+  "testResults": {
+    "totalAssertions": 50,
+    "passedAssertions": 50,
+    "failedAssertions": 0,
+    "testScore": 1
+  },
+  "securityResults": {
+    "totalAttacksTested": 20,
+    "blockedAttacks": 20,
+    "securityScore": 1
+  },
+  "performanceResults": {
+    "coldStartupMs": 2,
+    "avgApiLatencyMs": 0.75,
+    "memoryRssMb": 82
+  },
+  "finalOutcome": "SUCCESS",
+  "confidence": 0.95,
+  "strategyVersion": "v5.4-strat-2",
+  "timestamp": "2026-08-25T08:03:46.887Z",
+  "scope": "GLOBAL_ENGINEERING_MEMORY",
+  "status": "VERIFIED"
+}

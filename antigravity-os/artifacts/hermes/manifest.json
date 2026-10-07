@@ -1,0 +1,9 @@
+{
+  "plugin": "Hermes Autonomous Agent",
+  "version": "1.0.0-HERMES-V7",
+  "targetCore": "Antigravity OS v7.0-FROZEN",
+  "status": "SANDBOXED_READY",
+  "gatesPassed": 60,
+  "totalGates": 60,
+  "timestamp": "2026-08-25T09:56:36.201Z"
+}

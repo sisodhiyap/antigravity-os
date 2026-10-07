@@ -1,0 +1,76 @@
+{
+  "apisources": [
+    {
+      "id": "id_jghi7vd",
+      "created_at": "2026-08-25T07:14:21.585Z",
+      "updated_at": "2026-08-25T07:14:21.585Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_2p0dhw1",
+      "created_at": "2026-08-25T07:14:21.615Z",
+      "updated_at": "2026-08-25T07:14:21.615Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    },
+    {
+      "id": "id_vg9kpjq",
+      "created_at": "2026-08-25T07:15:57.791Z",
+      "updated_at": "2026-08-25T07:15:57.791Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_ap5bxqk",
+      "created_at": "2026-08-25T07:15:57.822Z",
+      "updated_at": "2026-08-25T07:15:57.822Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    }
+  ],
+  "cachedresponses": [
+    {
+      "id": "id_mxrojiu",
+      "created_at": "2026-08-25T07:14:21.605Z",
+      "updated_at": "2026-08-25T07:14:21.605Z",
+      "title": "Initial CachedResponse Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for CachedResponse"
+    }
+  ],
+  "normalizedrecords": [
+    {
+      "id": "id_bel7jek",
+      "created_at": "2026-08-25T07:14:21.605Z",
+      "updated_at": "2026-08-25T07:14:21.605Z",
+      "title": "Initial NormalizedRecord Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for NormalizedRecord"
+    }
+  ],
+  "synclogs": [
+    {
+      "id": "id_7wgajtb",
+      "created_at": "2026-08-25T07:14:21.606Z",
+      "updated_at": "2026-08-25T07:14:21.606Z",
+      "title": "Initial SyncLog Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for SyncLog"
+    }
+  ],
+  "metriccounters": [
+    {
+      "id": "id_bqh9e8z",
+      "created_at": "2026-08-25T07:14:21.606Z",
+      "updated_at": "2026-08-25T07:14:21.606Z",
+      "title": "Initial MetricCounter Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for MetricCounter"
+    }
+  ]
+}

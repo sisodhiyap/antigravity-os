@@ -1,0 +1,15 @@
+[
+  {
+    "capabilityId": "cap_quantum_llm",
+    "name": "Quantum Inference",
+    "implementation": "fake.ts",
+    "installed": false,
+    "enabled": false,
+    "executable": false,
+    "tested": false,
+    "verified": false,
+    "limitations": [],
+    "evidence": [],
+    "lastVerified": 1787716773799
+  }
+]

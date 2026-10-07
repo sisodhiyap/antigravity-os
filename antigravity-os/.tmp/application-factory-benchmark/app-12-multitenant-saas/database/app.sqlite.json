@@ -1,0 +1,76 @@
+{
+  "tenants": [
+    {
+      "id": "id_obr8o9e",
+      "created_at": "2026-08-25T07:14:29.957Z",
+      "updated_at": "2026-08-25T07:14:29.957Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_5g04ilt",
+      "created_at": "2026-08-25T07:14:29.986Z",
+      "updated_at": "2026-08-25T07:14:29.986Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    },
+    {
+      "id": "id_wnzt938",
+      "created_at": "2026-08-25T07:16:06.113Z",
+      "updated_at": "2026-08-25T07:16:06.113Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_8gsxzwd",
+      "created_at": "2026-08-25T07:16:06.152Z",
+      "updated_at": "2026-08-25T07:16:06.152Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    }
+  ],
+  "tenantusers": [
+    {
+      "id": "id_fwm0s7g",
+      "created_at": "2026-08-25T07:14:29.979Z",
+      "updated_at": "2026-08-25T07:14:29.979Z",
+      "title": "Initial TenantUser Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for TenantUser"
+    }
+  ],
+  "tenantroles": [
+    {
+      "id": "id_65avpmm",
+      "created_at": "2026-08-25T07:14:29.980Z",
+      "updated_at": "2026-08-25T07:14:29.980Z",
+      "title": "Initial TenantRole Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for TenantRole"
+    }
+  ],
+  "tenantprojects": [
+    {
+      "id": "id_gi7smc6",
+      "created_at": "2026-08-25T07:14:29.980Z",
+      "updated_at": "2026-08-25T07:14:29.980Z",
+      "title": "Initial TenantProject Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for TenantProject"
+    }
+  ],
+  "tenantdocuments": [
+    {
+      "id": "id_wg8hqad",
+      "created_at": "2026-08-25T07:14:29.981Z",
+      "updated_at": "2026-08-25T07:14:29.981Z",
+      "title": "Initial TenantDocument Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for TenantDocument"
+    }
+  ]
+}

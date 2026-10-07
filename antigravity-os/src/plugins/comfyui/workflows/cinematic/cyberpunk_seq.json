@@ -1,0 +1,29 @@
+{
+  "name": "Cinematic Cyberpunk Shot Sequence Pipeline",
+  "workflowId": "wf_cinematic_cyberpunk",
+  "modality": "CINEMATIC",
+  "version": "1.0.0",
+  "nodes": {
+    "1": {
+      "inputs": {
+        "text": "Cinematic 16:9 futuristic cyberpunk Mumbai night sequence, volumetric neon lighting, ultra photorealistic, 8k"
+      },
+      "class_type": "WanTextEncode"
+    },
+    "2": {
+      "inputs": {
+        "steps": 30,
+        "cfg": 6.0,
+        "length": 48,
+        "fps": 24
+      },
+      "class_type": "WanVideoSampler"
+    },
+    "3": {
+      "inputs": {
+        "filename_prefix": "Antigravity_Cinematic_Cyberpunk"
+      },
+      "class_type": "SaveVideo"
+    }
+  }
+}

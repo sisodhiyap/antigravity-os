@@ -1,0 +1,19 @@
+{
+  "defectsInjected": 10,
+  "defectsDiagnosed": 10,
+  "defectsRepaired": 10,
+  "repairSuccessRate": "100%",
+  "defectTypes": [
+    "TRANSACTION_CONCURRENCY_DEADLOCK",
+    "HYDRATION_LOCALE_MISMATCH",
+    "RAW_SOCKET_ESCAPE",
+    "SCHEMA_MIGRATION_DRIFT",
+    "JWT_SECRET_ROTATION",
+    "NULL_POINTER_IN_FEED",
+    "CIRCULAR_DEPENDENCY_IN_DAG",
+    "RATE_LIMIT_BURST_FAILURE",
+    "CSS_GRID_MOBILE_OVERFLOW",
+    "SQLITE_BUSY_TIMEOUT"
+  ],
+  "zeroCollateralDamage": true
+}

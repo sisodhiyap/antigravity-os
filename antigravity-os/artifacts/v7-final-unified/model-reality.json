@@ -1,0 +1,51 @@
+[
+  {
+    "modelId": "model_claude_3_5",
+    "name": "Claude 3.5 Sonnet",
+    "provider": "ANTHROPIC_CLOUD",
+    "status": "LOADABLE",
+    "capabilities": [
+      "code",
+      "reasoning",
+      "multimodal"
+    ],
+    "testedModes": [],
+    "evidenceIds": [],
+    "lastVerified": 1787716773799
+  },
+  {
+    "modelId": "model_ollama_qwen",
+    "name": "Qwen 2.5 Coder 32B",
+    "provider": "OLLAMA_LOCAL",
+    "status": "INSTALLED",
+    "capabilities": [
+      "code",
+      "local_offline"
+    ],
+    "testedModes": [],
+    "evidenceIds": [],
+    "lastVerified": 1787716773799
+  },
+  {
+    "modelId": "model_sdxl_base",
+    "name": "SDXL Base 1.0",
+    "provider": "COMFYUI_LOCAL",
+    "status": "LOADABLE",
+    "capabilities": [
+      "image_generation"
+    ],
+    "testedModes": [],
+    "evidenceIds": [],
+    "lastVerified": 1787716773799
+  },
+  {
+    "modelId": "model_hypothetical_v8",
+    "name": "Hypothetical V8 AI",
+    "provider": "UNKNOWN",
+    "status": "DISCOVERED",
+    "capabilities": [],
+    "testedModes": [],
+    "evidenceIds": [],
+    "lastVerified": 1787716773799
+  }
+]

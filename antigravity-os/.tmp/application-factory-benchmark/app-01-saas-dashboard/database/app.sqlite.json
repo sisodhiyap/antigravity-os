@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "id": "id_c0i434t",
+      "created_at": "2026-08-25T07:12:56.946Z",
+      "updated_at": "2026-08-25T07:12:56.946Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_mrdg47x",
+      "created_at": "2026-08-25T07:13:44.125Z",
+      "updated_at": "2026-08-25T07:13:44.125Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_dbo3x0j",
+      "created_at": "2026-08-25T07:13:44.170Z",
+      "updated_at": "2026-08-25T07:13:44.170Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    },
+    {
+      "id": "id_l4a8mm7",
+      "created_at": "2026-08-25T07:15:20.409Z",
+      "updated_at": "2026-08-25T07:15:20.409Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_pzjp645",
+      "created_at": "2026-08-25T07:15:20.452Z",
+      "updated_at": "2026-08-25T07:15:20.452Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    }
+  ],
+  "organizations": [
+    {
+      "id": "id_u8ddemc",
+      "created_at": "2026-08-25T07:13:44.145Z",
+      "updated_at": "2026-08-25T07:13:44.145Z",
+      "title": "Initial Organization Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Organization"
+    }
+  ],
+  "roles": [
+    {
+      "id": "id_cjwrl7b",
+      "created_at": "2026-08-25T07:13:44.146Z",
+      "updated_at": "2026-08-25T07:13:44.146Z",
+      "title": "Initial Role Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Role"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "id_9qxjiwx",
+      "created_at": "2026-08-25T07:13:44.147Z",
+      "updated_at": "2026-08-25T07:13:44.147Z",
+      "title": "Initial Metric Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Metric"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "id_ka7jvlq",
+      "created_at": "2026-08-25T07:13:44.147Z",
+      "updated_at": "2026-08-25T07:13:44.147Z",
+      "title": "Initial Notification Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Notification"
+    }
+  ],
+  "settings": [
+    {
+      "id": "id_3aumogb",
+      "created_at": "2026-08-25T07:13:44.148Z",
+      "updated_at": "2026-08-25T07:13:44.148Z",
+      "title": "Initial Setting Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Setting"
+    }
+  ]
+}

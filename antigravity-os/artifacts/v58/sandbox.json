@@ -1,0 +1,12 @@
+{
+  "sandbox": {
+    "sandboxId": "sbx_sbx_security_test_1787647139111",
+    "candidateId": "sbx_security_test",
+    "sandboxDir": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\evolution-validation\\sandboxes\\sbx_sbx_security_test_1787647139111",
+    "dbPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\evolution-validation\\sandboxes\\sbx_sbx_security_test_1787647139111\\sandbox_db.sqlite",
+    "isolatedPort": 3699,
+    "isIsolated": true
+  },
+  "escapeAttemptsBlocked": 5,
+  "status": "PASS"
+}

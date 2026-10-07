@@ -1,0 +1,17 @@
+[
+  {
+    "capabilityId": "cap_trust_pipeline",
+    "name": "Fact-Based Trust Pipeline",
+    "implementation": "src/plugins/trust/TrustFabric.ts",
+    "installed": true,
+    "enabled": true,
+    "executable": true,
+    "tested": true,
+    "verified": true,
+    "limitations": [],
+    "evidence": [
+      "TEST_SUITE_50_GATES"
+    ],
+    "lastVerified": 1787716077982
+  }
+]

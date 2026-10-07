@@ -1,0 +1,86 @@
+[
+  {
+    "modelId": "flux1-schnell-fp8",
+    "name": "Flux.1 Schnell (FP8 Local)",
+    "family": "Flux",
+    "modality": "IMAGE",
+    "precision": "fp8_e4m3fn",
+    "vramRequirementMb": 6144,
+    "license": "Apache 2.0",
+    "status": "INSTALLED_AND_VERIFIED",
+    "loadable": true,
+    "verified": true
+  },
+  {
+    "modelId": "sdxl-base-1.0",
+    "name": "Stable Diffusion XL 1.0 Base",
+    "family": "SDXL",
+    "modality": "IMAGE",
+    "precision": "fp16",
+    "vramRequirementMb": 8192,
+    "license": "OpenRAIL-M",
+    "status": "INSTALLED_AND_VERIFIED",
+    "loadable": true,
+    "verified": true
+  },
+  {
+    "modelId": "wan2.1-t2v-1.3b",
+    "name": "Wan 2.1 Text-to-Video 1.3B",
+    "family": "Wan",
+    "modality": "VIDEO",
+    "precision": "bf16",
+    "vramRequirementMb": 8192,
+    "license": "Apache 2.0",
+    "status": "INSTALLED_AND_VERIFIED",
+    "loadable": true,
+    "verified": true
+  },
+  {
+    "modelId": "ltx-video-0.9.1",
+    "name": "LTX Video 0.9.1 (Lightricks)",
+    "family": "LTX",
+    "modality": "VIDEO",
+    "precision": "fp8_e4m3fn",
+    "vramRequirementMb": 6144,
+    "license": "Open Source",
+    "status": "INSTALLED_AND_VERIFIED",
+    "loadable": true,
+    "verified": true
+  },
+  {
+    "modelId": "svd-xt-1.1",
+    "name": "Stable Video Diffusion XT 1.1",
+    "family": "SVD",
+    "modality": "VIDEO",
+    "precision": "fp16",
+    "vramRequirementMb": 8192,
+    "license": "OpenRAIL-M",
+    "status": "INSTALLED_AND_VERIFIED",
+    "loadable": true,
+    "verified": true
+  },
+  {
+    "modelId": "ace-step-audio",
+    "name": "ACE-Step Local Audio Synthesizer",
+    "family": "ACEStep",
+    "modality": "AUDIO",
+    "precision": "fp16",
+    "vramRequirementMb": 4096,
+    "license": "MIT",
+    "status": "INSTALLED_AND_VERIFIED",
+    "loadable": true,
+    "verified": true
+  },
+  {
+    "modelId": "triposr-mesh-gen",
+    "name": "TripoSR Fast Image-to-3D Mesh",
+    "family": "TripoSR",
+    "modality": "3D",
+    "precision": "fp16",
+    "vramRequirementMb": 6144,
+    "license": "MIT",
+    "status": "INSTALLED_AND_VERIFIED",
+    "loadable": true,
+    "verified": true
+  }
+]

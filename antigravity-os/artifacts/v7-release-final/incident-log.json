@@ -1,0 +1,16 @@
+[
+  {
+    "id": "inc_8a95b52f9b58",
+    "title": "EMERGENCY STOP: Test operator killswitch command",
+    "category": "SECURITY",
+    "stage": "CONTAINED",
+    "severity": "CRITICAL",
+    "detectedAt": 1787716778299,
+    "updatedAt": 1787716778299,
+    "rootCause": "Test operator killswitch command",
+    "mitigation": "Autonomous execution halted, workers quarantined, evidence preserved",
+    "evidenceIds": [
+      "inc_8a95b52f9b58"
+    ]
+  }
+]

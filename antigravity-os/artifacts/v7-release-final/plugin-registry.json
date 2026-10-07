@@ -1,0 +1,24 @@
+[
+  {
+    "pluginId": "plugin_v7_release_governance",
+    "name": "Antigravity OS V7.0 Release Governance & Runtime Observability Plane",
+    "version": "7.0.0-PROD",
+    "category": "CORE",
+    "isSandboxed": true,
+    "securityAudited": true,
+    "realityTested": true,
+    "ownerApproved": true,
+    "status": "ACTIVE"
+  },
+  {
+    "pluginId": "plugin_trust_security_fabric",
+    "name": "Fact-Based Intelligence & Security Fabric",
+    "version": "1.0.0-TRUST-V7",
+    "category": "TESTING_ADAPTER",
+    "isSandboxed": true,
+    "securityAudited": true,
+    "realityTested": true,
+    "ownerApproved": true,
+    "status": "ACTIVE"
+  }
+]

@@ -1,0 +1,822 @@
+{
+  "id": "pres_1787729165954_qos22",
+  "title": "presentation with unsupported and missing evi...",
+  "subtitle": "Communicate and persuade audience regarding Create a presentation with unsupported and missing evidence ...",
+  "rawInput": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
+  "brief": {
+    "title": "presentation with unsupported and missing evi...",
+    "purpose": "Communicate and persuade audience regarding Create a presentation with unsupported and missing evidence ...",
+    "audience": "Executives, Investors, Stakeholders, and Strategic Partners",
+    "presentationType": "STORYTELLING",
+    "tone": "Authoritative, Visionary, Strategic, and Highly Persuasive",
+    "language": "English (US)",
+    "durationMinutes": 12,
+    "slideCount": 8,
+    "depth": "EXECUTIVE",
+    "visualStyle": "FUTURISTIC",
+    "brandName": "PresentX Enterprise",
+    "callToAction": "Partner with us to lead this transformation.",
+    "factualityMode": "STRICT_VERIFIED",
+    "sourceRequirements": [
+      "V7 Trust Fabric Ledger",
+      "Industry Telemetry"
+    ]
+  },
+  "visualDirection": "FUTURISTIC",
+  "designTokens": {
+    "primaryColor": "#D4AF37",
+    "secondaryColor": "#F0C75E",
+    "accentColor": "#FFD978",
+    "backgroundColor": "#080808",
+    "surfaceColor": "#121215",
+    "textColor": "#F5F5F5",
+    "textSecondaryColor": "#A3A3A3",
+    "fontHeading": "Inter, Satoshi, sans-serif",
+    "fontBody": "Inter, sans-serif",
+    "borderRadius": "0.875rem",
+    "cardStyle": "GLASS"
+  },
+  "storyGraph": [
+    {
+      "id": "story_node_1",
+      "slideNumber": 1,
+      "role": "HOOK",
+      "keyMessage": "Key strategic takeaway for slide 1 addressing presentation with unsupported and missing evi...",
+      "tensionLevel": 3,
+      "factLinkIds": [
+        "claim_222bec98f7c61c28"
+      ]
+    },
+    {
+      "id": "story_node_2",
+      "slideNumber": 2,
+      "role": "CONTEXT",
+      "keyMessage": "Key strategic takeaway for slide 2 addressing presentation with unsupported and missing evi...",
+      "tensionLevel": 4,
+      "factLinkIds": [
+        "claim_222bec98f7c61c28"
+      ]
+    },
+    {
+      "id": "story_node_3",
+      "slideNumber": 3,
+      "role": "PROBLEM",
+      "keyMessage": "Key strategic takeaway for slide 3 addressing presentation with unsupported and missing evi...",
+      "tensionLevel": 5,
+      "factLinkIds": [
+        "claim_222bec98f7c61c28"
+      ]
+    },
+    {
+      "id": "story_node_4",
+      "slideNumber": 4,
+      "role": "EVIDENCE",
+      "keyMessage": "Key strategic takeaway for slide 4 addressing presentation with unsupported and missing evi...",
+      "tensionLevel": 6,
+      "factLinkIds": [
+        "claim_222bec98f7c61c28"
+      ]
+    },
+    {
+      "id": "story_node_5",
+      "slideNumber": 5,
+      "role": "INSIGHT",
+      "keyMessage": "Key strategic takeaway for slide 5 addressing presentation with unsupported and missing evi...",
+      "tensionLevel": 7,
+      "factLinkIds": [
+        "claim_222bec98f7c61c28"
+      ]
+    },
+    {
+      "id": "story_node_6",
+      "slideNumber": 6,
+      "role": "SOLUTION",
+      "keyMessage": "Key strategic takeaway for slide 6 addressing presentation with unsupported and missing evi...",
+      "tensionLevel": 8,
+      "factLinkIds": [
+        "claim_222bec98f7c61c28"
+      ]
+    },
+    {
+      "id": "story_node_7",
+      "slideNumber": 7,
+      "role": "MECHANISM",
+      "keyMessage": "Key strategic takeaway for slide 7 addressing presentation with unsupported and missing evi...",
+      "tensionLevel": 3,
+      "factLinkIds": [
+        "claim_222bec98f7c61c28"
+      ]
+    },
+    {
+      "id": "story_node_8",
+      "slideNumber": 8,
+      "role": "CTA",
+      "keyMessage": "Key strategic takeaway for slide 8 addressing presentation with unsupported and missing evi...",
+      "tensionLevel": 4,
+      "factLinkIds": [
+        "claim_222bec98f7c61c28"
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "id": "slide_1_1787729165954",
+      "slideNumber": 1,
+      "layout": "HERO",
+      "headline": "presentation with unsupported and missing evi...",
+      "subheadline": "A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners",
+      "bodyContent": "Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.",
+      "visualStrategy": "Clean dramatic typography with subtle gold ambient backdrop",
+      "speakerNotes": "Welcome everyone. Today we are exploring a paradigm shift that will define the competitive landscape over the coming five years.",
+      "citations": [
+        "Antigravity Intelligence Foundation"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_222bec98f7c61c28",
+          "text": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
+          "sourceIds": [
+            "pres_1787729165954_qos22"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E0",
+          "confidence": 0.4,
+          "createdAt": "2026-08-26T07:26:05.954Z",
+          "freshness": "CURRENT",
+          "provenance": "UNKNOWN",
+          "evidenceId": "claim_222bec98f7c61c28"
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 75,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 75,
+        "truthBadge": "UNVERIFIED",
+        "findings": [
+          {
+            "type": "INFO",
+            "defectCategory": "VISUAL_INCONSISTENCY",
+            "message": "Text-heavy slide lacking visual anchor. Recommended to attach diagram, metric, or visual.",
+            "fixAction": "GENERATE_VISUAL"
+          },
+          {
+            "type": "CRITICAL",
+            "defectCategory": "FACT_UNVERIFIED",
+            "message": "1 unsupported claim(s) detected. Requires verification via V7 Source Reality Gate.",
+            "fixAction": "FACT_CHECK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide_2_1787729165954",
+      "slideNumber": 2,
+      "layout": "TWO_COLUMN",
+      "headline": "The Macro Environment & Shifting Paradigms",
+      "subheadline": "Accelerating technological convergence across industry verticals",
+      "bodyContent": "Traditional legacy workflows are reaching terminal velocity bottlenecks. Organizations that adapt to sovereign autonomous intelligence will unlock exponential operational leverage.",
+      "bulletPoints": [
+        "Legacy agency workflows face a 60% operational efficiency cap",
+        "Autonomous intelligence pipelines reduce turnaround from weeks to minutes",
+        "Deterministic validation guarantees zero-hallucination compliance"
+      ],
+      "visualStrategy": "Split layout contrasting manual vs autonomous velocity",
+      "speakerNotes": "Frame the context clearly. We are not talking about incremental optimization; this is a step-function transition in execution velocity.",
+      "citations": [
+        "Industry Analysis & Market Telemetry"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_222bec98f7c61c28",
+          "text": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
+          "sourceIds": [
+            "pres_1787729165954_qos22"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E0",
+          "confidence": 0.4,
+          "createdAt": "2026-08-26T07:26:05.954Z",
+          "freshness": "CURRENT",
+          "provenance": "UNKNOWN",
+          "evidenceId": "claim_222bec98f7c61c28"
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 75,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 75,
+        "truthBadge": "UNVERIFIED",
+        "findings": [
+          {
+            "type": "INFO",
+            "defectCategory": "VISUAL_INCONSISTENCY",
+            "message": "Text-heavy slide lacking visual anchor. Recommended to attach diagram, metric, or visual.",
+            "fixAction": "GENERATE_VISUAL"
+          },
+          {
+            "type": "CRITICAL",
+            "defectCategory": "FACT_UNVERIFIED",
+            "message": "1 unsupported claim(s) detected. Requires verification via V7 Source Reality Gate.",
+            "fixAction": "FACT_CHECK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide_3_1787729165954",
+      "slideNumber": 3,
+      "layout": "THREE_COLUMN",
+      "headline": "Three Critical Barriers Holding Back Growth",
+      "subheadline": "Core bottlenecks identified across modern creative & technical operations",
+      "bodyContent": "Analysis reveals three compounding friction points preventing organizations from achieving enterprise scale.",
+      "bulletPoints": [
+        "Fragmentation: Disconnected toolchains causing 40% context loss",
+        "Hallucination Risk: Unchecked generative outputs lacking factual grounding",
+        "Resource Inefficiency: Runaway cloud compute and opaque API costs"
+      ],
+      "visualStrategy": "Three high-contrast cards highlighting distinct friction vectors",
+      "speakerNotes": "Walk through each pillar concisely. Note how fragmentation and hallucination compound each other without an integrated OS.",
+      "citations": [
+        "Enterprise Operations Audit"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_222bec98f7c61c28",
+          "text": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
+          "sourceIds": [
+            "pres_1787729165954_qos22"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E0",
+          "confidence": 0.4,
+          "createdAt": "2026-08-26T07:26:05.954Z",
+          "freshness": "CURRENT",
+          "provenance": "UNKNOWN",
+          "evidenceId": "claim_222bec98f7c61c28"
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 75,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 75,
+        "truthBadge": "UNVERIFIED",
+        "findings": [
+          {
+            "type": "INFO",
+            "defectCategory": "VISUAL_INCONSISTENCY",
+            "message": "Text-heavy slide lacking visual anchor. Recommended to attach diagram, metric, or visual.",
+            "fixAction": "GENERATE_VISUAL"
+          },
+          {
+            "type": "CRITICAL",
+            "defectCategory": "FACT_UNVERIFIED",
+            "message": "1 unsupported claim(s) detected. Requires verification via V7 Source Reality Gate.",
+            "fixAction": "FACT_CHECK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide_4_1787729165954",
+      "slideNumber": 4,
+      "layout": "METRICS_GRID",
+      "headline": "Empirical Performance & Market Impact",
+      "subheadline": "Quantifiable gains delivered by autonomous orchestration",
+      "bodyContent": "Measured telemetry confirms significant performance breakthroughs across cost, speed, and accuracy.",
+      "keyMetrics": [
+        {
+          "value": "10x",
+          "label": "Production Velocity",
+          "change": "+900%",
+          "trend": "UP",
+          "dataType": "REAL_DATA"
+        },
+        {
+          "value": "85%",
+          "label": "Compute Cost Reduction",
+          "change": "-85%",
+          "trend": "DOWN",
+          "dataType": "REAL_DATA"
+        },
+        {
+          "value": "100%",
+          "label": "Fact Grounding Lineage",
+          "change": "Zero Hallucination",
+          "trend": "UP",
+          "dataType": "REAL_DATA"
+        },
+        {
+          "value": "0ms",
+          "label": "Cascading Downtime",
+          "change": "Self-Healing",
+          "trend": "UP",
+          "dataType": "REAL_DATA"
+        }
+      ],
+      "visualStrategy": "Bold four-card KPI grid with gold metric highlights",
+      "speakerNotes": "Let the numbers speak for themselves. The 10x velocity gain is paired with an 85% reduction in cloud cost due to local hardware routing.",
+      "citations": [
+        "V7 Reality Benchmark Suite"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_222bec98f7c61c28",
+          "text": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
+          "sourceIds": [
+            "pres_1787729165954_qos22"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E0",
+          "confidence": 0.4,
+          "createdAt": "2026-08-26T07:26:05.954Z",
+          "freshness": "CURRENT",
+          "provenance": "UNKNOWN",
+          "evidenceId": "claim_222bec98f7c61c28"
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 90,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 75,
+        "truthBadge": "UNVERIFIED",
+        "findings": [
+          {
+            "type": "CRITICAL",
+            "defectCategory": "FACT_UNVERIFIED",
+            "message": "1 unsupported claim(s) detected. Requires verification via V7 Source Reality Gate.",
+            "fixAction": "FACT_CHECK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide_5_1787729165954",
+      "slideNumber": 5,
+      "layout": "CHART_VIEW",
+      "headline": "Productivity Acceleration Trajectory",
+      "subheadline": "5-Year projected efficiency compounding curves",
+      "bodyContent": "Autonomous product pipelines compound over time through continuous learning and failure graph pattern recognition.",
+      "visualStrategy": "Full vector SVG area chart displaying exponential curve",
+      "chart": {
+        "type": "AREA",
+        "title": "Autonomous vs Traditional Velocity (2024-2028)",
+        "data": [
+          {
+            "label": "2024",
+            "value": 20
+          },
+          {
+            "label": "2025",
+            "value": 45
+          },
+          {
+            "label": "2026",
+            "value": 110
+          },
+          {
+            "label": "2027",
+            "value": 240
+          },
+          {
+            "label": "2028",
+            "value": 500
+          }
+        ],
+        "units": "x Output",
+        "source": "Antigravity Engineering Model",
+        "dataType": "ILLUSTRATIVE_DATA",
+        "citation": "V7 Telemetry Ledger"
+      },
+      "speakerNotes": "This chart illustrates the compounding curve. As the system builds failure knowledge, repair speed accelerates.",
+      "citations": [
+        "Antigravity Research"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_222bec98f7c61c28",
+          "text": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
+          "sourceIds": [
+            "pres_1787729165954_qos22"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E0",
+          "confidence": 0.4,
+          "createdAt": "2026-08-26T07:26:05.954Z",
+          "freshness": "CURRENT",
+          "provenance": "UNKNOWN",
+          "evidenceId": "claim_222bec98f7c61c28"
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 90,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 75,
+        "truthBadge": "UNVERIFIED",
+        "findings": [
+          {
+            "type": "CRITICAL",
+            "defectCategory": "FACT_UNVERIFIED",
+            "message": "1 unsupported claim(s) detected. Requires verification via V7 Source Reality Gate.",
+            "fixAction": "FACT_CHECK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide_6_1787729165954",
+      "slideNumber": 6,
+      "layout": "PROCESS_FLOW",
+      "headline": "End-to-End Autonomous Pipeline Architecture",
+      "subheadline": "Deterministic multi-agent execution loop",
+      "bodyContent": "A seamless lifecycle combining intent decomposition, factual evidence verification, and reality audits.",
+      "visualStrategy": "Horizontal connected step-flow vector diagram",
+      "diagram": {
+        "type": "PROCESS",
+        "title": "Execution Flow",
+        "steps": [
+          {
+            "number": 1,
+            "title": "Intent & Brief",
+            "description": "Hermes autonomous planning"
+          },
+          {
+            "number": 2,
+            "title": "Trust Verification",
+            "description": "SHA-256 evidence grounding"
+          },
+          {
+            "number": 3,
+            "title": "Compilation",
+            "description": "Design tokens & code build"
+          },
+          {
+            "number": 4,
+            "title": "Reality Audit",
+            "description": "Browser & WCAG validation"
+          }
+        ]
+      },
+      "speakerNotes": "Explain the four-stage execution pipeline. Note that each stage is governed by cryptographic verification gates.",
+      "citations": [
+        "V7 Architecture Specification"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_222bec98f7c61c28",
+          "text": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
+          "sourceIds": [
+            "pres_1787729165954_qos22"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E0",
+          "confidence": 0.4,
+          "createdAt": "2026-08-26T07:26:05.954Z",
+          "freshness": "CURRENT",
+          "provenance": "UNKNOWN",
+          "evidenceId": "claim_222bec98f7c61c28"
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 90,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 75,
+        "truthBadge": "UNVERIFIED",
+        "findings": [
+          {
+            "type": "CRITICAL",
+            "defectCategory": "FACT_UNVERIFIED",
+            "message": "1 unsupported claim(s) detected. Requires verification via V7 Source Reality Gate.",
+            "fixAction": "FACT_CHECK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide_7_1787729165954",
+      "slideNumber": 7,
+      "layout": "COMPARISON",
+      "headline": "Legacy Toolchains vs PresentX Native Studio",
+      "subheadline": "Direct side-by-side operational comparison",
+      "bodyContent": "Comparing conventional fragmented creative tools with unified V7 sovereign intelligence.",
+      "bulletPoints": [
+        "Legacy: Manual formatting, ungrounded AI hallucinations, fragile exports",
+        "PresentX: Cryptographic fact grounding, 9 visual directions, real PPTX exports"
+      ],
+      "visualStrategy": "Side-by-side comparison cards",
+      "speakerNotes": "Highlight the key differentiators: factual grounding and zero-loss export fidelity.",
+      "citations": [
+        "Comparative Benchmark Suite"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_222bec98f7c61c28",
+          "text": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
+          "sourceIds": [
+            "pres_1787729165954_qos22"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E0",
+          "confidence": 0.4,
+          "createdAt": "2026-08-26T07:26:05.954Z",
+          "freshness": "CURRENT",
+          "provenance": "UNKNOWN",
+          "evidenceId": "claim_222bec98f7c61c28"
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 75,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 75,
+        "truthBadge": "UNVERIFIED",
+        "findings": [
+          {
+            "type": "INFO",
+            "defectCategory": "VISUAL_INCONSISTENCY",
+            "message": "Text-heavy slide lacking visual anchor. Recommended to attach diagram, metric, or visual.",
+            "fixAction": "GENERATE_VISUAL"
+          },
+          {
+            "type": "CRITICAL",
+            "defectCategory": "FACT_UNVERIFIED",
+            "message": "1 unsupported claim(s) detected. Requires verification via V7 Source Reality Gate.",
+            "fixAction": "FACT_CHECK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide_8_1787729165954",
+      "slideNumber": 8,
+      "layout": "QUOTE",
+      "headline": "The Strategic Imperative",
+      "subheadline": "Guiding thesis for sovereign enterprise transformation",
+      "visualStrategy": "Centered elegant quote card with serif emphasis",
+      "quote": {
+        "text": "The future belongs to organizations that treat intelligence not as an external rented service, but as sovereign, verified infrastructure.",
+        "author": "Antigravity OS Architecture Council",
+        "role": "Enterprise Systems Whitepaper"
+      },
+      "speakerNotes": "Take a moment to let this quote resonate. Sovereignty and verification are the defining qualities of next-generation infrastructure.",
+      "citations": [
+        "Antigravity Strategic Review"
+      ],
+      "facts": [
+        {
+          "claimId": "claim_222bec98f7c61c28",
+          "text": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
+          "sourceIds": [
+            "pres_1787729165954_qos22"
+          ],
+          "sourceClass": "USER_ASSERTION",
+          "evidenceLevel": "E0",
+          "confidence": 0.4,
+          "createdAt": "2026-08-26T07:26:05.954Z",
+          "freshness": "CURRENT",
+          "provenance": "UNKNOWN",
+          "evidenceId": "claim_222bec98f7c61c28"
+        }
+      ],
+      "designTokens": {},
+      "audit": {
+        "contentScore": 95,
+        "visualScore": 90,
+        "hierarchyScore": 92,
+        "readabilityScore": 94,
+        "accessibilityScore": 96,
+        "factualityScore": 75,
+        "truthBadge": "UNVERIFIED",
+        "findings": [
+          {
+            "type": "CRITICAL",
+            "defectCategory": "FACT_UNVERIFIED",
+            "message": "1 unsupported claim(s) detected. Requires verification via V7 Source Reality Gate.",
+            "fixAction": "FACT_CHECK"
+          }
+        ]
+      }
+    }
+  ],
+  "mediaBible": {
+    "masterStyle": "FUTURISTIC",
+    "paletteMood": "Antigravity Gold (Signature)",
+    "lighting": "Soft ambient cinematic studio lighting",
+    "cameraLanguage": "Cinematic 35mm wide-aperture composition",
+    "consistencySeed": 884691,
+    "items": [
+      {
+        "id": "media_slide_1_1787729165954",
+        "slideId": "slide_1_1787729165954",
+        "purpose": "HERO",
+        "subject": "presentation with unsupported and missing evi...",
+        "composition": "Rule of thirds cinematic",
+        "style": "FUTURISTIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 884691,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "83f4ebbb246648145655b4a353a53d8a5175dfa82e8256c6dd4a072de0f8db9e"
+      },
+      {
+        "id": "media_slide_2_1787729165954",
+        "slideId": "slide_2_1787729165954",
+        "purpose": "HERO",
+        "subject": "The Macro Environment & Shifting Paradigms",
+        "composition": "Rule of thirds cinematic",
+        "style": "FUTURISTIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 884691,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "76fd61aebba3ccb60a6301acb5bb8bf3c5e26c679756bcc17bea45223a8a1c40"
+      },
+      {
+        "id": "media_slide_3_1787729165954",
+        "slideId": "slide_3_1787729165954",
+        "purpose": "HERO",
+        "subject": "Three Critical Barriers Holding Back Growth",
+        "composition": "Rule of thirds cinematic",
+        "style": "FUTURISTIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 884691,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "833ab5f4179e704db3ceafe4e4dd813ecec43a21cdec428c46669eda73bf52a4"
+      },
+      {
+        "id": "media_slide_4_1787729165954",
+        "slideId": "slide_4_1787729165954",
+        "purpose": "HERO",
+        "subject": "Empirical Performance & Market Impact",
+        "composition": "Rule of thirds cinematic",
+        "style": "FUTURISTIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 884691,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "377f07cebd12d9ef2b9284f7fbb9934bc3aaa01da7996c1cf37d26bb92773400"
+      },
+      {
+        "id": "media_slide_5_1787729165954",
+        "slideId": "slide_5_1787729165954",
+        "purpose": "HERO",
+        "subject": "Productivity Acceleration Trajectory",
+        "composition": "Rule of thirds cinematic",
+        "style": "FUTURISTIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 884691,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "87e8b85a1d13f2eaf042cadbd754a1c53a53b27279d4d60a9619892aa45a3315"
+      },
+      {
+        "id": "media_slide_6_1787729165954",
+        "slideId": "slide_6_1787729165954",
+        "purpose": "HERO",
+        "subject": "End-to-End Autonomous Pipeline Architecture",
+        "composition": "Rule of thirds cinematic",
+        "style": "FUTURISTIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 884691,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "e395b683d001e388681cd237fdec0ff669c3073b830deda40ceebba275034a63"
+      },
+      {
+        "id": "media_slide_7_1787729165954",
+        "slideId": "slide_7_1787729165954",
+        "purpose": "HERO",
+        "subject": "Legacy Toolchains vs PresentX Native Studio",
+        "composition": "Rule of thirds cinematic",
+        "style": "FUTURISTIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 884691,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "5035da7868132609501720ad8ae596da053f831be4812ee4ca5b3ffe668fb632"
+      },
+      {
+        "id": "media_slide_8_1787729165954",
+        "slideId": "slide_8_1787729165954",
+        "purpose": "HERO",
+        "subject": "The Strategic Imperative",
+        "composition": "Rule of thirds cinematic",
+        "style": "FUTURISTIC",
+        "lighting": "Volumetric soft ambient studio lighting",
+        "camera": "35mm prime lens f/1.8",
+        "aspectRatio": "16:9",
+        "resolution": "1920x1080",
+        "negativePrompt": "low quality, distorted, blurry, watermark",
+        "seed": 884691,
+        "model": "ComfyUI/SDXL-Turbo-V7",
+        "workflow": "StandardStudioRender_v7",
+        "provenance": "e4c65ec89245f57ca5f1f3b8a85d91869218944f18cebec236d7ef4616e90e84"
+      }
+    ]
+  },
+  "qualityAudit": {
+    "overallScore": 81,
+    "contentScore": 95,
+    "storyScore": 95,
+    "factualityScore": 30,
+    "designScore": 83,
+    "visualHierarchyScore": 92,
+    "readabilityScore": 94,
+    "accessibilityScore": 96,
+    "consistencyScore": 96,
+    "findingsCount": 12,
+    "certified": false,
+    "verifiedClaimsCount": 0,
+    "inferredClaimsCount": 0,
+    "unverifiedClaimsCount": 8,
+    "contradictedClaimsCount": 0,
+    "sourceReality": {
+      "evidenceCoverage": 0,
+      "verifiedClaimsCount": 0,
+      "supportedClaimsCount": 0,
+      "partiallyVerifiedClaimsCount": 0,
+      "unverifiedClaimsCount": 8,
+      "contradictedClaimsCount": 0,
+      "hypotheticalClaimsCount": 0,
+      "sourceRetrievalCoverage": 0,
+      "evidenceMatchCoverage": 0,
+      "contradictionResolutionRate": 100,
+      "freshnessCoverage": 100,
+      "numericalVerificationRate": 0,
+      "overallScore": 30
+    }
+  },
+  "evidenceStatus": "UNVERIFIED",
+  "provenanceHash": "41f273470c61b0735172d2b404b5a8cb3a0e999728c7b665c699f32ea768200b",
+  "version": 1,
+  "versionHistory": [
+    {
+      "version": 1,
+      "timestamp": "2026-08-26T07:26:05.954Z",
+      "author": "Hermes Autonomous Planner V7",
+      "changeReason": "Initial deck synthesis",
+      "modelUsed": "Hermes-70B-Router",
+      "slidesCount": 8,
+      "qualityScore": 94,
+      "provenanceHash": "41f273470c61b0735172d2b404b5a8cb3a0e999728c7b665c699f32ea768200b"
+    }
+  ],
+  "autoRepairs": [],
+  "createdAt": "2026-08-26T07:26:05.954Z",
+  "updatedAt": "2026-08-26T07:26:05.954Z"
+}

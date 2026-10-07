@@ -1,0 +1,71 @@
+[
+  {
+    "success": true,
+    "modelUsed": "granite-4.2-8b",
+    "backendUsed": "FALLBACK_DETERMINISTIC",
+    "thinkingMode": "THINKING",
+    "content": "IBM Granite 4.2 Sovereign Reasoning Output: Synthesized high-fidelity analysis for PRODUCT_ARCHITECTURE. Context length verified within safe hardware bounds.",
+    "tokenUsage": {
+      "promptTokens": 19,
+      "completionTokens": 41,
+      "totalTokens": 60,
+      "thinkingTokens": 128
+    },
+    "durationMs": 7,
+    "provenance": {
+      "claimIds": [
+        "claim_granite_1787747424670_4a8d"
+      ],
+      "evidenceStatus": "GENERATED",
+      "hash": "9b31e489c6bbd5bca7f94a7a8f2b02acd5b848493dfead62b5a99002bfc8027c",
+      "signature": "5fb8f9de95a21287a8640f49512950167b79ad101504e6cf9eeeac6f42eb486c",
+      "modelSelfClaimIgnored": true
+    }
+  },
+  {
+    "success": true,
+    "modelUsed": "granite-4.2-8b",
+    "backendUsed": "FALLBACK_DETERMINISTIC",
+    "thinkingMode": "FAST",
+    "content": "IBM Granite 4.2 Sovereign Reasoning Output: Synthesized high-fidelity analysis for REASONING. Context length verified within safe hardware bounds.",
+    "tokenUsage": {
+      "promptTokens": 5,
+      "completionTokens": 38,
+      "totalTokens": 43,
+      "thinkingTokens": 0
+    },
+    "durationMs": 6,
+    "provenance": {
+      "claimIds": [
+        "claim_granite_1787747424676_im8x"
+      ],
+      "evidenceStatus": "GENERATED",
+      "hash": "cdd31c19651427ee1ac903ebe873585ca95f5e33923b58022568cd676cd946fd",
+      "signature": "972a8c0ab8e50a2d40dd08369cf3862b576076705b40414845314431ace99c43",
+      "modelSelfClaimIgnored": true
+    }
+  },
+  {
+    "success": true,
+    "modelUsed": "granite-4.2-8b",
+    "backendUsed": "FALLBACK_DETERMINISTIC",
+    "thinkingMode": "DEEP_REASONING",
+    "content": "IBM Granite 4.2 Sovereign Reasoning Output: Synthesized high-fidelity analysis for REASONING. Context length verified within safe hardware bounds.",
+    "tokenUsage": {
+      "promptTokens": 16,
+      "completionTokens": 38,
+      "totalTokens": 54,
+      "thinkingTokens": 512
+    },
+    "durationMs": 6,
+    "provenance": {
+      "claimIds": [
+        "claim_granite_1787747424682_j6ey"
+      ],
+      "evidenceStatus": "GENERATED",
+      "hash": "1e14119d2a737a205c0cd7ecafefae29343c11030620c419c75be76214b3d05b",
+      "signature": "2202d48b94748dbbfbffc581b74f8c47d127b0752b507a2239f73d7a09625427",
+      "modelSelfClaimIgnored": true
+    }
+  }
+]

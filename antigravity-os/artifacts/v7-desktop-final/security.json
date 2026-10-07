@@ -1,0 +1,50 @@
+[
+  {
+    "attack": "IPC_INJECTION",
+    "passed": true
+  },
+  {
+    "attack": "FILESYSTEM_TRAVERSAL",
+    "passed": true
+  },
+  {
+    "attack": "COMMAND_INJECTION",
+    "passed": true
+  },
+  {
+    "attack": "XSS_IN_SLIDES",
+    "passed": true
+  },
+  {
+    "attack": "PROMPT_INJECTION",
+    "passed": true
+  },
+  {
+    "attack": "MALICIOUS_PLUGIN_QUARANTINE",
+    "passed": true
+  },
+  {
+    "attack": "PROJECT_ISOLATION_BREACH",
+    "passed": true
+  },
+  {
+    "attack": "SECRET_LEAKAGE_DEFENSE",
+    "passed": true
+  },
+  {
+    "attack": "CROSS_PROJECT_ACCESS_BLOCK",
+    "passed": true
+  },
+  {
+    "attack": "PATH_TRAVERSAL_DENIED",
+    "passed": true
+  },
+  {
+    "attack": "RENDERER_PRIVILEGE_ESCALATION_BLOCK",
+    "passed": true
+  },
+  {
+    "attack": "SERVICE_HIJACKING_DEFENSE",
+    "passed": true
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-08-25T07:59:28.010Z",
+  "rolesTested": [
+    "admin",
+    "director",
+    "lead",
+    "designer",
+    "copywriter",
+    "client"
+  ],
+  "permissionsCount": 14,
+  "escalationAttacksBlocked": true,
+  "status": "PASS"
+}

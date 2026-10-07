@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-08-26T07:25:54.729Z",
+  "os": {
+    "platform": "win32",
+    "release": "10.0.26200",
+    "arch": "x64",
+    "status": "AVAILABLE"
+  },
+  "cpu": {
+    "model": "AMD Ryzen 9 6900HS with Radeon Graphics        ",
+    "cores": 16,
+    "speedMhz": 3294,
+    "status": "AVAILABLE"
+  },
+  "ram": {
+    "totalBytes": 16366272512,
+    "freeBytes": 3699519488,
+    "totalGb": 15.24,
+    "freeGb": 3.45,
+    "status": "DEGRADED"
+  },
+  "gpu": {
+    "renderer": "Integrated / Software Rasterizer",
+    "vramMb": 0,
+    "cudaAvailable": false,
+    "directMlAvailable": false,
+    "status": "DEGRADED",
+    "notes": "Hardware telemetry query fell back to safe defaults"
+  },
+  "disk": {
+    "workspacePath": "C:\\D drive\\Antigravity\\antigravity-os\\workspaces",
+    "accessible": true,
+    "status": "AVAILABLE"
+  },
+  "runtimes": {
+    "nodeVersion": "v24.16.0",
+    "pythonAvailable": true,
+    "pythonVersion": "Python 3.13.14",
+    "gitAvailable": true
+  },
+  "localAiEngines": {
+    "ollama": {
+      "status": "AVAILABLE",
+      "port": 11434,
+      "installedModels": [
+        "qwen2.5-coder:14b",
+        "minicpm-v:latest",
+        "llama3.1:latest",
+        "nomic-embed-text:latest",
+        "deepseek-r1:7b",
+        "qwen2.5-coder:7b"
+      ],
+      "notes": "Local Ollama daemon responsive"
+    },
+    "comfyui": {
+      "status": "AVAILABLE",
+      "port": 8188,
+      "workflowsAvailable": [
+        "text_to_image_sdxl",
+        "slide_hero_photorealistic",
+        "vector_diagram_flux"
+      ],
+      "notes": "ComfyUI Fabric virtual driver connected to local pipeline"
+    }
+  },
+  "v7Subsystems": {
+    "trustFabric": "AVAILABLE",
+    "hermesAgent": "AVAILABLE",
+    "realityKernel": "AVAILABLE",
+    "evidenceLedger": "AVAILABLE",
+    "presentxStudio": "AVAILABLE"
+  },
+  "overallStatus": "DEGRADED"
+}

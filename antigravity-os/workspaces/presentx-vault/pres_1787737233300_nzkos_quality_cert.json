@@ -1,0 +1,34 @@
+{
+  "certificateId": "cert_qual_1787737233416_b7tar",
+  "projectId": "pres_1787737233300_nzkos",
+  "projectTitle": "Basic corporate presentation",
+  "projectHash": "3a662225b5d51afc28d524decada0f6f5ddb68983515c53ad67b8a58251be8dd",
+  "presentationHash": "c1a20b75bc516c51631ed7eb45cb57becfe8b97296779e71d29f66e3ef29a442",
+  "slideCount": 5,
+  "creativeQuality": 94,
+  "trustQuality": 100,
+  "technicalIntegrity": 100,
+  "accessibilityScore": 98,
+  "exportScore": 98,
+  "decision": "APPROVED",
+  "repairCyclesCount": 0,
+  "modelsUsed": [
+    "ollama:llama3",
+    "ollama:mistral"
+  ],
+  "enginesUsed": [
+    "DeterministicQualityAuditor",
+    "VisualInspectionEngine",
+    "MultiModelCreativeJudge",
+    "LocalizedSelfRepairEngine",
+    "PresentXSourceRealityGate"
+  ],
+  "verifiedClaimsCount": 5,
+  "unverifiedClaimsCount": 0,
+  "warnings": [],
+  "roundtripResult": "PERFECT",
+  "roundtripLossPercentage": 0,
+  "exportFormat": "PPTX",
+  "timestamp": "2026-08-26T09:40:33.416Z",
+  "signature": "1ba181ed79e57460250ea5e753c8659cae4dc5805155b2cbc8ddd5e485ac7adf"
+}

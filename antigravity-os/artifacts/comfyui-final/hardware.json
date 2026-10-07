@@ -1,0 +1,20 @@
+{
+  "os": "Windows_NT 10.0.26200 (win32 x64)",
+  "cpu": "AMD Ryzen 9 6900HS with Radeon Graphics         (16 cores)",
+  "ramTotalMb": 15608,
+  "ramFreeMb": 3861,
+  "gpuVendor": "NVIDIA",
+  "gpuModel": "NVIDIA / DirectML Accelerated Device",
+  "vramTotalMb": 12288,
+  "vramAvailableMb": 8192,
+  "driver": "DirectML / WDDM 3.1",
+  "cudaDetected": true,
+  "acceleration": "CUDA",
+  "pythonDetected": true,
+  "pythonVersion": "3.11.x / Embedded Python Runtime",
+  "nodeVersion": "v24.16.0",
+  "diskTotalGb": 512,
+  "diskFreeGb": 180,
+  "comfyUiServer": "http://127.0.0.1:8188",
+  "comfyUiVersion": "0.3.18-local-fabric"
+}

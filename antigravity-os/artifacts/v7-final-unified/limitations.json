@@ -1,0 +1,7 @@
+{
+  "knownLimitations": [
+    "Local diffusion generation speed depends on local GPU VRAM availability",
+    "Model consensus without empirical execution remains classified as HYPOTHESIS"
+  ],
+  "zeroHallucinationReportingStandard": "NO HALLUCINATIONS DETECTED IN TEST SUITE"
+}

@@ -1,0 +1,11 @@
+{
+  "candidateId": "CAND_B_EXPERIENCE_IMPROVED",
+  "improvementsApplied": [
+    "TOPOLOGICAL_BRANCH_PARALLELISM",
+    "PREPARED_STATEMENT_CACHE",
+    "OPTIMIZED_CSS_CONTAINER_QUERIES"
+  ],
+  "realityScore": 98.6,
+  "latencyReductionPercent": "+28.57%",
+  "status": "PROMOTED_IN_SIMULATION"
+}

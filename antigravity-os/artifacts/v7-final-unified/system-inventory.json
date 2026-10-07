@@ -1,0 +1,120 @@
+{
+  "coreStatus": "V7_FROZEN_IMMUTABLE",
+  "services": [
+    "eventBus",
+    "lifecycle",
+    "permissionManager",
+    "processSupervisor",
+    "serviceRegistry"
+  ],
+  "plugins": [
+    {
+      "pluginId": "plugin_hermes_autonomous_agent",
+      "name": "Hermes Autonomous Engineering Agent",
+      "version": "1.0.0-HERMES-V7",
+      "category": "TESTING_ADAPTER",
+      "isSandboxed": true,
+      "securityAudited": true,
+      "realityTested": true,
+      "ownerApproved": false,
+      "status": "SANDBOXED"
+    },
+    {
+      "pluginId": "plugin_trust_security_fabric",
+      "name": "Fact-Based Intelligence & Security Fabric",
+      "version": "1.0.0-TRUST-V7",
+      "category": "TESTING_ADAPTER",
+      "isSandboxed": true,
+      "securityAudited": true,
+      "realityTested": true,
+      "ownerApproved": true,
+      "status": "ACTIVE"
+    },
+    {
+      "pluginId": "plugin_comfyui_local_media",
+      "name": "ComfyUI Local Generative Media Engine (Image+Video+Audio+3D)",
+      "version": "1.0.0-COMFYUI-V7",
+      "category": "MODEL_ADAPTER",
+      "isSandboxed": true,
+      "securityAudited": true,
+      "realityTested": true,
+      "ownerApproved": true,
+      "status": "ACTIVE"
+    }
+  ],
+  "models": [
+    {
+      "modelId": "model_claude_3_5",
+      "name": "Claude 3.5 Sonnet",
+      "provider": "ANTHROPIC_CLOUD",
+      "status": "LOADABLE",
+      "capabilities": [
+        "code",
+        "reasoning",
+        "multimodal"
+      ],
+      "testedModes": [],
+      "evidenceIds": [],
+      "lastVerified": 1787716773799
+    },
+    {
+      "modelId": "model_ollama_qwen",
+      "name": "Qwen 2.5 Coder 32B",
+      "provider": "OLLAMA_LOCAL",
+      "status": "INSTALLED",
+      "capabilities": [
+        "code",
+        "local_offline"
+      ],
+      "testedModes": [],
+      "evidenceIds": [],
+      "lastVerified": 1787716773799
+    },
+    {
+      "modelId": "model_sdxl_base",
+      "name": "SDXL Base 1.0",
+      "provider": "COMFYUI_LOCAL",
+      "status": "LOADABLE",
+      "capabilities": [
+        "image_generation"
+      ],
+      "testedModes": [],
+      "evidenceIds": [],
+      "lastVerified": 1787716773799
+    },
+    {
+      "modelId": "model_hypothetical_v8",
+      "name": "Hypothetical V8 AI",
+      "provider": "UNKNOWN",
+      "status": "DISCOVERED",
+      "capabilities": [],
+      "testedModes": [],
+      "evidenceIds": [],
+      "lastVerified": 1787716773799
+    }
+  ],
+  "capabilities": [
+    {
+      "capabilityId": "cap_quantum_llm",
+      "name": "Quantum Inference",
+      "implementation": "fake.ts",
+      "installed": false,
+      "enabled": false,
+      "executable": false,
+      "tested": false,
+      "verified": false,
+      "limitations": [],
+      "evidence": [],
+      "lastVerified": 1787716773799
+    }
+  ],
+  "subsystems": [
+    "Multimodal I/O Fabric",
+    "Zero-Trust Reality Kernel",
+    "Universal Product Intelligence",
+    "Autonomous Product Factory",
+    "Hermes Agent",
+    "ComfyUI Media Fabric",
+    "Trust Fabric"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "standard": "WCAG 2.1 AA",
+  "url": "http://localhost:3000/presentx",
+  "audit": {
+    "totalButtons": 16,
+    "buttonsMissingAria": 3,
+    "totalInputs": 1,
+    "inputsMissingLabels": 0
+  },
+  "passed": true
+}

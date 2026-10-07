@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-08-25T07:59:28.081Z",
+  "coldStartupMs": 2,
+  "databaseQueryMs": 0.42,
+  "memoryRssMb": 87.5,
+  "stressBenchmarking": [
+    {
+      "tier": 10,
+      "totalDurationMs": 8,
+      "avgLatencyMs": 0.8,
+      "p95LatencyMs": 2,
+      "minLatencyMs": 0,
+      "maxLatencyMs": 2
+    },
+    {
+      "tier": 25,
+      "totalDurationMs": 12,
+      "avgLatencyMs": 0.48,
+      "p95LatencyMs": 1,
+      "minLatencyMs": 0,
+      "maxLatencyMs": 2
+    },
+    {
+      "tier": 50,
+      "totalDurationMs": 16,
+      "avgLatencyMs": 0.3,
+      "p95LatencyMs": 1,
+      "minLatencyMs": 0,
+      "maxLatencyMs": 1
+    },
+    {
+      "tier": 100,
+      "totalDurationMs": 30,
+      "avgLatencyMs": 0.29,
+      "p95LatencyMs": 1,
+      "minLatencyMs": 0,
+      "maxLatencyMs": 1
+    }
+  ],
+  "status": "PASS"
+}

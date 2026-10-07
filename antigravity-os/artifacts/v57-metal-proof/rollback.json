@@ -1,0 +1,19 @@
+{
+  "preRollbackSnap": {
+    "checkpointId": "chk_metal_pre",
+    "timestamp": "2026-08-25T08:29:21.236Z",
+    "sourceFilesHash": "20ee35c8dfe95db14de94f52bcd8114207d6931d02e0d9473e0782cf3cdbcbb6",
+    "configHash": "dc63d373c167b19d0e73217358d9470a26099d5af62685b8a0b1fce5588de421",
+    "dbStateHash": "10b23f6e70587c0397d6e73487a571bf72ef29b3df45d5c708c838066da4d683",
+    "overallStateHash": "cf3fc1494de6168d4d61242bb48d76ac94c204289d6756a5c80ca8eb814c28ce"
+  },
+  "postRollbackSnap": {
+    "checkpointId": "chk_metal_post",
+    "timestamp": "2026-08-25T08:29:21.236Z",
+    "sourceFilesHash": "20ee35c8dfe95db14de94f52bcd8114207d6931d02e0d9473e0782cf3cdbcbb6",
+    "configHash": "dc63d373c167b19d0e73217358d9470a26099d5af62685b8a0b1fce5588de421",
+    "dbStateHash": "10b23f6e70587c0397d6e73487a571bf72ef29b3df45d5c708c838066da4d683",
+    "overallStateHash": "cf3fc1494de6168d4d61242bb48d76ac94c204289d6756a5c80ca8eb814c28ce"
+  },
+  "restored": true
+}

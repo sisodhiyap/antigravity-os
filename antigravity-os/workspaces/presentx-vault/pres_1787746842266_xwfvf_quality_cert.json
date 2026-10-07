@@ -1,0 +1,34 @@
+{
+  "certificateId": "cert_qual_1787746842340_amoin",
+  "projectId": "pres_1787746842266_xwfvf",
+  "projectTitle": "Basic corporate presentation",
+  "projectHash": "340633cc2be5fed2c5c70fe513d987b4b09790bc8598448cb5089676f6ec94b6",
+  "presentationHash": "65c98da10743ee0d41598c8c9de46c85b619d18a7745f333e2d2e0251656fd17",
+  "slideCount": 5,
+  "creativeQuality": 94,
+  "trustQuality": 100,
+  "technicalIntegrity": 100,
+  "accessibilityScore": 98,
+  "exportScore": 98,
+  "decision": "APPROVED",
+  "repairCyclesCount": 0,
+  "modelsUsed": [
+    "ollama:llama3",
+    "ollama:mistral"
+  ],
+  "enginesUsed": [
+    "DeterministicQualityAuditor",
+    "VisualInspectionEngine",
+    "MultiModelCreativeJudge",
+    "LocalizedSelfRepairEngine",
+    "PresentXSourceRealityGate"
+  ],
+  "verifiedClaimsCount": 5,
+  "unverifiedClaimsCount": 0,
+  "warnings": [],
+  "roundtripResult": "PERFECT",
+  "roundtripLossPercentage": 0,
+  "exportFormat": "PPTX",
+  "timestamp": "2026-08-26T12:20:42.340Z",
+  "signature": "bf47a7c8a45c17ba5c5e784050b38a6731e30385e0ab285b94c7d7a8216d1b08"
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "attack": "FAKE_SOURCE",
+    "passed": true,
+    "provenance": "UNKNOWN"
+  },
+  {
+    "attack": "NONEXISTENT_SOURCE",
+    "passed": true
+  },
+  {
+    "attack": "FAKE_URL",
+    "passed": true
+  },
+  {
+    "attack": "AI_GENERATED_CITATION",
+    "passed": true
+  },
+  {
+    "attack": "SOURCE_TITLE_ONLY",
+    "passed": true
+  },
+  {
+    "attack": "WRONG_SOURCE",
+    "passed": true
+  },
+  {
+    "attack": "PARTIALLY_SUPPORTING_SOURCE",
+    "passed": true
+  },
+  {
+    "attack": "OUTDATED_SOURCE",
+    "passed": true
+  },
+  {
+    "attack": "CONTRADICTORY_SOURCES",
+    "passed": true
+  },
+  {
+    "attack": "FABRICATED_STATISTIC",
+    "passed": true
+  },
+  {
+    "attack": "VERIFIED_NUMERICAL_CLAIM",
+    "passed": true
+  },
+  {
+    "attack": "MISSING_DATASET",
+    "passed": true
+  },
+  {
+    "attack": "WRONG_UNIT",
+    "passed": true
+  },
+  {
+    "attack": "WRONG_TIME_PERIOD",
+    "passed": true
+  },
+  {
+    "attack": "SOURCE_CONTENT_TAMPERED",
+    "passed": true
+  },
+  {
+    "attack": "UNREACHABLE_SOURCE",
+    "passed": true
+  },
+  {
+    "attack": "PROMPT_INJECTION_INSIDE_SOURCE",
+    "passed": true
+  },
+  {
+    "attack": "MALICIOUS_DOCUMENT",
+    "passed": true
+  },
+  {
+    "attack": "PDF_HIDDEN_INSTRUCTION",
+    "passed": true
+  },
+  {
+    "attack": "HTML_INJECTED_CONTENT",
+    "passed": true
+  }
+]

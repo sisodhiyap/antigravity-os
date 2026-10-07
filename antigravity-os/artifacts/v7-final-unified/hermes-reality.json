@@ -1,0 +1,12 @@
+{
+  "status": "HEALTHY",
+  "autonomyLevelsSupported": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "emergencyStopFunctional": true,
+  "taskExecutionSuccessRate": 1
+}

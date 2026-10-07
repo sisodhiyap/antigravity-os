@@ -1,0 +1,26 @@
+{
+  "certificateId": "rcert_msn_reality_bm_productivity_1787645335174_1787645335174",
+  "system": "Antigravity OS v5.5",
+  "version": "5.5.0-reality-lab",
+  "missionId": "msn_reality_bm_productivity_1787645335174",
+  "benchmarkId": "BM_PRODUCTIVITY_1787645335174",
+  "requirementsHash": "6138885f09e9dac56426d5454355362b7e31dc6b128656b6536eddf977d6837d",
+  "executionGraphHash": "73e8c4734227c876569e2caef6a1bea86982516c1fa8a6b56b670121347ccfe6",
+  "sourceCheckpointHash": "e79c1437956d9a85423b8d26fff515b83733f47cd82e2ce495979c8b278972fd",
+  "realityScore": 93.85,
+  "confidenceScore": 0.938,
+  "generalizationScore": 5,
+  "learningDeltaPercent": 5.26,
+  "certificationLevel": 6,
+  "certificationLevelName": "EXPERIENCE-IMPROVEMENT VERIFIED",
+  "evidenceSummary": {
+    "totalAssertionsPassed": 75,
+    "securityAttacksBlocked": 20,
+    "defectsRepaired": 10,
+    "dockerRuntimeHealthy": true,
+    "secretExposureDetected": false,
+    "humanInterventions": 1
+  },
+  "signatureSha256": "578def0065a9f87febb3de21af47f03c67ff35641525d449d4e6897db3dbae3c",
+  "timestamp": "2026-08-25T08:08:55.174Z"
+}

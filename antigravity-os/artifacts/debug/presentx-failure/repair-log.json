@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-08-26T09:05:00Z",
+  "repairs": [
+    {
+      "file": "src/presentx/engine/PresentXExporter.ts",
+      "action": "ADD_BINARY_OPENXML_PPTX_EXPORTER",
+      "description": "Implemented exportToPptx returning a complete OpenXML ZIP buffer containing [Content_Types].xml, _rels, presentation.xml, slide masters, slide layouts, theme, slides, and speaker notes."
+    },
+    {
+      "file": "src/app/api/presentx/export/route.ts",
+      "action": "ROUTE_BINARY_RESPONSE",
+      "description": "Updated PPTX branch to await exportToPptx and return application/vnd.openxmlformats-officedocument.presentationml.presentation binary stream."
+    },
+    {
+      "file": "src/presentx/engine/PresentXOrchestrator.ts",
+      "action": "CLEAN_TITLE_EXTRACTION",
+      "description": "Refactored deriveTitle to parse natural language prompt preambles and extract clean, professional titles."
+    },
+    {
+      "file": "package.json",
+      "action": "ADD_DIAGNOSTIC_SCRIPTS",
+      "description": "Added npm run doctor:v7 and npm run diagnose:presentx commands."
+    }
+  ]
+}

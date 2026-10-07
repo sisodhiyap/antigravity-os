@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI transformation of creative agencies and executive leaders — PresentX Studio</title>
+  <style>
+    :root {
+      --primary: #D4AF37;
+      --secondary: #F0C75E;
+      --accent: #FFD978;
+      --bg: #080808;
+      --surface: #121215;
+      --text: #F5F5F5;
+      --text-sec: #A3A3A3;
+      --font-heading: Inter, Satoshi, sans-serif;
+      --font-body: Inter, sans-serif;
+      --radius: 0.875rem;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .deck-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+    }
+    .slide-card {
+      display: none;
+      width: 100%;
+      max-width: 1200px;
+      aspect-ratio: 16 / 9;
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .slide-card.active { display: flex; animation: fadeIn 0.3s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+    .badge-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+    .badge { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-family: monospace; font-weight: 700; }
+    .truth-badge { font-size: 0.7rem; font-family: monospace; font-weight: 700; padding: 0.25rem 0.6rem; border-radius: 9999px; border: 1px solid currentColor; }
+    .truth-verified { color: #10b981; background: rgba(16, 185, 129, 0.1); }
+    .truth-illustrative { color: #3b82f6; background: rgba(59, 130, 246, 0.1); }
+    .truth-unverified { color: #f59e0b; background: rgba(245, 158, 11, 0.1); }
+    .truth-contradicted { color: #ef4444; background: rgba(239, 68, 68, 0.1); }
+    .headline { font-family: var(--font-heading); font-size: 2.25rem; font-weight: 700; line-height: 1.2; margin-bottom: 0.75rem; }
+    .subheadline { font-size: 1.15rem; color: var(--text-sec); margin-bottom: 1.5rem; line-height: 1.5; }
+    .body-text { font-size: 1rem; color: var(--text-sec); line-height: 1.6; margin-bottom: 1rem; }
+    .bullet-list { list-style: square; padding-left: 1.5rem; space-y: 0.5rem; color: var(--text); }
+    .bullet-list li { margin-bottom: 0.5rem; line-height: 1.5; }
+    .content-split { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center; }
+    .slide-img { width: 100%; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.1); }
+    .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+    .metric-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 1.25rem; border-radius: var(--radius); }
+    .metric-val { font-size: 2rem; font-weight: 700; color: var(--accent); font-family: var(--font-heading); }
+    .metric-lbl { font-size: 0.85rem; color: var(--text); font-weight: 600; margin-top: 0.25rem; }
+    .metric-meta { font-size: 0.65rem; color: var(--text-sec); font-family: monospace; margin-top: 0.25rem; text-transform: uppercase; }
+    .slide-footer { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-sec); font-family: monospace; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; }
+    .nav-bar { background: rgba(10, 15, 25, 0.8); backdrop-filter: blur(10px); border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .nav-btn { background: var(--surface); border: 1px solid rgba(255, 255, 255, 0.15); color: var(--text); padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer; font-family: monospace; font-size: 0.85rem; transition: all 0.15s; }
+    .nav-btn:hover { background: var(--accent); color: var(--bg); font-weight: bold; }
+    .nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+  <main class="deck-container">
+    
+        <section class="slide-card active" id="slide-0" data-index="0">
+          <div class="slide-inner">
+            
+          <div class="slide-hero">
+            <div class="badge-row">
+              <span class="badge">PITCH DECK</span>
+              <span class="truth-badge truth-verified">VERIFIED</span>
+            </div>
+            <h1 class="headline">AI transformation of creative agencies and executive leaders</h1>
+            <p class="subheadline">A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners</p>
+            <div class="meta-row">
+              <span>Presented by Antigravity OS V7</span>
+              <span>•</span>
+              <span>1 Slides</span>
+            </div>
+          </div>
+        
+          </div>
+          <div class="slide-footer">
+            <span class="footer-title">AI transformation of creative agencies and executive leaders</span>
+            <span class="footer-page">1 / 1</span>
+          </div>
+        </section>
+      
+  </main>
+  <footer class="nav-bar">
+    <div style="font-family: monospace; font-size: 0.8rem; color: var(--text-sec);">
+      <span>PRESENTX SOVEREIGN ENGINE</span> • <span id="progress-indicator">Slide 1 / 1</span>
+    </div>
+    <div style="display: flex; gap: 0.5rem;">
+      <button class="nav-btn" id="btn-prev" onclick="prevSlide()">PREV (←)</button>
+      <button class="nav-btn" id="btn-next" onclick="nextSlide()">NEXT (→)</button>
+      <button class="nav-btn" onclick="toggleFullscreen()">FULLSCREEN (F)</button>
+    </div>
+  </footer>
+  <script>
+    let currentIndex = 0;
+    const totalSlides = 1;
+    const slides = document.querySelectorAll('.slide-card');
+    const indicator = document.getElementById('progress-indicator');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+
+    function update() {
+      slides.forEach((s, i) => s.classList.toggle('active', i === currentIndex));
+      indicator.textContent = 'Slide ' + (currentIndex + 1) + ' / ' + totalSlides;
+      btnPrev.disabled = currentIndex === 0;
+      btnNext.disabled = currentIndex === totalSlides - 1;
+    }
+
+    function nextSlide() {
+      if (currentIndex < totalSlides - 1) { currentIndex++; update(); }
+    }
+
+    function prevSlide() {
+      if (currentIndex > 0) { currentIndex--; update(); }
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      } else {
+        document.exitFullscreen();
+      }
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'Space') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'f' || e.key === 'F') toggleFullscreen();
+    });
+
+    update();
+  </script>
+</body>
+</html>

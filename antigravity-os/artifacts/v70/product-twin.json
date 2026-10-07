@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "nodesCount": 2,
+  "edgesCount": 1,
+  "nodes": [
+    {
+      "id": "node_prod_v7",
+      "type": "PRODUCT",
+      "name": "Enterprise Studio Platform",
+      "provenance": "VERIFIED",
+      "confidence": 1,
+      "evidenceRefs": [
+        "spec.pdf"
+      ],
+      "attributes": {
+        "version": "7.0.0"
+      },
+      "version": 1,
+      "updatedAt": "2026-08-25T08:53:15.299Z"
+    },
+    {
+      "id": "node_scr_dash",
+      "type": "SCREEN",
+      "name": "Master Dashboard",
+      "provenance": "OBSERVED",
+      "confidence": 1,
+      "evidenceRefs": [
+        "dashboard.figma"
+      ],
+      "attributes": {
+        "bounds": {
+          "width": 1440,
+          "height": 900
+        }
+      },
+      "version": 1,
+      "updatedAt": "2026-08-25T08:53:15.299Z"
+    }
+  ],
+  "edges": [
+    {
+      "fromNodeId": "node_prod_v7",
+      "toNodeId": "node_scr_dash",
+      "relation": "CONTAINS",
+      "provenance": "OBSERVED"
+    }
+  ],
+  "timestamp": "2026-08-25T08:53:15.299Z"
+}

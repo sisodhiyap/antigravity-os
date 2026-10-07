@@ -1,0 +1,11 @@
+{
+  "viewportsTested": [
+    375,
+    768,
+    1024,
+    1440,
+    1920
+  ],
+  "wcagScore": 100,
+  "deadEndsDetected": 0
+}

@@ -1,0 +1,11 @@
+{
+  "id": "chk_1787643631613_cfa5266b",
+  "missionId": "msn_v53_verification_1787643630838",
+  "timestamp": "2026-08-25T07:40:31.613Z",
+  "gitSha": "HEAD",
+  "fileSnapshots": {
+    "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\autonomy\\rollback_test_target.txt": "ORIGINAL_STATE_CANARY_VALUE_2026"
+  },
+  "databaseStateSnapshot": "",
+  "description": "Pre-mutation canary snapshot"
+}

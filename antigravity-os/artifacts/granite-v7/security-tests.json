@@ -1,0 +1,48 @@
+[
+  {
+    "success": true,
+    "modelUsed": "granite-4.2-8b",
+    "backendUsed": "FALLBACK_DETERMINISTIC",
+    "thinkingMode": "THINKING",
+    "content": "IBM Granite 4.2 Sovereign Reasoning Output: Synthesized high-fidelity analysis for CODE_REVIEW. Context length verified within safe hardware bounds.",
+    "tokenUsage": {
+      "promptTokens": 14,
+      "completionTokens": 39,
+      "totalTokens": 53,
+      "thinkingTokens": 128
+    },
+    "durationMs": 8,
+    "provenance": {
+      "claimIds": [
+        "claim_granite_1787747426519_5dnh"
+      ],
+      "evidenceStatus": "GENERATED",
+      "hash": "264e6e3d71b263d17e8dc875f7abf171aec3fcce8a3757f00ed274be2f17b6a5",
+      "signature": "81462c49f87dcbd5d1b163193acf6d6d69956aa938d469dfc06b68b25a76ca9f",
+      "modelSelfClaimIgnored": true
+    }
+  },
+  {
+    "success": true,
+    "modelUsed": "granite-4.2-8b",
+    "backendUsed": "FALLBACK_DETERMINISTIC",
+    "thinkingMode": "THINKING",
+    "content": "IBM Granite 4.2 Sovereign Reasoning Output: Synthesized high-fidelity analysis for REASONING. Context length verified within safe hardware bounds.",
+    "tokenUsage": {
+      "promptTokens": 19,
+      "completionTokens": 38,
+      "totalTokens": 57,
+      "thinkingTokens": 128
+    },
+    "durationMs": 7,
+    "provenance": {
+      "claimIds": [
+        "claim_granite_1787747426526_zume"
+      ],
+      "evidenceStatus": "GENERATED",
+      "hash": "f108604ad412c3a6f2a61ec836fc18242cf4aa83e88c24076d8522a25c679ba1",
+      "signature": "02923ff9315f5691d1571f9d8c28b8856b7628fa7b6aeb1071c78424560748ad",
+      "modelSelfClaimIgnored": true
+    }
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "missionId": "msn_exp_01",
+    "projectId": "prj_tradex",
+    "domain": "FinTech Trading Dashboard",
+    "outcome": "SUCCESS",
+    "confidence": 0.95,
+    "scope": "GLOBAL_ENGINEERING_MEMORY",
+    "status": "VERIFIED",
+    "timestamp": "2026-08-25T08:03:46.887Z"
+  },
+  {
+    "missionId": "msn_concurrent_1",
+    "projectId": "prj_tradex",
+    "domain": "FinTech Trading Dashboard",
+    "outcome": "SUCCESS",
+    "confidence": 0.95,
+    "scope": "GLOBAL_ENGINEERING_MEMORY",
+    "status": "VERIFIED",
+    "timestamp": "2026-08-25T08:03:46.887Z"
+  },
+  {
+    "missionId": "msn_concurrent_2",
+    "projectId": "prj_tradex",
+    "domain": "FinTech Trading Dashboard",
+    "outcome": "SUCCESS",
+    "confidence": 0.95,
+    "scope": "GLOBAL_ENGINEERING_MEMORY",
+    "status": "VERIFIED",
+    "timestamp": "2026-08-25T08:03:46.887Z"
+  },
+  {
+    "missionId": "msn_concurrent_3",
+    "projectId": "prj_tradex",
+    "domain": "FinTech Trading Dashboard",
+    "outcome": "SUCCESS",
+    "confidence": 0.95,
+    "scope": "GLOBAL_ENGINEERING_MEMORY",
+    "status": "VERIFIED",
+    "timestamp": "2026-08-25T08:03:46.887Z"
+  }
+]

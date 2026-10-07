@@ -1,0 +1,44 @@
+[
+  {
+    "eventId": "ev_0_1787647690601",
+    "index": 0,
+    "timestamp": "2026-08-25T08:48:10.601Z",
+    "missionId": "v61_master",
+    "operation": "LIFECYCLE_INIT",
+    "command": "verify-v61-init",
+    "exitCode": 0,
+    "stdoutHash": "d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1",
+    "stderrHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "durationMs": 2,
+    "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "currentHash": "e8f17bca1a74ba4128965727b48f9fb7d76616ba47d175cc0f4bc13447804f39"
+  },
+  {
+    "eventId": "ev_1_1787647690601",
+    "index": 1,
+    "timestamp": "2026-08-25T08:48:10.601Z",
+    "missionId": "v61_master",
+    "operation": "LIFECYCLE_EXEC",
+    "command": "verify-v61-exec",
+    "exitCode": 0,
+    "stdoutHash": "d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1",
+    "stderrHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "durationMs": 5,
+    "previousHash": "e8f17bca1a74ba4128965727b48f9fb7d76616ba47d175cc0f4bc13447804f39",
+    "currentHash": "f554a8e50ff067887e3822509eee293f1b2a3ab4f3406f93c0b25e64c35d706e"
+  },
+  {
+    "eventId": "ev_2_1787647690601",
+    "index": 2,
+    "timestamp": "2026-08-25T08:48:10.601Z",
+    "missionId": "v61_master",
+    "operation": "LIFECYCLE_VALIDATION",
+    "command": "verify-v61",
+    "exitCode": 0,
+    "stdoutHash": "d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1",
+    "stderrHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "durationMs": 10,
+    "previousHash": "f554a8e50ff067887e3822509eee293f1b2a3ab4f3406f93c0b25e64c35d706e",
+    "currentHash": "dab9ebef9dabd27dd131e10fd27506d64fcd9fb4673bd01c281d362c14a73888"
+  }
+]

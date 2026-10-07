@@ -1,98 +1,168 @@
 "use client";
 
-import React from "react";
-import { useSystemStore } from "@/stores/useSystemStore";
-import { Card, CardHeader, CardTitle, CardContent } from "@/ui/Card";
-import { Badge } from "@/ui/Badge";
-import { ProgressBar } from "@/ui/ProgressBar";
-import { Users, Bot, Zap, Shield, PlayCircle, Layers, CheckCircle2, Flame } from "lucide-react";
-import { formatNumber } from "@/lib/utils";
+import React, { useState } from "react";
+import {
+  Users, Brain, Shield, Code2, Search,
+  Video, Briefcase, Palette, Rocket, Play, Pause, Square, RotateCcw,
+} from "lucide-react";
+import { AppShell } from "@/components/layout/AppShell";
+import { Card, StatusBadge } from "@/components/ui/DesignSystem";
+import { Button } from "@/components/ui/Button";
+import { clsx } from "clsx";
 
-export default function AgentsPage() {
-  const { telemetry } = useSystemStore();
+type AgentStatus = "idle" | "running" | "paused" | "complete" | "error";
+
+interface Agent {
+  id: string;
+  name: string;
+  role: string;
+  icon: React.ElementType;
+  status: AgentStatus;
+  model: string;
+  currentTask: string | null;
+  latency: string | null;
+}
+
+const AGENTS: Agent[] = [
+  { id: "pm",       name: "Product Manager",   role: "Strategy & Scope",   icon: Briefcase, status: "idle", model: "OpenRouter/GPT-4o",  currentTask: null, latency: null },
+  { id: "ux",       name: "UX Designer",        role: "Wireframes & Flow",  icon: Palette,   status: "idle", model: "Ollama/Qwen2.5",     currentTask: null, latency: null },
+  { id: "arch",     name: "Architect",           role: "System Design",      icon: Brain,     status: "idle", model: "AirLLM/Qwen3-32B",   currentTask: null, latency: null },
+  { id: "builder",  name: "Builder",             role: "Code Generation",    icon: Code2,     status: "idle", model: "Ollama/CodeLlama",   currentTask: null, latency: null },
+  { id: "qa",       name: "QA Engineer",         role: "Testing & Auditing", icon: Shield,    status: "idle", model: "Ollama/Qwen2.5",     currentTask: null, latency: null },
+  { id: "sec",      name: "Security Engineer",   role: "Vulnerability Scan", icon: Shield,    status: "idle", model: "AirLLM/Qwen3-32B",   currentTask: null, latency: null },
+  { id: "devops",   name: "DevOps Engineer",     role: "Deploy & Docker",    icon: Rocket,    status: "idle", model: "Ollama/Mistral",     currentTask: null, latency: null },
+  { id: "creative", name: "Creative Director",   role: "Visual Direction",   icon: Palette,   status: "idle", model: "OpenRouter/Claude",  currentTask: null, latency: null },
+  { id: "video",    name: "Video Producer",      role: "Scene Generation",   icon: Video,     status: "idle", model: "OpenRouter/GPT-4V",  currentTask: null, latency: null },
+  { id: "research", name: "Researcher",          role: "Context & Analysis", icon: Search,    status: "idle", model: "Ollama/Qwen2.5",     currentTask: null, latency: null },
+];
+
+const STATUS_MAP: Record<AgentStatus, { variant: any; label: string }> = {
+  idle:     { variant: "simulation", label: "IDLE"    },
+  running:  { variant: "info",       label: "RUNNING" },
+  paused:   { variant: "degraded",   label: "PAUSED"  },
+  complete: { variant: "online",     label: "DONE"    },
+  error:    { variant: "offline",    label: "ERROR"   },
+};
+
+export default function AgentCommandCenterPage() {
+  const [agents, setAgents] = useState<Agent[]>(AGENTS);
+
+  function setAgentStatus(id: string, status: AgentStatus) {
+    setAgents((prev) =>
+      prev.map((a) =>
+        a.id === id
+          ? {
+              ...a,
+              status,
+              currentTask: status === "running" ? "Processing assigned task..." : null,
+              latency: status === "running" ? `${Math.floor(Math.random() * 300 + 50)}ms` : null,
+            }
+          : a
+      )
+    );
+  }
 
   return (
-    <div className="space-y-6 font-mono">
-      {/* Header */}
-      <div className="glass-panel p-6 rounded-2xl border border-cyber-purple/30 shadow-glow-purple/20 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-        <div>
-          <h1 className="text-xl font-bold text-slate-100 flex items-center gap-2.5">
-            <Users className="w-5 h-5 text-cyber-purple" />
-            <span>AUTONOMOUS 10-ROLE SWARM AGENT HUB</span>
-          </h1>
-          <p className="text-xs text-slate-400 mt-1">
-            Strict separation of concerns, isolated read/write permission tiers, and automated multi-agent parallelization.
-          </p>
-        </div>
-
-        <div className="flex gap-2">
-          <Badge variant="purple" dot className="py-1 px-3 text-xs">
-            10 ROLES CONFIGURED
-          </Badge>
-          <Badge variant="neon" dot className="py-1 px-3 text-xs">
-            ZERO SECRET EXPOSURE
-          </Badge>
-        </div>
+    <AppShell>
+      <div className="space-y-1">
+        <h1 className="text-2xl font-bold text-[var(--ag-text)] font-satoshi">Agent Command Center</h1>
+        <p className="text-sm text-[var(--ag-text-sec)]">
+          Manage the 10-role autonomous engineering swarm
+        </p>
       </div>
 
-      {/* Agents Detailed Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {telemetry.agents.map((agent) => (
-          <Card key={agent.id} glow="purple" className="space-y-3">
-            <CardHeader className="pb-2">
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg bg-cyber-purple/15 border border-cyber-purple/30 flex items-center justify-center text-cyber-purple">
-                  <Bot className="w-4 h-4" />
-                </div>
-                <div>
-                  <CardTitle className="text-sm">{agent.role}</CardTitle>
-                  <span className="text-[10px] text-slate-500">ID: {agent.id}</span>
-                </div>
-              </div>
-              <Badge
-                variant={agent.status === "running" ? "neon" : agent.status === "evaluating" ? "purple" : "default"}
-                dot
-              >
-                {agent.status.toUpperCase()}
-              </Badge>
-            </CardHeader>
+      {/* Summary Bar */}
+      <div className="flex flex-wrap gap-3">
+        {(["idle", "running", "paused", "complete", "error"] as AgentStatus[]).map((s) => {
+          const count = agents.filter((a) => a.status === s).length;
+          if (!count) return null;
+          const sb = STATUS_MAP[s];
+          return (
+            <div key={s} className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[var(--ag-elevated)] border border-[var(--ag-border)]">
+              <StatusBadge variant={sb.variant} label={`${count} ${sb.label}`} />
+            </div>
+          );
+        })}
+      </div>
 
-            <CardContent className="space-y-3 pt-0">
-              <div className="bg-slate-950/70 p-3 rounded-lg border border-white/5 space-y-1.5 text-xs">
-                <div className="text-slate-400 text-[10px] uppercase">Current Active Mission:</div>
-                <div className="text-slate-200 font-semibold">{agent.currentTask}</div>
+      {/* Agent Grid */}
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+        role="list"
+        aria-label="Agent cards"
+      >
+        {agents.map((agent) => {
+          const Icon = agent.icon;
+          const sb = STATUS_MAP[agent.status];
+          return (
+            <Card
+              key={agent.id}
+              role="listitem"
+              className={clsx(
+                "p-4 space-y-3 transition-all duration-200",
+                agent.status === "running" && "border-[var(--ag-info)]/20 shadow-[0_0_20px_-8px_rgba(122,171,207,0.3)]"
+              )}
+            >
+              {/* Header */}
+              <div className="flex items-start justify-between gap-2">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-[var(--ag-elevated)] border border-[var(--ag-border)] flex items-center justify-center shrink-0">
+                    <Icon className="w-4 h-4 text-[var(--ag-text-sec)]" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <p className="text-[12px] font-semibold text-[var(--ag-text)] leading-tight">{agent.name}</p>
+                    <p className="text-[10px] text-[var(--ag-muted)]">{agent.role}</p>
+                  </div>
+                </div>
+                <StatusBadge variant={sb.variant} label={sb.label} pulse={agent.status === "running"} />
               </div>
 
-              <div className="grid grid-cols-3 gap-2 text-center text-xs">
-                <div className="bg-slate-900/60 p-2 rounded border border-white/5">
-                  <span className="text-[9px] text-slate-500 block">MODEL</span>
-                  <span className="text-cyber-cyan font-bold truncate block">{agent.activeModel}</span>
-                </div>
-                <div className="bg-slate-900/60 p-2 rounded border border-white/5">
-                  <span className="text-[9px] text-slate-500 block">TOKENS</span>
-                  <span className="text-cyber-neon font-bold">{formatNumber(agent.tokensConsumed)}</span>
-                </div>
-                <div className="bg-slate-900/60 p-2 rounded border border-white/5">
-                  <span className="text-[9px] text-slate-500 block">LAST SEEN</span>
-                  <span className="text-slate-300">{agent.lastActive}</span>
-                </div>
+              {/* Model */}
+              <div className="text-[10px] text-[var(--ag-muted)] truncate">
+                Model: <span className="text-[var(--ag-text-sec)]">{agent.model}</span>
               </div>
 
-              <div className="space-y-1">
-                <div className="flex justify-between text-[10px] text-slate-400">
-                  <span>PROGRESS</span>
-                  <span className="text-slate-200 font-bold">{agent.progressPercent}%</span>
-                </div>
-                <ProgressBar
-                  value={agent.progressPercent}
-                  color={agent.status === "running" ? "neon" : "purple"}
+              {/* Current Task */}
+              {agent.currentTask && (
+                <p className="text-[11px] text-[var(--ag-text-sec)] leading-relaxed">{agent.currentTask}</p>
+              )}
+              {agent.latency && (
+                <p className="text-[10px] text-[var(--ag-muted)]">Latency: {agent.latency}</p>
+              )}
+
+              {/* Controls */}
+              <div className="flex gap-1.5 pt-1">
+                <Button
                   size="sm"
+                  variant={agent.status === "running" ? "ghost" : "primary"}
+                  onClick={() => setAgentStatus(agent.id, agent.status === "running" ? "idle" : "running")}
+                  icon={agent.status === "running" ? <Square className="w-3 h-3" /> : <Play className="w-3 h-3" />}
+                  className="flex-1"
+                >
+                  {agent.status === "running" ? "Stop" : "Run"}
+                </Button>
+                {agent.status === "running" && (
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    onClick={() => setAgentStatus(agent.id, "paused")}
+                    icon={<Pause className="w-3 h-3" />}
+                  >
+                    Pause
+                  </Button>
+                )}
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  onClick={() => setAgentStatus(agent.id, "idle")}
+                  icon={<RotateCcw className="w-3 h-3" />}
+                  aria-label="Reset agent"
                 />
               </div>
-            </CardContent>
-          </Card>
-        ))}
+            </Card>
+          );
+        })}
       </div>
-    </div>
+    </AppShell>
   );
 }

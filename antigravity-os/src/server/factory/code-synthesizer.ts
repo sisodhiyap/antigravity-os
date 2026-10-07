@@ -301,7 +301,7 @@ export default function GeneratedWebsite() {
       {/* Footer */}
       <footer className="border-t border-white/5 py-12 px-6 text-center text-[10px] text-slate-500 font-mono tracking-wider">
         <p>© ${new Date().getFullYear()} ${blueprint.name.toUpperCase()} • ALL RIGHTS RESERVED</p>
-        <p className="mt-1 text-slate-600">CERTIFIED UNDER THE ANTIGRAVITY v5.1 PRODUCTION CONSTITUTION</p>
+        <p className="mt-1 text-slate-600">CERTIFIED UNDER THE ANTIGRAVITY v5.2 PRODUCTION CONSTITUTION</p>
       </footer>
     </div>
   );

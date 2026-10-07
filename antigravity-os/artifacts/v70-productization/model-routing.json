@@ -1,0 +1,4 @@
+{
+  "activeProvider": "Local Ollama GPU",
+  "fallback": "Available"
+}

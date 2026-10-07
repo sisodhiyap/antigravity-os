@@ -1,0 +1,107 @@
+[
+  {
+    "vector": 1,
+    "name": "FAKE_STATISTIC",
+    "passed": true
+  },
+  {
+    "vector": 2,
+    "name": "FAKE_SOURCE",
+    "passed": true
+  },
+  {
+    "vector": 3,
+    "name": "FAKE_URL",
+    "passed": true
+  },
+  {
+    "vector": 4,
+    "name": "DEAD_SOURCE",
+    "passed": true
+  },
+  {
+    "vector": 5,
+    "name": "WRONG_SOURCE",
+    "passed": true
+  },
+  {
+    "vector": 6,
+    "name": "PARTIAL_EVIDENCE_OVERREACH",
+    "passed": true
+  },
+  {
+    "vector": 7,
+    "name": "CITATION_LAUNDERING",
+    "passed": true
+  },
+  {
+    "vector": 8,
+    "name": "LLM_CONSENSUS_FALSE_CERTAINTY",
+    "passed": true
+  },
+  {
+    "vector": 9,
+    "name": "CONTRADICTORY_SOURCES",
+    "passed": true
+  },
+  {
+    "vector": 10,
+    "name": "STALE_SOURCE",
+    "passed": true
+  },
+  {
+    "vector": 11,
+    "name": "TAMPERED_SOURCE",
+    "passed": true
+  },
+  {
+    "vector": 12,
+    "name": "EDITED_VERIFIED_CLAIM_INVALIDATION",
+    "passed": true
+  },
+  {
+    "vector": 13,
+    "name": "COPIED_CLAIM_LINEAGE",
+    "passed": true
+  },
+  {
+    "vector": 14,
+    "name": "MODIFIED_CHART_WITHOUT_DATASET",
+    "passed": true
+  },
+  {
+    "vector": 15,
+    "name": "FAKE_DATASET",
+    "passed": true
+  },
+  {
+    "vector": 16,
+    "name": "GENERATED_VISUAL_TAGGING",
+    "passed": true
+  },
+  {
+    "vector": 17,
+    "name": "FICTIONAL_COMPANY_TAGGING",
+    "passed": true
+  },
+  {
+    "vector": 18,
+    "name": "HYPOTHETICAL_METRIC",
+    "passed": true
+  },
+  {
+    "vector": 19,
+    "name": "SPEAKER_NOTE_HALLUCINATION_NEUTRALIZED",
+    "passed": true
+  },
+  {
+    "vector": 20,
+    "name": "EXPORT_FIREWALL_MANIFEST_SEALED",
+    "passed": true
+  },
+  {
+    "vector": 21,
+    "name": "PPTX_ROUND_TRIP_INTEGRITY",
+    "passed": true
+  }
+]

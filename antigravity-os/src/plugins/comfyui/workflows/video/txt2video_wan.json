@@ -1,0 +1,39 @@
+{
+  "name": "Wan 2.1 Cinematic Text-to-Video",
+  "workflowId": "wf_txt2video_wan_cinematic",
+  "modality": "VIDEO",
+  "version": "1.0.0",
+  "nodes": {
+    "1": {
+      "inputs": {
+        "model_name": "wan2.1_t2v_1.3B_bf16.safetensors"
+      },
+      "class_type": "WanModelLoader"
+    },
+    "2": {
+      "inputs": {
+        "text": "{PROMPT}"
+      },
+      "class_type": "WanTextEncode"
+    },
+    "3": {
+      "inputs": {
+        "seed": "{SEED}",
+        "steps": 30,
+        "cfg": 6.0,
+        "length": "{FRAMES}",
+        "width": 832,
+        "height": 480
+      },
+      "class_type": "WanVideoSampler"
+    },
+    "4": {
+      "inputs": {
+        "filename_prefix": "Antigravity_Wan",
+        "fps": 24,
+        "format": "mp4"
+      },
+      "class_type": "SaveVideo"
+    }
+  }
+}

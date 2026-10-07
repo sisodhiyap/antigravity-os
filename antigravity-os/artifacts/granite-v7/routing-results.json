@@ -1,0 +1,80 @@
+[
+  {
+    "selectedModel": "granite-4.2-8b",
+    "backend": "FALLBACK_DETERMINISTIC",
+    "reasoningMode": "DEEP_REASONING",
+    "fallbackChain": [
+      {
+        "model": "granite-4.2-8b",
+        "backend": "FALLBACK_DETERMINISTIC",
+        "reason": "Primary local in-process fallback"
+      },
+      {
+        "model": "qwen2.5-coder:7b",
+        "backend": "OLLAMA_LOCAL",
+        "reason": "Secondary Ollama daemon fallback"
+      },
+      {
+        "model": "deterministic-ast-engine",
+        "backend": "FALLBACK_DETERMINISTIC",
+        "reason": "Final zero-dependency AST rule engine"
+      }
+    ],
+    "selectionReason": "Critical reasoning with memory-bounded 8B model (Deep Thinking active)",
+    "hardwareFitScore": 95,
+    "estimatedMemoryGb": 5.6,
+    "privacyEnforced": true
+  },
+  {
+    "selectedModel": "granite-4.2-3b",
+    "backend": "FALLBACK_DETERMINISTIC",
+    "reasoningMode": "FAST",
+    "fallbackChain": [
+      {
+        "model": "granite-4.2-8b",
+        "backend": "FALLBACK_DETERMINISTIC",
+        "reason": "Primary local in-process fallback"
+      },
+      {
+        "model": "qwen2.5-coder:7b",
+        "backend": "OLLAMA_LOCAL",
+        "reason": "Secondary Ollama daemon fallback"
+      },
+      {
+        "model": "deterministic-ast-engine",
+        "backend": "FALLBACK_DETERMINISTIC",
+        "reason": "Final zero-dependency AST rule engine"
+      }
+    ],
+    "selectionReason": "Low-latency real-time response requirement (< 50ms)",
+    "hardwareFitScore": 95,
+    "estimatedMemoryGb": 2.4,
+    "privacyEnforced": true
+  },
+  {
+    "selectedModel": "granite-4.2-3b",
+    "backend": "FALLBACK_DETERMINISTIC",
+    "reasoningMode": "LOW_EFFORT",
+    "fallbackChain": [
+      {
+        "model": "granite-4.2-8b",
+        "backend": "FALLBACK_DETERMINISTIC",
+        "reason": "Primary local in-process fallback"
+      },
+      {
+        "model": "qwen2.5-coder:7b",
+        "backend": "OLLAMA_LOCAL",
+        "reason": "Secondary Ollama daemon fallback"
+      },
+      {
+        "model": "deterministic-ast-engine",
+        "backend": "FALLBACK_DETERMINISTIC",
+        "reason": "Final zero-dependency AST rule engine"
+      }
+    ],
+    "selectionReason": "Adaptive memory constraint preservation (low RAM headroom)",
+    "hardwareFitScore": 80,
+    "estimatedMemoryGb": 2.4,
+    "privacyEnforced": true
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "candidateId": "CAND_C_ADVERSARIAL_CHALLENGE",
+  "injectedRegression": "DISABLED_HMAC_AUTHENTICATION_VERIFICATION",
+  "detectedByEvolutionEngine": true,
+  "rejectionReason": "Security score 45% < baseline 100% AND 2 critical regressions introduced",
+  "status": "HARD_REJECTED"
+}

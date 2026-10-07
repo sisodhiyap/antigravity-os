@@ -1,0 +1,14 @@
+{
+  "backupId": "bkp_v7_1787716778300_00a6e53b",
+  "createdAt": 1787716778300,
+  "configurationHash": "7cff2d9224ec1f14bc609f8fb41616caf5a4b0dfa8fb3e54c75ea31919c6b83d",
+  "databaseHash": "f4f7c15dbb0ba2de7e50e76bedb1cf944e2a18e1f927ecb2cea9ec92fa41f8f0",
+  "evidenceLedgerHash": "36fdf26bbd84b327e1952dcf97eb7e204a844285933295c7f75981a601ba313a",
+  "checksumMap": {
+    "config.json": "7cff2d9224ec1f14bc609f8fb41616caf5a4b0dfa8fb3e54c75ea31919c6b83d",
+    "database.sqlite": "f4f7c15dbb0ba2de7e50e76bedb1cf944e2a18e1f927ecb2cea9ec92fa41f8f0",
+    "evidence-ledger.jsonl": "36fdf26bbd84b327e1952dcf97eb7e204a844285933295c7f75981a601ba313a"
+  },
+  "totalBytes": 104,
+  "secretsContained": false
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "success": true,
+    "modelUsed": "granite-4.2-8b",
+    "backendUsed": "FALLBACK_DETERMINISTIC",
+    "thinkingMode": "THINKING",
+    "content": "IBM Granite 4.2 Sovereign Reasoning Output: Synthesized high-fidelity analysis for SELF_REPAIR_PLANNING. Context length verified within safe hardware bounds.",
+    "tokenUsage": {
+      "promptTokens": 11,
+      "completionTokens": 41,
+      "totalTokens": 52,
+      "thinkingTokens": 128
+    },
+    "durationMs": 7,
+    "provenance": {
+      "claimIds": [
+        "claim_granite_1787747426689_sk4m"
+      ],
+      "evidenceStatus": "GENERATED",
+      "hash": "25038a7e1f56cc229ea2b10d8d9aa5f720792d358e81ba8fe010dc01d2b811d8",
+      "signature": "a7aa1dc9d878c02d9c5a251f6f69e4fbbd799ef473899c4237362f6e11ad2eb8",
+      "modelSelfClaimIgnored": true
+    }
+  }
+]

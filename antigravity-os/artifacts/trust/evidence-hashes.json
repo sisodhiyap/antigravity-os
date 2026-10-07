@@ -1,0 +1,21 @@
+{
+  "claims.json": "86b9263cc9ee6a4b5ff8e665cd0be5b7c7c8371cd3dfd8a23c1088f377a185ab",
+  "sources.json": "625fc0fc89c2244cb5f233a8452e262452bfc395e9c2c134ec52622a50df3591",
+  "evidence.json": "6efd777b24ce2f64d76ade83ff9dae28c0a5bb6d7648f93e7039c19b19ba8e32",
+  "evidence-graph.json": "628148b75bedaaefaa0ac385a755f518ed0e06036ba3ba98289fa1047a3aae51",
+  "contradictions.json": "fc3abe1b736fd8dda975e28938392ab6bdb61c2d2b2665fd7d418ff0a1e1fef1",
+  "freshness.json": "5444f313fd3be9989e0cb6be527789ba5be4780b4fd76d7a3174587abfc9a713",
+  "capabilities.json": "4eb0be25b463ef6343b6c692e2fa1021091316b7a04397345d3e181447513096",
+  "security.json": "52baa2a4b1aae6310ac00479115bc14055499240e94d62d2ab8695c6a894265a",
+  "injection-results.json": "4eaf4b8bc2ac1dfb8d67624927cb3bc454f8a6d1fe038c4602d4d0adc760ecb0",
+  "secret-scan.json": "3abed90bea3a5468c5bb73f198b976c529218f6b2244e1e984c69bc90ffa4758",
+  "pii-results.json": "f3c724e9f8fec3a9bf931c7f04ad540da97526caff2a408bb2e0da014da71bbc",
+  "policy-results.json": "7b7153036e9af77740406bff9e9e893a39860b4d22f2eff25e6ba3178e0ee744",
+  "dependency-results.json": "79c791c53d4520b6ddceca68aee449193a5aa320ace0db683fa4b5f49d3972b0",
+  "runtime-integrity.json": "14b9078d1ce1214fc78e600966dcad4d1f19d2b830145901540af495ef67cde7",
+  "incidents.json": "db0d14661771cf481748c24d7a255a2c1702ec37d0ac69f0c3610917f985a058",
+  "memory-integrity.json": "710b7ed0911d34daa85a71eb76a52b630df958b86b79345559f513012857539f",
+  "adversarial-results.json": "c408069d33ff4ee10455d04dfddaf63a91fa7115fb0f9000417993de3074bb2c",
+  "audit-log.jsonl": "31bc1220b4c9ded702e411bd4de64976b4166c3d50d726e0da97f9a7469cb518",
+  "evidence-ledger.jsonl": "afb4582e8e4b4d424f34967a4f6752604dabb3df685f4fd8fd1fcfce952ee936"
+}

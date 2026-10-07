@@ -60,14 +60,17 @@ async function runFallbackScenarios() {
   // (For LOCAL_LARGE, fallback chain is OpenRouter -> Ollama)
   // -------------------------------------------------------------
   const t3Classification = classifyTask('Architect a 32B model layered memory streaming pipeline');
-  const t3Decision = selectIntelligentModel({ classification: t3Classification });
+  const t3Decision = selectIntelligentModel({
+    classification: t3Classification,
+    overrideRamAvailableGb: 8.0
+  });
   const t3FirstFallback = t3Decision.fallbackChain[0];
   scenarios.push({
     testId: 'TEST_3',
     name: 'AirLLM Unavailable Fallback',
     condition: 'Primary AirLLM offline or busy; router falls back to high-capacity cloud',
     expectedSelected: 'openrouter',
-    expectedFallbackChain: ['qwen2.5-coder:14b'],
+    expectedFallbackChain: ['nvidia/nemotron-3.5-lightning:free'],
     actualSelected: t3FirstFallback.includes('openrouter') || t3FirstFallback.includes('nvidia') ? 'openrouter' : 'unknown',
     actualFallbackChain: t3Decision.fallbackChain.slice(1),
     verdict: t3FirstFallback.includes('nvidia') || t3FirstFallback.includes('openrouter') ? 'PASS' : 'FAIL',

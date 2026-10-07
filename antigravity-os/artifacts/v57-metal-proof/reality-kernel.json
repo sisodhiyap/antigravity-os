@@ -1,0 +1,22 @@
+{
+  "verifiedClaims": [
+    {
+      "claimId": "CLM_METAL_01",
+      "statement": "Dynamic claim verification",
+      "subsystem": "GENERAL",
+      "status": "VERIFIED",
+      "evidenceId": "ev_1787646561236_wywo",
+      "verificationDetails": "Candidate B latency (0.60ms) < Candidate A (0.84ms) with 0 regressions"
+    }
+  ],
+  "rejectedClaims": [
+    {
+      "claimId": "CLM_METAL_FAKE",
+      "statement": "Dynamic claim verification",
+      "subsystem": "GENERAL",
+      "status": "FAILED",
+      "evidenceId": "ev_1787646561236_pbbn",
+      "verificationDetails": "Probe failed: Candidate C security score is 45%"
+    }
+  ]
+}

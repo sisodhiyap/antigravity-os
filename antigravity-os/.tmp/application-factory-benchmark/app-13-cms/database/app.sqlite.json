@@ -1,0 +1,87 @@
+{
+  "articles": [
+    {
+      "id": "id_bzmvdz7",
+      "created_at": "2026-08-25T07:14:34.109Z",
+      "updated_at": "2026-08-25T07:14:34.109Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_qslngqz",
+      "created_at": "2026-08-25T07:14:34.290Z",
+      "updated_at": "2026-08-25T07:14:34.290Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    },
+    {
+      "id": "id_w4b0ra7",
+      "created_at": "2026-08-25T07:16:10.288Z",
+      "updated_at": "2026-08-25T07:16:10.288Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_h1dxawj",
+      "created_at": "2026-08-25T07:16:10.315Z",
+      "updated_at": "2026-08-25T07:16:10.315Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    }
+  ],
+  "pages": [
+    {
+      "id": "id_dl7wmqw",
+      "created_at": "2026-08-25T07:14:34.282Z",
+      "updated_at": "2026-08-25T07:14:34.282Z",
+      "title": "Initial Page Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Page"
+    }
+  ],
+  "drafts": [
+    {
+      "id": "id_d67hl25",
+      "created_at": "2026-08-25T07:14:34.283Z",
+      "updated_at": "2026-08-25T07:14:34.283Z",
+      "title": "Initial Draft Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Draft"
+    }
+  ],
+  "categorys": [
+    {
+      "id": "id_s5mhu37",
+      "created_at": "2026-08-25T07:14:34.284Z",
+      "updated_at": "2026-08-25T07:14:34.284Z",
+      "title": "Initial Category Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Category"
+    }
+  ],
+  "mediaassets": [
+    {
+      "id": "id_xjrdppe",
+      "created_at": "2026-08-25T07:14:34.284Z",
+      "updated_at": "2026-08-25T07:14:34.284Z",
+      "title": "Initial MediaAsset Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for MediaAsset"
+    }
+  ],
+  "editorialusers": [
+    {
+      "id": "id_7mp1jkj",
+      "created_at": "2026-08-25T07:14:34.285Z",
+      "updated_at": "2026-08-25T07:14:34.285Z",
+      "title": "Initial EditorialUser Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for EditorialUser"
+    }
+  ]
+}

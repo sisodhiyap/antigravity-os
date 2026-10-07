@@ -1,0 +1,230 @@
+{
+  "timestamp": "2026-08-25T07:16:18.607Z",
+  "audits": [
+    {
+      "id": "TEST_01",
+      "name": "SaaS Analytics Dashboard",
+      "security": {
+        "hardcodedSecrets": 0,
+        "apiKeysExposed": 0,
+        "sqlInjectionVulnerable": false,
+        "commandInjectionVulnerable": false,
+        "xssVulnerable": false,
+        "csrfProtected": true,
+        "pathTraversalProtected": true,
+        "idorProtected": true,
+        "score": 10
+      }
+    },
+    {
+      "id": "TEST_02",
+      "name": "E-Commerce Platform",
+      "security": {
+        "hardcodedSecrets": 0,
+        "apiKeysExposed": 0,
+        "sqlInjectionVulnerable": false,
+        "commandInjectionVulnerable": false,
+        "xssVulnerable": false,
+        "csrfProtected": true,
+        "pathTraversalProtected": true,
+        "idorProtected": true,
+        "score": 10
+      }
+    },
+    {
+      "id": "TEST_03",
+      "name": "CRM Application",
+      "security": {
+        "hardcodedSecrets": 0,
+        "apiKeysExposed": 0,
+        "sqlInjectionVulnerable": false,
+        "commandInjectionVulnerable": false,
+        "xssVulnerable": false,
+        "csrfProtected": true,
+        "pathTraversalProtected": true,
+        "idorProtected": true,
+        "score": 10
+      }
+    },
+    {
+      "id": "TEST_04",
+      "name": "Project Management & Kanban",
+      "security": {
+        "hardcodedSecrets": 0,
+        "apiKeysExposed": 0,
+        "sqlInjectionVulnerable": false,
+        "commandInjectionVulnerable": false,
+        "xssVulnerable": false,
+        "csrfProtected": true,
+        "pathTraversalProtected": true,
+        "idorProtected": true,
+        "score": 10
+      }
+    },
+    {
+      "id": "TEST_05",
+      "name": "AI Chat Application",
+      "security": {
+        "hardcodedSecrets": 0,
+        "apiKeysExposed": 0,
+        "sqlInjectionVulnerable": false,
+        "commandInjectionVulnerable": false,
+        "xssVulnerable": false,
+        "csrfProtected": true,
+        "pathTraversalProtected": true,
+        "idorProtected": true,
+        "score": 10
+      }
+    },
+    {
+      "id": "TEST_06",
+      "name": "Production REST API",
+      "security": {
+        "hardcodedSecrets": 0,
+        "apiKeysExposed": 0,
+        "sqlInjectionVulnerable": false,
+        "commandInjectionVulnerable": false,
+        "xssVulnerable": false,
+        "csrfProtected": true,
+        "pathTraversalProtected": true,
+        "idorProtected": true,
+        "score": 10
+      }
+    },
+    {
+      "id": "TEST_07",
+      "name": "Analytics Platform",
+      "security": {
+        "hardcodedSecrets": 0,
+        "apiKeysExposed": 0,
+        "sqlInjectionVulnerable": false,
+        "commandInjectionVulnerable": false,
+        "xssVulnerable": false,
+        "csrfProtected": true,
+        "pathTraversalProtected": true,
+        "idorProtected": true,
+        "score": 10
+      }
+    },
+    {
+      "id": "TEST_08",
+      "name": "Secure Document Manager",
+      "security": {
+        "hardcodedSecrets": 0,
+        "apiKeysExposed": 0,
+        "sqlInjectionVulnerable": false,
+        "commandInjectionVulnerable": false,
+        "xssVulnerable": false,
+        "csrfProtected": true,
+        "pathTraversalProtected": true,
+        "idorProtected": true,
+        "score": 10
+      }
+    },
+    {
+      "id": "TEST_09",
+      "name": "Real-Time Collaborative Board",
+      "security": {
+        "hardcodedSecrets": 0,
+        "apiKeysExposed": 0,
+        "sqlInjectionVulnerable": false,
+        "commandInjectionVulnerable": false,
+        "xssVulnerable": false,
+        "csrfProtected": true,
+        "pathTraversalProtected": true,
+        "idorProtected": true,
+        "score": 10
+      }
+    },
+    {
+      "id": "TEST_10",
+      "name": "External API Integration Gateway",
+      "security": {
+        "hardcodedSecrets": 0,
+        "apiKeysExposed": 0,
+        "sqlInjectionVulnerable": false,
+        "commandInjectionVulnerable": false,
+        "xssVulnerable": false,
+        "csrfProtected": true,
+        "pathTraversalProtected": true,
+        "idorProtected": true,
+        "score": 10
+      }
+    },
+    {
+      "id": "TEST_11",
+      "name": "Progressive Web Application (PWA)",
+      "security": {
+        "hardcodedSecrets": 0,
+        "apiKeysExposed": 0,
+        "sqlInjectionVulnerable": false,
+        "commandInjectionVulnerable": false,
+        "xssVulnerable": false,
+        "csrfProtected": true,
+        "pathTraversalProtected": true,
+        "idorProtected": true,
+        "score": 10
+      }
+    },
+    {
+      "id": "TEST_12",
+      "name": "Multi-Tenant SaaS with Strict Isolation",
+      "security": {
+        "hardcodedSecrets": 0,
+        "apiKeysExposed": 0,
+        "sqlInjectionVulnerable": false,
+        "commandInjectionVulnerable": false,
+        "xssVulnerable": false,
+        "csrfProtected": true,
+        "pathTraversalProtected": true,
+        "idorProtected": true,
+        "score": 10
+      }
+    },
+    {
+      "id": "TEST_13",
+      "name": "Content Management System (CMS)",
+      "security": {
+        "hardcodedSecrets": 0,
+        "apiKeysExposed": 0,
+        "sqlInjectionVulnerable": false,
+        "commandInjectionVulnerable": false,
+        "xssVulnerable": false,
+        "csrfProtected": true,
+        "pathTraversalProtected": true,
+        "idorProtected": true,
+        "score": 10
+      }
+    },
+    {
+      "id": "TEST_14",
+      "name": "Cinematic Portfolio Generator",
+      "security": {
+        "hardcodedSecrets": 0,
+        "apiKeysExposed": 0,
+        "sqlInjectionVulnerable": false,
+        "commandInjectionVulnerable": false,
+        "xssVulnerable": false,
+        "csrfProtected": true,
+        "pathTraversalProtected": true,
+        "idorProtected": true,
+        "score": 10
+      }
+    },
+    {
+      "id": "TEST_15",
+      "name": "Music School Academy Management (Unknown Domain)",
+      "security": {
+        "hardcodedSecrets": 0,
+        "apiKeysExposed": 0,
+        "sqlInjectionVulnerable": false,
+        "commandInjectionVulnerable": false,
+        "xssVulnerable": false,
+        "csrfProtected": true,
+        "pathTraversalProtected": true,
+        "idorProtected": true,
+        "score": 10
+      }
+    }
+  ]
+}

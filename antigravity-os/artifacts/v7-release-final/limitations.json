@@ -1,0 +1,10 @@
+[
+  {
+    "limitation": "Local diffusion generation speed is bound by local GPU VRAM size",
+    "mitigation": "Automatic VRAM governor and FP8 precision fallback"
+  },
+  {
+    "limitation": "Air-gapped mode cannot fetch new cloud models without operator approval",
+    "mitigation": "Local Ollama and ComfyUI models operate 100% offline"
+  }
+]

@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: ["class"],
+  darkMode: ["class", '[data-theme="dark"]'],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,79 +10,116 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+        // ── Mission Control Foundations ───────────────────────────
+        mc: {
+          bg:          "#080808",
+          bgDeep:      "#0D0D0F",
+          surface:     "#121212",
+          surfaceElev: "#181818",
+          card:        "#151518",
+          border:      "#222225",
+          borderSubtle:"rgba(255, 255, 255, 0.07)",
+          // Gold
+          gold:        "#D4AF37",
+          goldBright:  "#F0C75E",
+          goldGlow:    "#FFD978",
+          goldSoft:    "rgba(212, 175, 55, 0.14)",
+          goldBorder:  "rgba(212, 175, 55, 0.35)",
+          // Text
+          text:        "#F5F5F5",
+          textSec:     "#B8B8B8",
+          muted:       "#777777",
+          // Status
+          success:     "#39D98A",
+          warning:     "#F5B942",
+          danger:      "#FF5C5C",
+          info:        "#63B3FF",
         },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+        // Legacy AG Tokens (backward compat)
+        ag: {
+          bg:       "#080808",
+          bgDeep:   "#0D0D0F",
+          surface:  "#121212",
+          elevated: "#181818",
+          border:   "#222225",
+          gold:     "#D4AF37",
+          goldBright:"#F0C75E",
+          goldSoft: "#9F8420",
+          text:     "#F5F5F5",
+          textSec:  "#B8B8B8",
+          muted:    "#777777",
+          success:  "#39D98A",
+          warning:  "#F5B942",
+          error:    "#FF5C5C",
+          info:     "#63B3FF",
         },
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+        // Light mode surfaces (data-theme="light")
+        mcLight: {
+          bg:       "#F4F3EF",
+          surface:  "#FFFFFF",
+          surfaceSec:"#ECEAE4",
+          border:   "rgba(0, 0, 0, 0.10)",
+          text:     "#171717",
+          textSec:  "#555555",
+          muted:    "#666666",
+          gold:     "#B18A24",
         },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        // Futuristic Cyber Accents
-        cyber: {
-          cyan: "#00f0ff",
-          neon: "#39ff14",
-          purple: "#9d4edd",
-          pink: "#ff007f",
-          amber: "#ffb703",
-          blue: "#3b82f6",
-          dark: "#050811",
-          card: "rgba(10, 15, 30, 0.75)",
-          border: "rgba(0, 240, 255, 0.15)",
-        }
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      boxShadow: {
-        'glow-cyan': '0 0 20px -5px rgba(0, 240, 255, 0.3)',
-        'glow-purple': '0 0 20px -5px rgba(157, 78, 221, 0.3)',
-        'glow-neon': '0 0 20px -5px rgba(57, 255, 20, 0.3)',
-        'glow-pink': '0 0 20px -5px rgba(255, 0, 127, 0.3)',
-        'glow-amber': '0 0 20px -5px rgba(255, 183, 3, 0.3)',
       },
       fontFamily: {
-        mono: ['JetBrains Mono', 'Fira Code', 'Courier New', 'monospace'],
+        satoshi: ["Satoshi", "Inter", "sans-serif"],
+        geist:   ["Geist", "Inter", "sans-serif"],
+        inter:   ["Inter", "sans-serif"],
+        mono:    ["JetBrains Mono", "Fira Code", "monospace"],
+      },
+      borderRadius: {
+        lg: "var(--radius, 0.75rem)",
+        md: "calc(var(--radius, 0.75rem) - 2px)",
+        sm: "calc(var(--radius, 0.75rem) - 4px)",
+      },
+      boxShadow: {
+        "mission-hover": "0 0 0 1px rgba(212,175,55,0.35), 0 0 24px -4px rgba(212,175,55,0.15), 0 12px 40px rgba(0,0,0,0.35)",
+        "mission-selected": "-4px 0 18px rgba(212,175,55,0.25), 0 0 0 1px rgba(212,175,55,0.4)",
+        "gold-sm":  "0 0 12px -4px rgba(212,175,55,0.35)",
+        "gold-md":  "0 0 24px -6px rgba(212,175,55,0.4)",
+        "gold-lg":  "0 0 40px -8px rgba(212,175,55,0.45)",
       },
       animation: {
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'scanline': 'scanline 8s linear infinite',
+        "pulse-gold":    "pulse-gold 2.5s ease-in-out infinite",
+        "fade-in":       "fade-in 0.25s ease-out",
+        "slide-up":      "slide-up 0.3s cubic-bezier(0.16,1,0.3,1)",
+        "slide-in-left": "slide-in-left 0.25s cubic-bezier(0.16,1,0.3,1)",
+        "status-pulse":  "status-pulse 2s ease-in-out infinite",
+        "flow-pulse":    "flow-pulse 2s ease-in-out infinite",
       },
       keyframes: {
-        scanline: {
-          '0%': { transform: 'translateY(-100%)' },
-          '100%': { transform: 'translateY(1000%)' },
-        }
-      }
+        "pulse-gold": {
+          "0%, 100%": { boxShadow: "0 0 8px rgba(212,175,55,0.3)" },
+          "50%":       { boxShadow: "0 0 20px rgba(212,175,55,0.6)" },
+        },
+        "fade-in": {
+          from: { opacity: "0" },
+          to:   { opacity: "1" },
+        },
+        "slide-up": {
+          from: { opacity: "0", transform: "translateY(8px)" },
+          to:   { opacity: "1", transform: "translateY(0)" },
+        },
+        "slide-in-left": {
+          from: { opacity: "0", transform: "translateX(-8px)" },
+          to:   { opacity: "1", transform: "translateX(0)" },
+        },
+        "status-pulse": {
+          "0%, 100%": { opacity: "1", transform: "scale(1)" },
+          "50%":       { opacity: "0.5", transform: "scale(0.85)" },
+        },
+        "flow-pulse": {
+          "0%":   { strokeDashoffset: "24" },
+          "100%": { strokeDashoffset: "0" },
+        },
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

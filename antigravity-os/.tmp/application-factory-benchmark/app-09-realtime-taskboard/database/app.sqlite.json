@@ -1,0 +1,76 @@
+{
+  "boards": [
+    {
+      "id": "id_iix7v76",
+      "created_at": "2026-08-25T07:14:17.408Z",
+      "updated_at": "2026-08-25T07:14:17.408Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_5zmmtlu",
+      "created_at": "2026-08-25T07:14:17.443Z",
+      "updated_at": "2026-08-25T07:14:17.443Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    },
+    {
+      "id": "id_yl65dn5",
+      "created_at": "2026-08-25T07:15:53.640Z",
+      "updated_at": "2026-08-25T07:15:53.640Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_o3qhabh",
+      "created_at": "2026-08-25T07:15:53.669Z",
+      "updated_at": "2026-08-25T07:15:53.669Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    }
+  ],
+  "cards": [
+    {
+      "id": "id_ku9nm9y",
+      "created_at": "2026-08-25T07:14:17.438Z",
+      "updated_at": "2026-08-25T07:14:17.438Z",
+      "title": "Initial Card Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Card"
+    }
+  ],
+  "columns": [
+    {
+      "id": "id_avxws1b",
+      "created_at": "2026-08-25T07:14:17.439Z",
+      "updated_at": "2026-08-25T07:14:17.439Z",
+      "title": "Initial Column Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Column"
+    }
+  ],
+  "usersessions": [
+    {
+      "id": "id_zpqqu2w",
+      "created_at": "2026-08-25T07:14:17.440Z",
+      "updated_at": "2026-08-25T07:14:17.440Z",
+      "title": "Initial UserSession Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for UserSession"
+    }
+  ],
+  "eventstreams": [
+    {
+      "id": "id_zyqim5a",
+      "created_at": "2026-08-25T07:14:17.440Z",
+      "updated_at": "2026-08-25T07:14:17.440Z",
+      "title": "Initial EventStream Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for EventStream"
+    }
+  ]
+}

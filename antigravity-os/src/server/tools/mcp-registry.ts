@@ -9,7 +9,7 @@ export type MCPStatus =
 
 export interface MCPServerInfo {
   name: string;
-  category: "DESIGN" | "3D" | "BROWSER_QA" | "DATABASE" | "CODE" | "MEMORY" | "DATA";
+  category: "DESIGN" | "3D" | "BROWSER_QA" | "DATABASE" | "CODE" | "MEMORY" | "DATA" | "MEDIA" | "VIDEO";
   transport: "STDIO" | "SSE" | "EMBEDDED";
   toolsCount: number;
   resourcesCount: number;
@@ -231,6 +231,136 @@ export class MCPGovernanceRegistry {
       requiresAuth: false,
       isAuthSupplied: true,
       capabilities: ["linear_create_issue", "linear_list_issues"],
+    });
+
+    // 16. Suno AI Music MCP (AceDataCloud/SunoMCP)
+    this.servers.set("SunoMCP", {
+      name: "SunoMCP",
+      category: "MEDIA",
+      transport: "STDIO",
+      toolsCount: 5,
+      resourcesCount: 0,
+      status: "HEALTHY",
+      requiresAuth: false,
+      isAuthSupplied: true,
+      capabilities: ["generate_music", "get_music_details", "generate_lyrics", "extend_audio"],
+    });
+
+    // 17. MCP Video Generator (kevinten-ai/mcp-video-gen)
+    this.servers.set("mcp-video-gen", {
+      name: "mcp-video-gen",
+      category: "VIDEO",
+      transport: "STDIO",
+      toolsCount: 4,
+      resourcesCount: 0,
+      status: "HEALTHY",
+      requiresAuth: false,
+      isAuthSupplied: true,
+      capabilities: ["generate_video_from_text", "generate_video_from_image", "query_video_status"],
+    });
+
+    // 18. Automated Video Generator (itsPremkumar/Automated-Video-Generator)
+    this.servers.set("automated-video-generator", {
+      name: "automated-video-generator",
+      category: "VIDEO",
+      transport: "STDIO",
+      toolsCount: 6,
+      resourcesCount: 0,
+      status: "HEALTHY",
+      requiresAuth: false,
+      isAuthSupplied: true,
+      capabilities: ["generate_subtitles", "synthesize_narration", "compile_video_clip", "render_short_video"],
+    });
+
+    // 19. Free Video Maker (bilalnaseer/free-video-maker)
+    this.servers.set("free-video-maker", {
+      name: "free-video-maker",
+      category: "VIDEO",
+      transport: "STDIO",
+      toolsCount: 4,
+      resourcesCount: 0,
+      status: "HEALTHY",
+      requiresAuth: false,
+      isAuthSupplied: true,
+      capabilities: ["create_video_timeline", "render_remotion_video", "export_mp4_video"],
+    });
+
+    // 20. Fooocus Offline SDXL (lllyasviel/Fooocus)
+    this.servers.set("fooocus", {
+      name: "fooocus",
+      category: "DESIGN",
+      transport: "STDIO",
+      toolsCount: 5,
+      resourcesCount: 0,
+      status: "HEALTHY",
+      requiresAuth: false,
+      isAuthSupplied: true,
+      capabilities: ["generate_fooocus_image", "inpaint_fooocus", "upscale_fooocus", "describe_image"],
+    });
+
+    // 21. ComfyUI Modular Media Fabric (ComfyUI)
+    this.servers.set("comfyui", {
+      name: "comfyui",
+      category: "MEDIA",
+      transport: "STDIO",
+      toolsCount: 8,
+      resourcesCount: 0,
+      status: "HEALTHY",
+      requiresAuth: false,
+      isAuthSupplied: true,
+      capabilities: ["execute_comfyui_graph", "queue_prompt", "get_history", "load_custom_nodes"],
+    });
+
+    // 22. Open WebUI (open-webui/open-webui)
+    this.servers.set("open-webui", {
+      name: "open-webui",
+      category: "DATA",
+      transport: "STDIO",
+      toolsCount: 6,
+      resourcesCount: 0,
+      status: "HEALTHY",
+      requiresAuth: false,
+      isAuthSupplied: true,
+      capabilities: ["chat_completions", "rag_knowledge_search", "ollama_model_bridge", "web_search_rag"],
+    });
+
+    // 23. Flowise Visual AI Agent Builder (FlowiseAI/Flowise)
+    this.servers.set("flowise", {
+      name: "flowise",
+      category: "CODE",
+      transport: "STDIO",
+      toolsCount: 5,
+      resourcesCount: 0,
+      status: "HEALTHY",
+      requiresAuth: false,
+      isAuthSupplied: true,
+      capabilities: ["execute_chatflow", "list_chatflows", "execute_agentflow", "custom_tools_bridge"],
+    });
+
+    // 24. Video2X Super-Resolution & Interpolator (k4yt3x/video2x)
+    this.servers.set("video2x", {
+      name: "video2x",
+      category: "VIDEO",
+      transport: "STDIO",
+      toolsCount: 5,
+      resourcesCount: 0,
+      status: "HEALTHY",
+      requiresAuth: false,
+      isAuthSupplied: true,
+      capabilities: ["upscale_video_2x", "upscale_video_4x", "interpolate_frames_rife", "real_esrgan_enhance"],
+    });
+
+    // 25. 4K Video Upscaler Pipeline (yuvraj108c/4k-video-upscaler-colab)
+    this.servers.set("4k-video-upscaler", {
+      name: "4k-video-upscaler",
+      category: "VIDEO",
+      transport: "STDIO",
+      toolsCount: 4,
+      resourcesCount: 0,
+      status: "HEALTHY",
+      requiresAuth: false,
+      isAuthSupplied: true,
+      capabilities: ["upscale_to_4k", "lanczos_unsharp_filter", "studio_h264_render", "faststart_optimization"],
     });
   }
 

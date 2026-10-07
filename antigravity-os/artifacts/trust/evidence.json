@@ -1,0 +1,14 @@
+[
+  {
+    "evidenceId": "ev_01",
+    "claimId": "claim_4c1572969c3050a4",
+    "sourceId": "src_file_c4d42ec21725",
+    "type": "FILE_HASH",
+    "level": "E3",
+    "content": "package.json verified",
+    "hash": "2330b1cdc465f26bd75a1921ba768d47b848bcfec1d5fb5501a06d83fcb797e4",
+    "timestamp": 1787716077987,
+    "verifiedBy": "TRUST_FABRIC",
+    "reproducible": true
+  }
+]

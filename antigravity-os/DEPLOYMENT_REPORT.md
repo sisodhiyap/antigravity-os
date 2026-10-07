@@ -1,8 +1,9 @@
-# Antigravity OS v5.1 — Verified Deployment Report
+# Antigravity OS — Verified Deployment Report
 
-Generated: 2026-08-25
-Commit: `91c448c`
-Branch: `main`
+> **Archive Status**: HISTORICAL — v5.1  
+> **Status**: Archived Testing Record  
+> **Commit**: `91c448c`  
+> **Branch**: `main`
 
 ---
 

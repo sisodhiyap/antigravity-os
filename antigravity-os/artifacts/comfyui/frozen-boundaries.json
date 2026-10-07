@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-08-25T15:22:00.000Z",
+  "status": "V7-FROZEN-PRODUCTION",
+  "rule": "ZERO_MUTATION_PERMITTED",
+  "immutableCorePaths": [
+    "src/io/",
+    "src/product-intelligence/",
+    "src/product-twin/",
+    "src/architecture/",
+    "src/factory/",
+    "src/reality/",
+    "src/evolution/",
+    "src/guardian/",
+    "src/kernel/",
+    "src/adversarial/",
+    "src/incidents/",
+    "src/learning/",
+    "src/experience/",
+    "src/requirements/",
+    "src/reverse-engineering/",
+    "src/server/",
+    "src/usability/",
+    "src/verification/",
+    "src/visual/",
+    "src/visual-regression/"
+  ],
+  "comfyUiExtensionPaths": [
+    "src/plugins/comfyui/",
+    "artifacts/comfyui/",
+    "scripts/verify-comfyui-fabric.ts",
+    "scripts/independent-comfyui-verifier.ts",
+    "docs/COMFYUI_*.md"
+  ]
+}

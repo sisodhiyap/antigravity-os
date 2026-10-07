@@ -1,0 +1,98 @@
+{
+  "projects": [
+    {
+      "id": "id_15q2mvb",
+      "created_at": "2026-08-25T07:13:56.615Z",
+      "updated_at": "2026-08-25T07:13:56.615Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_zg75s8u",
+      "created_at": "2026-08-25T07:13:56.640Z",
+      "updated_at": "2026-08-25T07:13:56.640Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    },
+    {
+      "id": "id_d07x7wj",
+      "created_at": "2026-08-25T07:15:32.867Z",
+      "updated_at": "2026-08-25T07:15:32.867Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_36r8b66",
+      "created_at": "2026-08-25T07:15:32.889Z",
+      "updated_at": "2026-08-25T07:15:32.889Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "id_fubyfhg",
+      "created_at": "2026-08-25T07:13:56.635Z",
+      "updated_at": "2026-08-25T07:13:56.635Z",
+      "title": "Initial Task Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Task"
+    }
+  ],
+  "statuscolumns": [
+    {
+      "id": "id_eh7b6og",
+      "created_at": "2026-08-25T07:13:56.635Z",
+      "updated_at": "2026-08-25T07:13:56.635Z",
+      "title": "Initial StatusColumn Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for StatusColumn"
+    }
+  ],
+  "prioritys": [
+    {
+      "id": "id_qq7z1d6",
+      "created_at": "2026-08-25T07:13:56.636Z",
+      "updated_at": "2026-08-25T07:13:56.636Z",
+      "title": "Initial Priority Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Priority"
+    }
+  ],
+  "assignees": [
+    {
+      "id": "id_64yf61m",
+      "created_at": "2026-08-25T07:13:56.636Z",
+      "updated_at": "2026-08-25T07:13:56.636Z",
+      "title": "Initial Assignee Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Assignee"
+    }
+  ],
+  "comments": [
+    {
+      "id": "id_e4ujsbt",
+      "created_at": "2026-08-25T07:13:56.637Z",
+      "updated_at": "2026-08-25T07:13:56.637Z",
+      "title": "Initial Comment Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Comment"
+    }
+  ],
+  "activityhistorys": [
+    {
+      "id": "id_8kihnj3",
+      "created_at": "2026-08-25T07:13:56.637Z",
+      "updated_at": "2026-08-25T07:13:56.637Z",
+      "title": "Initial ActivityHistory Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for ActivityHistory"
+    }
+  ]
+}

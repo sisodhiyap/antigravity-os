@@ -1,0 +1,58 @@
+[
+  {
+    "sourceId": "src_file_40816d14af46",
+    "location": "docs/TRUST_FABRIC_ARCHITECTURE.md",
+    "type": "LOCAL_FILE",
+    "publisher": "LOCAL_FILESYSTEM",
+    "timestamp": 1787716077978,
+    "retrievalTimestamp": 1787716077978,
+    "contentHash": "87082ff4a19cb8ed95941a36686461e9d6c35eb8590f18f150dd0cdcd129d250",
+    "origin": "LOCAL_STORAGE",
+    "integrity": "VERIFIED",
+    "freshness": "REAL_TIME",
+    "trustLevel": 0.95,
+    "isDirectRuntime": false
+  },
+  {
+    "sourceId": "src_file_c4d42ec21725",
+    "location": "C:\\D drive\\Antigravity\\antigravity-os\\package.json",
+    "type": "LOCAL_FILE",
+    "publisher": "LOCAL_FILESYSTEM",
+    "timestamp": 1787716077981,
+    "retrievalTimestamp": 1787716077981,
+    "contentHash": "2330b1cdc465f26bd75a1921ba768d47b848bcfec1d5fb5501a06d83fcb797e4",
+    "origin": "LOCAL_STORAGE",
+    "integrity": "VERIFIED",
+    "freshness": "REAL_TIME",
+    "trustLevel": 0.95,
+    "isDirectRuntime": false
+  },
+  {
+    "sourceId": "src_runtime_a44e4a17c391",
+    "location": "RUNTIME://process-check",
+    "type": "LOCAL_RUNTIME",
+    "publisher": "ANTIGRAVITY_OS_SUPERVISOR",
+    "timestamp": 1787716077982,
+    "retrievalTimestamp": 1787716077982,
+    "contentHash": "c4da50c6d462cb7570f8f81f2de1153a66f030224ffd3633b25b98e408f6cb02",
+    "origin": "LIVE_PROCESS",
+    "integrity": "VERIFIED",
+    "freshness": "REAL_TIME",
+    "trustLevel": 0.98,
+    "isDirectRuntime": true
+  },
+  {
+    "sourceId": "src_model_f6ff67edede9",
+    "location": "MODEL://claude?prompt=prompt_h",
+    "type": "MODEL_OUTPUT",
+    "publisher": "AI_MODEL_claude",
+    "timestamp": 1787716077985,
+    "retrievalTimestamp": 1787716077985,
+    "contentHash": "c2dcd15e6dd31d3a6cc5060880cdad2b89c2cca60956eead59fb92731992efa2",
+    "origin": "GENERATIVE_INFERENCE",
+    "integrity": "VERIFIED",
+    "freshness": "REAL_TIME",
+    "trustLevel": 0.2,
+    "isDirectRuntime": false
+  }
+]

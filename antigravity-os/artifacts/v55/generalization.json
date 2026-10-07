@@ -1,0 +1,40 @@
+{
+  "testedDomainsCount": 5,
+  "unseenDomainsCount": 3,
+  "crossDomainTransferSuccess": true,
+  "requirementMutationAdaptation": true,
+  "architectureMutationSuccess": true,
+  "generalizationScore": 1,
+  "domainBreakdown": [
+    {
+      "domain": "CRM",
+      "isUnseen": false,
+      "pass": true,
+      "timeMs": 16500
+    },
+    {
+      "domain": "Trading Assistant",
+      "isUnseen": false,
+      "pass": true,
+      "timeMs": 18000
+    },
+    {
+      "domain": "VFX Asset Manager",
+      "isUnseen": true,
+      "pass": true,
+      "timeMs": 19500
+    },
+    {
+      "domain": "Music Academy LMS",
+      "isUnseen": true,
+      "pass": true,
+      "timeMs": 17200
+    },
+    {
+      "domain": "Scientific Research Knowledge Graph",
+      "isUnseen": true,
+      "pass": true,
+      "timeMs": 20100
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "claimId": "claim_281edcb581c24495",
+    "text": "V7 release meets zero-compromise production standards",
+    "type": "FACTUAL",
+    "status": "UNKNOWN",
+    "evidenceLevel": "E0",
+    "confidence": 0,
+    "riskCategory": "GENERAL",
+    "createdAt": 1787716778300,
+    "updatedAt": 1787716778300,
+    "sourceIds": [],
+    "evidenceIds": [],
+    "modelIds": [],
+    "verificationMethods": [],
+    "contradictions": [],
+    "freshness": {
+      "freshnessClass": "STABLE",
+      "lastVerified": 1787716778300,
+      "expirationPolicy": "STANDARD_30_DAYS",
+      "isStale": false
+    },
+    "owner": "ANTIGRAVITY_OPERATOR",
+    "projectId": "AGY_V7_CORE",
+    "hash": "adc257c979cb1e241aea2b11ade8f2382a7853ab271193c296536ca2879ae93c",
+    "provenanceTrail": [
+      "Claim registered at 2026-08-26T03:59:38.300Z with status UNKNOWN"
+    ]
+  }
+]

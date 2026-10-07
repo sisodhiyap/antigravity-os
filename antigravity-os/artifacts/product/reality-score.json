@@ -1,0 +1,14 @@
+{
+  "functional": 20,
+  "security": 20,
+  "integration": 15,
+  "visual": 14.775,
+  "ux": 10,
+  "accessibility": 5,
+  "performance": 5,
+  "reliability": 5,
+  "evidence": 5,
+  "compositeScore": 99.78,
+  "criticalSafetyCapped": false,
+  "productionReadyVerdict": true
+}

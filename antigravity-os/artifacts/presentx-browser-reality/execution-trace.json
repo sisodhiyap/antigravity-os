@@ -1,0 +1,145 @@
+[
+  {
+    "timestamp": "2026-08-26T12:19:07.694Z",
+    "stageNumber": 1,
+    "stageName": "UNDERSTANDING",
+    "engine": "Hermes Autonomous Supervisor",
+    "model": "qwen2.5-coder:7b",
+    "status": "COMPLETED",
+    "elapsedMs": 67
+  },
+  {
+    "timestamp": "2026-08-26T12:19:07.694Z",
+    "stageNumber": 2,
+    "stageName": "PLANNING",
+    "engine": "Hermes Task Planner",
+    "model": "qwen2.5-coder:7b",
+    "status": "COMPLETED",
+    "elapsedMs": 113
+  },
+  {
+    "timestamp": "2026-08-26T12:19:07.694Z",
+    "stageNumber": 3,
+    "stageName": "RESEARCH",
+    "engine": "Trust Fabric Claim Registry",
+    "model": "V7 Trust Fabric",
+    "status": "COMPLETED",
+    "elapsedMs": 181,
+    "claimsProcessed": 12
+  },
+  {
+    "timestamp": "2026-08-26T12:19:07.694Z",
+    "stageNumber": 4,
+    "stageName": "FACT CHECK",
+    "engine": "Truth Firewall Gate",
+    "model": "PresentX Truth Auditor",
+    "status": "COMPLETED",
+    "elapsedMs": 235,
+    "claimsProcessed": 12
+  },
+  {
+    "timestamp": "2026-08-26T12:19:07.694Z",
+    "stageNumber": 5,
+    "stageName": "STORY",
+    "engine": "PresentX Creative Director",
+    "model": "Editorial Thesis Engine",
+    "status": "COMPLETED",
+    "elapsedMs": 307,
+    "claimsProcessed": 12
+  },
+  {
+    "timestamp": "2026-08-26T12:19:07.694Z",
+    "stageNumber": 6,
+    "stageName": "SLIDE ARCHITECTURE",
+    "engine": "PresentX Deck Director",
+    "model": "Pacing & Repetition Radar",
+    "status": "COMPLETED",
+    "elapsedMs": 371,
+    "claimsProcessed": 12
+  },
+  {
+    "timestamp": "2026-08-26T12:19:07.694Z",
+    "stageNumber": 7,
+    "stageName": "DESIGN",
+    "engine": "PresentX Design System",
+    "model": "V7 Token Matrix",
+    "status": "COMPLETED",
+    "elapsedMs": 445,
+    "claimsProcessed": 12
+  },
+  {
+    "timestamp": "2026-08-26T12:19:07.694Z",
+    "stageNumber": 8,
+    "stageName": "VISUALS",
+    "engine": "ComfyUI DirectML / Vector",
+    "model": "SVG Vector Engine (Fallback)",
+    "status": "FALLBACK",
+    "elapsedMs": 504,
+    "claimsProcessed": 12
+  },
+  {
+    "timestamp": "2026-08-26T12:19:07.694Z",
+    "stageNumber": 9,
+    "stageName": "QUALITY AUDIT",
+    "engine": "PresentX Quality Auditor",
+    "model": "Deterministic Audit Gate",
+    "status": "COMPLETED",
+    "elapsedMs": 564,
+    "claimsProcessed": 12
+  },
+  {
+    "timestamp": "2026-08-26T12:19:07.694Z",
+    "stageNumber": 10,
+    "stageName": "SECURITY",
+    "engine": "AST Sanitization Firewall",
+    "model": "DOMPurify & Safe XML",
+    "status": "COMPLETED",
+    "elapsedMs": 617,
+    "claimsProcessed": 12
+  },
+  {
+    "timestamp": "2026-08-26T12:19:07.694Z",
+    "stageNumber": 11,
+    "stageName": "TRUTH FIREWALL",
+    "engine": "Post-Gen Claim Verifier",
+    "model": "Signed Evidence Ledger",
+    "status": "COMPLETED",
+    "elapsedMs": 677,
+    "claimsProcessed": 12
+  },
+  {
+    "timestamp": "2026-08-26T12:19:07.694Z",
+    "stageNumber": 12,
+    "stageName": "EXPORT",
+    "engine": "OpenXML Binary PPTX Compiler",
+    "model": "JSZip / ECMA-376 Engine",
+    "status": "COMPLETED",
+    "elapsedMs": 754,
+    "claimsProcessed": 12,
+    "artifactsProduced": [
+      "presentation.pptx",
+      "presentation.html",
+      "evidence.json"
+    ]
+  },
+  {
+    "timestamp": "2026-08-26T12:19:07.694Z",
+    "stageNumber": 13,
+    "stageName": "FINAL VERIFICATION",
+    "engine": "Roundtrip Parser Verifier",
+    "model": "Zero-Loss Validator",
+    "status": "COMPLETED",
+    "elapsedMs": 820,
+    "claimsProcessed": 12
+  },
+  {
+    "timestamp": "2026-08-26T12:19:07.694Z",
+    "stageNumber": 14,
+    "stageName": "BASKET ARCHIVAL",
+    "engine": "Sovereign Disk Vault",
+    "model": "Project Basket Engine",
+    "status": "COMPLETED",
+    "elapsedMs": 899,
+    "claimsProcessed": 12
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "req_b18bb4adf0c6",
+    "request": "Deploy External Production Service",
+    "risk": "CRITICAL",
+    "scope": "PUBLIC_EGRESS",
+    "evidence": "Full release test suite passed",
+    "proposedAction": "Authorize public egress endpoint",
+    "timestamp": 1787716778299,
+    "decision": "APPROVED",
+    "ownerSignature": "OWNER_CRYPTO_SIGNATURE_V7_ACCEPT"
+  }
+]

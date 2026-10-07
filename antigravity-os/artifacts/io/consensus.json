@@ -1,0 +1,11 @@
+{
+  "task": "Dashboard Structure Extraction",
+  "contributingModels": [
+    "qwen2.5-coder:7b (Local GPU)",
+    "qwen2.5-coder:7b (Local GPU Secondary)"
+  ],
+  "consensusOutput": "Identified 8 dashboard metric cards",
+  "confidenceScore": 0.96,
+  "agreementRatePercent": 95,
+  "disagreementsResolvedCount": 0
+}

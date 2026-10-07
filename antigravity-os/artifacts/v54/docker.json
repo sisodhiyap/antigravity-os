@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-08-25T07:59:28.129Z",
+  "dockerfileType": "Multi-Stage Alpine Linux Node 20",
+  "healthcheckEndpoint": "http://127.0.0.1:3400/api/health",
+  "nonRootExecution": true,
+  "volumePersistence": "VERIFIED (aura_data volume)",
+  "status": "PASS"
+}

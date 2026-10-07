@@ -1,0 +1,34 @@
+{
+  "certificateId": "cert_qual_1787737233547_tc4lg",
+  "projectId": "pres_1787737233530_j7j8u",
+  "projectTitle": "Overflow repair probe",
+  "projectHash": "f8201ff2a30ad6dc19c8ad2d36e227e693f120e893e545a86d80daf8a4c57484",
+  "presentationHash": "17d1c751bfcad8fceef5026e84d1a86e3c0de27d3fe07699fe05bd43aa627355",
+  "slideCount": 2,
+  "creativeQuality": 94,
+  "trustQuality": 100,
+  "technicalIntegrity": 100,
+  "accessibilityScore": 98,
+  "exportScore": 98,
+  "decision": "APPROVED",
+  "repairCyclesCount": 0,
+  "modelsUsed": [
+    "ollama:llama3",
+    "ollama:mistral"
+  ],
+  "enginesUsed": [
+    "DeterministicQualityAuditor",
+    "VisualInspectionEngine",
+    "MultiModelCreativeJudge",
+    "LocalizedSelfRepairEngine",
+    "PresentXSourceRealityGate"
+  ],
+  "verifiedClaimsCount": 2,
+  "unverifiedClaimsCount": 0,
+  "warnings": [],
+  "roundtripResult": "PERFECT",
+  "roundtripLossPercentage": 0,
+  "exportFormat": "PPTX",
+  "timestamp": "2026-08-26T09:40:33.547Z",
+  "signature": "808fe24ca523bbda398249fbe422dd62c9ae8e2ed43f1666167decd805d44199"
+}

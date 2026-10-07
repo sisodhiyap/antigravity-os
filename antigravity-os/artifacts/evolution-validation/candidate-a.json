@@ -1,0 +1,8 @@
+{
+  "candidateId": "CAND_A_BASELINE",
+  "name": "Production Baseline (Current)",
+  "type": "BASELINE",
+  "description": "Existing verified v5.6 production architecture and synchronous SQLite writes",
+  "codeModifications": {},
+  "expectedOutcome": "MAINTAIN"
+}

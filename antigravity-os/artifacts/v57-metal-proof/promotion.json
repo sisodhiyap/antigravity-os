@@ -1,0 +1,23 @@
+{
+  "baselineId": "CAND_A_BASELINE",
+  "evaluatedCandidates": [
+    {
+      "candidateId": "CAND_B_EXPERIENCE_IMPROVED",
+      "isImprovement": true,
+      "isSecurityDegraded": false,
+      "isRegressionDetected": false,
+      "latencyDeltaPercent": 28.57,
+      "verdict": "ELIGIBLE_FOR_PROMOTION"
+    },
+    {
+      "candidateId": "CAND_C_ADVERSARIAL_CHALLENGE",
+      "isImprovement": false,
+      "isSecurityDegraded": true,
+      "isRegressionDetected": true,
+      "latencyDeltaPercent": 38.1,
+      "verdict": "REJECTED_DUE_TO_REGRESSION"
+    }
+  ],
+  "selectedWinnerId": "CAND_B_EXPERIENCE_IMPROVED",
+  "justification": "Candidate CAND_B_EXPERIENCE_IMPROVED demonstrated verified 28.57% latency reduction with 0 regressions and identical 100% security score."
+}

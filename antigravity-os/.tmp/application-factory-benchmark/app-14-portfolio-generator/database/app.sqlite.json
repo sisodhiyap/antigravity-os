@@ -1,0 +1,87 @@
+{
+  "portfolioprojects": [
+    {
+      "id": "id_axft3ux",
+      "created_at": "2026-08-25T07:14:38.429Z",
+      "updated_at": "2026-08-25T07:14:38.429Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_0581r0b",
+      "created_at": "2026-08-25T07:14:38.469Z",
+      "updated_at": "2026-08-25T07:14:38.469Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    },
+    {
+      "id": "id_r8oi8o3",
+      "created_at": "2026-08-25T07:16:14.437Z",
+      "updated_at": "2026-08-25T07:16:14.437Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_6khy6ic",
+      "created_at": "2026-08-25T07:16:14.461Z",
+      "updated_at": "2026-08-25T07:16:14.461Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    }
+  ],
+  "casestudys": [
+    {
+      "id": "id_sqqjrbe",
+      "created_at": "2026-08-25T07:14:38.462Z",
+      "updated_at": "2026-08-25T07:14:38.462Z",
+      "title": "Initial CaseStudy Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for CaseStudy"
+    }
+  ],
+  "skillbadges": [
+    {
+      "id": "id_uscz1wt",
+      "created_at": "2026-08-25T07:14:38.462Z",
+      "updated_at": "2026-08-25T07:14:38.462Z",
+      "title": "Initial SkillBadge Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for SkillBadge"
+    }
+  ],
+  "serviceofferings": [
+    {
+      "id": "id_eyg5rhl",
+      "created_at": "2026-08-25T07:14:38.463Z",
+      "updated_at": "2026-08-25T07:14:38.463Z",
+      "title": "Initial ServiceOffering Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for ServiceOffering"
+    }
+  ],
+  "biographys": [
+    {
+      "id": "id_qmrpve7",
+      "created_at": "2026-08-25T07:14:38.464Z",
+      "updated_at": "2026-08-25T07:14:38.464Z",
+      "title": "Initial Biography Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Biography"
+    }
+  ],
+  "contactsubmissions": [
+    {
+      "id": "id_6k0d6ee",
+      "created_at": "2026-08-25T07:14:38.465Z",
+      "updated_at": "2026-08-25T07:14:38.465Z",
+      "title": "Initial ContactSubmission Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for ContactSubmission"
+    }
+  ]
+}

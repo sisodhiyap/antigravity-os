@@ -1,0 +1,7 @@
+{
+  "sandboxInjection": true,
+  "frozenCoreProtected": true,
+  "patchVerified": true,
+  "rollbackReady": true,
+  "status": "PASS"
+}

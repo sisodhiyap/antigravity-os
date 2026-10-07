@@ -1,0 +1,34 @@
+{
+  "certificateId": "cert_qual_1787737189869_jnf6e",
+  "projectId": "pres_1787737189841_qpjn0",
+  "projectTitle": "Creative studio portfolio",
+  "projectHash": "4b68672664c8196ac7edf15bed4fb676c8b8d2b287ac83b725aa125beee99e3a",
+  "presentationHash": "eed8dbffcedc92b7a571915aa88e7e408e6101db1237063a47818b717eb45665",
+  "slideCount": 3,
+  "creativeQuality": 94,
+  "trustQuality": 100,
+  "technicalIntegrity": 100,
+  "accessibilityScore": 98,
+  "exportScore": 98,
+  "decision": "APPROVED",
+  "repairCyclesCount": 0,
+  "modelsUsed": [
+    "ollama:llama3",
+    "ollama:mistral"
+  ],
+  "enginesUsed": [
+    "DeterministicQualityAuditor",
+    "VisualInspectionEngine",
+    "MultiModelCreativeJudge",
+    "LocalizedSelfRepairEngine",
+    "PresentXSourceRealityGate"
+  ],
+  "verifiedClaimsCount": 3,
+  "unverifiedClaimsCount": 0,
+  "warnings": [],
+  "roundtripResult": "PERFECT",
+  "roundtripLossPercentage": 0,
+  "exportFormat": "PPTX",
+  "timestamp": "2026-08-26T09:39:49.869Z",
+  "signature": "dcda5b43a4a143f86e3e5bd85d0d8a5c4f1def538e1868f34f5766313790eb73"
+}

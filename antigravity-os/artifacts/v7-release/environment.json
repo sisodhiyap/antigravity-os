@@ -1,0 +1,9 @@
+{
+  "platform": "win32",
+  "arch": "x64",
+  "totalMemoryMb": 15608,
+  "freeMemoryMb": 2431,
+  "cpus": 16,
+  "nodeVersion": "v24.16.0",
+  "workingDirectory": "C:\\D drive\\Antigravity\\antigravity-os"
+}

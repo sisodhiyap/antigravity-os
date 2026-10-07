@@ -1,0 +1,11 @@
+{
+  "strategyVersion": "v5.4-strat-3",
+  "promotedPatterns": [
+    "Modular Monolith with PBKDF2-SHA512 on FinTech Trading Dashboard"
+  ],
+  "deprecatedPatterns": [],
+  "modelWeightsAdjusted": {
+    "qwen2.5-coder:7b": 1.05
+  },
+  "confidenceDeltaTotal": 0.05
+}

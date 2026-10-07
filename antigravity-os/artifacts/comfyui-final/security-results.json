@@ -1,0 +1,7 @@
+{
+  "pathTraversalBlocked": true,
+  "maliciousCustomNodeBlocked": true,
+  "promptInjectionNeutralized": true,
+  "networkExfiltrationBlocked": true,
+  "status": "ZERO_VULNERABILITIES"
+}

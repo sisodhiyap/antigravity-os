@@ -1,0 +1,18 @@
+[
+  {
+    "test": "Fake Certificate",
+    "status": "REJECTED_UNPROVEN"
+  },
+  {
+    "test": "Evidence Poisoning",
+    "status": "BLOCKED"
+  },
+  {
+    "test": "Memory Poisoning",
+    "status": "BLOCKED"
+  },
+  {
+    "test": "Adversarial Non-Existent Resource",
+    "status": "UNKNOWN"
+  }
+]

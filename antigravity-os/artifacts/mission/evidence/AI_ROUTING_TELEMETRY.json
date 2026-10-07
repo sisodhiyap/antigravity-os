@@ -1,0 +1,85 @@
+{
+  "timestamp": "2026-08-25T07:29:53.218Z",
+  "hierarchyTested": "Fast Local (Ollama) -> Local Large (AirLLM: Probed Offline) -> Cloud Mesh (OpenRouter Fallback)",
+  "airllmProbeResult": "AIRLLM = NOT AVAILABLE (Safe cascade verified)",
+  "benchmarks": [
+    {
+      "taskId": "AI_01",
+      "taskName": "Simple Coding Task",
+      "prompt": "Write a TypeScript function to calculate sprint velocity given an array of story points.",
+      "provider": "Ollama Local GPU",
+      "model": "qwen2.5-coder:7b",
+      "tokensGenerated": 80,
+      "latencyMs": 2840,
+      "tokensPerSecond": 31.02,
+      "airllmProbed": "OFFLINE (Port 8000) -> Cascaded safely to Ollama",
+      "responseSnippet": "To calculate the sprint velocity given an array of story points, you can follow these steps:  1. Sum up all the story points in the array. 2. Return t",
+      "timestamp": "2026-08-25T07:29:40.214Z"
+    },
+    {
+      "taskId": "AI_02",
+      "taskName": "Architecture Task",
+      "prompt": "Design an ACID schema for an approvals workflow in a creative design agency.",
+      "provider": "Ollama Local GPU",
+      "model": "qwen2.5-coder:7b",
+      "tokensGenerated": 100,
+      "latencyMs": 3209,
+      "tokensPerSecond": 31.64,
+      "airllmProbed": "OFFLINE (Port 8000) -> Cascaded safely to Ollama",
+      "responseSnippet": "Designing an ACID-compliant schema for an approvals workflow in a creative design agency involves ensuring that each transaction is isolated, consiste",
+      "timestamp": "2026-08-25T07:29:43.424Z"
+    },
+    {
+      "taskId": "AI_03",
+      "taskName": "Long-Context Task",
+      "prompt": "Analyze a 500-word creative brief for Lumina EV Cockpit HUD and extract 5 deliverable milestones.",
+      "provider": "Ollama Local GPU",
+      "model": "qwen2.5-coder:7b",
+      "tokensGenerated": 100,
+      "latencyMs": 3414,
+      "tokensPerSecond": 29.73,
+      "airllmProbed": "OFFLINE (Port 8000) -> Cascaded safely to Ollama",
+      "responseSnippet": "**Creative Brief: Lumina EV Cockpit HUD**  **Objective**: Design a high-performance heads-up display (HUD) system for the Lumina electric vehicle, enh",
+      "timestamp": "2026-08-25T07:29:46.838Z"
+    },
+    {
+      "taskId": "AI_04",
+      "taskName": "Debugging Task",
+      "prompt": "Diagnose why a WebSocket event stream might fail under high concurrent reconnects in Node.js.",
+      "provider": "Ollama Local GPU",
+      "model": "qwen2.5-coder:7b",
+      "tokensGenerated": 80,
+      "latencyMs": 2609,
+      "tokensPerSecond": 31.35,
+      "airllmProbed": "OFFLINE (Port 8000) -> Cascaded safely to Ollama",
+      "responseSnippet": "When dealing with high concurrent reconnects in a Node.js WebSocket event stream, several factors can contribute to the failure of these connections. ",
+      "timestamp": "2026-08-25T07:29:49.447Z"
+    },
+    {
+      "taskId": "AI_05",
+      "taskName": "Creative Task",
+      "prompt": "Generate 3 punchy marketing taglines for a spatial audio product launch.",
+      "provider": "Ollama Local GPU",
+      "model": "qwen2.5-coder:7b",
+      "tokensGenerated": 48,
+      "latencyMs": 1531,
+      "tokensPerSecond": 32.4,
+      "airllmProbed": "OFFLINE (Port 8000) -> Cascaded safely to Ollama",
+      "responseSnippet": "1. \"Step into the sound, let the world come to you.\" 2. \"Surround yourself with the music, hear it like never before.\" 3. \"Experience sound like you'v",
+      "timestamp": "2026-08-25T07:29:50.979Z"
+    },
+    {
+      "taskId": "AI_06",
+      "taskName": "Structured JSON Task",
+      "prompt": "Output a valid JSON object representing a creative asset review decision with status, reviewer, and timestamp.",
+      "provider": "Ollama Local GPU",
+      "model": "qwen2.5-coder:7b",
+      "tokensGenerated": 69,
+      "latencyMs": 2239,
+      "tokensPerSecond": 31.5,
+      "airllmProbed": "OFFLINE (Port 8000) -> Cascaded safely to Ollama",
+      "responseSnippet": "```json {   \"asset_id\": \"12345\",   \"review_decision\": {     \"status\": \"Approved\",     \"reviewer\": \"John Doe\",     \"timestamp\": \"2023-04-14T10:30:00Z\" ",
+      "timestamp": "2026-08-25T07:29:53.218Z"
+    }
+  ]
+}

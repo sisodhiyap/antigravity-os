@@ -1,0 +1,34 @@
+{
+  "certificateId": "cert_qual_1787737189739_a78bm",
+  "projectId": "pres_1787737189588_67arm",
+  "projectTitle": "Basic corporate presentation",
+  "projectHash": "252f5cff6ec5db2521c0550948e32da25840eb242f3d2a6d51c6c6e6e03b42a7",
+  "presentationHash": "2b5d500edeb7a2504dbb8be61e3f14622f1ce74fcc41254d5757c1ccbf0dc4f2",
+  "slideCount": 5,
+  "creativeQuality": 94,
+  "trustQuality": 100,
+  "technicalIntegrity": 100,
+  "accessibilityScore": 98,
+  "exportScore": 98,
+  "decision": "APPROVED",
+  "repairCyclesCount": 0,
+  "modelsUsed": [
+    "ollama:llama3",
+    "ollama:mistral"
+  ],
+  "enginesUsed": [
+    "DeterministicQualityAuditor",
+    "VisualInspectionEngine",
+    "MultiModelCreativeJudge",
+    "LocalizedSelfRepairEngine",
+    "PresentXSourceRealityGate"
+  ],
+  "verifiedClaimsCount": 5,
+  "unverifiedClaimsCount": 0,
+  "warnings": [],
+  "roundtripResult": "PERFECT",
+  "roundtripLossPercentage": 0,
+  "exportFormat": "PPTX",
+  "timestamp": "2026-08-26T09:39:49.739Z",
+  "signature": "352fdea7f7847e72a78cd38bbd6c39640f608d341a4e01cc139fef4cc64f9aba"
+}

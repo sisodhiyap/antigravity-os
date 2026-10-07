@@ -1,0 +1,34 @@
+{
+  "certificateId": "cert_qual_1787737364563_g7wou",
+  "projectId": "pres_1787737364551_ta3tt",
+  "projectTitle": "Signature verification probe",
+  "projectHash": "f63b6580cbc703c5efd34fe273e89451c324c3635dfa561d8c0858d9a0c2ebd6",
+  "presentationHash": "d7ad9c79b96b4f58660ad824f2bd487dd2475114624f0b460b37d259ce98a548",
+  "slideCount": 2,
+  "creativeQuality": 94,
+  "trustQuality": 100,
+  "technicalIntegrity": 100,
+  "accessibilityScore": 85,
+  "exportScore": 95,
+  "decision": "APPROVED",
+  "repairCyclesCount": 1,
+  "modelsUsed": [
+    "ollama:llama3",
+    "ollama:mistral"
+  ],
+  "enginesUsed": [
+    "DeterministicQualityAuditor",
+    "VisualInspectionEngine",
+    "MultiModelCreativeJudge",
+    "LocalizedSelfRepairEngine",
+    "PresentXSourceRealityGate"
+  ],
+  "verifiedClaimsCount": 2,
+  "unverifiedClaimsCount": 0,
+  "warnings": [],
+  "roundtripResult": "PERFECT",
+  "roundtripLossPercentage": 0,
+  "exportFormat": "PPTX",
+  "timestamp": "2026-08-26T09:42:44.563Z",
+  "signature": "c16176eaacbf7b7fe6ef26a58ebac2a419a0d69ae7d599fb62f507b510f7750d"
+}

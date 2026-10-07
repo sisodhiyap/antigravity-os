@@ -1,0 +1,25 @@
+[
+  {
+    "knowledgeId": "kn_6dd0b961fcaf8cf8",
+    "version": 1,
+    "topic": "GENERAL",
+    "content": "Deterministic execution guarantees repeatable results.",
+    "status": "SUPERSEDED",
+    "sourceHash": "fe6c7fb6f897a5a64db6c91eb08e98677552c57fd587a5bbe33904fba91ab7af",
+    "evidenceHash": "49132c5835b28b9cf56f6f64d0ea9386823ae271370f536a19b3e05d5353c41b",
+    "createdAt": 1787716077986,
+    "verifiedAt": 1787716077986,
+    "supersededAt": 1787716077986
+  },
+  {
+    "knowledgeId": "kn_300d9434f31b9fce",
+    "version": 2,
+    "topic": "GENERAL",
+    "content": "Deterministic execution guarantees repeatable results.",
+    "status": "CURRENT",
+    "sourceHash": "fe6c7fb6f897a5a64db6c91eb08e98677552c57fd587a5bbe33904fba91ab7af",
+    "evidenceHash": "49132c5835b28b9cf56f6f64d0ea9386823ae271370f536a19b3e05d5353c41b",
+    "createdAt": 1787716077986,
+    "verifiedAt": 1787716077986
+  }
+]

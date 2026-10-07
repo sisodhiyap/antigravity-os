@@ -5,7 +5,9 @@ import type { NextRequest } from "next/server";
 const PUBLIC_PATHS = [
   "/login",
   "/signup",
+  "/desktop",
   "/api/health",
+  "/api/v7/health",
   "/api/omnicraft/auth",
   "/favicon.ico",
 ];
@@ -94,6 +96,10 @@ export function middleware(request: NextRequest) {
     pathname.startsWith("/ai") ||
     pathname.startsWith("/factory") ||
     pathname.startsWith("/media") ||
+    pathname.startsWith("/basket") ||
+    pathname.startsWith("/profile") ||
+    pathname.startsWith("/privacy") ||
+    pathname.startsWith("/security") ||
     pathname.startsWith("/settings") ||
     pathname.startsWith("/terminal") ||
     pathname.startsWith("/agents") ||

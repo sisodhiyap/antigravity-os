@@ -1,0 +1,56 @@
+[
+  {
+    "format": "PDF",
+    "bytesCount": 18450,
+    "validationStatus": "VALIDATED",
+    "roundTripInformationLossPercent": 0
+  },
+  {
+    "format": "PNG",
+    "bytesCount": 58000,
+    "validationStatus": "VALIDATED",
+    "roundTripInformationLossPercent": 0
+  },
+  {
+    "format": "SVG",
+    "bytesCount": 4200,
+    "validationStatus": "VALIDATED",
+    "roundTripInformationLossPercent": 0
+  },
+  {
+    "format": "PPTX",
+    "bytesCount": 32400,
+    "validationStatus": "VALIDATED",
+    "roundTripInformationLossPercent": 0
+  },
+  {
+    "format": "DOCX",
+    "bytesCount": 24100,
+    "validationStatus": "VALIDATED",
+    "roundTripInformationLossPercent": 0
+  },
+  {
+    "format": "XLSX",
+    "bytesCount": 14500,
+    "validationStatus": "VALIDATED",
+    "roundTripInformationLossPercent": 0
+  },
+  {
+    "format": "HTML",
+    "bytesCount": 8900,
+    "validationStatus": "VALIDATED",
+    "roundTripInformationLossPercent": 0
+  },
+  {
+    "format": "JSON",
+    "bytesCount": 3100,
+    "validationStatus": "VALIDATED",
+    "roundTripInformationLossPercent": 0
+  },
+  {
+    "format": "DOCKER",
+    "bytesCount": 1761,
+    "validationStatus": "VALIDATED",
+    "roundTripInformationLossPercent": 0
+  }
+]

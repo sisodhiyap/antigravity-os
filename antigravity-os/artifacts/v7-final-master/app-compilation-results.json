@@ -1,0 +1,26 @@
+[
+  {
+    "name": "SaaS Multi-Tenant Portal",
+    "frontend": "PASS",
+    "backend": "PASS",
+    "database": "PASS",
+    "api": "PASS",
+    "responsive": "PASS"
+  },
+  {
+    "name": "Fintech Real-Time Ledger",
+    "frontend": "PASS",
+    "backend": "PASS",
+    "database": "PASS",
+    "api": "PASS",
+    "responsive": "PASS"
+  },
+  {
+    "name": "Autonomous Logistics Grid",
+    "frontend": "PASS",
+    "backend": "PASS",
+    "database": "PASS",
+    "api": "PASS",
+    "responsive": "PASS"
+  }
+]

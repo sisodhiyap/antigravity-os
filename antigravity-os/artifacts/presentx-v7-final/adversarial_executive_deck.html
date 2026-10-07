@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Future of AI-Native Creative Agencies — PresentX Studio</title>
+  <style>
+    :root {
+      --primary: #1A1A1A;
+      --secondary: #7A6B58;
+      --accent: #C98A4C;
+      --bg: #FBF9F5;
+      --surface: #FFFFFF;
+      --text: #1C1917;
+      --text-sec: #57534E;
+      --font-heading: Newsreader, Playfair Display, Georgia, serif;
+      --font-body: Inter, -apple-system, sans-serif;
+      --radius: 0.25rem;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .deck-container {
+      flex: 1;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .slide-card {
+      display: none;
+      width: 100%;
+      max-width: 1100px;
+      aspect-ratio: 16 / 9;
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 3.5rem 4rem;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      animation: fadeIn 0.3s ease-out;
+    }
+    .slide-card.active { display: flex; }
+    @keyframes fadeIn { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+    .headline { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem; color: var(--text); }
+    .subheadline { font-size: 1.2rem; color: var(--primary); margin-bottom: 1.5rem; font-weight: 500; }
+    .body-text { font-size: 1.05rem; line-height: 1.6; color: var(--text-sec); margin-bottom: 1.5rem; }
+    .badge { display: inline-block; padding: 0.3rem 0.8rem; background: var(--primary); color: var(--bg); font-weight: bold; font-size: 0.75rem; border-radius: 9999px; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+    .metric-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 1.5rem; border-radius: var(--radius); text-align: center; }
+    .metric-val { font-size: 2.5rem; font-weight: 800; color: var(--primary); font-family: var(--font-heading); }
+    .metric-lbl { font-size: 0.9rem; color: var(--text-sec); margin-top: 0.4rem; }
+    .metric-chg { font-size: 0.8rem; color: #39D98A; margin-top: 0.2rem; font-weight: bold; }
+    .bullet-list { list-style-type: none; margin-top: 1rem; }
+    .bullet-list li { position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem; font-size: 1rem; color: var(--text-sec); }
+    .bullet-list li::before { content: "•"; color: var(--primary); font-size: 1.5rem; position: absolute; left: 0; top: -0.2rem; }
+    .content-split { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center; }
+    .slide-img { width: 100%; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.1); }
+    .slide-footer { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-sec); opacity: 0.7; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08); }
+    .nav-bar { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); display: flex; gap: 1rem; background: rgba(0,0,0,0.8); backdrop-filter: blur(12px); padding: 0.6rem 1.2rem; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.15); z-index: 100; }
+    .nav-btn { background: none; border: none; color: var(--text); font-size: 1rem; cursor: pointer; padding: 0.4rem 0.8rem; border-radius: 0.5rem; font-family: inherit; font-weight: 600; }
+    .nav-btn:hover { background: rgba(255,255,255,0.1); color: var(--primary); }
+    .progress-bar { position: fixed; top: 0; left: 0; height: 4px; background: var(--primary); transition: width 0.3s; z-index: 101; }
+  </style>
+</head>
+<body>
+  <div class="progress-bar" id="progress"></div>
+  <div class="deck-container">
+    
+        <section class="slide-card active" id="slide-0" data-index="0">
+          <div class="slide-inner">
+            
+          <div class="slide-hero">
+            <span class="badge">REPORT</span>
+            <h1 class="headline">The Future of AI-Native Creative Agencies</h1>
+            <p class="subheadline">Why Taste, Curation, and Sovereignty Define the Next Decade of Creative Leadership</p>
+            <div class="meta-row">
+              <span>Presented by Antigravity OS V7</span>
+              <span>•</span>
+              <span>12 Slides</span>
+            </div>
+          </div>
+        
+          </div>
+          <div class="slide-footer">
+            <span class="footer-title">The Future of AI-Native Creative Agencies</span>
+            <span class="footer-page">1 / 12</span>
+          </div>
+        </section>
+      
+
+        <section class="slide-card " id="slide-1" data-index="1">
+          <div class="slide-inner">
+            
+          <h2 class="headline">The Crisis of Mechanical Production Drag</h2>
+          <p class="subheadline">Where agency margins, billable hours, and designer energy are currently consumed</p>
+          <div class="content-split">
+            <div class="text-col">
+              <p class="body-text">Linear assembly lines force senior designers to spend critical energy on routine formatting, layer management, and resizing. Traditional cost-plus hourly retainers penalize efficiency.</p>
+              <ul class="bullet-list"><li>Traditional creative workflows expend substantial labor on mechanical formatting, resizing, and localization rather than strategic ideation</li><li>Legacy cost-plus retainers create a perverse incentive where production efficiency reduces billable agency revenue</li><li>Creative leadership spends excessive time managing manual delivery pipelines instead of directing brand vision</li></ul>
+            </div>
+            
+          </div>
+        
+          </div>
+          <div class="slide-footer">
+            <span class="footer-title">The Future of AI-Native Creative Agencies</span>
+            <span class="footer-page">2 / 12</span>
+          </div>
+        </section>
+      
+
+        <section class="slide-card " id="slide-2" data-index="2">
+          <div class="slide-inner">
+            
+          <h2 class="headline">The Compression of the Execution Gap</h2>
+          <p class="subheadline">Three foundational vectors transforming creative production mechanics</p>
+          <div class="content-split">
+            <div class="text-col">
+              <p class="body-text">Multimodal foundation models compress the latency between conceptualization and visualization from days to seconds.</p>
+              <ul class="bullet-list"><li>Instant Ideation: Multimodal models generate dozens of conceptual directions in seconds</li><li>Automated Adaptation: Programmatic rendering across multi-channel ratios and localized variations</li><li>Continuous Refinement: Real-time style transfers and non-destructive adjustments without manual layer rebuilds</li></ul>
+            </div>
+            
+          </div>
+        
+          </div>
+          <div class="slide-footer">
+            <span class="footer-title">The Future of AI-Native Creative Agencies</span>
+            <span class="footer-page">3 / 12</span>
+          </div>
+        </section>
+      
+
+        <section class="slide-card " id="slide-3" data-index="3">
+          <div class="slide-inner">
+            
+          <h2 class="headline">The Non-Algorithmic Core of Creative Direction</h2>
+          <p class="subheadline">Clear delineation between automated mechanics and irreproducible human craft</p>
+          <div class="content-split">
+            <div class="text-col">
+              <p class="body-text">Machine intelligence can automate synthesis, but it lacks cultural nuance, emotional intention, and brand taste discernment.</p>
+              <ul class="bullet-list"><li>Automated by AI: Pixel interpolation, pattern synthesis, repetitive formatting, multi-channel resizing</li><li>Irreplaceable Human Craft: Cultural intuition, emotional vulnerability, strategic bravery, brand taste discernment, narrative truth</li></ul>
+            </div>
+            
+          </div>
+        
+          </div>
+          <div class="slide-footer">
+            <span class="footer-title">The Future of AI-Native Creative Agencies</span>
+            <span class="footer-page">4 / 12</span>
+          </div>
+        </section>
+      
+
+        <section class="slide-card " id="slide-4" data-index="4">
+          <div class="slide-inner">
+            
+          <h2 class="headline">The Inverted Creative Direction Pipeline</h2>
+          <p class="body-text">The operating model inverts the traditional creative pyramid: agencies transition from spending 80% of time on manual execution to spending 80% on intent, art direction, and curation.</p>
+          <div class="diagram-container"><svg viewBox="0 0 700 260" width="100%" height="100%">
+        <!-- Connecting Line -->
+        <line x1="110" y1="120" x2="590" y2="120" stroke="#1A1A1A" stroke-opacity="0.3" stroke-width="3" stroke-dasharray="6"/>
+        
+          <g>
+            <circle cx="110" cy="120" r="16" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+            <text x="110" y="124" text-anchor="middle" fill="#1A1A1A" font-size="11" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">1</text>
+            <text x="110" y="156" text-anchor="middle" fill="#1C1917" font-size="12" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">1. Intent & Thesis</text>
+            <text x="110" y="172" text-anchor="middle" fill="#57534E" font-size="9" font-family="Inter, -apple-system, sans-serif" width="150">Human Creative Director establ</text>
+          </g>
+        
+
+          <g>
+            <circle cx="270" cy="120" r="16" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+            <text x="270" y="124" text-anchor="middle" fill="#1A1A1A" font-size="11" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">2</text>
+            <text x="270" y="156" text-anchor="middle" fill="#1C1917" font-size="12" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">2. Wide Exploration</text>
+            <text x="270" y="172" text-anchor="middle" fill="#57534E" font-size="9" font-family="Inter, -apple-system, sans-serif" width="150">Autonomous AI generates 50+ co</text>
+          </g>
+        
+
+          <g>
+            <circle cx="430" cy="120" r="16" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+            <text x="430" y="124" text-anchor="middle" fill="#1A1A1A" font-size="11" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">3</text>
+            <text x="430" y="156" text-anchor="middle" fill="#1C1917" font-size="12" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">3. Taste & Curation</text>
+            <text x="430" y="172" text-anchor="middle" fill="#57534E" font-size="9" font-family="Inter, -apple-system, sans-serif" width="150">Senior art directors select, r</text>
+          </g>
+        
+
+          <g>
+            <circle cx="590" cy="120" r="16" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+            <text x="590" y="124" text-anchor="middle" fill="#1A1A1A" font-size="11" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">4</text>
+            <text x="590" y="156" text-anchor="middle" fill="#1C1917" font-size="12" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">4. Master Rollout</text>
+            <text x="590" y="172" text-anchor="middle" fill="#57534E" font-size="9" font-family="Inter, -apple-system, sans-serif" width="150">Deterministic engine outputs a</text>
+          </g>
+        
+      </svg></div>
+        
+          </div>
+          <div class="slide-footer">
+            <span class="footer-title">The Future of AI-Native Creative Agencies</span>
+            <span class="footer-page">5 / 12</span>
+          </div>
+        </section>
+      
+
+        <section class="slide-card " id="slide-5" data-index="5">
+          <div class="slide-inner">
+            
+          <h2 class="headline">The Collaborative Cadence: Directing Autonomous Fleets</h2>
+          <p class="body-text">The interaction model is not prompt-and-pray; it is structured, director-to-agent collaborative orchestration.</p>
+          <div class="diagram-container"><svg viewBox="0 0 700 260" width="100%" height="100%">
+        <!-- Connecting Line -->
+        <line x1="136.66666666666669" y1="120" x2="563.3333333333334" y2="120" stroke="#1A1A1A" stroke-opacity="0.3" stroke-width="3" stroke-dasharray="6"/>
+        
+          <g>
+            <circle cx="136.66666666666669" cy="120" r="16" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+            <text x="136.66666666666669" y="124" text-anchor="middle" fill="#1A1A1A" font-size="11" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">1</text>
+            <text x="136.66666666666669" y="156" text-anchor="middle" fill="#1C1917" font-size="12" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">Phase 1: Discovery</text>
+            <text x="136.66666666666669" y="172" text-anchor="middle" fill="#57534E" font-size="9" font-family="Inter, -apple-system, sans-serif" width="203.33333333333334">Directing agentic swarms to un</text>
+          </g>
+        
+
+          <g>
+            <circle cx="350" cy="120" r="16" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+            <text x="350" y="124" text-anchor="middle" fill="#1A1A1A" font-size="11" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">2</text>
+            <text x="350" y="156" text-anchor="middle" fill="#1C1917" font-size="12" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">Phase 2: Synthesis</text>
+            <text x="350" y="172" text-anchor="middle" fill="#57534E" font-size="9" font-family="Inter, -apple-system, sans-serif" width="203.33333333333334">Establishing rigid design toke</text>
+          </g>
+        
+
+          <g>
+            <circle cx="563.3333333333334" cy="120" r="16" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+            <text x="563.3333333333334" y="124" text-anchor="middle" fill="#1A1A1A" font-size="11" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">3</text>
+            <text x="563.3333333333334" y="156" text-anchor="middle" fill="#1C1917" font-size="12" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">Phase 3: Review</text>
+            <text x="563.3333333333334" y="172" text-anchor="middle" fill="#57534E" font-size="9" font-family="Inter, -apple-system, sans-serif" width="203.33333333333334">Auditing semantic hierarchy, e</text>
+          </g>
+        
+      </svg></div>
+        
+          </div>
+          <div class="slide-footer">
+            <span class="footer-title">The Future of AI-Native Creative Agencies</span>
+            <span class="footer-page">6 / 12</span>
+          </div>
+        </section>
+      
+
+        <section class="slide-card " id="slide-6" data-index="6">
+          <div class="slide-inner">
+            
+          <h2 class="headline">The Inevitable Pivot from Hours to Value Pricing</h2>
+          <p class="body-text">If you sell time, AI destroys your billing. If you sell outcomes, brand transformation, and velocity, AI multiplies your profitability.</p>
+          <div class="chart-container"><svg viewBox="0 0 700 320" width="100%" height="100%">
+        <defs>
+          <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1A1A1A" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#1A1A1A" stop-opacity="0.0"/>
+          </linearGradient>
+        </defs>
+        <!-- Grid lines -->
+        <line x1="40" y1="280" x2="660" y2="280" stroke="#57534E" stroke-opacity="0.2" stroke-width="1"/>
+        <line x1="40" y1="160" x2="660" y2="160" stroke="#57534E" stroke-opacity="0.1" stroke-dasharray="4" stroke-width="1"/>
+        
+        <!-- Area fill -->
+        <path d="M 40 280 L 40 267.58620689655174 L 195 253.10344827586206 L 350 222.06896551724137 L 505 160 L 660 40 L 660 280 Z" fill="url(#chartGrad)"/>
+        
+        <!-- Line stroke -->
+        <polyline points="40,267.58620689655174 195,253.10344827586206 350,222.06896551724137 505,160 660,40" fill="none" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        
+        <!-- Data dots -->
+        
+          <circle cx="40" cy="267.58620689655174" r="4" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+          <text x="40" y="298" text-anchor="middle" fill="#57534E" font-size="10" font-family="Inter, -apple-system, sans-serif">2024</text>
+        
+          <circle cx="195" cy="253.10344827586206" r="4" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+          <text x="195" y="298" text-anchor="middle" fill="#57534E" font-size="10" font-family="Inter, -apple-system, sans-serif">2025</text>
+        
+          <circle cx="350" cy="222.06896551724137" r="4" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+          <text x="350" y="298" text-anchor="middle" fill="#57534E" font-size="10" font-family="Inter, -apple-system, sans-serif">2026</text>
+        
+          <circle cx="505" cy="160" r="4" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+          <text x="505" y="298" text-anchor="middle" fill="#57534E" font-size="10" font-family="Inter, -apple-system, sans-serif">2027</text>
+        
+          <circle cx="660" cy="40" r="4" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+          <text x="660" y="298" text-anchor="middle" fill="#57534E" font-size="10" font-family="Inter, -apple-system, sans-serif">2028</text>
+        
+      </svg></div>
+        
+          </div>
+          <div class="slide-footer">
+            <span class="footer-title">The Future of AI-Native Creative Agencies</span>
+            <span class="footer-page">7 / 12</span>
+          </div>
+        </section>
+      
+
+        <section class="slide-card " id="slide-7" data-index="7">
+          <div class="slide-inner">
+            
+          <h2 class="headline">The Reimagined Creative Talent Roster</h2>
+          <p class="subheadline">Structural evolution of agency leadership and creative specializations</p>
+          <div class="content-split">
+            <div class="text-col">
+              <p class="body-text">Agency headcount is rebalancing away from manual production tasks toward high-leverage strategic craft.</p>
+              <ul class="bullet-list"><li>The Visionary (Executive Creative Director): Directs taste, narrative tension, brand positioning, and emotional resonance</li><li>The Orchestrator (Creative Technologist): Authors model prompts, custom LoRA styles, and autonomous V7 pipelines</li><li>The Guardian (Quality & Ethics Lead): Audits IP provenance, copyright safety, accessibility, and brand consistency</li></ul>
+            </div>
+            
+          </div>
+        
+          </div>
+          <div class="slide-footer">
+            <span class="footer-title">The Future of AI-Native Creative Agencies</span>
+            <span class="footer-page">8 / 12</span>
+          </div>
+        </section>
+      
+
+        <section class="slide-card " id="slide-8" data-index="8">
+          <div class="slide-inner">
+            
+          <h2 class="headline">Hypothetical Scenario: The 48-Hour Global Launch</h2>
+          <p class="subheadline">Structured architectural simulation demonstrating multi-channel pipeline mechanics</p>
+          <div class="content-split">
+            <div class="text-col">
+              <p class="body-text">Context: A hypothetical consumer electronics brand requires 120 localized digital campaign assets across 14 markets within 48 hours.
+
+Methodology: Creative directors author one master aesthetic thesis; an autonomous sovereign pipeline executes multi-ratio formatting with zero drift.
+
+Simulated Outcome: Delivered in 48 hours with 100% cryptographic design token compliance and complete human editorial control.</p>
+              <ul class="bullet-list"><li>Scenario: 120 localized assets across 14 markets in 48 hours (Hypothetical Simulation)</li><li>Architecture: 1 master creative thesis directed into a V7 autonomous pipeline</li><li>Outcome: Delivered with 0% brand drift and zero manual overtime burn</li></ul>
+            </div>
+            
+          </div>
+        
+          </div>
+          <div class="slide-footer">
+            <span class="footer-title">The Future of AI-Native Creative Agencies</span>
+            <span class="footer-page">9 / 12</span>
+          </div>
+        </section>
+      
+
+        <section class="slide-card " id="slide-9" data-index="9">
+          <div class="slide-inner">
+            
+          <h2 class="headline">Governance, IP Indemnification & Enterprise Risks</h2>
+          <p class="subheadline">Key legal and operational vulnerabilities requiring sovereign containment</p>
+          <div class="content-split">
+            <div class="text-col">
+              <p class="body-text">Unregulated commercial AI use exposes agencies to copyright uncertainty, data leaks, and model drift.</p>
+              <ul class="bullet-list"><li>Copyright & Provenance: Commercial assets generated via untracked cloud APIs lack immutable provenance and IP defense</li><li>Data Exfiltration Risk: Unsanitized client prompts can leak sensitive unreleased product information into third-party training sets</li><li>Sovereign Mitigation: Deploying on-premise, sovereign AI infrastructure with immutable SHA-256 evidence ledgers</li></ul>
+            </div>
+            
+          </div>
+        
+          </div>
+          <div class="slide-footer">
+            <span class="footer-title">The Future of AI-Native Creative Agencies</span>
+            <span class="footer-page">10 / 12</span>
+          </div>
+        </section>
+      
+
+        <section class="slide-card " id="slide-10" data-index="10">
+          <div class="slide-inner">
+            
+          <h2 class="headline">The 90-Day Transition Roadmap</h2>
+          <p class="body-text">A structured 90-day rollout prevents organizational friction and aligns creative talent with commercial value.</p>
+          <div class="diagram-container"><svg viewBox="0 0 700 260" width="100%" height="100%">
+        <!-- Connecting Line -->
+        <line x1="136.66666666666669" y1="120" x2="563.3333333333334" y2="120" stroke="#1A1A1A" stroke-opacity="0.3" stroke-width="3" stroke-dasharray="6"/>
+        
+          <g>
+            <circle cx="136.66666666666669" cy="120" r="16" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+            <text x="136.66666666666669" y="124" text-anchor="middle" fill="#1A1A1A" font-size="11" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">1</text>
+            <text x="136.66666666666669" y="156" text-anchor="middle" fill="#1C1917" font-size="12" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">Days 1–30: Audit</text>
+            <text x="136.66666666666669" y="172" text-anchor="middle" fill="#57534E" font-size="9" font-family="Inter, -apple-system, sans-serif" width="203.33333333333334">Map production bottlenecks; st</text>
+          </g>
+        
+
+          <g>
+            <circle cx="350" cy="120" r="16" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+            <text x="350" y="124" text-anchor="middle" fill="#1A1A1A" font-size="11" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">2</text>
+            <text x="350" y="156" text-anchor="middle" fill="#1C1917" font-size="12" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">Days 31–60: Pilot</text>
+            <text x="350" y="172" text-anchor="middle" fill="#57534E" font-size="9" font-family="Inter, -apple-system, sans-serif" width="203.33333333333334">Train senior designers in crea</text>
+          </g>
+        
+
+          <g>
+            <circle cx="563.3333333333334" cy="120" r="16" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+            <text x="563.3333333333334" y="124" text-anchor="middle" fill="#1A1A1A" font-size="11" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">3</text>
+            <text x="563.3333333333334" y="156" text-anchor="middle" fill="#1C1917" font-size="12" font-weight="bold" font-family="Newsreader, Playfair Display, Georgia, serif">Days 61–90: Scale</text>
+            <text x="563.3333333333334" y="172" text-anchor="middle" fill="#57534E" font-size="9" font-family="Inter, -apple-system, sans-serif" width="203.33333333333334">Transition key client contract</text>
+          </g>
+        
+      </svg></div>
+        
+          </div>
+          <div class="slide-footer">
+            <span class="footer-title">The Future of AI-Native Creative Agencies</span>
+            <span class="footer-page">11 / 12</span>
+          </div>
+        </section>
+      
+
+        <section class="slide-card " id="slide-11" data-index="11">
+          <div class="slide-inner">
+            
+          <h2 class="headline">Lead with Taste, Build on Sovereign Infrastructure</h2>
+          <p class="subheadline">Three guiding imperatives for creative agency founders and executive leaders</p>
+          <div class="content-split">
+            <div class="text-col">
+              <p class="body-text">The future belongs to agencies that treat machine intelligence not as a replacement for human craft, but as an amplifier of sovereign creative leadership.</p>
+              <ul class="bullet-list"><li>1. Own Your Infrastructure: Never build your agency's core IP on rented, third-party cloud prompts</li><li>2. Elevate Creative Direction: Treat human taste and cultural discernment as your primary commercial product</li><li>3. Reinvent the Contract: Price for transformational business outcomes, not mechanical execution hours</li></ul>
+            </div>
+            
+          </div>
+        
+          </div>
+          <div class="slide-footer">
+            <span class="footer-title">The Future of AI-Native Creative Agencies</span>
+            <span class="footer-page">12 / 12</span>
+          </div>
+        </section>
+      
+  </div>
+  <div class="nav-bar">
+    <button class="nav-btn" onclick="prevSlide()">← Prev</button>
+    <span class="nav-btn" id="counter" style="cursor:default">1 / 12</span>
+    <button class="nav-btn" onclick="nextSlide()">Next →</button>
+    <button class="nav-btn" onclick="toggleFullscreen()">⛶ Fullscreen</button>
+  </div>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide-card');
+    const total = slides.length;
+
+    function update() {
+      slides.forEach((s, i) => s.classList.toggle('active', i === current));
+      document.getElementById('counter').innerText = (current + 1) + ' / ' + total;
+      document.getElementById('progress').style.width = (((current + 1) / total) * 100) + '%';
+    }
+
+    function nextSlide() {
+      if (current < total - 1) { current++; update(); }
+    }
+
+    function prevSlide() {
+      if (current > 0) { current--; update(); }
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'Space') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'f' || e.key === 'F') toggleFullscreen();
+    });
+
+    update();
+  </script>
+</body>
+</html>

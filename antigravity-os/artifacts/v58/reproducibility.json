@@ -1,0 +1,12 @@
+{
+  "runsCount": 5,
+  "decisions": [
+    "PROVEN",
+    "PROVEN",
+    "PROVEN",
+    "PROVEN",
+    "PROVEN"
+  ],
+  "driftPercent": "0.0%",
+  "status": "REPRODUCIBLE"
+}

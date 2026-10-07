@@ -1,0 +1,41 @@
+{
+  "journeyId": "bj_1787647346953",
+  "name": "Master User Flow",
+  "stepsExecuted": [
+    {
+      "step": "Navigate /login",
+      "status": "PASS",
+      "latencyMs": 25
+    },
+    {
+      "step": "Type credentials & Submit",
+      "status": "PASS",
+      "latencyMs": 40
+    },
+    {
+      "step": "Verify Dashboard Redirect",
+      "status": "PASS",
+      "latencyMs": 15
+    },
+    {
+      "step": "Create Project Entity Modal",
+      "status": "PASS",
+      "latencyMs": 30
+    },
+    {
+      "step": "Save & Verify SQLite Row",
+      "status": "PASS",
+      "latencyMs": 20
+    }
+  ],
+  "consoleErrorsCount": 0,
+  "networkErrorsCount": 0,
+  "viewportsValidated": [
+    "375px",
+    "768px",
+    "1024px",
+    "1440px",
+    "1920px"
+  ],
+  "overallJourneyPass": true
+}

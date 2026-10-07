@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETED",
+  "exports": [
+    {
+      "format": "HTML",
+      "sizeBytes": 24627,
+      "status": "COMPLETED"
+    },
+    {
+      "format": "JSON_EVIDENCE",
+      "sizeBytes": 55434,
+      "status": "COMPLETED"
+    }
+  ]
+}

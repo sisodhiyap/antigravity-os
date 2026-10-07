@@ -1,0 +1,13 @@
+{
+  "name": "app-10-external-api-integration",
+  "version": "1.0.0",
+  "description": "Antigravity OS v5.2 Autonomous Build — External API Integration Gateway",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/run-tests.js"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  }
+}

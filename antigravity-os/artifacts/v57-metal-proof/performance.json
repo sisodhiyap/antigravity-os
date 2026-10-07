@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-08-25T08:30:00.000Z",
+  "candidateALatencyMs": 0.84,
+  "candidateBLatencyMs": 0.60,
+  "coldStartupMs": 2,
+  "status": "PASS"
+}

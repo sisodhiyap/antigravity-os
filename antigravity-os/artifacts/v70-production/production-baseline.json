@@ -1,0 +1,8 @@
+{
+  "checkpointId": "v70_frozen_prod_baseline",
+  "timestamp": "2026-08-25T09:49:49.619Z",
+  "sourceFilesHash": "1ea029ea4f3720ffcfe854386a9b090dae77f93eac4807f1b09c81f50e795b2a",
+  "configHash": "ce187041b271f99ffb24fad6e7f72d95bf811e49f406004b8f26f7d8451ec25c",
+  "dbStateHash": "002c2d5b65836babe341e0eeb957c9585460bd09c02d925c093b7537a5072cf9",
+  "overallStateHash": "90728b7264879f252d855d26ef30cd66faa5c91cc6f425859fbe5d03609dbf5b"
+}

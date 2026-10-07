@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-08-25T07:29:53.752Z",
+  "evidenceDirectory": "artifacts/mission/evidence/",
+  "totalArtifacts": 6,
+  "artifacts": [
+    {
+      "filename": "AI_ROUTING_TELEMETRY.json",
+      "sizeBytes": 4146,
+      "sha256": "8043fddb5fb8186920bffa89f43c00377bf3196854eb5092ad96d16e22ce557d"
+    },
+    {
+      "filename": "BASELINE_EVIDENCE.json",
+      "sizeBytes": 1908,
+      "sha256": "8a4a512460de3ca1425082cf0ff2e6bcb82dc99681e5f9d9fca0b0828b36a34f"
+    },
+    {
+      "filename": "FAILURE_REPAIR_RESULTS.json",
+      "sizeBytes": 2889,
+      "sha256": "7f05f5380b87addcf8bbf51886109a8f077a2929c779d6747b3feda51e9b8c00"
+    },
+    {
+      "filename": "FUNCTIONAL_TEST_ASSERTIONS.json",
+      "sizeBytes": 2725,
+      "sha256": "cf432da26fa0431f6d8be436da0a4e31b84d5516e509f7bb8023e49779291199"
+    },
+    {
+      "filename": "PERFORMANCE_RESULTS.json",
+      "sizeBytes": 292,
+      "sha256": "f159bc55176a80a30844f9b6ad50add210fc8cf1cb0913c8b2f0f0aa30eadfe1"
+    },
+    {
+      "filename": "SECURITY_ATTACK_RESULTS.json",
+      "sizeBytes": 3693,
+      "sha256": "0019b3c9b8f218e5cdcee03ba1deb49667c3d2cb29162c672b5dd9de28d92d0c"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "projectName": "Chronos VFX & Creative Agency Studio",
+  "sourceType": "FIGMA_EXPORT_BUNDLE",
+  "sourcePath": "artifacts/v57-metal-proof/design-source",
+  "screenCount": 6,
+  "assetCount": 24,
+  "screens": [
+    "01_Studio_Dashboard",
+    "02_VFX_Shot_Kanban",
+    "03_Client_Review_Portal",
+    "04_Deliverable_Approval_Workflow",
+    "05_Team_RBAC_Directory",
+    "06_Financial_Invoice_Analytics"
+  ],
+  "knownRequirements": [
+    "SQLite WAL persistence",
+    "PBKDF2-SHA512 auth",
+    "4-Role RBAC",
+    "Real-time asset review approval states",
+    "Responsive 375px to 1920px viewports"
+  ],
+  "timestamp": "2026-08-25T08:29:21.227Z"
+}

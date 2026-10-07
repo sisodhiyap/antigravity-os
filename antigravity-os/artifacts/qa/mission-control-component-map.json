@@ -1,0 +1,246 @@
+{
+  "system": "Antigravity OS v5.2 Mission Control",
+  "version": "v5.2",
+  "environment": "LOCAL + DOCKER (Private Workstation)",
+  "generatedAt": "2026-08-25T04:10:00Z",
+  "components": [
+    {
+      "component": "MissionControlDeck",
+      "file": "src/app/page.tsx",
+      "route": "/",
+      "purpose": "Primary Mission Command Deck, Universal Command Input, Quick Missions, AI Flow, Matrix, Telemetry, and Activity Stream.",
+      "interactiveElements": [
+        "Universal Command Input",
+        "Launch Mission Button",
+        "Quick Mission Launcher Cards (6)",
+        "Advanced Telemetry Mode Toggle",
+        "System Status Matrix Cards",
+        "Live Operations Event List"
+      ],
+      "apiDependencies": [
+        "/api/orchestrate/command",
+        "/api/telemetry",
+        "/api/health",
+        "/api/tasks"
+      ],
+      "stateDependencies": [
+        "useSystemStore",
+        "useLiveTelemetry",
+        "advancedMode (local state)",
+        "commandInput (local state)"
+      ],
+      "aiDependencies": [
+        "Ollama (qwen2.5-coder:7b / 14b)",
+        "AirLLM Safe Cascade",
+        "OpenRouter Mesh"
+      ],
+      "mcpDependencies": []
+    },
+    {
+      "component": "MissionCard",
+      "file": "src/components/ui/MissionCard.tsx",
+      "route": "Global UI Primitive",
+      "purpose": "Reusable living card primitive featuring pointer-tracking dynamic radial glow and 7 distinct visual states.",
+      "interactiveElements": [
+        "Mouse-move pointer tracking",
+        "Keyboard focus / Enter trigger",
+        "Card click handler",
+        "Header action button",
+        "Footer action slot"
+      ],
+      "apiDependencies": [],
+      "stateDependencies": ["--mouse-x", "--mouse-y", "selected", "disabled", "loading", "error"],
+      "aiDependencies": [],
+      "mcpDependencies": []
+    },
+    {
+      "component": "MissionNavigator",
+      "file": "src/components/layout/Sidebar.tsx",
+      "route": "Global Layout Sidebar",
+      "purpose": "Primary navigation sidebar organized into 4 functional mission domains with animated 2px gold selected stroke and hardware status.",
+      "interactiveElements": [
+        "Sidebar collapse/expand toggle",
+        "11 navigation links with active state indicator",
+        "Sign Out / session termination button"
+      ],
+      "apiDependencies": ["/api/omnicraft/auth (logout)"],
+      "stateDependencies": ["useSystemStore (isSidebarCollapsed)", "usePathname"],
+      "aiDependencies": [],
+      "mcpDependencies": []
+    },
+    {
+      "component": "MissionStatusBar",
+      "file": "src/components/layout/Header.tsx",
+      "route": "Global Layout Header",
+      "purpose": "Top status bar with universal search trigger (Cmd/Ctrl+K), live telemetry pills, polling controls, clock, theme toggle, and avatar.",
+      "interactiveElements": [
+        "Universal search trigger button (Cmd/Ctrl+K)",
+        "Live stream pause/resume toggle button",
+        "Theme toggle (Dark/Light/System)",
+        "User profile avatar button"
+      ],
+      "apiDependencies": ["/api/telemetry"],
+      "stateDependencies": ["useSystemStore (commandPaletteOpen, isLive)", "useTheme"],
+      "aiDependencies": [],
+      "mcpDependencies": []
+    },
+    {
+      "component": "SystemStatusMatrix",
+      "file": "src/components/mission/SystemStatusMatrix.tsx",
+      "route": "/",
+      "purpose": "Live multi-node health overview for AI Router, Ollama, AirLLM, OpenRouter, MCP, Docker Stack, and Database WAL.",
+      "interactiveElements": ["Card status inspection"],
+      "apiDependencies": ["/api/health", "/api/telemetry"],
+      "stateDependencies": ["useLiveTelemetry"],
+      "aiDependencies": ["Ollama (127.0.0.1:11434)", "AirLLM (127.0.0.1:8000)", "OpenRouter"],
+      "mcpDependencies": ["15 MCP servers"]
+    },
+    {
+      "component": "AIComputeFlow",
+      "file": "src/components/mission/AIComputeFlow.tsx",
+      "route": "/",
+      "purpose": "Visual multi-tier routing architecture graph showing Request -> Intent Classifier -> Active Provider -> Response synthesis.",
+      "interactiveElements": ["Provider node inspection"],
+      "apiDependencies": ["/api/orchestrate/command", "/api/telemetry"],
+      "stateDependencies": ["activeTier", "selectedProvider", "selectedModel", "latencyMs"],
+      "aiDependencies": ["In-process CentralAIRouter"],
+      "mcpDependencies": []
+    },
+    {
+      "component": "TelemetryBar",
+      "file": "src/components/mission/TelemetryBar.tsx",
+      "route": "/",
+      "purpose": "Real-time horizontal hardware envelope bars displaying GPU VRAM, System RAM, CPU Load, and NVMe disk utilization.",
+      "interactiveElements": [],
+      "apiDependencies": ["/api/telemetry"],
+      "stateDependencies": ["gpuVramUsedGb", "ramUsedGb", "cpuPercent", "diskPercent"],
+      "aiDependencies": [],
+      "mcpDependencies": []
+    },
+    {
+      "component": "LiveActivity",
+      "file": "src/components/mission/LiveActivity.tsx",
+      "route": "/",
+      "purpose": "Chronological timeline of kernel events, agent decisions, and tool executions with live telemetry badges.",
+      "interactiveElements": ["Event row inspection", "Scrollable timeline"],
+      "apiDependencies": ["/api/tasks", "/api/kernel/events"],
+      "stateDependencies": ["events list (local state)"],
+      "aiDependencies": [],
+      "mcpDependencies": []
+    },
+    {
+      "component": "MissionPipeline",
+      "file": "src/components/mission/MissionPipeline.tsx",
+      "route": "/factory",
+      "purpose": "8-stage autonomous engineering pipeline (Understand, Blueprint, Design, Assets, Code, Preview, QA, Deploy).",
+      "interactiveElements": ["Stage node inspection"],
+      "apiDependencies": ["/api/factory/build"],
+      "stateDependencies": ["stages list", "currentStageId"],
+      "aiDependencies": ["qwen2.5-coder:14b", "Architect Agent", "Builder Agent"],
+      "mcpDependencies": ["Playwright"]
+    },
+    {
+      "component": "WebsiteFactoryPage",
+      "file": "src/app/factory/page.tsx",
+      "route": "/factory",
+      "purpose": "End-to-end autonomous website generation workspace with query param loading, real-time pipeline, and sandbox preview.",
+      "interactiveElements": [
+        "Prompt specification input",
+        "Synthesize Website button",
+        "Interactive Preview link"
+      ],
+      "apiDependencies": ["/api/factory/build"],
+      "stateDependencies": ["prompt (URL & local state)", "isRunning", "projectUrl", "stages"],
+      "aiDependencies": ["CentralAIRouter", "CodeSynthesizer"],
+      "mcpDependencies": []
+    },
+    {
+      "component": "MediaStudioPage",
+      "file": "src/app/media/page.tsx",
+      "route": "/media",
+      "purpose": "Multi-modal generation studio with cinematic tabs (IMAGE, VIDEO, AUDIO, 3D, SVG) and explicit provenance tracking.",
+      "interactiveElements": [
+        "5 media format tabs",
+        "Prompt description textarea",
+        "Generate media button",
+        "Download artifact button",
+        "Live media preview canvas"
+      ],
+      "apiDependencies": [
+        "/api/omnicraft/image",
+        "/api/omnicraft/video",
+        "/api/omnicraft/audio",
+        "/api/omnicraft/mesh3d"
+      ],
+      "stateDependencies": ["tab", "prompt", "isGenerating", "result", "error"],
+      "aiDependencies": ["Local SVG Math Engine", "Gemini Vision", "Speech Synthesizer"],
+      "mcpDependencies": ["Blender"]
+    },
+    {
+      "component": "AIControlPage",
+      "file": "src/app/ai/page.tsx",
+      "route": "/ai",
+      "purpose": "Multi-tier LLM mesh configuration, active model overrides, prompt playground, and token metrics.",
+      "interactiveElements": ["Model selector", "Prompt chat box", "Send prompt button", "Parameter sliders"],
+      "apiDependencies": ["/api/omnicraft/chat", "/api/models", "/api/providers"],
+      "stateDependencies": ["selectedModel", "messages", "isLoading"],
+      "aiDependencies": ["Ollama", "AirLLM", "OpenRouter"],
+      "mcpDependencies": []
+    },
+    {
+      "component": "AgentsPage",
+      "file": "src/app/agents/page.tsx",
+      "route": "/agents",
+      "purpose": "Autonomous 7-role engineering swarm status, agent capability matrix, and task delegation launcher.",
+      "interactiveElements": ["Agent card selection", "Run agent button", "Task prompt input"],
+      "apiDependencies": ["/api/agents", "/api/tasks"],
+      "stateDependencies": ["agents list", "activeAgent", "tasks"],
+      "aiDependencies": ["Multi-Agent Swarm Orchestrator"],
+      "mcpDependencies": ["Playwright", "GitHub", "Prisma"]
+    },
+    {
+      "component": "MCPHubPage",
+      "file": "src/app/mcp/page.tsx",
+      "route": "/mcp",
+      "purpose": "Model Context Protocol registry, server health diagnostics, connected tool discovery, and RBAC authorization.",
+      "interactiveElements": ["Server cards", "Tool execute trigger", "Refresh registry button"],
+      "apiDependencies": ["/api/kernel/plugins", "/api/kernel/services"],
+      "stateDependencies": ["servers list", "selectedTool"],
+      "aiDependencies": [],
+      "mcpDependencies": ["15 MCP servers"]
+    },
+    {
+      "component": "HealthCenterPage",
+      "file": "src/app/health-center/page.tsx",
+      "route": "/health-center",
+      "purpose": "Deep hardware sensor diagnostics (CPU, GPU VRAM, Host RAM, NVMe, Database, Docker, AI Router).",
+      "interactiveElements": ["Run Diagnostics button", "Service restart trigger", "Telemetry export"],
+      "apiDependencies": ["/api/health", "/api/health/database", "/api/telemetry"],
+      "stateDependencies": ["diagnosticsResult", "isChecking"],
+      "aiDependencies": [],
+      "mcpDependencies": []
+    },
+    {
+      "component": "CertificationPage",
+      "file": "src/app/certification/page.tsx",
+      "route": "/certification",
+      "purpose": "Automated 19-phase validation test suite, official production certificates, and evidence audit viewer.",
+      "interactiveElements": ["Run Validation Suite button", "Export Certificate button", "Phase accordions"],
+      "apiDependencies": ["/api/benchmarks", "/api/health"],
+      "stateDependencies": ["testResults", "isRunningTests"],
+      "aiDependencies": [],
+      "mcpDependencies": []
+    },
+    {
+      "component": "SettingsPage",
+      "file": "src/app/settings/page.tsx",
+      "route": "/settings",
+      "purpose": "Workstation environment preferences, security policy, theme persistence, and API key management.",
+      "interactiveElements": ["Theme selector", "AI mode radio", "Save preferences button", "Clear cache button"],
+      "apiDependencies": ["/api/omnicraft/auth"],
+      "stateDependencies": ["settingsForm", "useTheme"],
+      "aiDependencies": [],
+      "mcpDependencies": []
+    }
+  ]
+}

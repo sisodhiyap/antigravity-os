@@ -1,0 +1,15 @@
+{
+  "evidenceCoverage": 100,
+  "verifiedClaimsCount": 8,
+  "supportedClaimsCount": 0,
+  "partiallyVerifiedClaimsCount": 0,
+  "unverifiedClaimsCount": 0,
+  "contradictedClaimsCount": 0,
+  "hypotheticalClaimsCount": 0,
+  "sourceRetrievalCoverage": 0,
+  "evidenceMatchCoverage": 0,
+  "contradictionResolutionRate": 100,
+  "freshnessCoverage": 100,
+  "numericalVerificationRate": 0,
+  "overallScore": 80
+}

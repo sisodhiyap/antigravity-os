@@ -23,6 +23,8 @@ import {
   Wrench,
   Loader2,
   CheckCircle2,
+  Eraser,
+  Mic,
 } from "lucide-react";
 import { useSystemStore } from "@/stores/useSystemStore";
 import { useTerminalStore } from "@/stores/useTerminalStore";
@@ -79,6 +81,10 @@ export const CommandPalette: React.FC = () => {
   const actions = [
     // ── Navigation ──────────────────────────────────────────
     { label: "Navigate: System Overview Dashboard", category: "Navigation", icon: Layers, action: () => { router.push("/"); setCommandPaletteOpen(false); } },
+    { label: "Navigate: Media Studio (Generative)", category: "Navigation", icon: Sparkles, action: () => { router.push("/media"); setCommandPaletteOpen(false); } },
+    { label: "Navigate: Watermark Remover (AI Inpaint)", category: "Navigation", icon: Eraser, action: () => { router.push("/media?tab=WATERMARK"); setCommandPaletteOpen(false); } },
+    { label: "Navigate: Free Music Generator (Synth)", category: "Navigation", icon: Music, action: () => { router.push("/media?tab=MUSIC"); setCommandPaletteOpen(false); } },
+    { label: "Navigate: Neural Voice Generator (TTS)", category: "Navigation", icon: Mic, action: () => { router.push("/media?tab=VOICE"); setCommandPaletteOpen(false); } },
     { label: "Navigate: Swarm Agent Hub", category: "Navigation", icon: Users, action: () => { router.push("/agents"); setCommandPaletteOpen(false); } },
     { label: "Navigate: MCP Tool Registry", category: "Navigation", icon: Network, action: () => { router.push("/mcp"); setCommandPaletteOpen(false); } },
     { label: "Navigate: Interactive OS Terminal", category: "Navigation", icon: Terminal, action: () => { router.push("/terminal"); setCommandPaletteOpen(false); } },
@@ -87,12 +93,14 @@ export const CommandPalette: React.FC = () => {
     { label: "Navigate: Projects", category: "Navigation", icon: Layers, action: () => { router.push("/projects"); setCommandPaletteOpen(false); } },
     { label: "Navigate: Todo + Notes", category: "Navigation", icon: CheckCircle2, action: () => { router.push("/todo-notes"); setCommandPaletteOpen(false); } },
     { label: "Navigate: Settings", category: "Navigation", icon: Settings, action: () => { router.push("/settings"); setCommandPaletteOpen(false); } },
-    // ── AI Commands ──────────────────────────────────────────
+    // ── AI & Creative Commands ──────────────────────────────
+    { label: "Tool: Remove watermark from image", category: "AI", icon: Eraser, action: () => { router.push("/media?tab=WATERMARK"); setCommandPaletteOpen(false); } },
+    { label: "Tool: Generate royalty-free music track", category: "AI", icon: Music, action: () => { router.push("/media?tab=MUSIC"); setCommandPaletteOpen(false); } },
+    { label: "Tool: Synthesize neural voiceover speech", category: "AI", icon: Mic, action: () => { router.push("/media?tab=VOICE"); setCommandPaletteOpen(false); } },
     { label: "AI: Build me a portfolio website", category: "AI", icon: Globe, action: () => { setAiMode(true); setQuery("Build me a portfolio website"); runAiCommand("Build me a portfolio website"); } },
     { label: "AI: Generate hero image", category: "AI", icon: Image, action: () => { setAiMode(true); setQuery("Generate a hero image for my site"); runAiCommand("Generate a hero image for my site"); } },
     { label: "AI: Generate cinematic video", category: "AI", icon: Video, action: () => { setAiMode(true); setQuery("Generate a cinematic hero video"); runAiCommand("Generate a cinematic hero video"); } },
-    { label: "AI: Generate voiceover audio", category: "AI", icon: Music, action: () => { setAiMode(true); setQuery("Generate voiceover audio"); runAiCommand("Generate voiceover audio"); } },
-    { label: "AI: Deploy to Vercel", category: "AI", icon: Rocket, action: () => { setAiMode(true); setQuery("Deploy to Vercel"); runAiCommand("Deploy to Vercel"); } },
+    { label: "AI: Deploy to Local Docker", category: "AI", icon: Rocket, action: () => { setAiMode(true); setQuery("Deploy to Local Docker"); runAiCommand("Deploy to Local Docker"); } },
     { label: "AI: Fix all errors", category: "AI", icon: Wrench, action: () => { setAiMode(true); setQuery("Fix all errors"); runAiCommand("Fix all errors"); } },
     // ── Dev Commands ──────────────────────────────────────────
     { label: "Run: Playwright E2E QA", category: "Dev", icon: Play, action: () => { executeCommand("test"); setCommandPaletteOpen(false); } },
@@ -173,7 +181,7 @@ export const CommandPalette: React.FC = () => {
 
         {/* Footer */}
         <div className="p-2.5 bg-slate-950/95 border-t border-white/5 flex items-center justify-between text-[11px] font-mono text-slate-500 px-4">
-          <span>ANTIGRAVITY OS v5.1 — COMMAND INTERFACE</span>
+          <span>ANTIGRAVITY OS v5.2 — COMMAND INTERFACE</span>
           <span>↵ Execute AI • ESC Close</span>
         </div>
       </div>

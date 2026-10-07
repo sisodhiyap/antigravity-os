@@ -1,0 +1,37 @@
+[
+  {
+    "id": "PROJ_SAAS",
+    "name": "OmniDesk Cloud Ops",
+    "class": "SaaS Dashboard",
+    "fidelity": 98.7,
+    "latencyMs": 0.55
+  },
+  {
+    "id": "PROJ_FINTECH",
+    "name": "NovaPay Banking",
+    "class": "Fintech Application",
+    "fidelity": 98.9,
+    "latencyMs": 0.54
+  },
+  {
+    "id": "PROJ_VFX",
+    "name": "Hyperion Studio",
+    "class": "Creative/VFX Studio",
+    "fidelity": 98.5,
+    "latencyMs": 0.58
+  },
+  {
+    "id": "PROJ_ECOMMERCE",
+    "name": "Aura Marketplace",
+    "class": "E-Commerce Product",
+    "fidelity": 98.6,
+    "latencyMs": 0.57
+  },
+  {
+    "id": "PROJ_PRODUCTIVITY",
+    "name": "TaskPulse AI",
+    "class": "Productivity Application",
+    "fidelity": 98.8,
+    "latencyMs": 0.56
+  }
+]

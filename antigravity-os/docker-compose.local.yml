@@ -1,0 +1,32 @@
+version: "3.9"
+
+# ── Antigravity OS v5.2 — Local Development Override ─────────────
+# Extends docker-compose.yml for hot-reload development
+# Usage: docker compose -f docker-compose.yml -f docker-compose.local.yml up
+
+services:
+  antigravity-os:
+    build:
+      target: deps   # Build only deps stage, not full production
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      - NODE_ENV=development
+      - DEPLOYMENT_MODE=LOCAL
+    command: ["npm", "run", "dev"]
+    volumes:
+      - .:/app                          # Hot-reload: mount entire project
+      - /app/node_modules               # Preserve container node_modules
+      - /app/.next                      # Preserve .next cache
+    restart: "no"                       # Don't auto-restart in dev
+
+  ollama:
+    # In local dev, expose Ollama on host for direct API testing
+    ports:
+      - "127.0.0.1:11434:11434"
+
+  ag-router:
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./src:/app/src                  # Hot-reload router source

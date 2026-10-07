@@ -1,0 +1,38 @@
+[
+  {
+    "projectId": "proj_release_test",
+    "fromState": "NEW",
+    "toState": "NEW",
+    "actor": "SYSTEM",
+    "reason": "Project initialized",
+    "evidence": "INIT_EVENT",
+    "timestamp": 1787716778299
+  },
+  {
+    "projectId": "proj_release_test",
+    "fromState": "NEW",
+    "toState": "IMPORTING",
+    "actor": "OPERATOR",
+    "reason": "Ingesting user bundle",
+    "evidence": "EV_IMPORT",
+    "timestamp": 1787716778299
+  },
+  {
+    "projectId": "proj_release_test",
+    "fromState": "IMPORTING",
+    "toState": "UNDERSTANDING",
+    "actor": "SYSTEM",
+    "reason": "Parsing AST and dependencies",
+    "evidence": "EV_UNDERSTAND",
+    "timestamp": 1787716778299
+  },
+  {
+    "projectId": "proj_release_test",
+    "fromState": "UNDERSTANDING",
+    "toState": "PLANNING",
+    "actor": "HERMES",
+    "reason": "Constructed DAG task graph",
+    "evidence": "EV_PLAN",
+    "timestamp": 1787716778299
+  }
+]

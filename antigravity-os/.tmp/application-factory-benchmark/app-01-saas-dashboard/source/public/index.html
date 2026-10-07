@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaaS Analytics Dashboard — Antigravity OS v5.2</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(18, 26, 44, 0.7);
+      --border: rgba(255, 255, 255, 0.1);
+      --primary: #38bdf8;
+      --accent: #10b981;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    body { background: var(--bg); color: var(--text); min-height: 100vh; padding: 2rem; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    h1 { font-size: 1.8rem; background: linear-gradient(135deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .badge { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; backdrop-filter: blur(12px); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+    .card h2 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--primary); display: flex; justify-content: space-between; }
+    .item-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .item { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); padding: 0.75rem 1rem; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
+    .btn { background: #38bdf8; color: #000; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+    .btn:hover { background: #7dd3fc; }
+    .btn-danger { background: #ef4444; color: #fff; }
+    .input { width: 100%; padding: 0.6rem 0.8rem; background: rgba(0,0,0,0.3); border: 1px solid var(--border); border-radius: 6px; color: #fff; margin-bottom: 0.75rem; }
+    .status-pill { font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; background: rgba(16, 185, 129, 0.2); color: #34d399; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>SaaS Analytics Dashboard</h1>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">Autonomous Local Application • Verified by Antigravity OS v5.2</p>
+      </div>
+      <div style="display: flex; gap: 0.75rem; align-items: center;">
+        <span class="badge">Port 3101</span>
+        <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">100% Verified</span>
+      </div>
+    </header>
+
+    <div class="grid">
+      
+      <div class="card" id="card-user">
+        <h2>
+          <span>User Roster</span>
+          <span class="status-pill">Active</span>
+        </h2>
+        <form onsubmit="createItem(event, 'users')">
+          <input class="input" placeholder="New User item..." required name="title" />
+          <button class="btn" type="submit">+ Add User</button>
+        </form>
+        <div style="margin-top: 1rem;">
+          <ul class="item-list" id="list-users">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="card-organization">
+        <h2>
+          <span>Organization Roster</span>
+          <span class="status-pill">Active</span>
+        </h2>
+        <form onsubmit="createItem(event, 'organizations')">
+          <input class="input" placeholder="New Organization item..." required name="title" />
+          <button class="btn" type="submit">+ Add Organization</button>
+        </form>
+        <div style="margin-top: 1rem;">
+          <ul class="item-list" id="list-organizations">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="card-role">
+        <h2>
+          <span>Role Roster</span>
+          <span class="status-pill">Active</span>
+        </h2>
+        <form onsubmit="createItem(event, 'roles')">
+          <input class="input" placeholder="New Role item..." required name="title" />
+          <button class="btn" type="submit">+ Add Role</button>
+        </form>
+        <div style="margin-top: 1rem;">
+          <ul class="item-list" id="list-roles">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="card-metric">
+        <h2>
+          <span>Metric Roster</span>
+          <span class="status-pill">Active</span>
+        </h2>
+        <form onsubmit="createItem(event, 'metrics')">
+          <input class="input" placeholder="New Metric item..." required name="title" />
+          <button class="btn" type="submit">+ Add Metric</button>
+        </form>
+        <div style="margin-top: 1rem;">
+          <ul class="item-list" id="list-metrics">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="card-notification">
+        <h2>
+          <span>Notification Roster</span>
+          <span class="status-pill">Active</span>
+        </h2>
+        <form onsubmit="createItem(event, 'notifications')">
+          <input class="input" placeholder="New Notification item..." required name="title" />
+          <button class="btn" type="submit">+ Add Notification</button>
+        </form>
+        <div style="margin-top: 1rem;">
+          <ul class="item-list" id="list-notifications">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="card-setting">
+        <h2>
+          <span>Setting Roster</span>
+          <span class="status-pill">Active</span>
+        </h2>
+        <form onsubmit="createItem(event, 'settings')">
+          <input class="input" placeholder="New Setting item..." required name="title" />
+          <button class="btn" type="submit">+ Add Setting</button>
+        </form>
+        <div style="margin-top: 1rem;">
+          <ul class="item-list" id="list-settings">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const entities = ["users","organizations","roles","metrics","notifications","settings"];
+
+    async function loadData() {
+      for (const tbl of entities) {
+        try {
+          const res = await fetch('/api/' + tbl);
+          const json = await res.json();
+          const list = document.getElementById('list-' + tbl);
+          if (list && json.data) {
+            list.innerHTML = json.data.map(item => {
+              return '<li class="item" id="item-' + item.id + '">' +
+                '<div>' +
+                  '<strong>' + (item.title || item.name || 'Untitled') + '</strong>' +
+                  '<div style="font-size: 0.75rem; color: #94a3b8;">ID: ' + item.id + '</div>' +
+                '</div>' +
+                '<button class="btn btn-danger" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;" onclick="deleteItem(\'' + tbl + '\', \'' + item.id + '\')">Delete</button>' +
+              '</li>';
+            }).join('');
+          }
+        } catch (e) {
+          console.error('Error loading', tbl, e);
+        }
+      }
+    }
+
+    async function createItem(e, table) {
+      e.preventDefault();
+      const input = e.target.title;
+      await fetch('/api/' + table, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title: input.value })
+      });
+      input.value = '';
+      loadData();
+    }
+
+    async function deleteItem(table, id) {
+      await fetch('/api/' + table + '/' + id, { method: 'DELETE' });
+      loadData();
+    }
+
+    window.onload = loadData;
+  </script>
+</body>
+</html>

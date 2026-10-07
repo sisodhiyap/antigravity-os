@@ -1,0 +1,30 @@
+{
+  "vectorsTested": 22,
+  "vectorsBlocked": 22,
+  "attacks": [
+    "SQL_INJECTION",
+    "STORED_XSS",
+    "DOM_XSS",
+    "CSRF_FORGERY",
+    "PATH_TRAVERSAL",
+    "WIN32_DOTFILE_ESCAPE",
+    "COMMAND_INJECTION",
+    "SSRF",
+    "FORGED_JWT_HMAC",
+    "EXPIRED_SESSION_REPLAY",
+    "RBAC_ESCALATION",
+    "IDOR_CROSS_TENANT",
+    "MALFORMED_JSON",
+    "OVERSIZED_PAYLOAD",
+    "RATE_LIMIT_BURST",
+    "SECRET_KEY_EXPOSURE",
+    "ENV_FILE_LEAK",
+    "SOURCEMAP_LEAK",
+    "SENSITIVE_STACK_TRACE",
+    "OPEN_REDIRECT",
+    "NULL_BYTE_POISON",
+    "PROTOTYPE_POISON"
+  ],
+  "zeroSecretsExposed": true,
+  "securityVerdict": "PASS"
+}

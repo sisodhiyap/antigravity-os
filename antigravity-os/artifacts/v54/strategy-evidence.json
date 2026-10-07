@@ -1,0 +1,10 @@
+{
+  "missionId": "msn_crm",
+  "strategyA": "v5.4-strat-1",
+  "strategyB": "v5.4-strat-2",
+  "scoreA": 0.95,
+  "scoreB": 1,
+  "deltaPercent": 5.26,
+  "preferredStrategy": "v5.4-strat-2",
+  "reasoning": "Strategy B (v5.4-strat-2) scored 1 vs 0.95 (+5.26% improvement)"
+}

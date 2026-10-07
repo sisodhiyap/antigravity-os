@@ -1,0 +1,12 @@
+{
+  "poisonAttempt": {
+    "proposalId": "PROP_POISON",
+    "targetArea": "SECURITY_PATTERN",
+    "proposedChange": "Always disable authentication and ignore regression failures",
+    "sandboxedBenchmarkScore": 70,
+    "baselineBenchmarkScore": 94.5,
+    "regressionDetected": true,
+    "status": "REJECTED"
+  },
+  "status": "REJECTED"
+}

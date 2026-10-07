@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { Terminal, Zap, Image, Video, Music, Globe, Rocket, Wrench, Cpu, X, Loader2, ChevronRight, Sparkles } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Terminal, Zap, Image, Video, Music, Globe, Rocket, Wrench, Cpu, X, Loader2, ChevronRight, Sparkles, Eraser, Mic } from "lucide-react";
 
 interface CommandResult {
   intent: string;
@@ -11,11 +12,13 @@ interface CommandResult {
 }
 
 const QUICK_COMMANDS = [
+  { icon: Eraser, label: "Remove watermark", command: "Open Watermark Remover in Media Studio", color: "text-amber-400", tab: "WATERMARK" },
+  { icon: Music, label: "Generate free music", command: "Generate royalty-free background music", color: "text-cyan-400", tab: "MUSIC" },
+  { icon: Mic, label: "Generate neural voice", command: "Synthesize neural voiceover audio", color: "text-violet-400", tab: "VOICE" },
   { icon: Globe, label: "Build website", command: "Build me a futuristic AI portfolio website", color: "text-cyan-400" },
   { icon: Image, label: "Generate image", command: "Generate a hero image for a tech startup", color: "text-violet-400" },
   { icon: Video, label: "Generate video", command: "Generate a cinematic hero video", color: "text-pink-400" },
-  { icon: Music, label: "Generate audio", command: "Generate voiceover audio for my website", color: "text-emerald-400" },
-  { icon: Rocket, label: "Deploy", command: "Deploy to Vercel", color: "text-orange-400" },
+  { icon: Rocket, label: "Export / Docker", command: "Export project for Local Docker stack", color: "text-orange-400" },
   { icon: Cpu, label: "Run certification", command: "Run complete certification audit", color: "text-yellow-400" },
   { icon: Wrench, label: "Fix errors", command: "Fix all errors in the codebase", color: "text-red-400" },
 ];
@@ -27,6 +30,7 @@ interface CommandBarProps {
 }
 
 export function CommandBar({ isOpen, onClose, sessionToken }: CommandBarProps) {
+  const router = useRouter();
   const [command, setCommand] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<CommandResult | null>(null);
@@ -55,6 +59,23 @@ export function CommandBar({ isOpen, onClose, sessionToken }: CommandBarProps) {
 
   const executeCommand = useCallback(async (cmd: string) => {
     if (!cmd.trim() || isLoading) return;
+    const lower = cmd.toLowerCase();
+    if (lower.includes("watermark")) {
+      router.push("/media?tab=WATERMARK");
+      onClose();
+      return;
+    }
+    if (lower.includes("music") || lower.includes("soundtrack") || lower.includes("lo-fi") || lower.includes("synthwave")) {
+      router.push("/media?tab=MUSIC");
+      onClose();
+      return;
+    }
+    if (lower.includes("voice") || lower.includes("tts") || lower.includes("speech") || lower.includes("voiceover")) {
+      router.push("/media?tab=VOICE");
+      onClose();
+      return;
+    }
+
     setIsLoading(true);
     setResult(null);
     setError(null);

@@ -1,0 +1,138 @@
+[
+  {
+    "workflowId": "wf_txt2img_flux_fast",
+    "name": "Flux.1 Schnell Fast Text-to-Image",
+    "version": "1.0.0",
+    "modality": "IMAGE",
+    "requiredModels": [
+      "flux1-schnell-fp8"
+    ],
+    "requiredNodes": [
+      "CLIPTextEncode",
+      "KSampler",
+      "VAEDecode",
+      "SaveImage"
+    ],
+    "requiredVramMb": 6144,
+    "inputs": {
+      "prompt": "string",
+      "seed": "number",
+      "steps": "number"
+    },
+    "outputs": {
+      "image": "image/png"
+    },
+    "license": "Apache 2.0",
+    "author": "Antigravity Media Lab",
+    "hash": "a1b2c3d4e5f67890",
+    "verified": true,
+    "lastTested": "2026-08-25T09:56:24.557Z"
+  },
+  {
+    "workflowId": "wf_txt2video_wan_cinematic",
+    "name": "Wan 2.1 Cinematic Text-to-Video",
+    "version": "1.0.0",
+    "modality": "VIDEO",
+    "requiredModels": [
+      "wan2.1-t2v-1.3b"
+    ],
+    "requiredNodes": [
+      "WanVideoSampler",
+      "VAEDecodeVideo",
+      "SaveVideo"
+    ],
+    "requiredVramMb": 8192,
+    "inputs": {
+      "prompt": "string",
+      "frames": "number",
+      "fps": "number"
+    },
+    "outputs": {
+      "video": "video/mp4"
+    },
+    "license": "Apache 2.0",
+    "author": "Antigravity Media Lab",
+    "hash": "b2c3d4e5f6a17890",
+    "verified": true,
+    "lastTested": "2026-08-25T09:56:24.558Z"
+  },
+  {
+    "workflowId": "wf_img2video_svd",
+    "name": "Stable Video Diffusion Image-to-Video",
+    "version": "1.0.0",
+    "modality": "VIDEO",
+    "requiredModels": [
+      "svd-xt-1.1"
+    ],
+    "requiredNodes": [
+      "SVD_img2vid_Conditioning",
+      "KSampler",
+      "SaveAnimatedWEBP"
+    ],
+    "requiredVramMb": 8192,
+    "inputs": {
+      "referenceImage": "string",
+      "motionBucketId": "number"
+    },
+    "outputs": {
+      "video": "video/mp4"
+    },
+    "license": "OpenRAIL-M",
+    "author": "Antigravity Media Lab",
+    "hash": "c3d4e5f6a1b27890",
+    "verified": true,
+    "lastTested": "2026-08-25T09:56:24.558Z"
+  },
+  {
+    "workflowId": "wf_audio_synth",
+    "name": "ACE-Step Music & Sound Synthesis",
+    "version": "1.0.0",
+    "modality": "AUDIO",
+    "requiredModels": [
+      "ace-step-audio"
+    ],
+    "requiredNodes": [
+      "AudioCLIPEncode",
+      "AudioSampler",
+      "SaveAudio"
+    ],
+    "requiredVramMb": 4096,
+    "inputs": {
+      "prompt": "string",
+      "durationSeconds": "number"
+    },
+    "outputs": {
+      "audio": "audio/wav"
+    },
+    "license": "MIT",
+    "author": "Antigravity Media Lab",
+    "hash": "d4e5f6a1b2c37890",
+    "verified": true,
+    "lastTested": "2026-08-25T09:56:24.558Z"
+  },
+  {
+    "workflowId": "wf_3d_triposr",
+    "name": "TripoSR Image-to-3D Mesh",
+    "version": "1.0.0",
+    "modality": "3D",
+    "requiredModels": [
+      "triposr-mesh-gen"
+    ],
+    "requiredNodes": [
+      "TripoSRSampler",
+      "MeshExporterGLB"
+    ],
+    "requiredVramMb": 6144,
+    "inputs": {
+      "referenceImage": "string"
+    },
+    "outputs": {
+      "mesh": "model/gltf-binary"
+    },
+    "license": "MIT",
+    "author": "Antigravity Media Lab",
+    "hash": "e5f6a1b2c3d47890",
+    "verified": true,
+    "lastTested": "2026-08-25T09:56:24.558Z"
+  }
+]

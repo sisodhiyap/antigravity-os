@@ -1,0 +1,34 @@
+{
+  "certificateId": "cert_qual_1787746267123_wbpwy",
+  "projectId": "pres_1787746267107_f5fip",
+  "projectTitle": "Global Strategy: 東京 • Berlin (Größe) • دبي • 🚀",
+  "projectHash": "a9a6c86a95e6c1cf18b4235f4d8a8c7abc6cc8147de800986387a671e21c7d9f",
+  "presentationHash": "6a94d7e736f61cfcc999b4e67d044fa2c6a81aa200421c182c88db8364d2ac7b",
+  "slideCount": 3,
+  "creativeQuality": 94,
+  "trustQuality": 100,
+  "technicalIntegrity": 100,
+  "accessibilityScore": 98,
+  "exportScore": 98,
+  "decision": "APPROVED",
+  "repairCyclesCount": 0,
+  "modelsUsed": [
+    "ollama:llama3",
+    "ollama:mistral"
+  ],
+  "enginesUsed": [
+    "DeterministicQualityAuditor",
+    "VisualInspectionEngine",
+    "MultiModelCreativeJudge",
+    "LocalizedSelfRepairEngine",
+    "PresentXSourceRealityGate"
+  ],
+  "verifiedClaimsCount": 3,
+  "unverifiedClaimsCount": 0,
+  "warnings": [],
+  "roundtripResult": "PERFECT",
+  "roundtripLossPercentage": 0,
+  "exportFormat": "PPTX",
+  "timestamp": "2026-08-26T12:11:07.123Z",
+  "signature": "d2fc02340054897787a0586dd67d8b0a3a24ee086adeca5bafcf45865d045c21"
+}

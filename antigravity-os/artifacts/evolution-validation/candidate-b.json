@@ -1,0 +1,10 @@
+{
+  "candidateId": "CAND_B_SAFE_IMPROVEMENT",
+  "name": "Parallel Graph Optimization Candidate",
+  "type": "SAFE_IMPROVEMENT",
+  "description": "Parallel graph topological branch scheduling reducing execution latency by 25% without altering contracts",
+  "codeModifications": {
+    "src/mission/MissionExecutor.ts": "concurrency_limit: 4"
+  },
+  "expectedOutcome": "PROMOTE"
+}

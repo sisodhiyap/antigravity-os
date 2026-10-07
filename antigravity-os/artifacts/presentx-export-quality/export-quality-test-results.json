@@ -1,0 +1,166 @@
+{
+  "suite": "PresentX 26-Test Export Quality Director Suite",
+  "timestamp": "2026-08-26T12:30:54.206Z",
+  "totalTests": 26,
+  "passedCount": 26,
+  "failedCount": 0,
+  "overallVerdict": "PROVEN",
+  "testResults": [
+    {
+      "testNumber": 1,
+      "name": "Basic Deck",
+      "verdict": "PASSED",
+      "details": "Score: 98/100, Cert ID: cert_qual_1787747454080_t6rhi"
+    },
+    {
+      "testNumber": 2,
+      "name": "Complex Deck",
+      "verdict": "PASSED",
+      "details": "12 slides verified across maximum review."
+    },
+    {
+      "testNumber": 3,
+      "name": "Unicode Content",
+      "verdict": "PASSED",
+      "details": "Multi-language glyphs preserved with zero corruption."
+    },
+    {
+      "testNumber": 4,
+      "name": "Charts",
+      "verdict": "PASSED",
+      "details": "Calibrated chart data points verified."
+    },
+    {
+      "testNumber": 5,
+      "name": "Tables",
+      "verdict": "PASSED",
+      "details": "Structured matrix table verified."
+    },
+    {
+      "testNumber": 6,
+      "name": "Long Text Detection",
+      "verdict": "PASSED",
+      "details": "Flagged typography overflow defect accurately."
+    },
+    {
+      "testNumber": 7,
+      "name": "Images",
+      "verdict": "PASSED",
+      "details": "Visual strategy and media bible registered."
+    },
+    {
+      "testNumber": 8,
+      "name": "Missing Image Fallback",
+      "verdict": "PASSED",
+      "details": "Handled missing image gracefully with layout fallback."
+    },
+    {
+      "testNumber": 9,
+      "name": "Broken Layout Detection",
+      "verdict": "PASSED",
+      "details": "Detected missing semantic headline as critical defect."
+    },
+    {
+      "testNumber": 10,
+      "name": "Overflow Repair",
+      "verdict": "PASSED",
+      "details": "Localized self-repair condensed body text from 1335 to 177 chars."
+    },
+    {
+      "testNumber": 11,
+      "name": "Factuality Failure Detection",
+      "verdict": "PASSED",
+      "details": "Flagged UNKNOWN claim provenance as critical defect."
+    },
+    {
+      "testNumber": 12,
+      "name": "Contradictory Evidence",
+      "verdict": "PASSED",
+      "details": "Quarantined contradicted claim."
+    },
+    {
+      "testNumber": 13,
+      "name": "Fake Statistic Isolation",
+      "verdict": "PASSED",
+      "details": "Isolated unsupported statistic from receiving false verified tag."
+    },
+    {
+      "testNumber": 14,
+      "name": "Accessibility Failure",
+      "verdict": "PASSED",
+      "details": "Detected low contrast ratio violating WCAG 2.2 AA."
+    },
+    {
+      "testNumber": 15,
+      "name": "Corrupted PPTX Detection",
+      "verdict": "PASSED",
+      "details": "Corrupted binary package correctly rejected."
+    },
+    {
+      "testNumber": 16,
+      "name": "Extension Spoofing",
+      "verdict": "PASSED",
+      "details": "Plain text with .pptx extension immediately rejected."
+    },
+    {
+      "testNumber": 17,
+      "name": "Roundtrip 0% Loss",
+      "verdict": "PASSED",
+      "details": "5/5 slides re-imported with 0.0% structural loss."
+    },
+    {
+      "testNumber": 18,
+      "name": "Repair Rollback",
+      "verdict": "PASSED",
+      "details": "Signature comparison and checkpoint rollback verified."
+    },
+    {
+      "testNumber": 19,
+      "name": "Quality Regression Protection",
+      "verdict": "PASSED",
+      "details": "Regression comparator blocks repairs that drop trust or technical score."
+    },
+    {
+      "testNumber": 20,
+      "name": "ComfyUI Offline Fallback",
+      "verdict": "PASSED",
+      "details": "Vector and typography fallback deployed cleanly."
+    },
+    {
+      "testNumber": 21,
+      "name": "Ollama Offline Fallback",
+      "verdict": "PASSED",
+      "details": "Deterministic heuristic routing preserved pipeline continuity."
+    },
+    {
+      "testNumber": 22,
+      "name": "LLM Unavailable Handling",
+      "verdict": "PASSED",
+      "details": "Refused fake consensus and fell back to Single Model / Deterministic mode."
+    },
+    {
+      "testNumber": 23,
+      "name": "Process Restart Recovery",
+      "verdict": "PASSED",
+      "details": "Persisted manifest reloaded from disk and exported valid PPTX."
+    },
+    {
+      "testNumber": 24,
+      "name": "Basket Vault Isolation",
+      "verdict": "PASSED",
+      "details": "92 isolated manifests verified in vault."
+    },
+    {
+      "testNumber": 25,
+      "name": "Multi-Format Export",
+      "verdict": "PASSED",
+      "details": "PPTX, HTML5, and Signed Evidence JSON all independently validated."
+    },
+    {
+      "testNumber": 26,
+      "name": "Independent Evidence Verification",
+      "verdict": "PASSED",
+      "details": "SHA-256 Signature verified: 2357bc0996fd157a..."
+    }
+  ]
+}

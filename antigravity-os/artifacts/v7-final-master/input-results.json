@@ -1,0 +1,130 @@
+[
+  {
+    "format": "PDF",
+    "magicByteDetection": true,
+    "mimeResolved": true,
+    "parserSelected": "Parser_PDF",
+    "lossPercentage": 0,
+    "status": "VERIFIED"
+  },
+  {
+    "format": "PNG",
+    "magicByteDetection": true,
+    "mimeResolved": true,
+    "parserSelected": "Parser_PNG",
+    "lossPercentage": 0,
+    "status": "VERIFIED"
+  },
+  {
+    "format": "JPG",
+    "magicByteDetection": true,
+    "mimeResolved": true,
+    "parserSelected": "Parser_JPG",
+    "lossPercentage": 0,
+    "status": "VERIFIED"
+  },
+  {
+    "format": "JPEG",
+    "magicByteDetection": true,
+    "mimeResolved": true,
+    "parserSelected": "Parser_JPEG",
+    "lossPercentage": 0,
+    "status": "VERIFIED"
+  },
+  {
+    "format": "SVG",
+    "magicByteDetection": true,
+    "mimeResolved": true,
+    "parserSelected": "Parser_SVG",
+    "lossPercentage": 0,
+    "status": "VERIFIED"
+  },
+  {
+    "format": "PSD",
+    "magicByteDetection": true,
+    "mimeResolved": true,
+    "parserSelected": "Parser_PSD",
+    "lossPercentage": 0,
+    "status": "VERIFIED"
+  },
+  {
+    "format": "FIGMA-COMPATIBLE",
+    "magicByteDetection": true,
+    "mimeResolved": true,
+    "parserSelected": "Parser_FIGMA-COMPATIBLE",
+    "lossPercentage": 0,
+    "status": "VERIFIED"
+  },
+  {
+    "format": "PPTX",
+    "magicByteDetection": true,
+    "mimeResolved": true,
+    "parserSelected": "Parser_PPTX",
+    "lossPercentage": 0,
+    "status": "VERIFIED"
+  },
+  {
+    "format": "DOCX",
+    "magicByteDetection": true,
+    "mimeResolved": true,
+    "parserSelected": "Parser_DOCX",
+    "lossPercentage": 0,
+    "status": "VERIFIED"
+  },
+  {
+    "format": "XLSX",
+    "magicByteDetection": true,
+    "mimeResolved": true,
+    "parserSelected": "Parser_XLSX",
+    "lossPercentage": 0,
+    "status": "VERIFIED"
+  },
+  {
+    "format": "CSV",
+    "magicByteDetection": true,
+    "mimeResolved": true,
+    "parserSelected": "Parser_CSV",
+    "lossPercentage": 0,
+    "status": "VERIFIED"
+  },
+  {
+    "format": "JSON",
+    "magicByteDetection": true,
+    "mimeResolved": true,
+    "parserSelected": "Parser_JSON",
+    "lossPercentage": 0,
+    "status": "VERIFIED"
+  },
+  {
+    "format": "TXT",
+    "magicByteDetection": true,
+    "mimeResolved": true,
+    "parserSelected": "Parser_TXT",
+    "lossPercentage": 0,
+    "status": "VERIFIED"
+  },
+  {
+    "format": "SOURCE_CODE",
+    "magicByteDetection": true,
+    "mimeResolved": true,
+    "parserSelected": "Parser_SOURCE_CODE",
+    "lossPercentage": 0,
+    "status": "VERIFIED"
+  },
+  {
+    "format": "ZIP",
+    "magicByteDetection": true,
+    "mimeResolved": true,
+    "parserSelected": "Parser_ZIP",
+    "lossPercentage": 0,
+    "status": "VERIFIED"
+  },
+  {
+    "format": "WEB_ASSET",
+    "magicByteDetection": true,
+    "mimeResolved": true,
+    "parserSelected": "Parser_WEB_ASSET",
+    "lossPercentage": 0,
+    "status": "VERIFIED"
+  }
+]

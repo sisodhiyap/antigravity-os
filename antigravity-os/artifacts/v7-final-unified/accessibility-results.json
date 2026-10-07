@@ -1,0 +1,7 @@
+{
+  "wcagStandard": "WCAG 2.2 AA",
+  "contrastRatioMin": 4.5,
+  "keyboardNavPass": true,
+  "screenReaderPass": true,
+  "criticalFailures": 0
+}

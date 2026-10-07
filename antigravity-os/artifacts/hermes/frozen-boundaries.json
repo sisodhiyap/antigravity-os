@@ -1,0 +1,35 @@
+{
+  "frozenTimestamp": "2026-08-25T15:15:00.000Z",
+  "frozenStatus": "V7-FROZEN-PRODUCTION",
+  "enforcementRule": "ZERO_MUTATION_PERMITTED",
+  "protectedPaths": [
+    "src/io/",
+    "src/product-intelligence/",
+    "src/product-twin/",
+    "src/architecture/",
+    "src/factory/",
+    "src/reality/",
+    "src/evolution/",
+    "src/guardian/",
+    "src/kernel/",
+    "src/adversarial/",
+    "src/incidents/",
+    "src/learning/",
+    "src/experience/",
+    "src/requirements/",
+    "src/reverse-engineering/",
+    "src/server/",
+    "src/usability/",
+    "src/verification/",
+    "src/visual/",
+    "src/visual-regression/"
+  ],
+  "allowedExtensionPaths": [
+    "src/plugins/hermes/",
+    "src/app/hermes/",
+    "artifacts/hermes/",
+    "scripts/verify-hermes-agent.ts",
+    "scripts/independent-hermes-verifier.ts",
+    "docs/HERMES_*.md"
+  ]
+}

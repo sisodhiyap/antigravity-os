@@ -1,0 +1,11 @@
+{
+  "app": "Antigravity OS Desktop Runtime",
+  "verdict": "PROVEN",
+  "timestamp": "2026-08-26T07:10:47.412Z",
+  "totalTests": 21,
+  "passedTests": 21,
+  "coreMutations": 0,
+  "hardware": "DEGRADED",
+  "servicesCount": 6,
+  "diagnosticsSignature": "c71ef67d794cc6b28b562e12e72aec9faeabde03dd9ff338c48a253c8a195e0a"
+}

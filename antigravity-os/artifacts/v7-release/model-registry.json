@@ -1,0 +1,72 @@
+[
+  {
+    "provider": "ANTHROPIC",
+    "model": "claude-3-5-sonnet-20241022",
+    "version": "3.5",
+    "isLocal": false,
+    "endpoint": "https://api.anthropic.com/v1/messages",
+    "capabilities": [
+      "code",
+      "reasoning",
+      "multimodal"
+    ],
+    "contextLimit": 200000,
+    "hardwareRequirement": "CLOUD",
+    "latencyMs": 850,
+    "lastSuccessfulExecution": 1787716778297,
+    "failureCount": 0,
+    "fallbackPriority": 1,
+    "status": "EXECUTABLE"
+  },
+  {
+    "provider": "OLLAMA_LOCAL",
+    "model": "qwen2.5-coder:32b",
+    "version": "2.5",
+    "isLocal": true,
+    "endpoint": "http://127.0.0.1:11434/api/generate",
+    "capabilities": [
+      "code",
+      "refactor",
+      "offline"
+    ],
+    "contextLimit": 32768,
+    "hardwareRequirement": "CUDA_8GB",
+    "vramRequirementMb": 8192,
+    "latencyMs": 142,
+    "lastSuccessfulExecution": 1787716778297,
+    "failureCount": 0,
+    "fallbackPriority": 2,
+    "status": "EXECUTABLE"
+  },
+  {
+    "provider": "COMFYUI_LOCAL",
+    "model": "flux1-schnell-fp8",
+    "version": "1.0",
+    "isLocal": true,
+    "endpoint": "http://127.0.0.1:8188/prompt",
+    "capabilities": [
+      "image_generation",
+      "fast_inference"
+    ],
+    "hardwareRequirement": "CUDA_6GB",
+    "vramRequirementMb": 6144,
+    "latencyMs": 2400,
+    "lastSuccessfulExecution": 1787716778297,
+    "failureCount": 0,
+    "fallbackPriority": 1,
+    "status": "EXECUTABLE"
+  },
+  {
+    "provider": "UNINSTALLED_PROVIDER",
+    "model": "hypothetical-future-model",
+    "version": "1.0",
+    "isLocal": false,
+    "endpoint": "https://api.unreachable.ai",
+    "capabilities": [],
+    "hardwareRequirement": "UNKNOWN",
+    "latencyMs": 0,
+    "failureCount": 1,
+    "fallbackPriority": 99,
+    "status": "UNAVAILABLE"
+  }
+]

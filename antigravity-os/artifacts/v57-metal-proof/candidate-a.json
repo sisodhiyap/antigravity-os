@@ -1,0 +1,16 @@
+{
+  "candidateId": "CAND_A_BASELINE",
+  "buildPassed": true,
+  "typecheckPassed": true,
+  "lintPassed": true,
+  "unitTestsCount": 28,
+  "integrationTestsCount": 14,
+  "apiContractPassed": true,
+  "dbWalPersistenceVerified": true,
+  "authPbkdf2Verified": true,
+  "rbac6RoleVerified": true,
+  "uiResponsivenessVerified": true,
+  "a11yWcag22Passed": true,
+  "dockerMultiStageAlpinePassed": true,
+  "realityScore": 94.2
+}

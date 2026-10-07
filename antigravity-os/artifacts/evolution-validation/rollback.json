@@ -1,0 +1,19 @@
+{
+  "preSnapshot": {
+    "checkpointId": "chk_pre_val",
+    "timestamp": "2026-08-25T08:25:44.845Z",
+    "sourceFilesHash": "dd38bff8c39d2b805fe7bc1883c6eba6c0c7503e76c643e8f4f9771675929328",
+    "configHash": "78e883baa31eda6d2640248fbc3b1d7a12f1f7e116976ec623a665e3203d86b3",
+    "dbStateHash": "953fa58158cc60eed662865d70a026531a775a511433b5e8efb53d5c950d0662",
+    "overallStateHash": "701ea0d9b9d1593b3bdffaba27715e670c6a1029de398df91f7ec4aaf2755449"
+  },
+  "postSnapshot": {
+    "checkpointId": "chk_post_val",
+    "timestamp": "2026-08-25T08:25:44.845Z",
+    "sourceFilesHash": "dd38bff8c39d2b805fe7bc1883c6eba6c0c7503e76c643e8f4f9771675929328",
+    "configHash": "78e883baa31eda6d2640248fbc3b1d7a12f1f7e116976ec623a665e3203d86b3",
+    "dbStateHash": "953fa58158cc60eed662865d70a026531a775a511433b5e8efb53d5c950d0662",
+    "overallStateHash": "701ea0d9b9d1593b3bdffaba27715e670c6a1029de398df91f7ec4aaf2755449"
+  },
+  "restored": true
+}

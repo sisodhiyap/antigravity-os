@@ -1,0 +1,8 @@
+{
+  "wcagLevel": "WCAG 2.1 AA",
+  "contrastRatioMin": 4.5,
+  "ariaRolesVerified": true,
+  "keyboardNavigable": true,
+  "touchTargetMin44px": true,
+  "status": "PASS"
+}

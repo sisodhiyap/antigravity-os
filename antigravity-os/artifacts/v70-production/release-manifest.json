@@ -1,0 +1,10 @@
+{
+  "releaseVersion": "7.0.0-FROZEN-PRODUCTION",
+  "releaseName": "Antigravity OS v7.0 Final Frozen Release",
+  "releaseTimestamp": "2026-08-25T09:49:49.621Z",
+  "coreHash": "90728b7264879f252d855d26ef30cd66faa5c91cc6f425859fbe5d03609dbf5b",
+  "dependencyHash": "069f9facb95cde940e1d0b751b5cc84ddb87d322c757a08871ced82d354d9e5b",
+  "backupHash": "6189c13f3e845853fbe4cf5442ceb24ebaa3470ea843721902cd69c674132dcc",
+  "includedFilesCount": 88,
+  "releaseSignature": "59c0a0eeb47860031699c7c31a5ef06547e2868a989ef2bc6c49b8057676963e"
+}

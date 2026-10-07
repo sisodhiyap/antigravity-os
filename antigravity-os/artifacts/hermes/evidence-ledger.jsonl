@@ -1,0 +1,30 @@
+[
+  {
+    "eventId": "ev_0_1787651796200",
+    "index": 0,
+    "timestamp": "2026-08-25T09:56:36.200Z",
+    "missionId": "ses_01",
+    "operation": "REAL_EXEC",
+    "command": "run_tests",
+    "exitCode": 0,
+    "stdoutHash": "d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1",
+    "stderrHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "durationMs": 5,
+    "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "currentHash": "d65cf02fd24160f9b0f59a70d7be3415039bcdbfe8f89c3d4a89a9075ae1d675"
+  },
+  {
+    "eventId": "ev_1_1787651796200",
+    "index": 1,
+    "timestamp": "2026-08-25T09:56:36.200Z",
+    "missionId": "mission_v58_zero_trust",
+    "operation": "FUNCTIONAL",
+    "command": "probe_hermes_claim_t_proven_1787651796200",
+    "exitCode": 0,
+    "stdoutHash": "a0da05d6b8f8b210b09893c5d9be9cb9f94363754eb0310f768852f95363ad41",
+    "stderrHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "durationMs": 1,
+    "previousHash": "d65cf02fd24160f9b0f59a70d7be3415039bcdbfe8f89c3d4a89a9075ae1d675",
+    "currentHash": "4259aa86fa4bfc7ed38a9fdb766a37af5fcacda5be1aed40e0a166f61ab043f7"
+  }
+]

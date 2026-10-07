@@ -1,0 +1,27 @@
+{
+  "sandboxA": {
+    "sandboxId": "sbx_CAND_A_BASELINE_1787646344848",
+    "candidateId": "CAND_A_BASELINE",
+    "sandboxDir": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\evolution-validation\\sandboxes\\sbx_CAND_A_BASELINE_1787646344848",
+    "dbPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\evolution-validation\\sandboxes\\sbx_CAND_A_BASELINE_1787646344848\\sandbox_db.sqlite",
+    "isolatedPort": 3601,
+    "isIsolated": true
+  },
+  "sandboxB": {
+    "sandboxId": "sbx_CAND_B_SAFE_IMPROVEMENT_1787646344849",
+    "candidateId": "CAND_B_SAFE_IMPROVEMENT",
+    "sandboxDir": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\evolution-validation\\sandboxes\\sbx_CAND_B_SAFE_IMPROVEMENT_1787646344849",
+    "dbPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\evolution-validation\\sandboxes\\sbx_CAND_B_SAFE_IMPROVEMENT_1787646344849\\sandbox_db.sqlite",
+    "isolatedPort": 3602,
+    "isIsolated": true
+  },
+  "sandboxC": {
+    "sandboxId": "sbx_CAND_C_KNOWN_REGRESSION_1787646344850",
+    "candidateId": "CAND_C_KNOWN_REGRESSION",
+    "sandboxDir": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\evolution-validation\\sandboxes\\sbx_CAND_C_KNOWN_REGRESSION_1787646344850",
+    "dbPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\evolution-validation\\sandboxes\\sbx_CAND_C_KNOWN_REGRESSION_1787646344850\\sandbox_db.sqlite",
+    "isolatedPort": 3603,
+    "isIsolated": true
+  },
+  "isolationVerified": true
+}

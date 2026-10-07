@@ -1,0 +1,26 @@
+[
+  {
+    "id": "CLM_AUTH_SEC",
+    "statement": "PBKDF2-SHA512 Password hashing is cryptographically sound",
+    "category": "SECURITY",
+    "source": "SYSTEM_SPEC",
+    "timestamp": "2026-08-25T08:38:59.104Z",
+    "requiredEvidenceTypes": [
+      "HASH_PROBE"
+    ],
+    "verdict": "PROVEN",
+    "evidenceId": "ev_3_1787647139108"
+  },
+  {
+    "id": "CLM_FALSE_CLAIM",
+    "statement": "Candidate C has zero vulnerabilities",
+    "category": "SECURITY",
+    "source": "UNTRUSTED_METADATA",
+    "timestamp": "2026-08-25T08:38:59.108Z",
+    "requiredEvidenceTypes": [
+      "RED_TEAM_PROBE"
+    ],
+    "verdict": "CONTRADICTED",
+    "contradictionReason": "Attack probe succeeded: HMAC bypassed in Candidate C"
+  }
+]

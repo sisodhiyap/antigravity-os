@@ -1,0 +1,13 @@
+[
+  {
+    "toolName": "inspect_repository",
+    "arguments": {
+      "target": "workspace"
+    },
+    "argumentsHash": "81bad0c4e2b9746e4bdb8dc151a059474cb77bf71e669b300acaadb977bdc16f",
+    "permissionRequired": "READ_ONLY",
+    "sandboxIsolated": true,
+    "timestamp": "2026-08-26T12:30:24.689Z",
+    "evidenceId": "ev_tool_1787747424689_8nt4"
+  }
+]

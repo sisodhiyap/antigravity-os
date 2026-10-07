@@ -1,0 +1,33 @@
+{
+  "screens": [
+    {
+      "id": "scr_01",
+      "name": "Dashboard",
+      "bounds": {
+        "width": 1440,
+        "height": 900
+      },
+      "componentsCount": 8
+    },
+    {
+      "id": "scr_02",
+      "name": "Entity Workspace",
+      "bounds": {
+        "width": 1440,
+        "height": 900
+      },
+      "componentsCount": 12
+    }
+  ],
+  "typography": {
+    "fontFamily": "Inter, sans-serif"
+  },
+  "colors": {
+    "background": "#080a0f",
+    "accent": "#e6b800"
+  },
+  "spacing": {
+    "base": 8,
+    "unit": "px"
+  }
+}

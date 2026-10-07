@@ -1,0 +1,27 @@
+{
+  "name": "TripoSR Image-to-3D Mesh Generator",
+  "workflowId": "wf_3d_triposr",
+  "modality": "3D",
+  "version": "1.0.0",
+  "nodes": {
+    "1": {
+      "inputs": {
+        "model_name": "triposr.safetensors"
+      },
+      "class_type": "TripoSRLoader"
+    },
+    "2": {
+      "inputs": {
+        "steps": 20
+      },
+      "class_type": "TripoSRSampler"
+    },
+    "3": {
+      "inputs": {
+        "format": "glb",
+        "filename_prefix": "Antigravity_3D"
+      },
+      "class_type": "MeshExporterGLB"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "baselineId": "CAND_A",
+  "evaluatedCandidates": [
+    {
+      "candidateId": "CAND_B",
+      "isImprovement": true,
+      "isSecurityDegraded": false,
+      "isRegressionDetected": false,
+      "latencyDeltaPercent": 32.93,
+      "verdict": "ELIGIBLE_FOR_PROMOTION"
+    },
+    {
+      "candidateId": "CAND_C",
+      "isImprovement": false,
+      "isSecurityDegraded": true,
+      "isRegressionDetected": true,
+      "latencyDeltaPercent": 45.12,
+      "verdict": "REJECTED_DUE_TO_REGRESSION"
+    }
+  ],
+  "selectedWinnerId": "CAND_B",
+  "justification": "Candidate CAND_B demonstrated verified 32.93% latency reduction with 0 regressions and identical 100% security score."
+}

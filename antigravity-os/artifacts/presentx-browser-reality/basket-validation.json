@@ -1,0 +1,16 @@
+{
+  "basketUrl": "http://localhost:3000/basket",
+  "vaultDirectory": "C:\\D drive\\Antigravity\\antigravity-os\\workspaces\\presentx-vault",
+  "vaultExists": true,
+  "totalVaultFiles": 74,
+  "projectFound": true,
+  "folderStructure": {
+    "source": true,
+    "versions": true,
+    "exports": true,
+    "evidence": true,
+    "quality": true,
+    "previews": true,
+    "repairHistory": true
+  }
+}

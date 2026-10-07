@@ -1,0 +1,14 @@
+{
+  "projectTitle": "How AI is transforming creative agencies",
+  "slideCount": 10,
+  "structuralLossPercent": 0,
+  "valid": true,
+  "checks": {
+    "isZip": true,
+    "hasContentTypes": true,
+    "hasPresentation": true,
+    "slidesMatched": true,
+    "notesMatched": true,
+    "crcValid": true
+  }
+}

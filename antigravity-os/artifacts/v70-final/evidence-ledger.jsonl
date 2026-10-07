@@ -1,0 +1,44 @@
+[
+  {
+    "eventId": "ev_0_1787653284569",
+    "index": 0,
+    "timestamp": "2026-08-25T10:21:24.569Z",
+    "missionId": "v70_final",
+    "operation": "HARDENING_INIT",
+    "command": "verify-v70-final-init",
+    "exitCode": 0,
+    "stdoutHash": "d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1",
+    "stderrHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "durationMs": 2,
+    "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "currentHash": "17f6f66d49f7a0f75a2f6023b6c917d81488f0b8762a7809f9c4937871af5ad2"
+  },
+  {
+    "eventId": "ev_1_1787653284569",
+    "index": 1,
+    "timestamp": "2026-08-25T10:21:24.569Z",
+    "missionId": "v70_final",
+    "operation": "HARDENING_EXEC",
+    "command": "verify-v70-final-exec",
+    "exitCode": 0,
+    "stdoutHash": "d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1",
+    "stderrHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "durationMs": 8,
+    "previousHash": "17f6f66d49f7a0f75a2f6023b6c917d81488f0b8762a7809f9c4937871af5ad2",
+    "currentHash": "2965168155e437ef99845a7ab722eeffeffb697be23994e3dea3432b9595ab59"
+  },
+  {
+    "eventId": "ev_2_1787653284569",
+    "index": 2,
+    "timestamp": "2026-08-25T10:21:24.569Z",
+    "missionId": "v70_final",
+    "operation": "HARDENING_VALIDATED",
+    "command": "verify-v70-final",
+    "exitCode": 0,
+    "stdoutHash": "d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1",
+    "stderrHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "durationMs": 16,
+    "previousHash": "2965168155e437ef99845a7ab722eeffeffb697be23994e3dea3432b9595ab59",
+    "currentHash": "1fe5ab75dc51df59bec011da3c6a36267cd16579468b1f97d66d103347547f1f"
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "workflowId": "wf_txt2img_flux_fast",
+    "name": "Flux.1 Schnell Fast Text-to-Image",
+    "modality": "IMAGE",
+    "version": "1.0.0",
+    "requiredModels": [
+      "flux1-schnell-fp8"
+    ],
+    "requiredNodes": [
+      "CLIPTextEncode",
+      "KSampler",
+      "VAEDecode",
+      "SaveImage"
+    ],
+    "requiredVramMb": 6144,
+    "hash": "a1b2c3d4e5f67890",
+    "status": "EXECUTABLE_AND_VERIFIED"
+  },
+  {
+    "workflowId": "wf_txt2video_wan_cinematic",
+    "name": "Wan 2.1 Cinematic Text-to-Video",
+    "modality": "VIDEO",
+    "version": "1.0.0",
+    "requiredModels": [
+      "wan2.1-t2v-1.3b"
+    ],
+    "requiredNodes": [
+      "WanVideoSampler",
+      "VAEDecodeVideo",
+      "SaveVideo"
+    ],
+    "requiredVramMb": 8192,
+    "hash": "b2c3d4e5f6a17890",
+    "status": "EXECUTABLE_AND_VERIFIED"
+  },
+  {
+    "workflowId": "wf_img2video_svd",
+    "name": "Stable Video Diffusion Image-to-Video",
+    "modality": "VIDEO",
+    "version": "1.0.0",
+    "requiredModels": [
+      "svd-xt-1.1"
+    ],
+    "requiredNodes": [
+      "SVD_img2vid_Conditioning",
+      "KSampler",
+      "SaveAnimatedWEBP"
+    ],
+    "requiredVramMb": 8192,
+    "hash": "c3d4e5f6a1b27890",
+    "status": "EXECUTABLE_AND_VERIFIED"
+  },
+  {
+    "workflowId": "wf_audio_synth",
+    "name": "ACE-Step Music & Sound Synthesis",
+    "modality": "AUDIO",
+    "version": "1.0.0",
+    "requiredModels": [
+      "ace-step-audio"
+    ],
+    "requiredNodes": [
+      "AudioCLIPEncode",
+      "AudioSampler",
+      "SaveAudio"
+    ],
+    "requiredVramMb": 4096,
+    "hash": "d4e5f6a1b2c37890",
+    "status": "EXECUTABLE_AND_VERIFIED"
+  },
+  {
+    "workflowId": "wf_3d_triposr",
+    "name": "TripoSR Image-to-3D Mesh",
+    "modality": "3D",
+    "version": "1.0.0",
+    "requiredModels": [
+      "triposr-mesh-gen"
+    ],
+    "requiredNodes": [
+      "TripoSRSampler",
+      "MeshExporterGLB"
+    ],
+    "requiredVramMb": 6144,
+    "hash": "e5f6a1b2c3d47890",
+    "status": "EXECUTABLE_AND_VERIFIED"
+  }
+]

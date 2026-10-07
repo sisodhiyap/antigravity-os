@@ -1,0 +1,47 @@
+{
+  "entities": [
+    {
+      "name": "Project",
+      "fields": {
+        "id": "string",
+        "title": "string",
+        "budget": "number"
+      },
+      "provenance": "OBSERVED"
+    },
+    {
+      "name": "Task",
+      "fields": {
+        "id": "string",
+        "projectId": "string",
+        "status": "string"
+      },
+      "provenance": "OBSERVED"
+    },
+    {
+      "name": "BillingRecord",
+      "fields": {
+        "id": "string",
+        "amount": "number"
+      },
+      "provenance": "INFERRED"
+    }
+  ],
+  "roles": [
+    "ADMIN",
+    "MANAGER",
+    "COLLABORATOR",
+    "CLIENT_REVIEWER"
+  ],
+  "workflows": [
+    {
+      "name": "Deliverable Review & Approval",
+      "steps": [
+        "Submit",
+        "Review",
+        "Sign-Off"
+      ],
+      "provenance": "OBSERVED"
+    }
+  ]
+}

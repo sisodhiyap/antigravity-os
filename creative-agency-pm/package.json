@@ -1,0 +1,22 @@
+{
+  "name": "creative-agency-pm",
+  "version": "1.0.0",
+  "description": "Professional Project Management SaaS for Creative Agencies — Antigravity OS Autonomous Synthesis",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "tsx tests/run-all-qa.ts",
+    "test:security": "tsx tests/security-attack.test.ts",
+    "test:repair": "tsx tests/self-repair-test.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

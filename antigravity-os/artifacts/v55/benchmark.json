@@ -1,0 +1,122 @@
+[
+  {
+    "id": "BM_CRM",
+    "domain": "Customer Relationship Management (CRM)",
+    "prompt": "Build a comprehensive CRM with client management, sales pipelines, deal stages, communication logs, and conversion analytics.",
+    "features": [
+      "Leads & Clients",
+      "Pipeline Kanban",
+      "Interaction History",
+      "Revenue Analytics",
+      "Audit Logs"
+    ]
+  },
+  {
+    "id": "BM_ECOMMERCE",
+    "domain": "E-Commerce Headless Storefront",
+    "prompt": "Build an e-commerce platform with product catalogs, shopping cart, checkout simulation, discount codes, and order tracking.",
+    "features": [
+      "Catalog & SKUs",
+      "Cart State",
+      "Order Processing",
+      "Discount Engine",
+      "Inventory Sync"
+    ]
+  },
+  {
+    "id": "BM_EDUCATION",
+    "domain": "EduFlow Academy LMS",
+    "prompt": "Build an interactive education platform with course syllabus, video lesson tracker, quizzes, student grading, and completion certificates.",
+    "features": [
+      "Courses & Modules",
+      "Quiz Engine",
+      "Progress Tracking",
+      "Gradebook",
+      "Certificate Generator"
+    ]
+  },
+  {
+    "id": "BM_CREATIVE",
+    "domain": "Aura Studio Creative Agency PM",
+    "prompt": "Build a creative agency workflow manager with client portal, design approvals, task kanban, asset vault, and time tracking.",
+    "features": [
+      "Client Portals",
+      "Kanban Board",
+      "Review & Approvals",
+      "Asset Vault",
+      "Activity Stream"
+    ]
+  },
+  {
+    "id": "BM_INVENTORY",
+    "domain": "OmniStock Warehouse Inventory",
+    "prompt": "Build an enterprise inventory management system with multi-warehouse tracking, stock level alerts, suppliers, and purchase orders.",
+    "features": [
+      "Multi-Warehouse",
+      "Stock Alerts",
+      "Supplier Directory",
+      "Purchase Orders",
+      "Barcoding Simulation"
+    ]
+  },
+  {
+    "id": "BM_PRODUCTIVITY",
+    "domain": "FocusCraft Personal Productivity",
+    "prompt": "Build a personal productivity operating system with habit tracking, pomodoro timer, rich markdown notes, goal setting, and mood analytics.",
+    "features": [
+      "Habit Streaks",
+      "Pomodoro Timer",
+      "Markdown Vault",
+      "Goal Milestones",
+      "Daily Journal"
+    ]
+  },
+  {
+    "id": "BM_AICHAT",
+    "domain": "Local AI Copilot Workspace",
+    "prompt": "Build an AI chat workspace supporting multiple local model endpoints, chat threads, prompt templates, RAG document search, and export.",
+    "features": [
+      "Thread Manager",
+      "Model Selector",
+      "Prompt Library",
+      "Document Context",
+      "Token Counter"
+    ]
+  },
+  {
+    "id": "BM_TRADING",
+    "domain": "TradeX Personal Trading Assistant",
+    "prompt": "Build a personal trading assistant with watchlists, portfolio tracking, paper trading, trade journal, risk analytics, and technical indicators.",
+    "features": [
+      "Watchlists",
+      "Paper Trading",
+      "Trade Journal",
+      "Risk Metrics",
+      "Simulated Market Feed"
+    ]
+  },
+  {
+    "id": "BM_VFX",
+    "domain": "VFX & 3D Asset Pipeline Manager",
+    "prompt": "Build a visual effects shot tracker with 3D model versioning, render farm queue monitor, shot status review, and artist assignments.",
+    "features": [
+      "Shot Breakdowns",
+      "3D Asset Versions",
+      "Render Queue",
+      "Review Player",
+      "Artist Allocations"
+    ]
+  },
+  {
+    "id": "BM_RESEARCH",
+    "domain": "Scientific Research Knowledge Graph",
+    "prompt": "Build a research knowledge manager with paper citation graphs, hypothesis tracking, lab notebook, experiment results, and PDF indexing.",
+    "features": [
+      "Paper Indexing",
+      "Citation Topology",
+      "Lab Notebook",
+      "Data Tables",
+      "Hypothesis Validator"
+    ]
+  }
+]

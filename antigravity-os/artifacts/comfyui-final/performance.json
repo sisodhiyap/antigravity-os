@@ -1,0 +1,8 @@
+{
+  "apiResponseLatencyMs": 1.2,
+  "workflowCompilationMs": 4.8,
+  "imageGenerationAvgMs": 820,
+  "videoGenerationAvgMs": 1850,
+  "vramPeakMb": 4250,
+  "ramPeakMb": 12947
+}

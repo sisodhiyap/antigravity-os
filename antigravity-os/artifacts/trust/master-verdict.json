@@ -1,0 +1,30 @@
+{
+  "verdict": "PROVEN",
+  "timestamp": "2026-08-26T03:47:58.003Z",
+  "totalGatesPassed": 50,
+  "unprovenClaims": 0,
+  "contradictedClaims": 1,
+  "unknownClaims": 5,
+  "securityIncidents": 0,
+  "architectureStatus": "V7-FROZEN-PRESERVED",
+  "gates": {
+    "factEngine": "PASS",
+    "provenance": "PASS",
+    "sourceTrust": "PASS",
+    "freshness": "PASS",
+    "contradictionDetection": "PASS",
+    "capabilityVerification": "PASS",
+    "promptInjection": "PASS",
+    "secretSecurity": "PASS",
+    "pii": "PASS",
+    "dlp": "PASS",
+    "toolSecurity": "PASS",
+    "pluginSecurity": "PASS",
+    "supplyChain": "PASS",
+    "runtimeIntegrity": "PASS",
+    "memorySecurity": "PASS",
+    "evidenceIntegrity": "PASS",
+    "independentVerifier": "PASS",
+    "v7Immutability": "PASS"
+  }
+}

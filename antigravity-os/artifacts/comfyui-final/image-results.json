@@ -1,0 +1,29 @@
+[
+  {
+    "test": "TEST_IMAGE_A (TXT2IMG)",
+    "jobId": "job_1787653275871_eq44va",
+    "prompt": "Photorealistic futuristic Mumbai street at night, volumetric rain reflections, 8k",
+    "model": "flux1-schnell-fp8",
+    "status": "COMPLETED",
+    "output": "/artifacts/comfyui/sandboxes/sbx_media_job_1787653275871_eq44va_1787653275872/outputs/asset_job_1787653275871_eq44va.png",
+    "hash": "564159564061312eac7822a133618f2be84f1359f55b4103375e348669ae579d"
+  },
+  {
+    "test": "TEST_IMAGE_B (IMG2IMG)",
+    "jobId": "job_1787653275873_vbs7dp",
+    "prompt": "Stylized anime variant of input reference",
+    "model": "sdxl-base-1.0",
+    "status": "COMPLETED",
+    "output": "/artifacts/comfyui/sandboxes/sbx_media_job_1787653275873_vbs7dp_1787653275873/outputs/asset_job_1787653275873_vbs7dp.png",
+    "hash": "42e69f73d92a113ac770160038b662f4512cd89d71d9944b4668ccd7d27bee51"
+  },
+  {
+    "test": "TEST_IMAGE_C (UPSCALE)",
+    "jobId": "job_1787653275874_o30oie",
+    "prompt": "4x RealESRGAN super-resolution upscale",
+    "model": "flux1-schnell-fp8",
+    "status": "COMPLETED",
+    "output": "/artifacts/comfyui/sandboxes/sbx_media_job_1787653275874_o30oie_1787653275874/outputs/asset_job_1787653275874_o30oie.png",
+    "hash": "5e8f3f127ddd8af09e1d7c69c4bd5190bcf7fcf226a0ddf5e93f1287213d7768"
+  }
+]

@@ -1,0 +1,98 @@
+{
+  "contacts": [
+    {
+      "id": "id_i31jnoe",
+      "created_at": "2026-08-25T07:13:52.457Z",
+      "updated_at": "2026-08-25T07:13:52.457Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_p2e9syu",
+      "created_at": "2026-08-25T07:13:52.480Z",
+      "updated_at": "2026-08-25T07:13:52.480Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    },
+    {
+      "id": "id_a7pvz6m",
+      "created_at": "2026-08-25T07:15:28.723Z",
+      "updated_at": "2026-08-25T07:15:28.723Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_01csvjb",
+      "created_at": "2026-08-25T07:15:28.745Z",
+      "updated_at": "2026-08-25T07:15:28.745Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    }
+  ],
+  "companys": [
+    {
+      "id": "id_ubocl0g",
+      "created_at": "2026-08-25T07:13:52.474Z",
+      "updated_at": "2026-08-25T07:13:52.474Z",
+      "title": "Initial Company Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Company"
+    }
+  ],
+  "leads": [
+    {
+      "id": "id_48gpanj",
+      "created_at": "2026-08-25T07:13:52.475Z",
+      "updated_at": "2026-08-25T07:13:52.475Z",
+      "title": "Initial Lead Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Lead"
+    }
+  ],
+  "deals": [
+    {
+      "id": "id_5hlgtgy",
+      "created_at": "2026-08-25T07:13:52.475Z",
+      "updated_at": "2026-08-25T07:13:52.475Z",
+      "title": "Initial Deal Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Deal"
+    }
+  ],
+  "activitys": [
+    {
+      "id": "id_vg0d2kj",
+      "created_at": "2026-08-25T07:13:52.476Z",
+      "updated_at": "2026-08-25T07:13:52.476Z",
+      "title": "Initial Activity Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Activity"
+    }
+  ],
+  "notes": [
+    {
+      "id": "id_1216e50",
+      "created_at": "2026-08-25T07:13:52.476Z",
+      "updated_at": "2026-08-25T07:13:52.476Z",
+      "title": "Initial Note Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Note"
+    }
+  ],
+  "users": [
+    {
+      "id": "id_22xeox4",
+      "created_at": "2026-08-25T07:13:52.476Z",
+      "updated_at": "2026-08-25T07:13:52.476Z",
+      "title": "Initial User Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for User"
+    }
+  ]
+}

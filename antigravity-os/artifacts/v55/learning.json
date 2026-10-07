@@ -1,0 +1,29 @@
+{
+  "run1": {
+    "runId": "run1",
+    "executionDurationMs": 24000,
+    "repairsCount": 3,
+    "retriesCount": 2,
+    "humanInterventionsCount": 2,
+    "testScore": 0.9,
+    "securityScore": 1,
+    "realityScore": 94.5
+  },
+  "run2": {
+    "runId": "run2",
+    "executionDurationMs": 16500,
+    "repairsCount": 0,
+    "retriesCount": 0,
+    "humanInterventionsCount": 0,
+    "testScore": 1,
+    "securityScore": 1,
+    "realityScore": 99.5
+  },
+  "timeReductionPercent": 31.25,
+  "repairReductionCount": 3,
+  "interventionReductionCount": 2,
+  "realityScoreGain": 5,
+  "learningDeltaPercent": 5.29,
+  "learningVerified": true,
+  "verdict": "MEASURABLE_LEARNING_VERIFIED"
+}

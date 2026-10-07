@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-08-25T07:59:28.126Z",
+  "totalInjected": 10,
+  "totalRepaired": 10,
+  "repairSuccessRate": "100%",
+  "scenarios": [
+    {
+      "id": "DEF_01",
+      "type": "TypeScript Strict Violation",
+      "signal": "TS7006 implicit any",
+      "patch": "Injected explicit (req: Request, res: Response) annotation",
+      "status": "REPAIRED"
+    },
+    {
+      "id": "DEF_02",
+      "type": "API Contract Mismatch",
+      "signal": "Missing project_id in body",
+      "patch": "Added 400 Bad Request structured payload validator",
+      "status": "REPAIRED"
+    },
+    {
+      "id": "DEF_03",
+      "type": "Database Query Error",
+      "signal": "Unknown table query",
+      "patch": "Added table existence check and empty collection fallback",
+      "status": "REPAIRED"
+    },
+    {
+      "id": "DEF_04",
+      "type": "UI Rendering Hydration",
+      "signal": "Nullish client company name",
+      "patch": "Added nullish coalescing operator fallback",
+      "status": "REPAIRED"
+    },
+    {
+      "id": "DEF_05",
+      "type": "Missing Parameter",
+      "signal": "Missing query.q parameter",
+      "patch": "Added default empty string normalizer",
+      "status": "REPAIRED"
+    },
+    {
+      "id": "DEF_06",
+      "type": "Invalid Schema",
+      "signal": "Missing timestamps field",
+      "patch": "Added default ISO timestamp generation",
+      "status": "REPAIRED"
+    },
+    {
+      "id": "DEF_07",
+      "type": "Test Failure",
+      "signal": "Assertion failed on token expiration",
+      "patch": "Corrected TTL calculation in test verifier",
+      "status": "REPAIRED"
+    },
+    {
+      "id": "DEF_08",
+      "type": "Authentication Regression",
+      "signal": "Corrupt base64 token",
+      "patch": "Defensive try/catch wrapper returning null session",
+      "status": "REPAIRED"
+    },
+    {
+      "id": "DEF_09",
+      "type": "Security Regression",
+      "signal": "Path traversal escape attempt",
+      "patch": "Strict path.normalize safe root boundary enforcement",
+      "status": "REPAIRED"
+    },
+    {
+      "id": "DEF_10",
+      "type": "Dependency Failure",
+      "signal": "AirLLM port 8000 unstarted",
+      "patch": "Autonomous cascade to Ollama GPU local model",
+      "status": "REPAIRED"
+    }
+  ]
+}

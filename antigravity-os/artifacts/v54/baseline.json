@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-08-25T07:59:27.776Z",
+  "gitCommitSha": "7e79029e6897f05671299ac475f730b7276aed17",
+  "host": {
+    "os": "Windows_NT 10.0.26200 (x64)",
+    "cpu": "AMD Ryzen 9 6900HS with Radeon Graphics         (16 Cores)",
+    "ramTotalGb": 15.24,
+    "ramFreeGb": 4.18,
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU (6.0 GB VRAM)",
+    "node": "v24.16.0"
+  },
+  "capabilities": [
+    {
+      "name": "Next.js Web Application",
+      "status": "LIVE",
+      "description": "Next.js 14+ SSR/CSR Mission Control UI"
+    },
+    {
+      "name": "RESTful API Engine",
+      "status": "LIVE",
+      "description": "In-process and Next.js route handlers"
+    },
+    {
+      "name": "SQLite WAL Persistence",
+      "status": "LIVE",
+      "description": "Atomic synchronous disk persistence engine"
+    },
+    {
+      "name": "PBKDF2-SHA512 Cryptography",
+      "status": "LIVE",
+      "description": "100k rounds, 32B salt, timingSafeEqual"
+    },
+    {
+      "name": "RBAC Authorization Engine",
+      "status": "LIVE",
+      "description": "6-tier hierarchical permission matrix"
+    },
+    {
+      "name": "AI Model Router (Ollama GPU)",
+      "status": "LIVE",
+      "description": "Local GPU inference (qwen2.5-coder:7b at ~31 tok/s)"
+    },
+    {
+      "name": "AirLLM 32B Integration",
+      "status": "NOT_CONFIGURED",
+      "description": "Port 8000 unstarted; cascading to Ollama Local GPU"
+    },
+    {
+      "name": "Mission Graph (DAG) Engine",
+      "status": "LIVE",
+      "description": "Topological sorting, cycle detection, parallel branches"
+    },
+    {
+      "name": "14-Specialist Agent Swarm",
+      "status": "LIVE",
+      "description": "Structured artifact handoffs and critic review loop"
+    },
+    {
+      "name": "Universal Engineering Harness",
+      "status": "LIVE",
+      "description": "16-stage end-to-end evaluation pipeline"
+    },
+    {
+      "name": "5-Tier Persistent Memory",
+      "status": "LIVE",
+      "description": "Owner, Project, Mission, Engineering, Failure memory"
+    },
+    {
+      "name": "Failure Knowledge Graph 2.0",
+      "status": "LIVE",
+      "description": "Defect signature lookup and patch pattern retrieval"
+    },
+    {
+      "name": "Checkpoints & Rollback Engine",
+      "status": "LIVE",
+      "description": "Pre-mutation file/database state recovery"
+    },
+    {
+      "name": "Owner Control & Safety Gates",
+      "status": "LIVE",
+      "description": "Autonomy levels 0-5 and destructive operation guards"
+    },
+    {
+      "name": "Multi-Stage Docker Packaging",
+      "status": "LIVE",
+      "description": "Alpine Linux container and compose stack"
+    }
+  ],
+  "secretScanSummary": {
+    "hardcodedSecretsExposed": 0,
+    "testCredentialsSanitized": true,
+    "environmentFileSecured": true
+  }
+}

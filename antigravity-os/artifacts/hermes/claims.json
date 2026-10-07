@@ -1,0 +1,39 @@
+[
+  {
+    "id": "hermes_claim_t_contradict_1787651796200",
+    "statement": "Contradictory behavior test",
+    "category": "FUNCTIONAL",
+    "source": "HERMES_AUTONOMOUS_AGENT",
+    "timestamp": "2026-08-25T09:56:36.200Z",
+    "requiredEvidenceTypes": [
+      "RAW_SANDBOX_EXECUTION",
+      "INDEPENDENT_AUDIT"
+    ],
+    "verdict": "CONTRADICTED",
+    "contradictionReason": "Output explicitly contradicted specification"
+  },
+  {
+    "id": "claim_missing",
+    "statement": "Unverified statement",
+    "category": "FUNCTIONAL",
+    "source": "UNTRUSTED",
+    "timestamp": "2026-08-25T09:56:36.200Z",
+    "requiredEvidenceTypes": [
+      "RAW_EXECUTION"
+    ],
+    "verdict": "UNPROVEN"
+  },
+  {
+    "id": "hermes_claim_t_proven_1787651796200",
+    "statement": "Valid math operation",
+    "category": "FUNCTIONAL",
+    "source": "HERMES_AUTONOMOUS_AGENT",
+    "timestamp": "2026-08-25T09:56:36.200Z",
+    "requiredEvidenceTypes": [
+      "RAW_SANDBOX_EXECUTION",
+      "INDEPENDENT_AUDIT"
+    ],
+    "verdict": "PROVEN",
+    "evidenceId": "ev_1_1787651796200"
+  }
+]

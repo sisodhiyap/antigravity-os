@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-08-25T00:50:27.823Z",
+  "status": "PRODUCTION_VERIFIED",
+  "provider": "Vercel",
+  "project": "antigravity-os-v5",
+  "projectId": "prj_zdye6tCCjcNRROhH15qQqw6T0ghV",
+  "deploymentId": "dpl_BSn26ZSyndoE5jnNRbdUXD25Q2vh",
+  "deploymentState": "READY",
+  "gitCommit": "7e79029e6897f05671299ac475f730b7276aed17",
+  "gitBranch": "main",
+  "gitRepo": "sisodhiyap/antigravity-os",
+  "productionUrl": "https://antigravity-os-v5.vercel.app",
+  "deploymentHostUrl": "https://antigravity-os-v5-hj1bzhs6p-sisodhiyaprashant35-6364s-projects.vercel.app",
+  "identityVerification": {
+    "antigravitySignature": true,
+    "greenLaneResiduals": false,
+    "titleMatch": "ANTIGRAVITY OS v5.1"
+  },
+  "securityPosture": {
+    "xFrameOptions": "DENY",
+    "xContentTypeOptions": "nosniff",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "cspActive": true,
+    "dotEnvBlocked": true,
+    "dotGitBlocked": true
+  }
+}

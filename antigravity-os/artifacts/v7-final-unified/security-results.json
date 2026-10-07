@@ -1,0 +1,7 @@
+{
+  "vulnerabilitiesDetected": 0,
+  "secretsLeaked": 0,
+  "promptInjectionsBlocked": 5,
+  "cloudDLPViolations": 0,
+  "status": "ZERO_VULNERABILITIES"
+}

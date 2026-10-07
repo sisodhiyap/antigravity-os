@@ -1,0 +1,20 @@
+{
+  "viewports": {
+    "mobile375px": "STABLE",
+    "tablet768px": "STABLE",
+    "laptop1024px": "STABLE",
+    "desktop1440px": "STABLE",
+    "ultrawide1920px": "STABLE"
+  },
+  "operatorJourneys": [
+    "User Sign-In & JWT Session Creation",
+    "VFX Shot Kanban Status Drag & Drop",
+    "Deliverable Asset Annotation Upload",
+    "Client Approval & Cryptographic Timestamping",
+    "Multi-Currency Budget Forecast Query"
+  ],
+  "taskSuccessRate": 1,
+  "deadEndsDetected": 0,
+  "cognitiveLoadScore": "OPTIMAL",
+  "overallUsabilityScore": 98.8
+}

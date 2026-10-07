@@ -1,0 +1,33 @@
+{
+  "allBugs": [
+    {
+      "bugId": "BUG_01",
+      "category": "ROUTING",
+      "symptom": "Static file server fallback served index.html on .env or sensitive file requests",
+      "rootCause": "!path.extname('/.env') treated dotfile as extensionless SPA route",
+      "appliedFix": "Added global dotfile and sensitive directory shield (pathname.startsWith('/.') -> HTTP 403)",
+      "createdAt": "2026-08-25T07:40:48.187Z"
+    },
+    {
+      "bugId": "BUG_02",
+      "category": "PERSISTENCE",
+      "symptom": "Windows EPERM error on concurrent fs.renameSync temp-file write",
+      "rootCause": "File lock retained momentarily by reader stream on Windows OS",
+      "appliedFix": "Enforce direct atomic synchronous fs.writeFileSync with retry wrapper",
+      "createdAt": "2026-08-25T07:40:48.187Z"
+    }
+  ],
+  "regRes": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "results": [
+      {
+        "id": "REG_01_DOTFILE_SHIELD",
+        "status": "PASS",
+        "category": "ROUTING",
+        "latencyMs": 0
+      }
+    ]
+  }
+}

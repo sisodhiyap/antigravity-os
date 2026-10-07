@@ -1,0 +1,29 @@
+[
+  {
+    "detected": true,
+    "items": [
+      {
+        "type": "EMAIL",
+        "masked": "op***@antigravity.io",
+        "action": "MASK"
+      },
+      {
+        "type": "PHONE",
+        "masked": "***-***-4567",
+        "action": "MASK"
+      }
+    ],
+    "sanitizedText": "Contact developer at op***@antigravity.io or phone ***-***-4567"
+  },
+  {
+    "detected": true,
+    "items": [
+      {
+        "type": "GOV_ID",
+        "masked": "[REDACTED_GOV_ID]",
+        "action": "MASK"
+      }
+    ],
+    "sanitizedText": "SSN: [REDACTED_GOV_ID]"
+  }
+]

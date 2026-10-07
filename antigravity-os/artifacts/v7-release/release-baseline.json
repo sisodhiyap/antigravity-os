@@ -1,0 +1,21 @@
+{
+  "version": "7.0.0",
+  "status": "V7-FROZEN-PRODUCTION",
+  "releaseTag": "v7.0.0",
+  "gitCommit": "b55019e5d3ea4a999295fe3be14057d9",
+  "treeHashSha256": "dae1806148f6b1ae9c2b9e12b76c6d026563545b0ae9878212a9206268abed64",
+  "packageLockHash": "7df75ac72da4902203c6583cb78ab4c96d0acb41c49d6a6ce7c8bd5164288d21",
+  "runtime": {
+    "os": "Windows_NT 10.0.26200 (x64)",
+    "node": "v24.16.0",
+    "python": "3.11.9 (Local ComfyUI Environment)",
+    "docker": "27.3.1 (Optional Container Engine)"
+  },
+  "schemaVersion": "7.0.0",
+  "pluginRegistryVersion": "1.0.0-V7",
+  "modelRegistryVersion": "1.0.0-V7",
+  "comfyuiVersion": "0.3.18",
+  "ollamaVersion": "0.5.12",
+  "verificationSuiteVersion": "7.0.0-FINAL",
+  "timestamp": "2026-08-26T03:59:38.301Z"
+}

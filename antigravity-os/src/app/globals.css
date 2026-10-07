@@ -2,105 +2,505 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Google Fonts ─────────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* ── CSS Custom Properties — Dark Mode (default) ─────────────── */
 @layer base {
-  :root {
-    --background: 224 71% 4%;
-    --foreground: 210 40% 98%;
-    --card: 222 47% 7%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222 47% 7%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 187 100% 50%;
-    --primary-foreground: 222 47% 11%;
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 263 70% 58%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 18%;
-    --input: 217 33% 18%;
-    --ring: 187 100% 50%;
-    --radius: 0.75rem;
+  :root,
+  [data-theme="dark"] {
+    /* Backgrounds: Charcoal Black + Graphite */
+    --ag-bg:            #080808;
+    --ag-bg-deep:       #0D0D0F;
+    --ag-surface:       #121212;
+    --ag-elevated:      #181818;
+    --ag-card:          #151518;
+    --ag-border:        #222225;
+    --ag-border-subtle: rgba(255, 255, 255, 0.07);
+
+    /* Gold Accent */
+    --ag-gold:          #D4AF37;
+    --ag-gold-bright:   #F0C75E;
+    --ag-gold-glow:     #FFD978;
+    --ag-gold-soft:     rgba(212, 175, 55, 0.14);
+    --ag-gold-alpha:    rgba(212, 175, 55, 0.12);
+    --ag-gold-border:   rgba(212, 175, 55, 0.35);
+
+    /* Typography */
+    --ag-text:          #F5F5F5;
+    --ag-text-sec:      #B8B8B8;
+    --ag-muted:         #777777;
+
+    /* Status */
+    --ag-success:       #39D98A;
+    --ag-success-bg:    rgba(57, 217, 138, 0.12);
+    --ag-warning:       #F5B942;
+    --ag-warning-bg:    rgba(245, 185, 66, 0.12);
+    --ag-error:         #FF5C5C;
+    --ag-error-bg:      rgba(255, 92, 92, 0.12);
+    --ag-info:          #63B3FF;
+    --ag-info-bg:       rgba(99, 179, 255, 0.12);
+
+    /* Shadows */
+    --ag-shadow-sm:     0 2px 8px rgba(0,0,0,0.4);
+    --ag-shadow-md:     0 6px 28px rgba(0,0,0,0.55);
+    --ag-shadow-lg:     0 12px 48px rgba(0,0,0,0.7);
+    --ag-shadow-gold:   0 0 24px -4px rgba(212,175,55,0.25);
+
+    --radius:           0.75rem;
+  }
+
+  /* ── Light Mode (Intentionally Designed Soft Ivory / Charcoal) ── */
+  [data-theme="light"] {
+    --ag-bg:            #F4F3EF;
+    --ag-bg-deep:       #ECEAE4;
+    --ag-surface:       #FFFFFF;
+    --ag-elevated:      #F8F7F4;
+    --ag-card:          #FFFFFF;
+    --ag-border:        rgba(0, 0, 0, 0.10);
+    --ag-border-subtle: rgba(0, 0, 0, 0.06);
+
+    --ag-gold:          #B18A24;
+    --ag-gold-bright:   #D4AF37;
+    --ag-gold-soft:     rgba(177, 138, 36, 0.12);
+    --ag-gold-alpha:    rgba(177, 138, 36, 0.10);
+    --ag-gold-border:   rgba(177, 138, 36, 0.40);
+
+    --ag-text:          #171717;
+    --ag-text-sec:      #555555;
+    --ag-muted:         #666666;
+
+    --ag-success:       #1F8A52;
+    --ag-success-bg:    rgba(31, 138, 82, 0.10);
+    --ag-warning:       #B87D14;
+    --ag-warning-bg:    rgba(184, 125, 20, 0.10);
+    --ag-error:         #D32F2F;
+    --ag-error-bg:      rgba(211, 47, 47, 0.10);
+    --ag-info:          #1976D2;
+    --ag-info-bg:       rgba(25, 118, 210, 0.10);
+
+    --ag-shadow-sm:     0 1px 4px rgba(0,0,0,0.06);
+    --ag-shadow-md:     0 4px 16px rgba(0,0,0,0.08);
+    --ag-shadow-lg:     0 8px 32px rgba(0,0,0,0.12);
+    --ag-shadow-gold:   0 0 20px -6px rgba(177,138,36,0.25);
   }
 }
 
+/* ── Base Styles ───────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  background-color: #030712;
-  color: #f3f4f6;
+  background-color: var(--ag-bg);
+  color: var(--ag-text);
+  font-family: "Inter", system-ui, sans-serif;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  /* Smooth theme transitions */
+  transition: background-color 0.3s ease, color 0.15s ease;
 }
 
-/* Glassmorphism Classes */
-.glass-panel {
-  background: rgba(10, 16, 32, 0.72);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 240, 255, 0.12);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+/* ── Premium Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 5px; height: 5px; }
+::-webkit-scrollbar-track  { background: var(--ag-bg-deep); }
+::-webkit-scrollbar-thumb  { background: var(--ag-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ag-gold-soft); }
+
+/* ── Typography Utilities ──────────────────────────────────────── */
+.font-satoshi { font-family: "Inter", sans-serif; font-weight: 600; letter-spacing: -0.02em; }
+.font-geist   { font-family: "Inter", sans-serif; }
+.font-ui      { font-family: "Inter", sans-serif; font-size: 0.75rem; }
+
+/* ── Glass Surface ─────────────────────────────────────────────── */
+.ag-glass {
+  background: rgba(23, 22, 19, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--ag-border);
 }
 
-.glass-panel-hover {
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+[data-theme="light"] .ag-glass {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--ag-border);
 }
 
-.glass-panel-hover:hover {
-  border-color: rgba(0, 240, 255, 0.35);
-  box-shadow: 0 12px 40px -10px rgba(0, 240, 255, 0.25);
-  transform: translateY(-2px);
+/* ── Card Surface ──────────────────────────────────────────────── */
+.ag-card {
+  background: var(--ag-surface);
+  border: 1px solid var(--ag-border);
+  border-radius: 0.75rem;
+  box-shadow: var(--ag-shadow-sm);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.cyber-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
-  padding: 0.2rem 0.6rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+.ag-card:hover {
+  border-color: rgba(201, 162, 39, 0.3);
+  box-shadow: var(--ag-shadow-md);
 }
 
-/* Glowing text */
-.text-glow-cyan {
-  text-shadow: 0 0 12px rgba(0, 240, 255, 0.6);
+[data-theme="light"] .ag-card {
+  background: var(--ag-surface);
+  border-color: var(--ag-border);
 }
 
-.text-glow-neon {
-  text-shadow: 0 0 12px rgba(57, 255, 20, 0.6);
+/* ── Gold Accent ───────────────────────────────────────────────── */
+.ag-gold      { color: var(--ag-gold); }
+.ag-gold-text { color: var(--ag-gold); }
+.ag-gold-border { border-color: var(--ag-gold); }
+.ag-gold-bg   { background: var(--ag-gold-alpha); }
+
+.text-gold    { color: var(--ag-gold); }
+.text-gold-bright { color: var(--ag-gold-bright); }
+
+/* ── Status Indicators ─────────────────────────────────────────── */
+.ag-status-online  { color: var(--ag-success); }
+.ag-status-warning { color: var(--ag-warning); }
+.ag-status-offline { color: var(--ag-error); }
+.ag-status-dot-online  { background: var(--ag-success); }
+.ag-status-dot-warning { background: var(--ag-warning); }
+.ag-status-dot-offline { background: var(--ag-error); }
+
+/* ── Pipeline Track ────────────────────────────────────────────── */
+.ag-pipeline-active {
+  border-color: var(--ag-gold);
+  background: var(--ag-gold-alpha);
+  box-shadow: var(--ag-shadow-gold);
 }
 
-.text-glow-purple {
-  text-shadow: 0 0 12px rgba(157, 78, 221, 0.6);
-}
-
-/* Custom Cyber Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(5, 8, 17, 0.9);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 240, 255, 0.25);
+/* ── Focus Ring ────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--ag-gold);
+  outline-offset: 2px;
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 240, 255, 0.5);
+/* ── Reduced Motion ────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
-/* Background Cyber Grid */
-.bg-cyber-grid {
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+/* ── Page Transitions ──────────────────────────────────────────── */
+.ag-page-enter {
+  animation: fade-in 0.3s ease-out, slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* ── Subtle Grid Background ────────────────────────────────────── */
+.ag-grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(201,162,39,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(201,162,39,0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ── Input Styles ──────────────────────────────────────────────── */
+.ag-input {
+  background: var(--ag-elevated);
+  border: 1px solid var(--ag-border);
+  color: var(--ag-text);
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  width: 100%;
+}
+
+.ag-input.pl-10,
+input.ag-input.pl-10 {
+  padding-left: 2.5rem !important;
+}
+
+.ag-input.pr-11,
+input.ag-input.pr-11 {
+  padding-right: 2.75rem !important;
+}
+
+.ag-input:focus {
+  outline: none;
+  border-color: var(--ag-gold);
+  box-shadow: 0 0 0 3px var(--ag-gold-alpha);
+}
+
+.ag-input::placeholder {
+  color: var(--ag-muted);
+}
+
+[data-theme="light"] .ag-input {
+  background: var(--ag-bg);
+  border-color: var(--ag-border);
+}
+
+/* ── Browser Autofill Dark Fix ─────────────────────────────────── */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px var(--ag-elevated) inset !important;
+  -webkit-text-fill-color: var(--ag-text) !important;
+  caret-color: var(--ag-text) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+[data-theme="light"] input:-webkit-autofill,
+[data-theme="light"] input:-webkit-autofill:hover, 
+[data-theme="light"] input:-webkit-autofill:focus, 
+[data-theme="light"] input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px var(--ag-bg) inset !important;
+  -webkit-text-fill-color: var(--ag-text) !important;
+  caret-color: var(--ag-text) !important;
+}
+
+/* ── Button Base ───────────────────────────────────────────────── */
+.ag-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.ag-btn-primary {
+  background: var(--ag-gold);
+  color: #0B0B0A;
+  border-color: var(--ag-gold);
+}
+
+.ag-btn-primary:hover {
+  background: var(--ag-gold-bright);
+  box-shadow: var(--ag-shadow-gold);
+  transform: translateY(-1px);
+}
+
+.ag-btn-ghost {
+  background: transparent;
+  color: var(--ag-text-sec);
+  border-color: var(--ag-border);
+}
+
+.ag-btn-ghost:hover {
+  color: var(--ag-text);
+  border-color: var(--ag-gold-soft);
+  background: var(--ag-gold-alpha);
+}
+
+.ag-btn-danger {
+  background: transparent;
+  color: var(--ag-error);
+  border-color: rgba(217,108,108,0.3);
+}
+
+.ag-btn-danger:hover {
+  background: var(--ag-error-bg);
+  border-color: var(--ag-error);
+}
+
+/* ── Mission Control Living Card & Radial Glow ──────────────────── */
+.mission-card {
+  position: relative;
+  background-color: var(--ag-card);
+  border: 1px solid var(--ag-border-subtle);
+  border-radius: var(--radius);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  overflow: hidden;
+}
+
+.mission-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    var(--ag-gold-soft),
+    transparent 42%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mission-card:hover {
+  border-color: var(--ag-gold-border);
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.08), 0 12px 36px rgba(0, 0, 0, 0.35);
+  transform: translateY(-1px);
+}
+
+.mission-card:hover::before {
+  opacity: 1;
+}
+
+.mission-card:active {
+  border-color: var(--ag-gold);
+  transform: translateY(0);
+}
+
+.mission-card.selected {
+  border-color: var(--ag-gold);
+  box-shadow: 0 0 0 1px var(--ag-gold-border), 0 0 24px -4px rgba(212, 175, 55, 0.25);
+}
+
+.mission-card.selected::before {
+  opacity: 0.7;
+}
+
+[data-theme="light"] .mission-card {
+  background-color: var(--ag-surface);
+  border-color: var(--ag-border);
+}
+
+[data-theme="light"] .mission-card:hover {
+  border-color: var(--ag-gold-border);
+  box-shadow: 0 0 0 1px rgba(177, 138, 36, 0.12), 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Mission Selected Navigation Accent Stroke ───────────────────── */
+.mc-nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--ag-text-sec);
+  transition: color 0.18s ease, background-color 0.18s ease;
+}
+
+.mc-nav-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15%;
+  bottom: 15%;
+  width: 2px;
+  background-color: var(--ag-gold);
+  border-radius: 2px;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s ease;
+}
+
+.mc-nav-item:hover {
+  color: var(--ag-text);
+  background-color: var(--ag-elevated);
+}
+
+.mc-nav-item.active {
+  color: var(--ag-text);
+  background: linear-gradient(90deg, var(--ag-gold-alpha) 0%, transparent 100%);
+  border-left: 2px solid var(--ag-gold);
+  box-shadow: -4px 0 18px rgba(212, 175, 55, 0.25);
+}
+
+.mc-nav-item.active::before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+/* ── Live Telemetry Bar ─────────────────────────────────────────── */
+.mc-progress-track {
+  height: 4px;
+  border-radius: 9999px;
+  background: var(--ag-border);
+  overflow: hidden;
+}
+
+.mc-progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--ag-gold) 0%, var(--ag-gold-bright) 100%);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Connected Nodes & Pipeline ─────────────────────────────────── */
+.mc-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.mc-node-active {
+  border-color: var(--ag-gold);
+  box-shadow: 0 0 16px -2px rgba(212, 175, 55, 0.5);
+  background: var(--ag-gold-alpha);
+}
+
+/* ── Keyframes ─────────────────────────────────────────────────── */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes status-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.85); }
+}
+
+@keyframes flow-pulse {
+  0%   { stroke-dashoffset: 24; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* ── Mobile Touch & Safe Area Utilities ────────────────────────── */
+@layer utilities {
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  .min-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 1rem);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0.5rem);
+  }
+}
+
+/* Prevent horizontal overflow on small devices */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+

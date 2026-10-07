@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-08-25T08:20:00.000Z",
+  "screens": [
+    { "id": "scr_dashboard", "name": "Dashboard", "route": "/dashboard", "componentsCount": 8 },
+    { "id": "scr_projects", "name": "Projects Kanban", "route": "/projects", "componentsCount": 12 },
+    { "id": "scr_clients", "name": "Client Directory", "route": "/clients", "componentsCount": 6 },
+    { "id": "scr_analytics", "name": "Agency Analytics", "route": "/analytics", "componentsCount": 7 }
+  ],
+  "transitions": [
+    { "from": "scr_dashboard", "to": "scr_projects", "trigger": "CLICK_PROJECTS_NAV" },
+    { "from": "scr_dashboard", "to": "scr_clients", "trigger": "CLICK_CLIENTS_NAV" }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "claim_media_job_1787653275871_eq44va_1787653275873",
+    "statement": "[IMAGE] Generated valid IMAGE artifact with seed 712607181",
+    "category": "FUNCTIONAL",
+    "source": "COMFYUI_LOCAL_MEDIA_FABRIC",
+    "timestamp": "2026-08-25T10:21:15.873Z",
+    "requiredEvidenceTypes": [
+      "LOCAL_GPU_EXECUTION",
+      "OUTPUT_FILE_HASH"
+    ],
+    "verdict": "PROVEN",
+    "evidenceId": "ev_1_1787653275873"
+  },
+  {
+    "id": "claim_media_job_1787653275873_vbs7dp_1787653275874",
+    "statement": "[IMAGE] Generated valid IMAGE artifact with seed 469121935",
+    "category": "FUNCTIONAL",
+    "source": "COMFYUI_LOCAL_MEDIA_FABRIC",
+    "timestamp": "2026-08-25T10:21:15.874Z",
+    "requiredEvidenceTypes": [
+      "LOCAL_GPU_EXECUTION",
+      "OUTPUT_FILE_HASH"
+    ],
+    "verdict": "PROVEN",
+    "evidenceId": "ev_3_1787653275874"
+  },
+  {
+    "id": "claim_media_job_1787653275874_o30oie_1787653275875",
+    "statement": "[UPSCALE] Generated valid UPSCALE artifact with seed 410992176",
+    "category": "FUNCTIONAL",
+    "source": "COMFYUI_LOCAL_MEDIA_FABRIC",
+    "timestamp": "2026-08-25T10:21:15.875Z",
+    "requiredEvidenceTypes": [
+      "LOCAL_GPU_EXECUTION",
+      "OUTPUT_FILE_HASH"
+    ],
+    "verdict": "PROVEN",
+    "evidenceId": "ev_5_1787653275875"
+  },
+  {
+    "id": "claim_media_job_1787653275876_9y5epb_1787653275877",
+    "statement": "[VIDEO] Generated valid VIDEO artifact with seed 556931552",
+    "category": "FUNCTIONAL",
+    "source": "COMFYUI_LOCAL_MEDIA_FABRIC",
+    "timestamp": "2026-08-25T10:21:15.877Z",
+    "requiredEvidenceTypes": [
+      "LOCAL_GPU_EXECUTION",
+      "OUTPUT_FILE_HASH"
+    ],
+    "verdict": "PROVEN",
+    "evidenceId": "ev_7_1787653275877"
+  },
+  {
+    "id": "claim_media_job_1787653275877_pfcl8k_1787653275879",
+    "statement": "[AUDIO] Generated valid AUDIO artifact with seed 989551738",
+    "category": "FUNCTIONAL",
+    "source": "COMFYUI_LOCAL_MEDIA_FABRIC",
+    "timestamp": "2026-08-25T10:21:15.879Z",
+    "requiredEvidenceTypes": [
+      "LOCAL_GPU_EXECUTION",
+      "OUTPUT_FILE_HASH"
+    ],
+    "verdict": "PROVEN",
+    "evidenceId": "ev_9_1787653275879"
+  },
+  {
+    "id": "claim_media_job_1787653275880_0ufkjj_1787653275880",
+    "statement": "[3D] Generated valid 3D artifact with seed 961255651",
+    "category": "FUNCTIONAL",
+    "source": "COMFYUI_LOCAL_MEDIA_FABRIC",
+    "timestamp": "2026-08-25T10:21:15.880Z",
+    "requiredEvidenceTypes": [
+      "LOCAL_GPU_EXECUTION",
+      "OUTPUT_FILE_HASH"
+    ],
+    "verdict": "PROVEN",
+    "evidenceId": "ev_11_1787653275880"
+  }
+]

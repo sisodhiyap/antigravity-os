@@ -1,0 +1,6 @@
+{
+  "unauthorizedCloudUploads": 0,
+  "privateAssetsExfiltrated": 0,
+  "secretTokensTransmitted": 0,
+  "localPrivacyGuaranteed": true
+}

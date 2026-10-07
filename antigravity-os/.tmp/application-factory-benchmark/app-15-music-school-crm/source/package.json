@@ -1,0 +1,13 @@
+{
+  "name": "app-15-music-school-crm",
+  "version": "1.0.0",
+  "description": "Antigravity OS v5.2 Autonomous Build — Music School Academy Management (Unknown Domain)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/run-tests.js"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  }
+}

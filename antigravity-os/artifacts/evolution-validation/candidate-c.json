@@ -1,0 +1,10 @@
+{
+  "candidateId": "CAND_C_KNOWN_REGRESSION",
+  "name": "Insecure Token Optimization (Adversarial Regression)",
+  "type": "KNOWN_REGRESSION",
+  "description": "Disables HMAC verification in auth handler for fake performance gain (Intentional Security Degradation)",
+  "codeModifications": {
+    "src/auth/auth.ts": "bypass_hmac_check: true"
+  },
+  "expectedOutcome": "REJECT"
+}

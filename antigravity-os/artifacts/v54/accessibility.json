@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-08-25T07:59:28.128Z",
+  "standard": "WCAG 2.2 AA",
+  "keyboardNavigation": "PASS (Tab focus rings & Enter/Space activations)",
+  "ariaAttributes": "PASS (aria-expanded, aria-selected, aria-live)",
+  "colorContrastRatio": "PASS (Minimum 4.8:1 on charcoal/gold tokens)",
+  "status": "PASS"
+}

@@ -1,0 +1,8 @@
+{
+  "runs": [
+    "CAND_B_SAFE_IMPROVEMENT",
+    "CAND_B_SAFE_IMPROVEMENT",
+    "CAND_B_SAFE_IMPROVEMENT"
+  ],
+  "isDeterministic": true
+}

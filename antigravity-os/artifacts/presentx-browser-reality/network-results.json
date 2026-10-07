@@ -1,0 +1,1670 @@
+[
+  {
+    "url": "http://localhost:3000/signup",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/image?url=%2Fassets%2Flogin-hero.jpg&w=1920&q=75",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/image?url=%2Fassets%2Flogin-hero.jpg&w=828&q=75",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746702567",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746702567",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/signup/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746702567",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/presentx",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746736989",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746736989",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/presentx/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746736989",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/telemetry",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/presentx/projects",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/presentx",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746738246",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746738246",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/presentx/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746738246",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/telemetry",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/presentx/projects",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/presentx",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746739453",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746739453",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/presentx/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746739453",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/telemetry",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/presentx/projects",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/presentx",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746740723",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746740723",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/presentx/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746740723",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/telemetry",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/presentx/projects",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/presentx",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746741918",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746741918",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/presentx/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746741918",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/telemetry",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/presentx/projects",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/presentx",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746743121",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746743121",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/presentx/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746743121",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/telemetry",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/presentx/projects",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/presentx",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746744350",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746744350",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/presentx/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746744350",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/telemetry",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/presentx/projects",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/presentx",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746745606",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746745606",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/presentx/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746745606",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/telemetry",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/presentx/projects",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/telemetry",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/presentx/editor/pres_1787746747694_4a0qf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746747771",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746747771",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/presentx/editor/%5Bid%5D/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746747771",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/telemetry",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/presentx/projects?id=pres_1787746747694_4a0qf",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/telemetry",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/basket",
+    "method": "GET",
+    "status": 307,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/login?callbackUrl=%2Fbasket",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/image?url=%2Fassets%2Flogin-hero.jpg&w=828&q=75",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/image?url=%2Fassets%2Flogin-hero.jpg&w=1920&q=75",
+    "method": "GET",
+    "status": 304,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746749987",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746749987",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/login/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746749987",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/settings",
+    "method": "GET",
+    "status": 307,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/login?callbackUrl=%2Fsettings",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/image?url=%2Fassets%2Flogin-hero.jpg&w=828&q=75",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/image?url=%2Fassets%2Flogin-hero.jpg&w=1920&q=75",
+    "method": "GET",
+    "status": 304,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746751173",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746751173",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/login/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746751173",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/profile",
+    "method": "GET",
+    "status": 307,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/login?callbackUrl=%2Fprofile",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/image?url=%2Fassets%2Flogin-hero.jpg&w=828&q=75",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/image?url=%2Fassets%2Flogin-hero.jpg&w=1920&q=75",
+    "method": "GET",
+    "status": 304,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746752348",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746752348",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/login/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746752348",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/privacy",
+    "method": "GET",
+    "status": 307,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/login?callbackUrl=%2Fprivacy",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/image?url=%2Fassets%2Flogin-hero.jpg&w=828&q=75",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/image?url=%2Fassets%2Flogin-hero.jpg&w=1920&q=75",
+    "method": "GET",
+    "status": 304,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746753512",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746753512",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/login/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746753512",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/security",
+    "method": "GET",
+    "status": 307,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/login?callbackUrl=%2Fsecurity",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/image?url=%2Fassets%2Flogin-hero.jpg&w=828&q=75",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/image?url=%2Fassets%2Flogin-hero.jpg&w=1920&q=75",
+    "method": "GET",
+    "status": 304,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746754716",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746754716",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/login/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746754716",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/presentx",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746755870",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746755870",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/presentx/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746755870",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/telemetry",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/presentx/projects",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/presentx",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1787746757144",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1787746757144",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/app/presentx/page.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1787746757144",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/_next/static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js",
+    "method": "GET",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/telemetry",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  },
+  {
+    "url": "http://localhost:3000/api/presentx/projects",
+    "method": "GET",
+    "status": 401,
+    "durationMs": 0
+  }
+]

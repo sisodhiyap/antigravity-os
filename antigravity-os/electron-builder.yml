@@ -1,0 +1,29 @@
+appId: "ai.antigravity.os.desktop"
+productName: "Antigravity OS"
+copyright: "Copyright © 2026 Antigravity Sovereign Intelligence"
+directories:
+  output: "dist/desktop-installer"
+  buildResources: "public"
+files:
+  - "dist/**/*"
+  - "src/desktop/**/*"
+  - "workspaces/**/*"
+  - "package.json"
+win:
+  target:
+    - target: "nsis"
+      arch:
+        - "x64"
+    - target: "portable"
+      arch:
+        - "x64"
+  icon: "public/favicon.ico"
+  requestedExecutionLevel: "asInvoker"
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: "always"
+  createStartMenuShortcut: true
+  shortcutName: "Antigravity OS"
+  uninstallDisplayName: "Antigravity OS Desktop Runtime"
+  deleteAppDataOnUninstall: false

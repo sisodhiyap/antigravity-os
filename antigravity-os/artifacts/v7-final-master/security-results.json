@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "attack": "Prompt Injection",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 2,
+    "attack": "Indirect Prompt Injection",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 3,
+    "attack": "Tool Poisoning",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 4,
+    "attack": "MCP Abuse",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 5,
+    "attack": "Path Traversal",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 6,
+    "attack": "ZIP Bomb",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 7,
+    "attack": "XXE",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 8,
+    "attack": "Malicious SVG",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 9,
+    "attack": "Malicious Archive",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 10,
+    "attack": "Prototype Pollution",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 11,
+    "attack": "Command Injection",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 12,
+    "attack": "SQL Injection",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 13,
+    "attack": "XSS",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 14,
+    "attack": "CSRF",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 15,
+    "attack": "SSRF",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 16,
+    "attack": "Credential Leakage",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 17,
+    "attack": "Secret Exfiltration",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 18,
+    "attack": "Plugin Breakout",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 19,
+    "attack": "Model-Output Injection",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 20,
+    "attack": "File Upload Abuse",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 21,
+    "attack": "WebView Abuse",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  },
+  {
+    "id": 22,
+    "attack": "Privilege Escalation",
+    "blocked": true,
+    "containment": "ZERO_TRUST_SANDBOX",
+    "verdict": "PASS"
+  }
+]

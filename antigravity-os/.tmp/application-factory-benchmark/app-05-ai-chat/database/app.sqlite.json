@@ -1,0 +1,76 @@
+{
+  "conversations": [
+    {
+      "id": "id_fej57hd",
+      "created_at": "2026-08-25T07:14:00.783Z",
+      "updated_at": "2026-08-25T07:14:00.783Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_t473ifo",
+      "created_at": "2026-08-25T07:14:00.805Z",
+      "updated_at": "2026-08-25T07:14:00.805Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    },
+    {
+      "id": "id_f3giuzb",
+      "created_at": "2026-08-25T07:15:37.015Z",
+      "updated_at": "2026-08-25T07:15:37.015Z",
+      "title": "Tenant A Secret Data",
+      "tenant_id": "tenant_A"
+    },
+    {
+      "id": "id_q5j87ca",
+      "created_at": "2026-08-25T07:15:37.038Z",
+      "updated_at": "2026-08-25T07:15:37.038Z",
+      "title": "Benchmark Live Test Item",
+      "tenant_id": "org_primary"
+    }
+  ],
+  "messages": [
+    {
+      "id": "id_w128hof",
+      "created_at": "2026-08-25T07:14:00.800Z",
+      "updated_at": "2026-08-25T07:14:00.800Z",
+      "title": "Initial Message Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for Message"
+    }
+  ],
+  "systemprompts": [
+    {
+      "id": "id_vqofonf",
+      "created_at": "2026-08-25T07:14:00.801Z",
+      "updated_at": "2026-08-25T07:14:00.801Z",
+      "title": "Initial SystemPrompt Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for SystemPrompt"
+    }
+  ],
+  "modelconfigs": [
+    {
+      "id": "id_spaacec",
+      "created_at": "2026-08-25T07:14:00.801Z",
+      "updated_at": "2026-08-25T07:14:00.801Z",
+      "title": "Initial ModelConfig Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for ModelConfig"
+    }
+  ],
+  "searchindexs": [
+    {
+      "id": "id_o0dwsxl",
+      "created_at": "2026-08-25T07:14:00.802Z",
+      "updated_at": "2026-08-25T07:14:00.802Z",
+      "title": "Initial SearchIndex Record",
+      "status": "active",
+      "tenant_id": "org_primary",
+      "description": "Auto-seeded record for SearchIndex"
+    }
+  ]
+}

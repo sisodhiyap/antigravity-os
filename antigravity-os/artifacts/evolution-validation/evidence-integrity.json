@@ -1,0 +1,33 @@
+{
+  "validationId": "eval_1787646344857",
+  "system": "Antigravity OS Evolution Control Plane",
+  "baselineHash": "701ea0d9b9d1593b3bdffaba27715e670c6a1029de398df91f7ec4aaf2755449",
+  "candidateEvaluation": {
+    "baselineId": "CAND_A_BASELINE",
+    "evaluatedCandidates": [
+      {
+        "candidateId": "CAND_B_SAFE_IMPROVEMENT",
+        "isImprovement": true,
+        "isSecurityDegraded": false,
+        "isRegressionDetected": false,
+        "latencyDeltaPercent": 29.41,
+        "verdict": "ELIGIBLE_FOR_PROMOTION"
+      },
+      {
+        "candidateId": "CAND_C_KNOWN_REGRESSION",
+        "isImprovement": false,
+        "isSecurityDegraded": true,
+        "isRegressionDetected": true,
+        "latencyDeltaPercent": 35.29,
+        "verdict": "REJECTED_DUE_TO_REGRESSION"
+      }
+    ],
+    "selectedWinnerId": "CAND_B_SAFE_IMPROVEMENT",
+    "justification": "Candidate CAND_B_SAFE_IMPROVEMENT demonstrated verified 29.41% latency reduction with 0 regressions and identical 100% security score."
+  },
+  "totalTestsExecuted": 18,
+  "passedTests": 18,
+  "productionModified": false,
+  "finalVerdict": "EVOLUTION ENGINE VERIFIED",
+  "manifestSha256": "00be63e52498ce8e94d48b1ce265f39b0d1b64a632ce26a82e68eca1151aca11"
+}

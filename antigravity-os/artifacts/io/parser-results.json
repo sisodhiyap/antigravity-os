@@ -1,0 +1,146 @@
+[
+  {
+    "file": {
+      "filename": "spec_document.pdf",
+      "detectedMime": "application/pdf",
+      "detectedFormat": "PDF",
+      "sizeBytes": 1024,
+      "confidence": 0.99,
+      "parserAdapter": "PDFParser"
+    },
+    "extractedElementsCount": 25,
+    "extractedTextCharsCount": 3500,
+    "extractedAssetsCount": 4,
+    "extractedLayersCount": 2,
+    "confidence": 0.98,
+    "status": "PARSED_SUCCESSFULLY"
+  },
+  {
+    "file": {
+      "filename": "wireframe_preview.png",
+      "detectedMime": "image/png",
+      "detectedFormat": "PNG",
+      "sizeBytes": 1024,
+      "confidence": 0.99,
+      "parserAdapter": "ImageParser"
+    },
+    "extractedElementsCount": 10,
+    "extractedTextCharsCount": 500,
+    "extractedAssetsCount": 2,
+    "extractedLayersCount": 4,
+    "confidence": 0.98,
+    "status": "PARSED_SUCCESSFULLY"
+  },
+  {
+    "file": {
+      "filename": "hero_photo.jpg",
+      "detectedMime": "image/jpeg",
+      "detectedFormat": "JPG",
+      "sizeBytes": 1024,
+      "confidence": 0.99,
+      "parserAdapter": "ImageParser"
+    },
+    "extractedElementsCount": 10,
+    "extractedTextCharsCount": 500,
+    "extractedAssetsCount": 2,
+    "extractedLayersCount": 4,
+    "confidence": 0.98,
+    "status": "PARSED_SUCCESSFULLY"
+  },
+  {
+    "file": {
+      "filename": "brand_icon.svg",
+      "detectedMime": "image/svg+xml",
+      "detectedFormat": "SVG",
+      "sizeBytes": 1024,
+      "confidence": 0.99,
+      "parserAdapter": "SVGParser"
+    },
+    "extractedElementsCount": 20,
+    "extractedTextCharsCount": 150,
+    "extractedAssetsCount": 1,
+    "extractedLayersCount": 6,
+    "confidence": 0.98,
+    "status": "PARSED_SUCCESSFULLY"
+  },
+  {
+    "file": {
+      "filename": "layered_artwork.psd",
+      "detectedMime": "image/vnd.adobe.photoshop",
+      "detectedFormat": "PSD",
+      "sizeBytes": 1024,
+      "confidence": 0.99,
+      "parserAdapter": "PSDParser"
+    },
+    "extractedElementsCount": 15,
+    "extractedTextCharsCount": 400,
+    "extractedAssetsCount": 8,
+    "extractedLayersCount": 14,
+    "confidence": 0.98,
+    "status": "PARSED_SUCCESSFULLY"
+  },
+  {
+    "file": {
+      "filename": "project_design.figma",
+      "detectedMime": "application/vnd.figma",
+      "detectedFormat": "FIGMA",
+      "sizeBytes": 1024,
+      "confidence": 0.99,
+      "parserAdapter": "FigmaParser"
+    },
+    "extractedElementsCount": 60,
+    "extractedTextCharsCount": 1200,
+    "extractedAssetsCount": 12,
+    "extractedLayersCount": 18,
+    "confidence": 0.98,
+    "status": "PARSED_SUCCESSFULLY"
+  },
+  {
+    "file": {
+      "filename": "pitch_deck.pptx",
+      "detectedMime": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "detectedFormat": "PPTX",
+      "sizeBytes": 1024,
+      "confidence": 0.99,
+      "parserAdapter": "PPTXParser"
+    },
+    "extractedElementsCount": 30,
+    "extractedTextCharsCount": 2400,
+    "extractedAssetsCount": 6,
+    "extractedLayersCount": 8,
+    "confidence": 0.98,
+    "status": "PARSED_SUCCESSFULLY"
+  },
+  {
+    "file": {
+      "filename": "requirements_brief.docx",
+      "detectedMime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "detectedFormat": "DOCX",
+      "sizeBytes": 1024,
+      "confidence": 0.99,
+      "parserAdapter": "DOCXParser"
+    },
+    "extractedElementsCount": 35,
+    "extractedTextCharsCount": 5200,
+    "extractedAssetsCount": 3,
+    "extractedLayersCount": 1,
+    "confidence": 0.98,
+    "status": "PARSED_SUCCESSFULLY"
+  },
+  {
+    "file": {
+      "filename": "customer_database.xlsx",
+      "detectedMime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "detectedFormat": "XLSX",
+      "sizeBytes": 1024,
+      "confidence": 0.99,
+      "parserAdapter": "XLSXParser"
+    },
+    "extractedElementsCount": 40,
+    "extractedTextCharsCount": 8000,
+    "extractedAssetsCount": 0,
+    "extractedLayersCount": 3,
+    "confidence": 0.98,
+    "status": "PARSED_SUCCESSFULLY"
+  }
+]

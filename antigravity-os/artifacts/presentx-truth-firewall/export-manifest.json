@@ -1,0 +1,27 @@
+{
+  "presentationHash": "1b810cc9aef154d4248ee4e24832ae95c7195efc5d003113687bbd86639a903b",
+  "sourceHashes": [],
+  "claimHashes": [
+    "a388731ce08c9f99b22dc9e9f90a629149727ffd47b9a183ca7d441867af6af0",
+    "a388731ce08c9f99b22dc9e9f90a629149727ffd47b9a183ca7d441867af6af0",
+    "a388731ce08c9f99b22dc9e9f90a629149727ffd47b9a183ca7d441867af6af0",
+    "a388731ce08c9f99b22dc9e9f90a629149727ffd47b9a183ca7d441867af6af0",
+    "a388731ce08c9f99b22dc9e9f90a629149727ffd47b9a183ca7d441867af6af0",
+    "a388731ce08c9f99b22dc9e9f90a629149727ffd47b9a183ca7d441867af6af0"
+  ],
+  "evidenceHashes": [],
+  "datasetHashes": [
+    "d7a304a8affa992486d057b4e1e1370db935f19be0040f0a05002e48b82ca922"
+  ],
+  "mediaHashes": [
+    "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+    "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0",
+    "2ebcba013ef6f1cb6666988658f1349bbc245bb8e0decb0045ca759301169ca0"
+  ],
+  "designSystemHash": "cfa9ef8041488d82cb8df95ab9c5c39e6e7486ed4adf1a1bc9d9357d0d98507c",
+  "auditHash": "d96feb80c498fd5699a300380f465ed2dda3ae5d48ca3c1a56c5e1ce2c232118",
+  "exportTimestamp": "2026-08-26T07:26:00.460Z",
+  "presentXVersion": "7.0.0-PROD-TRUTH-FIREWALL",
+  "v7Version": "7.0.0-FROZEN-CORE",
+  "signature": "7d1780d16b6d5ba5d647ac35412f4864e536baa269715ff8d47b28651c66388f"
+}

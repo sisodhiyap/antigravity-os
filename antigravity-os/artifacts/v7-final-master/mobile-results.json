@@ -1,0 +1,74 @@
+[
+  {
+    "width": 375,
+    "height": 812,
+    "name": "iPhone Mini / X",
+    "navDrawer": "PASS",
+    "bottomBar": "PASS",
+    "zeroOverflow": true,
+    "touchTarget44px": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "name": "iPhone 12/13/14",
+    "navDrawer": "PASS",
+    "bottomBar": "PASS",
+    "zeroOverflow": true,
+    "touchTarget44px": true
+  },
+  {
+    "width": 430,
+    "height": 932,
+    "name": "iPhone Pro Max",
+    "navDrawer": "PASS",
+    "bottomBar": "PASS",
+    "zeroOverflow": true,
+    "touchTarget44px": true
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "name": "iPad Portrait",
+    "navDrawer": "PASS",
+    "bottomBar": "PASS",
+    "zeroOverflow": true,
+    "touchTarget44px": true
+  },
+  {
+    "width": 1024,
+    "height": 1366,
+    "name": "iPad Pro",
+    "navDrawer": "DESKTOP_SIDEBAR",
+    "bottomBar": "HIDDEN",
+    "zeroOverflow": true,
+    "touchTarget44px": true
+  },
+  {
+    "width": 1280,
+    "height": 800,
+    "name": "Laptop Small",
+    "navDrawer": "DESKTOP_SIDEBAR",
+    "bottomBar": "HIDDEN",
+    "zeroOverflow": true,
+    "touchTarget44px": true
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "name": "MacBook Pro",
+    "navDrawer": "DESKTOP_SIDEBAR",
+    "bottomBar": "HIDDEN",
+    "zeroOverflow": true,
+    "touchTarget44px": true
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "name": "FHD Desktop",
+    "navDrawer": "DESKTOP_SIDEBAR",
+    "bottomBar": "HIDDEN",
+    "zeroOverflow": true,
+    "touchTarget44px": true
+  }
+]

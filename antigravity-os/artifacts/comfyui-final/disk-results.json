@@ -1,0 +1,5 @@
+{
+  "sandboxDir": "artifacts/comfyui/sandboxes/",
+  "diskFreeGb": 180,
+  "tempCleaningVerified": true
+}

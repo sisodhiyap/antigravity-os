@@ -1,0 +1,115 @@
+version: "3.9"
+
+# ── Antigravity OS v5.2 — Local Docker Stack ─────────────────────
+# Usage: docker compose up -d
+# Access: http://localhost:3000
+#
+# AI Services bind to 127.0.0.1 ONLY — not exposed to the internet
+# Only the application gateway (port 3000) is accessible from host
+
+services:
+
+  # ── Application Gateway ─────────────────────────────────────────
+  antigravity-os:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: antigravity-os
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DEPLOYMENT_MODE=DOCKER
+      - DATABASE_URL=file:/app/data/antigravity.db
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - AIRLLM_BASE_URL=http://airllm:8000
+      - OPENROUTER_BASE_URL=https://openrouter.ai
+    volumes:
+      - app-data:/app/data
+    depends_on:
+      ollama:
+        condition: service_healthy
+    networks:
+      - ag-internal
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    labels:
+      - "ag.service=gateway"
+      - "ag.version=5.2"
+
+  # ── Ollama Local LLM ────────────────────────────────────────────
+  # NOTE: Binds INTERNALLY only — not exposed to host
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ag-ollama
+    # NOT exposed to host machine — internal only
+    expose:
+      - "11434"
+    volumes:
+      - ollama-models:/root/.ollama
+    networks:
+      - ag-internal
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/version"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    labels:
+      - "ag.service=llm"
+      - "ag.security=internal-only"
+    # Optional GPU support — uncomment if NVIDIA runtime available:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+  # ── AI Router ───────────────────────────────────────────────────
+  # NOTE: Internal only — routes between Ollama, AirLLM, OpenRouter
+  ag-router:
+    image: node:22-alpine
+    container_name: ag-router
+    working_dir: /app
+    command: ["npx", "tsx", "src/server.ts"]
+    expose:
+      - "8080"
+    environment:
+      - NODE_ENV=production
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - AIRLLM_BASE_URL=http://airllm:8000
+      - PORT=8080
+    volumes:
+      - ./src:/app/src:ro
+      - ./package.json:/app/package.json:ro
+      - node-modules:/app/node_modules
+    networks:
+      - ag-internal
+    restart: unless-stopped
+    labels:
+      - "ag.service=router"
+      - "ag.security=internal-only"
+
+volumes:
+  app-data:
+    driver: local
+  ollama-models:
+    driver: local
+  node-modules:
+    driver: local
+
+networks:
+  ag-internal:
+    driver: bridge
+    internal: false   # Allows outbound only (for OpenRouter cloud fallback)
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16

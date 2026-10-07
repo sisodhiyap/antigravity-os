@@ -1,0 +1,20 @@
+[
+  {
+    "id": "h1",
+    "name": "Daily 30-min Coding",
+    "streak": 14,
+    "completedToday": true
+  },
+  {
+    "id": "h2",
+    "name": "Morning Exercise",
+    "streak": 7,
+    "completedToday": true
+  },
+  {
+    "id": "h3",
+    "name": "Read Research Papers",
+    "streak": 5,
+    "completedToday": false
+  }
+]

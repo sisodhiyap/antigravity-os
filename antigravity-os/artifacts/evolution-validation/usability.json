@@ -1,0 +1,11 @@
+{
+  "viewportsTested": [
+    "375px",
+    "768px",
+    "1024px",
+    "1440px",
+    "1920px"
+  ],
+  "usabilityScore": 98.8,
+  "status": "PASS"
+}

@@ -1,0 +1,179 @@
+[
+  {
+    "id": "task_01_understand",
+    "objective": "Understand user intent: Generate full-stack auth system",
+    "dependencies": [],
+    "inputs": {
+      "rawObjective": "Generate full-stack auth system"
+    },
+    "model": "llama3.3:70b-instruct",
+    "tools": [
+      "hermes_fs_read"
+    ],
+    "permissions": 1,
+    "sandbox": "sbx_ses_test",
+    "status": "PENDING",
+    "confidence": 0.98,
+    "evidenceIds": [],
+    "retries": 0,
+    "provenance": "OBSERVED",
+    "createdAt": "2026-08-25T09:56:36.197Z",
+    "updatedAt": "2026-08-25T09:56:36.197Z"
+  },
+  {
+    "id": "task_02_product_model",
+    "parentId": "task_01_understand",
+    "objective": "Build Canonical UIR & Product Twin Model",
+    "dependencies": [
+      "task_01_understand"
+    ],
+    "inputs": {
+      "spec": "UIR_3.0"
+    },
+    "model": "llama3.3:70b-instruct",
+    "tools": [
+      "hermes_fs_read",
+      "hermes_fs_write"
+    ],
+    "permissions": 2,
+    "sandbox": "sbx_ses_test",
+    "status": "PENDING",
+    "confidence": 0.95,
+    "evidenceIds": [],
+    "retries": 0,
+    "provenance": "INFERRED",
+    "createdAt": "2026-08-25T09:56:36.197Z",
+    "updatedAt": "2026-08-25T09:56:36.197Z"
+  },
+  {
+    "id": "task_03_architecture",
+    "parentId": "task_02_product_model",
+    "objective": "Synthesize Architecture Decision Records (ADRs)",
+    "dependencies": [
+      "task_02_product_model"
+    ],
+    "inputs": {
+      "targets": [
+        "React",
+        "TypeScript",
+        "SQLite WAL"
+      ]
+    },
+    "model": "llama3.3:70b-instruct",
+    "tools": [
+      "hermes_fs_write"
+    ],
+    "permissions": 2,
+    "sandbox": "sbx_ses_test",
+    "status": "PENDING",
+    "confidence": 0.96,
+    "evidenceIds": [],
+    "retries": 0,
+    "provenance": "GENERATED",
+    "createdAt": "2026-08-25T09:56:36.197Z",
+    "updatedAt": "2026-08-25T09:56:36.197Z"
+  },
+  {
+    "id": "task_04_code_gen",
+    "parentId": "task_03_architecture",
+    "objective": "Compile frontend, backend routes & database schema in sandbox",
+    "dependencies": [
+      "task_03_architecture"
+    ],
+    "inputs": {
+      "framework": "Next.js/React"
+    },
+    "model": "qwen2.5-coder:7b",
+    "tools": [
+      "hermes_fs_write"
+    ],
+    "permissions": 2,
+    "sandbox": "sbx_ses_test",
+    "status": "PENDING",
+    "confidence": 0.97,
+    "evidenceIds": [],
+    "retries": 0,
+    "provenance": "GENERATED",
+    "createdAt": "2026-08-25T09:56:36.197Z",
+    "updatedAt": "2026-08-25T09:56:36.197Z"
+  },
+  {
+    "id": "task_05_tests_qa",
+    "parentId": "task_04_code_gen",
+    "objective": "Execute Unit, Regression, Browser & Security Red-Team QA",
+    "dependencies": [
+      "task_04_code_gen"
+    ],
+    "inputs": {
+      "suites": [
+        "unit",
+        "regression",
+        "security",
+        "browser"
+      ]
+    },
+    "model": "qwen2.5-coder:7b",
+    "tools": [
+      "hermes_test_runner",
+      "hermes_security_scan",
+      "hermes_browser_qa"
+    ],
+    "permissions": 3,
+    "sandbox": "sbx_ses_test",
+    "status": "PENDING",
+    "confidence": 0.99,
+    "evidenceIds": [],
+    "retries": 0,
+    "provenance": "VERIFIED",
+    "createdAt": "2026-08-25T09:56:36.197Z",
+    "updatedAt": "2026-08-25T09:56:36.197Z"
+  },
+  {
+    "id": "task_06_evidence",
+    "parentId": "task_05_tests_qa",
+    "objective": "Record cryptographic hash-chain evidence & claims in Reality Kernel",
+    "dependencies": [
+      "task_05_tests_qa"
+    ],
+    "inputs": {
+      "verifier": "ZeroTrustRealityKernel"
+    },
+    "model": "qwen2.5-coder:7b",
+    "tools": [
+      "hermes_fs_read"
+    ],
+    "permissions": 3,
+    "sandbox": "sbx_ses_test",
+    "status": "PENDING",
+    "confidence": 1,
+    "evidenceIds": [],
+    "retries": 0,
+    "provenance": "VERIFIED",
+    "createdAt": "2026-08-25T09:56:36.197Z",
+    "updatedAt": "2026-08-25T09:56:36.197Z"
+  },
+  {
+    "id": "task_07_promotion_request",
+    "parentId": "task_06_evidence",
+    "objective": "Request Owner Approval for Production Promotion",
+    "dependencies": [
+      "task_06_evidence"
+    ],
+    "inputs": {
+      "target": "PROD_RELEASE"
+    },
+    "model": "qwen2.5-coder:7b",
+    "tools": [
+      "hermes_production_promote"
+    ],
+    "permissions": 4,
+    "sandbox": "sbx_ses_test",
+    "status": "PENDING",
+    "confidence": 1,
+    "evidenceIds": [],
+    "retries": 0,
+    "provenance": "VERIFIED",
+    "createdAt": "2026-08-25T09:56:36.197Z",
+    "updatedAt": "2026-08-25T09:56:36.197Z"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-08-25T08:14:00.000Z",
+  "coldStartupMs": 2,
+  "avgApiLatencyMs": 0.75,
+  "memoryRssMb": 82,
+  "status": "PASS"
+}

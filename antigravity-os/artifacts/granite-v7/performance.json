@@ -1,0 +1,33 @@
+{
+  "latency": 7,
+  "tokens": {
+    "promptTokens": 19,
+    "completionTokens": 41,
+    "totalTokens": 60,
+    "thinkingTokens": 128
+  },
+  "hardware": {
+    "cpuCores": 16,
+    "cpuModel": "AMD Ryzen 9 6900HS with Radeon Graphics        ",
+    "totalRamGb": 15.2,
+    "availableRamGb": 1.6,
+    "gpuName": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "gpuVendor": "NVIDIA",
+    "vramGb": 6,
+    "cudaAvailable": true,
+    "directMlAvailable": true,
+    "rocmAvailable": false,
+    "diskFreeGb": 213.5,
+    "quantizationSupported": [
+      "Q4_K_M",
+      "Q4_0",
+      "Q8_0"
+    ],
+    "recommendedModel": "granite-4.2-8b",
+    "maximumSafeContext": 16384,
+    "estimatedLatencyMs": 70,
+    "estimatedMemoryUsageGb": 5.6,
+    "confidence": 0.95,
+    "measuredAt": "2026-08-26T12:30:24.661Z"
+  }
+}

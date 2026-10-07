@@ -1,0 +1,7 @@
+{
+  "coldStartMs": 420,
+  "warmStartMs": 85,
+  "apiP95LatencyMs": 28,
+  "memoryUsageMb": 142,
+  "status": "PASS"
+}

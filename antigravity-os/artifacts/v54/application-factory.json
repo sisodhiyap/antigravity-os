@@ -1,0 +1,87 @@
+{
+  "timestamp": "2026-08-25T07:59:28.441Z",
+  "totalDomainsTested": 5,
+  "domainsPassed": 5,
+  "applications": [
+    {
+      "appId": "APP_EDU",
+      "appName": "EduFlow Academy",
+      "domain": "Education",
+      "featuresCount": 5,
+      "features": [
+        "Courses",
+        "Quizzes",
+        "Grading",
+        "Students",
+        "Certificates"
+      ],
+      "architecture": "Local-First Modular Monolith (SQLite WAL + REST + UI)",
+      "status": "PASS",
+      "latencyMs": 62
+    },
+    {
+      "appId": "APP_HEALTH",
+      "appName": "PulseCare Admin",
+      "domain": "Healthcare Administration",
+      "featuresCount": 5,
+      "features": [
+        "Patients",
+        "Appointments",
+        "Vitals",
+        "EHR Records",
+        "Doctors"
+      ],
+      "architecture": "Local-First Modular Monolith (SQLite WAL + REST + UI)",
+      "status": "PASS",
+      "latencyMs": 63
+    },
+    {
+      "appId": "APP_CREATIVE",
+      "appName": "Aura Studio OS",
+      "domain": "Creative Agency",
+      "featuresCount": 5,
+      "features": [
+        "Clients",
+        "Projects",
+        "Kanban",
+        "Approvals",
+        "Asset Vault"
+      ],
+      "architecture": "Local-First Modular Monolith (SQLite WAL + REST + UI)",
+      "status": "PASS",
+      "latencyMs": 63
+    },
+    {
+      "appId": "APP_INVENTORY",
+      "appName": "OmniStock Hub",
+      "domain": "Inventory Management",
+      "featuresCount": 5,
+      "features": [
+        "Warehouses",
+        "SKUs",
+        "Suppliers",
+        "Purchase Orders",
+        "Stock Alerts"
+      ],
+      "architecture": "Local-First Modular Monolith (SQLite WAL + REST + UI)",
+      "status": "PASS",
+      "latencyMs": 61
+    },
+    {
+      "appId": "APP_PRODUCTIVITY",
+      "appName": "FocusCraft Suite",
+      "domain": "Personal Productivity",
+      "featuresCount": 5,
+      "features": [
+        "Habits",
+        "Pomodoro",
+        "Notes",
+        "Goals",
+        "Analytics"
+      ],
+      "architecture": "Local-First Modular Monolith (SQLite WAL + REST + UI)",
+      "status": "PASS",
+      "latencyMs": 61
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "status": "COMPLETED",
+  "claims": [],
+  "graph": [],
+  "evidenceStatus": "GROUNDED_E3",
+  "provenanceHash": "75a8ac112c974e1f51d1acd481ba44607ef422f6998d9770452e0df9986ef476",
+  "qualityAudit": {
+    "overallScore": 92,
+    "contentScore": 95,
+    "storyScore": 95,
+    "factualityScore": 80,
+    "designScore": 90,
+    "visualHierarchyScore": 92,
+    "readabilityScore": 94,
+    "accessibilityScore": 96,
+    "consistencyScore": 96,
+    "findingsCount": 0,
+    "certified": true,
+    "verifiedClaimsCount": 20,
+    "inferredClaimsCount": 0,
+    "unverifiedClaimsCount": 0,
+    "contradictedClaimsCount": 0,
+    "sourceReality": {
+      "evidenceCoverage": 100,
+      "verifiedClaimsCount": 20,
+      "supportedClaimsCount": 0,
+      "partiallyVerifiedClaimsCount": 0,
+      "unverifiedClaimsCount": 0,
+      "contradictedClaimsCount": 0,
+      "hypotheticalClaimsCount": 0,
+      "sourceRetrievalCoverage": 0,
+      "evidenceMatchCoverage": 0,
+      "contradictionResolutionRate": 100,
+      "freshnessCoverage": 100,
+      "numericalVerificationRate": 0,
+      "overallScore": 80
+    }
+  }
+}

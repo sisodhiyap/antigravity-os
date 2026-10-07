@@ -1,0 +1,7 @@
+{
+  "commandPaletteResponsive": true,
+  "mobileBottomNavActive": true,
+  "mobileDrawerAccessible": true,
+  "safeAreaSupport": true,
+  "status": "PASS"
+}

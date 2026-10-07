@@ -1,0 +1,33 @@
+[
+  {
+    "incidentId": "inc_0d896350bd45",
+    "title": "Suspicious Network Outbound Detected",
+    "state": "DETECTED",
+    "severity": "CRITICAL",
+    "createdAt": 1787716077984,
+    "updatedAt": 1787716077984,
+    "mitigationSteps": [
+      "Network isolated",
+      "Process killed"
+    ],
+    "evidenceIds": [
+      "integ_a68695e22f1b"
+    ],
+    "emergencyStopTriggered": true
+  },
+  {
+    "incidentId": "inc_533f50fb4801",
+    "title": "EMERGENCY STOP TRIGGERED: Test Trigger",
+    "state": "DETECTED",
+    "severity": "CRITICAL",
+    "createdAt": 1787716077986,
+    "updatedAt": 1787716077986,
+    "mitigationSteps": [
+      "Disable all external network",
+      "Lock filesystem writes",
+      "Quarantine workers"
+    ],
+    "evidenceIds": [],
+    "emergencyStopTriggered": true
+  }
+]
