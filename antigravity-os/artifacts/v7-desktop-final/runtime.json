@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-07T05:06:06.848Z",
+  "timestamp": "2026-10-07T07:43:43.687Z",
   "os": {
     "platform": "win32",
     "release": "10.0.26200",
@@ -14,9 +14,9 @@
   },
   "ram": {
     "totalBytes": 16366272512,
-    "freeBytes": 5027934208,
+    "freeBytes": 2331291648,
     "totalGb": 15.24,
-    "freeGb": 4.68,
+    "freeGb": 2.17,
     "status": "DEGRADED"
   },
   "gpu": {
