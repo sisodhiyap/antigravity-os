@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
       req.headers.get("x-real-ip") ||
       "127.0.0.1";
 
-    if (action === "signup") {
+    if (action === "signup" || action === "register") {
       if (!email) {
         return NextResponse.json(
           { success: false, error: "Email is required for registration" },
@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    if (action === "signin") {
+    if (action === "signin" || action === "login") {
       if (!email) {
         return NextResponse.json(
           { success: false, error: "Operator email is required" },

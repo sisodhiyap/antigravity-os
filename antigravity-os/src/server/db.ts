@@ -3,6 +3,33 @@ import path from "path";
 import fs from "fs";
 
 function resolveDatabaseUrl(): string {
+  if (process.env.DATABASE_URL && !process.env.DATABASE_URL.startsWith("file:")) {
+    return process.env.DATABASE_URL;
+  }
+
+  // Vercel Serverless / AWS Lambda execution environment (read-only filesystem except /tmp)
+  if (process.env.VERCEL === "1" || process.env.AWS_LAMBDA_FUNCTION_NAME) {
+    const tmpDb = path.join("/tmp", "production.db");
+    try {
+      if (!fs.existsSync(tmpDb)) {
+        const candidates = [
+          path.resolve(process.cwd(), "prisma", "production.db"),
+          path.resolve(__dirname, "..", "..", "prisma", "production.db"),
+          path.resolve("/var/task", "prisma", "production.db"),
+        ];
+        for (const candidate of candidates) {
+          if (fs.existsSync(candidate)) {
+            fs.copyFileSync(candidate, tmpDb);
+            break;
+          }
+        }
+      }
+    } catch (err) {
+      console.warn("[Database] Could not copy SQLite seed to /tmp:", err);
+    }
+    return `file:${tmpDb}`;
+  }
+
   if (process.env.DATABASE_URL && process.env.DATABASE_URL.startsWith("file:")) {
     const rawPath = process.env.DATABASE_URL.replace(/^file:/, "");
     if (!path.isAbsolute(rawPath)) {

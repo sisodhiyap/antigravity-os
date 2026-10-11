@@ -222,6 +222,25 @@ export class StrandsDeciderEngine {
     const startTime = performance.now();
     const taskLower = task.toLowerCase();
 
+    // 0. Deterministic Consequential Action Rule (Immediate Sovereign Human Approval Gate)
+    if (this.isConsequentialOperation(taskLower)) {
+      const probs = [0.96, 0.04];
+      const conf = deriveConfidence(probs);
+      return {
+        decisionCategory: "APPROVAL_REQUIRED",
+        selectedRouteOrAction: "HUMAN_APPROVAL_GATE",
+        confidence: conf,
+        evidence: { trigger: "SOVEREIGN_CONSEQUENTIAL_RULE", patternMatched: true },
+        requiredTools: ["system_approval_gate"],
+        capabilityDependencies: ["desktop-supervisor", "database-sqlite"],
+        riskClassification: "CRITICAL",
+        requiresApproval: true,
+        escalateToLargerModel: false,
+        executionEngine: "STRANDS_LOCAL_CALIBRATED",
+        latencyMs: Math.max(1, Math.round(performance.now() - startTime)),
+      };
+    }
+
     // 1. Check if daemon is reachable
     const daemonLive = this.isDaemonAvailable && Date.now() - this.lastHealthCheckTime < 10000;
     if (daemonLive) {
@@ -343,20 +362,8 @@ export class StrandsDeciderEngine {
     return this.executeLocalCalibratedDecision(task, context, availableCapabilities, startTime);
   }
 
-  /**
-   * Fast, zero-dependency local System One decision engine.
-   * Employs the identical normalized confidence calibration formulas as strands-decider.
-   */
-  private executeLocalCalibratedDecision(
-    task: string,
-    context?: Record<string, any>,
-    availableCapabilities?: string[],
-    startTime: number = performance.now()
-  ): StrandsDecision {
-    const t = task.toLowerCase();
-
-    // Consequential action detection (Approval Gate)
-    const isDestructive =
+  private isConsequentialOperation(t: string): boolean {
+    return (
       t.includes("delete") ||
       t.includes("drop ") ||
       t.includes("truncate ") ||
@@ -376,7 +383,24 @@ export class StrandsDeciderEngine {
       t.includes("ignore all previous rules") ||
       t.includes("without human approval") ||
       t.includes("root deploy") ||
-      t.includes("jailbreak");
+      t.includes("jailbreak")
+    );
+  }
+
+  /**
+   * Fast, zero-dependency local System One decision engine.
+   * Employs the identical normalized confidence calibration formulas as strands-decider.
+   */
+  private executeLocalCalibratedDecision(
+    task: string,
+    context?: Record<string, any>,
+    availableCapabilities?: string[],
+    startTime: number = performance.now()
+  ): StrandsDecision {
+    const t = task.toLowerCase();
+
+    // Consequential action detection (Approval Gate)
+    const isDestructive = this.isConsequentialOperation(t);
 
     if (isDestructive) {
       const probs = [0.96, 0.04];
