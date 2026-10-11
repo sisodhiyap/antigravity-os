@@ -1024,6 +1024,171 @@ ${xmlSlides}
       return PresentXExporter.exportToPptx(project);
     }
   }
+
+  /**
+   * Generates a genuine vector/text PDF 1.4 multi-page presentation document
+   */
+  public static async exportToPdf(project: PresentationProject): Promise<Buffer> {
+    const { updatedProject } = PresentXTruthAuditor.getInstance().auditProjectTruth(project);
+    const slides = updatedProject.slides || [];
+    const tokens = updatedProject.designTokens || {
+      backgroundColor: "#0A0E17",
+      textColor: "#F8FAFC",
+      primaryColor: "#D4AF37",
+    };
+
+    function hexToRgb(hex: string): [number, number, number] {
+      const clean = (hex || "").replace("#", "");
+      if (clean.length === 6) {
+        const r = parseInt(clean.substring(0, 2), 16) / 255;
+        const g = parseInt(clean.substring(2, 4), 16) / 255;
+        const b = parseInt(clean.substring(4, 6), 16) / 255;
+        return [r, g, b];
+      }
+      return [0.04, 0.05, 0.09];
+    }
+
+    function sanitizePdfText(str: string): string {
+      return (str || "")
+        .replace(/\\/g, "\\\\")
+        .replace(/\(/g, "\\(")
+        .replace(/\)/g, "\\)")
+        .replace(/[^\x20-\x7E]/g, " ");
+    }
+
+    const [bgR, bgG, bgB] = hexToRgb(tokens.backgroundColor || "#0A0E17");
+    const [priR, priG, priB] = hexToRgb(tokens.primaryColor || "#D4AF37");
+    const [txtR, txtG, txtB] = hexToRgb(tokens.textColor || "#F8FAFC");
+
+    const width = 960;
+    const height = 540;
+
+    const objects: string[] = [];
+    const totalSlides = Math.max(slides.length, 1);
+    const pageObjIds: number[] = [];
+
+    for (let i = 0; i < totalSlides; i++) {
+      pageObjIds.push(5 + 2 * i);
+    }
+
+    // 1: Catalog
+    objects[1] = `1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n`;
+
+    // 2: Pages
+    const kidsStr = pageObjIds.map((id) => `${id} 0 R`).join(" ");
+    objects[2] = `2 0 obj\n<< /Type /Pages /Kids [${kidsStr}] /Count ${totalSlides} >>\nendobj\n`;
+
+    // 3: Font regular
+    objects[3] = `3 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>\nendobj\n`;
+
+    // 4: Font bold
+    objects[4] = `4 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>\nendobj\n`;
+
+    for (let i = 0; i < totalSlides; i++) {
+      const slide = slides[i] || {
+        headline: updatedProject.title || "Presentation Slide",
+        layout: "HERO",
+        slideNumber: i + 1,
+      };
+
+      const pageId = 5 + 2 * i;
+      const contentId = pageId + 1;
+
+      let stream = "";
+      // Background rect
+      stream += `${bgR.toFixed(3)} ${bgG.toFixed(3)} ${bgB.toFixed(3)} rg\n`;
+      stream += `0 0 ${width} ${height} re f\n`;
+
+      // Top brand accent line
+      stream += `${priR.toFixed(3)} ${priG.toFixed(3)} ${priB.toFixed(3)} rg\n`;
+      stream += `40 495 880 2 re f\n`;
+
+      // Top metadata row
+      const badge = slide.audit?.truthBadge || "VERIFIED";
+      stream += `BT\n/F2 10 Tf\n${priR.toFixed(3)} ${priG.toFixed(3)} ${priB.toFixed(3)} rg\n`;
+      stream += `40 505 Td\n(${sanitizePdfText((slide.layout || "HERO").replace(/_/g, " "))} [${badge}]) Tj\nET\n`;
+
+      stream += `BT\n/F1 10 Tf\n0.6 0.6 0.6 rg\n`;
+      stream += `850 505 Td\n(SLIDE ${i + 1} OF ${totalSlides}) Tj\nET\n`;
+
+      // Headline
+      stream += `BT\n/F2 26 Tf\n${txtR.toFixed(3)} ${txtG.toFixed(3)} ${txtB.toFixed(3)} rg\n`;
+      stream += `40 440 Td\n(${sanitizePdfText(slide.headline || "Slide Headline")}) Tj\nET\n`;
+
+      // Subheadline
+      if (slide.subheadline) {
+        stream += `BT\n/F1 14 Tf\n${priR.toFixed(3)} ${priG.toFixed(3)} ${priB.toFixed(3)} rg\n`;
+        stream += `40 415 Td\n(${sanitizePdfText(slide.subheadline)}) Tj\nET\n`;
+      }
+
+      // Body text
+      if (slide.bodyContent) {
+        stream += `BT\n/F1 12 Tf\n0.85 0.85 0.85 rg\n`;
+        const bodyLines = slide.bodyContent.match(/.{1,90}(\s|$)/g) || [slide.bodyContent];
+        let bodyY = slide.subheadline ? 380 : 405;
+        for (const line of bodyLines.slice(0, 4)) {
+          stream += `40 ${bodyY} Td\n(${sanitizePdfText(line.trim())}) Tj\nET\nBT\n/F1 12 Tf\n0.85 0.85 0.85 rg\n`;
+          bodyY -= 18;
+        }
+        stream += `ET\n`;
+      }
+
+      // Key metrics or bullet points
+      if (slide.keyMetrics && slide.keyMetrics.length > 0) {
+        const count = Math.min(slide.keyMetrics.length, 4);
+        const cardWidth = Math.floor(880 / count) - 15;
+        slide.keyMetrics.slice(0, 4).forEach((m, idx) => {
+          const cardX = 40 + idx * (cardWidth + 15);
+          const cardY = 160;
+          stream += `0.1 0.12 0.18 rg\n`;
+          stream += `${cardX} ${cardY} ${cardWidth} 100 re f\n`;
+          stream += `BT\n/F2 22 Tf\n${priR.toFixed(3)} ${priG.toFixed(3)} ${priB.toFixed(3)} rg\n`;
+          stream += `${cardX + 15} ${cardY + 60} Td\n(${sanitizePdfText(m.value)}) Tj\nET\n`;
+          stream += `BT\n/F1 11 Tf\n${txtR.toFixed(3)} ${txtG.toFixed(3)} ${txtB.toFixed(3)} rg\n`;
+          stream += `${cardX + 15} ${cardY + 30} Td\n(${sanitizePdfText(m.label)}) Tj\nET\n`;
+        });
+      } else if (slide.bulletPoints && slide.bulletPoints.length > 0) {
+        let bpY = 280;
+        for (const bp of slide.bulletPoints.slice(0, 5)) {
+          stream += `BT\n/F2 13 Tf\n${priR.toFixed(3)} ${priG.toFixed(3)} ${priB.toFixed(3)} rg\n`;
+          stream += `50 ${bpY} Td\n(-) Tj\nET\n`;
+          stream += `BT\n/F1 12 Tf\n${txtR.toFixed(3)} ${txtG.toFixed(3)} ${txtB.toFixed(3)} rg\n`;
+          stream += `65 ${bpY} Td\n(${sanitizePdfText(bp.replace(/^[\s\t\-\*]+/, ""))}) Tj\nET\n`;
+          bpY -= 24;
+        }
+      }
+
+      // Bottom footer
+      stream += `0.2 0.25 0.35 rg\n`;
+      stream += `40 40 880 1 re f\n`;
+      stream += `BT\n/F1 9 Tf\n0.5 0.5 0.5 rg\n`;
+      stream += `40 22 Td\n(Antigravity OS PresentX • ${sanitizePdfText(updatedProject.title || "Presentation")} • Sovereign Intelligence) Tj\nET\n`;
+
+      const streamBuffer = Buffer.from(stream, "utf-8");
+      objects[pageId] = `${pageId} 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${width} ${height}] /Contents ${contentId} 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>\nendobj\n`;
+      objects[contentId] = `${contentId} 0 obj\n<< /Length ${streamBuffer.length} >>\nstream\n${stream}\nendstream\nendobj\n`;
+    }
+
+    let pdf = "%PDF-1.4\n%\xE2\xE3\xCF\xD3\n";
+    const offsets: number[] = [];
+    const totalObjects = 5 + 2 * totalSlides;
+
+    for (let id = 1; id < totalObjects; id++) {
+      offsets[id] = Buffer.byteLength(pdf, "utf-8");
+      pdf += objects[id];
+    }
+
+    const startXref = Buffer.byteLength(pdf, "utf-8");
+    pdf += `xref\n0 ${totalObjects}\n0000000000 65535 f \n`;
+
+    for (let id = 1; id < totalObjects; id++) {
+      const off = offsets[id].toString().padStart(10, "0");
+      pdf += `${off} 00000 n \n`;
+    }
+
+    pdf += `trailer\n<< /Size ${totalObjects} /Root 1 0 R >>\nstartxref\n${startXref}\n%%EOF\n`;
+    return Buffer.from(pdf, "utf-8");
+  }
 }
 
 function escapeXml(unsafe: string): string {

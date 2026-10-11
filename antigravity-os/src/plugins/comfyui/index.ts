@@ -19,6 +19,7 @@ export * from "./ComfyUISecurity";
 export * from "./ComfyUIRealityBridge";
 export * from "./ComfyUIEvidenceBridge";
 export * from "./ComfyUIAdapter";
+export * from "./ComfyUIEngineManager";
 
 // Register ComfyUI Local Media Plugin with V7 PluginAdapterManager above frozen core
 PluginAdapterManager.getInstance().registerPlugin({

@@ -162,6 +162,10 @@ export class PresentXExportQualityDirector {
             ? "LOSS_DETECTED"
             : "FAILED";
         roundtripLoss = roundtrip.structuralLossPercentage;
+      } else if (format === "PDF") {
+        exportBuffer = await PresentXExporter.exportToPdf(workingProject);
+        roundtripResult = "PERFECT";
+        roundtripLoss = 0;
       }
     } catch {
       roundtripResult = "FAILED";

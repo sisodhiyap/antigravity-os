@@ -132,7 +132,7 @@ export default function PresentXEditorPage() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      const ext = format === "PPTX" ? "pptx" : format === "JSON" ? "evidence.json" : "html";
+      const ext = format === "PPTX" ? "pptx" : format === "PDF" ? "pdf" : format === "JSON" ? "evidence.json" : "html";
       a.download = `${project.title || "presentation"}.${ext}`;
       document.body.appendChild(a);
       a.click();
@@ -436,6 +436,18 @@ export default function PresentXEditorPage() {
                   <span>Microsoft PowerPoint (.PPTX)</span>
                 </div>
                 <span className="text-[10px] font-mono uppercase bg-black/10 px-2 py-0.5 rounded">OpenXML Binary</span>
+              </button>
+
+              <button
+                onClick={() => handleExport("PDF")}
+                disabled={isExporting}
+                className="w-full p-3 rounded-xl bg-[var(--ag-elevated)] border border-[var(--ag-border)] hover:border-[var(--ag-gold)] text-[var(--ag-text)] font-bold text-xs flex items-center justify-between transition-all"
+              >
+                <div className="flex items-center gap-2">
+                  <FileText className="w-4 h-4 text-rose-400" />
+                  <span>Adobe PDF Slide Document (.PDF)</span>
+                </div>
+                <span className="text-[10px] font-mono text-[var(--ag-muted)]">16:9 Vector Print</span>
               </button>
 
               <button

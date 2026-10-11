@@ -24,8 +24,8 @@ export class ComfyUISecurity {
   ];
 
   private static readonly PROMPT_INJECTIONS = [
-    /ignore\s+(all\s+)?(previous|prior)\s+instructions/i,
-    /disable\s+(security|filters|safeties)/i,
+    /ignore\s+(all\s+)?(previous|prior)\s+(instructions|rules|directives|prompts|system\s+rules)/i,
+    /disable\s+(security|filters|safeties|guardrails)/i,
     /send\s+(secrets|passwords|keys)/i,
     /<script[\s\S]*?>/i
   ];

@@ -1,12 +1,12 @@
 {
   "idleMetrics": {
     "cpuPercent": 1.5,
-    "ramUsedMb": 11747,
+    "ramUsedMb": 13421,
     "vramUsedMb": 512
   },
   "generationMetrics": {
     "cpuPercent": 18.2,
-    "ramUsedMb": 12947,
+    "ramUsedMb": 14621,
     "vramUsedMb": 4250
   },
   "governorTiers": {

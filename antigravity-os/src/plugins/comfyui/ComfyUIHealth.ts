@@ -4,12 +4,16 @@
  */
 
 import { ComfyUIHardwareProfile, HardwareAccelerationType } from "./ComfyUITypes";
+import { ComfyUIClient } from "./ComfyUIClient";
 import os from "os";
 
 export class ComfyUIHealth {
   private static cachedProfile: ComfyUIHardwareProfile | null = null;
 
-  public static async inspectHardware(serverUrl: string = "http://127.0.0.1:8188"): Promise<ComfyUIHardwareProfile> {
+  public static async inspectHardware(
+    serverUrl: string = "http://127.0.0.1:8188",
+    strictProbe: boolean = false
+  ): Promise<ComfyUIHardwareProfile> {
     const platform = os.platform();
     let detectedOs: "Windows" | "Linux" | "macOS" | "Unknown" = "Unknown";
     if (platform === "win32") detectedOs = "Windows";
@@ -38,6 +42,14 @@ export class ComfyUIHealth {
       vramAvailableMb = 12000;
     }
 
+    // Server connectivity check
+    let isConnected = true;
+    if (strictProbe || process.env.COMFYUI_STRICT_PROBE === "true") {
+      const client = new ComfyUIClient(serverUrl);
+      const health = await client.checkHealth(1000);
+      isConnected = health.isOnline;
+    }
+
     const profile: ComfyUIHardwareProfile = {
       os: detectedOs,
       gpuVendor,
@@ -48,8 +60,8 @@ export class ComfyUIHealth {
       systemRamAvailableMb: freeRamMb,
       diskFreeGb: 180.0,
       serverUrl,
-      isServerConnected: true,
-      pythonInstalled: true
+      isServerConnected: isConnected,
+      pythonInstalled: true,
     };
 
     this.cachedProfile = profile;

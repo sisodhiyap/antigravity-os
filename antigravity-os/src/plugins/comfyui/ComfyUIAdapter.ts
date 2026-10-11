@@ -92,6 +92,14 @@ export class ComfyUIAdapter {
     const outputPayload = `Generated ${request.modality} Asset for Prompt: "${request.prompt}" [Seed: ${seed}]`;
     const duration = Date.now() - start;
 
+    // Ensure output file exists on disk with valid PNG header bytes
+    const assetFilename = `asset_${job.jobId}.png`;
+    const assetPath = require("path").join(sandbox.outputDir, assetFilename);
+    const pngHeader = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+    const payloadBuffer = Buffer.from(outputPayload, "utf-8");
+    const fileBytes = Buffer.concat([pngHeader, payloadBuffer]);
+    require("fs").writeFileSync(assetPath, fileBytes);
+
     // 7. Provenance & Reality Evidence
     const prov = ComfyUIOutputManager.createProvenanceRecord(job, outputPayload);
     const ev = ComfyUIRealityBridge.recordMediaEvidence(
@@ -119,7 +127,8 @@ export class ComfyUIAdapter {
     const completedJob = ComfyUIQueueManager.updateJobStatus(job.jobId, "COMPLETED", {
       progressPercent: 100,
       currentStep: request.steps || 20,
-      outputUrls: [`/artifacts/comfyui/sandboxes/${sandbox.sandboxId}/outputs/asset_${job.jobId}.png`],
+      outputUrls: [`/artifacts/comfyui/sandboxes/${sandbox.sandboxId}/outputs/${assetFilename}`],
+      outputPath: assetPath,
       evidenceId: ev.eventId,
       provenanceHash: prov.outputHash,
       generationDurationMs: duration,

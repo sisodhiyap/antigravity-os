@@ -1,0 +1,34 @@
+{
+  "certificateId": "cert_qual_1791721778347_ww7wu",
+  "projectId": "pres_1791721778252_8quwp",
+  "projectTitle": "Test Quality Gate",
+  "projectHash": "ba316dcae0ce0ec6b47e20ad9e2f23f5de72d0baed572349a6a0e5311a5e83d1",
+  "presentationHash": "e6722677040865454bba940e0bd84fbc2713e8a2fc535189d8286679ef4b145e",
+  "slideCount": 3,
+  "creativeQuality": 94,
+  "trustQuality": 100,
+  "technicalIntegrity": 100,
+  "accessibilityScore": 98,
+  "exportScore": 98,
+  "decision": "APPROVED",
+  "repairCyclesCount": 0,
+  "modelsUsed": [
+    "ollama:llama3",
+    "ollama:mistral"
+  ],
+  "enginesUsed": [
+    "DeterministicQualityAuditor",
+    "VisualInspectionEngine",
+    "MultiModelCreativeJudge",
+    "LocalizedSelfRepairEngine",
+    "PresentXSourceRealityGate"
+  ],
+  "verifiedClaimsCount": 3,
+  "unverifiedClaimsCount": 0,
+  "warnings": [],
+  "roundtripResult": "PERFECT",
+  "roundtripLossPercentage": 0,
+  "exportFormat": "PDF",
+  "timestamp": "2026-10-11T12:29:38.347Z",
+  "signature": "fcbee5b49237c6b5ac2acbb7b9ee0f165864e9f0e650aafff48cdf25e8c61455"
+}

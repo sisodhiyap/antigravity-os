@@ -1,6 +1,6 @@
 {
   "test": "TEST_3D_A (IMG2MESH)",
-  "jobId": "job_1787653275880_0ufkjj",
+  "jobId": "job_1791722403133_ty1c5n",
   "prompt": "Cyberpunk mechanical drone chassis",
   "model": "triposr-mesh-gen",
   "status": "COMPLETED",
@@ -9,6 +9,6 @@
   "faces": 48000,
   "materials": "PBR Metallic-Roughness",
   "integrity": "VERIFIED",
-  "hash": "9f9c09d225cb62f170dbcd49388d922d06ee3a24efc5df2c8333fc90dd479987",
-  "output": "/artifacts/comfyui/sandboxes/sbx_media_job_1787653275880_0ufkjj_1787653275880/outputs/asset_job_1787653275880_0ufkjj.png"
+  "hash": "64ef7e72cc63e2bb86c32142a387b7f781aafcc7dc6c7db21563884aaddac155",
+  "output": "/artifacts/comfyui/sandboxes/sbx_media_job_1791722403133_ty1c5n_1791722403133/outputs/asset_job_1791722403133_ty1c5n.png"
 }

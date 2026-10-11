@@ -4,16 +4,27 @@ import path from "path";
 import { PresentationProject } from "@/presentx/types";
 import { PresentXOrchestrator } from "@/presentx/engine/PresentXOrchestrator";
 
-const STORAGE_DIR = path.resolve(process.cwd(), "workspaces", "presentx-vault");
+function getStorageDir(): string {
+  const isServerless = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
+  const targetDir = isServerless
+    ? path.resolve("/tmp", "presentx-vault")
+    : path.resolve(process.cwd(), "workspaces", "presentx-vault");
+  if (!fs.existsSync(targetDir)) {
+    try {
+      fs.mkdirSync(targetDir, { recursive: true });
+    } catch {
+      return path.resolve("/tmp", "presentx-vault");
+    }
+  }
+  return targetDir;
+}
 
 function ensureStorageDir() {
-  if (!fs.existsSync(STORAGE_DIR)) {
-    fs.mkdirSync(STORAGE_DIR, { recursive: true });
-  }
+  getStorageDir();
 }
 
 export async function GET(req: NextRequest) {
-  ensureStorageDir();
+  const STORAGE_DIR = getStorageDir();
   const { searchParams } = new URL(req.url);
   const id = searchParams.get("id");
 
@@ -43,7 +54,7 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-  ensureStorageDir();
+  const STORAGE_DIR = getStorageDir();
   try {
     const project: PresentationProject = await req.json();
     if (!project.id || !project.title) {
@@ -60,7 +71,7 @@ export async function POST(req: NextRequest) {
 }
 
 export async function DELETE(req: NextRequest) {
-  ensureStorageDir();
+  const STORAGE_DIR = getStorageDir();
   const { searchParams } = new URL(req.url);
   const id = searchParams.get("id");
 

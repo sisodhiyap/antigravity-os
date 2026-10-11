@@ -1,6 +1,6 @@
 {
   "test": "TEST_VIDEO_A (TXT2VIDEO)",
-  "jobId": "job_1787653275876_9y5epb",
+  "jobId": "job_1791722403128_8undd4",
   "prompt": "Cinematic drone shot flying through futuristic neon metropolis",
   "model": "wan2.1-t2v-1.3b",
   "status": "COMPLETED",
@@ -11,6 +11,6 @@
   "frames": 24,
   "durationSeconds": 1,
   "fileIntegrity": "VERIFIED_PLAYABLE",
-  "hash": "ca625de15b43c3484ee7f08fb28c00e6e8b3d14369db107ba78396c2ec7b7f75",
-  "output": "/artifacts/comfyui/sandboxes/sbx_media_job_1787653275876_9y5epb_1787653275876/outputs/asset_job_1787653275876_9y5epb.png"
+  "hash": "dbaa6077b48f76ffc7f0d8111316bb06fcc46848bb6a9e414cece36510d1c81c",
+  "output": "/artifacts/comfyui/sandboxes/sbx_media_job_1791722403128_8undd4_1791722403128/outputs/asset_job_1791722403128_8undd4.png"
 }

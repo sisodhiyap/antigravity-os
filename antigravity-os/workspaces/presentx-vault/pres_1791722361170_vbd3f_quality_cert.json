@@ -1,0 +1,34 @@
+{
+  "certificateId": "cert_qual_1791722361417_94fki",
+  "projectId": "pres_1791722361170_vbd3f",
+  "projectTitle": "Executive AI Operating System Strategy for Global Enterprise",
+  "projectHash": "1d2d5f03b366d3ec6e84be8a2f6d3fbcfadbb054fecd388be245d367c504a0d0",
+  "presentationHash": "e38b8a22aa63b2bb8c1b3651d87f71a89c880c2bbb8353dd892a8632d7c82dd0",
+  "slideCount": 4,
+  "creativeQuality": 94,
+  "trustQuality": 100,
+  "technicalIntegrity": 100,
+  "accessibilityScore": 98,
+  "exportScore": 98,
+  "decision": "APPROVED",
+  "repairCyclesCount": 0,
+  "modelsUsed": [
+    "ollama:llama3",
+    "ollama:mistral"
+  ],
+  "enginesUsed": [
+    "DeterministicQualityAuditor",
+    "VisualInspectionEngine",
+    "MultiModelCreativeJudge",
+    "LocalizedSelfRepairEngine",
+    "PresentXSourceRealityGate"
+  ],
+  "verifiedClaimsCount": 4,
+  "unverifiedClaimsCount": 0,
+  "warnings": [],
+  "roundtripResult": "PERFECT",
+  "roundtripLossPercentage": 0,
+  "exportFormat": "PDF",
+  "timestamp": "2026-10-11T12:39:21.417Z",
+  "signature": "b138b88d22981c16aeaff91573220c2acf9a9fefbd46c308d499ca503c289434"
+}

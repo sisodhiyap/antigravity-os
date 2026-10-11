@@ -435,6 +435,47 @@ export class AuthoritativeCapabilityRegistry {
       remediationInstructions: "Configure JEV_API_KEY in .env or Settings -> Integrations to activate live cloud System One decisions.",
     });
 
+    // 19. Local ComfyUI Generative Media Fabric
+    let comfyStatus: CapabilityStatusCategory = "NOT_INSTALLED";
+    let isComfyOnline = false;
+    let comfyRemediation = "ComfyUI not installed on workstation.";
+    try {
+      const { comfyUIEngineManager } = require("@/plugins/comfyui/ComfyUIEngineManager");
+      const discovery = comfyUIEngineManager.discoverInstallation();
+      const isPortOpen = await comfyUIEngineManager.probePort();
+      if (isPortOpen) {
+        comfyStatus = "READY";
+        isComfyOnline = true;
+        comfyRemediation = "ComfyUI engine active on port 8188.";
+      } else if (discovery.isInstalled) {
+        comfyStatus = "DEPENDENCY_OFFLINE";
+        comfyRemediation = `ComfyUI installed at ${discovery.installPath}. Start on port 8188.`;
+      } else {
+        comfyStatus = "NOT_INSTALLED";
+        comfyRemediation = "Clone ComfyUI and install dependencies to enable local generative media.";
+      }
+    } catch {
+      comfyStatus = "NOT_INSTALLED";
+    }
+
+    capabilities.push({
+      id: "comfyui-local-fabric",
+      name: "ComfyUI Local Generative Media Fabric",
+      status: comfyStatus,
+      implementationStatus: "IMPLEMENTED",
+      requiredDependencies: ["ComfyUI (port 8188)", "Python 3.10+", "PyTorch"],
+      configurationCompleteness: isComfyOnline ? 100 : (comfyStatus === "DEPENDENCY_OFFLINE" ? 70 : 20),
+      connectionStatus: isComfyOnline ? "CONNECTED" : "DISCONNECTED",
+      lastSuccessfulHealthCheck: isComfyOnline ? now : null,
+      lastError: isComfyOnline ? null : `ComfyUI is ${comfyStatus}`,
+      errorCategory: isComfyOnline ? null : comfyStatus,
+      supportedExecutionModes: ["LOCAL"],
+      availableModelsOrTools: ["Flux.1 Schnell (FP8)", "Wan 2.1 Video", "ACE-Step Audio", "TripoSR 3D", "RealESRGAN 4x"],
+      isRealExecutionVerified: isComfyOnline,
+      diagnosticsLink: "/media",
+      remediationInstructions: comfyRemediation,
+    });
+
     return capabilities;
   }
 }

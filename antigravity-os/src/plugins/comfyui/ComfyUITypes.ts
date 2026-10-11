@@ -19,6 +19,36 @@ export type GenerationJobStatus =
   | "RETRYING"
   | "BLOCKED";
 
+export type ComfyUIEngineStatus =
+  | "NOT_INSTALLED"
+  | "STOPPED"
+  | "STARTING"
+  | "READY"
+  | "MISSING_DEPENDENCY"
+  | "MISSING_MODEL"
+  | "WORKFLOW_INVALID"
+  | "EXECUTING"
+  | "FAILED"
+  | "VERIFIED";
+
+export interface ComfyUIEngineState {
+  status: ComfyUIEngineStatus;
+  installPath?: string;
+  pythonPath?: string;
+  port: number;
+  serverUrl: string;
+  pid?: number;
+  isOnline: boolean;
+  systemStats?: Record<string, unknown>;
+  installedNodesCount?: number;
+  installedModelsCount?: number;
+  installedModels?: string[];
+  queueRemaining?: number;
+  lastChecked: string;
+  error?: string;
+  remediation?: string;
+}
+
 export type HardwareAccelerationType = "CUDA" | "ROCM" | "DIRECTML" | "MPS" | "CPU";
 
 export interface ComfyUIHardwareProfile {

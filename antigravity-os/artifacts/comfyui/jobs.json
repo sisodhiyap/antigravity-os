@@ -1,103 +1,107 @@
 [
   {
-    "jobId": "job_1787651784602_iwmurh",
+    "jobId": "job_1791722396357_s0cdek",
     "request": {
       "prompt": "Cyberpunk cityscape at sunset",
       "modality": "IMAGE",
       "modelId": "flux1-schnell-fp8",
       "width": 1024,
       "height": 1024,
-      "seed": 76025505
+      "seed": 229735917
     },
     "status": "COMPLETED",
     "progressPercent": 100,
     "currentStep": 20,
     "totalSteps": 20,
     "outputUrls": [
-      "/artifacts/comfyui/sandboxes/sbx_media_job_1787651784602_iwmurh_1787651784602/outputs/asset_job_1787651784602_iwmurh.png"
+      "/artifacts/comfyui/sandboxes/sbx_media_job_1791722396357_s0cdek_1791722396357/outputs/asset_job_1791722396357_s0cdek.png"
     ],
     "vramUsedMb": 4096,
     "generationDurationMs": 1,
-    "createdAt": "2026-08-25T09:56:24.602Z",
-    "startedAt": "2026-08-25T09:56:24.603Z",
-    "evidenceId": "ev_0_1787651784604",
-    "provenanceHash": "1bbf1d11c0153478c59b277f247bffe2532c3411e00ad55605c549da718f0a17",
-    "completedAt": "2026-08-25T09:56:24.604Z"
+    "createdAt": "2026-10-11T12:39:56.357Z",
+    "startedAt": "2026-10-11T12:39:56.358Z",
+    "outputPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\comfyui\\sandboxes\\sbx_media_job_1791722396357_s0cdek_1791722396357\\outputs\\asset_job_1791722396357_s0cdek.png",
+    "evidenceId": "ev_0_1791722396359",
+    "provenanceHash": "125fbfd5bea8a9fe50e6b2e9ae35893fa1bc704a06912c0445bf34ae32b57da9",
+    "completedAt": "2026-10-11T12:39:56.359Z"
   },
   {
-    "jobId": "job_1787651784604_hewwql",
+    "jobId": "job_1791722396360_2d2zf",
     "request": {
       "prompt": "Futuristic vehicle speeding through tunnel",
       "modality": "VIDEO",
       "modelId": "wan2.1-t2v-1.3b",
       "frames": 24,
       "fps": 24,
-      "seed": 245417241
+      "seed": 994697333
     },
     "status": "COMPLETED",
     "progressPercent": 100,
     "currentStep": 20,
     "totalSteps": 20,
     "outputUrls": [
-      "/artifacts/comfyui/sandboxes/sbx_media_job_1787651784604_hewwql_1787651784604/outputs/asset_job_1787651784604_hewwql.png"
+      "/artifacts/comfyui/sandboxes/sbx_media_job_1791722396360_2d2zf_1791722396360/outputs/asset_job_1791722396360_2d2zf.png"
     ],
     "vramUsedMb": 4096,
-    "generationDurationMs": 1,
-    "createdAt": "2026-08-25T09:56:24.604Z",
-    "startedAt": "2026-08-25T09:56:24.605Z",
-    "evidenceId": "ev_2_1787651784605",
-    "provenanceHash": "95f64d66f669b5755dcf78d7e6e80a6aa806c196943e6cae7fda0804596f3ca0",
-    "completedAt": "2026-08-25T09:56:24.605Z"
+    "generationDurationMs": 2,
+    "createdAt": "2026-10-11T12:39:56.360Z",
+    "startedAt": "2026-10-11T12:39:56.361Z",
+    "outputPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\comfyui\\sandboxes\\sbx_media_job_1791722396360_2d2zf_1791722396360\\outputs\\asset_job_1791722396360_2d2zf.png",
+    "evidenceId": "ev_2_1791722396361",
+    "provenanceHash": "a9494e062f5f7c4550d626d566b4d7cb4142af85fea2336ca991901342889314",
+    "completedAt": "2026-10-11T12:39:56.362Z"
   },
   {
-    "jobId": "job_1787651784605_cssgr",
+    "jobId": "job_1791722396362_iv6ls7",
     "request": {
       "prompt": "Cinematic synthwave soundtrack",
       "modality": "AUDIO",
       "modelId": "ace-step-audio",
       "durationSeconds": 10,
-      "seed": 832005410
+      "seed": 274342363
     },
     "status": "COMPLETED",
     "progressPercent": 100,
     "currentStep": 20,
     "totalSteps": 20,
     "outputUrls": [
-      "/artifacts/comfyui/sandboxes/sbx_media_job_1787651784605_cssgr_1787651784605/outputs/asset_job_1787651784605_cssgr.png"
+      "/artifacts/comfyui/sandboxes/sbx_media_job_1791722396362_iv6ls7_1791722396362/outputs/asset_job_1791722396362_iv6ls7.png"
     ],
     "vramUsedMb": 4096,
-    "generationDurationMs": 1,
-    "createdAt": "2026-08-25T09:56:24.605Z",
-    "startedAt": "2026-08-25T09:56:24.606Z",
-    "evidenceId": "ev_4_1787651784606",
-    "provenanceHash": "3ce1a07a60a6e818862037d3c417fa2fec2f1cc80332ae45f658b51674b83a57",
-    "completedAt": "2026-08-25T09:56:24.606Z"
+    "generationDurationMs": 0,
+    "createdAt": "2026-10-11T12:39:56.362Z",
+    "startedAt": "2026-10-11T12:39:56.362Z",
+    "outputPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\comfyui\\sandboxes\\sbx_media_job_1791722396362_iv6ls7_1791722396362\\outputs\\asset_job_1791722396362_iv6ls7.png",
+    "evidenceId": "ev_4_1791722396363",
+    "provenanceHash": "13bed0b0496c70378aff881642662831b97dadacd7776fe859a2735f7797e634",
+    "completedAt": "2026-10-11T12:39:56.363Z"
   },
   {
-    "jobId": "job_1787651784606_tnlne",
+    "jobId": "job_1791722396363_mvkmpbk",
     "request": {
       "prompt": "Sci-fi drone asset",
       "modality": "3D",
       "modelId": "triposr-mesh-gen",
-      "seed": 303641173
+      "seed": 528650906
     },
     "status": "COMPLETED",
     "progressPercent": 100,
     "currentStep": 20,
     "totalSteps": 20,
     "outputUrls": [
-      "/artifacts/comfyui/sandboxes/sbx_media_job_1787651784606_tnlne_1787651784606/outputs/asset_job_1787651784606_tnlne.png"
+      "/artifacts/comfyui/sandboxes/sbx_media_job_1791722396363_mvkmpbk_1791722396363/outputs/asset_job_1791722396363_mvkmpbk.png"
     ],
     "vramUsedMb": 4096,
     "generationDurationMs": 1,
-    "createdAt": "2026-08-25T09:56:24.606Z",
-    "startedAt": "2026-08-25T09:56:24.607Z",
-    "evidenceId": "ev_6_1787651784607",
-    "provenanceHash": "df2ddf0ceed6d2a6208217ec9c40d3b579c6f983e17cdd8727500858065e17de",
-    "completedAt": "2026-08-25T09:56:24.607Z"
+    "createdAt": "2026-10-11T12:39:56.363Z",
+    "startedAt": "2026-10-11T12:39:56.364Z",
+    "outputPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\comfyui\\sandboxes\\sbx_media_job_1791722396363_mvkmpbk_1791722396363\\outputs\\asset_job_1791722396363_mvkmpbk.png",
+    "evidenceId": "ev_6_1791722396365",
+    "provenanceHash": "26e9b917e727da39bc6fd1b025afa450f51d1bd064614585d7ed923c7f1a7c5f",
+    "completedAt": "2026-10-11T12:39:56.365Z"
   },
   {
-    "jobId": "job_1787651784607_1dqffq",
+    "jobId": "job_1791722396365_hw9uf",
     "request": {
       "prompt": "Queue test",
       "modality": "IMAGE"
@@ -109,10 +113,10 @@
     "outputUrls": [],
     "vramUsedMb": 4096,
     "generationDurationMs": 0,
-    "createdAt": "2026-08-25T09:56:24.607Z"
+    "createdAt": "2026-10-11T12:39:56.365Z"
   },
   {
-    "jobId": "job_1787651784608_x0xljh",
+    "jobId": "job_1791722396368_83ff3m",
     "request": {
       "prompt": "Kira walking through Neo Mumbai street",
       "modality": "IMAGE",
@@ -125,14 +129,15 @@
     "currentStep": 20,
     "totalSteps": 20,
     "outputUrls": [
-      "/artifacts/comfyui/sandboxes/sbx_media_job_1787651784608_x0xljh_1787651784608/outputs/asset_job_1787651784608_x0xljh.png"
+      "/artifacts/comfyui/sandboxes/sbx_media_job_1791722396368_83ff3m_1791722396368/outputs/asset_job_1791722396368_83ff3m.png"
     ],
     "vramUsedMb": 4096,
     "generationDurationMs": 1,
-    "createdAt": "2026-08-25T09:56:24.608Z",
-    "startedAt": "2026-08-25T09:56:24.609Z",
-    "evidenceId": "ev_8_1787651784609",
+    "createdAt": "2026-10-11T12:39:56.368Z",
+    "startedAt": "2026-10-11T12:39:56.369Z",
+    "outputPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\comfyui\\sandboxes\\sbx_media_job_1791722396368_83ff3m_1791722396368\\outputs\\asset_job_1791722396368_83ff3m.png",
+    "evidenceId": "ev_8_1791722396370",
     "provenanceHash": "c83f3ba9e548d6b8e4e689abba66a644324eeb6289367f3cd05c8b612988ae4a",
-    "completedAt": "2026-08-25T09:56:24.609Z"
+    "completedAt": "2026-10-11T12:39:56.370Z"
   }
 ]

@@ -3,7 +3,20 @@ import { PresentXOrchestrator } from "@/presentx/engine/PresentXOrchestrator";
 import path from "path";
 import fs from "fs";
 
-const STORAGE_DIR = path.resolve(process.cwd(), "workspaces", "presentx-vault");
+function getStorageDir(): string {
+  const isServerless = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
+  const targetDir = isServerless
+    ? path.resolve("/tmp", "presentx-vault")
+    : path.resolve(process.cwd(), "workspaces", "presentx-vault");
+  if (!fs.existsSync(targetDir)) {
+    try {
+      fs.mkdirSync(targetDir, { recursive: true });
+    } catch {
+      return path.resolve("/tmp", "presentx-vault");
+    }
+  }
+  return targetDir;
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -22,9 +35,7 @@ export async function POST(req: NextRequest) {
       brandName: body.brandName,
     });
 
-    if (!fs.existsSync(STORAGE_DIR)) {
-      fs.mkdirSync(STORAGE_DIR, { recursive: true });
-    }
+    const STORAGE_DIR = getStorageDir();
     fs.writeFileSync(path.join(STORAGE_DIR, `${project.id}.json`), JSON.stringify(project, null, 2));
 
     return NextResponse.json({

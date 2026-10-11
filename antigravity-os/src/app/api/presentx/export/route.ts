@@ -35,12 +35,25 @@ export async function POST(req: NextRequest) {
 
     const workingProject = qualityResult.repairedProject;
 
-    if (format === "HTML" || format === "PDF") {
+    if (format === "HTML") {
       const html = PresentXExporter.exportToHtml(workingProject);
       return new NextResponse(html, {
         headers: {
           "Content-Type": "text/html; charset=utf-8",
           "Content-Disposition": `attachment; filename="${encodeURIComponent(workingProject.title || "presentation")}.html"`,
+          "x-presentx-certificate-id": qualityResult.certificate.certificateId,
+          "x-presentx-decision": qualityResult.decision,
+          "x-presentx-quality-score": String(qualityResult.certificate.exportScore),
+        },
+      });
+    }
+
+    if (format === "PDF") {
+      const buffer = qualityResult.exportBuffer || (await PresentXExporter.exportToPdf(workingProject));
+      return new NextResponse(new Uint8Array(buffer), {
+        headers: {
+          "Content-Type": "application/pdf",
+          "Content-Disposition": `attachment; filename="${encodeURIComponent(workingProject.title || "presentation")}.pdf"`,
           "x-presentx-certificate-id": qualityResult.certificate.certificateId,
           "x-presentx-decision": qualityResult.decision,
           "x-presentx-quality-score": String(qualityResult.certificate.exportScore),
