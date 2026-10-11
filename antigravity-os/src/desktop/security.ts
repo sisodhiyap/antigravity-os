@@ -22,6 +22,10 @@ export class DesktopSecurityFabric {
     "desktop:open-external",
     "desktop:get-app-version",
     "desktop:get-logs-path",
+    "desktop:strands-decide",
+    "desktop:get-capabilities",
+    "desktop:get-creative-tools",
+    "desktop:export-native-pptx",
   ]);
 
   private static readonly SECRET_PATTERNS = [

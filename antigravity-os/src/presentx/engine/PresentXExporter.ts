@@ -842,6 +842,107 @@ ${xmlSlides}
       status: lossPercentage === 0 ? "PERFECT" : lossPercentage < 10 ? "ACCEPTABLE" : "DEGRADED",
     };
   }
+
+  /**
+   * Generates native editable Microsoft PowerPoint (.pptx) using pptxgenjs.
+   * Maps design tokens to PowerPoint color themes, preserves speaker notes,
+   * metrics cards, typography, and Truth Firewall audit badges.
+   */
+  public static async exportToNativePptx(project: PresentationProject): Promise<Buffer> {
+    const { updatedProject } = PresentXTruthAuditor.getInstance().auditProjectTruth(project);
+    const slides = updatedProject.slides || [];
+    const tokens = updatedProject.designTokens;
+
+    try {
+      const PptxGenJS = require("pptxgenjs");
+      const pptx = new PptxGenJS();
+
+      pptx.layout = "LAYOUT_16x9";
+      pptx.title = updatedProject.title || "PresentX Presentation";
+      pptx.company = "Antigravity Sovereign Intelligence";
+
+      const hexBg = (tokens.backgroundColor || "#0A0E17").replace("#", "");
+      const hexPrimary = (tokens.primaryColor || "#D4AF37").replace("#", "");
+      const hexText = (tokens.textColor || "#F8FAFC").replace("#", "");
+      const hexMuted = ((tokens as any).mutedColor || "#94A3B8").replace("#", "");
+
+      for (const slide of slides) {
+        const pSlide = pptx.addSlide();
+        pSlide.background = { color: hexBg };
+
+        const truthBadge = slide.audit?.truthBadge || "VERIFIED";
+
+        // Slide Header: Badge + Headline
+        pSlide.addText(
+          [
+            { text: `[${truthBadge}] `, options: { color: hexPrimary, bold: true, fontSize: 12 } },
+            { text: slide.headline, options: { color: hexText, bold: true, fontSize: 24 } },
+          ],
+          { x: 0.8, y: 0.6, w: 11.5, h: 0.8 }
+        );
+
+        // Subheadline
+        if (slide.subheadline) {
+          pSlide.addText(slide.subheadline, {
+            x: 0.8,
+            y: 1.4,
+            w: 11.5,
+            h: 0.5,
+            color: hexMuted,
+            fontSize: 14,
+            italic: true,
+          });
+        }
+
+        // Body Content
+        if (slide.bodyContent) {
+          pSlide.addText(slide.bodyContent, {
+            x: 0.8,
+            y: 2.1,
+            w: 6.5,
+            h: 3.8,
+            color: hexText,
+            fontSize: 14,
+            lineSpacing: 22,
+          });
+        }
+
+        // Key Metrics Grid
+        if (slide.keyMetrics && slide.keyMetrics.length > 0) {
+          const startX = slide.bodyContent ? 7.6 : 0.8;
+          slide.keyMetrics.forEach((metric, mIdx) => {
+            const cardY = 2.1 + mIdx * 1.3;
+            pSlide.addText(
+              [
+                { text: `${metric.value}\n`, options: { bold: true, fontSize: 22, color: hexPrimary } },
+                { text: `${metric.label}\n`, options: { bold: false, fontSize: 12, color: hexText } },
+                { text: metric.dataType || "ILLUSTRATIVE_DATA", options: { fontSize: 9, color: hexMuted } },
+              ],
+              {
+                x: startX,
+                y: cardY,
+                w: 4.5,
+                h: 1.1,
+                fill: { color: "161F30" },
+                line: { color: hexPrimary, width: 1 },
+              }
+            );
+          });
+        }
+
+        // Speaker Notes
+        if (slide.speakerNotes) {
+          pSlide.addNotes(slide.speakerNotes);
+        }
+      }
+
+      const output = await pptx.write({ outputType: "nodebuffer" });
+      return Buffer.from(output);
+    } catch {
+      // Graceful fallback to verified OpenXML ZIP packager
+      return PresentXExporter.exportToPptx(project);
+    }
+  }
 }
 
 function escapeXml(unsafe: string): string {

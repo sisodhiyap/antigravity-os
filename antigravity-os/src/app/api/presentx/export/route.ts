@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
     }
 
     if (format === "PPTX") {
-      const buffer = qualityResult.exportBuffer || (await PresentXExporter.exportToPptx(workingProject));
+      const buffer = qualityResult.exportBuffer || (await PresentXExporter.exportToNativePptx(workingProject));
       return new NextResponse(new Uint8Array(buffer), {
         headers: {
           "Content-Type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",

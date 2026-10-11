@@ -31,6 +31,39 @@ export async function POST(req: NextRequest) {
 
     const latencyMs = Math.round(performance.now() - start);
 
+    // If client requested Server-Sent Events streaming
+    if (body.stream === true) {
+      const encoder = new TextEncoder();
+      const tokens = response.content.split(/(\s+)/); // Word-level chunks
+      const stream = new ReadableStream({
+        async start(controller) {
+          for (const token of tokens) {
+            controller.enqueue(encoder.encode(`data: ${JSON.stringify({ token })}\n\n`));
+            await new Promise((r) => setTimeout(r, 12));
+          }
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({
+                done: true,
+                provider: response.provider,
+                model: response.model,
+                latencyMs,
+              })}\n\n`
+            )
+          );
+          controller.close();
+        },
+      });
+
+      return new Response(stream, {
+        headers: {
+          "Content-Type": "text/event-stream; charset=utf-8",
+          "Cache-Control": "no-cache, no-transform",
+          Connection: "keep-alive",
+        },
+      });
+    }
+
     // Persist conversation to database if we have a real project workspace
     if (userId && workspaceId !== "default") {
       try {

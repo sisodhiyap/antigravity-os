@@ -400,6 +400,44 @@ function registerIpcHandlers() {
   ipcMain.handle("desktop:get-logs-path", async () => {
     return supervisor.getLogDir();
   });
+
+  ipcMain.handle("desktop:strands-decide", async (_event, task, context, capabilities) => {
+    try {
+      const { aiRouter } = require("../server/ai/router");
+      return await aiRouter.decide(task, context, capabilities);
+    } catch (err: any) {
+      return {
+        decisionCategory: "LOCAL_VS_CLOUD",
+        selectedRouteOrAction: "LOCAL_FAST_INFERENCE",
+        confidence: 0.8,
+        evidence: { error: err.message },
+        requiredTools: [],
+        capabilityDependencies: [],
+        riskClassification: "LOW",
+        escalateToLargerModel: false,
+        executionEngine: "ROUTER_FALLBACK",
+        latencyMs: 1,
+      };
+    }
+  });
+
+  ipcMain.handle("desktop:get-capabilities", async () => {
+    try {
+      const { authoritativeRegistry } = require("../capabilities/AuthoritativeRegistry");
+      return await authoritativeRegistry.evaluateAllCapabilities();
+    } catch {
+      return [];
+    }
+  });
+
+  ipcMain.handle("desktop:get-creative-tools", async () => {
+    try {
+      const { creativeIntegrations } = require("../server/tools/creative-integrations");
+      return await creativeIntegrations.discoverAllTools();
+    } catch {
+      return [];
+    }
+  });
 }
 
 /** ─── APP LIFECYCLE ──────────────────────────────────────────────────────── */

@@ -19,6 +19,9 @@ export interface AntigravityDesktopAPI {
   openExternal: (url: string) => Promise<{ success: boolean }>;
   getAppVersion: () => Promise<string>;
   getLogsPath: () => Promise<string>;
+  strandsDecide: (task: string, context?: any, capabilities?: string[]) => Promise<any>;
+  getCapabilities: () => Promise<any>;
+  getCreativeTools: () => Promise<any>;
 }
 
 const desktopAPI: AntigravityDesktopAPI = {
@@ -34,6 +37,10 @@ const desktopAPI: AntigravityDesktopAPI = {
   openExternal: (url: string) => ipcRenderer.invoke("desktop:open-external", url),
   getAppVersion: () => ipcRenderer.invoke("desktop:get-app-version"),
   getLogsPath: () => ipcRenderer.invoke("desktop:get-logs-path"),
+  strandsDecide: (task: string, context?: any, capabilities?: string[]) =>
+    ipcRenderer.invoke("desktop:strands-decide", task, context, capabilities),
+  getCapabilities: () => ipcRenderer.invoke("desktop:get-capabilities"),
+  getCreativeTools: () => ipcRenderer.invoke("desktop:get-creative-tools"),
 };
 
 // Expose safe, isolated API to the renderer process

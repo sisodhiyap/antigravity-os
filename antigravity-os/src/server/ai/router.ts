@@ -13,6 +13,9 @@ import {
 } from "./providers";
 import { quotaEngine } from "./quota";
 import { AIProviderError, BudgetExceededError } from "@/lib/errors";
+import { strandsDecider, StrandsDecision } from "./strands-decider";
+
+export type { StrandsDecision };
 
 export interface RoutedCompletionOptions extends AICompletionRequest {
   taskCategory?: "CODE" | "REASONING" | "FAST" | "CREATIVE" | "GENERAL" | "LARGE" | "LOW_VRAM" | "FAST_LOCAL" | "LOCAL_LARGE" | "CLOUD" | "VISION" | "LONG_CONTEXT";
@@ -70,6 +73,25 @@ export class CentralAIRouter {
       }
     }
     return results;
+  }
+
+  /**
+   * Fast System One decision layer powered by Strands Decider.
+   * Resolves binary gates, tool selection, risk classification, and routing before slower LLMs.
+   */
+  public async decide(
+    task: string,
+    context?: Record<string, any>,
+    availableCapabilities?: string[]
+  ): Promise<StrandsDecision> {
+    return strandsDecider.decide(task, context, availableCapabilities);
+  }
+
+  /**
+   * Runs empirical benchmark for Strands Decider decision speed and confidence calibration.
+   */
+  public async benchmarkDecider() {
+    return strandsDecider.runBenchmark();
   }
 
   /**

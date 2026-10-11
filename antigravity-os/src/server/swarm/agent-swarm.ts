@@ -13,7 +13,13 @@ export type AgentRole =
   | "DEVOPS_ENGINEER"
   | "CREATIVE_DIRECTOR"
   | "VIDEO_PRODUCER"
-  | "STOCK_RESEARCHER";
+  | "STOCK_RESEARCHER"
+  | "GRAPHIC_DESIGNER"
+  | "BRAND_DESIGNER"
+  | "MOTION_DESIGNER"
+  | "AUDIO_PRODUCER"
+  | "THREE_D_ARTIST"
+  | "CREATIVE_RESEARCHER";
 
 export interface AgentDefinition {
   role: AgentRole;
@@ -221,6 +227,66 @@ export class AgentSwarmEngine {
       capabilities: ["Market Research", "Financial Modeling", "Data Analysis"],
       allowedTools: ["search_memory"],
       systemInstructions: "You are the Senior Market & Quantitative Analyst. Provide rigorous financial insights.",
+      preferredCategory: "REASONING",
+    });
+
+    this.agents.set("GRAPHIC_DESIGNER", {
+      role: "GRAPHIC_DESIGNER",
+      name: "Vector Graphic Specialist",
+      description: "Creates vector illustrations, SVG assets, iconography, and visual hierarchy",
+      capabilities: ["Vector Graphics", "SVG Architecture", "Icon Design"],
+      allowedTools: ["search_memory"],
+      systemInstructions: "You are the Graphic Design Specialist. Produce sharp, scalable vector assets and icon sets.",
+      preferredCategory: "CREATIVE",
+    });
+
+    this.agents.set("BRAND_DESIGNER", {
+      role: "BRAND_DESIGNER",
+      name: "Identity Brand Specialist",
+      description: "Defines typography rules, brand color palettes, guidelines, and tone-of-voice",
+      capabilities: ["Brand Systems", "Color Palette Curation", "Typography Pairing"],
+      allowedTools: ["search_memory"],
+      systemInstructions: "You are the Brand Identity Specialist. Craft cohesive, authoritative brand guidelines.",
+      preferredCategory: "CREATIVE",
+    });
+
+    this.agents.set("MOTION_DESIGNER", {
+      role: "MOTION_DESIGNER",
+      name: "Kinetic Motion Specialist",
+      description: "Architects micro-interactions, spring physics, Remotion sequences, and transitions",
+      capabilities: ["Spring Physics", "Framer Motion", "Remotion Timelines"],
+      allowedTools: ["search_memory"],
+      systemInstructions: "You are the Motion Design Specialist. Craft seamless, purposeful micro-animations.",
+      preferredCategory: "CREATIVE",
+    });
+
+    this.agents.set("AUDIO_PRODUCER", {
+      role: "AUDIO_PRODUCER",
+      name: "Sonic Audio Specialist",
+      description: "Directs neural speech synthesis, voice inflection, sound effects, and spectrogram mixing",
+      capabilities: ["Neural TTS", "Audio Mixing", "Sound Design"],
+      allowedTools: ["search_memory"],
+      systemInstructions: "You are the Audio Production Specialist. Ensure pristine audio fidelity and natural pacing.",
+      preferredCategory: "CREATIVE",
+    });
+
+    this.agents.set("THREE_D_ARTIST", {
+      role: "THREE_D_ARTIST",
+      name: "Spatial 3D Specialist",
+      description: "Develops Three.js shaders, GLTF procedural models, and Blender scene geometries",
+      capabilities: ["Three.js WebGL", "GLTF Architecture", "Blender Procedural Shaders"],
+      allowedTools: ["system_diagnostics"],
+      systemInstructions: "You are the 3D Procedural Artist. Build efficient, visually striking 3D environments.",
+      preferredCategory: "CREATIVE",
+    });
+
+    this.agents.set("CREATIVE_RESEARCHER", {
+      role: "CREATIVE_RESEARCHER",
+      name: "Lumina Creative Researcher",
+      description: "Analyzes design benchmarks, competitive aesthetics, user sentiment, and art movements",
+      capabilities: ["Design Auditing", "Aesthetic Research", "Visual Benchmarking"],
+      allowedTools: ["search_memory"],
+      systemInstructions: "You are the Creative Researcher. Uncover design trends and empirical benchmarks.",
       preferredCategory: "REASONING",
     });
   }

@@ -70,7 +70,11 @@
     "compile:desktop": "tsc -p tsconfig.desktop.json",
     "desktop": "npm run compile:desktop && electron .",
     "package:desktop": "next build && npm run compile:desktop && electron-builder --config electron-builder.yml --win",
-    "build:apk": "npx tsx scripts/build-android-apk.ts"
+    "build:apk": "npx tsx scripts/build-android-apk.ts",
+    "verify:v21:master": "npx tsx scripts/verify-v21-master.ts",
+    "verify:strands": "npx tsx scripts/verify-strands-decider.ts",
+    "verify:native-pptx": "npx tsx scripts/verify-native-pptx.ts",
+    "verify:capabilities:v21": "npx tsx scripts/verify-capabilities-v21.ts"
   },
   "dependencies": {
     "@heyputer/puter.js": "^2.6.1",
@@ -82,6 +86,7 @@
     "jszip": "^3.10.1",
     "lucide-react": "^0.475.0",
     "next": "^15.1.7",
+    "pptxgenjs": "^4.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "systeminformation": "^5.33.1",
