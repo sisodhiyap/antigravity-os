@@ -86,9 +86,10 @@ export interface StrandsDecision {
   requiredTools: string[];
   capabilityDependencies: string[];
   riskClassification: RiskClassification;
+  requiresApproval?: boolean;
   escalateToLargerModel: boolean;
   abstentionOrFailureReason?: string;
-  executionEngine: "STRANDS_HTTP" | "STRANDS_LOCAL_CALIBRATED" | "ROUTER_FALLBACK";
+  executionEngine: "STRANDS_HTTP" | "JEV_SYSTEM_ONE" | "STRANDS_LOCAL_CALIBRATED" | "ROUTER_FALLBACK";
   latencyMs: number;
 }
 
@@ -257,7 +258,7 @@ export class StrandsDeciderEngine {
           const latencyMs = Math.round(performance.now() - startTime);
           return {
             decisionCategory: isApprovalRequired ? "APPROVAL_REQUIRED" : (catAns.choice as DecisionCategory),
-            selectedRouteOrAction: catAns.choice,
+            selectedRouteOrAction: isApprovalRequired ? "HUMAN_APPROVAL_GATE" : catAns.choice,
             confidence: catAns.confidence,
             evidence: {
               probabilities: catAns.probabilities,
@@ -267,6 +268,7 @@ export class StrandsDeciderEngine {
             requiredTools: this.deriveRequiredTools(taskLower, catAns.choice),
             capabilityDependencies: this.deriveDependencies(catAns.choice),
             riskClassification: isApprovalRequired ? "CRITICAL" : catAns.confidence > 0.85 ? "LOW" : "MEDIUM",
+            requiresApproval: isApprovalRequired,
             escalateToLargerModel: catAns.choice === "REASONING_REQUIRED" || catAns.confidence < 0.65,
             executionEngine: "STRANDS_HTTP",
             latencyMs,
@@ -277,7 +279,67 @@ export class StrandsDeciderEngine {
       }
     }
 
-    // 2. High-performance local calibrated engine (sub-10ms, calibrated confidence math)
+    // 2. Optional Jev AI System One evaluation when JEV_API_KEY is configured
+    if (process.env.JEV_API_KEY) {
+      try {
+        const { jevAdapter } = require("./jev-adapter");
+        const jevResp = await jevAdapter.executeSystemOne({
+          model: process.env.JEV_MODEL || "typesafe/jev-1.13",
+          state: task,
+          questions: {
+            category: {
+              type: "choice",
+              instructions: "What is the primary category of this task?",
+              criteria: {
+                TOOL_VS_MODEL: "Requires external tool execution rather than text completion",
+                LOCAL_VS_CLOUD: "Must decide between local zero-cost inference vs cloud API",
+                BINARY_GATE: "Yes/No decision or security authorization validation",
+                SPECIALIST_AGENT: "Requires specialized creative or engineering swarm role",
+                REASONING_REQUIRED: "Complex multi-step logic requiring reasoning model",
+                APPROVAL_REQUIRED: "Consequential write, email, deploy, or delete operation",
+                CREATIVE_PIPELINE: "Generative image, video, audio, or 3D composition task",
+              },
+            },
+            approval_gate: {
+              type: "noul",
+              instructions: "Does this task perform a consequential, destructive, or external publishing action requiring human approval?",
+            },
+          },
+        });
+
+        if (jevResp && jevResp.answers && jevResp.answers.category?.type === "choice") {
+          const catAns = jevResp.answers.category;
+          const approvalAns = jevResp.answers.approval_gate?.type === "noul"
+            ? jevResp.answers.approval_gate
+            : undefined;
+          const isApprovalRequired = (approvalAns?.noul || 0) > 0.7;
+
+          const latencyMs = Math.round(performance.now() - startTime);
+          return {
+            decisionCategory: isApprovalRequired ? "APPROVAL_REQUIRED" : (catAns.choice as DecisionCategory),
+            selectedRouteOrAction: isApprovalRequired ? "HUMAN_APPROVAL_GATE" : catAns.choice,
+            confidence: catAns.confidence,
+            evidence: {
+              probabilities: catAns.probabilities,
+              approvalProbability: approvalAns?.noul ?? 0,
+              wireModel: jevResp.model,
+              provider: "JEV_SYSTEM_ONE",
+            },
+            requiredTools: this.deriveRequiredTools(taskLower, catAns.choice),
+            capabilityDependencies: this.deriveDependencies(catAns.choice),
+            riskClassification: isApprovalRequired ? "CRITICAL" : catAns.confidence > 0.85 ? "LOW" : "MEDIUM",
+            requiresApproval: isApprovalRequired,
+            escalateToLargerModel: catAns.choice === "REASONING_REQUIRED" || catAns.confidence < 0.65,
+            executionEngine: "JEV_SYSTEM_ONE",
+            latencyMs,
+          };
+        }
+      } catch {
+        // Fall back gracefully to local calibrated engine
+      }
+    }
+
+    // 3. High-performance local calibrated engine (sub-10ms, calibrated confidence math)
     return this.executeLocalCalibratedDecision(task, context, availableCapabilities, startTime);
   }
 
@@ -305,10 +367,16 @@ export class StrandsDeciderEngine {
       t.includes("purge") ||
       t.includes("force push") ||
       t.includes("push -f") ||
-      t.includes("deploy to prod") ||
-      t.includes("deploy unverified") ||
+      t.includes("deploy") ||
       t.includes("email") ||
-      t.includes("publish");
+      t.includes("publish") ||
+      t.includes("override") ||
+      t.includes("bypass") ||
+      t.includes("ignore all rules") ||
+      t.includes("ignore all previous rules") ||
+      t.includes("without human approval") ||
+      t.includes("root deploy") ||
+      t.includes("jailbreak");
 
     if (isDestructive) {
       const probs = [0.96, 0.04];
@@ -321,6 +389,7 @@ export class StrandsDeciderEngine {
         requiredTools: ["system_approval_gate"],
         capabilityDependencies: ["desktop-supervisor", "database-sqlite"],
         riskClassification: "CRITICAL",
+        requiresApproval: true,
         escalateToLargerModel: false,
         executionEngine: "STRANDS_LOCAL_CALIBRATED",
         latencyMs: Math.max(1, Math.round(performance.now() - startTime)),

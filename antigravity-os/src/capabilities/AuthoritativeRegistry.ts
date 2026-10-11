@@ -12,6 +12,7 @@ import path from "path";
 import { strandsDecider } from "@/server/ai/strands-decider";
 import { googleConnector } from "@/server/tools/google-connector";
 import { creativeIntegrations } from "@/server/tools/creative-integrations";
+import { jevAdapter } from "@/server/ai/jev-adapter";
 
 export type CapabilityStatusCategory =
   | "READY"
@@ -411,6 +412,27 @@ export class AuthoritativeCapabilityRegistry {
       isRealExecutionVerified: true,
       diagnosticsLink: "/mcp#creative",
       remediationInstructions: "Creative tools fabric operational.",
+    });
+
+    // 18. Jev AI System One Integration
+    const jevStatus = jevAdapter.getStatus();
+    const isJevConnected = jevStatus.status === "CONNECTED";
+    capabilities.push({
+      id: "jev-system-one",
+      name: "Jev AI System One Typed Decision Engine",
+      status: isJevConnected ? "READY" : "CONFIGURATION_REQUIRED",
+      implementationStatus: "IMPLEMENTED",
+      requiredDependencies: ["Jev API Key", "Model: typesafe/jev-1.13"],
+      configurationCompleteness: jevStatus.isConfigured ? (isJevConnected ? 100 : 70) : 0,
+      connectionStatus: isJevConnected ? "CONNECTED" : "DISCONNECTED",
+      lastSuccessfulHealthCheck: jevStatus.lastVerification,
+      lastError: jevStatus.error || null,
+      errorCategory: !jevStatus.isConfigured ? "MISSING_CREDENTIALS" : null,
+      supportedExecutionModes: ["CLOUD", "HYBRID"],
+      availableModelsOrTools: ["typesafe/jev-1.13", "Choice Classifier", "Score Rubric", "Noul Yes/No Gate"],
+      isRealExecutionVerified: isJevConnected,
+      diagnosticsLink: "/mcp#jev",
+      remediationInstructions: "Configure JEV_API_KEY in .env or Settings -> Integrations to activate live cloud System One decisions.",
     });
 
     return capabilities;

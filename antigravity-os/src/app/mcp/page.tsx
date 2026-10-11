@@ -56,8 +56,15 @@ const STATUS_BADGE_MAP: Record<MCPStatus, { variant: any; label: string }> = {
 const CATEGORIES = ["ALL", "DESIGN", "BROWSER", "CODE", "GIT", "DATABASE", "RESEARCH", "MEDIA", "AUTOMATION"];
 
 export default function MCPHubPage() {
-  const [activeTab, setActiveTab] = useState<"SERVERS" | "STRANDS" | "GOOGLE" | "CREATIVE">("SERVERS");
+  const [activeTab, setActiveTab] = useState<"SERVERS" | "STRANDS" | "JEV" | "GOOGLE">("SERVERS");
   const [activeCategory, setActiveCategory] = useState("ALL");
+
+  // Jev System One State
+  const [jevStatus, setJevStatus] = useState<any>(null);
+  const [jevStateInput, setJevStateInput] = useState("Three deploys have failed and production is returning 500s.");
+  const [jevQuestionType, setJevQuestionType] = useState<"noul" | "choice" | "score">("noul");
+  const [jevResult, setJevResult] = useState<any>(null);
+  const [isJevLoading, setIsJevLoading] = useState(false);
 
   // Strands Decider State
   const [decidePrompt, setDecidePrompt] = useState("Generate a 10-slide pitch deck for sovereign AI operating system");
@@ -88,7 +95,75 @@ export default function MCPHubPage() {
         }
       })
       .catch(() => {});
+
+    // Probe Jev System One official status
+    fetch("/api/jev")
+      .then((r) => r.json())
+      .then((json) => {
+        if (json.success) {
+          setJevStatus(json.data);
+        }
+      })
+      .catch(() => {});
   }, []);
+
+  const handleRunJevQuestion = async () => {
+    setIsJevLoading(true);
+    setJevResult(null);
+    try {
+      let questionsPayload: any = {};
+      if (jevQuestionType === "noul") {
+        questionsPayload = {
+          needs_human: {
+            type: "noul",
+            instructions: "Does this incident need immediate human escalation?",
+          },
+        };
+      } else if (jevQuestionType === "choice") {
+        questionsPayload = {
+          route_action: {
+            type: "choice",
+            instructions: "Select the most appropriate operational recovery action",
+            criteria: {
+              rollback: "Revert the last failing deploy immediately",
+              investigate_logs: "Inspect server logs and error stack traces",
+              scale_replicas: "Increase replica count to handle load",
+              other: "Alternative recovery procedure",
+            },
+          },
+        };
+      } else {
+        questionsPayload = {
+          severity_level: {
+            type: "score",
+            instructions: "Assess incident severity on an ordered 1-5 scale",
+            criteria: [
+              "1: Minimal cosmetic issue",
+              "2: Minor degraded latency",
+              "3: Moderate customer facing error",
+              "4: Critical workflow broken",
+              "5: Total production outage",
+            ],
+          },
+        };
+      }
+
+      const res = await fetch("/api/jev", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          state: jevStateInput,
+          questions: questionsPayload,
+        }),
+      });
+      const data = await res.json();
+      setJevResult(data);
+    } catch (e: any) {
+      setJevResult({ success: false, error: e.message });
+    } finally {
+      setIsJevLoading(false);
+    }
+  };
 
   const handleRunDecision = async () => {
     setIsDeciding(true);
@@ -170,6 +245,18 @@ export default function MCPHubPage() {
             >
               <Zap className="w-3.5 h-3.5 text-amber-400" />
               Strands Decider
+            </button>
+            <button
+              onClick={() => setActiveTab("JEV")}
+              className={clsx(
+                "px-3 py-1.5 rounded-lg text-xs font-semibold tracking-wide transition-all flex items-center gap-1.5",
+                activeTab === "JEV"
+                  ? "bg-[var(--ag-gold-alpha)] text-[var(--ag-gold)] border border-[var(--ag-gold)]/30"
+                  : "text-[var(--ag-muted)] hover:text-[var(--ag-text)]"
+              )}
+            >
+              <Cpu className="w-3.5 h-3.5 text-cyan-400" />
+              Jev System One
             </button>
             <button
               onClick={() => setActiveTab("GOOGLE")}
@@ -377,6 +464,200 @@ export default function MCPHubPage() {
                 </p>
               )}
             </Card>
+          </div>
+        )}
+
+        {/* ── TAB: JEV SYSTEM ONE ────────────────────────────────────────────── */}
+        {activeTab === "JEV" && (
+          <div className="space-y-4">
+            {/* Top Cards: Status & Contract */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <Card className="p-4 space-y-2">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center">
+                      <Cpu className="w-4 h-4 text-cyan-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xs font-semibold text-[var(--ag-text)]">Jev System One Status</h3>
+                      <p className="text-[10px] text-[var(--ag-muted)]">Official Decision Adapter</p>
+                    </div>
+                  </div>
+                  <span
+                    className={clsx(
+                      "text-[9px] px-2 py-0.5 rounded font-mono font-semibold border",
+                      jevStatus?.status === "CONNECTED"
+                        ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/30"
+                        : jevStatus?.status === "NOT_CONFIGURED"
+                        ? "bg-amber-500/10 text-amber-400 border-amber-500/30"
+                        : "bg-rose-500/10 text-rose-400 border-rose-500/30"
+                    )}
+                  >
+                    {jevStatus?.status || "NOT_CONFIGURED"}
+                  </span>
+                </div>
+                <p className="text-[11px] text-[var(--ag-text-sec)]">
+                  {jevStatus?.details || "Set JEV_API_KEY in server environment to enable live cloud inference."}
+                </p>
+                <div className="pt-1 text-[10px] font-mono text-[var(--ag-muted)] flex justify-between">
+                  <span>Probed Latency:</span>
+                  <span className="text-[var(--ag-text)]">{jevStatus?.latencyMs ? `${jevStatus.latencyMs}ms` : "N/A (offline)"}</span>
+                </div>
+              </Card>
+
+              <Card className="p-4 space-y-2">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center">
+                    <Network className="w-4 h-4 text-purple-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xs font-semibold text-[var(--ag-text)]">Authoritative Contract</h3>
+                    <p className="text-[10px] text-[var(--ag-muted)]">Endpoint & Active Model</p>
+                  </div>
+                </div>
+                <div className="space-y-1 text-[10px] font-mono">
+                  <div className="flex justify-between">
+                    <span className="text-[var(--ag-muted)]">Endpoint:</span>
+                    <span className="text-[var(--ag-text)] truncate max-w-[180px]">https://thejevai.com/v1/systemone</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-[var(--ag-muted)]">Model:</span>
+                    <span className="text-cyan-400 font-semibold">typesafe/jev-1.13</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-[var(--ag-muted)]">Question Types:</span>
+                    <span className="text-[var(--ag-gold)]">noul · choice · score</span>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-4 space-y-2">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center">
+                    <ShieldAlert className="w-4 h-4 text-amber-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xs font-semibold text-[var(--ag-text)]">Safety & Pricing Tier</h3>
+                    <p className="text-[10px] text-[var(--ag-muted)]">Advisory Signals Only</p>
+                  </div>
+                </div>
+                <p className="text-[11px] text-[var(--ag-text-sec)]">
+                  Jev outputs are decision inputs, never independent permissions. High-impact operations gate via human approval.
+                </p>
+                <div className="text-[10px] font-mono text-[var(--ag-muted)] pt-1">
+                  Starter ($10/100k) · Pro ($100/1M) · Enterprise ($1k/11M)
+                </div>
+              </Card>
+            </div>
+
+            {/* Interactive Workbench */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <Card className="p-5 space-y-4">
+                <div className="flex items-center justify-between border-b border-[var(--ag-border)] pb-2">
+                  <h3 className="text-sm font-semibold text-[var(--ag-text)] flex items-center gap-2">
+                    <Play className="w-4 h-4 text-cyan-400" />
+                    Jev System One Inspector
+                  </h3>
+                  <span className="text-[10px] font-mono text-[var(--ag-muted)]">POST /v1/systemone</span>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-xs font-semibold text-[var(--ag-text-sec)] uppercase tracking-wider">
+                    Context / Operational State
+                  </label>
+                  <textarea
+                    rows={3}
+                    value={jevStateInput}
+                    onChange={(e) => setJevStateInput(e.target.value)}
+                    className="w-full bg-[var(--ag-elevated)] border border-[var(--ag-border)] rounded-lg p-2.5 text-xs text-[var(--ag-text)] font-mono focus:outline-none focus:border-[var(--ag-gold)]"
+                    placeholder="Enter state context..."
+                  />
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-xs font-semibold text-[var(--ag-text-sec)] uppercase tracking-wider">
+                    Decision Question Type
+                  </label>
+                  <div className="flex gap-2">
+                    {(["noul", "choice", "score"] as const).map((qType) => (
+                      <button
+                        key={qType}
+                        onClick={() => setJevQuestionType(qType)}
+                        className={clsx(
+                          "flex-1 py-1.5 px-3 rounded-lg text-xs font-mono font-semibold uppercase border transition-all",
+                          jevQuestionType === qType
+                            ? "bg-cyan-500/20 text-cyan-400 border-cyan-500/40"
+                            : "bg-[var(--ag-elevated)] border-[var(--ag-border)] text-[var(--ag-muted)] hover:text-[var(--ag-text)]"
+                        )}
+                      >
+                        {qType}
+                      </button>
+                    ))}
+                  </div>
+                  <p className="text-[10px] text-[var(--ag-muted)] pt-0.5">
+                    {jevQuestionType === "noul" && "Binary probability question (e.g. Does this need human escalation?)"}
+                    {jevQuestionType === "choice" && "Categorical selection across allowed options (rollback, logs, scale, other)"}
+                    {jevQuestionType === "score" && "Ordered ordinal score on a 1-5 severity rating scale"}
+                  </p>
+                </div>
+
+                <button
+                  onClick={handleRunJevQuestion}
+                  disabled={isJevLoading || !jevStateInput.trim()}
+                  className="w-full py-2.5 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 hover:bg-cyan-500/20 transition-all disabled:opacity-50"
+                >
+                  {isJevLoading ? <RefreshCw className="w-3.5 h-3.5 animate-spin" /> : <Sparkles className="w-3.5 h-3.5" />}
+                  Probe Jev System One Decision
+                </button>
+              </Card>
+
+              {/* Result Card */}
+              <Card className="p-5 space-y-3 font-mono text-xs">
+                <div className="flex items-center justify-between border-b border-[var(--ag-border)] pb-2">
+                  <span className="text-[var(--ag-text)] font-semibold">Response & Resolution</span>
+                  <span className="text-[10px] text-[var(--ag-muted)]">
+                    {jevResult?.data?.executionEngine ? `Engine: ${jevResult.data.executionEngine}` : "Awaiting Query"}
+                  </span>
+                </div>
+
+                {jevResult ? (
+                  <div className="space-y-3">
+                    <div className="p-3 rounded-lg bg-[var(--ag-elevated)] border border-[var(--ag-border)] space-y-1.5">
+                      <div className="flex justify-between text-[11px]">
+                        <span className="text-[var(--ag-muted)]">Status:</span>
+                        <span className={jevResult.success ? "text-emerald-400 font-bold" : "text-rose-400 font-bold"}>
+                          {jevResult.success ? "SUCCESS" : "ERROR"}
+                        </span>
+                      </div>
+                      {jevResult.data?.latencyMs && (
+                        <div className="flex justify-between text-[11px]">
+                          <span className="text-[var(--ag-muted)]">Latency:</span>
+                          <span className="text-[var(--ag-text)]">{jevResult.data.latencyMs} ms</span>
+                        </div>
+                      )}
+                      {jevResult.data?.fallbackUsed && (
+                        <div className="flex justify-between text-[11px]">
+                          <span className="text-[var(--ag-muted)]">Fallback Engine:</span>
+                          <span className="text-amber-400 font-semibold">Deterministic Strands Decider</span>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="space-y-2">
+                      <span className="text-[10px] text-[var(--ag-muted)] uppercase block">Parsed Question Answers:</span>
+                      <pre className="p-3 rounded-lg bg-black/60 border border-[var(--ag-border)] text-[11px] overflow-auto max-h-48 text-cyan-300">
+                        {JSON.stringify(jevResult.data?.answers || jevResult.data || jevResult, null, 2)}
+                      </pre>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="h-48 flex flex-col items-center justify-center text-center text-[var(--ag-muted)] space-y-2">
+                    <Cpu className="w-8 h-8 text-[var(--ag-muted)]/40" />
+                    <p className="text-xs">Select a question type and click &apos;Probe Jev System One Decision&apos; to test the live typed adapter.</p>
+                  </div>
+                )}
+              </Card>
+            </div>
           </div>
         )}
 
