@@ -11,17 +11,22 @@ function resolveDatabaseUrl(): string {
   if (process.env.VERCEL === "1" || process.env.AWS_LAMBDA_FUNCTION_NAME) {
     const tmpDb = path.join("/tmp", "production.db");
     try {
-      if (!fs.existsSync(tmpDb)) {
-        const candidates = [
-          path.resolve(process.cwd(), "prisma", "production.db"),
-          path.resolve(__dirname, "..", "..", "prisma", "production.db"),
-          path.resolve("/var/task", "prisma", "production.db"),
-        ];
-        for (const candidate of candidates) {
-          if (fs.existsSync(candidate)) {
+      const candidates = [
+        path.resolve(process.cwd(), "prisma", "production.db"),
+        path.resolve(__dirname, "..", "..", "prisma", "production.db"),
+        path.resolve("/var/task", "prisma", "production.db"),
+      ];
+      for (const candidate of candidates) {
+        if (fs.existsSync(candidate)) {
+          const candStat = fs.statSync(candidate);
+          const needsCopy =
+            !fs.existsSync(tmpDb) ||
+            candStat.size !== fs.statSync(tmpDb).size ||
+            candStat.mtimeMs > fs.statSync(tmpDb).mtimeMs;
+          if (needsCopy) {
             fs.copyFileSync(candidate, tmpDb);
-            break;
           }
+          break;
         }
       }
     } catch (err) {

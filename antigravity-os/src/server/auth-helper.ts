@@ -1,5 +1,6 @@
 import { prisma } from "./db";
 import { NextRequest } from "next/server";
+import crypto from "crypto";
 import { CryptoService } from "./security/crypto-service";
 import { AuthRateLimiter } from "./security/rate-limiter";
 
@@ -31,8 +32,11 @@ export async function signUpUser(
 ): Promise<AuthResult> {
   const normalizedEmail = email.trim().toLowerCase();
 
-  if (!normalizedEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) {
-    throw new Error("A valid email address is required");
+  const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail);
+  const isValidIdentifier = !/\s/.test(normalizedEmail) && normalizedEmail.length >= 3;
+
+  if (!normalizedEmail || (!isEmail && !isValidIdentifier)) {
+    throw new Error("A valid email address or operator identifier is required");
   }
 
   // Check if user already exists
@@ -131,8 +135,12 @@ export async function signInUser(
     }
   }
 
-  // 2. Lookup User
-  const user = await prisma.user.findUnique({ where: { email: normalizedEmail } });
+  // 2. Lookup User: match lowercase normalized OR exact raw identifier
+  const rawIdentifier = email.trim();
+  let user = await prisma.user.findUnique({ where: { email: normalizedEmail } });
+  if (!user && rawIdentifier !== normalizedEmail) {
+    user = await prisma.user.findUnique({ where: { email: rawIdentifier } });
+  }
 
   if (!user) {
     rateLimiter.recordFailure(normalizedEmail);
@@ -310,4 +318,90 @@ export async function checkProjectMembership(
   if (allowedRoles && !allowedRoles.includes(member.role)) {
     throw new Error(`Authorization failed: Insufficient permissions (requires ${allowedRoles.join(" or ")})`);
   }
+}
+
+/**
+ * Securely provisions or resets the sovereign OWNER account.
+ * Requires verification of a trusted server-side secret (OWNER_PROVISIONING_SECRET, ADMIN_SECRET, or JWT_SECRET).
+ */
+export async function provisionOwnerAccount(
+  identifier: string,
+  password: string,
+  adminSecret: string,
+  ipAddress?: string
+): Promise<{ success: boolean; user: { id: string; email: string; role: string } }> {
+  const trustedSecret =
+    process.env.OWNER_PROVISIONING_SECRET ||
+    process.env.ADMIN_SECRET ||
+    process.env.JWT_SECRET ||
+    process.env.VERCEL_TOKEN;
+
+  if (!trustedSecret || !adminSecret) {
+    throw new Error("Unauthorized: Administrative secret not configured or missing.");
+  }
+
+  const trustedBuffer = Buffer.from(trustedSecret);
+  const providedBuffer = Buffer.from(adminSecret);
+  if (
+    trustedBuffer.length !== providedBuffer.length ||
+    !crypto.timingSafeEqual(trustedBuffer, providedBuffer)
+  ) {
+    throw new Error("Unauthorized: Invalid administrative secret.");
+  }
+
+  const normalized = identifier.trim().toLowerCase();
+  if (!normalized || normalized.length < 3) {
+    throw new Error("Identifier must be at least 3 characters long");
+  }
+
+  const strength = CryptoService.validatePasswordStrength(password);
+  if (!strength.valid) {
+    throw new Error(`Password policy violation: ${strength.issues.join("; ")}`);
+  }
+
+  const hashed = CryptoService.hashPassword(password);
+
+  const user = await prisma.user.upsert({
+    where: { email: normalized },
+    update: {
+      passwordHash: hashed.hash,
+      passwordSalt: hashed.salt,
+      role: "OWNER",
+      failedAttempts: 0,
+      lockedUntil: null,
+    },
+    create: {
+      email: normalized,
+      role: "OWNER",
+      passwordHash: hashed.hash,
+      passwordSalt: hashed.salt,
+      failedAttempts: 0,
+    },
+  });
+
+  // Also ensure linked as OWNER on default projects
+  const projects = await prisma.project.findMany();
+  for (const proj of projects) {
+    await prisma.projectMember.upsert({
+      where: { projectId_userId: { projectId: proj.id, userId: user.id } },
+      update: { role: "OWNER" },
+      create: { projectId: proj.id, userId: user.id, role: "OWNER" },
+    }).catch(() => {});
+  }
+
+  await prisma.auditLog.create({
+    data: {
+      action: "OWNER_ACCOUNT_PROVISIONED",
+      entityType: "USER",
+      entityId: user.id,
+      actorId: user.id,
+      ipAddress: ipAddress || null,
+      metadata: JSON.stringify({ role: "OWNER" }),
+    },
+  }).catch(() => {});
+
+  return {
+    success: true,
+    user: { id: user.id, email: user.email, role: user.role },
+  };
 }

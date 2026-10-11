@@ -62,7 +62,7 @@ function LoginForm() {
       const res = await fetch("/api/omnicraft/auth", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action: "login", email, password }),
+        body: JSON.stringify({ action: "login", identifier: email, email, password }),
         credentials: "include",
       });
 
@@ -102,24 +102,24 @@ function LoginForm() {
         </div>
       )}
 
-      {/* Email */}
+      {/* User ID / Email */}
       <div className="space-y-1.5">
         <label htmlFor="email" className="block text-[11px] font-semibold uppercase tracking-widest text-[var(--ag-muted)]">
-          Email
+          User ID / Email
         </label>
         <div className="relative flex items-center">
           <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--ag-muted)] pointer-events-none z-10" aria-hidden="true" />
           <input
             id="email"
-            type="email"
-            autoComplete="email"
+            type="text"
+            autoComplete="username"
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="operator@workspace.ai"
+            placeholder="Operator ID or email address"
             className="ag-input !pl-10"
             style={{ paddingLeft: "2.5rem" }}
-            aria-label="Email address"
+            aria-label="User ID or Email address"
             disabled={isLoading}
           />
         </div>
