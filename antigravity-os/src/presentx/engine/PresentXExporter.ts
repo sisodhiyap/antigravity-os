@@ -866,68 +866,148 @@ ${xmlSlides}
       const hexText = (tokens.textColor || "#F8FAFC").replace("#", "");
       const hexMuted = ((tokens as any).mutedColor || "#94A3B8").replace("#", "");
 
+      // Handle empty deck case safely
+      if (slides.length === 0) {
+        const pSlide = pptx.addSlide();
+        pSlide.background = { color: hexBg };
+        pSlide.addText(
+          [
+            { text: updatedProject.title || "Untitled Presentation", options: { color: hexText, bold: true, fontSize: 32 } },
+            { text: "\nAntigravity OS — PresentX Studio", options: { color: hexMuted, fontSize: 16 } },
+          ],
+          { x: 1.0, y: 2.5, w: 11.3, h: 2.0, align: "center" }
+        );
+      }
+
       for (const slide of slides) {
         const pSlide = pptx.addSlide();
         pSlide.background = { color: hexBg };
 
         const truthBadge = slide.audit?.truthBadge || "VERIFIED";
 
-        // Slide Header: Badge + Headline
-        pSlide.addText(
-          [
-            { text: `[${truthBadge}] `, options: { color: hexPrimary, bold: true, fontSize: 12 } },
-            { text: slide.headline, options: { color: hexText, bold: true, fontSize: 24 } },
-          ],
-          { x: 0.8, y: 0.6, w: 11.5, h: 0.8 }
-        );
+        // HERO Slide Layout
+        if (slide.layout === "HERO") {
+          pSlide.addText(
+            [
+              { text: `[${truthBadge}] `, options: { color: hexPrimary, bold: true, fontSize: 14 } },
+              { text: `${slide.headline}\n`, options: { color: hexText, bold: true, fontSize: 34 } },
+              { text: slide.subheadline || "", options: { color: hexMuted, fontSize: 18, italic: true } },
+            ],
+            { x: 1.0, y: 1.8, w: 11.3, h: 3.5, align: "center" }
+          );
+        } else {
+          // Standard / Split Slide Header: Badge + Headline
+          pSlide.addText(
+            [
+              { text: `[${truthBadge}] `, options: { color: hexPrimary, bold: true, fontSize: 12 } },
+              { text: slide.headline, options: { color: hexText, bold: true, fontSize: 24 } },
+            ],
+            { x: 0.8, y: 0.6, w: 11.5, h: 0.8 }
+          );
 
-        // Subheadline
-        if (slide.subheadline) {
-          pSlide.addText(slide.subheadline, {
-            x: 0.8,
-            y: 1.4,
-            w: 11.5,
-            h: 0.5,
-            color: hexMuted,
-            fontSize: 14,
-            italic: true,
-          });
-        }
+          // Subheadline
+          if (slide.subheadline) {
+            pSlide.addText(slide.subheadline, {
+              x: 0.8,
+              y: 1.4,
+              w: 11.5,
+              h: 0.5,
+              color: hexMuted,
+              fontSize: 14,
+              italic: true,
+            });
+          }
 
-        // Body Content
-        if (slide.bodyContent) {
-          pSlide.addText(slide.bodyContent, {
-            x: 0.8,
-            y: 2.1,
-            w: 6.5,
-            h: 3.8,
-            color: hexText,
-            fontSize: 14,
-            lineSpacing: 22,
-          });
-        }
+          // Content layout boundaries
+          const hasSidePanel = Boolean(
+            (slide.keyMetrics && slide.keyMetrics.length > 0) || slide.mediaUrl
+          );
+          const mainWidth = hasSidePanel ? 6.5 : 11.5;
 
-        // Key Metrics Grid
-        if (slide.keyMetrics && slide.keyMetrics.length > 0) {
-          const startX = slide.bodyContent ? 7.6 : 0.8;
-          slide.keyMetrics.forEach((metric, mIdx) => {
-            const cardY = 2.1 + mIdx * 1.3;
-            pSlide.addText(
-              [
-                { text: `${metric.value}\n`, options: { bold: true, fontSize: 22, color: hexPrimary } },
-                { text: `${metric.label}\n`, options: { bold: false, fontSize: 12, color: hexText } },
-                { text: metric.dataType || "ILLUSTRATIVE_DATA", options: { fontSize: 9, color: hexMuted } },
-              ],
-              {
-                x: startX,
-                y: cardY,
-                w: 4.5,
-                h: 1.1,
-                fill: { color: "161F30" },
-                line: { color: hexPrimary, width: 1 },
+          // Body Content
+          if (slide.bodyContent) {
+            pSlide.addText(slide.bodyContent, {
+              x: 0.8,
+              y: 2.1,
+              w: mainWidth,
+              h: slide.bulletPoints && slide.bulletPoints.length > 0 ? 1.5 : 4.0,
+              color: hexText,
+              fontSize: 14,
+              lineSpacing: 22,
+            });
+          }
+
+          // Bullet Points with Indentation & Hierarchy
+          if (slide.bulletPoints && slide.bulletPoints.length > 0) {
+            const bulletY = slide.bodyContent ? 3.7 : 2.1;
+            const bulletHeight = slide.bodyContent ? 2.8 : 4.2;
+            const bulletItems = slide.bulletPoints.map((bp) => {
+              const isSubItem = bp.startsWith("  ") || bp.startsWith("\t") || bp.startsWith("    ");
+              const cleanText = bp.replace(/^[\s\t\-\*]+/, "");
+              return {
+                text: cleanText,
+                options: {
+                  bullet: true,
+                  indentLevel: isSubItem ? 1 : 0,
+                  color: hexText,
+                  fontSize: isSubItem ? 12 : 14,
+                  lineSpacing: 22,
+                },
+              };
+            });
+
+            pSlide.addText(bulletItems, {
+              x: 0.8,
+              y: bulletY,
+              w: mainWidth,
+              h: bulletHeight,
+            });
+          }
+
+          // Key Metrics Grid
+          if (slide.keyMetrics && slide.keyMetrics.length > 0) {
+            const startX = 7.6;
+            slide.keyMetrics.forEach((metric, mIdx) => {
+              const cardY = 2.1 + mIdx * 1.3;
+              pSlide.addText(
+                [
+                  { text: `${metric.value}\n`, options: { bold: true, fontSize: 22, color: hexPrimary } },
+                  { text: `${metric.label}\n`, options: { bold: false, fontSize: 12, color: hexText } },
+                  { text: metric.dataType || "ILLUSTRATIVE_DATA", options: { fontSize: 9, color: hexMuted } },
+                ],
+                {
+                  x: startX,
+                  y: cardY,
+                  w: 4.5,
+                  h: 1.1,
+                  fill: { color: "161F30" },
+                  line: { color: hexPrimary, width: 1 },
+                }
+              );
+            });
+          } else if (slide.mediaUrl) {
+            try {
+              if (slide.mediaUrl.startsWith("data:")) {
+                pSlide.addImage({
+                  data: slide.mediaUrl,
+                  x: 7.6,
+                  y: 2.1,
+                  w: 4.5,
+                  h: 3.8,
+                });
+              } else if (slide.mediaUrl.startsWith("http://") || slide.mediaUrl.startsWith("https://")) {
+                pSlide.addImage({
+                  path: slide.mediaUrl,
+                  x: 7.6,
+                  y: 2.1,
+                  w: 4.5,
+                  h: 3.8,
+                });
               }
-            );
-          });
+            } catch {
+              // Ignore unsupported image URLs safely
+            }
+          }
         }
 
         // Speaker Notes
@@ -938,7 +1018,8 @@ ${xmlSlides}
 
       const output = await pptx.write({ outputType: "nodebuffer" });
       return Buffer.from(output);
-    } catch {
+    } catch (err: any) {
+      console.error("[PresentX] Native PPTX generation error:", err?.message || err);
       // Graceful fallback to verified OpenXML ZIP packager
       return PresentXExporter.exportToPptx(project);
     }

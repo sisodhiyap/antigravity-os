@@ -4,6 +4,10 @@ import fs from "fs";
 
 function resolveDatabaseUrl(): string {
   if (process.env.DATABASE_URL && process.env.DATABASE_URL.startsWith("file:")) {
+    const rawPath = process.env.DATABASE_URL.replace(/^file:/, "");
+    if (!path.isAbsolute(rawPath)) {
+      return `file:${path.resolve(process.cwd(), rawPath)}`;
+    }
     return process.env.DATABASE_URL;
   }
   

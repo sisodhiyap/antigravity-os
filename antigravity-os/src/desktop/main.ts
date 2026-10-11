@@ -438,6 +438,16 @@ function registerIpcHandlers() {
       return [];
     }
   });
+
+  ipcMain.handle("desktop:export-native-pptx", async (_event, project) => {
+    try {
+      const { PresentXExporter } = require("../presentx/engine/PresentXExporter");
+      const buffer = await PresentXExporter.exportToNativePptx(project);
+      return { success: true, sizeBytes: buffer.length, base64: buffer.toString("base64") };
+    } catch (err: any) {
+      return { success: false, error: err.message };
+    }
+  });
 }
 
 /** ─── APP LIFECYCLE ──────────────────────────────────────────────────────── */

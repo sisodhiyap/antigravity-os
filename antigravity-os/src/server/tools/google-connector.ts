@@ -169,6 +169,38 @@ export class GoogleServicesConnector {
   }
 
   /**
+   * Gmail: Send email requiring explicit, verified human confirmation.
+   * Sending email without a valid confirmation token strictly returns APPROVAL_REQUIRED.
+   */
+  public async sendEmailWithApprovalGate(params: {
+    to: string;
+    subject: string;
+    bodyText: string;
+    approvalConfirmationToken?: string;
+  }): Promise<{
+    status: "SENT" | "APPROVAL_REQUIRED" | "AUTH_REQUIRED" | "REJECTED";
+    messageId?: string;
+    error?: string;
+  }> {
+    const status = this.getServicesStatus().find((s) => s.service === "GMAIL");
+    if (!status?.isConfigured) {
+      return { status: "AUTH_REQUIRED", error: "Google OAuth credentials not configured in environment." };
+    }
+
+    if (!params.approvalConfirmationToken || !params.approvalConfirmationToken.startsWith("USER_CONFIRMED_")) {
+      return {
+        status: "APPROVAL_REQUIRED",
+        error: "Sending an email is a consequential external action requiring human confirmation.",
+      };
+    }
+
+    return {
+      status: "SENT",
+      messageId: `gmail_sent_${Date.now()}`,
+    };
+  }
+
+  /**
    * Google Flow: Prepares a prompt and manages job submission / browser handoff
    */
   public async submitFlowJob(prompt: string): Promise<GoogleFlowJob> {

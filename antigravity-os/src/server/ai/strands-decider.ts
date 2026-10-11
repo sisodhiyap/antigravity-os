@@ -296,11 +296,18 @@ export class StrandsDeciderEngine {
     // Consequential action detection (Approval Gate)
     const isDestructive =
       t.includes("delete") ||
-      t.includes("drop table") ||
+      t.includes("drop ") ||
+      t.includes("truncate ") ||
       t.includes("rm -rf") ||
+      t.includes("rmdir") ||
       t.includes("destroy") ||
+      t.includes("wipe") ||
+      t.includes("purge") ||
+      t.includes("force push") ||
+      t.includes("push -f") ||
       t.includes("deploy to prod") ||
-      t.includes("send email") ||
+      t.includes("deploy unverified") ||
+      t.includes("email") ||
       t.includes("publish");
 
     if (isDestructive) {

@@ -178,22 +178,14 @@ export class CreativeIntegrationsEngine {
     const artcraftKey = process.env.ARTCRAFT_API_KEY;
     const jobId = `artcraft_${Date.now().toString(36)}`;
 
-    if (!artcraftKey) {
-      return {
-        jobId,
-        prompt,
-        stylePreset,
-        status: "MANUAL_STAGING",
-        handoffGuidance: "Artcraft API key not set in environment. Prompt staged in project vault for manual import or Omnicraft local synthesis.",
-      };
-    }
-
     return {
       jobId,
       prompt,
       stylePreset,
-      status: "COMPLETED",
-      outputUrl: `/assets/artcraft/${jobId}.png`,
+      status: "MANUAL_STAGING",
+      handoffGuidance: artcraftKey
+        ? "Artcraft asset prompt staged in project vault. Manual file import or OmniCraft studio rendering is active (direct headless generation API is unsupported)."
+        : "Artcraft API key not set in environment. Prompt staged in project vault for manual import or Omnicraft local synthesis.",
     };
   }
 }

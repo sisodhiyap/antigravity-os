@@ -22,6 +22,7 @@ export interface AntigravityDesktopAPI {
   strandsDecide: (task: string, context?: any, capabilities?: string[]) => Promise<any>;
   getCapabilities: () => Promise<any>;
   getCreativeTools: () => Promise<any>;
+  exportNativePptx: (project: any) => Promise<any>;
 }
 
 const desktopAPI: AntigravityDesktopAPI = {
@@ -41,6 +42,7 @@ const desktopAPI: AntigravityDesktopAPI = {
     ipcRenderer.invoke("desktop:strands-decide", task, context, capabilities),
   getCapabilities: () => ipcRenderer.invoke("desktop:get-capabilities"),
   getCreativeTools: () => ipcRenderer.invoke("desktop:get-creative-tools"),
+  exportNativePptx: (project: any) => ipcRenderer.invoke("desktop:export-native-pptx", project),
 };
 
 // Expose safe, isolated API to the renderer process
