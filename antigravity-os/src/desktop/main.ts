@@ -152,8 +152,12 @@ async function spawnNextServer(): Promise<void> {
   writeLog(`Node: ${nodeExe}`);
   writeLog(`Next CLI: ${nextCli}`);
   writeLog(`App Root: ${appRoot}`);
-  writeLog(`Packaged: ${app.isPackaged}`);
-  writeLog(`PORT: ${serverEnv["PORT"] || "3000"}`);
+  // If port 3000 is already running (e.g., local dev server), reuse it gracefully
+  const isAlreadyLive = await supervisor.probePort(3000, 1500);
+  if (isAlreadyLive) {
+    writeLog("Port 3000 is already active — reusing existing Next.js server instance.");
+    return;
+  }
 
   return new Promise((resolve, reject) => {
     const child = spawn(nodeExe, [nextCli, "start", "--port", "3000"], {
