@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<p:presentation xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" title="8-slide mobile executive summary designed for...">
+<p:presentation xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" title="8-slide mobile executive summary designed for responsive 375">
   <p:metadata>
     <p:author>Antigravity OS V7 — PresentX Studio</p:author>
     <p:visualDirection>FUTURISTIC</p:visualDirection>
     <p:slideCount>8</p:slideCount>
     <p:theme primary="#D4AF37" background="#080808" font="Inter, Satoshi, sans-serif"/>
-    <p:provenanceHash>c0c95f792b53613c62533f1a3bb786c938ea2cf0ae0e0b4020c2bfd4d8bd9c98</p:provenanceHash>
-    <p:exportManifest signature="f5c0ca2dabeee29224ce9eaece1078de78a978e440a8e07d75b2c845cc490a20" timestamp="2026-08-26T07:26:05.958Z" />
+    <p:provenanceHash>ec74dbbd68a2bbc3b5cdeb9fef471bbc3389ab2928bdef9f8a7e0cbb11a1430f</p:provenanceHash>
+    <p:exportManifest signature="139864b24beb20595e7fb7d07dfb8f40748b5bdaa4681ebf382d4ef30fec7c44" timestamp="2026-10-12T05:55:50.838Z" />
   </p:metadata>
   <p:slideList>
 
     <p:slide index="1" layout="HERO" truthBadge="VERIFIED">
-      <p:title>8-slide mobile executive summary designed for...</p:title>
+      <p:title>8-slide mobile executive summary designed for responsive 375</p:title>
       <p:subtitle>A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners</p:subtitle>
       <p:bodyText>Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.</p:bodyText>
       <p:bullets>

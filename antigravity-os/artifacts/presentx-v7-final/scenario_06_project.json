@@ -1,10 +1,10 @@
 {
-  "id": "pres_1787729165939_6s9vc",
-  "title": "Synthesize an 8-slide executive presentation...",
+  "id": "pres_1791784550808_i86al",
+  "title": "Synthesize an 8-slide executive presentation from uploaded t",
   "subtitle": "Communicate and persuade audience regarding Synthesize an 8-slide executive presentation from uploaded t...",
   "rawInput": "Synthesize an 8-slide executive presentation from uploaded technical whitepaper PDF.",
   "brief": {
-    "title": "Synthesize an 8-slide executive presentation...",
+    "title": "Synthesize an 8-slide executive presentation from uploaded t",
     "purpose": "Communicate and persuade audience regarding Synthesize an 8-slide executive presentation from uploaded t...",
     "audience": "Executives, Investors, Stakeholders, and Strategic Partners",
     "presentationType": "REPORT",
@@ -21,6 +21,92 @@
       "V7 Trust Fabric Ledger",
       "Industry Telemetry"
     ]
+  },
+  "creativeBrief": {
+    "thesis": "Accelerating strategic transformation through Synthesize an 8-slide executive presentation from uploaded t unlocks compounding operational leverage, margin expansion, and decisive competitive moat.",
+    "audienceInsight": "Leadership seeks immediate clarity on return on investment, defensive positioning, risk containment, and predictable execution velocity.",
+    "narrativeStrategy": "Inverted Pyramid (Headline Takeaway → Structural Proof → Mechanics → Compounding Upside → Definitive Call to Action)",
+    "emotionalArc": "Urgent Problem Realization (Tension 8/10) → Paradigm Shift & Discovery (Tension 5/10) → Structural Proof & Validation (Tension 4/10) → Strategic Empowerment & Mobilization (Tension 9/10)",
+    "visualMetaphor": "Clean modular information blocks, calibrated hierarchy, and authoritative corporate precision.",
+    "designDirection": "Swiss Minimalist (MINIMAL)",
+    "typographyDirection": "Primary Heading: Inter, system-ui, sans-serif (High Contrast, Bold) • Body: Inter, system-ui, sans-serif (Clear, Readable Line Height)",
+    "colorDirection": "Dominant Palette: Swiss Minimalist • Primary: #0F172A • Accent: #3B82F6 • Background: #F8FAFC",
+    "imageDirection": "Cinematic 35mm wide-aperture photography or high-fidelity technical diagrams. Strictly avoid generic stock clip-art.",
+    "chartStrategy": "Data-ink maximization: High contrast data series, embedded direct labels, explicit provenance tagging, zero 3D visual distortion.",
+    "slideRhythm": "Alternating high-impact focal slides with structured multi-column proof layouts to sustain visual engagement without cognitive fatigue.",
+    "callToAction": "Partner with us to lead this transformation."
+  },
+  "intentCard": {
+    "projectType": {
+      "value": "PITCH_DECK",
+      "inferred": true,
+      "confidence": 0.82
+    },
+    "audience": {
+      "value": "Executive Leadership & Decision Makers",
+      "inferred": true,
+      "confidence": 0.78
+    },
+    "objective": {
+      "value": "Demonstrate strategic transformation and market upside of Synthesize an 8-slide executive presentation from ...",
+      "inferred": true,
+      "confidence": 0.85
+    },
+    "purpose": {
+      "value": "Strategic alignment and executive buy-in",
+      "inferred": true,
+      "confidence": 0.8
+    },
+    "tone": {
+      "value": "Authoritative & Strategic",
+      "inferred": true,
+      "confidence": 0.75
+    },
+    "slideCount": {
+      "value": 8,
+      "inferred": false,
+      "confidence": 1
+    },
+    "contentDepth": {
+      "value": "EXECUTIVE",
+      "inferred": true,
+      "confidence": 0.88
+    },
+    "visualStyle": {
+      "value": "FUTURISTIC",
+      "inferred": true,
+      "confidence": 0.8
+    },
+    "brand": {
+      "value": "Antigravity OS Sovereign Standard",
+      "inferred": true,
+      "confidence": 0.7
+    },
+    "language": {
+      "value": "English (US)",
+      "inferred": true,
+      "confidence": 0.95
+    },
+    "factualityLevel": {
+      "value": "STRICT_VERIFIED",
+      "inferred": true,
+      "confidence": 0.95
+    },
+    "speakerNotesRequired": {
+      "value": true,
+      "inferred": true,
+      "confidence": 0.85
+    },
+    "callToAction": {
+      "value": "Schedule execution roadmap alignment and approve deployment.",
+      "inferred": true,
+      "confidence": 0.8
+    },
+    "exportTarget": {
+      "value": "PDF",
+      "inferred": false,
+      "confidence": 1
+    }
   },
   "visualDirection": "MINIMAL",
   "designTokens": {
@@ -41,111 +127,111 @@
       "id": "story_node_1",
       "slideNumber": 1,
       "role": "HOOK",
-      "keyMessage": "Key strategic takeaway for slide 1 addressing Synthesize an 8-slide executive presentation...",
+      "keyMessage": "Key strategic takeaway for slide 1 addressing Synthesize an 8-slide executive presentation from uploaded t",
       "tensionLevel": 3,
       "factLinkIds": [
-        "claim_fb0bd96f1f8bb7cf"
+        "claim_9637ba6718b6109e"
       ]
     },
     {
       "id": "story_node_2",
       "slideNumber": 2,
       "role": "CONTEXT",
-      "keyMessage": "Key strategic takeaway for slide 2 addressing Synthesize an 8-slide executive presentation...",
+      "keyMessage": "Key strategic takeaway for slide 2 addressing Synthesize an 8-slide executive presentation from uploaded t",
       "tensionLevel": 4,
       "factLinkIds": [
-        "claim_fb0bd96f1f8bb7cf"
+        "claim_9637ba6718b6109e"
       ]
     },
     {
       "id": "story_node_3",
       "slideNumber": 3,
       "role": "PROBLEM",
-      "keyMessage": "Key strategic takeaway for slide 3 addressing Synthesize an 8-slide executive presentation...",
+      "keyMessage": "Key strategic takeaway for slide 3 addressing Synthesize an 8-slide executive presentation from uploaded t",
       "tensionLevel": 5,
       "factLinkIds": [
-        "claim_fb0bd96f1f8bb7cf"
+        "claim_9637ba6718b6109e"
       ]
     },
     {
       "id": "story_node_4",
       "slideNumber": 4,
       "role": "EVIDENCE",
-      "keyMessage": "Key strategic takeaway for slide 4 addressing Synthesize an 8-slide executive presentation...",
+      "keyMessage": "Key strategic takeaway for slide 4 addressing Synthesize an 8-slide executive presentation from uploaded t",
       "tensionLevel": 6,
       "factLinkIds": [
-        "claim_fb0bd96f1f8bb7cf"
+        "claim_9637ba6718b6109e"
       ]
     },
     {
       "id": "story_node_5",
       "slideNumber": 5,
       "role": "INSIGHT",
-      "keyMessage": "Key strategic takeaway for slide 5 addressing Synthesize an 8-slide executive presentation...",
+      "keyMessage": "Key strategic takeaway for slide 5 addressing Synthesize an 8-slide executive presentation from uploaded t",
       "tensionLevel": 7,
       "factLinkIds": [
-        "claim_fb0bd96f1f8bb7cf"
+        "claim_9637ba6718b6109e"
       ]
     },
     {
       "id": "story_node_6",
       "slideNumber": 6,
       "role": "SOLUTION",
-      "keyMessage": "Key strategic takeaway for slide 6 addressing Synthesize an 8-slide executive presentation...",
+      "keyMessage": "Key strategic takeaway for slide 6 addressing Synthesize an 8-slide executive presentation from uploaded t",
       "tensionLevel": 8,
       "factLinkIds": [
-        "claim_fb0bd96f1f8bb7cf"
+        "claim_9637ba6718b6109e"
       ]
     },
     {
       "id": "story_node_7",
       "slideNumber": 7,
       "role": "MECHANISM",
-      "keyMessage": "Key strategic takeaway for slide 7 addressing Synthesize an 8-slide executive presentation...",
+      "keyMessage": "Key strategic takeaway for slide 7 addressing Synthesize an 8-slide executive presentation from uploaded t",
       "tensionLevel": 3,
       "factLinkIds": [
-        "claim_fb0bd96f1f8bb7cf"
+        "claim_9637ba6718b6109e"
       ]
     },
     {
       "id": "story_node_8",
       "slideNumber": 8,
       "role": "CTA",
-      "keyMessage": "Key strategic takeaway for slide 8 addressing Synthesize an 8-slide executive presentation...",
+      "keyMessage": "Key strategic takeaway for slide 8 addressing Synthesize an 8-slide executive presentation from uploaded t",
       "tensionLevel": 4,
       "factLinkIds": [
-        "claim_fb0bd96f1f8bb7cf"
+        "claim_9637ba6718b6109e"
       ]
     }
   ],
   "slides": [
     {
-      "id": "slide_1_1787729165939",
+      "id": "slide_1_1791784550808",
       "slideNumber": 1,
       "layout": "HERO",
-      "headline": "Synthesize an 8-slide executive presentation...",
+      "headline": "Synthesize an 8-slide executive presentation from uploaded t",
       "subheadline": "A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners",
       "bodyContent": "Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.",
-      "visualStrategy": "Aligned with master MINIMAL theme and seed 767073",
+      "visualStrategy": "Aligned with master MINIMAL theme and seed 912954",
       "speakerNotes": "Welcome everyone. Today we are exploring a paradigm shift that will define the competitive landscape over the coming five years.",
       "citations": [
         "Antigravity Intelligence Foundation"
       ],
       "facts": [
         {
-          "claimId": "claim_fb0bd96f1f8bb7cf",
+          "claimId": "claim_9637ba6718b6109e",
           "text": "Synthesize an 8-slide executive presentation from uploaded technical whitepaper PDF.",
           "sourceIds": [
-            "pres_1787729165939_6s9vc"
+            "pres_1791784550808_i86al"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E3",
           "confidence": 0.95,
-          "createdAt": "2026-08-26T07:26:05.939Z",
-          "verifiedAt": "2026-08-26T07:26:05.939Z",
+          "createdAt": "2026-10-12T05:55:50.808Z",
+          "verifiedAt": "2026-10-12T05:55:50.808Z",
           "freshness": "CURRENT",
           "provenance": "VERIFIED",
-          "evidenceId": "claim_fb0bd96f1f8bb7cf"
+          "evidenceId": "claim_9637ba6718b6109e"
         }
       ],
       "designTokens": {},
@@ -162,7 +248,7 @@
       "mediaUrl": "/assets/icons/icon-512.png"
     },
     {
-      "id": "slide_2_1787729165939",
+      "id": "slide_2_1791784550808",
       "slideNumber": 2,
       "layout": "TWO_COLUMN",
       "headline": "The Macro Environment & Shifting Paradigms",
@@ -173,26 +259,26 @@
         "Autonomous intelligence pipelines reduce turnaround from weeks to minutes",
         "Deterministic validation guarantees zero-hallucination compliance"
       ],
-      "visualStrategy": "Aligned with master MINIMAL theme and seed 767073",
+      "visualStrategy": "Aligned with master MINIMAL theme and seed 912954",
       "speakerNotes": "Frame the context clearly. We are not talking about incremental optimization; this is a step-function transition in execution velocity.",
       "citations": [
         "Industry Analysis & Market Telemetry"
       ],
       "facts": [
         {
-          "claimId": "claim_fb0bd96f1f8bb7cf",
+          "claimId": "claim_9637ba6718b6109e",
           "text": "Synthesize an 8-slide executive presentation from uploaded technical whitepaper PDF.",
           "sourceIds": [
-            "pres_1787729165939_6s9vc"
+            "pres_1791784550808_i86al"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E3",
           "confidence": 0.95,
-          "createdAt": "2026-08-26T07:26:05.939Z",
-          "verifiedAt": "2026-08-26T07:26:05.939Z",
+          "createdAt": "2026-10-12T05:55:50.808Z",
+          "verifiedAt": "2026-10-12T05:55:50.808Z",
           "freshness": "CURRENT",
           "provenance": "VERIFIED",
-          "evidenceId": "claim_fb0bd96f1f8bb7cf"
+          "evidenceId": "claim_9637ba6718b6109e"
         }
       ],
       "designTokens": {},
@@ -209,7 +295,7 @@
       "mediaUrl": "/assets/icons/icon-512.png"
     },
     {
-      "id": "slide_3_1787729165939",
+      "id": "slide_3_1791784550808",
       "slideNumber": 3,
       "layout": "THREE_COLUMN",
       "headline": "Three Critical Barriers Holding Back Growth",
@@ -220,26 +306,26 @@
         "Hallucination Risk: Unchecked generative outputs lacking factual grounding",
         "Resource Inefficiency: Runaway cloud compute and opaque API costs"
       ],
-      "visualStrategy": "Aligned with master MINIMAL theme and seed 767073",
+      "visualStrategy": "Aligned with master MINIMAL theme and seed 912954",
       "speakerNotes": "Walk through each pillar concisely. Note how fragmentation and hallucination compound each other without an integrated OS.",
       "citations": [
         "Enterprise Operations Audit"
       ],
       "facts": [
         {
-          "claimId": "claim_fb0bd96f1f8bb7cf",
+          "claimId": "claim_9637ba6718b6109e",
           "text": "Synthesize an 8-slide executive presentation from uploaded technical whitepaper PDF.",
           "sourceIds": [
-            "pres_1787729165939_6s9vc"
+            "pres_1791784550808_i86al"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E3",
           "confidence": 0.95,
-          "createdAt": "2026-08-26T07:26:05.939Z",
-          "verifiedAt": "2026-08-26T07:26:05.939Z",
+          "createdAt": "2026-10-12T05:55:50.808Z",
+          "verifiedAt": "2026-10-12T05:55:50.808Z",
           "freshness": "CURRENT",
           "provenance": "VERIFIED",
-          "evidenceId": "claim_fb0bd96f1f8bb7cf"
+          "evidenceId": "claim_9637ba6718b6109e"
         }
       ],
       "designTokens": {},
@@ -256,7 +342,7 @@
       "mediaUrl": "/assets/icons/icon-512.png"
     },
     {
-      "id": "slide_4_1787729165939",
+      "id": "slide_4_1791784550808",
       "slideNumber": 4,
       "layout": "METRICS_GRID",
       "headline": "Empirical Performance & Market Impact",
@@ -299,19 +385,19 @@
       ],
       "facts": [
         {
-          "claimId": "claim_fb0bd96f1f8bb7cf",
+          "claimId": "claim_9637ba6718b6109e",
           "text": "Synthesize an 8-slide executive presentation from uploaded technical whitepaper PDF.",
           "sourceIds": [
-            "pres_1787729165939_6s9vc"
+            "pres_1791784550808_i86al"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E3",
           "confidence": 0.95,
-          "createdAt": "2026-08-26T07:26:05.939Z",
-          "verifiedAt": "2026-08-26T07:26:05.939Z",
+          "createdAt": "2026-10-12T05:55:50.808Z",
+          "verifiedAt": "2026-10-12T05:55:50.808Z",
           "freshness": "CURRENT",
           "provenance": "VERIFIED",
-          "evidenceId": "claim_fb0bd96f1f8bb7cf"
+          "evidenceId": "claim_9637ba6718b6109e"
         }
       ],
       "designTokens": {},
@@ -327,7 +413,7 @@
       }
     },
     {
-      "id": "slide_5_1787729165939",
+      "id": "slide_5_1791784550808",
       "slideNumber": 5,
       "layout": "CHART_VIEW",
       "headline": "Productivity Acceleration Trajectory",
@@ -370,19 +456,19 @@
       ],
       "facts": [
         {
-          "claimId": "claim_fb0bd96f1f8bb7cf",
+          "claimId": "claim_9637ba6718b6109e",
           "text": "Synthesize an 8-slide executive presentation from uploaded technical whitepaper PDF.",
           "sourceIds": [
-            "pres_1787729165939_6s9vc"
+            "pres_1791784550808_i86al"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E3",
           "confidence": 0.95,
-          "createdAt": "2026-08-26T07:26:05.939Z",
-          "verifiedAt": "2026-08-26T07:26:05.939Z",
+          "createdAt": "2026-10-12T05:55:50.808Z",
+          "verifiedAt": "2026-10-12T05:55:50.808Z",
           "freshness": "CURRENT",
           "provenance": "VERIFIED",
-          "evidenceId": "claim_fb0bd96f1f8bb7cf"
+          "evidenceId": "claim_9637ba6718b6109e"
         }
       ],
       "designTokens": {},
@@ -398,7 +484,7 @@
       }
     },
     {
-      "id": "slide_6_1787729165939",
+      "id": "slide_6_1791784550808",
       "slideNumber": 6,
       "layout": "PROCESS_FLOW",
       "headline": "End-to-End Autonomous Pipeline Architecture",
@@ -437,19 +523,19 @@
       ],
       "facts": [
         {
-          "claimId": "claim_fb0bd96f1f8bb7cf",
+          "claimId": "claim_9637ba6718b6109e",
           "text": "Synthesize an 8-slide executive presentation from uploaded technical whitepaper PDF.",
           "sourceIds": [
-            "pres_1787729165939_6s9vc"
+            "pres_1791784550808_i86al"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E3",
           "confidence": 0.95,
-          "createdAt": "2026-08-26T07:26:05.939Z",
-          "verifiedAt": "2026-08-26T07:26:05.939Z",
+          "createdAt": "2026-10-12T05:55:50.808Z",
+          "verifiedAt": "2026-10-12T05:55:50.808Z",
           "freshness": "CURRENT",
           "provenance": "VERIFIED",
-          "evidenceId": "claim_fb0bd96f1f8bb7cf"
+          "evidenceId": "claim_9637ba6718b6109e"
         }
       ],
       "designTokens": {},
@@ -465,7 +551,7 @@
       }
     },
     {
-      "id": "slide_7_1787729165939",
+      "id": "slide_7_1791784550808",
       "slideNumber": 7,
       "layout": "COMPARISON",
       "headline": "Legacy Toolchains vs PresentX Native Studio",
@@ -475,26 +561,26 @@
         "Legacy: Manual formatting, ungrounded AI hallucinations, fragile exports",
         "PresentX: Cryptographic fact grounding, 9 visual directions, real PPTX exports"
       ],
-      "visualStrategy": "Aligned with master MINIMAL theme and seed 767073",
+      "visualStrategy": "Aligned with master MINIMAL theme and seed 912954",
       "speakerNotes": "Highlight the key differentiators: factual grounding and zero-loss export fidelity.",
       "citations": [
         "Comparative Benchmark Suite"
       ],
       "facts": [
         {
-          "claimId": "claim_fb0bd96f1f8bb7cf",
+          "claimId": "claim_9637ba6718b6109e",
           "text": "Synthesize an 8-slide executive presentation from uploaded technical whitepaper PDF.",
           "sourceIds": [
-            "pres_1787729165939_6s9vc"
+            "pres_1791784550808_i86al"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E3",
           "confidence": 0.95,
-          "createdAt": "2026-08-26T07:26:05.939Z",
-          "verifiedAt": "2026-08-26T07:26:05.939Z",
+          "createdAt": "2026-10-12T05:55:50.808Z",
+          "verifiedAt": "2026-10-12T05:55:50.808Z",
           "freshness": "CURRENT",
           "provenance": "VERIFIED",
-          "evidenceId": "claim_fb0bd96f1f8bb7cf"
+          "evidenceId": "claim_9637ba6718b6109e"
         }
       ],
       "designTokens": {},
@@ -511,7 +597,7 @@
       "mediaUrl": "/assets/icons/icon-512.png"
     },
     {
-      "id": "slide_8_1787729165939",
+      "id": "slide_8_1791784550808",
       "slideNumber": 8,
       "layout": "QUOTE",
       "headline": "The Strategic Imperative",
@@ -528,19 +614,19 @@
       ],
       "facts": [
         {
-          "claimId": "claim_fb0bd96f1f8bb7cf",
+          "claimId": "claim_9637ba6718b6109e",
           "text": "Synthesize an 8-slide executive presentation from uploaded technical whitepaper PDF.",
           "sourceIds": [
-            "pres_1787729165939_6s9vc"
+            "pres_1791784550808_i86al"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E3",
           "confidence": 0.95,
-          "createdAt": "2026-08-26T07:26:05.939Z",
-          "verifiedAt": "2026-08-26T07:26:05.939Z",
+          "createdAt": "2026-10-12T05:55:50.808Z",
+          "verifiedAt": "2026-10-12T05:55:50.808Z",
           "freshness": "CURRENT",
           "provenance": "VERIFIED",
-          "evidenceId": "claim_fb0bd96f1f8bb7cf"
+          "evidenceId": "claim_9637ba6718b6109e"
         }
       ],
       "designTokens": {},
@@ -561,13 +647,13 @@
     "paletteMood": "Swiss Minimalist",
     "lighting": "Soft ambient cinematic studio lighting",
     "cameraLanguage": "Cinematic 35mm wide-aperture composition",
-    "consistencySeed": 767073,
+    "consistencySeed": 912954,
     "items": [
       {
-        "id": "media_slide_1_1787729165939",
-        "slideId": "slide_1_1787729165939",
+        "id": "media_slide_1_1791784550808",
+        "slideId": "slide_1_1791784550808",
         "purpose": "HERO",
-        "subject": "Synthesize an 8-slide executive presentation...",
+        "subject": "Synthesize an 8-slide executive presentation from uploaded t",
         "composition": "Rule of thirds cinematic",
         "style": "MINIMAL",
         "lighting": "Volumetric soft ambient studio lighting",
@@ -575,14 +661,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 767073,
+        "seed": 912954,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "52f878206c081d09ff164e470f4883d111737384c335416647b8ec46c62a1b4d"
+        "provenance": "927b6a89b24ab12edd1b5425161ceeeaa34632d2e5d45d2cf1c3e442b5d50e28"
       },
       {
-        "id": "media_slide_2_1787729165939",
-        "slideId": "slide_2_1787729165939",
+        "id": "media_slide_2_1791784550808",
+        "slideId": "slide_2_1791784550808",
         "purpose": "HERO",
         "subject": "The Macro Environment & Shifting Paradigms",
         "composition": "Rule of thirds cinematic",
@@ -592,14 +678,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 767073,
+        "seed": 912954,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "b2873540961108f22984f142bb0f1e5068606f0ff2d0fb2a5efc1e008de87bf6"
+        "provenance": "cbfd5f0021683c82cc421485d1a3c02c79688a7e5a26dddb64914c1d6ef61b23"
       },
       {
-        "id": "media_slide_3_1787729165939",
-        "slideId": "slide_3_1787729165939",
+        "id": "media_slide_3_1791784550808",
+        "slideId": "slide_3_1791784550808",
         "purpose": "HERO",
         "subject": "Three Critical Barriers Holding Back Growth",
         "composition": "Rule of thirds cinematic",
@@ -609,14 +695,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 767073,
+        "seed": 912954,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "332d947aac32b4d7ea65f6978b03e74fd1cacd3f0ab9354bfa2c2c9a1a3d451d"
+        "provenance": "10b8f21ae2561083c6fd368bfea067405d5214325b588b80c3f11591196b60a0"
       },
       {
-        "id": "media_slide_4_1787729165939",
-        "slideId": "slide_4_1787729165939",
+        "id": "media_slide_4_1791784550808",
+        "slideId": "slide_4_1791784550808",
         "purpose": "HERO",
         "subject": "Empirical Performance & Market Impact",
         "composition": "Rule of thirds cinematic",
@@ -626,14 +712,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 767073,
+        "seed": 912954,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "4dd02086da87dc1b182d5665517349fc0921672cc696a63b44a7b092680a6f78"
+        "provenance": "5490755b012c608a88920233c0773c059c7d025849fa04d87520ea1f16017f5f"
       },
       {
-        "id": "media_slide_5_1787729165939",
-        "slideId": "slide_5_1787729165939",
+        "id": "media_slide_5_1791784550808",
+        "slideId": "slide_5_1791784550808",
         "purpose": "HERO",
         "subject": "Productivity Acceleration Trajectory",
         "composition": "Rule of thirds cinematic",
@@ -643,14 +729,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 767073,
+        "seed": 912954,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "2706b8c2d5cb39d31d5f964c4667b97906c5126583e9cbe1cf11ff122dff3cad"
+        "provenance": "ff2dfc50352fddadf87d9dc367bfcd08211a9f81fa3b121048b946e1acfd5978"
       },
       {
-        "id": "media_slide_6_1787729165939",
-        "slideId": "slide_6_1787729165939",
+        "id": "media_slide_6_1791784550808",
+        "slideId": "slide_6_1791784550808",
         "purpose": "HERO",
         "subject": "End-to-End Autonomous Pipeline Architecture",
         "composition": "Rule of thirds cinematic",
@@ -660,14 +746,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 767073,
+        "seed": 912954,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "8bcdd72c4bd6b1e3a2a96deb13250ea6bdf095742903056baacd4141cb86c9e8"
+        "provenance": "33193842f415bcd8658099a471f08a12e3f770fb329a0e6aa28f4b013556fd34"
       },
       {
-        "id": "media_slide_7_1787729165939",
-        "slideId": "slide_7_1787729165939",
+        "id": "media_slide_7_1791784550808",
+        "slideId": "slide_7_1791784550808",
         "purpose": "HERO",
         "subject": "Legacy Toolchains vs PresentX Native Studio",
         "composition": "Rule of thirds cinematic",
@@ -677,14 +763,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 767073,
+        "seed": 912954,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "91fed946f33b4d7e6e3939e14e86888188216aa5f88a151b5e261ae30c7f2c48"
+        "provenance": "9e60e1bb73d2e9f7bfdea29a916a46814a37ec8993f7efc43cb43f7e8c4a71f2"
       },
       {
-        "id": "media_slide_8_1787729165939",
-        "slideId": "slide_8_1787729165939",
+        "id": "media_slide_8_1791784550808",
+        "slideId": "slide_8_1791784550808",
         "purpose": "HERO",
         "subject": "The Strategic Imperative",
         "composition": "Rule of thirds cinematic",
@@ -694,18 +780,18 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 767073,
+        "seed": 912954,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "bdb40941367adb623d7bcb174e93f6fe7f77bffb5e8a69c34fea5299c959cab0"
+        "provenance": "129a6f505a48a74fd77cfe3f16f57ec522e58fb578d8e1b6c7ded3c1e53e6537"
       }
     ]
   },
   "qualityAudit": {
-    "overallScore": 92,
+    "overallScore": 96,
     "contentScore": 95,
     "storyScore": 95,
-    "factualityScore": 80,
+    "factualityScore": 100,
     "designScore": 90,
     "visualHierarchyScore": 92,
     "readabilityScore": 94,
@@ -725,67 +811,92 @@
       "unverifiedClaimsCount": 0,
       "contradictedClaimsCount": 0,
       "hypotheticalClaimsCount": 0,
-      "sourceRetrievalCoverage": 0,
-      "evidenceMatchCoverage": 0,
+      "sourceRetrievalCoverage": 100,
+      "evidenceMatchCoverage": 100,
       "contradictionResolutionRate": 100,
       "freshnessCoverage": 100,
       "numericalVerificationRate": 0,
-      "overallScore": 80
+      "overallScore": 100
     }
   },
   "evidenceStatus": "GROUNDED_E3",
-  "provenanceHash": "d8e4d531168e11b641e2503a53f6f3c7f5884944874d7cbea4c09b8926a6dbc8",
+  "provenanceHash": "9385d0b136e901ea2263e2c3c11563556f87bb7d5fa96c97b449cd46eae7fff8",
   "version": 1,
   "versionHistory": [
     {
       "version": 1,
-      "timestamp": "2026-08-26T07:26:05.940Z",
+      "timestamp": "2026-10-12T05:55:50.808Z",
       "author": "Hermes Autonomous Planner V7",
-      "changeReason": "Initial deck synthesis",
+      "changeReason": "Initial deck synthesis with Creative Direction & Deck Health",
       "modelUsed": "Hermes-70B-Router",
       "slidesCount": 8,
       "qualityScore": 94,
-      "provenanceHash": "d8e4d531168e11b641e2503a53f6f3c7f5884944874d7cbea4c09b8926a6dbc8"
+      "provenanceHash": "9385d0b136e901ea2263e2c3c11563556f87bb7d5fa96c97b449cd46eae7fff8"
     }
   ],
   "autoRepairs": [
     {
-      "id": "rep_1787729165940_cbk9",
-      "slideId": "slide_1_1787729165939",
+      "id": "rep_1791784550808_dt4d",
+      "slideId": "slide_1_1791784550808",
       "defectCategory": "VISUAL_INCONSISTENCY",
       "originalValue": "Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.",
       "repairedValue": "Synchronized visual strategy with Presentation Media Bible.",
-      "timestamp": "2026-08-26T07:26:05.940Z",
+      "timestamp": "2026-10-12T05:55:50.808Z",
       "success": true
     },
     {
-      "id": "rep_1787729165940_qird",
-      "slideId": "slide_2_1787729165939",
+      "id": "rep_1791784550808_3mig",
+      "slideId": "slide_2_1791784550808",
       "defectCategory": "VISUAL_INCONSISTENCY",
       "originalValue": "Traditional legacy workflows are reaching terminal velocity bottlenecks. Organizations that adapt to",
       "repairedValue": "Synchronized visual strategy with Presentation Media Bible.",
-      "timestamp": "2026-08-26T07:26:05.940Z",
+      "timestamp": "2026-10-12T05:55:50.808Z",
       "success": true
     },
     {
-      "id": "rep_1787729165940_xsb9",
-      "slideId": "slide_3_1787729165939",
+      "id": "rep_1791784550808_c8db",
+      "slideId": "slide_3_1791784550808",
       "defectCategory": "VISUAL_INCONSISTENCY",
       "originalValue": "Analysis reveals three compounding friction points preventing organizations from achieving enterpris",
       "repairedValue": "Synchronized visual strategy with Presentation Media Bible.",
-      "timestamp": "2026-08-26T07:26:05.940Z",
+      "timestamp": "2026-10-12T05:55:50.808Z",
       "success": true
     },
     {
-      "id": "rep_1787729165940_wi31",
-      "slideId": "slide_7_1787729165939",
+      "id": "rep_1791784550808_12xw",
+      "slideId": "slide_7_1791784550808",
       "defectCategory": "VISUAL_INCONSISTENCY",
       "originalValue": "Comparing conventional fragmented creative tools with unified V7 sovereign intelligence.",
       "repairedValue": "Synchronized visual strategy with Presentation Media Bible.",
-      "timestamp": "2026-08-26T07:26:05.940Z",
+      "timestamp": "2026-10-12T05:55:50.808Z",
       "success": true
     }
   ],
-  "createdAt": "2026-08-26T07:26:05.940Z",
-  "updatedAt": "2026-08-26T07:26:05.940Z"
+  "createdAt": "2026-10-12T05:55:50.808Z",
+  "updatedAt": "2026-10-12T05:55:50.808Z",
+  "deckHealth": {
+    "narrative": 92,
+    "storyFlow": 92,
+    "visualVariety": 100,
+    "hierarchy": 98,
+    "factuality": 100,
+    "accessibility": 96,
+    "brandConsistency": 96,
+    "cognitiveLoadScore": 100,
+    "overallScore": 96,
+    "repetitionWarnings": [],
+    "recommendations": [
+      {
+        "id": "rec_story_cta",
+        "type": "STORY_GAP",
+        "severity": "LOW",
+        "title": "Missing Definitive Call to Action",
+        "description": "The deck concludes without a crisp next-step action or summary slide.",
+        "suggestedAction": "Add or convert the final slide to a CONCLUSION_CTA layout.",
+        "affectedSlideIndexes": [
+          8
+        ]
+      }
+    ]
+  }
 }

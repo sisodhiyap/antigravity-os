@@ -1,10 +1,10 @@
 {
-  "id": "pres_1787729165951_drs2j",
-  "title": "presentation analyzing conflicting and contra...",
+  "id": "pres_1791784550827_jm000",
+  "title": "analyzing conflicting and contradictory market claims on qua",
   "subtitle": "Communicate and persuade audience regarding Create a presentation analyzing conflicting and contradictor...",
   "rawInput": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
   "brief": {
-    "title": "presentation analyzing conflicting and contra...",
+    "title": "analyzing conflicting and contradictory market claims on qua",
     "purpose": "Communicate and persuade audience regarding Create a presentation analyzing conflicting and contradictor...",
     "audience": "Executives, Investors, Stakeholders, and Strategic Partners",
     "presentationType": "RESEARCH",
@@ -21,6 +21,92 @@
       "V7 Trust Fabric Ledger",
       "Industry Telemetry"
     ]
+  },
+  "creativeBrief": {
+    "thesis": "Accelerating strategic transformation through analyzing conflicting and contradictory market claims on qua unlocks compounding operational leverage, margin expansion, and decisive competitive moat.",
+    "audienceInsight": "Leadership seeks immediate clarity on return on investment, defensive positioning, risk containment, and predictable execution velocity.",
+    "narrativeStrategy": "Inverted Pyramid (Headline Takeaway → Structural Proof → Mechanics → Compounding Upside → Definitive Call to Action)",
+    "emotionalArc": "Urgent Problem Realization (Tension 8/10) → Paradigm Shift & Discovery (Tension 5/10) → Structural Proof & Validation (Tension 4/10) → Strategic Empowerment & Mobilization (Tension 9/10)",
+    "visualMetaphor": "Clean modular information blocks, calibrated hierarchy, and authoritative corporate precision.",
+    "designDirection": "Scholarly Research (ACADEMIC)",
+    "typographyDirection": "Primary Heading: Merriweather, Georgia, serif (High Contrast, Bold) • Body: Inter, sans-serif (Clear, Readable Line Height)",
+    "colorDirection": "Dominant Palette: Scholarly Research • Primary: #2D3748 • Accent: #3182CE • Background: #F7FAFC",
+    "imageDirection": "Cinematic 35mm wide-aperture photography or high-fidelity technical diagrams. Strictly avoid generic stock clip-art.",
+    "chartStrategy": "Data-ink maximization: High contrast data series, embedded direct labels, explicit provenance tagging, zero 3D visual distortion.",
+    "slideRhythm": "Alternating high-impact focal slides with structured multi-column proof layouts to sustain visual engagement without cognitive fatigue.",
+    "callToAction": "Partner with us to lead this transformation."
+  },
+  "intentCard": {
+    "projectType": {
+      "value": "PITCH_DECK",
+      "inferred": true,
+      "confidence": 0.82
+    },
+    "audience": {
+      "value": "Executive Leadership & Decision Makers",
+      "inferred": true,
+      "confidence": 0.78
+    },
+    "objective": {
+      "value": "Demonstrate strategic transformation and market upside of Create a presentation analyzing conflicting and co...",
+      "inferred": true,
+      "confidence": 0.85
+    },
+    "purpose": {
+      "value": "Strategic alignment and executive buy-in",
+      "inferred": true,
+      "confidence": 0.8
+    },
+    "tone": {
+      "value": "Authoritative & Strategic",
+      "inferred": true,
+      "confidence": 0.75
+    },
+    "slideCount": {
+      "value": 10,
+      "inferred": true,
+      "confidence": 0.8
+    },
+    "contentDepth": {
+      "value": "EXECUTIVE",
+      "inferred": true,
+      "confidence": 0.88
+    },
+    "visualStyle": {
+      "value": "FUTURISTIC",
+      "inferred": true,
+      "confidence": 0.8
+    },
+    "brand": {
+      "value": "Antigravity OS Sovereign Standard",
+      "inferred": true,
+      "confidence": 0.7
+    },
+    "language": {
+      "value": "English (US)",
+      "inferred": true,
+      "confidence": 0.95
+    },
+    "factualityLevel": {
+      "value": "STRICT_VERIFIED",
+      "inferred": true,
+      "confidence": 0.95
+    },
+    "speakerNotesRequired": {
+      "value": true,
+      "inferred": true,
+      "confidence": 0.85
+    },
+    "callToAction": {
+      "value": "Schedule execution roadmap alignment and approve deployment.",
+      "inferred": true,
+      "confidence": 0.8
+    },
+    "exportTarget": {
+      "value": "PPTX",
+      "inferred": true,
+      "confidence": 0.9
+    }
   },
   "visualDirection": "ACADEMIC",
   "designTokens": {
@@ -41,89 +127,89 @@
       "id": "story_node_1",
       "slideNumber": 1,
       "role": "HOOK",
-      "keyMessage": "Key strategic takeaway for slide 1 addressing presentation analyzing conflicting and contra...",
+      "keyMessage": "Key strategic takeaway for slide 1 addressing analyzing conflicting and contradictory market claims on qua",
       "tensionLevel": 3,
       "factLinkIds": [
-        "claim_3023a080d22c40d6"
+        "claim_558ec76a543e7bd6"
       ]
     },
     {
       "id": "story_node_2",
       "slideNumber": 2,
       "role": "CONTEXT",
-      "keyMessage": "Key strategic takeaway for slide 2 addressing presentation analyzing conflicting and contra...",
+      "keyMessage": "Key strategic takeaway for slide 2 addressing analyzing conflicting and contradictory market claims on qua",
       "tensionLevel": 4,
       "factLinkIds": [
-        "claim_3023a080d22c40d6"
+        "claim_558ec76a543e7bd6"
       ]
     },
     {
       "id": "story_node_3",
       "slideNumber": 3,
       "role": "PROBLEM",
-      "keyMessage": "Key strategic takeaway for slide 3 addressing presentation analyzing conflicting and contra...",
+      "keyMessage": "Key strategic takeaway for slide 3 addressing analyzing conflicting and contradictory market claims on qua",
       "tensionLevel": 5,
       "factLinkIds": [
-        "claim_3023a080d22c40d6"
+        "claim_558ec76a543e7bd6"
       ]
     },
     {
       "id": "story_node_4",
       "slideNumber": 4,
       "role": "EVIDENCE",
-      "keyMessage": "Key strategic takeaway for slide 4 addressing presentation analyzing conflicting and contra...",
+      "keyMessage": "Key strategic takeaway for slide 4 addressing analyzing conflicting and contradictory market claims on qua",
       "tensionLevel": 6,
       "factLinkIds": [
-        "claim_3023a080d22c40d6"
+        "claim_558ec76a543e7bd6"
       ]
     },
     {
       "id": "story_node_5",
       "slideNumber": 5,
       "role": "INSIGHT",
-      "keyMessage": "Key strategic takeaway for slide 5 addressing presentation analyzing conflicting and contra...",
+      "keyMessage": "Key strategic takeaway for slide 5 addressing analyzing conflicting and contradictory market claims on qua",
       "tensionLevel": 7,
       "factLinkIds": [
-        "claim_3023a080d22c40d6"
+        "claim_558ec76a543e7bd6"
       ]
     },
     {
       "id": "story_node_6",
       "slideNumber": 6,
       "role": "SOLUTION",
-      "keyMessage": "Key strategic takeaway for slide 6 addressing presentation analyzing conflicting and contra...",
+      "keyMessage": "Key strategic takeaway for slide 6 addressing analyzing conflicting and contradictory market claims on qua",
       "tensionLevel": 8,
       "factLinkIds": [
-        "claim_3023a080d22c40d6"
+        "claim_558ec76a543e7bd6"
       ]
     },
     {
       "id": "story_node_7",
       "slideNumber": 7,
       "role": "MECHANISM",
-      "keyMessage": "Key strategic takeaway for slide 7 addressing presentation analyzing conflicting and contra...",
+      "keyMessage": "Key strategic takeaway for slide 7 addressing analyzing conflicting and contradictory market claims on qua",
       "tensionLevel": 3,
       "factLinkIds": [
-        "claim_3023a080d22c40d6"
+        "claim_558ec76a543e7bd6"
       ]
     },
     {
       "id": "story_node_8",
       "slideNumber": 8,
       "role": "CTA",
-      "keyMessage": "Key strategic takeaway for slide 8 addressing presentation analyzing conflicting and contra...",
+      "keyMessage": "Key strategic takeaway for slide 8 addressing analyzing conflicting and contradictory market claims on qua",
       "tensionLevel": 4,
       "factLinkIds": [
-        "claim_3023a080d22c40d6"
+        "claim_558ec76a543e7bd6"
       ]
     }
   ],
   "slides": [
     {
-      "id": "slide_1_1787729165952",
+      "id": "slide_1_1791784550828",
       "slideNumber": 1,
       "layout": "HERO",
-      "headline": "presentation analyzing conflicting and contra...",
+      "headline": "analyzing conflicting and contradictory market claims on qua",
       "subheadline": "A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners",
       "bodyContent": "Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.",
       "visualStrategy": "Clean dramatic typography with subtle gold ambient backdrop",
@@ -133,19 +219,19 @@
       ],
       "facts": [
         {
-          "claimId": "claim_3023a080d22c40d6",
+          "claimId": "claim_558ec76a543e7bd6",
           "text": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
           "sourceIds": [
-            "pres_1787729165951_drs2j"
+            "pres_1791784550827_jm000"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E3",
           "confidence": 0.2,
-          "createdAt": "2026-08-26T07:26:05.952Z",
-          "verifiedAt": "2026-08-26T07:26:05.952Z",
+          "createdAt": "2026-10-12T05:55:50.828Z",
+          "verifiedAt": "2026-10-12T05:55:50.828Z",
           "freshness": "CURRENT",
           "provenance": "CONTRADICTED",
-          "evidenceId": "claim_3023a080d22c40d6",
+          "evidenceId": "claim_558ec76a543e7bd6",
           "contradictionNotes": "Conflict detected between source claims A and B."
         }
       ],
@@ -175,7 +261,7 @@
       }
     },
     {
-      "id": "slide_2_1787729165952",
+      "id": "slide_2_1791784550828",
       "slideNumber": 2,
       "layout": "TWO_COLUMN",
       "headline": "The Macro Environment & Shifting Paradigms",
@@ -193,19 +279,19 @@
       ],
       "facts": [
         {
-          "claimId": "claim_3023a080d22c40d6",
+          "claimId": "claim_558ec76a543e7bd6",
           "text": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
           "sourceIds": [
-            "pres_1787729165951_drs2j"
+            "pres_1791784550827_jm000"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E3",
           "confidence": 0.2,
-          "createdAt": "2026-08-26T07:26:05.952Z",
-          "verifiedAt": "2026-08-26T07:26:05.952Z",
+          "createdAt": "2026-10-12T05:55:50.828Z",
+          "verifiedAt": "2026-10-12T05:55:50.828Z",
           "freshness": "CURRENT",
           "provenance": "CONTRADICTED",
-          "evidenceId": "claim_3023a080d22c40d6",
+          "evidenceId": "claim_558ec76a543e7bd6",
           "contradictionNotes": "Conflict detected between source claims A and B."
         }
       ],
@@ -235,7 +321,7 @@
       }
     },
     {
-      "id": "slide_3_1787729165952",
+      "id": "slide_3_1791784550828",
       "slideNumber": 3,
       "layout": "THREE_COLUMN",
       "headline": "Three Critical Barriers Holding Back Growth",
@@ -253,19 +339,19 @@
       ],
       "facts": [
         {
-          "claimId": "claim_3023a080d22c40d6",
+          "claimId": "claim_558ec76a543e7bd6",
           "text": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
           "sourceIds": [
-            "pres_1787729165951_drs2j"
+            "pres_1791784550827_jm000"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E3",
           "confidence": 0.2,
-          "createdAt": "2026-08-26T07:26:05.952Z",
-          "verifiedAt": "2026-08-26T07:26:05.952Z",
+          "createdAt": "2026-10-12T05:55:50.828Z",
+          "verifiedAt": "2026-10-12T05:55:50.828Z",
           "freshness": "CURRENT",
           "provenance": "CONTRADICTED",
-          "evidenceId": "claim_3023a080d22c40d6",
+          "evidenceId": "claim_558ec76a543e7bd6",
           "contradictionNotes": "Conflict detected between source claims A and B."
         }
       ],
@@ -295,7 +381,7 @@
       }
     },
     {
-      "id": "slide_4_1787729165952",
+      "id": "slide_4_1791784550828",
       "slideNumber": 4,
       "layout": "METRICS_GRID",
       "headline": "Empirical Performance & Market Impact",
@@ -338,19 +424,19 @@
       ],
       "facts": [
         {
-          "claimId": "claim_3023a080d22c40d6",
+          "claimId": "claim_558ec76a543e7bd6",
           "text": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
           "sourceIds": [
-            "pres_1787729165951_drs2j"
+            "pres_1791784550827_jm000"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E3",
           "confidence": 0.2,
-          "createdAt": "2026-08-26T07:26:05.952Z",
-          "verifiedAt": "2026-08-26T07:26:05.952Z",
+          "createdAt": "2026-10-12T05:55:50.828Z",
+          "verifiedAt": "2026-10-12T05:55:50.828Z",
           "freshness": "CURRENT",
           "provenance": "CONTRADICTED",
-          "evidenceId": "claim_3023a080d22c40d6",
+          "evidenceId": "claim_558ec76a543e7bd6",
           "contradictionNotes": "Conflict detected between source claims A and B."
         }
       ],
@@ -374,7 +460,7 @@
       }
     },
     {
-      "id": "slide_5_1787729165952",
+      "id": "slide_5_1791784550828",
       "slideNumber": 5,
       "layout": "CHART_VIEW",
       "headline": "Productivity Acceleration Trajectory",
@@ -417,19 +503,19 @@
       ],
       "facts": [
         {
-          "claimId": "claim_3023a080d22c40d6",
+          "claimId": "claim_558ec76a543e7bd6",
           "text": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
           "sourceIds": [
-            "pres_1787729165951_drs2j"
+            "pres_1791784550827_jm000"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E3",
           "confidence": 0.2,
-          "createdAt": "2026-08-26T07:26:05.952Z",
-          "verifiedAt": "2026-08-26T07:26:05.952Z",
+          "createdAt": "2026-10-12T05:55:50.828Z",
+          "verifiedAt": "2026-10-12T05:55:50.828Z",
           "freshness": "CURRENT",
           "provenance": "CONTRADICTED",
-          "evidenceId": "claim_3023a080d22c40d6",
+          "evidenceId": "claim_558ec76a543e7bd6",
           "contradictionNotes": "Conflict detected between source claims A and B."
         }
       ],
@@ -453,7 +539,7 @@
       }
     },
     {
-      "id": "slide_6_1787729165952",
+      "id": "slide_6_1791784550828",
       "slideNumber": 6,
       "layout": "PROCESS_FLOW",
       "headline": "End-to-End Autonomous Pipeline Architecture",
@@ -492,19 +578,19 @@
       ],
       "facts": [
         {
-          "claimId": "claim_3023a080d22c40d6",
+          "claimId": "claim_558ec76a543e7bd6",
           "text": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
           "sourceIds": [
-            "pres_1787729165951_drs2j"
+            "pres_1791784550827_jm000"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E3",
           "confidence": 0.2,
-          "createdAt": "2026-08-26T07:26:05.952Z",
-          "verifiedAt": "2026-08-26T07:26:05.952Z",
+          "createdAt": "2026-10-12T05:55:50.828Z",
+          "verifiedAt": "2026-10-12T05:55:50.828Z",
           "freshness": "CURRENT",
           "provenance": "CONTRADICTED",
-          "evidenceId": "claim_3023a080d22c40d6",
+          "evidenceId": "claim_558ec76a543e7bd6",
           "contradictionNotes": "Conflict detected between source claims A and B."
         }
       ],
@@ -528,7 +614,7 @@
       }
     },
     {
-      "id": "slide_7_1787729165952",
+      "id": "slide_7_1791784550828",
       "slideNumber": 7,
       "layout": "COMPARISON",
       "headline": "Legacy Toolchains vs PresentX Native Studio",
@@ -545,19 +631,19 @@
       ],
       "facts": [
         {
-          "claimId": "claim_3023a080d22c40d6",
+          "claimId": "claim_558ec76a543e7bd6",
           "text": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
           "sourceIds": [
-            "pres_1787729165951_drs2j"
+            "pres_1791784550827_jm000"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E3",
           "confidence": 0.2,
-          "createdAt": "2026-08-26T07:26:05.952Z",
-          "verifiedAt": "2026-08-26T07:26:05.952Z",
+          "createdAt": "2026-10-12T05:55:50.828Z",
+          "verifiedAt": "2026-10-12T05:55:50.828Z",
           "freshness": "CURRENT",
           "provenance": "CONTRADICTED",
-          "evidenceId": "claim_3023a080d22c40d6",
+          "evidenceId": "claim_558ec76a543e7bd6",
           "contradictionNotes": "Conflict detected between source claims A and B."
         }
       ],
@@ -587,7 +673,7 @@
       }
     },
     {
-      "id": "slide_8_1787729165952",
+      "id": "slide_8_1791784550828",
       "slideNumber": 8,
       "layout": "QUOTE",
       "headline": "The Strategic Imperative",
@@ -604,19 +690,19 @@
       ],
       "facts": [
         {
-          "claimId": "claim_3023a080d22c40d6",
+          "claimId": "claim_558ec76a543e7bd6",
           "text": "Create a presentation analyzing conflicting and contradictory market claims on quantum supremacy.",
           "sourceIds": [
-            "pres_1787729165951_drs2j"
+            "pres_1791784550827_jm000"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E3",
           "confidence": 0.2,
-          "createdAt": "2026-08-26T07:26:05.952Z",
-          "verifiedAt": "2026-08-26T07:26:05.952Z",
+          "createdAt": "2026-10-12T05:55:50.828Z",
+          "verifiedAt": "2026-10-12T05:55:50.828Z",
           "freshness": "CURRENT",
           "provenance": "CONTRADICTED",
-          "evidenceId": "claim_3023a080d22c40d6",
+          "evidenceId": "claim_558ec76a543e7bd6",
           "contradictionNotes": "Conflict detected between source claims A and B."
         }
       ],
@@ -645,13 +731,13 @@
     "paletteMood": "Scholarly Research",
     "lighting": "Soft ambient cinematic studio lighting",
     "cameraLanguage": "Cinematic 35mm wide-aperture composition",
-    "consistencySeed": 114328,
+    "consistencySeed": 207824,
     "items": [
       {
-        "id": "media_slide_1_1787729165952",
-        "slideId": "slide_1_1787729165952",
+        "id": "media_slide_1_1791784550828",
+        "slideId": "slide_1_1791784550828",
         "purpose": "HERO",
-        "subject": "presentation analyzing conflicting and contra...",
+        "subject": "analyzing conflicting and contradictory market claims on qua",
         "composition": "Rule of thirds cinematic",
         "style": "ACADEMIC",
         "lighting": "Volumetric soft ambient studio lighting",
@@ -659,14 +745,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 114328,
+        "seed": 207824,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "de30426aa8ae97334e69710efeb4d12a3acdd50c58085f8ac8cf6c5a8035679d"
+        "provenance": "9fb47d72c1ce923471f916406aacdd609b6db7ca53257cf707a6248ce8779a6f"
       },
       {
-        "id": "media_slide_2_1787729165952",
-        "slideId": "slide_2_1787729165952",
+        "id": "media_slide_2_1791784550828",
+        "slideId": "slide_2_1791784550828",
         "purpose": "HERO",
         "subject": "The Macro Environment & Shifting Paradigms",
         "composition": "Rule of thirds cinematic",
@@ -676,14 +762,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 114328,
+        "seed": 207824,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "fde7056e0ae101b5c2168e11ada54569407e0083c51b57b729987d2a4859afc3"
+        "provenance": "aab82977f16cc216e7db1ee52bfcf12a1e0b4dc1ef99ea6ffb90b724bd1ba7dd"
       },
       {
-        "id": "media_slide_3_1787729165952",
-        "slideId": "slide_3_1787729165952",
+        "id": "media_slide_3_1791784550828",
+        "slideId": "slide_3_1791784550828",
         "purpose": "HERO",
         "subject": "Three Critical Barriers Holding Back Growth",
         "composition": "Rule of thirds cinematic",
@@ -693,14 +779,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 114328,
+        "seed": 207824,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "6e929f795e2e262639512749f4f2a71111c50af79630161e857610c68e580440"
+        "provenance": "929d2d1e9ffb010544bb7c697477ff42ee04935003edb40d1cca65758251a528"
       },
       {
-        "id": "media_slide_4_1787729165952",
-        "slideId": "slide_4_1787729165952",
+        "id": "media_slide_4_1791784550828",
+        "slideId": "slide_4_1791784550828",
         "purpose": "HERO",
         "subject": "Empirical Performance & Market Impact",
         "composition": "Rule of thirds cinematic",
@@ -710,14 +796,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 114328,
+        "seed": 207824,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "8674c0207ce67b9b6cb9a55364b8e9d346681f44b6c8dc9c604cb9f75e0424a9"
+        "provenance": "f03c7873ae5fbc0ea461534755eadae9af8bb7193cd6e35679e07e51e6f75108"
       },
       {
-        "id": "media_slide_5_1787729165952",
-        "slideId": "slide_5_1787729165952",
+        "id": "media_slide_5_1791784550828",
+        "slideId": "slide_5_1791784550828",
         "purpose": "HERO",
         "subject": "Productivity Acceleration Trajectory",
         "composition": "Rule of thirds cinematic",
@@ -727,14 +813,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 114328,
+        "seed": 207824,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "4c284ecd3a9e321a7c5f5709c20d7a1eba3be4d5c1616b3a35a507a0b507e04d"
+        "provenance": "59351c11cca4a2dd11eb91c6388dc865ae57cf8332b5cd5703ca2d247c640a4c"
       },
       {
-        "id": "media_slide_6_1787729165952",
-        "slideId": "slide_6_1787729165952",
+        "id": "media_slide_6_1791784550828",
+        "slideId": "slide_6_1791784550828",
         "purpose": "HERO",
         "subject": "End-to-End Autonomous Pipeline Architecture",
         "composition": "Rule of thirds cinematic",
@@ -744,14 +830,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 114328,
+        "seed": 207824,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "488d0fcda82d833a3ffde9848301204f8d6101f9614c6edb4cf75ba592c2656d"
+        "provenance": "d144916707562abab33738adf7249fab6b177beeb8dea4bd932dbbb684c2830e"
       },
       {
-        "id": "media_slide_7_1787729165952",
-        "slideId": "slide_7_1787729165952",
+        "id": "media_slide_7_1791784550828",
+        "slideId": "slide_7_1791784550828",
         "purpose": "HERO",
         "subject": "Legacy Toolchains vs PresentX Native Studio",
         "composition": "Rule of thirds cinematic",
@@ -761,14 +847,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 114328,
+        "seed": 207824,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "9f967c32d0c622205fbf3c3023a5b03d692a7d27124990d083c3c7a409e4d1bc"
+        "provenance": "33e39925588e51dde3fa2483d1b8930871f5a5b200db4d1e68f398731a930681"
       },
       {
-        "id": "media_slide_8_1787729165952",
-        "slideId": "slide_8_1787729165952",
+        "id": "media_slide_8_1791784550828",
+        "slideId": "slide_8_1791784550828",
         "purpose": "HERO",
         "subject": "The Strategic Imperative",
         "composition": "Rule of thirds cinematic",
@@ -778,18 +864,18 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 114328,
+        "seed": 207824,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "6d4474e5b106ca7fdb6a96cf3de8a87399b2cdecccf67a5bb7fe317577bed148"
+        "provenance": "957226c5e2187e54b2f9c1d9fdc03ae4e4ff0ff7750decc230fc04736bf08344"
       }
     ]
   },
   "qualityAudit": {
-    "overallScore": 78,
+    "overallScore": 75,
     "contentScore": 95,
     "storyScore": 95,
-    "factualityScore": 15,
+    "factualityScore": 0,
     "designScore": 83,
     "visualHierarchyScore": 92,
     "readabilityScore": 94,
@@ -812,27 +898,52 @@
       "sourceRetrievalCoverage": 0,
       "evidenceMatchCoverage": 0,
       "contradictionResolutionRate": 0,
-      "freshnessCoverage": 100,
+      "freshnessCoverage": 0,
       "numericalVerificationRate": 0,
-      "overallScore": 15
+      "overallScore": 0
     }
   },
   "evidenceStatus": "GROUNDED_E3",
-  "provenanceHash": "4f24908d5087af37642e0cb3a38cce7e49202039a35fbe34bd950e2f5abf60d3",
+  "provenanceHash": "97a51f55390ccbba167a1f156bded7c4067de7c2498113269489ec8ca6350715",
   "version": 1,
   "versionHistory": [
     {
       "version": 1,
-      "timestamp": "2026-08-26T07:26:05.952Z",
+      "timestamp": "2026-10-12T05:55:50.828Z",
       "author": "Hermes Autonomous Planner V7",
-      "changeReason": "Initial deck synthesis",
+      "changeReason": "Initial deck synthesis with Creative Direction & Deck Health",
       "modelUsed": "Hermes-70B-Router",
       "slidesCount": 8,
       "qualityScore": 94,
-      "provenanceHash": "4f24908d5087af37642e0cb3a38cce7e49202039a35fbe34bd950e2f5abf60d3"
+      "provenanceHash": "97a51f55390ccbba167a1f156bded7c4067de7c2498113269489ec8ca6350715"
     }
   ],
   "autoRepairs": [],
-  "createdAt": "2026-08-26T07:26:05.952Z",
-  "updatedAt": "2026-08-26T07:26:05.952Z"
+  "createdAt": "2026-10-12T05:55:50.828Z",
+  "updatedAt": "2026-10-12T05:55:50.828Z",
+  "deckHealth": {
+    "narrative": 92,
+    "storyFlow": 92,
+    "visualVariety": 100,
+    "hierarchy": 98,
+    "factuality": 96,
+    "accessibility": 96,
+    "brandConsistency": 96,
+    "cognitiveLoadScore": 100,
+    "overallScore": 96,
+    "repetitionWarnings": [],
+    "recommendations": [
+      {
+        "id": "rec_story_cta",
+        "type": "STORY_GAP",
+        "severity": "LOW",
+        "title": "Missing Definitive Call to Action",
+        "description": "The deck concludes without a crisp next-step action or summary slide.",
+        "suggestedAction": "Add or convert the final slide to a CONCLUSION_CTA layout.",
+        "affectedSlideIndexes": [
+          8
+        ]
+      }
+    ]
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-26T07:26:08.623Z",
+  "timestamp": "2026-10-12T03:57:31.900Z",
   "os": "Antigravity OS v7.0",
   "modules": {
     "kernel": [
@@ -51,6 +51,7 @@
     "plugins": [
       "comfyui",
       "governance",
+      "granite",
       "hermes",
       "PluginAdapterManager.ts",
       "trust"
@@ -97,6 +98,7 @@
     "comfyui": [
       "ComfyUIAdapter.ts",
       "ComfyUIClient.ts",
+      "ComfyUIEngineManager.ts",
       "ComfyUIEvidenceBridge.ts",
       "ComfyUIHealth.ts",
       "ComfyUIModelRegistry.ts",
@@ -116,6 +118,7 @@
       "agents",
       "ai",
       "api",
+      "basket",
       "certification",
       "dashboard",
       "deployments",
@@ -133,7 +136,10 @@
       "omnicraft",
       "page.tsx",
       "presentx",
+      "privacy",
+      "profile",
       "projects",
+      "security",
       "settings",
       "signup",
       "terminal",
@@ -146,10 +152,13 @@
       "artifacts",
       "benchmarks",
       "capabilities",
+      "comfyui",
+      "decide",
       "deployments",
       "factory",
       "harness",
       "health",
+      "jev",
       "kernel",
       "learning",
       "memory",
@@ -164,6 +173,7 @@
       "telemetry",
       "todo-notes",
       "usage",
+      "v7",
       "ws"
     ]
   },

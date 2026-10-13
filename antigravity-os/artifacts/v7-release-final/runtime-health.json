@@ -1,107 +1,107 @@
 {
-  "timestamp": 1787716778301,
+  "timestamp": 1791777436111,
   "overall": "HEALTHY",
   "components": {
     "CPU": {
       "component": "CPU",
       "status": "HEALTHY",
-      "evidence": "Baseline telemetry verified at 2026-08-26T03:59:38.298Z",
-      "lastCheck": 1787716778298
+      "evidence": "Baseline telemetry verified at 2026-10-12T03:57:16.108Z",
+      "lastCheck": 1791777436108
     },
     "RAM": {
       "component": "RAM",
       "status": "HEALTHY",
-      "evidence": "Baseline telemetry verified at 2026-08-26T03:59:38.298Z",
-      "lastCheck": 1787716778298
+      "evidence": "Baseline telemetry verified at 2026-10-12T03:57:16.108Z",
+      "lastCheck": 1791777436108
     },
     "GPU": {
       "component": "GPU",
       "status": "HEALTHY",
-      "evidence": "Baseline telemetry verified at 2026-08-26T03:59:38.298Z",
-      "lastCheck": 1787716778298
+      "evidence": "Baseline telemetry verified at 2026-10-12T03:57:16.108Z",
+      "lastCheck": 1791777436108
     },
     "VRAM": {
       "component": "VRAM",
       "status": "HEALTHY",
-      "evidence": "Baseline telemetry verified at 2026-08-26T03:59:38.298Z",
-      "lastCheck": 1787716778298
+      "evidence": "Baseline telemetry verified at 2026-10-12T03:57:16.108Z",
+      "lastCheck": 1791777436108
     },
     "DISK": {
       "component": "DISK",
       "status": "HEALTHY",
-      "evidence": "Baseline telemetry verified at 2026-08-26T03:59:38.298Z",
-      "lastCheck": 1787716778298
+      "evidence": "Baseline telemetry verified at 2026-10-12T03:57:16.108Z",
+      "lastCheck": 1791777436108
     },
     "DATABASE": {
       "component": "DATABASE",
       "status": "HEALTHY",
-      "evidence": "Baseline telemetry verified at 2026-08-26T03:59:38.298Z",
-      "lastCheck": 1787716778298
+      "evidence": "Baseline telemetry verified at 2026-10-12T03:57:16.108Z",
+      "lastCheck": 1791777436108
     },
     "NETWORK": {
       "component": "NETWORK",
       "status": "HEALTHY",
-      "evidence": "Baseline telemetry verified at 2026-08-26T03:59:38.298Z",
-      "lastCheck": 1787716778298
+      "evidence": "Baseline telemetry verified at 2026-10-12T03:57:16.108Z",
+      "lastCheck": 1791777436108
     },
     "QUEUE": {
       "component": "QUEUE",
       "status": "HEALTHY",
-      "evidence": "Baseline telemetry verified at 2026-08-26T03:59:38.298Z",
-      "lastCheck": 1787716778298
+      "evidence": "Baseline telemetry verified at 2026-10-12T03:57:16.108Z",
+      "lastCheck": 1791777436108
     },
     "HERMES": {
       "component": "HERMES",
       "status": "HEALTHY",
-      "evidence": "Baseline telemetry verified at 2026-08-26T03:59:38.298Z",
-      "lastCheck": 1787716778298
+      "evidence": "Baseline telemetry verified at 2026-10-12T03:57:16.108Z",
+      "lastCheck": 1791777436108
     },
     "COMFYUI": {
       "component": "COMFYUI",
       "status": "HEALTHY",
-      "evidence": "Baseline telemetry verified at 2026-08-26T03:59:38.298Z",
-      "lastCheck": 1787716778298
+      "evidence": "Baseline telemetry verified at 2026-10-12T03:57:16.108Z",
+      "lastCheck": 1791777436108
     },
     "OLLAMA": {
       "component": "OLLAMA",
       "status": "HEALTHY",
-      "evidence": "Baseline telemetry verified at 2026-08-26T03:59:38.298Z",
-      "lastCheck": 1787716778298
+      "evidence": "Baseline telemetry verified at 2026-10-12T03:57:16.108Z",
+      "lastCheck": 1791777436108
     },
     "MODELS": {
       "component": "MODELS",
       "status": "HEALTHY",
-      "evidence": "Baseline telemetry verified at 2026-08-26T03:59:38.298Z",
-      "lastCheck": 1787716778298
+      "evidence": "Baseline telemetry verified at 2026-10-12T03:57:16.108Z",
+      "lastCheck": 1791777436108
     },
     "PLUGINS": {
       "component": "PLUGINS",
       "status": "HEALTHY",
-      "evidence": "Baseline telemetry verified at 2026-08-26T03:59:38.298Z",
-      "lastCheck": 1787716778298
+      "evidence": "Baseline telemetry verified at 2026-10-12T03:57:16.108Z",
+      "lastCheck": 1791777436108
     },
     "TRUST_FABRIC": {
       "component": "TRUST_FABRIC",
       "status": "HEALTHY",
-      "evidence": "Baseline telemetry verified at 2026-08-26T03:59:38.298Z",
-      "lastCheck": 1787716778298
+      "evidence": "Baseline telemetry verified at 2026-10-12T03:57:16.108Z",
+      "lastCheck": 1791777436108
     },
     "REALITY_KERNEL": {
       "component": "REALITY_KERNEL",
       "status": "HEALTHY",
-      "evidence": "Baseline telemetry verified at 2026-08-26T03:59:38.298Z",
-      "lastCheck": 1787716778298
+      "evidence": "Baseline telemetry verified at 2026-10-12T03:57:16.108Z",
+      "lastCheck": 1791777436108
     },
     "EVIDENCE_LEDGER": {
       "component": "EVIDENCE_LEDGER",
       "status": "HEALTHY",
-      "evidence": "Baseline telemetry verified at 2026-08-26T03:59:38.298Z",
-      "lastCheck": 1787716778298
+      "evidence": "Baseline telemetry verified at 2026-10-12T03:57:16.108Z",
+      "lastCheck": 1791777436108
     }
   },
   "metrics": {
     "cpuPercent": 12.5,
-    "ramUsedMb": 13177,
+    "ramUsedMb": 14020,
     "ramTotalMb": 15608,
     "vramUsedMb": 4096,
     "vramTotalMb": 12288,

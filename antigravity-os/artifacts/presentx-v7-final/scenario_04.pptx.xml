@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<p:presentation xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" title="8-slide technical presentation on modern clou...">
+<p:presentation xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" title="8-slide technical presentation on modern cloud real-time vir">
   <p:metadata>
     <p:author>Antigravity OS V7 — PresentX Studio</p:author>
     <p:visualDirection>TECH</p:visualDirection>
     <p:slideCount>8</p:slideCount>
     <p:theme primary="#00F0FF" background="#0B0F17" font="JetBrains Mono, Fira Code, monospace"/>
-    <p:provenanceHash>276f2cf93d2d160bb335c03aa84031e1fcec23433e53dbd44e9f624d9760fb68</p:provenanceHash>
-    <p:exportManifest signature="4174bc025174cc2a63b02c834263b456d2010ee96551a6a3af7dd57f24f1bfec" timestamp="2026-08-26T07:26:05.933Z" />
+    <p:provenanceHash>e24ff15094afce49d3b5ce1c598cc876cb81e671c2a8923a2f8dce3fad7e4283</p:provenanceHash>
+    <p:exportManifest signature="220c088391d411107b52e4e35bde3d60661ae7a4caf18d60512a39007ff84242" timestamp="2026-10-12T05:55:50.800Z" />
   </p:metadata>
   <p:slideList>
 
     <p:slide index="1" layout="HERO" truthBadge="VERIFIED">
-      <p:title>8-slide technical presentation on modern clou...</p:title>
+      <p:title>8-slide technical presentation on modern cloud real-time vir</p:title>
       <p:subtitle>A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners</p:subtitle>
       <p:bodyText>Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.</p:bodyText>
       <p:bullets>

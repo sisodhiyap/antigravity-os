@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<p:presentation xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" title="8-slide presentation explaining how AI will t...">
+<p:presentation xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" title="how AI will transform creative agencies over the next five y">
   <p:metadata>
     <p:author>Antigravity OS V7 — PresentX Studio</p:author>
     <p:visualDirection>CREATIVE</p:visualDirection>
     <p:slideCount>8</p:slideCount>
     <p:theme primary="#FF3366" background="#0D0C1D" font="Space Grotesk, Syne, sans-serif"/>
-    <p:provenanceHash>70b4777840e09562c9097d852a5a46a3e2ab269d537e28c67a912f7c4e79047e</p:provenanceHash>
-    <p:exportManifest signature="7fc744e944c2076698c72fda44ab57b22d2b7b87d9ee2cf5f82a4b4949292a30" timestamp="2026-08-26T07:26:05.922Z" />
+    <p:provenanceHash>b0f55fac030c4a8ac7be330a665e1669113677099efcc49f6fd708ad91e0e581</p:provenanceHash>
+    <p:exportManifest signature="06d383ca63d05a1e35a055f5de62680f75ee67c9e317684ad5273faa26ab9a68" timestamp="2026-10-12T05:55:50.782Z" />
   </p:metadata>
   <p:slideList>
 
     <p:slide index="1" layout="HERO" truthBadge="VERIFIED">
-      <p:title>8-slide presentation explaining how AI will t...</p:title>
+      <p:title>how AI will transform creative agencies over the next five y</p:title>
       <p:subtitle>A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners</p:subtitle>
       <p:bodyText>Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.</p:bodyText>
       <p:bullets>

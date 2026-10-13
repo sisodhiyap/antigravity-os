@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<p:presentation xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" title="8-slide UX case study for an AI-assisted onco...">
+<p:presentation xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" title="8-slide UX case study for an AI-assisted oncology clinical d">
   <p:metadata>
     <p:author>Antigravity OS V7 — PresentX Studio</p:author>
     <p:visualDirection>EDITORIAL</p:visualDirection>
     <p:slideCount>8</p:slideCount>
     <p:theme primary="#1A1A1A" background="#FBF9F5" font="Newsreader, Playfair Display, Georgia, serif"/>
-    <p:provenanceHash>be87306c833b75058dc51039efb6f57c18bc1e8d6510122baf5bd70f8fccc4c3</p:provenanceHash>
-    <p:exportManifest signature="4e486f6ee30c6db3dee9f967c54f50f801a8a8efb545f954b5e27b0f712e4bd0" timestamp="2026-08-26T07:26:05.930Z" />
+    <p:provenanceHash>01b25f88094a9a54a713e9344200ea03fc4828c77151b916bbf73aff67c3099d</p:provenanceHash>
+    <p:exportManifest signature="acc3bb09b61e41f6b03cad19eda3bb4b6642ad0837f3db6d15ae6469a86220b2" timestamp="2026-10-12T05:55:50.794Z" />
   </p:metadata>
   <p:slideList>
 
     <p:slide index="1" layout="HERO" truthBadge="VERIFIED">
-      <p:title>8-slide UX case study for an AI-assisted onco...</p:title>
+      <p:title>8-slide UX case study for an AI-assisted oncology clinical d</p:title>
       <p:subtitle>A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners</p:subtitle>
       <p:bodyText>Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.</p:bodyText>
       <p:bullets>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+    <defs>
+      <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFD978"/>
+        <stop offset="50%" stop-color="#F5C451"/>
+        <stop offset="100%" stop-color="#B88622"/>
+      </linearGradient>
+      <linearGradient id="darkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#11100D"/>
+        <stop offset="100%" stop-color="#050505"/>
+      </linearGradient>
+    </defs>
+    <rect width="120" height="120" rx="28" fill="url(#darkBg)" stroke="#F5C451" stroke-width="2"/>
+    <circle cx="60" cy="60" r="42" fill="none" stroke="#B88622" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6"/>
+    <!-- Outer sovereign polygon -->
+    <polygon points="60,22 92,40 92,78 60,96 28,78 28,40" fill="none" stroke="url(#goldGlow)" stroke-width="2.5"/>
+    <!-- Inner orbital core -->
+    <circle cx="60" cy="60" r="14" fill="#17140D" stroke="#FFD978" stroke-width="2"/>
+    <polygon points="60,50 69,65 51,65" fill="url(#goldGlow)"/>
+  </svg>

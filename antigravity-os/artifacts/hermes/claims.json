@@ -1,10 +1,10 @@
 [
   {
-    "id": "hermes_claim_t_contradict_1787651796200",
+    "id": "hermes_claim_t_contradict_1791777245384",
     "statement": "Contradictory behavior test",
     "category": "FUNCTIONAL",
     "source": "HERMES_AUTONOMOUS_AGENT",
-    "timestamp": "2026-08-25T09:56:36.200Z",
+    "timestamp": "2026-10-12T03:54:05.384Z",
     "requiredEvidenceTypes": [
       "RAW_SANDBOX_EXECUTION",
       "INDEPENDENT_AUDIT"
@@ -17,23 +17,23 @@
     "statement": "Unverified statement",
     "category": "FUNCTIONAL",
     "source": "UNTRUSTED",
-    "timestamp": "2026-08-25T09:56:36.200Z",
+    "timestamp": "2026-10-12T03:54:05.385Z",
     "requiredEvidenceTypes": [
       "RAW_EXECUTION"
     ],
     "verdict": "UNPROVEN"
   },
   {
-    "id": "hermes_claim_t_proven_1787651796200",
+    "id": "hermes_claim_t_proven_1791777245385",
     "statement": "Valid math operation",
     "category": "FUNCTIONAL",
     "source": "HERMES_AUTONOMOUS_AGENT",
-    "timestamp": "2026-08-25T09:56:36.200Z",
+    "timestamp": "2026-10-12T03:54:05.385Z",
     "requiredEvidenceTypes": [
       "RAW_SANDBOX_EXECUTION",
       "INDEPENDENT_AUDIT"
     ],
     "verdict": "PROVEN",
-    "evidenceId": "ev_1_1787651796200"
+    "evidenceId": "ev_1_1791777245385"
   }
 ]

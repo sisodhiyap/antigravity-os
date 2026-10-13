@@ -251,8 +251,13 @@ async function runFinalDesktopVerification() {
 }
 
 if (require.main === module) {
-  runFinalDesktopVerification().catch((err) => {
-    console.error("Final Desktop verification failed:", err);
-    process.exit(1);
-  });
+  runFinalDesktopVerification()
+    .then(() => {
+      process.exit(0);
+    })
+    .catch((err) => {
+      console.error("Final Desktop verification failed:", err);
+      process.exit(1);
+    });
 }
+

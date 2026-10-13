@@ -80,20 +80,20 @@
       "bytes": 2224
     },
     "src/plugins/comfyui/ComfyUIAdapter.ts": {
-      "hash": "f96f75816b36b901fbb5fa1ca064a8e755586ef437d2113683e61185182547a2",
-      "bytes": 4759
+      "hash": "db7c743aa7df6cb6357d24445a059c260474d393895d6a461d3f017ce65a7d17",
+      "bytes": 5250
     },
     "src/plugins/comfyui/ComfyUIClient.ts": {
-      "hash": "45635f7ffc5f471515df9155cde3da06d902cb410828f70df579051c6c570d00",
-      "bytes": 1544
+      "hash": "8427a115e7971e568f9e77ecb37d5fb0ec5a867fc1fdcadd46c795d5c46c71ef",
+      "bytes": 4704
     },
     "src/plugins/comfyui/ComfyUIEvidenceBridge.ts": {
       "hash": "add47f05fb455cba6b2564f4fc3bd3c4e003e824631e8592de3b8333457fe52a",
       "bytes": 890
     },
     "src/plugins/comfyui/ComfyUIHealth.ts": {
-      "hash": "3119bba1cda05737c16d6441217525adeb29c6041c60660b7b285376d9d55832",
-      "bytes": 2001
+      "hash": "8f9335826d24ad01e20e66b848438bfe1486f24a04be86be99b45a040b698d86",
+      "bytes": 2379
     },
     "src/plugins/comfyui/ComfyUIModelRegistry.ts": {
       "hash": "92786eb795dfff66d60f8429132cdebe142553f7224bc46b3ab6c3903b2b6f10",
@@ -120,12 +120,12 @@
       "bytes": 1446
     },
     "src/plugins/comfyui/ComfyUISecurity.ts": {
-      "hash": "2a0d852ce0b966ee6e40ea840f41b9af1e7fb6efef84ebddabc2be5765125051",
-      "bytes": 2047
+      "hash": "843954f08664c2c619aff9853562d5a0ce1911fde47dc3df66a6fc6eb84ef273",
+      "bytes": 2100
     },
     "src/plugins/comfyui/ComfyUITypes.ts": {
-      "hash": "fe539e2fe00d080bc4e16abf3f0c1ef31a402bfe4c3151c7fe587d0a8f3eae4d",
-      "bytes": 3642
+      "hash": "963821216122805c37bb7b58707327b1e3526af04d13b701398413cfebab2ceb",
+      "bytes": 4272
     },
     "src/plugins/comfyui/ComfyUIWorkflowEngine.ts": {
       "hash": "91455a2b3a2614c8ef228d091d1db825d3bf200094fefcbc421f24eefefc88b3",
@@ -136,8 +136,8 @@
       "bytes": 5724
     },
     "src/plugins/comfyui/index.ts": {
-      "hash": "361fc067f78c77ecec516869ace0d3a0aaae31b117e1bf3c5e051c416e51fc71",
-      "bytes": 1158
+      "hash": "1639d2e3cdb5c80c26f161936a88fb37c4e4bd158b998109127cd409025b1496",
+      "bytes": 1198
     },
     "src/plugins/comfyui/workflows/3d/img2mesh_tripo.json": {
       "hash": "41ff25e7377a3497e5569d43500c2b623b540e6f96e31570fcc842f53e44927e",

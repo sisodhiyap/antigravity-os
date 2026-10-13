@@ -55,7 +55,7 @@
       ],
       "testedModes": [],
       "evidenceIds": [],
-      "lastVerified": 1787716773799
+      "lastVerified": 1791882386270
     },
     {
       "modelId": "model_ollama_qwen",
@@ -68,7 +68,7 @@
       ],
       "testedModes": [],
       "evidenceIds": [],
-      "lastVerified": 1787716773799
+      "lastVerified": 1791882386270
     },
     {
       "modelId": "model_sdxl_base",
@@ -80,7 +80,7 @@
       ],
       "testedModes": [],
       "evidenceIds": [],
-      "lastVerified": 1787716773799
+      "lastVerified": 1791882386270
     },
     {
       "modelId": "model_hypothetical_v8",
@@ -90,7 +90,7 @@
       "capabilities": [],
       "testedModes": [],
       "evidenceIds": [],
-      "lastVerified": 1787716773799
+      "lastVerified": 1791882386270
     }
   ],
   "capabilities": [
@@ -105,7 +105,7 @@
       "verified": false,
       "limitations": [],
       "evidence": [],
-      "lastVerified": 1787716773799
+      "lastVerified": 1791882386270
     }
   ],
   "subsystems": [

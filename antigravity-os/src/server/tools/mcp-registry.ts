@@ -362,6 +362,26 @@ export class MCPGovernanceRegistry {
       isAuthSupplied: true,
       capabilities: ["upscale_to_4k", "lanczos_unsharp_filter", "studio_h264_render", "faststart_optimization"],
     });
+
+    // 26. Hugging Face Agents MCP (Official Hub MCP)
+    const hasHf = Boolean(process.env.HF_TOKEN);
+    this.servers.set("huggingface", {
+      name: "huggingface",
+      category: "MEDIA",
+      transport: "SSE",
+      toolsCount: 5,
+      resourcesCount: 0,
+      status: hasHf ? "HEALTHY" : "AUTH_REQUIRED",
+      requiresAuth: true,
+      isAuthSupplied: hasHf,
+      capabilities: [
+        "hf_search_models",
+        "hf_search_datasets",
+        "hf_search_spaces",
+        "hf_docs_search",
+        "hf_get_model_info",
+      ],
+    });
   }
 
   public getAllServers(): MCPServerInfo[] {

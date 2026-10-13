@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<p:presentation xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" title="Synthesize an 8-slide executive presentation...">
+<p:presentation xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" title="Synthesize an 8-slide executive presentation from uploaded t">
   <p:metadata>
     <p:author>Antigravity OS V7 — PresentX Studio</p:author>
     <p:visualDirection>MINIMAL</p:visualDirection>
     <p:slideCount>8</p:slideCount>
     <p:theme primary="#0F172A" background="#F8FAFC" font="Inter, system-ui, sans-serif"/>
-    <p:provenanceHash>d8e4d531168e11b641e2503a53f6f3c7f5884944874d7cbea4c09b8926a6dbc8</p:provenanceHash>
-    <p:exportManifest signature="64ee30119d50c85b1cc8915ecc49c277c15c8f2d52313d6d82a0f31c807e7717" timestamp="2026-08-26T07:26:05.940Z" />
+    <p:provenanceHash>9385d0b136e901ea2263e2c3c11563556f87bb7d5fa96c97b449cd46eae7fff8</p:provenanceHash>
+    <p:exportManifest signature="097d31b25a1ccc65083a87f5ecfa5713f8c02e4eba43b4a71e07723de32b02e1" timestamp="2026-10-12T05:55:50.809Z" />
   </p:metadata>
   <p:slideList>
 
     <p:slide index="1" layout="HERO" truthBadge="VERIFIED">
-      <p:title>Synthesize an 8-slide executive presentation...</p:title>
+      <p:title>Synthesize an 8-slide executive presentation from uploaded t</p:title>
       <p:subtitle>A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners</p:subtitle>
       <p:bodyText>Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.</p:bodyText>
       <p:bullets>

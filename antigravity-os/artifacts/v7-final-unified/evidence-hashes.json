@@ -1,9 +1,9 @@
 {
-  "system-inventory.json": "1a6e56290c1980e7be15b03a4e2f6183df2f968b3b72049ecf947d17b9a2bb03",
-  "integration-graph.json": "62663d0dd8f29e323f7119350bbe916de28449b4b37d6227786b746123e1e7b7",
-  "capability-matrix.json": "87ba062a8a2c4b31f4187c6923bbcaa7dc293af486a514d966b2280f5b4aef27",
-  "model-reality.json": "be2cd50487e56bfb6af577d767e3f0f2a66c3d704db0978ec4c3ad235f3a281f",
-  "comfyui-reality.json": "f3597adedf2196519b37874eb723b24d01b3e82e1cc96bc471c5a1cefba3c922",
+  "system-inventory.json": "5cf29df3bc4572109d5a020b86c6c1105504f9a08e9a9563be068db863a8b0b4",
+  "integration-graph.json": "2b7157dee14afde3200a87e803263b125d4cb8ec6fb4ea52699a54ce16190474",
+  "capability-matrix.json": "98c3ee0720e8dbfa414b0b24960d3a828e58783f00b8a6852d6f7dabf12002b8",
+  "model-reality.json": "48d041d3520d9217857a46bc2ffc01101d01baa5026afcfa0072c9618a025d57",
+  "comfyui-reality.json": "097ced22a0bcda1361ef9583b455204cdc833a268131c9a1282e440a1001f86d",
   "hermes-reality.json": "731b4c06f1499d9024f13507905963edb741bb3ca6030eb4b9b5d85173edf5f2",
   "trust-results.json": "8835b7c4b7dc13071dc6534079d654b978be2d412983919a7c1e3c56555cbd7a",
   "security-results.json": "ad47d0d11a402a372b3d221bed7e2d81a0fe314f905e3ec6771f46dc1ad2c188",
@@ -21,9 +21,9 @@
   "rollback.json": "d2aad92b7f3a732523d9438e1e6e8e0b6c5cca54b4a942cd3896c497c2677c70",
   "disaster-recovery.json": "b5bd07c7652640ff242f2e7796161816a906091546dd897c17bd9b9461b9d990",
   "supply-chain.json": "454b6ca12c0afdb308bbb761a5bbb641baf1fd76ccb0ebed65fce8cd3a1fff53",
-  "release-manifest.json": "4432bb6891ac3de8e7d6836f3651744765779c0a7df378d30678d2a1d932f1e7",
-  "claims.json": "f2e27cae28ad75a573bdbdbf6f09b55e9e71d7746b30954d0142bc92e92bcf14",
-  "evidence.json": "c99ff1cfb423377526f107ad21bebed661bff6a60c69f7cfbd7a47dd9011acd3",
-  "evidence-ledger.jsonl": "f40d8cce2a781466cba4e0a5b57f0c27f98157dd8a55a61ad520197f1eaa87c9",
+  "release-manifest.json": "f12faaa7e56ca2210c5e6edce6aa19bb943cd398387657e34bab5b2d0326c388",
+  "claims.json": "d472bff613378a5e3fffafef61b0838d6a67d64378092b2d76e66b8325d7f335",
+  "evidence.json": "d246b7d090bab13a4649b4fa0d843d132e0111192130556a84ff67b2a87b0189",
+  "evidence-ledger.jsonl": "e293a085f42def8c2aaccb26a477fa9cf1b530f92fad5343babf81c40c9fb67d",
   "limitations.json": "e377b39ec9e3cab3dbc5c9f34b53de8b4a216343b7ed10924884c7f76f1d1218"
 }

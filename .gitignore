@@ -47,3 +47,10 @@ tools/mcp-video-gen/
 tools/open-webui/
 tools/SunoMCP/
 tools/video2x/
+
+# Temporary test runner artifacts
+.playwright-mcp/
+antigravity-os/artifacts/comfyui/sandboxes/
+antigravity-os/public/artifacts/
+antigravity-os/workspaces/presentx-vault/*.json
+*.png

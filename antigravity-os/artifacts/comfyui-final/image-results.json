@@ -1,29 +1,29 @@
 [
   {
     "test": "TEST_IMAGE_A (TXT2IMG)",
-    "jobId": "job_1791722403121_qx2roo",
+    "jobId": "job_1791882343152_hg3k3",
     "prompt": "Photorealistic futuristic Mumbai street at night, volumetric rain reflections, 8k",
     "model": "flux1-schnell-fp8",
     "status": "COMPLETED",
-    "output": "/artifacts/comfyui/sandboxes/sbx_media_job_1791722403121_qx2roo_1791722403122/outputs/asset_job_1791722403121_qx2roo.png",
-    "hash": "11a1eff1362d69017a4ff2f83bc8afa9157aa6d8bb7fed5ef183f6371b06a4ad"
+    "output": "/artifacts/comfyui/sandboxes/sbx_media_job_1791882343152_hg3k3_1791882343152/outputs/asset_job_1791882343152_hg3k3.png",
+    "hash": "fe15e75e6007a6893701b61746a43f063160a0e00bf9e67af3273d12eacf158d"
   },
   {
     "test": "TEST_IMAGE_B (IMG2IMG)",
-    "jobId": "job_1791722403124_uk7k3e",
+    "jobId": "job_1791882343157_4f1yoa",
     "prompt": "Stylized anime variant of input reference",
     "model": "sdxl-base-1.0",
     "status": "COMPLETED",
-    "output": "/artifacts/comfyui/sandboxes/sbx_media_job_1791722403124_uk7k3e_1791722403124/outputs/asset_job_1791722403124_uk7k3e.png",
-    "hash": "b70885902bd3bc2040f6554f31d78a90727991f3f7206fbe182a9874a7450eb6"
+    "output": "/artifacts/comfyui/sandboxes/sbx_media_job_1791882343157_4f1yoa_1791882343158/outputs/asset_job_1791882343157_4f1yoa.png",
+    "hash": "be4d9d24b5776601bf94b6825f39fb914b0f5563edb3f5145789fe3cfc3b93a9"
   },
   {
     "test": "TEST_IMAGE_C (UPSCALE)",
-    "jobId": "job_1791722403126_scsa",
+    "jobId": "job_1791882343160_eiv9ww",
     "prompt": "4x RealESRGAN super-resolution upscale",
     "model": "flux1-schnell-fp8",
     "status": "COMPLETED",
-    "output": "/artifacts/comfyui/sandboxes/sbx_media_job_1791722403126_scsa_1791722403126/outputs/asset_job_1791722403126_scsa.png",
-    "hash": "b9106db04093c80ab5990d38b767a58e61917d2449c40881402d9cc5d0942e7d"
+    "output": "/artifacts/comfyui/sandboxes/sbx_media_job_1791882343160_eiv9ww_1791882343161/outputs/asset_job_1791882343160_eiv9ww.png",
+    "hash": "367eb1df206333e6de8f48c240460d6a858c5a912b5000041eb05cc46c3f8796"
   }
 ]

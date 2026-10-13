@@ -13,7 +13,7 @@
     "contextLimit": 200000,
     "hardwareRequirement": "CLOUD",
     "latencyMs": 850,
-    "lastSuccessfulExecution": 1787716778297,
+    "lastSuccessfulExecution": 1791777436108,
     "failureCount": 0,
     "fallbackPriority": 1,
     "status": "EXECUTABLE"
@@ -33,7 +33,7 @@
     "hardwareRequirement": "CUDA_8GB",
     "vramRequirementMb": 8192,
     "latencyMs": 142,
-    "lastSuccessfulExecution": 1787716778297,
+    "lastSuccessfulExecution": 1791777436108,
     "failureCount": 0,
     "fallbackPriority": 2,
     "status": "EXECUTABLE"
@@ -51,7 +51,7 @@
     "hardwareRequirement": "CUDA_6GB",
     "vramRequirementMb": 6144,
     "latencyMs": 2400,
-    "lastSuccessfulExecution": 1787716778297,
+    "lastSuccessfulExecution": 1791777436108,
     "failureCount": 0,
     "fallbackPriority": 1,
     "status": "EXECUTABLE"

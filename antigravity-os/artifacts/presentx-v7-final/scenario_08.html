@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Synthesize a strategic presentation combining... — PresentX Studio</title>
+  <title>Synthesize a strategic presentation combining data from PDF, — PresentX Studio</title>
   <style>
     :root {
       --primary: #0F2744;
@@ -29,61 +29,57 @@
     }
     .deck-container {
       flex: 1;
-      position: relative;
-      width: 100%;
-      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 2rem;
+      position: relative;
     }
     .slide-card {
       display: none;
       width: 100%;
-      max-width: 1100px;
+      max-width: 1200px;
       aspect-ratio: 16 / 9;
       background: var(--surface);
-      border: 1px solid rgba(255,255,255,0.1);
       border-radius: var(--radius);
-      padding: 3.5rem 4rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
       flex-direction: column;
       justify-content: space-between;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-      animation: fadeIn 0.3s ease-out;
+      padding: 3.5rem;
+      position: relative;
+      overflow: hidden;
     }
-    .slide-card.active { display: flex; }
+    .slide-card.active { display: flex; animation: fadeIn 0.3s ease-out; }
     @keyframes fadeIn { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
-    .badge-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; }
-    .headline { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem; color: var(--text); }
-    .subheadline { font-size: 1.2rem; color: var(--primary); margin-bottom: 1.5rem; font-weight: 500; }
-    .body-text { font-size: 1.05rem; line-height: 1.6; color: var(--text-sec); margin-bottom: 1.5rem; }
-    .badge { display: inline-block; padding: 0.3rem 0.8rem; background: var(--primary); color: var(--bg); font-weight: bold; font-size: 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
-    .truth-badge { font-size: 0.7rem; font-family: monospace; font-weight: bold; padding: 0.2rem 0.5rem; border-radius: 4px; border: 1px solid; }
-    .truth-verified { background: rgba(57,217,138,0.15); color: #39D98A; border-color: rgba(57,217,138,0.3); }
-    .truth-inferred { background: rgba(212,175,55,0.15); color: #D4AF37; border-color: rgba(212,175,55,0.3); }
-    .truth-unverified { background: rgba(255,107,107,0.15); color: #FF6B6B; border-color: rgba(255,107,107,0.3); }
-    .truth-contradicted { background: rgba(255,77,77,0.2); color: #FF4D4D; border-color: #FF4D4D; }
-    .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-    .metric-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 1.5rem; border-radius: var(--radius); text-align: center; }
-    .metric-val { font-size: 2.5rem; font-weight: 800; color: var(--primary); font-family: var(--font-heading); }
-    .metric-lbl { font-size: 0.9rem; color: var(--text-sec); margin-top: 0.4rem; }
-    .metric-meta { font-size: 0.7rem; font-family: monospace; color: var(--text-sec); opacity: 0.7; margin-top: 0.3rem; }
-    .bullet-list { list-style-type: none; margin-top: 1rem; }
-    .bullet-list li { position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem; font-size: 1rem; color: var(--text-sec); }
-    .bullet-list li::before { content: "•"; color: var(--primary); font-size: 1.5rem; position: absolute; left: 0; top: -0.2rem; }
+    .badge-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+    .badge { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-family: monospace; font-weight: 700; }
+    .truth-badge { font-size: 0.7rem; font-family: monospace; font-weight: 700; padding: 0.25rem 0.6rem; border-radius: 9999px; border: 1px solid currentColor; }
+    .truth-verified { color: #10b981; background: rgba(16, 185, 129, 0.1); }
+    .truth-illustrative { color: #3b82f6; background: rgba(59, 130, 246, 0.1); }
+    .truth-unverified { color: #f59e0b; background: rgba(245, 158, 11, 0.1); }
+    .truth-contradicted { color: #ef4444; background: rgba(239, 68, 68, 0.1); }
+    .headline { font-family: var(--font-heading); font-size: 2.25rem; font-weight: 700; line-height: 1.2; margin-bottom: 0.75rem; }
+    .subheadline { font-size: 1.15rem; color: var(--text-sec); margin-bottom: 1.5rem; line-height: 1.5; }
+    .body-text { font-size: 1rem; color: var(--text-sec); line-height: 1.6; margin-bottom: 1rem; }
+    .bullet-list { list-style: square; padding-left: 1.5rem; space-y: 0.5rem; color: var(--text); }
+    .bullet-list li { margin-bottom: 0.5rem; line-height: 1.5; }
     .content-split { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center; }
     .slide-img { width: 100%; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.1); }
-    .chart-footer { font-size: 0.75rem; font-family: monospace; color: var(--text-sec); opacity: 0.6; margin-top: 0.5rem; text-align: right; }
-    .slide-footer { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-sec); opacity: 0.7; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08); }
-    .nav-bar { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); display: flex; gap: 1rem; background: rgba(0,0,0,0.8); backdrop-filter: blur(12px); padding: 0.6rem 1.2rem; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.15); z-index: 100; }
-    .nav-btn { background: none; border: none; color: var(--text); font-size: 1rem; cursor: pointer; padding: 0.4rem 0.8rem; border-radius: 0.5rem; font-family: inherit; font-weight: 600; }
-    .nav-btn:hover { background: rgba(255,255,255,0.1); color: var(--primary); }
-    .progress-bar { position: fixed; top: 0; left: 0; height: 4px; background: var(--primary); transition: width 0.3s; z-index: 101; }
+    .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+    .metric-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 1.25rem; border-radius: var(--radius); }
+    .metric-val { font-size: 2rem; font-weight: 700; color: var(--accent); font-family: var(--font-heading); }
+    .metric-lbl { font-size: 0.85rem; color: var(--text); font-weight: 600; margin-top: 0.25rem; }
+    .metric-meta { font-size: 0.65rem; color: var(--text-sec); font-family: monospace; margin-top: 0.25rem; text-transform: uppercase; }
+    .slide-footer { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-sec); font-family: monospace; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; }
+    .nav-bar { background: rgba(10, 15, 25, 0.8); backdrop-filter: blur(10px); border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .nav-btn { background: var(--surface); border: 1px solid rgba(255, 255, 255, 0.15); color: var(--text); padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer; font-family: monospace; font-size: 0.85rem; transition: all 0.15s; }
+    .nav-btn:hover { background: var(--accent); color: var(--bg); font-weight: bold; }
+    .nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
   </style>
 </head>
 <body>
-  <div class="progress-bar" id="progress"></div>
-  <div class="deck-container">
+  <main class="deck-container">
     
         <section class="slide-card active" id="slide-0" data-index="0">
           <div class="slide-inner">
@@ -93,7 +89,7 @@
               <span class="badge">COMPANY OVERVIEW</span>
               <span class="truth-badge truth-verified">VERIFIED</span>
             </div>
-            <h1 class="headline">Synthesize a strategic presentation combining...</h1>
+            <h1 class="headline">Synthesize a strategic presentation combining data from PDF,</h1>
             <p class="subheadline">A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners</p>
             <div class="meta-row">
               <span>Presented by Antigravity OS V7</span>
@@ -104,7 +100,7 @@
         
           </div>
           <div class="slide-footer">
-            <span class="footer-title">Synthesize a strategic presentation combining...</span>
+            <span class="footer-title">Synthesize a strategic presentation combining data from PDF,</span>
             <span class="footer-page">1 / 8</span>
           </div>
         </section>
@@ -114,21 +110,50 @@
           <div class="slide-inner">
             
           <div class="badge-row">
-            <h2 class="headline">The Macro Environment & Shifting Paradigms</h2>
+            <h2 class="headline">Productivity Acceleration Trajectory</h2>
             <span class="truth-badge truth-verified">VERIFIED</span>
           </div>
-          <p class="subheadline">Accelerating technological convergence across industry verticals</p>
-          <div class="content-split">
-            <div class="text-col">
-              <p class="body-text">Traditional legacy workflows are reaching terminal velocity bottlenecks. Organizations that adapt to sovereign autonomous intelligence will unlock exponential operational leverage.</p>
-              <ul class="bullet-list"><li>Legacy agency workflows face a 60% operational efficiency cap</li><li>Autonomous intelligence pipelines reduce turnaround from weeks to minutes</li><li>Deterministic validation guarantees zero-hallucination compliance</li></ul>
-            </div>
-            <div class="media-col"><img src="/assets/icons/icon-512.png" alt="The Macro Environment & Shifting Paradigms" class="slide-img"/></div>
-          </div>
+          <p class="body-text">Autonomous product pipelines compound over time through continuous learning and failure graph pattern recognition.</p>
+          <div class="chart-container"><svg viewBox="0 0 700 320" width="100%" height="100%">
+        <defs>
+          <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#0F2744" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#0F2744" stop-opacity="0.0"/>
+          </linearGradient>
+        </defs>
+        <!-- Grid lines -->
+        <line x1="40" y1="280" x2="660" y2="280" stroke="#486581" stroke-opacity="0.2" stroke-width="1"/>
+        <line x1="40" y1="160" x2="660" y2="160" stroke="#486581" stroke-opacity="0.1" stroke-dasharray="4" stroke-width="1"/>
+        
+        <!-- Area fill -->
+        <path d="M 40 280 L 40 270.4 L 195 258.4 L 350 227.2 L 505 164.8 L 660 40 L 660 280 Z" fill="url(#chartGrad)"/>
+        
+        <!-- Line stroke -->
+        <polyline points="40,270.4 195,258.4 350,227.2 505,164.8 660,40" fill="none" stroke="#0F2744" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        
+        <!-- Data dots -->
+        
+          <circle cx="40" cy="270.4" r="4" fill="#FFFFFF" stroke="#0F2744" stroke-width="2"/>
+          <text x="40" y="298" text-anchor="middle" fill="#486581" font-size="10" font-family="Inter, sans-serif">2024</text>
+        
+          <circle cx="195" cy="258.4" r="4" fill="#FFFFFF" stroke="#0F2744" stroke-width="2"/>
+          <text x="195" y="298" text-anchor="middle" fill="#486581" font-size="10" font-family="Inter, sans-serif">2025</text>
+        
+          <circle cx="350" cy="227.2" r="4" fill="#FFFFFF" stroke="#0F2744" stroke-width="2"/>
+          <text x="350" y="298" text-anchor="middle" fill="#486581" font-size="10" font-family="Inter, sans-serif">2026</text>
+        
+          <circle cx="505" cy="164.8" r="4" fill="#FFFFFF" stroke="#0F2744" stroke-width="2"/>
+          <text x="505" y="298" text-anchor="middle" fill="#486581" font-size="10" font-family="Inter, sans-serif">2027</text>
+        
+          <circle cx="660" cy="40" r="4" fill="#FFFFFF" stroke="#0F2744" stroke-width="2"/>
+          <text x="660" y="298" text-anchor="middle" fill="#486581" font-size="10" font-family="Inter, sans-serif">2028</text>
+        
+      </svg></div>
+          <div class="chart-footer">Source: Verified Production Telemetry (Real Dataset) • Data: ILLUSTRATIVE_DATA</div>
         
           </div>
           <div class="slide-footer">
-            <span class="footer-title">Synthesize a strategic presentation combining...</span>
+            <span class="footer-title">Synthesize a strategic presentation combining data from PDF,</span>
             <span class="footer-page">2 / 8</span>
           </div>
         </section>
@@ -141,7 +166,7 @@
             <h2 class="headline">Three Critical Barriers Holding Back Growth</h2>
             <span class="truth-badge truth-verified">VERIFIED</span>
           </div>
-          <p class="subheadline">Core bottlenecks identified across modern creative & technical operations</p>
+          <p class="subheadline">Core bottlenecks identified across modern creative &amp; technical operations</p>
           <div class="content-split">
             <div class="text-col">
               <p class="body-text">Analysis reveals three compounding friction points preventing organizations from achieving enterprise scale.</p>
@@ -152,7 +177,7 @@
         
           </div>
           <div class="slide-footer">
-            <span class="footer-title">Synthesize a strategic presentation combining...</span>
+            <span class="footer-title">Synthesize a strategic presentation combining data from PDF,</span>
             <span class="footer-page">3 / 8</span>
           </div>
         </section>
@@ -162,7 +187,7 @@
           <div class="slide-inner">
             
           <div class="badge-row">
-            <h2 class="headline">Empirical Performance & Market Impact</h2>
+            <h2 class="headline">Empirical Performance &amp; Market Impact</h2>
             <span class="truth-badge truth-verified">VERIFIED</span>
           </div>
           <p class="body-text">Measured telemetry confirms significant performance breakthroughs across cost, speed, and accuracy.</p>
@@ -196,7 +221,7 @@
         
           </div>
           <div class="slide-footer">
-            <span class="footer-title">Synthesize a strategic presentation combining...</span>
+            <span class="footer-title">Synthesize a strategic presentation combining data from PDF,</span>
             <span class="footer-page">4 / 8</span>
           </div>
         </section>
@@ -249,7 +274,7 @@
         
           </div>
           <div class="slide-footer">
-            <span class="footer-title">Synthesize a strategic presentation combining...</span>
+            <span class="footer-title">Synthesize a strategic presentation combining data from PDF,</span>
             <span class="footer-page">5 / 8</span>
           </div>
         </section>
@@ -302,7 +327,7 @@
         
           </div>
           <div class="slide-footer">
-            <span class="footer-title">Synthesize a strategic presentation combining...</span>
+            <span class="footer-title">Synthesize a strategic presentation combining data from PDF,</span>
             <span class="footer-page">6 / 8</span>
           </div>
         </section>
@@ -326,7 +351,7 @@
         
           </div>
           <div class="slide-footer">
-            <span class="footer-title">Synthesize a strategic presentation combining...</span>
+            <span class="footer-title">Synthesize a strategic presentation combining data from PDF,</span>
             <span class="footer-page">7 / 8</span>
           </div>
         </section>
@@ -350,43 +375,50 @@
         
           </div>
           <div class="slide-footer">
-            <span class="footer-title">Synthesize a strategic presentation combining...</span>
+            <span class="footer-title">Synthesize a strategic presentation combining data from PDF,</span>
             <span class="footer-page">8 / 8</span>
           </div>
         </section>
       
-  </div>
-  <div class="nav-bar">
-    <button class="nav-btn" onclick="prevSlide()">← Prev</button>
-    <span class="nav-btn" id="counter" style="cursor:default">1 / 8</span>
-    <button class="nav-btn" onclick="nextSlide()">Next →</button>
-    <button class="nav-btn" onclick="toggleFullscreen()">⛶ Fullscreen</button>
-  </div>
-
+  </main>
+  <footer class="nav-bar">
+    <div style="font-family: monospace; font-size: 0.8rem; color: var(--text-sec);">
+      <span>PRESENTX SOVEREIGN ENGINE</span> • <span id="progress-indicator">Slide 1 / 8</span>
+    </div>
+    <div style="display: flex; gap: 0.5rem;">
+      <button class="nav-btn" id="btn-prev" onclick="prevSlide()">PREV (←)</button>
+      <button class="nav-btn" id="btn-next" onclick="nextSlide()">NEXT (→)</button>
+      <button class="nav-btn" onclick="toggleFullscreen()">FULLSCREEN (F)</button>
+    </div>
+  </footer>
   <script>
-    let current = 0;
+    let currentIndex = 0;
+    const totalSlides = 8;
     const slides = document.querySelectorAll('.slide-card');
-    const total = slides.length;
+    const indicator = document.getElementById('progress-indicator');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
 
     function update() {
-      slides.forEach((s, i) => s.classList.toggle('active', i === current));
-      document.getElementById('counter').innerText = (current + 1) + ' / ' + total;
-      document.getElementById('progress').style.width = (((current + 1) / total) * 100) + '%';
+      slides.forEach((s, i) => s.classList.toggle('active', i === currentIndex));
+      indicator.textContent = 'Slide ' + (currentIndex + 1) + ' / ' + totalSlides;
+      btnPrev.disabled = currentIndex === 0;
+      btnNext.disabled = currentIndex === totalSlides - 1;
     }
 
     function nextSlide() {
-      if (current < total - 1) { current++; update(); }
+      if (currentIndex < totalSlides - 1) { currentIndex++; update(); }
     }
 
     function prevSlide() {
-      if (current > 0) { current--; update(); }
+      if (currentIndex > 0) { currentIndex--; update(); }
     }
 
     function toggleFullscreen() {
       if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen().catch(() => {});
+        document.documentElement.requestFullscreen();
       } else {
-        document.exitFullscreen().catch(() => {});
+        document.exitFullscreen();
       }
     }
 

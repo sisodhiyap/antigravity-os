@@ -1,10 +1,10 @@
 {
-  "id": "pres_1787729165954_qos22",
-  "title": "presentation with unsupported and missing evi...",
+  "id": "pres_1791784550832_bag12",
+  "title": "with unsupported and missing evidence claims to verify UNVER",
   "subtitle": "Communicate and persuade audience regarding Create a presentation with unsupported and missing evidence ...",
   "rawInput": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
   "brief": {
-    "title": "presentation with unsupported and missing evi...",
+    "title": "with unsupported and missing evidence claims to verify UNVER",
     "purpose": "Communicate and persuade audience regarding Create a presentation with unsupported and missing evidence ...",
     "audience": "Executives, Investors, Stakeholders, and Strategic Partners",
     "presentationType": "STORYTELLING",
@@ -21,6 +21,92 @@
       "V7 Trust Fabric Ledger",
       "Industry Telemetry"
     ]
+  },
+  "creativeBrief": {
+    "thesis": "Accelerating strategic transformation through with unsupported and missing evidence claims to verify UNVER unlocks compounding operational leverage, margin expansion, and decisive competitive moat.",
+    "audienceInsight": "Leadership seeks immediate clarity on return on investment, defensive positioning, risk containment, and predictable execution velocity.",
+    "narrativeStrategy": "Inverted Pyramid (Headline Takeaway → Structural Proof → Mechanics → Compounding Upside → Definitive Call to Action)",
+    "emotionalArc": "Urgent Problem Realization (Tension 8/10) → Paradigm Shift & Discovery (Tension 5/10) → Structural Proof & Validation (Tension 4/10) → Strategic Empowerment & Mobilization (Tension 9/10)",
+    "visualMetaphor": "Dynamic interconnected neural graph nodes, luminescent volumetric paths, and dark crystalline architectures.",
+    "designDirection": "Antigravity Gold (Signature) (FUTURISTIC)",
+    "typographyDirection": "Primary Heading: Inter, Satoshi, sans-serif (High Contrast, Bold) • Body: Inter, sans-serif (Clear, Readable Line Height)",
+    "colorDirection": "Dominant Palette: Antigravity Gold (Signature) • Primary: #D4AF37 • Accent: #FFD978 • Background: #080808",
+    "imageDirection": "Cinematic 35mm wide-aperture photography or high-fidelity technical diagrams. Strictly avoid generic stock clip-art.",
+    "chartStrategy": "Data-ink maximization: High contrast data series, embedded direct labels, explicit provenance tagging, zero 3D visual distortion.",
+    "slideRhythm": "Alternating high-impact focal slides with structured multi-column proof layouts to sustain visual engagement without cognitive fatigue.",
+    "callToAction": "Partner with us to lead this transformation."
+  },
+  "intentCard": {
+    "projectType": {
+      "value": "PITCH_DECK",
+      "inferred": true,
+      "confidence": 0.82
+    },
+    "audience": {
+      "value": "Executive Leadership & Decision Makers",
+      "inferred": true,
+      "confidence": 0.78
+    },
+    "objective": {
+      "value": "Demonstrate strategic transformation and market upside of Create a presentation with unsupported and missing...",
+      "inferred": true,
+      "confidence": 0.85
+    },
+    "purpose": {
+      "value": "Strategic alignment and executive buy-in",
+      "inferred": true,
+      "confidence": 0.8
+    },
+    "tone": {
+      "value": "Authoritative & Strategic",
+      "inferred": true,
+      "confidence": 0.75
+    },
+    "slideCount": {
+      "value": 10,
+      "inferred": true,
+      "confidence": 0.8
+    },
+    "contentDepth": {
+      "value": "EXECUTIVE",
+      "inferred": true,
+      "confidence": 0.88
+    },
+    "visualStyle": {
+      "value": "FUTURISTIC",
+      "inferred": true,
+      "confidence": 0.8
+    },
+    "brand": {
+      "value": "Antigravity OS Sovereign Standard",
+      "inferred": true,
+      "confidence": 0.7
+    },
+    "language": {
+      "value": "English (US)",
+      "inferred": true,
+      "confidence": 0.95
+    },
+    "factualityLevel": {
+      "value": "STRICT_VERIFIED",
+      "inferred": true,
+      "confidence": 0.95
+    },
+    "speakerNotesRequired": {
+      "value": true,
+      "inferred": true,
+      "confidence": 0.85
+    },
+    "callToAction": {
+      "value": "Schedule execution roadmap alignment and approve deployment.",
+      "inferred": true,
+      "confidence": 0.8
+    },
+    "exportTarget": {
+      "value": "PPTX",
+      "inferred": true,
+      "confidence": 0.9
+    }
   },
   "visualDirection": "FUTURISTIC",
   "designTokens": {
@@ -41,89 +127,89 @@
       "id": "story_node_1",
       "slideNumber": 1,
       "role": "HOOK",
-      "keyMessage": "Key strategic takeaway for slide 1 addressing presentation with unsupported and missing evi...",
+      "keyMessage": "Key strategic takeaway for slide 1 addressing with unsupported and missing evidence claims to verify UNVER",
       "tensionLevel": 3,
       "factLinkIds": [
-        "claim_222bec98f7c61c28"
+        "claim_ae44bd5655d3e444"
       ]
     },
     {
       "id": "story_node_2",
       "slideNumber": 2,
       "role": "CONTEXT",
-      "keyMessage": "Key strategic takeaway for slide 2 addressing presentation with unsupported and missing evi...",
+      "keyMessage": "Key strategic takeaway for slide 2 addressing with unsupported and missing evidence claims to verify UNVER",
       "tensionLevel": 4,
       "factLinkIds": [
-        "claim_222bec98f7c61c28"
+        "claim_ae44bd5655d3e444"
       ]
     },
     {
       "id": "story_node_3",
       "slideNumber": 3,
       "role": "PROBLEM",
-      "keyMessage": "Key strategic takeaway for slide 3 addressing presentation with unsupported and missing evi...",
+      "keyMessage": "Key strategic takeaway for slide 3 addressing with unsupported and missing evidence claims to verify UNVER",
       "tensionLevel": 5,
       "factLinkIds": [
-        "claim_222bec98f7c61c28"
+        "claim_ae44bd5655d3e444"
       ]
     },
     {
       "id": "story_node_4",
       "slideNumber": 4,
       "role": "EVIDENCE",
-      "keyMessage": "Key strategic takeaway for slide 4 addressing presentation with unsupported and missing evi...",
+      "keyMessage": "Key strategic takeaway for slide 4 addressing with unsupported and missing evidence claims to verify UNVER",
       "tensionLevel": 6,
       "factLinkIds": [
-        "claim_222bec98f7c61c28"
+        "claim_ae44bd5655d3e444"
       ]
     },
     {
       "id": "story_node_5",
       "slideNumber": 5,
       "role": "INSIGHT",
-      "keyMessage": "Key strategic takeaway for slide 5 addressing presentation with unsupported and missing evi...",
+      "keyMessage": "Key strategic takeaway for slide 5 addressing with unsupported and missing evidence claims to verify UNVER",
       "tensionLevel": 7,
       "factLinkIds": [
-        "claim_222bec98f7c61c28"
+        "claim_ae44bd5655d3e444"
       ]
     },
     {
       "id": "story_node_6",
       "slideNumber": 6,
       "role": "SOLUTION",
-      "keyMessage": "Key strategic takeaway for slide 6 addressing presentation with unsupported and missing evi...",
+      "keyMessage": "Key strategic takeaway for slide 6 addressing with unsupported and missing evidence claims to verify UNVER",
       "tensionLevel": 8,
       "factLinkIds": [
-        "claim_222bec98f7c61c28"
+        "claim_ae44bd5655d3e444"
       ]
     },
     {
       "id": "story_node_7",
       "slideNumber": 7,
       "role": "MECHANISM",
-      "keyMessage": "Key strategic takeaway for slide 7 addressing presentation with unsupported and missing evi...",
+      "keyMessage": "Key strategic takeaway for slide 7 addressing with unsupported and missing evidence claims to verify UNVER",
       "tensionLevel": 3,
       "factLinkIds": [
-        "claim_222bec98f7c61c28"
+        "claim_ae44bd5655d3e444"
       ]
     },
     {
       "id": "story_node_8",
       "slideNumber": 8,
       "role": "CTA",
-      "keyMessage": "Key strategic takeaway for slide 8 addressing presentation with unsupported and missing evi...",
+      "keyMessage": "Key strategic takeaway for slide 8 addressing with unsupported and missing evidence claims to verify UNVER",
       "tensionLevel": 4,
       "factLinkIds": [
-        "claim_222bec98f7c61c28"
+        "claim_ae44bd5655d3e444"
       ]
     }
   ],
   "slides": [
     {
-      "id": "slide_1_1787729165954",
+      "id": "slide_1_1791784550833",
       "slideNumber": 1,
       "layout": "HERO",
-      "headline": "presentation with unsupported and missing evi...",
+      "headline": "with unsupported and missing evidence claims to verify UNVER",
       "subheadline": "A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners",
       "bodyContent": "Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.",
       "visualStrategy": "Clean dramatic typography with subtle gold ambient backdrop",
@@ -133,18 +219,18 @@
       ],
       "facts": [
         {
-          "claimId": "claim_222bec98f7c61c28",
+          "claimId": "claim_ae44bd5655d3e444",
           "text": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
           "sourceIds": [
-            "pres_1787729165954_qos22"
+            "pres_1791784550832_bag12"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E0",
           "confidence": 0.4,
-          "createdAt": "2026-08-26T07:26:05.954Z",
+          "createdAt": "2026-10-12T05:55:50.833Z",
           "freshness": "CURRENT",
           "provenance": "UNKNOWN",
-          "evidenceId": "claim_222bec98f7c61c28"
+          "evidenceId": "claim_ae44bd5655d3e444"
         }
       ],
       "designTokens": {},
@@ -173,7 +259,7 @@
       }
     },
     {
-      "id": "slide_2_1787729165954",
+      "id": "slide_2_1791784550833",
       "slideNumber": 2,
       "layout": "TWO_COLUMN",
       "headline": "The Macro Environment & Shifting Paradigms",
@@ -191,18 +277,18 @@
       ],
       "facts": [
         {
-          "claimId": "claim_222bec98f7c61c28",
+          "claimId": "claim_ae44bd5655d3e444",
           "text": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
           "sourceIds": [
-            "pres_1787729165954_qos22"
+            "pres_1791784550832_bag12"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E0",
           "confidence": 0.4,
-          "createdAt": "2026-08-26T07:26:05.954Z",
+          "createdAt": "2026-10-12T05:55:50.833Z",
           "freshness": "CURRENT",
           "provenance": "UNKNOWN",
-          "evidenceId": "claim_222bec98f7c61c28"
+          "evidenceId": "claim_ae44bd5655d3e444"
         }
       ],
       "designTokens": {},
@@ -231,7 +317,7 @@
       }
     },
     {
-      "id": "slide_3_1787729165954",
+      "id": "slide_3_1791784550833",
       "slideNumber": 3,
       "layout": "THREE_COLUMN",
       "headline": "Three Critical Barriers Holding Back Growth",
@@ -249,18 +335,18 @@
       ],
       "facts": [
         {
-          "claimId": "claim_222bec98f7c61c28",
+          "claimId": "claim_ae44bd5655d3e444",
           "text": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
           "sourceIds": [
-            "pres_1787729165954_qos22"
+            "pres_1791784550832_bag12"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E0",
           "confidence": 0.4,
-          "createdAt": "2026-08-26T07:26:05.954Z",
+          "createdAt": "2026-10-12T05:55:50.833Z",
           "freshness": "CURRENT",
           "provenance": "UNKNOWN",
-          "evidenceId": "claim_222bec98f7c61c28"
+          "evidenceId": "claim_ae44bd5655d3e444"
         }
       ],
       "designTokens": {},
@@ -289,7 +375,7 @@
       }
     },
     {
-      "id": "slide_4_1787729165954",
+      "id": "slide_4_1791784550833",
       "slideNumber": 4,
       "layout": "METRICS_GRID",
       "headline": "Empirical Performance & Market Impact",
@@ -332,18 +418,18 @@
       ],
       "facts": [
         {
-          "claimId": "claim_222bec98f7c61c28",
+          "claimId": "claim_ae44bd5655d3e444",
           "text": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
           "sourceIds": [
-            "pres_1787729165954_qos22"
+            "pres_1791784550832_bag12"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E0",
           "confidence": 0.4,
-          "createdAt": "2026-08-26T07:26:05.954Z",
+          "createdAt": "2026-10-12T05:55:50.833Z",
           "freshness": "CURRENT",
           "provenance": "UNKNOWN",
-          "evidenceId": "claim_222bec98f7c61c28"
+          "evidenceId": "claim_ae44bd5655d3e444"
         }
       ],
       "designTokens": {},
@@ -366,7 +452,7 @@
       }
     },
     {
-      "id": "slide_5_1787729165954",
+      "id": "slide_5_1791784550833",
       "slideNumber": 5,
       "layout": "CHART_VIEW",
       "headline": "Productivity Acceleration Trajectory",
@@ -409,18 +495,18 @@
       ],
       "facts": [
         {
-          "claimId": "claim_222bec98f7c61c28",
+          "claimId": "claim_ae44bd5655d3e444",
           "text": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
           "sourceIds": [
-            "pres_1787729165954_qos22"
+            "pres_1791784550832_bag12"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E0",
           "confidence": 0.4,
-          "createdAt": "2026-08-26T07:26:05.954Z",
+          "createdAt": "2026-10-12T05:55:50.833Z",
           "freshness": "CURRENT",
           "provenance": "UNKNOWN",
-          "evidenceId": "claim_222bec98f7c61c28"
+          "evidenceId": "claim_ae44bd5655d3e444"
         }
       ],
       "designTokens": {},
@@ -443,7 +529,7 @@
       }
     },
     {
-      "id": "slide_6_1787729165954",
+      "id": "slide_6_1791784550833",
       "slideNumber": 6,
       "layout": "PROCESS_FLOW",
       "headline": "End-to-End Autonomous Pipeline Architecture",
@@ -482,18 +568,18 @@
       ],
       "facts": [
         {
-          "claimId": "claim_222bec98f7c61c28",
+          "claimId": "claim_ae44bd5655d3e444",
           "text": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
           "sourceIds": [
-            "pres_1787729165954_qos22"
+            "pres_1791784550832_bag12"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E0",
           "confidence": 0.4,
-          "createdAt": "2026-08-26T07:26:05.954Z",
+          "createdAt": "2026-10-12T05:55:50.833Z",
           "freshness": "CURRENT",
           "provenance": "UNKNOWN",
-          "evidenceId": "claim_222bec98f7c61c28"
+          "evidenceId": "claim_ae44bd5655d3e444"
         }
       ],
       "designTokens": {},
@@ -516,7 +602,7 @@
       }
     },
     {
-      "id": "slide_7_1787729165954",
+      "id": "slide_7_1791784550833",
       "slideNumber": 7,
       "layout": "COMPARISON",
       "headline": "Legacy Toolchains vs PresentX Native Studio",
@@ -533,18 +619,18 @@
       ],
       "facts": [
         {
-          "claimId": "claim_222bec98f7c61c28",
+          "claimId": "claim_ae44bd5655d3e444",
           "text": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
           "sourceIds": [
-            "pres_1787729165954_qos22"
+            "pres_1791784550832_bag12"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E0",
           "confidence": 0.4,
-          "createdAt": "2026-08-26T07:26:05.954Z",
+          "createdAt": "2026-10-12T05:55:50.833Z",
           "freshness": "CURRENT",
           "provenance": "UNKNOWN",
-          "evidenceId": "claim_222bec98f7c61c28"
+          "evidenceId": "claim_ae44bd5655d3e444"
         }
       ],
       "designTokens": {},
@@ -573,7 +659,7 @@
       }
     },
     {
-      "id": "slide_8_1787729165954",
+      "id": "slide_8_1791784550833",
       "slideNumber": 8,
       "layout": "QUOTE",
       "headline": "The Strategic Imperative",
@@ -590,18 +676,18 @@
       ],
       "facts": [
         {
-          "claimId": "claim_222bec98f7c61c28",
+          "claimId": "claim_ae44bd5655d3e444",
           "text": "Create a presentation with unsupported and missing evidence claims to verify UNVERIFIED flags.",
           "sourceIds": [
-            "pres_1787729165954_qos22"
+            "pres_1791784550832_bag12"
           ],
           "sourceClass": "USER_ASSERTION",
           "evidenceLevel": "E0",
           "confidence": 0.4,
-          "createdAt": "2026-08-26T07:26:05.954Z",
+          "createdAt": "2026-10-12T05:55:50.833Z",
           "freshness": "CURRENT",
           "provenance": "UNKNOWN",
-          "evidenceId": "claim_222bec98f7c61c28"
+          "evidenceId": "claim_ae44bd5655d3e444"
         }
       ],
       "designTokens": {},
@@ -629,13 +715,13 @@
     "paletteMood": "Antigravity Gold (Signature)",
     "lighting": "Soft ambient cinematic studio lighting",
     "cameraLanguage": "Cinematic 35mm wide-aperture composition",
-    "consistencySeed": 884691,
+    "consistencySeed": 382015,
     "items": [
       {
-        "id": "media_slide_1_1787729165954",
-        "slideId": "slide_1_1787729165954",
+        "id": "media_slide_1_1791784550833",
+        "slideId": "slide_1_1791784550833",
         "purpose": "HERO",
-        "subject": "presentation with unsupported and missing evi...",
+        "subject": "with unsupported and missing evidence claims to verify UNVER",
         "composition": "Rule of thirds cinematic",
         "style": "FUTURISTIC",
         "lighting": "Volumetric soft ambient studio lighting",
@@ -643,14 +729,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 884691,
+        "seed": 382015,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "83f4ebbb246648145655b4a353a53d8a5175dfa82e8256c6dd4a072de0f8db9e"
+        "provenance": "52e4624326acf10af35ccdcad832ec43997d61cb8cb8d35650c6883f85db1365"
       },
       {
-        "id": "media_slide_2_1787729165954",
-        "slideId": "slide_2_1787729165954",
+        "id": "media_slide_2_1791784550833",
+        "slideId": "slide_2_1791784550833",
         "purpose": "HERO",
         "subject": "The Macro Environment & Shifting Paradigms",
         "composition": "Rule of thirds cinematic",
@@ -660,14 +746,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 884691,
+        "seed": 382015,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "76fd61aebba3ccb60a6301acb5bb8bf3c5e26c679756bcc17bea45223a8a1c40"
+        "provenance": "e953d3fdd4244a77c083315b08010d72a0444e1c1561c844e2505a1d896cf050"
       },
       {
-        "id": "media_slide_3_1787729165954",
-        "slideId": "slide_3_1787729165954",
+        "id": "media_slide_3_1791784550833",
+        "slideId": "slide_3_1791784550833",
         "purpose": "HERO",
         "subject": "Three Critical Barriers Holding Back Growth",
         "composition": "Rule of thirds cinematic",
@@ -677,14 +763,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 884691,
+        "seed": 382015,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "833ab5f4179e704db3ceafe4e4dd813ecec43a21cdec428c46669eda73bf52a4"
+        "provenance": "7b87e2dab9b597892ac585819fdcb57b4decc6aaf42b16e5ae04b2b91b4c1e71"
       },
       {
-        "id": "media_slide_4_1787729165954",
-        "slideId": "slide_4_1787729165954",
+        "id": "media_slide_4_1791784550833",
+        "slideId": "slide_4_1791784550833",
         "purpose": "HERO",
         "subject": "Empirical Performance & Market Impact",
         "composition": "Rule of thirds cinematic",
@@ -694,14 +780,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 884691,
+        "seed": 382015,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "377f07cebd12d9ef2b9284f7fbb9934bc3aaa01da7996c1cf37d26bb92773400"
+        "provenance": "ac9a899bfb2476de16b528ca59cb2a83c395831560990808f6101945d2c71f31"
       },
       {
-        "id": "media_slide_5_1787729165954",
-        "slideId": "slide_5_1787729165954",
+        "id": "media_slide_5_1791784550833",
+        "slideId": "slide_5_1791784550833",
         "purpose": "HERO",
         "subject": "Productivity Acceleration Trajectory",
         "composition": "Rule of thirds cinematic",
@@ -711,14 +797,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 884691,
+        "seed": 382015,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "87e8b85a1d13f2eaf042cadbd754a1c53a53b27279d4d60a9619892aa45a3315"
+        "provenance": "7368931b73c0abbf50878ffe2a581eb3463fc0b900dc1034a23a3d3e0b828e6d"
       },
       {
-        "id": "media_slide_6_1787729165954",
-        "slideId": "slide_6_1787729165954",
+        "id": "media_slide_6_1791784550833",
+        "slideId": "slide_6_1791784550833",
         "purpose": "HERO",
         "subject": "End-to-End Autonomous Pipeline Architecture",
         "composition": "Rule of thirds cinematic",
@@ -728,14 +814,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 884691,
+        "seed": 382015,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "e395b683d001e388681cd237fdec0ff669c3073b830deda40ceebba275034a63"
+        "provenance": "08b126303b3fc8dfa0a448e1776b6e31201f62cb4304da1d5e32e4a1303a602e"
       },
       {
-        "id": "media_slide_7_1787729165954",
-        "slideId": "slide_7_1787729165954",
+        "id": "media_slide_7_1791784550833",
+        "slideId": "slide_7_1791784550833",
         "purpose": "HERO",
         "subject": "Legacy Toolchains vs PresentX Native Studio",
         "composition": "Rule of thirds cinematic",
@@ -745,14 +831,14 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 884691,
+        "seed": 382015,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "5035da7868132609501720ad8ae596da053f831be4812ee4ca5b3ffe668fb632"
+        "provenance": "3d6f0319ea497fece861b5ff6f55bf982ee23d40f191adc66f8170d49b9adc63"
       },
       {
-        "id": "media_slide_8_1787729165954",
-        "slideId": "slide_8_1787729165954",
+        "id": "media_slide_8_1791784550833",
+        "slideId": "slide_8_1791784550833",
         "purpose": "HERO",
         "subject": "The Strategic Imperative",
         "composition": "Rule of thirds cinematic",
@@ -762,18 +848,18 @@
         "aspectRatio": "16:9",
         "resolution": "1920x1080",
         "negativePrompt": "low quality, distorted, blurry, watermark",
-        "seed": 884691,
+        "seed": 382015,
         "model": "ComfyUI/SDXL-Turbo-V7",
         "workflow": "StandardStudioRender_v7",
-        "provenance": "e4c65ec89245f57ca5f1f3b8a85d91869218944f18cebec236d7ef4616e90e84"
+        "provenance": "6bd31708bb399720b4a95e5b56ae0307a72a9d4bd7ed3cb62d0943f769e52ba4"
       }
     ]
   },
   "qualityAudit": {
-    "overallScore": 81,
+    "overallScore": 78,
     "contentScore": 95,
     "storyScore": 95,
-    "factualityScore": 30,
+    "factualityScore": 15,
     "designScore": 83,
     "visualHierarchyScore": 92,
     "readabilityScore": 94,
@@ -796,27 +882,52 @@
       "sourceRetrievalCoverage": 0,
       "evidenceMatchCoverage": 0,
       "contradictionResolutionRate": 100,
-      "freshnessCoverage": 100,
+      "freshnessCoverage": 0,
       "numericalVerificationRate": 0,
-      "overallScore": 30
+      "overallScore": 15
     }
   },
   "evidenceStatus": "UNVERIFIED",
-  "provenanceHash": "41f273470c61b0735172d2b404b5a8cb3a0e999728c7b665c699f32ea768200b",
+  "provenanceHash": "03a370f96522a9024e278cef25e628838ca240e37271f938c7aee93ef6a8953f",
   "version": 1,
   "versionHistory": [
     {
       "version": 1,
-      "timestamp": "2026-08-26T07:26:05.954Z",
+      "timestamp": "2026-10-12T05:55:50.833Z",
       "author": "Hermes Autonomous Planner V7",
-      "changeReason": "Initial deck synthesis",
+      "changeReason": "Initial deck synthesis with Creative Direction & Deck Health",
       "modelUsed": "Hermes-70B-Router",
       "slidesCount": 8,
       "qualityScore": 94,
-      "provenanceHash": "41f273470c61b0735172d2b404b5a8cb3a0e999728c7b665c699f32ea768200b"
+      "provenanceHash": "03a370f96522a9024e278cef25e628838ca240e37271f938c7aee93ef6a8953f"
     }
   ],
   "autoRepairs": [],
-  "createdAt": "2026-08-26T07:26:05.954Z",
-  "updatedAt": "2026-08-26T07:26:05.954Z"
+  "createdAt": "2026-10-12T05:55:50.833Z",
+  "updatedAt": "2026-10-12T05:55:50.833Z",
+  "deckHealth": {
+    "narrative": 92,
+    "storyFlow": 92,
+    "visualVariety": 100,
+    "hierarchy": 98,
+    "factuality": 15,
+    "accessibility": 96,
+    "brandConsistency": 96,
+    "cognitiveLoadScore": 100,
+    "overallScore": 83,
+    "repetitionWarnings": [],
+    "recommendations": [
+      {
+        "id": "rec_story_cta",
+        "type": "STORY_GAP",
+        "severity": "LOW",
+        "title": "Missing Definitive Call to Action",
+        "description": "The deck concludes without a crisp next-step action or summary slide.",
+        "suggestedAction": "Add or convert the final slide to a CONCLUSION_CTA layout.",
+        "affectedSlideIndexes": [
+          8
+        ]
+      }
+    ]
+  }
 }

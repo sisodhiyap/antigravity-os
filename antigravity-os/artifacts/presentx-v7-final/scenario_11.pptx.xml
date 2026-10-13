@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<p:presentation xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" title="presentation with unsupported and missing evi...">
+<p:presentation xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" title="with unsupported and missing evidence claims to verify UNVER">
   <p:metadata>
     <p:author>Antigravity OS V7 — PresentX Studio</p:author>
     <p:visualDirection>FUTURISTIC</p:visualDirection>
     <p:slideCount>8</p:slideCount>
     <p:theme primary="#D4AF37" background="#080808" font="Inter, Satoshi, sans-serif"/>
-    <p:provenanceHash>41f273470c61b0735172d2b404b5a8cb3a0e999728c7b665c699f32ea768200b</p:provenanceHash>
-    <p:exportManifest signature="a969774132c20802ca647ae608ed8ca6e602f8b859f24e14e92ac65c90c6bc6e" timestamp="2026-08-26T07:26:05.955Z" />
+    <p:provenanceHash>03a370f96522a9024e278cef25e628838ca240e37271f938c7aee93ef6a8953f</p:provenanceHash>
+    <p:exportManifest signature="15352c9a726b1fbcebe54b0c5ee91bd8f424692a3cf966474e6ac8cfc81a7a85" timestamp="2026-10-12T05:55:50.834Z" />
   </p:metadata>
   <p:slideList>
 
     <p:slide index="1" layout="HERO" truthBadge="UNVERIFIED">
-      <p:title>presentation with unsupported and missing evi...</p:title>
+      <p:title>with unsupported and missing evidence claims to verify UNVER</p:title>
       <p:subtitle>A Visionary Strategic Blueprint for Executives, Investors, Stakeholders, and Strategic Partners</p:subtitle>
       <p:bodyText>Transforming strategic ideas into verified, production-ready reality. Powered by Antigravity OS V7.</p:bodyText>
       <p:bullets>
