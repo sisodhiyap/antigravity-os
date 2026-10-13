@@ -112,6 +112,26 @@ function buildServerEnv(): NodeJS.ProcessEnv {
 }
 
 /**
+ * Validates that an active port is genuinely running Antigravity OS
+ * and not an arbitrary foreign HTTP service.
+ */
+async function isAntigravityServerLive(port: number, timeoutMs = 2500): Promise<boolean> {
+  const isPortOpen = await supervisor.probePort(port, 1000);
+  if (!isPortOpen) return false;
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    const res = await fetch(`http://127.0.0.1:${port}/api/health`, { signal: controller.signal });
+    clearTimeout(timer);
+    if (!res.ok) return false;
+    const body = (await res.json()) as { success?: boolean; data?: { status?: string; version?: string } };
+    return Boolean(body && body.success === true && (body.data?.version || body.data?.status));
+  } catch {
+    return false;
+  }
+}
+
+/**
  * Spawn the Next.js production server as a child process.
  * Uses `node node_modules/.bin/next start` so it works both in dev and packaged.
  */
@@ -152,10 +172,11 @@ async function spawnNextServer(): Promise<void> {
   writeLog(`Node: ${nodeExe}`);
   writeLog(`Next CLI: ${nextCli}`);
   writeLog(`App Root: ${appRoot}`);
-  // If port 3000 is already running (e.g., local dev server), reuse it gracefully
-  const isAlreadyLive = await supervisor.probePort(3000, 1500);
+
+  // If port 3000 is already running, verify it is Antigravity OS before reusing
+  const isAlreadyLive = await isAntigravityServerLive(3000, 2000);
   if (isAlreadyLive) {
-    writeLog("Port 3000 is already active — reusing existing Next.js server instance.");
+    writeLog("Port 3000 is already active and verified as Antigravity OS — reusing existing server instance.");
     return;
   }
 
@@ -271,7 +292,7 @@ async function createMainWindow(): Promise<BrowserWindow> {
   });
 
   // Check backend server readiness (it should be up since we spawned it)
-  const isServerLive = await supervisor.probePort(3000, 3000);
+  const isServerLive = await isAntigravityServerLive(3000, 3000);
   const targetUrl = "http://127.0.0.1:3000";
 
   if (isServerLive) {
