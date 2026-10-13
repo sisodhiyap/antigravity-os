@@ -2,19 +2,19 @@
   "suite": "ANTIGRAVITY LEVEL-3 REAL PLAYWRIGHT BROWSER E2E",
   "browser": "Chromium",
   "playwrightVersion": "1.62.1",
-  "target": "http://localhost:3000",
-  "timestamp": "2026-08-26T06:36:45.145Z",
+  "target": "http://127.0.0.1:3000",
+  "timestamp": "2026-10-13T09:39:51.857Z",
   "totalTests": 15,
-  "passed": 15,
-  "failed": 0,
+  "passed": 8,
+  "failed": 7,
   "results": [
     {
       "testName": "Root Dashboard Load",
-      "url": "http://localhost:3000",
-      "passed": true,
+      "url": "http://127.0.0.1:3000",
+      "passed": false,
       "domAssertions": [
         {
-          "assertion": "Page title non-empty (got: \"Antigravity OS\")",
+          "assertion": "Page title non-empty (got: \"Antigravity OS v7.0 — Sovereign AI Operating System\")",
           "passed": true
         },
         {
@@ -23,27 +23,77 @@
         },
         {
           "assertion": "Main content container present",
-          "passed": true
+          "passed": false
         }
       ],
       "consoleErrors": [
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <InnerLayoutRouter url=\"/login\" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>\n      <SegmentViewNode type=\"page\" pagePath=\"login/page...\">\n        <SegmentTrieNode>\n        <ClientPageRoot Component={function LoginPage} searchParams={{}} params={{}}>\n          <LoginPage params={Promise} searchParams={Promise}>\n            <div className=\"min-h-scre...\">\n              <div>\n              <div>\n              <div className=\"flex-1 md:...\">\n                <div className=\"flex-1 fle...\">\n                  <div>\n                  <div>\n                  <Suspense fallback={<div>}>\n                    <LoginForm>\n                      <form onSubmit={function handleSubmit} className=\"space-y-5\" noValidate={true}>\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Mail>\n                            <input\n                              id=\"email\"\n                              type=\"text\"\n                              autoComplete=\"username\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"Operator ID or email address\"\n                              className=\"ag-input !pl-10\"\n+                             style={{paddingLeft:\"2.5rem\"}}\n-                             style={{padding-left:\"2.5rem\",caret-color:\"transparent\"}}\n                              aria-label=\"User ID or Email address\"\n                              disabled={false}\n                            >\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Lock>\n                            <input\n                              id=\"password\"\n                              type=\"password\"\n                              autoComplete=\"current-password\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"••••••••••••\"\n                              className=\"ag-input !pl-10 !pr-11\"\n                              style={{\n+                               paddingLeft: \"2.5rem\"\n+                               paddingRight: \"2.75rem\"\n-                               padding-left: \"2.5rem\"\n-                               padding-right: \"2.75rem\"\n-                               caret-color: \"transparent\"\n                              }}\n                              aria-label=\"Password\"\n                              disabled={false}\n                            >\n                            ...\n                        ...\n                  ...\n      ...\n",
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <InnerLayoutRouter url=\"/login?cal...\" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>\n      <SegmentViewNode type=\"page\" pagePath=\"login/page...\">\n        <SegmentTrieNode>\n        <ClientPageRoot Component={function LoginPage} searchParams={{...}} params={{}}>\n          <LoginPage params={Promise} searchParams={Promise}>\n            <div className=\"min-h-scre...\">\n              <div>\n              <div>\n              <div className=\"flex-1 md:...\">\n                <div className=\"flex-1 fle...\">\n                  <div>\n                  <div>\n                  <Suspense fallback={<div>}>\n                    <LoginForm>\n                      <form onSubmit={function handleSubmit} className=\"space-y-5\" noValidate={true}>\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Mail>\n                            <input\n                              id=\"email\"\n                              type=\"text\"\n                              autoComplete=\"username\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"Operator ID or email address\"\n                              className=\"ag-input !pl-10\"\n+                             style={{paddingLeft:\"2.5rem\"}}\n-                             style={{padding-left:\"2.5rem\"}}\n                              aria-label=\"User ID or Email address\"\n                              disabled={false}\n                            >\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Lock>\n                            <input\n                              id=\"password\"\n                              type=\"password\"\n                              autoComplete=\"current-password\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"••••••••••••\"\n                              className=\"ag-input !pl-10 !pr-11\"\n+                             style={{paddingLeft:\"2.5rem\",paddingRight:\"2.75rem\"}}\n-                             style={{padding-left:\"2.5rem\",padding-right:\"2.75rem\"}}\n                              aria-label=\"Password\"\n                              disabled={false}\n                            >\n                            ...\n                        ...\n                  ...\n      ...\n",
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <InnerLayoutRouter url=\"/login?cal...\" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>\n      <SegmentViewNode type=\"page\" pagePath=\"login/page...\">\n        <SegmentTrieNode>\n        <ClientPageRoot Component={function LoginPage} searchParams={{...}} params={{}}>\n          <LoginPage params={Promise} searchParams={Promise}>\n            <div className=\"min-h-scre...\">\n              <div>\n              <div>\n              <div className=\"flex-1 md:...\">\n                <div className=\"flex-1 fle...\">\n                  <div>\n                  <div>\n                  <Suspense fallback={<div>}>\n                    <LoginForm>\n                      <form onSubmit={function handleSubmit} className=\"space-y-5\" noValidate={true}>\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Mail>\n                            <input\n                              id=\"email\"\n                              type=\"text\"\n                              autoComplete=\"username\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"Operator ID or email address\"\n                              className=\"ag-input !pl-10\"\n+                             style={{paddingLeft:\"2.5rem\"}}\n-                             style={{padding-left:\"2.5rem\"}}\n                              aria-label=\"User ID or Email address\"\n                              disabled={false}\n                            >\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Lock>\n                            <input\n                              id=\"password\"\n                              type=\"password\"\n                              autoComplete=\"current-password\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"••••••••••••\"\n                              className=\"ag-input !pl-10 !pr-11\"\n+                             style={{paddingLeft:\"2.5rem\",paddingRight:\"2.75rem\"}}\n-                             style={{padding-left:\"2.5rem\",padding-right:\"2.75rem\"}}\n                              aria-label=\"Password\"\n                              disabled={false}\n                            >\n                            ...\n                        ...\n                  ...\n      ...\n",
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <InnerLayoutRouter url=\"/login?cal...\" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>\n      <SegmentViewNode type=\"page\" pagePath=\"login/page...\">\n        <SegmentTrieNode>\n        <ClientPageRoot Component={function LoginPage} searchParams={{...}} params={{}}>\n          <LoginPage params={Promise} searchParams={Promise}>\n            <div className=\"min-h-scre...\">\n              <div>\n              <div>\n              <div className=\"flex-1 md:...\">\n                <div className=\"flex-1 fle...\">\n                  <div>\n                  <div>\n                  <Suspense fallback={<div>}>\n                    <LoginForm>\n                      <form onSubmit={function handleSubmit} className=\"space-y-5\" noValidate={true}>\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Mail>\n                            <input\n                              id=\"email\"\n                              type=\"text\"\n                              autoComplete=\"username\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"Operator ID or email address\"\n                              className=\"ag-input !pl-10\"\n+                             style={{paddingLeft:\"2.5rem\"}}\n-                             style={{padding-left:\"2.5rem\"}}\n                              aria-label=\"User ID or Email address\"\n                              disabled={false}\n                            >\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Lock>\n                            <input\n                              id=\"password\"\n                              type=\"password\"\n                              autoComplete=\"current-password\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"••••••••••••\"\n                              className=\"ag-input !pl-10 !pr-11\"\n+                             style={{paddingLeft:\"2.5rem\",paddingRight:\"2.75rem\"}}\n-                             style={{padding-left:\"2.5rem\",padding-right:\"2.75rem\"}}\n                              aria-label=\"Password\"\n                              disabled={false}\n                            >\n                            ...\n                        ...\n                  ...\n      ...\n",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
         "Failed to load resource: the server responded with a status of 404 (Not Found)"
       ],
       "pageErrors": [],
       "failedRequests": [
         {
-          "url": "http://localhost:3000/non-existent-route-xyz",
+          "url": "http://127.0.0.1:3000/",
+          "status": 307
+        },
+        {
+          "url": "http://127.0.0.1:3000/agents",
+          "status": 307
+        },
+        {
+          "url": "http://127.0.0.1:3000/mcp",
+          "status": 307
+        },
+        {
+          "url": "http://127.0.0.1:3000/settings",
+          "status": 307
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/agents",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/models",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/tasks",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/artifacts",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/approvals",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/memory",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/non-existent-route-xyz",
           "status": 404
         }
       ],
       "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\root_dashboard_load.png",
-      "durationMs": 1890,
-      "timestamp": "2026-08-26T06:36:41.423Z",
+      "durationMs": 4443,
+      "timestamp": "2026-10-13T09:39:37.420Z",
       "httpStatus": 200
     },
     {
       "testName": "Agents Page Navigation",
-      "url": "http://localhost:3000/agents",
+      "url": "http://127.0.0.1:3000/agents",
       "passed": true,
       "domAssertions": [
         {
@@ -56,23 +106,68 @@
         }
       ],
       "consoleErrors": [
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <InnerLayoutRouter url=\"/login?cal...\" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>\n      <SegmentViewNode type=\"page\" pagePath=\"login/page...\">\n        <SegmentTrieNode>\n        <ClientPageRoot Component={function LoginPage} searchParams={{...}} params={{}}>\n          <LoginPage params={Promise} searchParams={Promise}>\n            <div className=\"min-h-scre...\">\n              <div>\n              <div>\n              <div className=\"flex-1 md:...\">\n                <div className=\"flex-1 fle...\">\n                  <div>\n                  <div>\n                  <Suspense fallback={<div>}>\n                    <LoginForm>\n                      <form onSubmit={function handleSubmit} className=\"space-y-5\" noValidate={true}>\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Mail>\n                            <input\n                              id=\"email\"\n                              type=\"text\"\n                              autoComplete=\"username\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"Operator ID or email address\"\n                              className=\"ag-input !pl-10\"\n+                             style={{paddingLeft:\"2.5rem\"}}\n-                             style={{padding-left:\"2.5rem\"}}\n                              aria-label=\"User ID or Email address\"\n                              disabled={false}\n                            >\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Lock>\n                            <input\n                              id=\"password\"\n                              type=\"password\"\n                              autoComplete=\"current-password\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"••••••••••••\"\n                              className=\"ag-input !pl-10 !pr-11\"\n+                             style={{paddingLeft:\"2.5rem\",paddingRight:\"2.75rem\"}}\n-                             style={{padding-left:\"2.5rem\",padding-right:\"2.75rem\"}}\n                              aria-label=\"Password\"\n                              disabled={false}\n                            >\n                            ...\n                        ...\n                  ...\n      ...\n",
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <InnerLayoutRouter url=\"/login?cal...\" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>\n      <SegmentViewNode type=\"page\" pagePath=\"login/page...\">\n        <SegmentTrieNode>\n        <ClientPageRoot Component={function LoginPage} searchParams={{...}} params={{}}>\n          <LoginPage params={Promise} searchParams={Promise}>\n            <div className=\"min-h-scre...\">\n              <div>\n              <div>\n              <div className=\"flex-1 md:...\">\n                <div className=\"flex-1 fle...\">\n                  <div>\n                  <div>\n                  <Suspense fallback={<div>}>\n                    <LoginForm>\n                      <form onSubmit={function handleSubmit} className=\"space-y-5\" noValidate={true}>\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Mail>\n                            <input\n                              id=\"email\"\n                              type=\"text\"\n                              autoComplete=\"username\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"Operator ID or email address\"\n                              className=\"ag-input !pl-10\"\n+                             style={{paddingLeft:\"2.5rem\"}}\n-                             style={{padding-left:\"2.5rem\"}}\n                              aria-label=\"User ID or Email address\"\n                              disabled={false}\n                            >\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Lock>\n                            <input\n                              id=\"password\"\n                              type=\"password\"\n                              autoComplete=\"current-password\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"••••••••••••\"\n                              className=\"ag-input !pl-10 !pr-11\"\n+                             style={{paddingLeft:\"2.5rem\",paddingRight:\"2.75rem\"}}\n-                             style={{padding-left:\"2.5rem\",padding-right:\"2.75rem\"}}\n                              aria-label=\"Password\"\n                              disabled={false}\n                            >\n                            ...\n                        ...\n                  ...\n      ...\n",
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <InnerLayoutRouter url=\"/login?cal...\" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>\n      <SegmentViewNode type=\"page\" pagePath=\"login/page...\">\n        <SegmentTrieNode>\n        <ClientPageRoot Component={function LoginPage} searchParams={{...}} params={{}}>\n          <LoginPage params={Promise} searchParams={Promise}>\n            <div className=\"min-h-scre...\">\n              <div>\n              <div>\n              <div className=\"flex-1 md:...\">\n                <div className=\"flex-1 fle...\">\n                  <div>\n                  <div>\n                  <Suspense fallback={<div>}>\n                    <LoginForm>\n                      <form onSubmit={function handleSubmit} className=\"space-y-5\" noValidate={true}>\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Mail>\n                            <input\n                              id=\"email\"\n                              type=\"text\"\n                              autoComplete=\"username\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"Operator ID or email address\"\n                              className=\"ag-input !pl-10\"\n+                             style={{paddingLeft:\"2.5rem\"}}\n-                             style={{padding-left:\"2.5rem\"}}\n                              aria-label=\"User ID or Email address\"\n                              disabled={false}\n                            >\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Lock>\n                            <input\n                              id=\"password\"\n                              type=\"password\"\n                              autoComplete=\"current-password\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"••••••••••••\"\n                              className=\"ag-input !pl-10 !pr-11\"\n+                             style={{paddingLeft:\"2.5rem\",paddingRight:\"2.75rem\"}}\n-                             style={{padding-left:\"2.5rem\",padding-right:\"2.75rem\"}}\n                              aria-label=\"Password\"\n                              disabled={false}\n                            >\n                            ...\n                        ...\n                  ...\n      ...\n",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
         "Failed to load resource: the server responded with a status of 404 (Not Found)"
       ],
       "pageErrors": [],
       "failedRequests": [
         {
-          "url": "http://localhost:3000/non-existent-route-xyz",
+          "url": "http://127.0.0.1:3000/agents",
+          "status": 307
+        },
+        {
+          "url": "http://127.0.0.1:3000/mcp",
+          "status": 307
+        },
+        {
+          "url": "http://127.0.0.1:3000/settings",
+          "status": 307
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/agents",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/models",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/tasks",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/artifacts",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/approvals",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/memory",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/non-existent-route-xyz",
           "status": 404
         }
       ],
       "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\agents_page_navigation.png",
-      "durationMs": 56,
-      "timestamp": "2026-08-26T06:36:43.314Z",
+      "durationMs": 727,
+      "timestamp": "2026-10-13T09:39:41.864Z",
       "httpStatus": 200
     },
     {
       "testName": "MCP Page Load",
-      "url": "http://localhost:3000/mcp",
+      "url": "http://127.0.0.1:3000/mcp",
       "passed": true,
       "domAssertions": [
         {
@@ -80,28 +175,69 @@
           "passed": true
         },
         {
-          "assertion": "Page has significant DOM elements (got 16)",
+          "assertion": "Page has significant DOM elements (got 151)",
           "passed": true
         }
       ],
       "consoleErrors": [
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <InnerLayoutRouter url=\"/login?cal...\" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>\n      <SegmentViewNode type=\"page\" pagePath=\"login/page...\">\n        <SegmentTrieNode>\n        <ClientPageRoot Component={function LoginPage} searchParams={{...}} params={{}}>\n          <LoginPage params={Promise} searchParams={Promise}>\n            <div className=\"min-h-scre...\">\n              <div>\n              <div>\n              <div className=\"flex-1 md:...\">\n                <div className=\"flex-1 fle...\">\n                  <div>\n                  <div>\n                  <Suspense fallback={<div>}>\n                    <LoginForm>\n                      <form onSubmit={function handleSubmit} className=\"space-y-5\" noValidate={true}>\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Mail>\n                            <input\n                              id=\"email\"\n                              type=\"text\"\n                              autoComplete=\"username\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"Operator ID or email address\"\n                              className=\"ag-input !pl-10\"\n+                             style={{paddingLeft:\"2.5rem\"}}\n-                             style={{padding-left:\"2.5rem\"}}\n                              aria-label=\"User ID or Email address\"\n                              disabled={false}\n                            >\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Lock>\n                            <input\n                              id=\"password\"\n                              type=\"password\"\n                              autoComplete=\"current-password\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"••••••••••••\"\n                              className=\"ag-input !pl-10 !pr-11\"\n+                             style={{paddingLeft:\"2.5rem\",paddingRight:\"2.75rem\"}}\n-                             style={{padding-left:\"2.5rem\",padding-right:\"2.75rem\"}}\n                              aria-label=\"Password\"\n                              disabled={false}\n                            >\n                            ...\n                        ...\n                  ...\n      ...\n",
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <InnerLayoutRouter url=\"/login?cal...\" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>\n      <SegmentViewNode type=\"page\" pagePath=\"login/page...\">\n        <SegmentTrieNode>\n        <ClientPageRoot Component={function LoginPage} searchParams={{...}} params={{}}>\n          <LoginPage params={Promise} searchParams={Promise}>\n            <div className=\"min-h-scre...\">\n              <div>\n              <div>\n              <div className=\"flex-1 md:...\">\n                <div className=\"flex-1 fle...\">\n                  <div>\n                  <div>\n                  <Suspense fallback={<div>}>\n                    <LoginForm>\n                      <form onSubmit={function handleSubmit} className=\"space-y-5\" noValidate={true}>\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Mail>\n                            <input\n                              id=\"email\"\n                              type=\"text\"\n                              autoComplete=\"username\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"Operator ID or email address\"\n                              className=\"ag-input !pl-10\"\n+                             style={{paddingLeft:\"2.5rem\"}}\n-                             style={{padding-left:\"2.5rem\"}}\n                              aria-label=\"User ID or Email address\"\n                              disabled={false}\n                            >\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Lock>\n                            <input\n                              id=\"password\"\n                              type=\"password\"\n                              autoComplete=\"current-password\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"••••••••••••\"\n                              className=\"ag-input !pl-10 !pr-11\"\n+                             style={{paddingLeft:\"2.5rem\",paddingRight:\"2.75rem\"}}\n-                             style={{padding-left:\"2.5rem\",padding-right:\"2.75rem\"}}\n                              aria-label=\"Password\"\n                              disabled={false}\n                            >\n                            ...\n                        ...\n                  ...\n      ...\n",
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <InnerLayoutRouter url=\"/login?cal...\" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>\n      <SegmentViewNode type=\"page\" pagePath=\"login/page...\">\n        <SegmentTrieNode>\n        <ClientPageRoot Component={function LoginPage} searchParams={{...}} params={{}}>\n          <LoginPage params={Promise} searchParams={Promise}>\n            <div className=\"min-h-scre...\">\n              <div>\n              <div>\n              <div className=\"flex-1 md:...\">\n                <div className=\"flex-1 fle...\">\n                  <div>\n                  <div>\n                  <Suspense fallback={<div>}>\n                    <LoginForm>\n                      <form onSubmit={function handleSubmit} className=\"space-y-5\" noValidate={true}>\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Mail>\n                            <input\n                              id=\"email\"\n                              type=\"text\"\n                              autoComplete=\"username\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"Operator ID or email address\"\n                              className=\"ag-input !pl-10\"\n+                             style={{paddingLeft:\"2.5rem\"}}\n-                             style={{padding-left:\"2.5rem\"}}\n                              aria-label=\"User ID or Email address\"\n                              disabled={false}\n                            >\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Lock>\n                            <input\n                              id=\"password\"\n                              type=\"password\"\n                              autoComplete=\"current-password\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"••••••••••••\"\n                              className=\"ag-input !pl-10 !pr-11\"\n+                             style={{paddingLeft:\"2.5rem\",paddingRight:\"2.75rem\"}}\n-                             style={{padding-left:\"2.5rem\",padding-right:\"2.75rem\"}}\n                              aria-label=\"Password\"\n                              disabled={false}\n                            >\n                            ...\n                        ...\n                  ...\n      ...\n",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
         "Failed to load resource: the server responded with a status of 404 (Not Found)"
       ],
       "pageErrors": [],
       "failedRequests": [
         {
-          "url": "http://localhost:3000/non-existent-route-xyz",
+          "url": "http://127.0.0.1:3000/mcp",
+          "status": 307
+        },
+        {
+          "url": "http://127.0.0.1:3000/settings",
+          "status": 307
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/agents",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/models",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/tasks",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/artifacts",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/approvals",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/memory",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/non-existent-route-xyz",
           "status": 404
         }
       ],
       "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\mcp_page_load.png",
-      "durationMs": 67,
-      "timestamp": "2026-08-26T06:36:43.370Z",
+      "durationMs": 742,
+      "timestamp": "2026-10-13T09:39:42.591Z",
       "httpStatus": 200
     },
     {
       "testName": "Settings Page Load",
-      "url": "http://localhost:3000/settings",
+      "url": "http://127.0.0.1:3000/settings",
       "passed": true,
       "domAssertions": [
         {
@@ -110,23 +246,59 @@
         }
       ],
       "consoleErrors": [
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <InnerLayoutRouter url=\"/login?cal...\" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>\n      <SegmentViewNode type=\"page\" pagePath=\"login/page...\">\n        <SegmentTrieNode>\n        <ClientPageRoot Component={function LoginPage} searchParams={{...}} params={{}}>\n          <LoginPage params={Promise} searchParams={Promise}>\n            <div className=\"min-h-scre...\">\n              <div>\n              <div>\n              <div className=\"flex-1 md:...\">\n                <div className=\"flex-1 fle...\">\n                  <div>\n                  <div>\n                  <Suspense fallback={<div>}>\n                    <LoginForm>\n                      <form onSubmit={function handleSubmit} className=\"space-y-5\" noValidate={true}>\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Mail>\n                            <input\n                              id=\"email\"\n                              type=\"text\"\n                              autoComplete=\"username\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"Operator ID or email address\"\n                              className=\"ag-input !pl-10\"\n+                             style={{paddingLeft:\"2.5rem\"}}\n-                             style={{padding-left:\"2.5rem\"}}\n                              aria-label=\"User ID or Email address\"\n                              disabled={false}\n                            >\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Lock>\n                            <input\n                              id=\"password\"\n                              type=\"password\"\n                              autoComplete=\"current-password\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"••••••••••••\"\n                              className=\"ag-input !pl-10 !pr-11\"\n+                             style={{paddingLeft:\"2.5rem\",paddingRight:\"2.75rem\"}}\n-                             style={{padding-left:\"2.5rem\",padding-right:\"2.75rem\"}}\n                              aria-label=\"Password\"\n                              disabled={false}\n                            >\n                            ...\n                        ...\n                  ...\n      ...\n",
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <InnerLayoutRouter url=\"/login?cal...\" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>\n      <SegmentViewNode type=\"page\" pagePath=\"login/page...\">\n        <SegmentTrieNode>\n        <ClientPageRoot Component={function LoginPage} searchParams={{...}} params={{}}>\n          <LoginPage params={Promise} searchParams={Promise}>\n            <div className=\"min-h-scre...\">\n              <div>\n              <div>\n              <div className=\"flex-1 md:...\">\n                <div className=\"flex-1 fle...\">\n                  <div>\n                  <div>\n                  <Suspense fallback={<div>}>\n                    <LoginForm>\n                      <form onSubmit={function handleSubmit} className=\"space-y-5\" noValidate={true}>\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Mail>\n                            <input\n                              id=\"email\"\n                              type=\"text\"\n                              autoComplete=\"username\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"Operator ID or email address\"\n                              className=\"ag-input !pl-10\"\n+                             style={{paddingLeft:\"2.5rem\"}}\n-                             style={{padding-left:\"2.5rem\"}}\n                              aria-label=\"User ID or Email address\"\n                              disabled={false}\n                            >\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Lock>\n                            <input\n                              id=\"password\"\n                              type=\"password\"\n                              autoComplete=\"current-password\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"••••••••••••\"\n                              className=\"ag-input !pl-10 !pr-11\"\n+                             style={{paddingLeft:\"2.5rem\",paddingRight:\"2.75rem\"}}\n-                             style={{padding-left:\"2.5rem\",padding-right:\"2.75rem\"}}\n                              aria-label=\"Password\"\n                              disabled={false}\n                            >\n                            ...\n                        ...\n                  ...\n      ...\n",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
         "Failed to load resource: the server responded with a status of 404 (Not Found)"
       ],
       "pageErrors": [],
       "failedRequests": [
         {
-          "url": "http://localhost:3000/non-existent-route-xyz",
+          "url": "http://127.0.0.1:3000/settings",
+          "status": 307
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/agents",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/models",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/tasks",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/artifacts",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/approvals",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/memory",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/non-existent-route-xyz",
           "status": 404
         }
       ],
       "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\settings_page_load.png",
-      "durationMs": 66,
-      "timestamp": "2026-08-26T06:36:43.437Z",
+      "durationMs": 746,
+      "timestamp": "2026-10-13T09:39:43.334Z",
       "httpStatus": 200
     },
     {
       "testName": "Health API Response",
-      "url": "http://localhost:3000/api/health",
+      "url": "http://127.0.0.1:3000/api/health",
       "passed": true,
       "domAssertions": [
         {
@@ -143,23 +315,54 @@
         }
       ],
       "consoleErrors": [
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <InnerLayoutRouter url=\"/login?cal...\" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>\n      <SegmentViewNode type=\"page\" pagePath=\"login/page...\">\n        <SegmentTrieNode>\n        <ClientPageRoot Component={function LoginPage} searchParams={{...}} params={{}}>\n          <LoginPage params={Promise} searchParams={Promise}>\n            <div className=\"min-h-scre...\">\n              <div>\n              <div>\n              <div className=\"flex-1 md:...\">\n                <div className=\"flex-1 fle...\">\n                  <div>\n                  <div>\n                  <Suspense fallback={<div>}>\n                    <LoginForm>\n                      <form onSubmit={function handleSubmit} className=\"space-y-5\" noValidate={true}>\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Mail>\n                            <input\n                              id=\"email\"\n                              type=\"text\"\n                              autoComplete=\"username\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"Operator ID or email address\"\n                              className=\"ag-input !pl-10\"\n+                             style={{paddingLeft:\"2.5rem\"}}\n-                             style={{padding-left:\"2.5rem\"}}\n                              aria-label=\"User ID or Email address\"\n                              disabled={false}\n                            >\n                        <div className=\"space-y-1.5\">\n                          <label>\n                          <div className=\"relative f...\">\n                            <Lock>\n                            <input\n                              id=\"password\"\n                              type=\"password\"\n                              autoComplete=\"current-password\"\n                              required={true}\n                              value=\"\"\n                              onChange={function onChange}\n                              placeholder=\"••••••••••••\"\n                              className=\"ag-input !pl-10 !pr-11\"\n+                             style={{paddingLeft:\"2.5rem\",paddingRight:\"2.75rem\"}}\n-                             style={{padding-left:\"2.5rem\",padding-right:\"2.75rem\"}}\n                              aria-label=\"Password\"\n                              disabled={false}\n                            >\n                            ...\n                        ...\n                  ...\n      ...\n",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
         "Failed to load resource: the server responded with a status of 404 (Not Found)"
       ],
       "pageErrors": [],
       "failedRequests": [
         {
-          "url": "http://localhost:3000/non-existent-route-xyz",
+          "url": "http://127.0.0.1:3000/api/agents",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/models",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/tasks",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/artifacts",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/approvals",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/memory",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/non-existent-route-xyz",
           "status": 404
         }
       ],
       "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\health_api_response.png",
-      "durationMs": 68,
-      "timestamp": "2026-08-26T06:36:43.504Z",
+      "durationMs": 2237,
+      "timestamp": "2026-10-13T09:39:44.080Z",
       "httpStatus": 200
     },
     {
       "testName": "Readiness API Response",
-      "url": "http://localhost:3000/api/health/readiness",
+      "url": "http://127.0.0.1:3000/api/health/readiness",
       "passed": true,
       "domAssertions": [
         {
@@ -172,24 +375,54 @@
         }
       ],
       "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
         "Failed to load resource: the server responded with a status of 404 (Not Found)"
       ],
       "pageErrors": [],
       "failedRequests": [
         {
-          "url": "http://localhost:3000/non-existent-route-xyz",
+          "url": "http://127.0.0.1:3000/api/agents",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/models",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/tasks",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/artifacts",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/approvals",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/memory",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/non-existent-route-xyz",
           "status": 404
         }
       ],
       "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\readiness_api_response.png",
-      "durationMs": 66,
-      "timestamp": "2026-08-26T06:36:43.572Z",
+      "durationMs": 840,
+      "timestamp": "2026-10-13T09:39:46.317Z",
       "httpStatus": 200
     },
     {
       "testName": "Agents API Response",
-      "url": "http://localhost:3000/api/agents",
-      "passed": true,
+      "url": "http://127.0.0.1:3000/api/agents",
+      "passed": false,
       "domAssertions": [
         {
           "assertion": "Agents API returns parseable JSON",
@@ -197,32 +430,62 @@
         },
         {
           "assertion": "HTTP status 200",
-          "passed": true
+          "passed": false
         }
       ],
       "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
         "Failed to load resource: the server responded with a status of 404 (Not Found)"
       ],
       "pageErrors": [],
       "failedRequests": [
         {
-          "url": "http://localhost:3000/non-existent-route-xyz",
+          "url": "http://127.0.0.1:3000/api/agents",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/models",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/tasks",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/artifacts",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/approvals",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/memory",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/non-existent-route-xyz",
           "status": 404
         }
       ],
       "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\agents_api_response.png",
-      "durationMs": 76,
-      "timestamp": "2026-08-26T06:36:43.638Z",
-      "httpStatus": 200
+      "durationMs": 94,
+      "timestamp": "2026-10-13T09:39:47.158Z",
+      "httpStatus": 401
     },
     {
       "testName": "Models API Response",
-      "url": "http://localhost:3000/api/models",
-      "passed": true,
+      "url": "http://127.0.0.1:3000/api/models",
+      "passed": false,
       "domAssertions": [
         {
           "assertion": "HTTP 200",
-          "passed": true
+          "passed": false
         },
         {
           "assertion": "Returns valid JSON",
@@ -230,123 +493,198 @@
         }
       ],
       "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
         "Failed to load resource: the server responded with a status of 404 (Not Found)"
       ],
       "pageErrors": [],
       "failedRequests": [
         {
-          "url": "http://localhost:3000/non-existent-route-xyz",
+          "url": "http://127.0.0.1:3000/api/models",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/tasks",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/artifacts",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/approvals",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/memory",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/non-existent-route-xyz",
           "status": 404
         }
       ],
       "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\models_api_response.png",
-      "durationMs": 59,
-      "timestamp": "2026-08-26T06:36:43.714Z",
-      "httpStatus": 200
+      "durationMs": 103,
+      "timestamp": "2026-10-13T09:39:47.252Z",
+      "httpStatus": 401
     },
     {
       "testName": "Tasks API Response",
-      "url": "http://localhost:3000/api/tasks",
-      "passed": true,
+      "url": "http://127.0.0.1:3000/api/tasks",
+      "passed": false,
       "domAssertions": [
         {
           "assertion": "HTTP 200",
-          "passed": true
+          "passed": false
         }
       ],
       "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
         "Failed to load resource: the server responded with a status of 404 (Not Found)"
       ],
       "pageErrors": [],
       "failedRequests": [
         {
-          "url": "http://localhost:3000/non-existent-route-xyz",
+          "url": "http://127.0.0.1:3000/api/tasks",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/artifacts",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/approvals",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/memory",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/non-existent-route-xyz",
           "status": 404
         }
       ],
       "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\tasks_api_response.png",
-      "durationMs": 51,
-      "timestamp": "2026-08-26T06:36:43.774Z",
-      "httpStatus": 200
+      "durationMs": 81,
+      "timestamp": "2026-10-13T09:39:47.355Z",
+      "httpStatus": 401
     },
     {
       "testName": "Artifacts API Response",
-      "url": "http://localhost:3000/api/artifacts",
-      "passed": true,
+      "url": "http://127.0.0.1:3000/api/artifacts",
+      "passed": false,
       "domAssertions": [
         {
           "assertion": "HTTP 200",
-          "passed": true
+          "passed": false
         }
       ],
       "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
         "Failed to load resource: the server responded with a status of 404 (Not Found)"
       ],
       "pageErrors": [],
       "failedRequests": [
         {
-          "url": "http://localhost:3000/non-existent-route-xyz",
+          "url": "http://127.0.0.1:3000/api/artifacts",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/approvals",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/memory",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/non-existent-route-xyz",
           "status": 404
         }
       ],
       "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\artifacts_api_response.png",
-      "durationMs": 49,
-      "timestamp": "2026-08-26T06:36:43.825Z",
-      "httpStatus": 200
+      "durationMs": 89,
+      "timestamp": "2026-10-13T09:39:47.435Z",
+      "httpStatus": 401
     },
     {
       "testName": "Approvals API Response",
-      "url": "http://localhost:3000/api/approvals",
-      "passed": true,
+      "url": "http://127.0.0.1:3000/api/approvals",
+      "passed": false,
       "domAssertions": [
         {
           "assertion": "HTTP 200",
-          "passed": true
+          "passed": false
         }
       ],
       "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
         "Failed to load resource: the server responded with a status of 404 (Not Found)"
       ],
       "pageErrors": [],
       "failedRequests": [
         {
-          "url": "http://localhost:3000/non-existent-route-xyz",
+          "url": "http://127.0.0.1:3000/api/approvals",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/api/memory",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/non-existent-route-xyz",
           "status": 404
         }
       ],
       "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\approvals_api_response.png",
-      "durationMs": 49,
-      "timestamp": "2026-08-26T06:36:43.874Z",
-      "httpStatus": 200
+      "durationMs": 107,
+      "timestamp": "2026-10-13T09:39:47.525Z",
+      "httpStatus": 401
     },
     {
       "testName": "Memory API Response",
-      "url": "http://localhost:3000/api/memory",
-      "passed": true,
+      "url": "http://127.0.0.1:3000/api/memory",
+      "passed": false,
       "domAssertions": [
         {
           "assertion": "HTTP 200",
-          "passed": true
+          "passed": false
         }
       ],
       "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
         "Failed to load resource: the server responded with a status of 404 (Not Found)"
       ],
       "pageErrors": [],
       "failedRequests": [
         {
-          "url": "http://localhost:3000/non-existent-route-xyz",
+          "url": "http://127.0.0.1:3000/api/memory",
+          "status": 401
+        },
+        {
+          "url": "http://127.0.0.1:3000/non-existent-route-xyz",
           "status": 404
         }
       ],
       "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\memory_api_response.png",
-      "durationMs": 48,
-      "timestamp": "2026-08-26T06:36:43.923Z",
-      "httpStatus": 200
+      "durationMs": 90,
+      "timestamp": "2026-10-13T09:39:47.632Z",
+      "httpStatus": 401
     },
     {
       "testName": "Mobile 375px Viewport",
-      "url": "http://localhost:3000",
+      "url": "http://127.0.0.1:3000",
       "passed": true,
       "domAssertions": [
         {
@@ -360,15 +698,20 @@
       ],
       "consoleErrors": [],
       "pageErrors": [],
-      "failedRequests": [],
+      "failedRequests": [
+        {
+          "url": "http://127.0.0.1:3000/",
+          "status": 307
+        }
+      ],
       "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\mobile_375px_viewport.png",
-      "durationMs": 48,
-      "timestamp": "2026-08-26T06:36:44.025Z",
+      "durationMs": 531,
+      "timestamp": "2026-10-13T09:39:47.804Z",
       "httpStatus": 200
     },
     {
       "testName": "Tablet 768px Viewport",
-      "url": "http://localhost:3000",
+      "url": "http://127.0.0.1:3000",
       "passed": true,
       "domAssertions": [
         {
@@ -378,15 +721,20 @@
       ],
       "consoleErrors": [],
       "pageErrors": [],
-      "failedRequests": [],
+      "failedRequests": [
+        {
+          "url": "http://127.0.0.1:3000/",
+          "status": 307
+        }
+      ],
       "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\tablet_768px_viewport.png",
-      "durationMs": 51,
-      "timestamp": "2026-08-26T06:36:44.132Z",
+      "durationMs": 1099,
+      "timestamp": "2026-10-13T09:39:48.423Z",
       "httpStatus": 200
     },
     {
       "testName": "404 Not Found Page",
-      "url": "http://localhost:3000/non-existent-route-xyz",
+      "url": "http://127.0.0.1:3000/non-existent-route-xyz",
       "passed": true,
       "domAssertions": [
         {
@@ -400,13 +748,13 @@
       "pageErrors": [],
       "failedRequests": [
         {
-          "url": "http://localhost:3000/non-existent-route-xyz",
+          "url": "http://127.0.0.1:3000/non-existent-route-xyz",
           "status": 404
         }
       ],
       "screenshotPath": "C:\\D drive\\Antigravity\\antigravity-os\\artifacts\\level3\\browser\\404_not_found_page.png",
-      "durationMs": 53,
-      "timestamp": "2026-08-26T06:36:44.184Z",
+      "durationMs": 1255,
+      "timestamp": "2026-10-13T09:39:49.532Z",
       "httpStatus": 404
     }
   ]

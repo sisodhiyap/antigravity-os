@@ -118,7 +118,6 @@ function LoginForm() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Operator ID or email address"
             className="ag-input !pl-10"
-            style={{ paddingLeft: "2.5rem" }}
             aria-label="User ID or Email address"
             disabled={isLoading}
           />
@@ -141,7 +140,6 @@ function LoginForm() {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="••••••••••••"
             className="ag-input !pl-10 !pr-11"
-            style={{ paddingLeft: "2.5rem", paddingRight: "2.75rem" }}
             aria-label="Password"
             disabled={isLoading}
           />

@@ -9,7 +9,7 @@ import fs from "fs";
 import path from "path";
 import { startTestServer } from "./test-http-server";
 
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "http://127.0.0.1:3000";
 const EVIDENCE_DIR = path.resolve(process.cwd(), "artifacts", "level3", "browser");
 
 interface BrowserTestResult {

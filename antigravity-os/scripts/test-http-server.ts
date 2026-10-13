@@ -8,16 +8,24 @@ import { kernel } from "../src/kernel/kernel";
 import { quotaEngine } from "../src/server/ai/quota";
 import { policyEngine } from "../src/server/policy/policy-engine";
 
+import net from "net";
+
 export async function isPortOpen(port: number = 3000): Promise<boolean> {
   return new Promise((resolve) => {
-    const req = http.get(`http://localhost:${port}/api/health`, { timeout: 1000 }, (res) => {
+    const socket = new net.Socket();
+    socket.setTimeout(1000);
+    socket.once("connect", () => {
+      socket.destroy();
       resolve(true);
     });
-    req.on("error", () => resolve(false));
-    req.on("timeout", () => {
-      req.destroy();
+    socket.once("timeout", () => {
+      socket.destroy();
       resolve(false);
     });
+    socket.once("error", () => {
+      resolve(false);
+    });
+    socket.connect(port, "127.0.0.1");
   });
 }
 

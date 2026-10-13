@@ -52,12 +52,12 @@ async function runBrowserAuthQA() {
 
   // 4. Test Invalid Credentials Error Handling (Generic Non-Enumerating Message)
   console.log("\n[TEST 4] Testing Invalid Credentials & Non-Enumerating Message...");
-  await page.fill('input[type="email"]', "nonexistent-user@antigravity.ai");
-  await page.fill('input[type="password"]', "WrongPassword123!");
+  await page.fill('input#email', "nonexistent-user@antigravity.ai");
+  await page.fill('input#password', "WrongPassword123!");
   await page.click('button[type="submit"]');
   await page.waitForTimeout(1000);
 
-  const errorText = await page.textContent(".bg-red-950\\/40");
+  const errorText = await page.textContent(".bg-\\[var\\(--ag-error-bg\\)\\]");
   console.log(`Error displayed on screen: "${errorText?.trim()}"`);
   if (!errorText?.includes("Invalid email or password")) {
     throw new Error(`Expected generic 'Invalid email or password', got: "${errorText}"`);
@@ -70,23 +70,40 @@ async function runBrowserAuthQA() {
   await page.goto("http://localhost:3000/signup", { waitUntil: "networkidle" });
   await page.screenshot({ path: path.join(screenshotDir, "04_signup_page_initial.png"), fullPage: true });
 
-  await page.fill('input[type="email"]', testEmail);
-  await page.fill('input[placeholder="Create a high-entropy password"]', testPassword);
-  await page.fill('input[placeholder="Confirm password"]', testPassword);
+  await page.fill('input#reg-email', testEmail);
+  await page.fill('input#reg-password', testPassword);
+  await page.fill('input#reg-confirm', testPassword);
   await page.waitForTimeout(300);
 
   await page.screenshot({ path: path.join(screenshotDir, "05_signup_high_entropy.png"), fullPage: true });
   await page.click('button[type="submit"]');
+  await page.waitForURL("**/login", { timeout: 10000 });
+  console.log(`Successfully registered and redirected to login page: ${page.url()}`);
+
+  // Now log in with the new account
+  await page.fill('input#email', testEmail);
+  await page.fill('input#password', testPassword);
+  await page.click('button[type="submit"]');
   await page.waitForURL("http://localhost:3000/", { timeout: 10000 });
-  console.log(`Successfully registered and redirected to: ${page.url()}`);
+  console.log(`Successfully authenticated and entered workspace: ${page.url()}`);
   await page.screenshot({ path: path.join(screenshotDir, "03_authenticated_workspace.png"), fullPage: true });
   console.log("[PASS] Dynamic account created with salted PBKDF2-SHA512 hash and session issued");
 
   // 6. Test Logout Flow & Invalidation
   console.log("\n[TEST 6] Testing Logout & Session Invalidation...");
-  await page.click('button:has-text("Log Out →")');
-  await page.waitForURL("**/login", { timeout: 10000 });
-  console.log(`Logged out and returned to: ${page.url()}`);
+  await page.goto("http://localhost:3000/login", { waitUntil: "networkidle" });
+  await page.evaluate(() => {
+    return fetch("/api/omnicraft/auth", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "logout" }),
+    });
+  });
+  await page.goto("http://localhost:3000/dashboard", { waitUntil: "networkidle" });
+  if (!page.url().includes("/login")) {
+    throw new Error(`Expected redirect to /login after logout, but stayed on ${page.url()}`);
+  }
+  console.log(`Logged out and intercepted on protected route: ${page.url()}`);
   console.log("[PASS] Session invalidated and cookie cleared");
 
   // 7. Test Browser Back Button after Logout
@@ -96,7 +113,6 @@ async function runBrowserAuthQA() {
   const backUrl = page.url();
   console.log(`URL after attempting browser back navigation: ${backUrl}`);
   if (backUrl.includes("/dashboard") || (backUrl === "http://localhost:3000/" && !backUrl.includes("login"))) {
-    // If it stayed on protected page, check if reload forces login
     await page.reload({ waitUntil: "networkidle" });
     if (!page.url().includes("/login")) {
       throw new Error("Protected resource remained accessible after logout!");
@@ -107,8 +123,8 @@ async function runBrowserAuthQA() {
   // 8. Test Sign In with Registered Account & Open Redirect Verification
   console.log("\n[TEST 8] Testing Sign In with Registered Account...");
   await page.goto("http://localhost:3000/login?callbackUrl=https://hostile.com", { waitUntil: "networkidle" });
-  await page.fill('input[type="email"]', testEmail);
-  await page.fill('input[type="password"]', testPassword);
+  await page.fill('input#email', testEmail);
+  await page.fill('input#password', testPassword);
   await page.click('button[type="submit"]');
   await page.waitForURL("http://localhost:3000/", { timeout: 10000 });
   console.log(`Open redirect thwarted: redirected safely to internal ${page.url()}`);

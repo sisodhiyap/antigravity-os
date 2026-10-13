@@ -109,6 +109,9 @@ export function middleware(request: NextRequest) {
     pathname.startsWith("/todo-notes") ||
     pathname.startsWith("/health-center") ||
     pathname.startsWith("/certification") ||
+    pathname.startsWith("/creative") ||
+    pathname.startsWith("/presentx") ||
+    pathname.startsWith("/omnicraft") ||
     pathname.startsWith("/projects");
 
   if (isProtectedPath && !sessionToken) {
