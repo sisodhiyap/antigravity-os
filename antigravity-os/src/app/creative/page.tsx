@@ -42,6 +42,9 @@ interface HistoryItem {
   prompt: string;
   provider: string;
   model: string;
+  isAiGenerated?: boolean;
+  inferenceType?: string;
+  fallbackReason?: string;
   url: string;
   cloudinaryUrl?: string;
   timestamp: string;
@@ -83,6 +86,9 @@ export default function SovereignCreativeStudioPage() {
     url: string;
     provider: string;
     model: string;
+    isAiGenerated: boolean;
+    inferenceType: string;
+    fallbackReason?: string;
     bytes: number;
     prompt: string;
     aspectRatio: string;
@@ -105,6 +111,9 @@ export default function SovereignCreativeStudioPage() {
     mode: "TTS" | "MUSIC";
     provider: string;
     model: string;
+    isAiGenerated: boolean;
+    inferenceType: string;
+    fallbackReason?: string;
     bytes: number;
     durationSeconds: number;
     prompt: string;
@@ -123,6 +132,9 @@ export default function SovereignCreativeStudioPage() {
     status: string;
     progress: number;
     stageDescription: string;
+    isAiGenerated?: boolean;
+    inferenceType?: string;
+    fallbackReason?: string;
     resultUrl?: string;
     error?: string;
   } | null>(null);
@@ -130,6 +142,10 @@ export default function SovereignCreativeStudioPage() {
     url: string;
     mode: string;
     provider: string;
+    model: string;
+    isAiGenerated: boolean;
+    inferenceType: string;
+    fallbackReason?: string;
     bytes: number;
     durationSeconds: number;
     isSlideshow: boolean;
@@ -226,6 +242,9 @@ export default function SovereignCreativeStudioPage() {
         url: result.url,
         provider: result.provider,
         model: result.model,
+        isAiGenerated: Boolean(result.isAiGenerated),
+        inferenceType: result.inferenceType || (result.provider === "sandbox" ? "DETERMINISTIC_SANDBOX_FALLBACK" : "EXTERNAL_MODEL_INFERENCE"),
+        fallbackReason: result.fallbackReason,
         bytes: result.bytes,
         prompt: result.prompt,
         aspectRatio: result.aspectRatio,
@@ -236,6 +255,9 @@ export default function SovereignCreativeStudioPage() {
         prompt: result.prompt,
         provider: result.provider,
         model: result.model,
+        isAiGenerated: Boolean(result.isAiGenerated),
+        inferenceType: result.inferenceType,
+        fallbackReason: result.fallbackReason,
         url: result.url,
         cloudinaryUrl: result.cloudinaryUrl,
         bytes: result.bytes,
@@ -281,6 +303,9 @@ export default function SovereignCreativeStudioPage() {
         mode: result.mode,
         provider: result.provider,
         model: result.model,
+        isAiGenerated: Boolean(result.isAiGenerated),
+        inferenceType: result.inferenceType || "PROCEDURAL_SYNTHESIS_FALLBACK",
+        fallbackReason: result.fallbackReason,
         bytes: result.bytes,
         durationSeconds: result.durationSeconds,
         prompt: result.prompt,
@@ -291,6 +316,9 @@ export default function SovereignCreativeStudioPage() {
         prompt: result.prompt,
         provider: result.provider,
         model: result.model,
+        isAiGenerated: Boolean(result.isAiGenerated),
+        inferenceType: result.inferenceType,
+        fallbackReason: result.fallbackReason,
         url: result.url,
         cloudinaryUrl: result.cloudinaryUrl,
         bytes: result.bytes,
@@ -358,6 +386,10 @@ export default function SovereignCreativeStudioPage() {
             url: job.resultUrl || job.cloudinaryUrl,
             mode: job.mode,
             provider: job.provider,
+            model: job.model || (job.isSlideshowFallback ? "ffmpeg-slideshow-assembler" : "motion-diffuser-v2"),
+            isAiGenerated: Boolean(job.isAiGenerated),
+            inferenceType: job.inferenceType || (job.isSlideshowFallback ? "SLIDESHOW_FALLBACK" : "PROCEDURAL_FFMPEG_SYNTHESIS"),
+            fallbackReason: job.fallbackReason,
             bytes: job.bytes || 0,
             durationSeconds: job.durationSeconds,
             isSlideshow: job.isSlideshowFallback,
@@ -367,7 +399,10 @@ export default function SovereignCreativeStudioPage() {
             type: job.isSlideshowFallback ? "SLIDESHOW" : "VIDEO",
             prompt: job.prompt,
             provider: job.provider,
-            model: job.model,
+            model: job.model || (job.isSlideshowFallback ? "ffmpeg-slideshow-assembler" : "motion-diffuser-v2"),
+            isAiGenerated: Boolean(job.isAiGenerated),
+            inferenceType: job.inferenceType,
+            fallbackReason: job.fallbackReason,
             url: job.resultUrl || job.cloudinaryUrl,
             cloudinaryUrl: job.cloudinaryUrl,
             bytes: job.bytes,
@@ -687,10 +722,33 @@ export default function SovereignCreativeStudioPage() {
 
                 {/* Metadata Footer */}
                 {currentImageResult && (
-                  <div className="pt-4 border-t border-white/5 flex flex-wrap items-center justify-between text-xs text-[#827C70] font-mono">
-                    <span>Engine: {currentImageResult.provider} ({currentImageResult.model})</span>
-                    <span>Bytes: {(currentImageResult.bytes / 1024).toFixed(1)} KB</span>
-                    <span>Aspect: {currentImageResult.aspectRatio}</span>
+                  <div className="pt-4 border-t border-white/5 space-y-2">
+                    <div className="flex items-center justify-between">
+                      {currentImageResult.isAiGenerated ? (
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-[#F5C451]/15 text-[#FFD978] border border-[#F5C451]/30">
+                          <Sparkles className="w-3.5 h-3.5 text-[#F5C451]" />
+                          AI MODEL INFERENCE ({currentImageResult.provider} • {currentImageResult.model})
+                        </span>
+                      ) : (
+                        <span
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-white/10 text-[#B8B2A5] border border-white/15"
+                          title={currentImageResult.fallbackReason}
+                        >
+                          <Sliders className="w-3.5 h-3.5 text-[#827C70]" />
+                          DETERMINISTIC FALLBACK ({currentImageResult.inferenceType})
+                        </span>
+                      )}
+                      <span className="text-xs font-mono text-[#827C70]">{(currentImageResult.bytes / 1024).toFixed(1)} KB</span>
+                    </div>
+                    {currentImageResult.fallbackReason && !currentImageResult.isAiGenerated && (
+                      <p className="text-[11px] text-[#827C70] font-mono">
+                        Provenance notice: {currentImageResult.fallbackReason}
+                      </p>
+                    )}
+                    <div className="flex flex-wrap items-center justify-between text-xs text-[#827C70] font-mono pt-1 border-t border-white/5">
+                      <span>Engine: {currentImageResult.provider} ({currentImageResult.model})</span>
+                      <span>Aspect: {currentImageResult.aspectRatio}</span>
+                    </div>
                   </div>
                 )}
               </div>
@@ -904,9 +962,20 @@ export default function SovereignCreativeStudioPage() {
                     <div className="bg-[#080808] border border-[#F5C451]/30 rounded-2xl p-6 space-y-6 shadow-2xl">
                       <div className="flex items-center justify-between">
                         <div className="space-y-1">
-                          <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded-full bg-[#F5C451]/20 text-[#FFD978]">
-                            {currentAudioResult.mode} TRACK
-                          </span>
+                          {currentAudioResult.isAiGenerated ? (
+                            <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded-full bg-[#F5C451]/20 text-[#FFD978] flex items-center gap-1 w-fit">
+                              <Sparkles className="w-3 h-3 text-[#F5C451]" />
+                              AI MODEL INFERENCE • {currentAudioResult.mode} TRACK
+                            </span>
+                          ) : (
+                            <span
+                              className="text-[10px] font-mono uppercase px-2 py-0.5 rounded-full bg-white/10 text-[#B8B2A5] flex items-center gap-1 w-fit"
+                              title={currentAudioResult.fallbackReason}
+                            >
+                              <Layers className="w-3 h-3 text-[#827C70]" />
+                              PROCEDURAL SYNTHESIS (FALLBACK) • {currentAudioResult.mode} TRACK
+                            </span>
+                          )}
                           <h3 className="text-sm font-semibold text-[#F7F5EF] line-clamp-1">
                             {currentAudioResult.prompt}
                           </h3>
@@ -947,10 +1016,17 @@ export default function SovereignCreativeStudioPage() {
 
                 {/* Footer Metadata */}
                 {currentAudioResult && (
-                  <div className="pt-4 border-t border-white/5 flex flex-wrap items-center justify-between text-xs text-[#827C70] font-mono">
-                    <span>Engine: {currentAudioResult.provider} ({currentAudioResult.model})</span>
-                    <span>Bytes: {(currentAudioResult.bytes / 1024).toFixed(1)} KB</span>
-                    <span>Format: RIFF/WAV 44.1kHz</span>
+                  <div className="pt-4 border-t border-white/5 space-y-1.5 text-xs text-[#827C70] font-mono">
+                    <div className="flex flex-wrap items-center justify-between">
+                      <span>Engine: {currentAudioResult.provider} ({currentAudioResult.model})</span>
+                      <span>Bytes: {(currentAudioResult.bytes / 1024).toFixed(1)} KB</span>
+                      <span>Format: RIFF/WAV 44.1kHz</span>
+                    </div>
+                    {currentAudioResult.fallbackReason && !currentAudioResult.isAiGenerated && (
+                      <p className="text-[11px] text-[#827C70] pt-1 border-t border-white/5">
+                        Provenance notice: {currentAudioResult.fallbackReason}
+                      </p>
+                    )}
                   </div>
                 )}
               </div>
@@ -1169,10 +1245,34 @@ export default function SovereignCreativeStudioPage() {
 
                 {/* Footer Metadata */}
                 {currentVideoResult && (
-                  <div className="pt-4 border-t border-white/5 flex flex-wrap items-center justify-between text-xs text-[#827C70] font-mono">
-                    <span>Engine: {currentVideoResult.provider}</span>
-                    <span>Bytes: {(currentVideoResult.bytes / 1024).toFixed(1)} KB</span>
-                    <span>Format: H.264 / MP4 (FastStart)</span>
+                  <div className="pt-4 border-t border-white/5 space-y-2">
+                    <div className="flex items-center justify-between">
+                      {currentVideoResult.isAiGenerated ? (
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-[#F5C451]/15 text-[#FFD978] border border-[#F5C451]/30">
+                          <Sparkles className="w-3.5 h-3.5 text-[#F5C451]" />
+                          AI MODEL INFERENCE ({currentVideoResult.provider})
+                        </span>
+                      ) : (
+                        <span
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-white/10 text-[#B8B2A5] border border-white/15"
+                          title={currentVideoResult.fallbackReason}
+                        >
+                          <Film className="w-3.5 h-3.5 text-[#827C70]" />
+                          PROCEDURAL MOTION SYNTHESIS ({currentVideoResult.inferenceType})
+                        </span>
+                      )}
+                      <span className="text-xs font-mono text-[#827C70]">{(currentVideoResult.bytes / 1024).toFixed(1)} KB</span>
+                    </div>
+                    {currentVideoResult.fallbackReason && !currentVideoResult.isAiGenerated && (
+                      <p className="text-[11px] text-[#827C70] font-mono">
+                        Provenance notice: {currentVideoResult.fallbackReason}
+                      </p>
+                    )}
+                    <div className="flex flex-wrap items-center justify-between text-xs text-[#827C70] font-mono pt-1 border-t border-white/5">
+                      <span>Engine: {currentVideoResult.provider} ({currentVideoResult.model})</span>
+                      <span>Format: H.264 / MP4 (FastStart)</span>
+                      <span>Duration: {currentVideoResult.durationSeconds}s</span>
+                    </div>
                   </div>
                 )}
               </div>
@@ -1360,9 +1460,23 @@ export default function SovereignCreativeStudioPage() {
                 >
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded-full bg-[#F5C451]/20 text-[#FFD978]">
-                        {item.type}
-                      </span>
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded-full bg-[#F5C451]/20 text-[#FFD978]">
+                          {item.type}
+                        </span>
+                        {item.isAiGenerated ? (
+                          <span className="text-[9px] font-mono uppercase px-1.5 py-0.5 rounded bg-[#F5C451]/15 text-[#FFD978] border border-[#F5C451]/30">
+                            AI
+                          </span>
+                        ) : (
+                          <span
+                            className="text-[9px] font-mono uppercase px-1.5 py-0.5 rounded bg-white/10 text-[#B8B2A5] border border-white/10"
+                            title={item.fallbackReason || "Procedural fallback"}
+                          >
+                            Fallback
+                          </span>
+                        )}
+                      </div>
                       <span className="text-[10px] font-mono text-[#827C70]">
                         {new Date(item.timestamp).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
                       </span>

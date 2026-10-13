@@ -1,11 +1,11 @@
 [
   {
-    "assetId": "asset_1791882333748_cvoc2",
+    "assetId": "asset_1791885323985_6emxyq",
     "projectId": "default_project",
     "workflowId": "default_workflow",
     "modelId": "flux1-schnell-fp8",
     "modelVersion": "1.0",
-    "seed": 572158713,
+    "seed": 596211077,
     "parameters": {
       "width": 1024,
       "height": 1024,
@@ -16,21 +16,21 @@
     "inputHashes": [
       "f66bfc5e9880ce2860800db889a3448968f8436eb00002938e8a07c444329357"
     ],
-    "outputHash": "02390a264f1326e42a08323b69659007afbd6ceb744b9434b128fc324e129e90",
+    "outputHash": "b97c3e59e22d84622bafd4af0a12263a3a75ed75b299170f5254c7a1703fd763",
     "generationTimeMs": 1200,
     "hardware": "Local GPU (NVIDIA DirectML)",
     "localOrCloud": "LOCAL",
     "license": "Apache 2.0 / Open Source",
     "verificationStatus": "VERIFIED",
-    "timestamp": "2026-10-13T09:05:33.748Z"
+    "timestamp": "2026-10-13T09:55:23.985Z"
   },
   {
-    "assetId": "asset_1791882333752_vnbnu4",
+    "assetId": "asset_1791885323988_umkqt",
     "projectId": "default_project",
     "workflowId": "default_workflow",
     "modelId": "wan2.1-t2v-1.3b",
     "modelVersion": "1.0",
-    "seed": 550699922,
+    "seed": 700377205,
     "parameters": {
       "width": 1024,
       "height": 1024,
@@ -41,21 +41,21 @@
     "inputHashes": [
       "b6d30527dedcee0362eb1de62d633ef0eff227992a89e70bb0544676bf6f0b07"
     ],
-    "outputHash": "cebbb394958efff97cbfdd0d567a9d3e70bc812f0bf4f4a8ed56ffc0301de838",
+    "outputHash": "b9764350514df6db95b85da043733c5a33da01e3ef98484a6b6a530752268b46",
     "generationTimeMs": 1200,
     "hardware": "Local GPU (NVIDIA DirectML)",
     "localOrCloud": "LOCAL",
     "license": "Apache 2.0 / Open Source",
     "verificationStatus": "VERIFIED",
-    "timestamp": "2026-10-13T09:05:33.752Z"
+    "timestamp": "2026-10-13T09:55:23.988Z"
   },
   {
-    "assetId": "asset_1791882333756_6xs7a",
+    "assetId": "asset_1791885323991_g83w9e",
     "projectId": "default_project",
     "workflowId": "default_workflow",
     "modelId": "ace-step-audio",
     "modelVersion": "1.0",
-    "seed": 95172261,
+    "seed": 184458064,
     "parameters": {
       "width": 1024,
       "height": 1024,
@@ -66,21 +66,21 @@
     "inputHashes": [
       "a72dcf80d1ed21bbd81fab09f7a1e80da8a2b0a1c7096343ba835f85b57bc5ce"
     ],
-    "outputHash": "0d2bb1dbeeb079b71b8f94b0d8beac0ad45cc45c8b1249894a4b10b42583b5b9",
+    "outputHash": "e8c1937ec07f14c5927b0d02b4b960c53be4b31e191082aab0c47be30198f179",
     "generationTimeMs": 1200,
     "hardware": "Local GPU (NVIDIA DirectML)",
     "localOrCloud": "LOCAL",
     "license": "Apache 2.0 / Open Source",
     "verificationStatus": "VERIFIED",
-    "timestamp": "2026-10-13T09:05:33.756Z"
+    "timestamp": "2026-10-13T09:55:23.991Z"
   },
   {
-    "assetId": "asset_1791882333759_vi2xcx",
+    "assetId": "asset_1791885323994_6mjo1d",
     "projectId": "default_project",
     "workflowId": "default_workflow",
     "modelId": "triposr-mesh-gen",
     "modelVersion": "1.0",
-    "seed": 465044661,
+    "seed": 43116183,
     "parameters": {
       "width": 1024,
       "height": 1024,
@@ -91,12 +91,12 @@
     "inputHashes": [
       "e6f536463417595ed484016761631ee5b2689135d160946f784fc8dcdab03d50"
     ],
-    "outputHash": "b64c815ff79c06e9d1a0b141b4e2f0614f76fff2c6d0649a0b78a40d22aeb45a",
+    "outputHash": "c43e89671dca5eeedfb2c4cdff64025f619121b9316fb900fe8e2e049658c36e",
     "generationTimeMs": 1200,
     "hardware": "Local GPU (NVIDIA DirectML)",
     "localOrCloud": "LOCAL",
     "license": "Apache 2.0 / Open Source",
     "verificationStatus": "VERIFIED",
-    "timestamp": "2026-10-13T09:05:33.760Z"
+    "timestamp": "2026-10-13T09:55:23.994Z"
   }
 ]

@@ -1,6 +1,6 @@
 {
   "suite": "PresentX 26-Test Export Quality Director Suite",
-  "timestamp": "2026-10-13T09:06:40.209Z",
+  "timestamp": "2026-10-13T10:13:29.928Z",
   "totalTests": 26,
   "passedCount": 26,
   "failedCount": 0,
@@ -10,7 +10,7 @@
       "testNumber": 1,
       "name": "Basic Deck",
       "verdict": "PASSED",
-      "details": "Score: 98/100, Cert ID: cert_qual_1791882399630_xw09m"
+      "details": "Score: 98/100, Cert ID: cert_qual_1791886409384_2hbm1"
     },
     {
       "testNumber": 2,
@@ -148,7 +148,7 @@
       "testNumber": 24,
       "name": "Basket Vault Isolation",
       "verdict": "PASSED",
-      "details": "111 isolated manifests verified in vault."
+      "details": "119 isolated manifests verified in vault."
     },
     {
       "testNumber": 25,
@@ -160,7 +160,7 @@
       "testNumber": 26,
       "name": "Independent Evidence Verification",
       "verdict": "PASSED",
-      "details": "SHA-256 Signature verified: f0b8283eff9af9a9..."
+      "details": "SHA-256 Signature verified: bae1783bdb2e0012..."
     }
   ]
 }

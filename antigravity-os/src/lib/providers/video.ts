@@ -36,6 +36,12 @@ export interface VideoGenerationRequest {
   audioUrl?: string;
 }
 
+export type VideoInferenceType =
+  | "EXTERNAL_MODEL_INFERENCE"
+  | "LOCAL_MODEL_INFERENCE"
+  | "PROCEDURAL_FFMPEG_SYNTHESIS"
+  | "SLIDESHOW_FALLBACK";
+
 export interface VideoJob {
   jobId: string;
   status: VideoJobStatus;
@@ -43,6 +49,9 @@ export interface VideoJob {
   stageDescription: string;
   mode: VideoMode;
   isSlideshowFallback: boolean;
+  isAiGenerated: boolean;
+  inferenceType: VideoInferenceType;
+  fallbackReason?: string;
   provider: string;
   model: string;
   prompt: string;
@@ -137,6 +146,11 @@ export class VideoProviderManager {
     const jobId = `vid_${Date.now()}_${crypto.randomBytes(4).toString("hex")}`;
     const mode: VideoMode = request.mode || (request.imageUrl ? "IMAGE_TO_VIDEO" : "TEXT_TO_VIDEO");
     const isSlideshowFallback = mode === "SLIDESHOW";
+    const inferenceType: VideoInferenceType = isSlideshowFallback ? "SLIDESHOW_FALLBACK" : "PROCEDURAL_FFMPEG_SYNTHESIS";
+    const isAiGenerated = false;
+    const fallbackReason = isSlideshowFallback
+      ? "Slideshow mode active; sequenced static frames with FFmpeg cross-fades."
+      : "Procedural camera drift synthesis via native FFmpeg with acoustic audio backing (non-neural diffusion).";
     const aspectRatio = request.aspectRatio || "16:9";
     const durationSeconds = Math.max(3, Math.min(request.durationSeconds || 5, 15));
 
@@ -157,6 +171,9 @@ export class VideoProviderManager {
       stageDescription: "Video job queued in Sovereign Engine.",
       mode,
       isSlideshowFallback,
+      isAiGenerated,
+      inferenceType,
+      fallbackReason,
       provider: isSlideshowFallback ? "slideshow-fallback" : "sovereign-video-engine",
       model: isSlideshowFallback ? "ffmpeg-slideshow-assembler" : "motion-diffuser-v2",
       prompt: request.prompt || "Cinematic video generation",
@@ -323,7 +340,7 @@ export class VideoProviderManager {
         console.warn("Cloudinary upload failed, local artifact retained:", cloudErr);
       }
 
-      update("completed", 100, job.isSlideshowFallback ? "Slideshow assembly completed successfully." : "AI video synthesis completed successfully.");
+      update("completed", 100, job.isSlideshowFallback ? "Slideshow assembly completed successfully." : "Procedural motion video synthesis completed successfully.");
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : String(err);
       job.status = "failed";

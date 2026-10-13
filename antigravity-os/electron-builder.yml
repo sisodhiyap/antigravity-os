@@ -7,6 +7,8 @@ directories:
 files:
   - "dist/**/*"
   - "public/**/*"
+  - ".next/**/*"
+  - "prisma/**/*"
   - "package.json"
 win:
   target:

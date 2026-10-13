@@ -74,9 +74,10 @@ function getServerLogPath(): string {
 function buildServerEnv(): NodeJS.ProcessEnv {
   const env: Record<string, string | undefined> = { ...process.env };
 
-  // Set production mode
+  // Set production mode and instruct Electron executable to run as Node.js CLI runtime
   env.NODE_ENV = "production";
   env.PORT = "3000";
+  env.ELECTRON_RUN_AS_NODE = "1";
 
   // Try loading a user-placed .env from the AppData config directory
   const appDataEnv = path.join(

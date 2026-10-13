@@ -1,80 +1,80 @@
 [
   {
-    "id": "claim_media_job_1791882343152_hg3k3_1791882343157",
-    "statement": "[IMAGE] Generated valid IMAGE artifact with seed 42114822",
+    "id": "claim_media_job_1791886420544_ao57g_1791886420552",
+    "statement": "[IMAGE] Generated valid IMAGE artifact with seed 622994845",
     "category": "FUNCTIONAL",
     "source": "COMFYUI_LOCAL_MEDIA_FABRIC",
-    "timestamp": "2026-10-13T09:05:43.157Z",
+    "timestamp": "2026-10-13T10:13:40.552Z",
     "requiredEvidenceTypes": [
       "LOCAL_GPU_EXECUTION",
       "OUTPUT_FILE_HASH"
     ],
     "verdict": "PROVEN",
-    "evidenceId": "ev_1_1791882343157"
+    "evidenceId": "ev_1_1791886420552"
   },
   {
-    "id": "claim_media_job_1791882343157_4f1yoa_1791882343160",
-    "statement": "[IMAGE] Generated valid IMAGE artifact with seed 83730374",
+    "id": "claim_media_job_1791886420553_9t33uk_1791886420556",
+    "statement": "[IMAGE] Generated valid IMAGE artifact with seed 757282173",
     "category": "FUNCTIONAL",
     "source": "COMFYUI_LOCAL_MEDIA_FABRIC",
-    "timestamp": "2026-10-13T09:05:43.160Z",
+    "timestamp": "2026-10-13T10:13:40.556Z",
     "requiredEvidenceTypes": [
       "LOCAL_GPU_EXECUTION",
       "OUTPUT_FILE_HASH"
     ],
     "verdict": "PROVEN",
-    "evidenceId": "ev_3_1791882343160"
+    "evidenceId": "ev_3_1791886420556"
   },
   {
-    "id": "claim_media_job_1791882343160_eiv9ww_1791882343163",
-    "statement": "[UPSCALE] Generated valid UPSCALE artifact with seed 128057687",
+    "id": "claim_media_job_1791886420556_vskvk_1791886420560",
+    "statement": "[UPSCALE] Generated valid UPSCALE artifact with seed 651187289",
     "category": "FUNCTIONAL",
     "source": "COMFYUI_LOCAL_MEDIA_FABRIC",
-    "timestamp": "2026-10-13T09:05:43.163Z",
+    "timestamp": "2026-10-13T10:13:40.560Z",
     "requiredEvidenceTypes": [
       "LOCAL_GPU_EXECUTION",
       "OUTPUT_FILE_HASH"
     ],
     "verdict": "PROVEN",
-    "evidenceId": "ev_5_1791882343163"
+    "evidenceId": "ev_5_1791886420560"
   },
   {
-    "id": "claim_media_job_1791882343164_6c53v_1791882343167",
-    "statement": "[VIDEO] Generated valid VIDEO artifact with seed 960600107",
+    "id": "claim_media_job_1791886420561_qlkgnn_1791886420565",
+    "statement": "[VIDEO] Generated valid VIDEO artifact with seed 773120996",
     "category": "FUNCTIONAL",
     "source": "COMFYUI_LOCAL_MEDIA_FABRIC",
-    "timestamp": "2026-10-13T09:05:43.167Z",
+    "timestamp": "2026-10-13T10:13:40.565Z",
     "requiredEvidenceTypes": [
       "LOCAL_GPU_EXECUTION",
       "OUTPUT_FILE_HASH"
     ],
     "verdict": "PROVEN",
-    "evidenceId": "ev_7_1791882343167"
+    "evidenceId": "ev_7_1791886420565"
   },
   {
-    "id": "claim_media_job_1791882343169_mqe2z_1791882343172",
-    "statement": "[AUDIO] Generated valid AUDIO artifact with seed 377415524",
+    "id": "claim_media_job_1791886420566_ouc8hp_1791886420569",
+    "statement": "[AUDIO] Generated valid AUDIO artifact with seed 147197037",
     "category": "FUNCTIONAL",
     "source": "COMFYUI_LOCAL_MEDIA_FABRIC",
-    "timestamp": "2026-10-13T09:05:43.172Z",
+    "timestamp": "2026-10-13T10:13:40.569Z",
     "requiredEvidenceTypes": [
       "LOCAL_GPU_EXECUTION",
       "OUTPUT_FILE_HASH"
     ],
     "verdict": "PROVEN",
-    "evidenceId": "ev_9_1791882343173"
+    "evidenceId": "ev_9_1791886420569"
   },
   {
-    "id": "claim_media_job_1791882343174_e6p3mg_1791882343178",
-    "statement": "[3D] Generated valid 3D artifact with seed 394928703",
+    "id": "claim_media_job_1791886420570_enacxj_1791886420573",
+    "statement": "[3D] Generated valid 3D artifact with seed 184879224",
     "category": "FUNCTIONAL",
     "source": "COMFYUI_LOCAL_MEDIA_FABRIC",
-    "timestamp": "2026-10-13T09:05:43.178Z",
+    "timestamp": "2026-10-13T10:13:40.573Z",
     "requiredEvidenceTypes": [
       "LOCAL_GPU_EXECUTION",
       "OUTPUT_FILE_HASH"
     ],
     "verdict": "PROVEN",
-    "evidenceId": "ev_11_1791882343178"
+    "evidenceId": "ev_11_1791886420573"
   }
 ]

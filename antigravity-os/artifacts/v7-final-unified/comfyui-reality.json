@@ -178,7 +178,7 @@
       "author": "Antigravity Media Lab",
       "hash": "a1b2c3d4e5f67890",
       "verified": true,
-      "lastTested": "2026-10-13T09:06:26.268Z"
+      "lastTested": "2026-10-13T10:13:20.200Z"
     },
     {
       "workflowId": "wf_txt2video_wan_cinematic",
@@ -206,7 +206,7 @@
       "author": "Antigravity Media Lab",
       "hash": "b2c3d4e5f6a17890",
       "verified": true,
-      "lastTested": "2026-10-13T09:06:26.268Z"
+      "lastTested": "2026-10-13T10:13:20.200Z"
     },
     {
       "workflowId": "wf_img2video_svd",
@@ -233,7 +233,7 @@
       "author": "Antigravity Media Lab",
       "hash": "c3d4e5f6a1b27890",
       "verified": true,
-      "lastTested": "2026-10-13T09:06:26.268Z"
+      "lastTested": "2026-10-13T10:13:20.200Z"
     },
     {
       "workflowId": "wf_audio_synth",
@@ -260,7 +260,7 @@
       "author": "Antigravity Media Lab",
       "hash": "d4e5f6a1b2c37890",
       "verified": true,
-      "lastTested": "2026-10-13T09:06:26.268Z"
+      "lastTested": "2026-10-13T10:13:20.200Z"
     },
     {
       "workflowId": "wf_3d_triposr",
@@ -285,7 +285,7 @@
       "author": "Antigravity Media Lab",
       "hash": "e5f6a1b2c3d47890",
       "verified": true,
-      "lastTested": "2026-10-13T09:06:26.268Z"
+      "lastTested": "2026-10-13T10:13:20.200Z"
     }
   ],
   "localFirstCompliance": true

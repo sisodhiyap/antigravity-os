@@ -1,78 +1,78 @@
 [
   {
-    "claimId": "claim_d3ab697b1213ef42",
+    "claimId": "claim_57db42f04d47de05",
     "text": "Dashboard requires OAuth2 login and SQLite persistence.",
     "type": "FACTUAL",
     "status": "OBSERVED",
     "evidenceLevel": "E3",
     "confidence": 0.4,
     "riskCategory": "GENERAL",
-    "createdAt": 1791882386255,
-    "updatedAt": 1791882386255,
+    "createdAt": 1791886400187,
+    "updatedAt": 1791886400187,
     "sourceIds": [
       "src_file_bbccaf0dbf79"
     ],
     "evidenceIds": [
-      "ev_696c28a21fdb"
+      "ev_e8a8f380eafb"
     ],
     "modelIds": [],
     "verificationMethods": [],
     "contradictions": [],
     "freshness": {
       "freshnessClass": "STABLE",
-      "lastVerified": 1791882386255,
+      "lastVerified": 1791886400187,
       "expirationPolicy": "STANDARD_30_DAYS",
       "isStale": false
     },
     "owner": "ANTIGRAVITY_OPERATOR",
     "projectId": "AGY_V7_CORE",
-    "hash": "100e9d24ed934a375c20078b2fffa02e62322376c3551c5b5d7c5bbd3f0e4683",
+    "hash": "6d64d8608165f07478ae381d263761f47249b0a94f55382284ce0159bf6205d6",
     "provenanceTrail": [
-      "Claim registered at 2026-10-13T09:06:26.255Z with status OBSERVED"
+      "Claim registered at 2026-10-13T10:13:20.187Z with status OBSERVED"
     ]
   },
   {
-    "claimId": "claim_7f3bd7f0f91a670a",
+    "claimId": "claim_7bddb8aaf4cac58b",
     "text": "SQLite is operational.",
     "type": "FACTUAL",
     "status": "OBSERVED",
     "evidenceLevel": "E3",
     "confidence": 0.4,
     "riskCategory": "GENERAL",
-    "createdAt": 1791882386255,
-    "updatedAt": 1791882386255,
+    "createdAt": 1791886400187,
+    "updatedAt": 1791886400187,
     "sourceIds": [
       "src_file_bbccaf0dbf79"
     ],
     "evidenceIds": [
-      "ev_8c4d456883af"
+      "ev_d9cd53fd17db"
     ],
     "modelIds": [],
     "verificationMethods": [],
     "contradictions": [],
     "freshness": {
       "freshnessClass": "STABLE",
-      "lastVerified": 1791882386255,
+      "lastVerified": 1791886400187,
       "expirationPolicy": "STANDARD_30_DAYS",
       "isStale": false
     },
     "owner": "ANTIGRAVITY_OPERATOR",
     "projectId": "AGY_V7_CORE",
-    "hash": "2536fdad73f0216f9582778ddb1c826790c6bda6a35813ada2db077e6134a1b8",
+    "hash": "13bcc820eebb987b7f987fd373f82ec4a46c88e6a392d642eab30fe5e8ee6610",
     "provenanceTrail": [
-      "Claim registered at 2026-10-13T09:06:26.255Z with status OBSERVED"
+      "Claim registered at 2026-10-13T10:13:20.187Z with status OBSERVED"
     ]
   },
   {
-    "claimId": "claim_9836c3a7691edd36",
+    "claimId": "claim_8e179606dd6c4740",
     "text": "Antigravity OS v7.0 preserves frozen core immutability.",
     "type": "FACTUAL",
     "status": "SUPPORTED",
     "evidenceLevel": "E3",
     "confidence": 0.8,
     "riskCategory": "GENERAL",
-    "createdAt": 1791882386258,
-    "updatedAt": 1791882386258,
+    "createdAt": 1791886400190,
+    "updatedAt": 1791886400190,
     "sourceIds": [],
     "evidenceIds": [
       "ev_core_01"
@@ -82,27 +82,27 @@
     "contradictions": [],
     "freshness": {
       "freshnessClass": "STABLE",
-      "lastVerified": 1791882386258,
+      "lastVerified": 1791886400190,
       "expirationPolicy": "STANDARD_30_DAYS",
       "isStale": false
     },
     "owner": "ANTIGRAVITY_OPERATOR",
     "projectId": "AGY_V7_CORE",
-    "hash": "caa07354dc17c9291e731fc48ae5dccf671b51d821011d651d9d4d8011ee75f1",
+    "hash": "7b2c8d92bc537f963bd09fa6fe4d0e1950382d911bc17449fbb15a58cd511d17",
     "provenanceTrail": [
-      "Claim registered at 2026-10-13T09:06:26.258Z with status SUPPORTED"
+      "Claim registered at 2026-10-13T10:13:20.190Z with status SUPPORTED"
     ]
   },
   {
-    "claimId": "claim_68b5324986b29e7a",
+    "claimId": "claim_0d12f0b3cd6909c7",
     "text": "Quantum processor Q1 is online",
     "type": "FACTUAL",
     "status": "UNKNOWN",
     "evidenceLevel": "E0",
     "confidence": 0,
     "riskCategory": "GENERAL",
-    "createdAt": 1791882386259,
-    "updatedAt": 1791882386259,
+    "createdAt": 1791886400190,
+    "updatedAt": 1791886400190,
     "sourceIds": [],
     "evidenceIds": [],
     "modelIds": [],
@@ -110,27 +110,27 @@
     "contradictions": [],
     "freshness": {
       "freshnessClass": "STABLE",
-      "lastVerified": 1791882386259,
+      "lastVerified": 1791886400190,
       "expirationPolicy": "STANDARD_30_DAYS",
       "isStale": false
     },
     "owner": "ANTIGRAVITY_OPERATOR",
     "projectId": "AGY_V7_CORE",
-    "hash": "40c980080d32ec77af13f2fe9c06f72b2384115c46c1a465456ab25c9e5864e3",
+    "hash": "53bec6ab534c9259f1e6ad1c150c45d900180cd09c3ee1b135a4425c0e029100",
     "provenanceTrail": [
-      "Claim registered at 2026-10-13T09:06:26.259Z with status UNKNOWN"
+      "Claim registered at 2026-10-13T10:13:20.190Z with status UNKNOWN"
     ]
   },
   {
-    "claimId": "claim_4210fc8fe59d7200",
+    "claimId": "claim_cf85f9ba1bd086e6",
     "text": "Port 8080 is open",
     "type": "FACTUAL",
     "status": "CONTRADICTED",
     "evidenceLevel": "E3",
     "confidence": 0.8,
     "riskCategory": "GENERAL",
-    "createdAt": 1791882386259,
-    "updatedAt": 1791882386259,
+    "createdAt": 1791886400191,
+    "updatedAt": 1791886400191,
     "sourceIds": [],
     "evidenceIds": [
       "ev_p1"
@@ -138,31 +138,31 @@
     "modelIds": [],
     "verificationMethods": [],
     "contradictions": [
-      "contra_86c01d8148d5"
+      "contra_fb6e46f749bc"
     ],
     "freshness": {
       "freshnessClass": "STABLE",
-      "lastVerified": 1791882386259,
+      "lastVerified": 1791886400191,
       "expirationPolicy": "STANDARD_30_DAYS",
       "isStale": false
     },
     "owner": "ANTIGRAVITY_OPERATOR",
     "projectId": "AGY_V7_CORE",
-    "hash": "e0a53b4912b067caddba013a15c554a36bb684e1581fae775c9db8b4f219ba67",
+    "hash": "6da31dd472ad020df2a43a35da07b43f15ca459f92cbfd1abfacf2582690bb32",
     "provenanceTrail": [
-      "Claim registered at 2026-10-13T09:06:26.259Z with status SUPPORTED"
+      "Claim registered at 2026-10-13T10:13:20.191Z with status SUPPORTED"
     ]
   },
   {
-    "claimId": "claim_d4a4e4e4056f2810",
+    "claimId": "claim_5ee7e09cf119ecd1",
     "text": "Port 8080 is closed and blocked",
     "type": "FACTUAL",
     "status": "CONTRADICTED",
     "evidenceLevel": "E3",
     "confidence": 0.8,
     "riskCategory": "GENERAL",
-    "createdAt": 1791882386259,
-    "updatedAt": 1791882386259,
+    "createdAt": 1791886400191,
+    "updatedAt": 1791886400191,
     "sourceIds": [],
     "evidenceIds": [
       "ev_p2"
@@ -170,31 +170,31 @@
     "modelIds": [],
     "verificationMethods": [],
     "contradictions": [
-      "contra_86c01d8148d5"
+      "contra_fb6e46f749bc"
     ],
     "freshness": {
       "freshnessClass": "STABLE",
-      "lastVerified": 1791882386259,
+      "lastVerified": 1791886400191,
       "expirationPolicy": "STANDARD_30_DAYS",
       "isStale": false
     },
     "owner": "ANTIGRAVITY_OPERATOR",
     "projectId": "AGY_V7_CORE",
-    "hash": "ca1744ff749a7bb74057833ccf04f794e0469e69babf685561f414982030c76a",
+    "hash": "3e46f39be6af0af3cbff3c9ec74f22d9635df35b781437bdd690ec7b7f4f7d2b",
     "provenanceTrail": [
-      "Claim registered at 2026-10-13T09:06:26.259Z with status SUPPORTED"
+      "Claim registered at 2026-10-13T10:13:20.191Z with status SUPPORTED"
     ]
   },
   {
-    "claimId": "claim_1ad96310a585c9d5",
+    "claimId": "claim_6d561e9e1fdfd7dc",
     "text": "Temporary session token is valid",
     "type": "FACTUAL",
     "status": "STALE",
     "evidenceLevel": "E0",
     "confidence": 0,
     "riskCategory": "GENERAL",
-    "createdAt": 1791882386259,
-    "updatedAt": 1791882386259,
+    "createdAt": 1791886400191,
+    "updatedAt": 1791886400191,
     "sourceIds": [],
     "evidenceIds": [],
     "modelIds": [],
@@ -202,58 +202,58 @@
     "contradictions": [],
     "freshness": {
       "freshnessClass": "REAL_TIME",
-      "lastVerified": 1791881786259,
+      "lastVerified": 1791885800191,
       "expirationPolicy": "STANDARD_30_DAYS",
       "isStale": true
     },
     "owner": "ANTIGRAVITY_OPERATOR",
     "projectId": "AGY_V7_CORE",
-    "hash": "38546b74a11e8a051df000eb7ef6425e46c8d5bbd8428ce494a28ab56024b4aa",
+    "hash": "072098b9891f5eb2048ec4051c282056512cb80afafbbf886851f00f95ea6013",
     "provenanceTrail": [
-      "Claim registered at 2026-10-13T09:06:26.259Z with status UNKNOWN",
-      "Marked STALE at 2026-10-13T09:06:26.259Z (Age: 600s > Max: 300s)"
+      "Claim registered at 2026-10-13T10:13:20.191Z with status UNKNOWN",
+      "Marked STALE at 2026-10-13T10:13:20.191Z (Age: 600s > Max: 300s)"
     ]
   },
   {
-    "claimId": "claim_d7a784787f6984e5",
+    "claimId": "claim_68140d078e4d7357",
     "text": "Hermes adheres to Level 2 Autonomy limits",
     "type": "FACTUAL",
     "status": "VERIFIED",
     "evidenceLevel": "E5",
     "confidence": 0.95,
     "riskCategory": "GENERAL",
-    "createdAt": 1791882386267,
-    "updatedAt": 1791882386267,
+    "createdAt": 1791886400199,
+    "updatedAt": 1791886400199,
     "sourceIds": [],
     "evidenceIds": [
-      "ev_0_1791882386266"
+      "ev_0_1791886400198"
     ],
     "modelIds": [],
     "verificationMethods": [],
     "contradictions": [],
     "freshness": {
       "freshnessClass": "STABLE",
-      "lastVerified": 1791882386267,
+      "lastVerified": 1791886400199,
       "expirationPolicy": "STANDARD_30_DAYS",
       "isStale": false
     },
     "owner": "ANTIGRAVITY_OPERATOR",
     "projectId": "AGY_V7_CORE",
-    "hash": "959a062077a0f42e3ab3150d4b3f2962431255ad730e7d6e8b9ad109151ffdd3",
+    "hash": "b1dd334b01526485555d2bc5ca87bda1deeb660cf9981e015ff9e0bd744e45d9",
     "provenanceTrail": [
-      "Claim registered at 2026-10-13T09:06:26.267Z with status VERIFIED"
+      "Claim registered at 2026-10-13T10:13:20.199Z with status VERIFIED"
     ]
   },
   {
-    "claimId": "claim_175d9e519b1989cc",
+    "claimId": "claim_a911286a0855d354",
     "text": "Futuristic story generated by Hermes creative writer",
     "type": "CREATIVE_GENERATED",
     "status": "GENERATED",
     "evidenceLevel": "E1",
     "confidence": 0.4,
     "riskCategory": "GENERAL",
-    "createdAt": 1791882386267,
-    "updatedAt": 1791882386267,
+    "createdAt": 1791886400199,
+    "updatedAt": 1791886400199,
     "sourceIds": [],
     "evidenceIds": [],
     "modelIds": [],
@@ -261,27 +261,27 @@
     "contradictions": [],
     "freshness": {
       "freshnessClass": "STABLE",
-      "lastVerified": 1791882386267,
+      "lastVerified": 1791886400199,
       "expirationPolicy": "STANDARD_30_DAYS",
       "isStale": false
     },
     "owner": "ANTIGRAVITY_OPERATOR",
     "projectId": "AGY_V7_CORE",
-    "hash": "cd39a4d7b089c58b0e280573cb2051af6812fabcc30beff157694563eb954755",
+    "hash": "a970d7bee4b3953c176efd8a0a1dff4ebdc4277b0421598ae194d8bd2797ce59",
     "provenanceTrail": [
-      "Claim registered at 2026-10-13T09:06:26.267Z with status GENERATED"
+      "Claim registered at 2026-10-13T10:13:20.199Z with status GENERATED"
     ]
   },
   {
-    "claimId": "claim_15f3ea605d9c9299",
+    "claimId": "claim_4fb98468b16c9bc3",
     "text": "Poisoned evidence claim",
     "type": "FACTUAL",
     "status": "UNKNOWN",
     "evidenceLevel": "E0",
     "confidence": 0,
     "riskCategory": "GENERAL",
-    "createdAt": 1791882386273,
-    "updatedAt": 1791882386273,
+    "createdAt": 1791886400206,
+    "updatedAt": 1791886400206,
     "sourceIds": [],
     "evidenceIds": [],
     "modelIds": [],
@@ -289,15 +289,15 @@
     "contradictions": [],
     "freshness": {
       "freshnessClass": "STABLE",
-      "lastVerified": 1791882386273,
+      "lastVerified": 1791886400206,
       "expirationPolicy": "STANDARD_30_DAYS",
       "isStale": false
     },
     "owner": "ANTIGRAVITY_OPERATOR",
     "projectId": "AGY_V7_CORE",
-    "hash": "73c72733610c81a26193d8d2ee2b615849fa1fae8801123432248cf9e64480e6",
+    "hash": "50b567855f855afbee3e04087fb6383b9d234cedebc7d1a18d7d7bdd8b974158",
     "provenanceTrail": [
-      "Claim registered at 2026-10-13T09:06:26.273Z with status UNKNOWN"
+      "Claim registered at 2026-10-13T10:13:20.206Z with status UNKNOWN"
     ]
   }
 ]

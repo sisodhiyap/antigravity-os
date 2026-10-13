@@ -1,11 +1,11 @@
 [
   {
-    "assetId": "asset_1791882343156_3aol7p",
+    "assetId": "asset_1791886420552_dnr5ai",
     "projectId": "default_project",
     "workflowId": "default_workflow",
     "modelId": "flux1-schnell-fp8",
     "modelVersion": "1.0",
-    "seed": 42114822,
+    "seed": 622994845,
     "parameters": {
       "width": 1024,
       "height": 1024,
@@ -16,21 +16,21 @@
     "inputHashes": [
       "dca57af31282de077a079e3a57b7564ac06ff232467c6ba567ded18b3451472a"
     ],
-    "outputHash": "fe15e75e6007a6893701b61746a43f063160a0e00bf9e67af3273d12eacf158d",
+    "outputHash": "4212da40d996b35aec1202f87480d1419528ba86784b3bfbe8ed6e7a99cf1c52",
     "generationTimeMs": 1200,
     "hardware": "Local GPU (NVIDIA DirectML)",
     "localOrCloud": "LOCAL",
     "license": "Apache 2.0 / Open Source",
     "verificationStatus": "VERIFIED",
-    "timestamp": "2026-10-13T09:05:43.156Z"
+    "timestamp": "2026-10-13T10:13:40.552Z"
   },
   {
-    "assetId": "asset_1791882343160_mpn40i",
+    "assetId": "asset_1791886420556_m3irxa",
     "projectId": "default_project",
     "workflowId": "default_workflow",
     "modelId": "sdxl-base-1.0",
     "modelVersion": "1.0",
-    "seed": 83730374,
+    "seed": 757282173,
     "parameters": {
       "width": 1024,
       "height": 1024,
@@ -41,21 +41,21 @@
     "inputHashes": [
       "5b8d07fc85fcde672b1454ac1df943d7a1fceaf98ec5c555cf7f1001d5889ae5"
     ],
-    "outputHash": "be4d9d24b5776601bf94b6825f39fb914b0f5563edb3f5145789fe3cfc3b93a9",
+    "outputHash": "5404bae753de01c60352170b24f9cb181f88a2f2afc2a7e18793d64cf753d5f2",
     "generationTimeMs": 1200,
     "hardware": "Local GPU (NVIDIA DirectML)",
     "localOrCloud": "LOCAL",
     "license": "Apache 2.0 / Open Source",
     "verificationStatus": "VERIFIED",
-    "timestamp": "2026-10-13T09:05:43.160Z"
+    "timestamp": "2026-10-13T10:13:40.556Z"
   },
   {
-    "assetId": "asset_1791882343163_viel06",
+    "assetId": "asset_1791886420560_7fp55s",
     "projectId": "default_project",
     "workflowId": "default_workflow",
     "modelId": "flux1-schnell-fp8",
     "modelVersion": "1.0",
-    "seed": 128057687,
+    "seed": 651187289,
     "parameters": {
       "width": 1024,
       "height": 1024,
@@ -66,21 +66,21 @@
     "inputHashes": [
       "a184c089b5d32c7343d4c9c7dbd58c1a798634d5db57b544c838ff2fb4c793d7"
     ],
-    "outputHash": "367eb1df206333e6de8f48c240460d6a858c5a912b5000041eb05cc46c3f8796",
+    "outputHash": "573874301b315cbde1ae23477207f3c9e6cff97222c4e340f98e9c4b1d7aa792",
     "generationTimeMs": 1200,
     "hardware": "Local GPU (NVIDIA DirectML)",
     "localOrCloud": "LOCAL",
     "license": "Apache 2.0 / Open Source",
     "verificationStatus": "VERIFIED",
-    "timestamp": "2026-10-13T09:05:43.163Z"
+    "timestamp": "2026-10-13T10:13:40.560Z"
   },
   {
-    "assetId": "asset_1791882343167_8nw22m",
+    "assetId": "asset_1791886420565_9umhvv",
     "projectId": "default_project",
     "workflowId": "default_workflow",
     "modelId": "wan2.1-t2v-1.3b",
     "modelVersion": "1.0",
-    "seed": 960600107,
+    "seed": 773120996,
     "parameters": {
       "width": 1024,
       "height": 1024,
@@ -91,21 +91,21 @@
     "inputHashes": [
       "d2ea04cf88cf7ec6397035147cc617c1102613986467e238cab92362a6b5280d"
     ],
-    "outputHash": "655934cff1c4e5eb6c493b354005596693b76f5812a97b23016163eb0dddf831",
+    "outputHash": "d351831564349f8cc4a36721c9ae12d6d490ce5bc3b269f1deafa7e442378f5f",
     "generationTimeMs": 1200,
     "hardware": "Local GPU (NVIDIA DirectML)",
     "localOrCloud": "LOCAL",
     "license": "Apache 2.0 / Open Source",
     "verificationStatus": "VERIFIED",
-    "timestamp": "2026-10-13T09:05:43.167Z"
+    "timestamp": "2026-10-13T10:13:40.565Z"
   },
   {
-    "assetId": "asset_1791882343172_f2awuj",
+    "assetId": "asset_1791886420569_mttat9",
     "projectId": "default_project",
     "workflowId": "default_workflow",
     "modelId": "ace-step-audio",
     "modelVersion": "1.0",
-    "seed": 377415524,
+    "seed": 147197037,
     "parameters": {
       "width": 1024,
       "height": 1024,
@@ -116,21 +116,21 @@
     "inputHashes": [
       "2f637fb39b655899bd0e1868ec4e15634190d9a8e5a9973ecbf5358bad4ecc15"
     ],
-    "outputHash": "ba06b99307a59e301b35a84776fffb500f71435a7d7da39508fb3a11da527214",
+    "outputHash": "25a3a964628a68affb39dbfae907d11b24dea9f74cb1244e9dde2633d9d9fbdc",
     "generationTimeMs": 1200,
     "hardware": "Local GPU (NVIDIA DirectML)",
     "localOrCloud": "LOCAL",
     "license": "Apache 2.0 / Open Source",
     "verificationStatus": "VERIFIED",
-    "timestamp": "2026-10-13T09:05:43.172Z"
+    "timestamp": "2026-10-13T10:13:40.569Z"
   },
   {
-    "assetId": "asset_1791882343178_43jyzn",
+    "assetId": "asset_1791886420573_786m9",
     "projectId": "default_project",
     "workflowId": "default_workflow",
     "modelId": "triposr-mesh-gen",
     "modelVersion": "1.0",
-    "seed": 394928703,
+    "seed": 184879224,
     "parameters": {
       "width": 1024,
       "height": 1024,
@@ -141,12 +141,12 @@
     "inputHashes": [
       "24df5a9dcecf34fbbc7dec7714e8c9cd2ffc55a208a88559f94ada774dc0454b"
     ],
-    "outputHash": "59eebc1c41e6889c906e81aeab8cf468c5501992ae5f1c7d9f7db7b02813d1f0",
+    "outputHash": "57d0151a2b6c11978d891b2505c9c0b38a672dbe748ca66475b8467803e053da",
     "generationTimeMs": 1200,
     "hardware": "Local GPU (NVIDIA DirectML)",
     "localOrCloud": "LOCAL",
     "license": "Apache 2.0 / Open Source",
     "verificationStatus": "VERIFIED",
-    "timestamp": "2026-10-13T09:05:43.178Z"
+    "timestamp": "2026-10-13T10:13:40.573Z"
   }
 ]

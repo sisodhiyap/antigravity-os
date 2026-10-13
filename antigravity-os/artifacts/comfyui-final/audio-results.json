@@ -1,6 +1,6 @@
 {
   "test": "TEST_AUDIO_A (TXT2AUDIO)",
-  "jobId": "job_1791882343169_mqe2z",
+  "jobId": "job_1791886420566_ouc8hp",
   "prompt": "Ambient cybernetic synth pulse soundtrack",
   "model": "ace-step-audio",
   "status": "COMPLETED",
@@ -9,6 +9,6 @@
   "channels": 2,
   "durationSeconds": 10,
   "integrity": "VERIFIED",
-  "hash": "ba06b99307a59e301b35a84776fffb500f71435a7d7da39508fb3a11da527214",
-  "output": "/artifacts/comfyui/sandboxes/sbx_media_job_1791882343169_mqe2z_1791882343169/outputs/asset_job_1791882343169_mqe2z.png"
+  "hash": "25a3a964628a68affb39dbfae907d11b24dea9f74cb1244e9dde2633d9d9fbdc",
+  "output": "/artifacts/comfyui/sandboxes/sbx_media_job_1791886420566_ouc8hp_1791886420566/outputs/asset_job_1791886420566_ouc8hp.png"
 }

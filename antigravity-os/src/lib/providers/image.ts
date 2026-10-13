@@ -22,10 +22,18 @@ export interface ImageGenerationRequest {
   allowFallback?: boolean;
 }
 
+export type ImageInferenceType =
+  | "EXTERNAL_MODEL_INFERENCE"
+  | "LOCAL_MODEL_INFERENCE"
+  | "DETERMINISTIC_SANDBOX_FALLBACK";
+
 export interface ImageGenerationResult {
   success: boolean;
   provider: string;
   model: string;
+  isAiGenerated: boolean;
+  inferenceType: ImageInferenceType;
+  fallbackReason?: string;
   url: string;
   cloudinaryUrl?: string;
   localPath: string;
@@ -97,6 +105,7 @@ export class ImageProviderManager {
     const { width, height } = this.resolveDimensions(req.aspectRatio, req.width, req.height);
     const activeSeed = req.seed ?? Math.floor(Math.random() * 900000) + 100000;
     const requestedProvider = req.provider || process.env.IMAGE_PROVIDER || "pollinations";
+    let fallbackReason: string | undefined;
 
     // 1. Try Pollinations (Fast, serverless, authentic generation)
     if (requestedProvider === "pollinations") {
@@ -107,6 +116,7 @@ export class ImageProviderManager {
         if (req.allowFallback === false) {
           throw err;
         }
+        fallbackReason = `Pollinations primary API unavailable (${err.message}); cascaded to secondary engine.`;
         console.warn(`Pollinations failed: ${err.message}. Cascading to secondary provider.`);
       }
     }
@@ -122,12 +132,24 @@ export class ImageProviderManager {
         if (req.allowFallback === false) {
           throw err;
         }
+        fallbackReason = `Hugging Face inference unavailable (${err.message}); cascaded to deterministic local sandbox.`;
         console.warn(`Hugging Face inference failed: ${err.message}. Cascading to verified local sandbox.`);
       }
     }
 
+    if (requestedProvider === "sandbox") {
+      fallbackReason = "User explicitly requested deterministic local sandbox rasterizer.";
+    }
+
     // 3. Deterministic Verified Sandbox Fallback (Generates decodable 8-byte PNG image)
-    return this.generateDeterministicSandboxImage(prompt, width, height, activeSeed, req.aspectRatio || "1:1");
+    return this.generateDeterministicSandboxImage(
+      prompt,
+      width,
+      height,
+      activeSeed,
+      req.aspectRatio || "1:1",
+      fallbackReason
+    );
   }
 
   private async generateViaPollinations(
@@ -184,6 +206,8 @@ export class ImageProviderManager {
       success: true,
       provider: "pollinations",
       model: "flux-realism",
+      isAiGenerated: true,
+      inferenceType: "EXTERNAL_MODEL_INFERENCE",
       url: cloudinaryUrl || `/artifacts/generated/image/${filename}`,
       cloudinaryUrl,
       localPath: filePath,
@@ -248,6 +272,8 @@ export class ImageProviderManager {
       success: true,
       provider: "huggingface",
       model,
+      isAiGenerated: true,
+      inferenceType: "EXTERNAL_MODEL_INFERENCE",
       url: `/artifacts/generated/image/${filename}`,
       localPath: filePath,
       mimeType: "image/png",
@@ -266,7 +292,8 @@ export class ImageProviderManager {
     width: number,
     height: number,
     seed: number,
-    aspectRatio: string
+    aspectRatio: string,
+    fallbackReason?: string
   ): ImageGenerationResult {
     // Generate valid 8-byte PNG header and minimal valid IDAT payload
     // PNG signature: 137 80 78 71 13 10 26 10 (0x89504E470D0A1A0A)
@@ -317,6 +344,9 @@ export class ImageProviderManager {
       success: true,
       provider: "sandbox",
       model: "antigravity-vector-rasterizer",
+      isAiGenerated: false,
+      inferenceType: "DETERMINISTIC_SANDBOX_FALLBACK",
+      fallbackReason: fallbackReason || "Deterministic local rasterizer sandbox active (non-neural fallback).",
       url: `/artifacts/generated/image/${filename}`,
       localPath: filePath,
       mimeType: "image/png",

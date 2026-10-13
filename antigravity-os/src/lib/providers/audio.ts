@@ -20,11 +20,19 @@ export interface AudioGenerationRequest {
   allowFallback?: boolean;
 }
 
+export type AudioInferenceType =
+  | "EXTERNAL_MODEL_INFERENCE"
+  | "LOCAL_MODEL_INFERENCE"
+  | "PROCEDURAL_SYNTHESIS_FALLBACK";
+
 export interface AudioGenerationResult {
   success: boolean;
   mode: "TTS" | "MUSIC";
   provider: string;
   model: string;
+  isAiGenerated: boolean;
+  inferenceType: AudioInferenceType;
+  fallbackReason?: string;
   url: string;
   cloudinaryUrl?: string;
   localPath: string;
@@ -83,6 +91,7 @@ export class AudioProviderManager {
 
   private async generateSpeech(text: string, voice: string): Promise<AudioGenerationResult> {
     const token = getHuggingFaceToken();
+    let fallbackReason: string | undefined;
 
     // 1. Try Hugging Face TTS model if token is present
     if (token) {
@@ -90,12 +99,15 @@ export class AudioProviderManager {
         const hfResult = await this.tryHuggingFaceTts(text, token);
         if (hfResult) return hfResult;
       } catch (err: any) {
+        fallbackReason = `Hugging Face TTS returned non-recoverable error (${err.message}); cascaded to acoustic speech engine.`;
         console.warn(`HF TTS failed: ${err.message}. Cascading to high-fidelity acoustic speech engine.`);
       }
+    } else {
+      fallbackReason = "No external HF_TOKEN configured; synthesized via sovereign acoustic formant engine.";
     }
 
     // 2. High-fidelity Acoustic Speech Engine (produces authentic formants & pitch variations in WAV)
-    return await this.synthesizeAcousticSpeechWav(text, voice);
+    return await this.synthesizeAcousticSpeechWav(text, voice, fallbackReason);
   }
 
   private async tryHuggingFaceTts(text: string, token: string): Promise<AudioGenerationResult | null> {
@@ -131,6 +143,8 @@ export class AudioProviderManager {
       mode: "TTS",
       provider: "huggingface",
       model: "facebook/mms-tts-eng",
+      isAiGenerated: true,
+      inferenceType: "EXTERNAL_MODEL_INFERENCE",
       url: `/artifacts/generated/audio/${filename}`,
       localPath: filePath,
       mimeType: "audio/wav",
@@ -144,7 +158,7 @@ export class AudioProviderManager {
     };
   }
 
-  private async synthesizeAcousticSpeechWav(text: string, voice: string): Promise<AudioGenerationResult> {
+  private async synthesizeAcousticSpeechWav(text: string, voice: string, fallbackReason?: string): Promise<AudioGenerationResult> {
     // Generate valid stereo WAV audio (44.1kHz, 16-bit PCM)
     const sampleRate = 44100;
     const words = text.split(/\s+/).filter(Boolean);
@@ -208,6 +222,9 @@ export class AudioProviderManager {
       mode: "TTS",
       provider: "sovereign-acoustic-engine",
       model: `neural-formant-${voice}`,
+      isAiGenerated: false,
+      inferenceType: "PROCEDURAL_SYNTHESIS_FALLBACK",
+      fallbackReason: fallbackReason || "Synthesized via sovereign acoustic formant DSP engine (non-neural fallback).",
       url: cloudinaryUrl || `/artifacts/generated/audio/${filename}`,
       cloudinaryUrl,
       localPath: filePath,
@@ -224,6 +241,7 @@ export class AudioProviderManager {
 
   private async generateMusic(prompt: string, durationSeconds: number, genre: string, tempo: number): Promise<AudioGenerationResult> {
     const token = getHuggingFaceToken();
+    let fallbackReason: string | undefined;
 
     // 1. Try Hugging Face MusicGen if token is available
     if (token) {
@@ -231,12 +249,15 @@ export class AudioProviderManager {
         const hfResult = await this.tryHuggingFaceMusicGen(prompt, token, durationSeconds);
         if (hfResult) return hfResult;
       } catch (err: any) {
+        fallbackReason = `Hugging Face MusicGen returned non-recoverable error (${err.message}); cascaded to algorithmic harmonic synthesizer.`;
         console.warn(`HF MusicGen failed: ${err.message}. Cascading to procedural harmonic synthesizer.`);
       }
+    } else {
+      fallbackReason = "No external HF_TOKEN configured; synthesized via sovereign algorithmic harmonic synthesizer.";
     }
 
     // 2. High-fidelity Procedural Harmonic Synthesizer
-    return await this.synthesizeProceduralMusicWav(prompt, durationSeconds, genre, tempo);
+    return await this.synthesizeProceduralMusicWav(prompt, durationSeconds, genre, tempo, fallbackReason);
   }
 
   private async tryHuggingFaceMusicGen(prompt: string, token: string, durationSeconds: number): Promise<AudioGenerationResult | null> {
@@ -272,6 +293,8 @@ export class AudioProviderManager {
       mode: "MUSIC",
       provider: "huggingface",
       model: "facebook/musicgen-small",
+      isAiGenerated: true,
+      inferenceType: "EXTERNAL_MODEL_INFERENCE",
       url: `/artifacts/generated/audio/${filename}`,
       localPath: filePath,
       mimeType: "audio/wav",
@@ -285,7 +308,13 @@ export class AudioProviderManager {
     };
   }
 
-  private async synthesizeProceduralMusicWav(prompt: string, durationSeconds: number, genre: string, tempo: number): Promise<AudioGenerationResult> {
+  private async synthesizeProceduralMusicWav(
+    prompt: string,
+    durationSeconds: number,
+    genre: string,
+    tempo: number,
+    fallbackReason?: string
+  ): Promise<AudioGenerationResult> {
     const sampleRate = 44100;
     const totalSamples = Math.floor(sampleRate * durationSeconds);
     const pcmData = Buffer.alloc(totalSamples * 4);
@@ -363,6 +392,9 @@ export class AudioProviderManager {
       mode: "MUSIC",
       provider: "sovereign-harmonic-synth",
       model: `algorithmic-${genre}-synth`,
+      isAiGenerated: false,
+      inferenceType: "PROCEDURAL_SYNTHESIS_FALLBACK",
+      fallbackReason: fallbackReason || "Synthesized via sovereign algorithmic harmonic synthesizer (non-neural fallback).",
       url: cloudinaryUrl || `/artifacts/generated/audio/${filename}`,
       cloudinaryUrl,
       localPath: filePath,
