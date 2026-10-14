@@ -5,6 +5,8 @@
  */
 
 import crypto from "crypto";
+import fs from "fs";
+import path from "path";
 import { CacheEntryMetadata } from "./types";
 import { HermesPolicy } from "@/plugins/hermes/HermesPolicy";
 
@@ -20,6 +22,7 @@ export class TokenOptimizer {
   private static instance: TokenOptimizer;
   private readonly cache: Map<string, { data: CachedResponse; meta: CacheEntryMetadata }> = new Map();
   private readonly ttlMs: number = 24 * 60 * 60 * 1000; // 24-hour default validity
+  private readonly storagePath: string;
 
   public static getInstance(): TokenOptimizer {
     if (!TokenOptimizer.instance) {
@@ -28,7 +31,52 @@ export class TokenOptimizer {
     return TokenOptimizer.instance;
   }
 
-  private constructor() {}
+  private constructor() {
+    this.storagePath = path.resolve(process.cwd(), "artifacts", "fabric", "cache.json");
+    this.loadFromDisk();
+  }
+
+  private loadFromDisk(): void {
+    try {
+      if (fs.existsSync(this.storagePath)) {
+        const raw = fs.readFileSync(this.storagePath, "utf-8");
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed.entries)) {
+          for (const item of parsed.entries) {
+            if (item.key && item.data && item.meta) {
+              // verify not expired
+              if (Date.now() <= new Date(item.meta.expiresAt).getTime()) {
+                this.cache.set(item.key, { data: item.data, meta: item.meta });
+              }
+            }
+          }
+        }
+      }
+    } catch {
+      // Fallback silently if cache loading fails
+    }
+  }
+
+  private saveToDisk(): void {
+    try {
+      const dir = path.dirname(this.storagePath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+      const entries = Array.from(this.cache.entries()).map(([key, val]) => ({
+        key,
+        data: val.data,
+        meta: val.meta,
+      }));
+      fs.writeFileSync(
+        this.storagePath,
+        JSON.stringify({ updatedAt: new Date().toISOString(), count: entries.length, entries }, null, 2),
+        "utf-8"
+      );
+    } catch {
+      // Fallback silently if cache saving fails
+    }
+  }
 
   /**
    * Generates a deterministic, normalized cache key derived from inputs, model, and config.
@@ -111,6 +159,7 @@ export class TokenOptimizer {
     };
 
     this.cache.set(key, { data: cachedData, meta });
+    this.saveToDisk();
     return true;
   }
 
@@ -125,11 +174,15 @@ export class TokenOptimizer {
         purged++;
       }
     }
+    if (purged > 0) {
+      this.saveToDisk();
+    }
     return purged;
   }
 
   public clearAllCache(): void {
     this.cache.clear();
+    this.saveToDisk();
   }
 
   /**

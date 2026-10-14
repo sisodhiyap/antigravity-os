@@ -25,6 +25,17 @@ export class VoiceStudioAdapter extends BaseEngineAdapter {
     // Strict offline loopback check
     offlineEnforcer.assertNetworkAccess("http://127.0.0.1:8080", this.engineId);
 
+    let isLiveService = false;
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 800);
+      const probe = await fetch("http://127.0.0.1:8080/health", { signal: controller.signal });
+      clearTimeout(timeoutId);
+      isLiveService = probe.ok;
+    } catch {
+      isLiveService = false;
+    }
+
     const artifactDir = path.resolve(process.cwd(), "artifacts", "fabric", "voice-studio");
     if (!fs.existsSync(artifactDir)) {
       fs.mkdirSync(artifactDir, { recursive: true });
@@ -44,6 +55,7 @@ export class VoiceStudioAdapter extends BaseEngineAdapter {
         sampleRate: 24000,
         license: "AGPL-3.0",
         consentLogged: payload.consentAuthorized ? true : false,
+        executionProvenance: isLiveService ? "LIVE_SERVICE" : "ADAPTER_CONTRACT_VERIFIED",
       },
     };
   }

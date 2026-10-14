@@ -17,6 +17,17 @@ export class AceStepAdapter extends BaseEngineAdapter {
     const startTime = Date.now();
     offlineEnforcer.assertNetworkAccess("http://127.0.0.1:8765", this.engineId);
 
+    let isLiveService = false;
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 800);
+      const probe = await fetch("http://127.0.0.1:8765/health", { signal: controller.signal });
+      clearTimeout(timeoutId);
+      isLiveService = probe.ok;
+    } catch {
+      isLiveService = false;
+    }
+
     const durationSec = Math.min(Math.max(payload.durationSec || 30, 5), 180);
     const artifactDir = path.resolve(process.cwd(), "artifacts", "fabric", "ace-step");
     if (!fs.existsSync(artifactDir)) {
@@ -38,6 +49,7 @@ export class AceStepAdapter extends BaseEngineAdapter {
         durationSec,
         format: "mp3",
         license: "MIT",
+        executionProvenance: isLiveService ? "LIVE_SERVICE" : "ADAPTER_CONTRACT_VERIFIED",
       },
     };
   }

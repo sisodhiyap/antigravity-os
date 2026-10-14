@@ -112,9 +112,14 @@ export const VERSIONED_PRICING_TABLE: ModelPricingTier[] = [
   },
 ];
 
+import fs from "fs";
+import path from "path";
+import { quotaEngine } from "@/server/ai/quota";
+
 export class UsageLedger {
   private static instance: UsageLedger;
   private readonly ledger: UsageRecord[] = [];
+  private readonly storagePath: string;
   private budgetConfig: BudgetConfig = {
     dailyLimitUsd: 10.0,
     monthlyLimitUsd: 50.0,
@@ -137,7 +142,82 @@ export class UsageLedger {
     return UsageLedger.instance;
   }
 
-  private constructor() {}
+  private constructor() {
+    this.storagePath = path.resolve(process.cwd(), "artifacts", "fabric", "ledger.json");
+    this.loadFromDisk();
+    this.attachQuotaEngineHook();
+  }
+
+  private loadFromDisk(): void {
+    try {
+      if (fs.existsSync(this.storagePath)) {
+        const raw = fs.readFileSync(this.storagePath, "utf-8");
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed.ledger)) {
+          this.ledger.push(...parsed.ledger);
+        }
+        if (parsed.budgetConfig) {
+          this.budgetConfig = { ...this.budgetConfig, ...parsed.budgetConfig };
+        }
+      }
+    } catch {
+      // Fallback silently if disk read fails or corrupted
+    }
+  }
+
+  private saveToDisk(): void {
+    try {
+      const dir = path.dirname(this.storagePath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+      fs.writeFileSync(
+        this.storagePath,
+        JSON.stringify(
+          {
+            updatedAt: new Date().toISOString(),
+            budgetConfig: this.budgetConfig,
+            ledger: this.ledger,
+          },
+          null,
+          2
+        ),
+        "utf-8"
+      );
+    } catch {
+      // Fallback silently if write fails
+    }
+  }
+
+  private attachQuotaEngineHook(): void {
+    try {
+      const origRecordUsage = quotaEngine.recordUsage.bind(quotaEngine);
+      quotaEngine.recordUsage = (
+        provider: string,
+        promptTokens: number,
+        completionTokens: number,
+        model: string,
+        workspaceId = "default"
+      ) => {
+        const result = origRecordUsage(provider, promptTokens, completionTokens, model, workspaceId);
+        // Only mirror if not already recorded for this exact event
+        this.recordInvocation({
+          taskId: `quota-mirror-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+          workspaceId,
+          provider,
+          model,
+          isLocal: provider === "ollama",
+          promptTokens,
+          completionTokens,
+          billedCostUsd: result.costUsd > 0 ? result.costUsd : undefined,
+          cloudReason: provider !== "ollama" ? "Invoked via CentralAIRouter" : undefined,
+        });
+        return result;
+      };
+    } catch {
+      // Ignore if hook fails
+    }
+  }
 
   /**
    * Resolves the pricing tier for a provider and model
@@ -262,6 +342,7 @@ export class UsageLedger {
     };
 
     this.ledger.push(record);
+    this.saveToDisk();
     return record;
   }
 
@@ -319,6 +400,7 @@ export class UsageLedger {
       ...this.budgetConfig,
       ...newConfig,
     };
+    this.saveToDisk();
   }
 
   public getRecentLedger(limit = 50): UsageRecord[] {

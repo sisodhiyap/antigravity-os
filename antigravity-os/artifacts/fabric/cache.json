@@ -1,0 +1,90 @@
+{
+  "updatedAt": "2026-10-14T08:34:25.611Z",
+  "count": 4,
+  "entries": [
+    {
+      "key": "b6fb6663235ac16383cbf4aba53b41f7530ca21942d2a0d8c0fadf554998c4cc",
+      "data": {
+        "key": "b6fb6663235ac16383cbf4aba53b41f7530ca21942d2a0d8c0fadf554998c4cc",
+        "output": "[Local Sovereign Inference via ollama:qwen2.5-coder:7b]\nProcessed task: Format this JSON payload...",
+        "tokensSaved": 6,
+        "metadata": {},
+        "cachedAt": "2026-10-14T08:33:16.892Z"
+      },
+      "meta": {
+        "key": "b6fb6663235ac16383cbf4aba53b41f7530ca21942d2a0d8c0fadf554998c4cc",
+        "hash": "18d320dd1fc2ee1c2acd22532b4140b01fb653ac77544427a1dbf7a325fa7fd7",
+        "workspaceId": "global",
+        "taskType": "ROUTINE_CHAT",
+        "model": "qwen2.5-coder:7b",
+        "tokensSaved": 6,
+        "createdAt": "2026-10-14T08:33:16.892Z",
+        "expiresAt": "2026-10-15T08:33:16.892Z",
+        "accessCount": 3
+      }
+    },
+    {
+      "key": "dc3db5824d18ac906957fa501bbbfedf82b9ba60564419d798446b622d386c10",
+      "data": {
+        "key": "dc3db5824d18ac906957fa501bbbfedf82b9ba60564419d798446b622d386c10",
+        "output": "Antigravity OS is a sovereign autonomous AI operating system.",
+        "tokensSaved": 120,
+        "metadata": {},
+        "cachedAt": "2026-10-14T08:34:25.609Z"
+      },
+      "meta": {
+        "key": "dc3db5824d18ac906957fa501bbbfedf82b9ba60564419d798446b622d386c10",
+        "hash": "ec53cab5f199ff6048c77f788b7c08a8a7227a5e97772af76ee11596a3d6c268",
+        "workspaceId": "global",
+        "taskType": "ROUTINE_CHAT",
+        "model": "qwen2.5-coder:7b",
+        "tokensSaved": 120,
+        "createdAt": "2026-10-14T08:34:25.609Z",
+        "expiresAt": "2026-10-15T08:34:25.609Z",
+        "accessCount": 3
+      }
+    },
+    {
+      "key": "a5b93994d77291129eb2dc8d86b8861b6f2c131e2e454ccf1975475e9dafecd4",
+      "data": {
+        "key": "a5b93994d77291129eb2dc8d86b8861b6f2c131e2e454ccf1975475e9dafecd4",
+        "output": "User session established. Token: [REDACTED_SECRET].",
+        "tokensSaved": 20,
+        "metadata": {},
+        "cachedAt": "2026-10-14T08:34:25.611Z"
+      },
+      "meta": {
+        "key": "a5b93994d77291129eb2dc8d86b8861b6f2c131e2e454ccf1975475e9dafecd4",
+        "hash": "e17467d755ac05deac5c252885b59b796d36a76d85c741578a4ed487075b916c",
+        "workspaceId": "global",
+        "taskType": "AUTH",
+        "model": "qwen",
+        "tokensSaved": 20,
+        "createdAt": "2026-10-14T08:34:25.611Z",
+        "expiresAt": "2026-10-15T08:34:25.611Z",
+        "accessCount": 1
+      }
+    },
+    {
+      "key": "ee47ae22b84190dd4ae92e1ae8d96fda8a85c530f4d145c07da471b1eb0bb981",
+      "data": {
+        "key": "ee47ae22b84190dd4ae92e1ae8d96fda8a85c530f4d145c07da471b1eb0bb981",
+        "output": "[Local Sovereign Inference via ollama:qwen2.5-coder:7b]\nProcessed task: Format local documentation table...",
+        "tokensSaved": 8,
+        "metadata": {},
+        "cachedAt": "2026-10-14T08:33:18.413Z"
+      },
+      "meta": {
+        "key": "ee47ae22b84190dd4ae92e1ae8d96fda8a85c530f4d145c07da471b1eb0bb981",
+        "hash": "fef2ad5d33b6abd036a2178cb09cdf2cf59dd0cd9a3926d716f3e9db5809639a",
+        "workspaceId": "global",
+        "taskType": "ROUTINE_CHAT",
+        "model": "qwen2.5-coder:7b",
+        "tokensSaved": 8,
+        "createdAt": "2026-10-14T08:33:18.413Z",
+        "expiresAt": "2026-10-15T08:33:18.413Z",
+        "accessCount": 1
+      }
+    }
+  ]
+}

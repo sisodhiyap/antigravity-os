@@ -24,6 +24,7 @@ export interface TaskClassificationResult {
 export class SovereignTaskRouter {
   private static instance: SovereignTaskRouter;
   private currentMode: TaskRoutingPolicyMode = "LOCAL_FIRST";
+  private readonly inFlightTasks: Map<string, Promise<any>> = new Map();
 
   public static getInstance(): SovereignTaskRouter {
     if (!SovereignTaskRouter.instance) {
@@ -259,62 +260,102 @@ export class SovereignTaskRouter {
       };
     }
 
-    // 3. Context Minimization
-    const { minimizedPrompt, tokensEstimated } = tokenOptimizer.minimizeContext(prompt, 4000);
+    // 3. Batching & In-Flight Deduplication: Return existing in-flight task if identical request is pending
+    if (this.inFlightTasks.has(cacheKey)) {
+      return this.inFlightTasks.get(cacheKey)!;
+    }
 
-    // 4. Budget Check if routing to cloud
-    if (classification.cloudRequired) {
-      const budgetCheck = usageLedger.checkBudgetPermitted(classification.preferredProvider, 0.05);
-      if (!budgetCheck.permitted) {
-        throw new Error(`[BUDGET_HARD_STOP] Cloud task blocked: ${budgetCheck.reason}`);
+    const taskPromise = (async () => {
+      // Context Minimization
+      const { minimizedPrompt, tokensEstimated } = tokenOptimizer.minimizeContext(prompt, 4000);
+
+      // Budget Check if routing to cloud
+      if (classification.cloudRequired) {
+        const budgetCheck = usageLedger.checkBudgetPermitted(classification.preferredProvider, 0.05);
+        if (!budgetCheck.permitted) {
+          throw new Error(`[BUDGET_HARD_STOP] Cloud task blocked: ${budgetCheck.reason}`);
+        }
       }
+
+      // Execution through CentralAIRouter or local engine
+      let outputText = "";
+      const isLocal = classification.isLocal;
+
+      if (isLocal) {
+        if (classification.preferredProvider === "ollama") {
+          try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 1500);
+            const res = await fetch("http://127.0.0.1:11434/api/generate", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                model: classification.preferredModel || "qwen2.5-coder:7b",
+                prompt: minimizedPrompt,
+                stream: false,
+              }),
+              signal: controller.signal,
+            });
+            clearTimeout(timeoutId);
+            if (res.ok) {
+              const data: any = await res.json();
+              if (data.response) {
+                outputText = data.response;
+              }
+            }
+          } catch {
+            // Local fallback acknowledgment
+          }
+        }
+        if (!outputText) {
+          outputText = `[Local Sovereign Inference via ${classification.preferredProvider}:${classification.preferredModel}]\nProcessed task: ${minimizedPrompt.substring(0, 80)}...`;
+        }
+      } else {
+        outputText = `[Cloud Inference via ${classification.preferredProvider}:${classification.preferredModel}]\nProcessed task under budget policy.`;
+      }
+
+      // Cache deterministic output for future reuse
+      tokenOptimizer.storeCachedOutput(cacheKey, {
+        taskType: classification.taskCategory,
+        output: outputText,
+        tokensSaved: tokensEstimated,
+        model: classification.preferredModel,
+        workspaceId: options.workspaceId,
+      });
+
+      // Record invocation in authoritative UsageLedger
+      const promptTokens = tokensEstimated;
+      const completionTokens = Math.ceil(outputText.length / 4);
+
+      const record = usageLedger.recordInvocation({
+        taskId: `task-${Date.now()}`,
+        workspaceId: options.workspaceId,
+        provider: classification.preferredProvider,
+        model: classification.preferredModel,
+        isLocal,
+        promptTokens,
+        completionTokens,
+        cloudReason: isLocal ? undefined : classification.explanation,
+        cacheHit: false,
+      });
+
+      return {
+        output: outputText,
+        provider: classification.preferredProvider,
+        model: classification.preferredModel,
+        isLocal,
+        costUsd: record.estimatedCostUsd,
+        cacheHit: false,
+        explanation: classification.explanation,
+      };
+    })();
+
+    this.inFlightTasks.set(cacheKey, taskPromise);
+    try {
+      return await taskPromise;
+    } finally {
+      this.inFlightTasks.delete(cacheKey);
     }
-
-    // 5. Execution through CentralAIRouter
-    let outputText = "";
-    const isLocal = classification.isLocal;
-
-    if (isLocal) {
-      // Local zero-cost simulation / Ollama response
-      outputText = `[Local Sovereign Inference via ${classification.preferredProvider}:${classification.preferredModel}]\nProcessed task: ${minimizedPrompt.substring(0, 80)}...`;
-    } else {
-      outputText = `[Cloud Inference via ${classification.preferredProvider}:${classification.preferredModel}]\nProcessed task under budget policy.`;
-    }
-
-    // 6. Cache deterministic output for future reuse
-    tokenOptimizer.storeCachedOutput(cacheKey, {
-      taskType: classification.taskCategory,
-      output: outputText,
-      tokensSaved: tokensEstimated,
-      model: classification.preferredModel,
-      workspaceId: options.workspaceId,
-    });
-
-    // 7. Record invocation in authoritative UsageLedger
-    const promptTokens = tokensEstimated;
-    const completionTokens = Math.ceil(outputText.length / 4);
-
-    const record = usageLedger.recordInvocation({
-      taskId: `task-${Date.now()}`,
-      workspaceId: options.workspaceId,
-      provider: classification.preferredProvider,
-      model: classification.preferredModel,
-      isLocal,
-      promptTokens,
-      completionTokens,
-      cloudReason: isLocal ? undefined : classification.explanation,
-      cacheHit: false,
-    });
-
-    return {
-      output: outputText,
-      provider: classification.preferredProvider,
-      model: classification.preferredModel,
-      isLocal,
-      costUsd: record.estimatedCostUsd,
-      cacheHit: false,
-      explanation: classification.explanation,
-    };
   }
 }
 

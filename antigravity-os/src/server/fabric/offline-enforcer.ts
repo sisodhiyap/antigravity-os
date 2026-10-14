@@ -4,6 +4,8 @@
  * Guarantees zero covert data exfiltration and honest offline verification.
  */
 
+import http from "http";
+import https from "https";
 import { FabricExecutionMode, FabricEngineId } from "./types";
 import { HermesPolicy } from "@/plugins/hermes/HermesPolicy";
 
@@ -18,6 +20,7 @@ export class OfflineEnforcer {
   private currentMode: FabricExecutionMode = "STRICT_OFFLINE";
   private blockedRequestsCount = 0;
   private quarantinedRemoteCallsCount = 0;
+  private interceptorInstalled = false;
   private auditLog: Array<{
     timestamp: string;
     engineId?: FabricEngineId;
@@ -26,13 +29,97 @@ export class OfflineEnforcer {
     reason: string;
   }> = [];
 
-  private constructor() {}
+  private constructor() {
+    this.installSocketInterceptors();
+  }
 
   public static getInstance(): OfflineEnforcer {
     if (!OfflineEnforcer.instance) {
       OfflineEnforcer.instance = new OfflineEnforcer();
     }
     return OfflineEnforcer.instance;
+  }
+
+  private installSocketInterceptors(): void {
+    if (this.interceptorInstalled) return;
+    this.interceptorInstalled = true;
+
+    // 1. Monkey-patch global fetch
+    if (typeof globalThis.fetch === "function") {
+      const originalFetch = globalThis.fetch;
+      globalThis.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
+        let urlStr = "";
+        if (typeof input === "string") {
+          urlStr = input;
+        } else if (input instanceof URL) {
+          urlStr = input.toString();
+        } else if (input && typeof input === "object" && "url" in input) {
+          urlStr = (input as any).url;
+        }
+
+        if (this.currentMode === "STRICT_OFFLINE") {
+          const isLoopback =
+            urlStr.includes("127.0.0.1") ||
+            urlStr.includes("localhost") ||
+            urlStr.includes("::1");
+          if (!isLoopback) {
+            this.blockedRequestsCount++;
+            const msg = `[STRICT_OFFLINE_VIOLATION] Socket fetch to '${urlStr}' blocked by Antigravity Sovereign Offline Governor.`;
+            this.auditLog.push({
+              timestamp: new Date().toISOString(),
+              destination: urlStr,
+              allowed: false,
+              reason: msg,
+            });
+            throw new Error(msg);
+          }
+        }
+        return originalFetch(input, init);
+      };
+    }
+
+    // 2. Monkey-patch http.request and https.request
+    const wrapRequest = (origReq: any, protocol: string) => {
+      return (urlOrOptions: any, ...args: any[]) => {
+        if (this.currentMode === "STRICT_OFFLINE") {
+          let host = "";
+          if (typeof urlOrOptions === "string") {
+            try {
+              host = new URL(urlOrOptions).hostname;
+            } catch {
+              host = urlOrOptions;
+            }
+          } else if (urlOrOptions instanceof URL) {
+            host = urlOrOptions.hostname;
+          } else if (urlOrOptions && typeof urlOrOptions === "object") {
+            host = urlOrOptions.hostname || urlOrOptions.host || "";
+          }
+
+          const isLoopback =
+            host === "127.0.0.1" ||
+            host === "localhost" ||
+            host === "::1" ||
+            host.startsWith("127.0.0.1:") ||
+            host.startsWith("localhost:");
+
+          if (!isLoopback) {
+            this.blockedRequestsCount++;
+            const msg = `[STRICT_OFFLINE_VIOLATION] Outbound ${protocol} socket request to '${host}' blocked by Antigravity Sovereign Offline Governor.`;
+            this.auditLog.push({
+              timestamp: new Date().toISOString(),
+              destination: `${protocol}//${host}`,
+              allowed: false,
+              reason: msg,
+            });
+            throw new Error(msg);
+          }
+        }
+        return origReq.call(null, urlOrOptions, ...args);
+      };
+    };
+
+    http.request = wrapRequest(http.request, "http:");
+    https.request = wrapRequest(https.request, "https:");
   }
 
   public getMode(): FabricExecutionMode {
