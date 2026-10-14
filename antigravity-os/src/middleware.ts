@@ -110,6 +110,7 @@ export function middleware(request: NextRequest) {
     pathname.startsWith("/health-center") ||
     pathname.startsWith("/certification") ||
     pathname.startsWith("/creative") ||
+    pathname.startsWith("/fabric") ||
     pathname.startsWith("/presentx") ||
     pathname.startsWith("/omnicraft") ||
     pathname.startsWith("/projects");

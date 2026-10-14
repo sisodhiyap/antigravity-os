@@ -1,0 +1,9 @@
+{
+  "query": "Architecture spec v7.0",
+  "mode": "STRICT_OFFLINE",
+  "retrievedDocumentsCount": 3,
+  "citations": [
+    "Local Document Store: System Architecture Spec v7.0"
+  ],
+  "synthesis": "Offline empirical synthesis completed using local embeddings without outbound telemetry."
+}

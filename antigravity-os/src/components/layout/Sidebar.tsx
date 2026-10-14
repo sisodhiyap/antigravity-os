@@ -29,6 +29,7 @@ const SOVEREIGN_NAV = [
   { label: "Intelligence", href: "/intelligence", icon: Brain },
   { label: "AI Studio", href: "/ai", icon: Sparkles },
   { label: "ComfyUI", href: "/creative", icon: Boxes },
+  { label: "Local Fabric", href: "/fabric", icon: Cpu },
   { label: "Presenter X", href: "/presentx", icon: Presentation },
   { label: "Projects", href: "/projects", icon: FolderGit2 },
   { label: "Media Library", href: "/media", icon: Clapperboard },

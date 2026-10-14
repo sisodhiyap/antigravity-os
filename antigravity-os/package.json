@@ -75,7 +75,9 @@
     "verify:v21:master": "npx tsx scripts/verify-v21-master.ts",
     "verify:strands": "npx tsx scripts/verify-strands-decider.ts",
     "verify:native-pptx": "npx tsx scripts/verify-native-pptx.ts",
-    "verify:capabilities:v21": "npx tsx scripts/verify-capabilities-v21.ts"
+    "verify:capabilities:v21": "npx tsx scripts/verify-capabilities-v21.ts",
+    "verify:fabric": "npx tsx scripts/verify-fabric-master.ts",
+    "verify:fabric:independent": "npx tsx scripts/independent-fabric-verifier.ts"
   },
   "dependencies": {
     "@heyputer/puter.js": "^2.6.1",
