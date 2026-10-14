@@ -35,6 +35,7 @@
     "verify:v7:repeatability-final": "npx tsx scripts/v70-repeatability.ts",
     "verify:hermes": "npx tsx scripts/verify-hermes-agent.ts",
     "verify:hermes:independent": "npx tsx scripts/independent-hermes-verifier.ts",
+    "verify:intelligence": "npx tsx scripts/verify-personal-intelligence.ts",
     "verify:comfyui": "npx tsx scripts/verify-comfyui-fabric.ts",
     "verify:comfyui:independent": "npx tsx scripts/independent-comfyui-verifier.ts",
     "verify:comfyui:final": "npx tsx scripts/verify-comfyui-final-acceptance.ts",

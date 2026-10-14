@@ -48,9 +48,9 @@ export class HermesPolicy {
     /sk-[a-zA-Z0-9_-]{20,}/i,
     /ghp_[a-zA-Z0-9]{36}/i,
     /eyJ[a-zA-Z0-9_-]{10,}\.eyJ[a-zA-Z0-9_-]{10,}\.[a-zA-Z0-9_-]{10,}/i, // JWT
-    /password\s*[:=]\s*['"][^'"]+['"]/i,
-    /secret\s*[:=]\s*['"][^'"]+['"]/i,
-    /api[_-]?key\s*[:=]\s*['"][a-zA-Z0-9_\-]{16,}['"]/i
+    /password\s*(?:[:=]|\bis\b)\s*['"]?[^\s'"]+['"]?/i,
+    /secret\s*(?:[:=]|\bis\b)\s*['"]?[^\s'"]+['"]?/i,
+    /api[_-]?key\s*(?:[:=]|\bis\b)\s*['"]?[a-zA-Z0-9_\-]{16,}['"]?/i
   ];
 
   /**
@@ -88,10 +88,11 @@ export class HermesPolicy {
     let count = 0;
 
     for (const pattern of this.SECRET_PATTERNS) {
-      const matches = redacted.match(pattern);
+      const globalPattern = new RegExp(pattern.source, pattern.flags.includes("g") ? pattern.flags : pattern.flags + "g");
+      const matches = redacted.match(globalPattern);
       if (matches) {
         count += matches.length;
-        redacted = redacted.replace(pattern, "[REDACTED_SECRET]");
+        redacted = redacted.replace(globalPattern, "[REDACTED_SECRET]");
       }
     }
 

@@ -29,6 +29,9 @@ model User {
   conversations  AIConversation[]
   todos          Todo[]
   notes          Note[]
+  memories       PersonalMemory[]
+  intelligenceConversations IntelligenceConversation[]
+  intelligenceTasks         IntelligenceTask[]
 }
 
 model Session {
@@ -263,4 +266,117 @@ model Note {
   userId    String
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PERSONAL INTELLIGENCE V1 — SOVEREIGN COMPANION & MEMORY FABRIC
+// ─────────────────────────────────────────────────────────────────────────────
+
+model PersonalMemory {
+  id              String    @id @default(uuid())
+  userId          String
+  category        String    // PREFERENCE, PROJECT, TECHNICAL, DECISION, WORKFLOW, TEMPORARY
+  content         String
+  summary         String
+  sourceType      String    // USER_EXPLICIT, AGENT_OBSERVED, TASK_RESULT, TOOL_OUTPUT
+  sourceReference String?
+  confidence      Float     @default(1.0)
+  importance      Int       @default(3) // 1 to 5
+  pinned          Boolean   @default(false)
+  userConfirmed   Boolean   @default(false)
+  sensitivity     String    @default("PRIVATE") // PUBLIC, INTERNAL, PRIVATE, RESTRICTED
+  expiresAt       DateTime?
+  lastAccessedAt  DateTime  @default(now())
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  deletedAt       DateTime?
+
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model IntelligenceConversation {
+  id              String                @id @default(uuid())
+  userId          String
+  title           String
+  projectId       String?
+  privacyLevel    String                @default("LOCAL_PREFERRED") // LOCAL_ONLY, LOCAL_PREFERRED, CLOUD_PERMITTED, ASK_EVERY_TIME
+  createdAt       DateTime              @default(now())
+  updatedAt       DateTime              @updatedAt
+
+  user            User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  messages        IntelligenceMessage[]
+  tasks           IntelligenceTask[]
+}
+
+model IntelligenceMessage {
+  id              String                   @id @default(uuid())
+  conversationId  String
+  role            String                   // user, assistant, system
+  content         String
+  provider        String?
+  model           String?
+  latencyMs       Int?
+  isLocal         Boolean                  @default(false)
+  isFallback      Boolean                  @default(false)
+  fallbackReason  String?
+  toolCallsJson   String?                  // JSON serialized tool call history & results
+  evidenceIdsJson String?                  // JSON serialized references to evidence ledger
+  createdAt       DateTime                 @default(now())
+
+  conversation    IntelligenceConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+}
+
+model IntelligenceTask {
+  id              String                    @id @default(uuid())
+  conversationId  String?
+  userId          String
+  title           String
+  description     String
+  status          String                    @default("PROPOSED") // PROPOSED, AWAITING_APPROVAL, APPROVED, RUNNING, VERIFYING, COMPLETED, FAILED, CANCELLED
+  autonomyLevel   Int                       @default(2)
+  privacyLevel    String                    @default("LOCAL_PREFERRED")
+  planJson        String?                   // JSON DAG
+  toolsCalledJson String?                   // JSON trace
+  evidenceHash    String?
+  error           String?
+  startedAt       DateTime?
+  completedAt     DateTime?
+  createdAt       DateTime                  @default(now())
+  updatedAt       DateTime                  @updatedAt
+
+  user            User                      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  conversation    IntelligenceConversation? @relation(fields: [conversationId], references: [id], onDelete: SetNull)
+  approvals       IntelligenceApproval[]
+}
+
+model IntelligenceApproval {
+  id              String            @id @default(uuid())
+  taskId          String
+  userId          String
+  actionType      String            // FILE_WRITE, CODE_PATCH, SHELL_EXEC, DB_MUTATION, CLOUD_UPLOAD, PACKAGE_INSTALL
+  targetResource  String
+  description     String
+  status          String            @default("PENDING") // PENDING, APPROVED, REJECTED, EXPIRED
+  riskLevel       String            @default("HIGH") // LOW, MEDIUM, HIGH, CRITICAL
+  decisionBy      String?
+  decisionAt      DateTime?
+  createdAt       DateTime          @default(now())
+
+  task            IntelligenceTask  @relation(fields: [taskId], references: [id], onDelete: Cascade)
+}
+
+model IntelligenceScheduledTask {
+  id              String            @id @default(uuid())
+  userId          String
+  title           String
+  taskType        String            // DAILY_PROJECT_SUMMARY, READONLY_HEALTH_CHECK, REGRESSION_TEST_REVIEW, MODEL_AVAILABILITY_CHECK
+  cronSchedule    String            // standard 5-part cron or descriptive interval
+  enabled         Boolean           @default(true)
+  privacyLevel    String            @default("LOCAL_ONLY")
+  lastRunAt       DateTime?
+  lastStatus      String?           // SUCCESS, FAILED, SKIPPED
+  lastOutput      String?
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+}
+
 

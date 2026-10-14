@@ -19,12 +19,14 @@ import {
   ChevronLeft,
   ChevronRight,
   Boxes,
+  Brain,
 } from "lucide-react";
 import { useSystemStore } from "@/stores/useSystemStore";
 import { clsx } from "clsx";
 
 const SOVEREIGN_NAV = [
   { label: "Dashboard", href: "/", icon: LayoutDashboard },
+  { label: "Intelligence", href: "/intelligence", icon: Brain },
   { label: "AI Studio", href: "/ai", icon: Sparkles },
   { label: "ComfyUI", href: "/creative", icon: Boxes },
   { label: "Presenter X", href: "/presentx", icon: Presentation },

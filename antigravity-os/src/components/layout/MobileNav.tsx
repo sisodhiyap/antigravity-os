@@ -39,6 +39,7 @@ const MISSION_NAV = [
   {
     section: "INTELLIGENCE",
     items: [
+      { label: "Personal Intelligence", href: "/intelligence", icon: BrainCircuit },
       { label: "Hermes Agent", href: "/hermes", icon: BrainCircuit },
       { label: "AI Control", href: "/ai", icon: BrainCircuit },
       { label: "Agents", href: "/agents", icon: Users },

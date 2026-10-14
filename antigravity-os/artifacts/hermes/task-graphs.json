@@ -17,8 +17,8 @@
     "evidenceIds": [],
     "retries": 0,
     "provenance": "OBSERVED",
-    "createdAt": "2026-10-12T03:54:05.381Z",
-    "updatedAt": "2026-10-12T03:54:05.381Z"
+    "createdAt": "2026-10-14T03:46:22.530Z",
+    "updatedAt": "2026-10-14T03:46:22.530Z"
   },
   {
     "id": "task_02_product_model",
@@ -42,8 +42,8 @@
     "evidenceIds": [],
     "retries": 0,
     "provenance": "INFERRED",
-    "createdAt": "2026-10-12T03:54:05.381Z",
-    "updatedAt": "2026-10-12T03:54:05.381Z"
+    "createdAt": "2026-10-14T03:46:22.531Z",
+    "updatedAt": "2026-10-14T03:46:22.531Z"
   },
   {
     "id": "task_03_architecture",
@@ -70,8 +70,8 @@
     "evidenceIds": [],
     "retries": 0,
     "provenance": "GENERATED",
-    "createdAt": "2026-10-12T03:54:05.381Z",
-    "updatedAt": "2026-10-12T03:54:05.381Z"
+    "createdAt": "2026-10-14T03:46:22.531Z",
+    "updatedAt": "2026-10-14T03:46:22.531Z"
   },
   {
     "id": "task_04_code_gen",
@@ -94,8 +94,8 @@
     "evidenceIds": [],
     "retries": 0,
     "provenance": "GENERATED",
-    "createdAt": "2026-10-12T03:54:05.381Z",
-    "updatedAt": "2026-10-12T03:54:05.381Z"
+    "createdAt": "2026-10-14T03:46:22.531Z",
+    "updatedAt": "2026-10-14T03:46:22.531Z"
   },
   {
     "id": "task_05_tests_qa",
@@ -125,8 +125,8 @@
     "evidenceIds": [],
     "retries": 0,
     "provenance": "VERIFIED",
-    "createdAt": "2026-10-12T03:54:05.381Z",
-    "updatedAt": "2026-10-12T03:54:05.381Z"
+    "createdAt": "2026-10-14T03:46:22.531Z",
+    "updatedAt": "2026-10-14T03:46:22.531Z"
   },
   {
     "id": "task_06_evidence",
@@ -149,8 +149,8 @@
     "evidenceIds": [],
     "retries": 0,
     "provenance": "VERIFIED",
-    "createdAt": "2026-10-12T03:54:05.381Z",
-    "updatedAt": "2026-10-12T03:54:05.381Z"
+    "createdAt": "2026-10-14T03:46:22.531Z",
+    "updatedAt": "2026-10-14T03:46:22.531Z"
   },
   {
     "id": "task_07_promotion_request",
@@ -173,7 +173,7 @@
     "evidenceIds": [],
     "retries": 0,
     "provenance": "VERIFIED",
-    "createdAt": "2026-10-12T03:54:05.381Z",
-    "updatedAt": "2026-10-12T03:54:05.381Z"
+    "createdAt": "2026-10-14T03:46:22.531Z",
+    "updatedAt": "2026-10-14T03:46:22.531Z"
   }
 ]
