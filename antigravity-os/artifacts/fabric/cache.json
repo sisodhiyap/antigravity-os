@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-14T08:34:25.611Z",
-  "count": 4,
+  "updatedAt": "2026-10-14T09:07:42.934Z",
+  "count": 8,
   "entries": [
     {
       "key": "b6fb6663235ac16383cbf4aba53b41f7530ca21942d2a0d8c0fadf554998c4cc",
@@ -20,7 +20,7 @@
         "tokensSaved": 6,
         "createdAt": "2026-10-14T08:33:16.892Z",
         "expiresAt": "2026-10-15T08:33:16.892Z",
-        "accessCount": 3
+        "accessCount": 4
       }
     },
     {
@@ -30,7 +30,7 @@
         "output": "Antigravity OS is a sovereign autonomous AI operating system.",
         "tokensSaved": 120,
         "metadata": {},
-        "cachedAt": "2026-10-14T08:34:25.609Z"
+        "cachedAt": "2026-10-14T08:55:32.937Z"
       },
       "meta": {
         "key": "dc3db5824d18ac906957fa501bbbfedf82b9ba60564419d798446b622d386c10",
@@ -39,8 +39,8 @@
         "taskType": "ROUTINE_CHAT",
         "model": "qwen2.5-coder:7b",
         "tokensSaved": 120,
-        "createdAt": "2026-10-14T08:34:25.609Z",
-        "expiresAt": "2026-10-15T08:34:25.609Z",
+        "createdAt": "2026-10-14T08:55:32.937Z",
+        "expiresAt": "2026-10-15T08:55:32.937Z",
         "accessCount": 3
       }
     },
@@ -51,7 +51,7 @@
         "output": "User session established. Token: [REDACTED_SECRET].",
         "tokensSaved": 20,
         "metadata": {},
-        "cachedAt": "2026-10-14T08:34:25.611Z"
+        "cachedAt": "2026-10-14T08:55:32.940Z"
       },
       "meta": {
         "key": "a5b93994d77291129eb2dc8d86b8861b6f2c131e2e454ccf1975475e9dafecd4",
@@ -60,8 +60,8 @@
         "taskType": "AUTH",
         "model": "qwen",
         "tokensSaved": 20,
-        "createdAt": "2026-10-14T08:34:25.611Z",
-        "expiresAt": "2026-10-15T08:34:25.611Z",
+        "createdAt": "2026-10-14T08:55:32.940Z",
+        "expiresAt": "2026-10-15T08:55:32.940Z",
         "accessCount": 1
       }
     },
@@ -83,6 +83,90 @@
         "tokensSaved": 8,
         "createdAt": "2026-10-14T08:33:18.413Z",
         "expiresAt": "2026-10-15T08:33:18.413Z",
+        "accessCount": 1
+      }
+    },
+    {
+      "key": "201262bbcb10e4750f89f9a2a17f9df4c507cba11773a1a1e24a0dc66d07464b",
+      "data": {
+        "key": "201262bbcb10e4750f89f9a2a17f9df4c507cba11773a1a1e24a0dc66d07464b",
+        "output": "DURABLE_SURVIVAL_OUTPUT_PAYLOAD",
+        "tokensSaved": 120,
+        "metadata": {},
+        "cachedAt": "2026-10-14T09:06:51.606Z"
+      },
+      "meta": {
+        "key": "201262bbcb10e4750f89f9a2a17f9df4c507cba11773a1a1e24a0dc66d07464b",
+        "hash": "844e8bd9d8a508a8579a43ddffd9989c42c0902959367e787db4c0ea2aa5ab36",
+        "workspaceId": "ws-persistence",
+        "taskType": "ROUTINE_CHAT",
+        "model": "qwen2.5-coder:7b",
+        "tokensSaved": 120,
+        "createdAt": "2026-10-14T09:06:51.606Z",
+        "expiresAt": "2026-10-15T09:06:51.606Z",
+        "accessCount": 1
+      }
+    },
+    {
+      "key": "89328840ea0b35ef22433c77b0095e6247a2c609bcf9a798fd79dd22922e0efe",
+      "data": {
+        "key": "89328840ea0b35ef22433c77b0095e6247a2c609bcf9a798fd79dd22922e0efe",
+        "output": "[Local Sovereign Inference via ollama:qwen2.5-coder:7b]\nProcessed task: concurrent-batch-test-1791968811608...",
+        "tokensSaved": 9,
+        "metadata": {},
+        "cachedAt": "2026-10-14T09:06:53.114Z"
+      },
+      "meta": {
+        "key": "89328840ea0b35ef22433c77b0095e6247a2c609bcf9a798fd79dd22922e0efe",
+        "hash": "2710545191dc0be4e27138b5f8121d476334fab1caf1df249647272d677c6c99",
+        "workspaceId": "global",
+        "taskType": "ROUTINE_CHAT",
+        "model": "qwen2.5-coder:7b",
+        "tokensSaved": 9,
+        "createdAt": "2026-10-14T09:06:53.114Z",
+        "expiresAt": "2026-10-15T09:06:53.114Z",
+        "accessCount": 1
+      }
+    },
+    {
+      "key": "69c3339188444425f9a61538e939fd12e201165dc43a2b0a4c6e620d3d01092d",
+      "data": {
+        "key": "69c3339188444425f9a61538e939fd12e201165dc43a2b0a4c6e620d3d01092d",
+        "output": "DURABLE_SURVIVAL_OUTPUT_PAYLOAD",
+        "tokensSaved": 120,
+        "metadata": {},
+        "cachedAt": "2026-10-14T09:07:41.424Z"
+      },
+      "meta": {
+        "key": "69c3339188444425f9a61538e939fd12e201165dc43a2b0a4c6e620d3d01092d",
+        "hash": "844e8bd9d8a508a8579a43ddffd9989c42c0902959367e787db4c0ea2aa5ab36",
+        "workspaceId": "ws-persistence",
+        "taskType": "ROUTINE_CHAT",
+        "model": "qwen2.5-coder:7b",
+        "tokensSaved": 120,
+        "createdAt": "2026-10-14T09:07:41.424Z",
+        "expiresAt": "2026-10-15T09:07:41.424Z",
+        "accessCount": 1
+      }
+    },
+    {
+      "key": "f7e764d09b519ba754d85bc72b2e7927fe32c2b9ea08859325f23c86975134fd",
+      "data": {
+        "key": "f7e764d09b519ba754d85bc72b2e7927fe32c2b9ea08859325f23c86975134fd",
+        "output": "[Local Sovereign Inference via ollama:qwen2.5-coder:7b]\nProcessed task: concurrent-batch-test-1791968861426...",
+        "tokensSaved": 9,
+        "metadata": {},
+        "cachedAt": "2026-10-14T09:07:42.931Z"
+      },
+      "meta": {
+        "key": "f7e764d09b519ba754d85bc72b2e7927fe32c2b9ea08859325f23c86975134fd",
+        "hash": "76869269f7c5d5cd03ba4fe63a5165e7c8a49aed296ace1df076245e8bfc0a3d",
+        "workspaceId": "global",
+        "taskType": "ROUTINE_CHAT",
+        "model": "qwen2.5-coder:7b",
+        "tokensSaved": 9,
+        "createdAt": "2026-10-14T09:07:42.931Z",
+        "expiresAt": "2026-10-15T09:07:42.931Z",
         "accessCount": 1
       }
     }

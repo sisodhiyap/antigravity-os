@@ -9,6 +9,7 @@ import fs from "fs";
 import path from "path";
 import { CacheEntryMetadata } from "./types";
 import { HermesPolicy } from "@/plugins/hermes/HermesPolicy";
+import { resolveFabricStoragePath } from "./usage-ledger";
 
 export interface CachedResponse {
   key: string;
@@ -32,7 +33,7 @@ export class TokenOptimizer {
   }
 
   private constructor() {
-    this.storagePath = path.resolve(process.cwd(), "artifacts", "fabric", "cache.json");
+    this.storagePath = resolveFabricStoragePath("cache.json");
     this.loadFromDisk();
   }
 

@@ -116,6 +116,16 @@ import fs from "fs";
 import path from "path";
 import { quotaEngine } from "@/server/ai/quota";
 
+export function resolveFabricStoragePath(filename: string): string {
+  if (process.env.VERCEL === "1" || process.env.AWS_LAMBDA_FUNCTION_NAME) {
+    return path.join("/tmp", "antigravity-fabric", filename);
+  }
+  if (process.env.APPDATA && (process.versions as any)?.electron) {
+    return path.join(process.env.APPDATA, "AntigravityOS", "fabric", filename);
+  }
+  return path.resolve(process.cwd(), "artifacts", "fabric", filename);
+}
+
 export class UsageLedger {
   private static instance: UsageLedger;
   private readonly ledger: UsageRecord[] = [];
@@ -143,7 +153,7 @@ export class UsageLedger {
   }
 
   private constructor() {
-    this.storagePath = path.resolve(process.cwd(), "artifacts", "fabric", "ledger.json");
+    this.storagePath = resolveFabricStoragePath("ledger.json");
     this.loadFromDisk();
     this.attachQuotaEngineHook();
   }
